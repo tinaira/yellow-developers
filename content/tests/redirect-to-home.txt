@@ -1,0 +1,5 @@
+---
+Title: Test redirect
+Redirect: /
+---
+This page tests redirects to another location.

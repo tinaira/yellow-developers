@@ -1,0 +1,5 @@
+---
+Title: Blog
+Template: blogarticles
+---
+This page is automatically generated.

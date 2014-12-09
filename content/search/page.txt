@@ -1,0 +1,6 @@
+---
+Title: Search
+Template: search
+Description: Search results
+---
+This page is automatically generated.

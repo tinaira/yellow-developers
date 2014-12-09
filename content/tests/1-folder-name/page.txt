@@ -1,0 +1,7 @@
+---
+Title: Test folder
+---
+
+This page tests file in a folder. 
+
+A page in a sub folder is available in a location with the folder name.

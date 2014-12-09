@@ -1,4 +1,3 @@
-yellowcms-demo
-==============
-
-Yellow is for people who make websites. A demo server.
+Yellow demo
+===========
+Yellow is for people who make websites. [Visit website](http://datenstrom.se/yellow).

@@ -1,0 +1,7 @@
+---
+Title: Demo
+TitleContent: Welcome to the Yellow demo
+---
+[image yellow.jpg]
+
+Take a look around. [You can edit this page](@pageedit).

@@ -1,0 +1,10 @@
+---
+Title: Wiki
+Template: wikipages
+---
+Yellow is for people who make websites. Create small web pages, blogs and wikis. [Read more...](wiki-page)
+
+* [Image example](image-example)
+* [Plugin example](plugin-example)
+* [Recent changes](/wiki/special:changes/)
+* [Search](/search/)

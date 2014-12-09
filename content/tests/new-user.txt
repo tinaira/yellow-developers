@@ -1,0 +1,5 @@
+---
+Title: Test user account
+Template: testnewuser
+---
+This page is automatically generated.

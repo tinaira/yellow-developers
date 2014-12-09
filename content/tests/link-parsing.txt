@@ -1,0 +1,15 @@
+---
+Title: Test link
+---
+This page tests link parsing.
+
+Link on same website: [Home](/), [Wiki](/wiki/).  
+Link to another website: [Dropbox](https://dropbox.com), [Datenstrom](https://datenstrom.se).  
+Relative links: [Folder](folder-name/), [Image](image-parsing), [JavaScript](javascript:alert('Hello');)  
+Special links for this page: [Read](@pageread), [Edit](@pageedit).  
+
+URL autolinking: 
+
+http://link.se, https://link.se, ftp://link.se, bla@fa.sel, pe.ter@example.com.  
+"http://link.se" 'http://link.se' http://link.se: http://link.se;  
+https://en.wikipedia.org/wiki/Swift_(programming_language), https://en.wikipedia.org/wiki/C++

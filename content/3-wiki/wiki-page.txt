@@ -1,0 +1,7 @@
+---
+Title: Wiki page
+Tag: Example
+---
+Yellow is for people who make websites. Create small web pages, blogs and wikis. The focus is on people and that it's useful for you. No database, no admin panel, no template engine, no upload manager, no complex framework. Most people don't need all of these features. Let's concentrate on the essential aspects and tools that work together.
+
+Source: [Yellow documentation](https://github.com/markseu/yellowcms-extensions/blob/master/documentation/english/welcome.md)

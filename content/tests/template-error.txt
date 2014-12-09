@@ -1,0 +1,5 @@
+---
+Title: Test template error
+Template: none
+---
+This page tests template error.

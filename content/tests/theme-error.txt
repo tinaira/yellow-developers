@@ -1,0 +1,5 @@
+---
+Title: Test theme error
+Theme: none
+---
+This page tests theme error.
