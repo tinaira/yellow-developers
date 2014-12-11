@@ -1,0 +1,6 @@
+---
+Title: Test image parsing
+---
+This page tests image parsing for image list.
+
+[include snippet imagelist .*screenshot.jpg]

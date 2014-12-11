@@ -1,7 +1,9 @@
 ---
 Title: Themes
 ---
--                       | -                      | - 
-:----------------------:|:----------------------:|:----------------------:
-[[image blogsite-screenshot.jpg Blogsite - 25%]](blogsite-theme) | [[image flatsite-screenshot.jpg Flatsite - 25%]](flatsite-theme) | [[image knowhow-screenshot.jpg Knowhow - 25%]](knowhow-theme)
-[Blogsite](blogsite-theme) | [Flatsite](flatsite-theme) | [Knowhow](knowhow-theme)
+Great technology is useful in function and aesthetic. The visual design of a website is defined with themes. There's a default theme that comes with Yellow. Select a theme that you like and design the website you want. 
+
+-                       | -                      | -                      | - 
+:----------------------:|:----------------------:|:----------------------:|:----------------------:
+[[image blogsite-screenshot.jpg Blogsite - 25%]](blogsite-theme) | [[image default-screenshot.jpg Default - 25%]](default-theme) | [[image flatsite-screenshot.jpg Flatsite - 25%]](flatsite-theme) | [[image knowhow-screenshot.jpg Knowhow - 25%]](knowhow-theme)
+[Blogsite](blogsite-theme) | [Default](default-theme) | [Flatsite](flatsite-theme) | [Knowhow](knowhow-theme)

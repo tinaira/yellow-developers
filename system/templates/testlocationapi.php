@@ -1,4 +1,3 @@
-<?php if(PHP_SAPI == "cli") $yellow->page->error(500, "Static website not supported!") ?>
 <?php $pages = $yellow->pages->index(true, true) ?>
 <?php $yellow->snippet("header") ?>
 <?php $yellow->snippet("sitename") ?>

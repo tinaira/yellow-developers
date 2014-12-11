@@ -1,4 +1,4 @@
-/* Yellow blogsite theme 0.1.10 */
+/* Yellow blogsite theme 0.1.11 */
 
 html, body, div, form, pre, span, tr, th, td { margin:0; padding:0; border:0; vertical-align:baseline; }
 body {
@@ -40,7 +40,7 @@ a, img { border:none; text-decoration:none; }
 .content form { margin:1em 0; }
 .content .flexible { position:relative; padding-bottom:56.25%; padding-top:30px; }
 .content .flexible iframe { position:absolute; top:0; left:0; width:100%; height:100%; }
-.footer { margin:1.5em; padding-top:1.5em; border-top:1px solid #ddd; text-align:center; }
+.footer { margin:2em; text-align:center; }
 .footer a { color:#07d; }
 .footer a:hover { color:#07d; text-decoration:underline; }
 .left { float:left; margin:0 1em 0 0; }
