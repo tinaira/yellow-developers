@@ -4,6 +4,7 @@ Template: wikipages
 ---
 Great technology is made for people. Create small web pages, blogs and wikis. The focus is on people and that it's useful for you. No database, no admin panel, no upload manager, no complex framework. Most people don't need all of these features.
 
+* [How to make good coffee](How-to-make-good-coffee)
 * [Image example](image-example)
 * [Plugin example](plugin-example)
 * [Recent changes](/wiki/special:changes/)
