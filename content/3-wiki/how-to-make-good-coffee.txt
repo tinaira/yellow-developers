@@ -2,7 +2,7 @@
 Title: How to make good coffee
 Tag: Example
 ---
-[image coffee.jpg Coffee right]
+[image coffee.jpg "Cup of coffee" right]
 
 Coffee is a beverage made from the roasted beans of the coffee plant. It's also the greatest addiction of the modern world. It's pure awesome.
 
