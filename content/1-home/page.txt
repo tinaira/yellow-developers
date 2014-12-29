@@ -1,7 +1,6 @@
 ---
-Title: Demo
-TitleContent: Welcome to the Yellow demo
-Description: Welcome to the Yellow demo. Create small web pages, blogs and wikis.
+Title: Welcome to the Yellow demo
+TitleNavigation: Demo
 ---
 [image yellow.jpg]
 
