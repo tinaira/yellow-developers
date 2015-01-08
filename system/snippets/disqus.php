@@ -1,7 +1,7 @@
 <?php list($name, $shortname) = $yellow->getSnippetArgs() ?>
 <div id="disqus_thread"></div>
 <script type="text/javascript">
-var disqus_shortname = '<?php echo $shortname ?>';
+var disqus_shortname = '<?php echo htmlspecialchars($shortname) ?>';
 var disqus_url = '<?php echo $yellow->page->get("pageRead") ?>';
 (function() {
  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

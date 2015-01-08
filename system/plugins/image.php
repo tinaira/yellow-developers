@@ -5,7 +5,7 @@
 // Image parser plugin
 class YellowImage
 {
-	const Version = "0.1.8";
+	const Version = "0.1.9";
 	var $yellow;			//access to API
 	var $graphicsLibrary;	//graphics library support? (boolean)
 
@@ -31,21 +31,16 @@ class YellowImage
 				$this->yellow->page->error(500, "Plugin 'image' requires GD library with JPEG and PNG support!");
 				return $output;
 			}
-			list($name, $alt, $style, $widthOutput, $heightOutput) = $this->yellow->toolbox->getTextArgs($text);
-			$width = $height = 0;
-			$src = $name;
-			if(!preg_match("/^\w+:/", $src))
+			list($name, $alt, $style, $width, $height) = $this->yellow->toolbox->getTextArgs($text);
+			if(!preg_match("/^\w+:/", $name))
 			{
-				list($width, $height, $type) = $this->yellow->toolbox->detectImageInfo($this->yellow->config->get("imageDir").$src);
-				$src = $this->yellow->config->get("serverBase").$this->yellow->config->get("imageLocation").$src;
 				if(empty($alt)) $alt = $this->yellow->config->get("imageAlt");
-				if(empty($heightOutput)) $heightOutput = $widthOutput;
-				if($width && $height && $widthOutput && $heightOutput)
-				{
-					list($width, $height, $src) = $this->createThumbnail($name, $width, $height, $widthOutput, $heightOutput, $type);
-				}
+				if(empty($width)) $width = "100%";
+				if(empty($height)) $height = $width;
+				list($src, $width, $height) = $this->getImageInfo($name, $width, $height);
 			} else {
-				$src = $this->yellow->toolbox->normaliseLocation($src, $page->base, $page->location);
+				$src = $this->yellow->toolbox->normaliseLocation($name, $page->base, $page->location);
+				$width = $height = 0;
 			}
 			$output = "<img src=\"".htmlspecialchars($src)."\"";
 			if($width && $height) $output .= " width=\"".htmlspecialchars($width)."\" height=\"".htmlspecialchars($height)."\"";
@@ -81,32 +76,39 @@ class YellowImage
 		return $statusCode;
 	}
 
-	// Create thumbnail on demand
-	function createThumbnail($fileName, $widthInput, $heightInput, $widthOutput, $heightOutput, $type)
+	// Return image info, create thumbnail on demand
+	function getImageInfo($fileName, $widthOutput, $heightOutput)
 	{
+		$fileNameInput = $this->yellow->config->get("imageDir").$fileName;
+		list($widthInput, $heightInput, $type) = $this->yellow->toolbox->detectImageInfo($fileNameInput);
 		$widthOutput = $this->convertValueAndUnit($widthOutput, $widthInput);
 		$heightOutput = $this->convertValueAndUnit($heightOutput, $heightInput);
-		$fileNameThumb = ltrim(str_replace(array("/", "\\", "."), "-", dirname($fileName)."/".pathinfo($fileName, PATHINFO_FILENAME)), "-");
-		$fileNameThumb .= "-".$widthOutput."x".$heightOutput;
-		$fileNameThumb .= ".".pathinfo($fileName, PATHINFO_EXTENSION);
-		$fileNameInput = $this->yellow->config->get("imageDir").$fileName;
-		$fileNameOutput = $this->yellow->config->get("imageThumbnailDir").$fileNameThumb;
-		if($this->isFileNotUpdated($fileNameInput, $fileNameOutput))
+		if($widthInput==$widthOutput && $heightInput==$heightOutput)
 		{
-			$image = $this->loadImage($fileNameInput, $type);
-			if($image)
+			$src = $this->yellow->config->get("serverBase").$this->yellow->config->get("imageLocation").$fileName;
+			$width = $widthInput; $height = $heightInput;
+		} else {
+			$fileNameThumb = ltrim(str_replace(array("/", "\\", "."), "-", dirname($fileName)."/".pathinfo($fileName, PATHINFO_FILENAME)), "-");
+			$fileNameThumb .= "-".$widthOutput."x".$heightOutput;
+			$fileNameThumb .= ".".pathinfo($fileName, PATHINFO_EXTENSION);
+			$fileNameOutput = $this->yellow->config->get("imageThumbnailDir").$fileNameThumb;
+			if($this->isFileNotUpdated($fileNameInput, $fileNameOutput))
 			{
-				$image = $this->resizeImage($image, $widthInput, $heightInput, $widthOutput, $heightOutput);
-				if(!$this->saveImage($fileNameOutput, $type, $image) ||
-				   !$this->yellow->toolbox->modifyFile($fileNameOutput, filemtime($fileNameInput)))
+				$image = $this->loadImage($fileNameInput, $type);
+				if($image)
 				{
-					$this->yellow->page->error(500, "Image '$fileNameOutput' can't be saved!");
+					$image = $this->resizeImage($image, $widthInput, $heightInput, $widthOutput, $heightOutput);
+					if(!$this->saveImage($fileNameOutput, $type, $image) ||
+					   !$this->yellow->toolbox->modifyFile($fileNameOutput, filemtime($fileNameInput)))
+					{
+						$this->yellow->page->error(500, "Image '$fileNameOutput' can't be saved!");
+					}
 				}
 			}
+			$src = $this->yellow->config->get("serverBase").$this->yellow->config->get("imageThumbnailLocation").$fileNameThumb;
+			list($width, $height) = $this->yellow->toolbox->detectImageInfo($fileNameOutput);
 		}
-		list($width, $height) = $this->yellow->toolbox->detectImageInfo($fileNameOutput);
-		$src = $this->yellow->config->get("serverBase").$this->yellow->config->get("imageThumbnailLocation").$fileNameThumb;
-		return array($width, $height, $src);
+		return array($src, $width, $height);
 	}
 
 	// Load image from file
@@ -183,7 +185,7 @@ class YellowImage
 	// Check graphics library support
 	function isGraphicsLibrary()
 	{
-		return extension_loaded("gd") && function_exists("gd_info") &&
+		return true; //### extension_loaded("gd") && function_exists("gd_info") &&
 			((imagetypes()&(IMG_JPG|IMG_PNG)) == (IMG_JPG|IMG_PNG));
 	}
 }

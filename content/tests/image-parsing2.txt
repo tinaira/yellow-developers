@@ -3,4 +3,10 @@ Title: Test image parsing
 ---
 This page tests image parsing for image list.
 
-[include snippet imagelist .*screenshot.jpg]
+Small images:
+
+[include snippet imagelist .*theme.jpg themes 25%]
+
+Big images:
+
+[include snippet imagelist .*theme.jpg]
