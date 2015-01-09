@@ -1,5 +1,5 @@
 ---
-Title: Test link
+Title: Test link parsing
 ---
 This page tests link parsing.
 

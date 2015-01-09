@@ -6,7 +6,7 @@
 <h1><?php echo $yellow->page->getHtml("title") ?></h1>
 <?php echo $yellow->page->getContent() ?>
 <table>
-<tr><td>Location</td><td>Parent</td><td>Children</td><td>Visible</td><td>Siblings</td><td>Navigation</td><td>Modified</td></tr>
+<tr><th>Location</th><th>Parent</th><th>Children</th><th>Visible</th><th>Siblings</th><th>Navigation</th><th>Modified</th></tr>
 <?php foreach($pages as $page): ?>
 <tr>
 <td><a href="<?php echo $page->getLocation() ?>"><?php echo $page->getLocation() ?></a></td>
@@ -14,7 +14,7 @@
 <td><?php echo count($page->getChildren(true))!=0	? "yes" : "<span style=\"color:red\">no</span>" ?></td>
 <td><?php echo $page->isVisible()					? "yes" : "<span style=\"color:red\">no</span>" ?></td>
 <td><?php echo count($page->getSiblings(true)) ?></td>
-<td><?php echo $page->getParent()!=NULL ? $page->getParent()->getHtml("title") : $page->getHtml("title") ?></td>
+<td><?php echo $page->getParent()!=NULL ? $page->getParent()->getHtml("title") : $page->getHtml("titleNavigation") ?></td>
 <td><?php $date = date("Y-m-d", $page->getModified()); echo $date!=date("Y-m-d") ? $date : "Today" ?></td>
 </tr>
 <?php endforeach ?>

@@ -1,5 +1,5 @@
 ---
-Title: Test XSS
+Title: Test XSS filter
 ---
 This page tests cross side scripting.
 
