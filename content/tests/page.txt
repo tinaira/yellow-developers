@@ -1,7 +1,6 @@
 ---
 Title: Tests
 ---
-* [draft-status](draft-status)
 * [file-name-unicode-äö](file-name-unicode-äö)
 * [file-name-whitespace](file-name-whitespace)
 * [folder-name](folder-name/)* [image-parsing1](image-parsing1)
@@ -10,6 +9,7 @@ Title: Tests
 * [location-api](location-api)
 * [new-page](new-page)
 * [new-user](new-user)
+* [page-draft-status](page-draft-status)
 * [page-language-error](page-language-error)
 * [page-parser-error1](page-parser-error1)
 * [page-parser-error2](page-parser-error2)
