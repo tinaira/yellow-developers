@@ -1,4 +1,4 @@
-/* Yellow blogsite theme 0.1.12 */
+/* Yellow blogsite theme 0.1.13 */
 
 html, body, div, form, pre, span, tr, th, td { margin:0; padding:0; border:0; vertical-align:baseline; }
 body {
@@ -18,7 +18,7 @@ a, img { border:none; text-decoration:none; }
 .yellow { margin:0 0.5em; }
 .sitename { text-align:center; }
 .sitename h1 { margin:0.4em 0; font-size:3.5em; font-weight:300; }
-.sitename a { color:#07d; text-decoration:none; }
+.sitename h1 a { color:#07d; text-decoration:none; }
 .sitename-banner {
 	padding-top:23%; 
 	background-image:url(blogsite.jpg); 
@@ -39,8 +39,8 @@ a, img { border:none; text-decoration:none; }
 .content img { max-width:100%; height:auto; }
 .content form { margin:1em 0; }
 .content table { border-spacing:0; border-collapse:collapse; }
-.content th { text-align:left; padding:0.3em; border-bottom: 1px solid #ddd;}
-.content td { text-align:left; padding:0.3em; border-top: 1px solid #ddd;}
+.content th { text-align:left; padding:0.3em; border-bottom:1px solid #ddd;}
+.content td { text-align:left; padding:0.3em; border-top:1px solid #ddd;}
 .content .flexible { position:relative; padding-bottom:56.25%; padding-top:30px; }
 .content .flexible iframe { position:absolute; top:0; left:0; width:100%; height:100%; }
 .footer { margin:2em; text-align:center; }
