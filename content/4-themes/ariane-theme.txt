@@ -1,7 +1,6 @@
 ---
 Sitename: Ariane
 Title: Ariane theme
-TitleContentZ: -
 Theme: ariane
 Template: ariane
 ---
