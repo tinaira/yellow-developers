@@ -23,7 +23,7 @@
 <ul>
 <?php foreach($pages as $page): ?>
 <?php if($chronologicalOrder): ?>
-<?php $sectionNew = htmlspecialchars(date("Y-m-d", $page->getModified())) ?>
+<?php $sectionNew = $page->getFormatted("modified") ?>
 <?php else: ?>
 <?php $sectionNew = htmlspecialchars(strtoupperu(substru($page->get("title"), 0, 1))) ?>
 <?php endif ?>

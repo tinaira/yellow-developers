@@ -38,7 +38,7 @@
 		$language = strreplaceu(',', '-', empty($language) ? $yellow->config->get("language") : $language);
 		$home = strreplaceu(',', '-', empty($home) ? "/" : $home);
 		$user .= "$email,$hash,$name,$language,$home\n";
-		$yellow->page->header("Last-Modified: ".$yellow->toolbox->getHttpTimeFormatted(time()));
+		$yellow->page->header("Last-Modified: ".$yellow->toolbox->getHttpDateFormatted(time()));
 		$yellow->page->header("Cache-Control: no-cache, must-revalidate");
 	} else {
 		$user = $email = $password = "";		
