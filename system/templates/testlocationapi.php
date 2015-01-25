@@ -14,7 +14,7 @@
 <td><?php echo count($page->getChildren(true))!=0	? "yes" : "<span style=\"color:red\">no</span>" ?></td>
 <td><?php echo $page->isVisible()					? "yes" : "<span style=\"color:red\">no</span>" ?></td>
 <td><?php echo count($page->getSiblings(true)) ?></td>
-<td><?php echo $page->getParent()!=NULL ? $page->getParent()->getHtml("title") : $page->getHtml("titleNavigation") ?></td>
+<td><?php echo $page->getParent()!=NULL ? $page->getParent()->getHtml("titleNavigation") : $page->getHtml("titleNavigation") ?></td>
 <td><?php echo date("Y-m-d", $page->getModified())!=date("Y-m-d") ? $page->getFormatted("modified") : "Today" ?></td>
 </tr>
 <?php endforeach ?>
