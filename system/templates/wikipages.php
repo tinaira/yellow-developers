@@ -14,6 +14,7 @@
 <?php $yellow->page->set("titleWiki", $yellow->text->get("wikiFilter")." ".$title) ?>
 <?php endif ?>
 <?php endif ?>
+<?php $yellow->page->setLastModified($pages->getModified()) ?>
 <?php $yellow->snippet("header") ?>
 <?php $yellow->snippet("sitename") ?>
 <?php $yellow->snippet("navigation") ?>
@@ -47,4 +48,3 @@
 </div>
 <?php endif ?>
 <?php $yellow->snippet("footer") ?>
-<?php $yellow->page->header("Last-Modified: ".$pages->getModified(true)) ?>

@@ -1,4 +1,4 @@
-/* Yellow knowhow theme 0.1.4 */
+/* Yellow knowhow theme 0.1.5 */
 
 html, body, div, form, pre, span, tr, th, td { margin:0; padding:0; border:0; vertical-align:baseline; }
 body {
@@ -42,6 +42,7 @@ a, img { border:none; text-decoration:none; }
 .content table { border-spacing:0; border-collapse:collapse; }
 .content .flexible { position:relative; padding-bottom:56.25%; padding-top:30px; }
 .content .flexible iframe { position:absolute; top:0; left:0; width:100%; height:100%; }
+.content .toc { margin:0; padding:0; list-style:none; }
 .footer { margin-top:1.5em; padding-top:1.5em; border-top:1px solid #eee; }
 .footer a { color:#4183c4; }
 .footer a:hover { color:#4183c4; text-decoration:underline; }

@@ -10,6 +10,7 @@
 <?php $tagDivider = max(($tagMaximum - $tagMinimum)/4, 1); ?>
 <?php foreach($tags as $key=>$value) $tags[$key] = "type".(1+intval(($value-$tagMinimum) / $tagDivider)); ?>
 <?php endif ?>
+<?php $yellow->page->setLastModified($pages->getModified()) ?>
 <div class="blogtagcloud">
 <ul>
 <?php foreach($tags as $key=>$value): ?>

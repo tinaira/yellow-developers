@@ -2,6 +2,7 @@
 <?php if(!is_object($pages)) $pages = $yellow->page->getChildren() ?>
 <?php if(!$style) $style = "pagelist" ?>
 <?php if(!$size) $size = "100%" ?>
+<?php $yellow->page->setLastModified($pages->getModified()) ?>
 <ul class="<?php echo htmlspecialchars($style) ?>">
 <?php foreach($pages as $page): ?>
 <?php $fileName = $src = basename($page->location).".jpg" ?>

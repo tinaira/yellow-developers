@@ -5,7 +5,7 @@
 // Include parser plugin
 class YellowInclude
 {
-	const Version = "0.1.6";
+	const Version = "0.1.7";
 	var $yellow;			//access to API
 	
 	// Handle plugin initialisation
@@ -30,17 +30,37 @@ class YellowInclude
 									$this->yellow->config->get("contentRootDir"), $this->yellow->config->get("contentHomeDir"),
 									$this->yellow->config->get("contentDefaultFile"), $this->yellow->config->get("contentExtension"));
 								$content = $this->yellow->pages->find($location);
-								$output = $content ? $content->getContent() : NULL;
-								if(is_null($output)) $page->error(500, "Include '$fileName' does not exist!");
+								if($content)
+								{
+									$page->setLastModified($content->getModified());
+									$output = $content->getContent();
+								} else {
+									$page->error(500, "Include '$fileName' does not exist!");
+								}
 								break;
-				case "snippet":	ob_start();
-								call_user_func_array(array($this->yellow, $type), $args);
-								$output = ob_get_contents();
-								ob_end_clean();
+				case "snippet": list($snippet) = $args;
+								$fileNameSnippet = $this->yellow->config->get("snippetDir")."$snippet.php";
+								if(is_file($fileNameSnippet))
+								{
+									$page->setLastModified(filemtime($fileNameSnippet));
+									$this->yellow->pages->snippetArgs = $args;
+									ob_start();
+									global $yellow;
+									require($fileNameSnippet);
+									$output = ob_get_contents();
+									ob_end_clean();
+								} else {
+									$page->error(500, "Include '$snippet' does not exist!");
+								}
 								break;
 				case "text":	list($key, $language) = $args;
 								if(empty($language)) $language = $page->get("language");
-								$output = $this->yellow->text->getTextHtml($key, $language);
+								if($this->yellow->text->isExisting($key, $language))
+								{
+									$output = $this->yellow->text->getTextHtml($key, $language);
+								} else {
+									$page->error(500, "Include '$key' does not exist!");
+								}
 								break;
 			}
 		}

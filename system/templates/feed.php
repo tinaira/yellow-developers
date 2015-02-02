@@ -1,6 +1,7 @@
 <?php $pages = $yellow->pages->index(false, false, 3) ?>
 <?php $pages = $pages->sort("modified")->pagination(30) ?>
 <?php if($pages->getPaginationPage() > $pages->getPaginationCount()) $yellow->page->error(404) ?>
+<?php $yellow->page->setLastModified($pages->getModified()) ?>
 <?php $yellow->snippet("header") ?>
 <?php $yellow->snippet("sitename") ?>
 <?php $yellow->snippet("navigation") ?>
@@ -16,4 +17,3 @@
 <?php $yellow->snippet("pagination", $pages) ?>
 </div>
 <?php $yellow->snippet("footer") ?>
-<?php $yellow->page->header("Last-Modified: ".$pages->getModified(true)) ?>

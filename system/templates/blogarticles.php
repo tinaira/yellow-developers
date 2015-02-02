@@ -11,6 +11,7 @@
 <?php $yellow->page->set("titleHeader", $title." - ".$yellow->page->get("sitename")) ?>
 <?php $yellow->page->set("titleBlog", $yellow->text->get("blogFilter")." ".$title) ?>
 <?php endif ?>
+<?php $yellow->page->setLastModified($pages->getModified()) ?>
 <?php $yellow->snippet("header") ?>
 <?php $yellow->snippet("sitename") ?>
 <?php $yellow->snippet("navigation") ?>
@@ -28,4 +29,3 @@
 <?php $yellow->snippet("pagination", $pages) ?>
 </div>
 <?php $yellow->snippet("footer") ?>
-<?php $yellow->page->header("Last-Modified: ".$pages->getModified(true)) ?>

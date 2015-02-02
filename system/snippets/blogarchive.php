@@ -5,6 +5,7 @@
 <?php foreach($pages as $page) if(preg_match("/^(\d+\-\d+)\-/", $page->get("published"), $matches)) ++$months[$matches[1]]; ?>
 <?php uksort($months, strnatcasecmp); ?>
 <?php $months = array_reverse($months); ?>
+<?php $yellow->page->setLastModified($pages->getModified()) ?>
 <div class="blogarchive">
 <ul>
 <?php foreach($months as $key=>$value): ?>

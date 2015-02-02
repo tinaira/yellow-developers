@@ -1,4 +1,6 @@
 <?php $pages = $yellow->pages->index(true, true) ?>
+<?php $yellow->page->setLastModified($pages->getModified()) ?>
+<?php $yellow->page->header("Cache-Control: max-age=60") ?>
 <?php $yellow->snippet("header") ?>
 <?php $yellow->snippet("sitename") ?>
 <?php $yellow->snippet("navigation") ?>
@@ -21,5 +23,3 @@
 </table>
 </div>
 <?php $yellow->snippet("footer") ?>
-<?php $yellow->page->header("Last-Modified: ".$pages->getModified(true)) ?>
-<?php $yellow->page->header("Cache-Control: max-age=60") ?>
