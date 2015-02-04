@@ -1,6 +1,6 @@
 ---
 Title: Blog article
-Published: @date
+Published: @datetime
 Author: @username
 Tag: Example
 ---

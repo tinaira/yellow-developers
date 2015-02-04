@@ -17,7 +17,7 @@
 <td><?php echo $page->isVisible()					? "yes" : "<span style=\"color:red\">no</span>" ?></td>
 <td><?php echo count($page->getSiblings(true)) ?></td>
 <td><?php echo $page->getParent()!=NULL ? $page->getParent()->getHtml("titleNavigation") : $page->getHtml("titleNavigation") ?></td>
-<td><?php echo date("Y-m-d", $page->getModified())!=date("Y-m-d") ? $page->getFormatted("modified") : "Today" ?></td>
+<td><?php echo htmlspecialchars(date("Y-m-d", $page->getModified())!=date("Y-m-d") ? $page->getDate("modified") : "Today") ?></td>
 </tr>
 <?php endforeach ?>
 </table>

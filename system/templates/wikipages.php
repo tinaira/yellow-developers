@@ -5,7 +5,7 @@
 <?php if($_REQUEST["special"] == "changes") { $chronologicalOrder = true; array_push($pagesFilter, $yellow->text->get("wikiSpecialChanges")); } ?>
 <?php if($_REQUEST["tag"]) { $pages->filter("tag", $_REQUEST["tag"]); array_push($pagesFilter, $pages->getFilter()); } ?>
 <?php if($_REQUEST["title"]) { $pages->filter("title", $_REQUEST["title"], false); array_push($pagesFilter, $pages->getFilter()); } ?>
-<?php if($_REQUEST["modified"]) { $pages->filter("modified", $_REQUEST["modified"], false); array_push($pagesFilter, $pages->getFilter()); } ?>
+<?php if($_REQUEST["modified"]) { $pages->filter("modified", $_REQUEST["modified"], false); array_push($pagesFilter, $yellow->text->normaliseDate($pages->getFilter())); } ?>
 <?php if(!empty($pagesFilter)): ?>
 <?php $pages->sort($chronologicalOrder ? "modified" : "title", $chronologicalOrder)->pagination(30) ?>
 <?php if($pages->getPaginationPage() > $pages->getPaginationCount()) $yellow->page->error(404) ?>
@@ -24,7 +24,7 @@
 <ul>
 <?php foreach($pages as $page): ?>
 <?php if($chronologicalOrder): ?>
-<?php $sectionNew = $page->getFormatted("modified") ?>
+<?php $sectionNew = htmlspecialchars($page->getDate("modified")) ?>
 <?php else: ?>
 <?php $sectionNew = htmlspecialchars(strtoupperu(substru($page->get("title"), 0, 1))) ?>
 <?php endif ?>
