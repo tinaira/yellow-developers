@@ -19,7 +19,7 @@
 </div>
 <?php endforeach ?>
 <?php if(!count($pages)): ?>
-<p><?php echo $yellow->text->getHtml(isset($_REQUEST["query"]) ? "searchResultsNone" : "searchQueryNone") ?></p>
+<p><?php echo $yellow->text->getHtml(isset($_REQUEST["query"]) ? "searchResultsEmpty" : "searchResultsNone") ?></p>
 <?php endif ?>
 <?php $yellow->snippet("pagination", $pages) ?>
 </div>
