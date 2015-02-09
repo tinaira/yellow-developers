@@ -1,3 +1,4 @@
+<?php /* Testlocationapi template */ ?>
 <?php $pages = $yellow->pages->index(true, true) ?>
 <?php $yellow->page->setLastModified($pages->getModified()) ?>
 <?php $yellow->page->header("Cache-Control: max-age=60") ?>

@@ -1,3 +1,4 @@
+<?php /* Wikipages template 0.1.5 */ ?>
 <?php $pages = $yellow->pages->create()->append($yellow->page); ?>
 <?php if($yellow->toolbox->isLocationArgs($this->toolbox->getLocation())): ?>
 <?php $pages->merge($yellow->page->getChildren(!$yellow->page->isVisible())) ?>

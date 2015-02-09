@@ -1,3 +1,4 @@
+<?php /* Sitemapxml template 0.1.5 */ ?>
 <?php if($yellow->getRequestHandler() == "webinterface") { require_once("default.php"); return; } ?>
 <?php $pages = $yellow->pages->index(false, false, 3) ?>
 <?php $yellow->page->setLastModified($pages->getModified()) ?>

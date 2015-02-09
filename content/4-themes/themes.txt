@@ -1,4 +1,5 @@
 ---
 Title: Themes
+Template: themes
 ---
 Great technology is useful in function and aesthetic. The visual design of a website is defined with themes. There's a default theme that comes with Yellow. Select from beautiful themes and design the website you want.

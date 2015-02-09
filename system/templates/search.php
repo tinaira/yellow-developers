@@ -1,3 +1,4 @@
+<?php /* Search template 0.1.5 */ ?>
 <?php if(PHP_SAPI=="cli" && !isset($_REQUEST["query"])) $yellow->page->error(500, "Static website not supported!") ?>
 <?php $pages = getSearchPages($yellow, 5, $_REQUEST["query"]) ?>
 <?php $yellow->page->setLastModified($pages->getModified()) ?>

@@ -1,3 +1,4 @@
+<?php /* Blogarticles template 0.1.5 */ ?>
 <?php $pages = $yellow->page->getChildren(!$yellow->page->isVisible()) ?>
 <?php $pages->filter("template", "blog") ?>
 <?php $pagesFilter = array() ?>

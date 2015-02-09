@@ -1,3 +1,4 @@
+<?php /* Sitemap template 0.1.5 */ ?>
 <?php $pages = $yellow->pages->index(false, false, 3) ?>
 <?php $pages = $pages->sort("title", false)->pagination(30) ?>
 <?php if($pages->getPaginationPage() > $pages->getPaginationCount()) $yellow->page->error(404) ?>

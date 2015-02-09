@@ -1,3 +1,4 @@
+<?php /* Testnewuser template */ ?>
 <?php if(PHP_SAPI == "cli") $yellow->page->error(500, "Static website not supported!") ?>
 <?php list($user, $email, $password) = getUser($yellow, $_REQUEST["status"], $_REQUEST["email"], $_REQUEST["password"]) ?>
 <?php $yellow->snippet("header") ?>

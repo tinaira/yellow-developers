@@ -1,3 +1,4 @@
+<?php /* Themes template */ ?>
 <?php $yellow->snippet("header") ?>
 <?php $yellow->snippet("sitename") ?>
 <?php $yellow->snippet("navigation") ?>
