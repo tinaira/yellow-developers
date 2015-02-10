@@ -185,7 +185,7 @@ class YellowImage
 	// Check graphics library support
 	function isGraphicsLibrary()
 	{
-		return true; //### extension_loaded("gd") && function_exists("gd_info") &&
+		return extension_loaded("gd") && function_exists("gd_info") &&
 			((imagetypes()&(IMG_JPG|IMG_PNG)) == (IMG_JPG|IMG_PNG));
 	}
 }
