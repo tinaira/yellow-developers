@@ -1,4 +1,4 @@
-<?php /* Wikipages template 0.1.5 */ ?>
+<?php /* Wikipages template 0.1.6 */ ?>
 <?php $pages = $yellow->pages->create()->append($yellow->page); ?>
 <?php if($yellow->toolbox->isLocationArgs($this->toolbox->getLocation())): ?>
 <?php $pages->merge($yellow->page->getChildren(!$yellow->page->isVisible())) ?>
@@ -16,6 +16,7 @@
 <?php endif ?>
 <?php endif ?>
 <?php $yellow->page->setLastModified($pages->getModified()) ?>
+<?php $yellow->page->header("Cache-Control: max-age=60") ?>
 <?php $yellow->snippet("header") ?>
 <?php $yellow->snippet("sitename") ?>
 <?php $yellow->snippet("navigation") ?>

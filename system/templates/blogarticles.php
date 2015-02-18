@@ -1,4 +1,4 @@
-<?php /* Blogarticles template 0.1.5 */ ?>
+<?php /* Blogarticles template 0.1.6 */ ?>
 <?php $pages = $yellow->page->getChildren(!$yellow->page->isVisible()) ?>
 <?php $pages->filter("template", "blog") ?>
 <?php $pagesFilter = array() ?>
@@ -13,6 +13,7 @@
 <?php $yellow->page->set("titleBlog", $yellow->text->get("blogFilter")." ".$title) ?>
 <?php endif ?>
 <?php $yellow->page->setLastModified($pages->getModified()) ?>
+<?php $yellow->page->header("Cache-Control: max-age=60") ?>
 <?php $yellow->snippet("header") ?>
 <?php $yellow->snippet("sitename") ?>
 <?php $yellow->snippet("navigation") ?>
