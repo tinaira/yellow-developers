@@ -1,5 +1,5 @@
-/* Blogsite theme 0.1.14 */
-/* Author: Mark Seuffert */
+/* Blogsite theme 0.1.15 */
+/* Designer: Mark Seuffert */
 
 html, body, div, form, pre, span, tr, th, td { margin:0; padding:0; border:0; vertical-align:baseline; }
 body {
@@ -9,8 +9,8 @@ body {
 	font-weight:300; 
 	line-height:1.5;
 }
-h1, h2, h3, h4, h5, h6 { color:#07d; font-weight:normal; }
-h1 { font-size:1.75em; }
+h1, h2, h3, h4, h5, h6 { color:#07d; font-weight:300; }
+h1 { font-size:2.2em; }
 hr { height:1px; background:#ddd; border:0; }
 code { font-size:1.1em; }
 a { color:#07d; }
@@ -18,11 +18,11 @@ a:hover { color:#07d; text-decoration:underline; }
 a, img { border:none; text-decoration:none; }
 .yellow { margin:0 0.5em; }
 .sitename { text-align:center; }
-.sitename h1 { margin:0.4em 0; font-size:3.5em; font-weight:300; }
+.sitename h1 { margin:0.4em 0; font-size:3.5em; }
 .sitename h1 a { color:#07d; text-decoration:none; }
 .sitename-banner {
 	padding-top:23%; 
-	background-image:url(blogsite.jpg); 
+	background-image:url(blogsite-banner.jpg);
 	background-repeat:no-repeat; 
 	background-size:cover; 
 	background-position:center; 
@@ -63,7 +63,7 @@ a, img { border:none; text-decoration:none; }
 }
 @media screen and (max-width:30em) {
 	body { font-size:0.9em; }
-	.sitename h1, h1, h2 { font-size:1.2em; font-weight:normal; }
+	.sitename h1, h1, h2 { font-size:1.2em; }
 	.sitename h1, .sitename, .navigation, .page { margin:0; padding:0; border:0; }
 	.sitename, .content, .footer { padding:0.5em; }
 	.footer { margin:0; padding-top:1.5em; }

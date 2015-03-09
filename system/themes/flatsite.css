@@ -1,5 +1,5 @@
-/* Flatsite theme 0.1.5 */
-/* Author: Mark Seuffert */
+/* Flatsite theme 0.1.6 */
+/* Designer: Mark Seuffert */
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
 html, body, div, form, pre, span, tr, th, td { margin:0; padding:0; border:0; vertical-align:baseline; }
@@ -21,6 +21,13 @@ a, img { border:none; text-decoration:none; }
 .page { position:relative; }
 .sitename h1 { margin-top:0.5em; margin-bottom:0.5em; }
 .sitename h1 a { color:#111; text-decoration:none; }
+.sitename-logo {
+	display:inline-block;
+	background-image:url(flatsite-logo.png);
+	background-size:cover;
+	width:48px; height:48px; margin:0 8px 5px 0;
+	vertical-align:middle;
+}
 .navigation { position:absolute; top:0.9em; right:0em; }
 .navigation { margin-bottom:1em; line-height:2em; }
 .navigation a { padding:0 0.3em; display:inline-block; }
@@ -64,9 +71,9 @@ a, img { border:none; text-decoration:none; }
 	margin:0; padding:4px 22px;
 	display:inline-block; min-width:8em;
 	background-color:#eaeaea; color:#333333;
-	background-image:linear-gradient(to bottom, #ffffff, #e1e1e1);
+	background-image:linear-gradient(to bottom, #f8f8f8, #e1e1e1);
 	border:1px solid #bbb;
-	border-color:#d1d1d1 #d1d1d1 #aaaaaa;
+	border-color:#c1c1c1 #c1c1c1 #aaaaaa;
 	border-radius:4px;
 	outline-offset:-2px;
 	font-size:0.9em; font-family:inherit; font-weight:normal; line-height:1; 
@@ -89,8 +96,9 @@ a, img { border:none; text-decoration:none; }
 }
 @media screen and (max-width:30em) { 
 	body { margin:0.5em; font-size:0.9em; }
-	.sitename h1, h1, h2 { font-size:1.2em;  }
+	.sitename h1, h1, h2 { font-size:1.2em; }
 	.sitename h1, .header, .navigation, .footer, .page { margin:0; padding:0; }
+	.sitename-logo { width:24px; height:24px; }
 	.navigation { position:static; }
 }
 @media print {
