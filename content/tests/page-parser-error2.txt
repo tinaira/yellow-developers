@@ -1,5 +1,0 @@
----
-Title: Test parser error
-Parser: example
----
-This page tests parser error.

@@ -1,5 +1,0 @@
----
-Title: Test snippet error
-Template: testsnippeterror
----
-This page tests snippet error via template.

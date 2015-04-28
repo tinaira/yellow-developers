@@ -1,7 +1,6 @@
 ---
 Title: Test file name
 ---
-
 This page tests file name with whitespace. 
 
 A file name with special characters will be converted into a normalised location.

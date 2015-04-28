@@ -1,30 +1,33 @@
 <?php
-// Copyright (c) 2013-2014 Datenstrom, http://datenstrom.se
+// Copyright (c) 2013-2015 Datenstrom, http://datenstrom.se
 // This file may be used and distributed under the terms of the public license.
 
 // Draft status plugin
 class YellowDraft
 {
-	const Version = "0.1.5";
+	const Version = "0.5.1";
 	var $yellow;			//access to API
 	
-	// Handle plugin initialisation
+	// Handle initialisation
 	function onLoad($yellow)
 	{
 		$this->yellow = $yellow;
-		$this->yellow->config->setDefault("draftStatusCode", "404");
+		$this->yellow->config->setDefault("draftStatusCode", "500");
 	}
 	
 	// Handle page meta data parsing
-	function onParseMeta($page, $text)
+	function onParseMeta($page)
 	{
 		if($page->get("status") == "draft") $page->visible = false;
 	}
 	
-	// Handle page content parsing
-	function onParseContent($page, $text)
+	// Handle page parsing
+	function onParsePage()
 	{
-		if($page->get("status") == "draft") $page->error($this->yellow->config->get("draftStatusCode"), "Page has 'draft' status!");
+		if($this->yellow->page->get("status")=="draft" && $this->yellow->getRequestHandler()=="core")
+		{
+			$this->yellow->page->error($this->yellow->config->get("draftStatusCode"), "Page has 'draft' status!");
+		}
 	}
 }
 

@@ -6,4 +6,4 @@ TitleNavigation: Demo
 
 [You can edit this page](@pageedit).
 
-Start by editing this website. Just give it a try. If you have to read the whole documentation first, then we have clearly done something wrong. The Yellow documentation gives you more information about how to create small web pages, blogs and wikis.
+Start by editing this website. Just give it a try. If you have to read the documentation first, then we have done something wrong. The documentation gives you more information about how to create small web pages, blogs and wikis.

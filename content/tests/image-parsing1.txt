@@ -1,5 +1,5 @@
 ---
-Title: Test image  parsing
+Title: Test image parsing
 ---
 This page tests image parsing.
 

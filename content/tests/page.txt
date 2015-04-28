@@ -1,6 +1,8 @@
 ---
 Title: Tests
 ---
+For developers and friends. [You can login for testing](@pageedit).
+
 * [file-name-unicode-äö](file-name-unicode-äö)
 * [file-name-whitespace](file-name-whitespace)
 * [folder-name](folder-name/)* [image-parsing1](image-parsing1)
@@ -11,12 +13,9 @@ Title: Tests
 * [new-user](new-user)
 * [page-draft-status](page-draft-status)
 * [page-language-error](page-language-error)
-* [page-parser-error1](page-parser-error1)
-* [page-parser-error2](page-parser-error2)
-* [page-snippet-error1](page-snippet-error1)
-* [page-snippet-error2](page-snippet-error2)
+* [page-parser-error](page-parser-error)
+* [page-snippet-error](page-snippet-error)
 * [page-template-error](page-template-error)
 * [page-theme-error](page-theme-error)
-* [page-type-error.xml](page-type-error.xml)
 * [redirect-to-home](redirect-to-home)
 * [xss-filter](xss-filter)

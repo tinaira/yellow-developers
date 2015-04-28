@@ -5,8 +5,8 @@ This page tests image parsing for image list.
 
 Small images:
 
-[include snippet imagelist .*theme.jpg themes 25%]
+[snippet imagelist .*theme.jpg themes 25%]
 
 Big images:
 
-[include snippet imagelist .*theme.jpg]
+[snippet imagelist .*theme.jpg]

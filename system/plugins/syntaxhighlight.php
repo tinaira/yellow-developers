@@ -1,14 +1,14 @@
 <?php
-// Copyright (c) 2013-2014 Datenstrom, http://datenstrom.se
+// Copyright (c) 2013-2015 Datenstrom, http://datenstrom.se
 // This file may be used and distributed under the terms of the public license.
 
-// Syntax highlight parser plugin
+// Syntax highlight plugin
 class YellowSyntaxhighlight
 {
-	const Version = "0.1.10";
+	const Version = "0.5.1";
 	var $yellow;			//access to API
 	
-	// Handle plugin initialisation
+	// Handle initialisation
 	function onLoad($yellow)
 	{
 		$this->yellow = $yellow;
@@ -16,8 +16,8 @@ class YellowSyntaxhighlight
 		$this->yellow->config->setDefault("syntaxLineNumber", "0");
 	}
 	
-	// Handle page custom type parsing
-	function onParseType($page, $name, $text, $typeShortcut)
+	// Handle page content parsing of custom block
+	function onParseContentBlock($page, $name, $text, $typeShortcut)
 	{
 		$output = NULL;
 		if(!empty($name) && !$typeShortcut)
@@ -37,15 +37,15 @@ class YellowSyntaxhighlight
 		return $output;
 	}
 	
-	// Handle page extra header
-	function onHeaderExtra($page)
+	// Handle page extra HTML data
+	function onExtra()
 	{
-		$header = "";
+		$output = "";
 		if(!$this->yellow->config->get("syntaxStylesheetDefault"))
 		{
 			$locationStylesheet = $this->yellow->config->get("serverBase").$this->yellow->config->get("pluginLocation")."syntaxhighlight.css";
 			$fileNameStylesheet = $this->yellow->config->get("pluginDir")."syntaxhighlight.css";
-			if(is_file($fileNameStylesheet)) $header = "<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"$locationStylesheet\" />\n";
+			if(is_file($fileNameStylesheet)) $output = "<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"$locationStylesheet\" />\n";
 		} else {
 			$geshi = new GeSHi();
 			$geshi->set_language_path($this->yellow->config->get("pluginDir")."/syntaxhighlight/");
@@ -55,9 +55,9 @@ class YellowSyntaxhighlight
 				$geshi->set_language($language);
 				$output .= $geshi->get_stylesheet(false);
 			}
-			$header = "<style type=\"text/css\">\n$output</style>";
+			$output = "<style type=\"text/css\">\n$output</style>";
 		}
-		return $header;
+		return $output;
 	}
 }
 	

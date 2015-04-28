@@ -1,15 +1,15 @@
 <?php
-// Copyright (c) 2013-2014 Datenstrom, http://datenstrom.se
+// Copyright (c) 2013-2015 Datenstrom, http://datenstrom.se
 // This file may be used and distributed under the terms of the public license.
 
-// Image parser plugin
+// Image plugin
 class YellowImage
 {
-	const Version = "0.1.9";
+	const Version = "0.5.1";
 	var $yellow;			//access to API
 	var $graphicsLibrary;	//graphics library support? (boolean)
 
-	// Handle plugin initialisation
+	// Handle initialisation
 	function onLoad($yellow)
 	{
 		$this->yellow = $yellow;
@@ -20,8 +20,8 @@ class YellowImage
 		$this->graphicsLibrary = $this->isGraphicsLibrary();
 	}
 
-	// Handle page custom type parsing
-	function onParseType($page, $name, $text, $typeShortcut)
+	// Handle page content parsing of custom block
+	function onParseContentBlock($page, $name, $text, $typeShortcut)
 	{
 		$output = NULL;
 		if($name=="image" && $typeShortcut)
@@ -37,9 +37,9 @@ class YellowImage
 				if(empty($alt)) $alt = $this->yellow->config->get("imageAlt");
 				if(empty($width)) $width = "100%";
 				if(empty($height)) $height = $width;
-				list($src, $width, $height) = $this->getImageInfo($name, $width, $height);
+				list($src, $width, $height) = $this->getImageInfo($this->yellow->config->get("imageDir").$name, $width, $height);
 			} else {
-				$src = $this->yellow->toolbox->normaliseLocation($name, $page->base, $page->location);
+				$src = $this->yellow->lookup->normaliseLocation($name, $page->base, $page->location);
 				$width = $height = 0;
 			}
 			$output = "<img src=\"".htmlspecialchars($src)."\"";
@@ -76,30 +76,30 @@ class YellowImage
 		return $statusCode;
 	}
 
-	// Return image info, create thumbnail on demand
+	// Return image info, create thumbnail on demand  ###wh
 	function getImageInfo($fileName, $widthOutput, $heightOutput)
 	{
-		$fileNameInput = $this->yellow->config->get("imageDir").$fileName;
-		list($widthInput, $heightInput, $type) = $this->yellow->toolbox->detectImageInfo($fileNameInput);
+		$fileNameShort = substru($fileName, strlenu($this->yellow->config->get("imageDir")));
+		list($widthInput, $heightInput, $type) = $this->yellow->toolbox->detectImageInfo($fileName);
 		$widthOutput = $this->convertValueAndUnit($widthOutput, $widthInput);
 		$heightOutput = $this->convertValueAndUnit($heightOutput, $heightInput);
 		if($widthInput==$widthOutput && $heightInput==$heightOutput)
 		{
-			$src = $this->yellow->config->get("serverBase").$this->yellow->config->get("imageLocation").$fileName;
+			$src = $this->yellow->config->get("serverBase").$this->yellow->config->get("imageLocation").$fileNameShort;
 			$width = $widthInput; $height = $heightInput;
 		} else {
-			$fileNameThumb = ltrim(str_replace(array("/", "\\", "."), "-", dirname($fileName)."/".pathinfo($fileName, PATHINFO_FILENAME)), "-");
+			$fileNameThumb = ltrim(str_replace(array("/", "\\", "."), "-", dirname($fileNameShort)."/".pathinfo($fileName, PATHINFO_FILENAME)), "-");
 			$fileNameThumb .= "-".$widthOutput."x".$heightOutput;
 			$fileNameThumb .= ".".pathinfo($fileName, PATHINFO_EXTENSION);
 			$fileNameOutput = $this->yellow->config->get("imageThumbnailDir").$fileNameThumb;
-			if($this->isFileNotUpdated($fileNameInput, $fileNameOutput))
+			if($this->isFileNotUpdated($fileName, $fileNameOutput))
 			{
-				$image = $this->loadImage($fileNameInput, $type);
+				$image = $this->loadImage($fileName, $type);
 				if($image)
 				{
 					$image = $this->resizeImage($image, $widthInput, $heightInput, $widthOutput, $heightOutput);
 					if(!$this->saveImage($fileNameOutput, $type, $image) ||
-					   !$this->yellow->toolbox->modifyFile($fileNameOutput, filemtime($fileNameInput)))
+					   !$this->yellow->toolbox->modifyFile($fileNameOutput, filemtime($fileName)))
 					{
 						$this->yellow->page->error(500, "Image '$fileNameOutput' can't be saved!");
 					}

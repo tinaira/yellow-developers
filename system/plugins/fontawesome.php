@@ -1,27 +1,27 @@
 <?php
-// Copyright (c) 2013-2014 Datenstrom, http://datenstrom.se
+// Copyright (c) 2013-2015 Datenstrom, http://datenstrom.se
 // This file may be used and distributed under the terms of the public license.
 
 // Fontawesome plugin
 class YellowFontawesome
 {
-	const Version = "0.1.4";
+	const Version = "0.5.1";
 	var $yellow;			//access to API
 	
-	// Handle plugin initialisation
+	// Handle initialisation
 	function onLoad($yellow)
 	{
 		$this->yellow = $yellow;
 	}
 	
-	// Handle page extra header
-	function onHeaderExtra($page)
+	// Handle page extra HTML data
+	function onExtra()
 	{
-		$header = "";
+		$output = "";
 		$locationStylesheet = $this->yellow->config->get("serverBase").$this->yellow->config->get("pluginLocation")."fontawesome.css";
 		$fileNameStylesheet = $this->yellow->config->get("pluginDir")."fontawesome.css";
-		if(is_file($fileNameStylesheet)) $header = "<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"$locationStylesheet\" />\n";
-		return $header;
+		if(is_file($fileNameStylesheet)) $output = "<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"$locationStylesheet\" />\n";
+		return $output;
 	}
 }
 

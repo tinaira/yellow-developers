@@ -1,7 +1,0 @@
----
-Title: Blog article
-Published: @datetime
-Author: @username
-Tag: Example
----
-This is a new blog article.

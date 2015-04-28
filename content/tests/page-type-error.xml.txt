@@ -1,4 +1,0 @@
----
-Title: Test type error
----
-This page tests content type error. 

@@ -1,5 +1,0 @@
----
-Title: Sitemap
-Template: sitemapxml
----
-This page is automatically generated.

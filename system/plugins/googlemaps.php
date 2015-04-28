@@ -1,14 +1,14 @@
 <?php
-// Copyright (c) 2013-2014 Datenstrom, http://datenstrom.se
+// Copyright (c) 2013-2015 Datenstrom, http://datenstrom.se
 // This file may be used and distributed under the terms of the public license.
 
-// Google map parser plugin
+// Google map plugin
 class YellowGooglemaps
 {
-	const Version = "0.1.6";
+	const Version = "0.5.1";
 	var $yellow;			//access to API
 	
-	// Handle plugin initialisation
+	// Handle initialisation
 	function onLoad($yellow)
 	{
 		$this->yellow = $yellow;
@@ -16,8 +16,8 @@ class YellowGooglemaps
 		$this->yellow->config->setDefault("googlemapsStyle", "flexible");
 	}
 	
-	// Handle page custom type parsing
-	function onParseType($page, $name, $text, $typeShortcut)
+	// Handle page content parsing of custom block
+	function onParseContentBlock($page, $name, $text, $typeShortcut)
 	{
 		$output = NULL;
 		if($name=="googlemaps" && $typeShortcut)

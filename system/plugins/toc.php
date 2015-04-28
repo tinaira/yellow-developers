@@ -5,17 +5,17 @@
 // Table of contents plugin
 class YellowToc
 {
-	const Version = "0.1.1";
+	const Version = "0.5.1";
 	var $yellow;			//access to API
 	
-	// Handle plugin initialisation
+	// Handle initialisation
 	function onLoad($yellow)
 	{
 		$this->yellow = $yellow;
 	}
 	
 	// Handle page content parsing
-	function onParseContent($page, $text)
+	function onParseContentText($page, $text)
 	{
 		$callback = function($matches) use ($text)
 		{
