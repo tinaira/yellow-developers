@@ -9,5 +9,5 @@
 <?php endif ?>
 </div>
 </div>
-<?php $yellow->snippet("disqus", "datenstrom") ?>
+<?php echo $yellow->page->getExtra() ?>
 </div>

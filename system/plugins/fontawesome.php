@@ -5,7 +5,7 @@
 // Fontawesome plugin
 class YellowFontawesome
 {
-	const Version = "0.5.1";
+	const Version = "0.5.2";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -15,12 +15,15 @@ class YellowFontawesome
 	}
 	
 	// Handle page extra HTML data
-	function onExtra()
+	function onExtra($name)
 	{
 		$output = "";
-		$locationStylesheet = $this->yellow->config->get("serverBase").$this->yellow->config->get("pluginLocation")."fontawesome.css";
-		$fileNameStylesheet = $this->yellow->config->get("pluginDir")."fontawesome.css";
-		if(is_file($fileNameStylesheet)) $output = "<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"$locationStylesheet\" />\n";
+		if($name == "header")
+		{
+			$locationStylesheet = $this->yellow->config->get("serverBase").$this->yellow->config->get("pluginLocation")."fontawesome.css";
+			$fileNameStylesheet = $this->yellow->config->get("pluginDir")."fontawesome.css";
+			if(is_file($fileNameStylesheet)) $output = "<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"$locationStylesheet\" />\n";
+		}
 		return $output;
 	}
 }

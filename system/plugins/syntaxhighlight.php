@@ -5,7 +5,7 @@
 // Syntax highlight plugin
 class YellowSyntaxhighlight
 {
-	const Version = "0.5.1";
+	const Version = "0.5.2";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -38,24 +38,27 @@ class YellowSyntaxhighlight
 	}
 	
 	// Handle page extra HTML data
-	function onExtra()
+	function onExtra($name)
 	{
 		$output = "";
-		if(!$this->yellow->config->get("syntaxStylesheetDefault"))
+		if($name == "header")
 		{
-			$locationStylesheet = $this->yellow->config->get("serverBase").$this->yellow->config->get("pluginLocation")."syntaxhighlight.css";
-			$fileNameStylesheet = $this->yellow->config->get("pluginDir")."syntaxhighlight.css";
-			if(is_file($fileNameStylesheet)) $output = "<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"$locationStylesheet\" />\n";
-		} else {
-			$geshi = new GeSHi();
-			$geshi->set_language_path($this->yellow->config->get("pluginDir")."/syntaxhighlight/");
-			foreach($geshi->get_supported_languages() as $language)
+			if(!$this->yellow->config->get("syntaxStylesheetDefault"))
 			{
-				if($language == "geshi") continue;
-				$geshi->set_language($language);
-				$output .= $geshi->get_stylesheet(false);
+				$locationStylesheet = $this->yellow->config->get("serverBase").$this->yellow->config->get("pluginLocation")."syntaxhighlight.css";
+				$fileNameStylesheet = $this->yellow->config->get("pluginDir")."syntaxhighlight.css";
+				if(is_file($fileNameStylesheet)) $output = "<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"$locationStylesheet\" />\n";
+			} else {
+				$geshi = new GeSHi();
+				$geshi->set_language_path($this->yellow->config->get("pluginDir")."/syntaxhighlight/");
+				foreach($geshi->get_supported_languages() as $language)
+				{
+					if($language == "geshi") continue;
+					$geshi->set_language($language);
+					$output .= $geshi->get_stylesheet(false);
+				}
+				$output = "<style type=\"text/css\">\n$output</style>";
 			}
-			$output = "<style type=\"text/css\">\n$output</style>";
 		}
 		return $output;
 	}
