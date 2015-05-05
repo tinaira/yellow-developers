@@ -76,7 +76,7 @@ class YellowImage
 		return $statusCode;
 	}
 
-	// Return image info, create thumbnail on demand  ###wh
+	// Return image info, create thumbnail on demand
 	function getImageInfo($fileName, $widthOutput, $heightOutput)
 	{
 		$fileNameShort = substru($fileName, strlenu($this->yellow->config->get("imageDir")));
