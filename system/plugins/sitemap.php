@@ -5,7 +5,7 @@
 // Sitemap plugin
 class YellowSitemap
 {
-	const Version = "0.5.1";
+	const Version = "0.5.2";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -13,7 +13,21 @@ class YellowSitemap
 	{
 		$this->yellow = $yellow;
 		$this->yellow->config->setDefault("sitemapPaginationLimit", "30");
+		$this->yellow->config->setDefault("sitemapLocation", "/sitemap/");
 		$this->yellow->config->setDefault("sitemapFileXml", "sitemap.xml");
+	}
+
+	// Handle page extra HTML data
+	function onExtra($name)
+	{
+		$output = "";
+		if($name == "header")
+		{
+			$locationSitemap = $this->yellow->config->get("serverBase");
+			$locationSitemap .= $this->yellow->config->get("sitemapLocation")."page:".$this->yellow->config->get("sitemapFileXml");
+			$output = "<link rel=\"sitemap\" type=\"text/xml\" href=\"$locationSitemap\" />\n";
+		}
+		return $output;
 	}
 	
 	// Handle page parsing

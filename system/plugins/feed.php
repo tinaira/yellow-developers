@@ -5,7 +5,7 @@
 // Feed plugin
 class YellowFeed
 {
-	const Version = "0.5.1";
+	const Version = "0.5.2";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -13,7 +13,21 @@ class YellowFeed
 	{
 		$this->yellow = $yellow;
 		$this->yellow->config->setDefault("feedPaginationLimit", "30");
-		$this->yellow->config->setDefault("feedFileXml", "feed.xml");		
+		$this->yellow->config->setDefault("feedLocation", "/feed/");
+		$this->yellow->config->setDefault("feedFileXml", "feed.xml");
+	}
+
+	// Handle page extra HTML data
+	function onExtra($name)
+	{
+		$output = "";
+		if($name == "header")
+		{
+			$locationFeed = $this->yellow->config->get("serverBase");
+			$locationFeed .= $this->yellow->config->get("feedLocation")."page:".$this->yellow->config->get("feedFileXml");
+			$output = "<link rel=\"alternate\" type=\"application/rss+xml\" href=\"$locationFeed\" />\n";
+		}
+		return $output;
 	}
 	
 	// Handle page parsing
