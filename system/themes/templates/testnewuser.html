@@ -1,11 +1,18 @@
 <?php $yellow->snippet("header") ?>
-<?php $yellow->snippet("sitename") ?>
-<?php $yellow->snippet("navigation") ?>
-<?php list($user, $email, $password) = getUser($yellow, $_REQUEST["status"], $_REQUEST["email"], $_REQUEST["password"]) ?>
+<?php $yellow->page->setHeader("Last-Modified", $yellow->toolbox->getHttpDateFormatted(time())) ?>
+<?php $yellow->page->setHeader("Cache-Control", "no-cache, must-revalidate") ?>
 <div class="content">
+<?php $user = $email = $password = "" ?>
+<?php if($_REQUEST["status"] == "create"): ?>
+<?php $email = trim($_REQUEST["email"]); if(empty($email)) $email = "demo@demo.com"; ?>
+<?php $password = trim($_REQUEST["password"]); if(empty($password)) $password = "demo"; ?>
+<?php if($yellow->plugins->isExisting("webinterface")): ?>
+<?php $user = $yellow->plugins->get("webinterface")->users->getUserInfo($email, $password, "", "", ""); ?>
+<?php endif ?>
+<?php endif ?>
 <h1><?php echo $yellow->page->getHtml("title") ?></h1>
 <?php if(empty($user)): ?>
-<p>This page creates an user account.<p>
+<p>This page creates a user account.<p>
 <form class="user-form" action="<?php echo $yellow->page->getLocation() ?>" method="post">
 <p class="user-email"><label for="email">Email:</label><br /><input type="text" class="form-control" name="email" id="email"></p>
 <p class="user-password"><label for="password">Password:</label><br /><input type="text" class="form-control" name="password" id="password"></p>
@@ -22,26 +29,3 @@
 <?php endif ?>
 </div>
 <?php $yellow->snippet("footer") ?>
-<?php function getUser($yellow, $status, $email, $password)
-{
-	if($status == "create")
-	{
-		$email = empty($email) ? "demo@demo.com" : $email;
-		$password = empty($password) ? "demo" : $password;
-		$algorithm = $yellow->config->get("webinterfaceUserHashAlgorithm");
-		$cost = $yellow->config->get("webinterfaceUserHashCost");
-		$hash = $yellow->toolbox->createHash($password, $algorithm, $cost);
-		$email = strreplaceu(',', '-', $email);
-		$hash = strreplaceu(',', '-', $hash);
-		$name = strreplaceu(',', '-', empty($name) ? $yellow->config->get("sitename") : $name);
-		$language = strreplaceu(',', '-', empty($language) ? $yellow->config->get("language") : $language);
-		$home = strreplaceu(',', '-', empty($home) ? "/" : $home);
-		$user .= "$email,$hash,$name,$language,$home\n";
-		$yellow->page->setHeader("Last-Modified", $yellow->toolbox->getHttpDateFormatted(time()));
-		$yellow->page->setHeader("Cache-Control", "no-cache, must-revalidate");
-	} else {
-		$user = $email = $password = "";		
-	}
-	return array($user, $email, $password);
-}
-?>

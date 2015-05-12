@@ -1,9 +1,7 @@
 ---
 Title: How to make good coffee
-Tag: Example
+Tag: Coffee
 ---
-[image coffee.jpg "Cup of coffee" right]
-
 Coffee is a beverage made from the roasted beans of the coffee plant. It's also the greatest addiction of the modern world. It's pure awesome.
 
 1. Start with fresh coffee. Coffee beans start losing quality immediately after roasting and grinding. The best coffee is made from beans ground right after roasting. Buy your favorite coffee. Grind the beans if possible.

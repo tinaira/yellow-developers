@@ -12,4 +12,5 @@
 </ul>
 <?php if(!$level): ?>
 </div>
+<div class="navigation-banner"></div>
 <?php endif ?>

@@ -1,4 +1,4 @@
-/* Blogsite theme 0.1.16 */
+/* Blogsite theme 0.2.1 */
 /* Designer: Mark Mayberg */
 
 html, body, div, form, pre, span, tr, th, td { margin:0; padding:0; border:0; vertical-align:baseline; }
@@ -17,7 +17,7 @@ code { font-size:1.1em; }
 a { color:#07d; }
 a:hover { color:#07d; text-decoration:underline; }
 a, img { border:none; text-decoration:none; }
-.yellow { margin:0 0.5em; }
+.yellow-bar { margin:0 0.5em; }
 .sitename { text-align:center; }
 .sitename h1 { margin:0.4em 0; font-size:3.5em; }
 .sitename h1 a { color:#07d; text-decoration:none; }
@@ -28,14 +28,11 @@ a, img { border:none; text-decoration:none; }
 	background-size:cover; 
 	background-position:center; 
 }
-.navigation { padding:0 0.5em; background-color:#000; line-height:2.5em; }
-.navigation a { color:#bbb; padding:0 1em; display:inline-block; }
-.navigation a:hover { color:#111; background-color:#eee; text-decoration:none; }
-.navigation ul { margin:0; padding:0; list-style:none; text-align:center; }
-.navigation li a.active { color:#fff; }
-.navigation li a.active:hover { color:#111; text-decoration:none; }
-.navigation li { display:inline; }
-.content { padding:0 1.5em; }
+.with-sidebar .main { margin-right:13em; }
+.with-sidebar .sidebar { float:right; width:12em; margin-top:4.8em; overflow:hidden; }
+.with-sidebar .sidebar .navigationside ul { margin:0; padding:0; list-style:none; }
+.content { padding:1.5em; }
+.content h1:first-child, .content>*:first-child { margin-top:0; }
 .content h1 a:hover { text-decoration:none; }
 .content img { max-width:100%; height:auto; }
 .content form { margin:1em 0; }
@@ -45,13 +42,23 @@ a, img { border:none; text-decoration:none; }
 .content .flexible { position:relative; padding-bottom:56.25%; padding-top:30px; }
 .content .flexible iframe { position:absolute; top:0; left:0; width:100%; height:100%; }
 .content .toc { margin:0; padding:0; list-style:none; }
-.pagination { margin:1em 0; }
-.footer { margin:2em; text-align:center; }
+.content .pagination { margin:1em 0; }
+.footer { margin:1.5em; text-align:center; clear:both; }
 .footer a { color:#07d; }
 .footer a:hover { color:#07d; text-decoration:underline; }
 .left { float:left; margin:0 1em 0 0; }
 .center { display:block; margin:0 auto; }
 .right { float:right; margin:0 0 0 1em; }
+
+/* Navigation */
+
+.navigation { padding:0 0.5em; background-color:#000; line-height:2.5em; }
+.navigation a { color:#bbb; padding:0 1em; display:inline-block; }
+.navigation a:hover { color:#111; background-color:#eee; text-decoration:none; }
+.navigation ul { margin:0; padding:0; list-style:none; text-align:center; }
+.navigation li a.active { color:#fff; }
+.navigation li a.active:hover { color:#111; text-decoration:none; }
+.navigation li { display:inline; }
 
 /* Forms and buttons */
 
@@ -94,9 +101,10 @@ a, img { border:none; text-decoration:none; }
 @media screen and (max-width:30em) {
 	body { font-size:0.9em; }
 	.sitename h1, h1, h2 { font-size:1.2em; }
-	.sitename h1, .sitename, .navigation, .page { margin:0; padding:0; border:0; }
-	.sitename, .content, .footer { padding:0.5em; }
-	.footer { margin:0; padding-top:1.5em; }
+	.sitename h1, .sitename, .navigation, .footer, .page { margin:0; padding:0; }
+	.sitename, .content, .footer { padding:1em; }
+	.with-sidebar .main { margin-right:0em; }
+	.with-sidebar .sidebar { display:none; }	
 }
 @media print {
 	body, h1, h2, h3, h4, h5, h6 { background-color:white; color:black; }

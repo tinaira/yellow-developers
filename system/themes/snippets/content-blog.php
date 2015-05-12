@@ -1,4 +1,4 @@
-<div class="content blog">
+<div class="content main">
 <div class="entry">
 <div class="entry-header"><h1><?php echo $yellow->page->getHtml("titleContent") ?></h1></div>
 <div class="entry-meta"><?php echo htmlspecialchars($yellow->page->getDate("published")) ?> <?php echo $yellow->text->getHtml("blogBy") ?> <?php $authorCounter = 0; foreach(preg_split("/,\s*/", $yellow->page->get("author")) as $author) { if(++$authorCounter>1) echo ", "; echo "<a href=\"".$yellow->page->getParentTop()->getLocation().$yellow->toolbox->normaliseArgs("author:$author")."\">".htmlspecialchars($author)."</a>"; } ?></div>

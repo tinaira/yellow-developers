@@ -34,7 +34,3 @@ PNG in different sizes
 [image icon.png Example - 400%]
 [image icon.png Example - 200%] 
 [image icon.png Example - 100%] 
-
-External image
-
-[image http://mayberg.se/media/images/mayberg121.png]

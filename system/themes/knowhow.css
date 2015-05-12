@@ -1,4 +1,4 @@
-/* Knowhow theme 0.1.7 */
+/* Knowhow theme 0.2.1 */
 /* Designer: Mark Mayberg */
 
 html, body, div, form, pre, span, tr, th, td { margin:0; padding:0; border:0; vertical-align:baseline; }
@@ -17,7 +17,7 @@ code { font-size:1.1em; }
 a { color:#4183c4; }
 a:hover { color:#4183c4; text-decoration:underline; }
 a, img { border:none; text-decoration:none; }
-.yellow { margin:0 auto; max-width:860px; font-weight:500; }
+.yellow-bar { margin:0 auto; max-width:920px; font-weight:500; }
 .sitename { display:block; float:left; }
 .sitename h1 { margin:0; font-size:2em; }
 .sitename h1 a { color:#333; text-decoration:none; }
@@ -28,23 +28,11 @@ a, img { border:none; text-decoration:none; }
 	width:48px; height:48px; margin:0 8px 5px 0;
 	vertical-align:middle;
 }
-.navigation { display:block; float:right; }
-.navigation { margin-top:0.95em; margin-bottom:1.5em; line-height:2em; font-weight:500; }
-.navigation a { color:#333; padding:0 0.3em; display:inline-block; }
-.navigation a:hover { color:#4183c4; text-decoration:underline; }
-.navigation ul { margin:0 -0.3em; padding:0; list-style:none; }
-.navigation li { display:inline; }
-.navigation li a.active { color:#333; }
-.navigation li a.active:hover { color:#4183c4; }
-.navigationsearch { clear:both; }
-.navigationsearch { margin:1.5em 0; }
-.navigationsearch .search-form { position:relative; }
-.navigationsearch .search-text { font-family:inherit; font-size:inherit; font-weight:inherit; }
-.navigationsearch .search-text { padding:0.5em; border:2px solid #eee; width:100%; box-sizing:border-box; }
-.navigationsearch .search-text { background-color:#fff; background-image:linear-gradient(to bottom, #fff, #fff); }
-.navigationsearch .search-button { position:absolute; top:0; right:0; }
-.navigationsearch .search-button { font-family:inherit; font-size:inherit; font-weight:inherit; }
-.navigationsearch .search-button { margin:5px; padding:0.3em; border:none; background-color:transparent; }
+.with-sidebar .main { margin-right:280px; }
+.with-sidebar .sidebar { float:right; width:230px; margin-top:4.1em; padding:10px; overflow:hidden; }
+.with-sidebar .sidebar { border:solid 1px #eee; border-radius:3px; font-size:13px; }
+.with-sidebar .sidebar .navigationside ul { margin:0; padding:5px; list-style:none; }
+.content h1:first-child, .content>*:first-child { margin-top:0; }
 .content h1 a { color:#333; }
 .content h1 a:hover { color:#333; text-decoration:none; }
 .content img { max-width:100%; height:auto; }
@@ -53,13 +41,33 @@ a, img { border:none; text-decoration:none; }
 .content .flexible { position:relative; padding-bottom:56.25%; padding-top:30px; }
 .content .flexible iframe { position:absolute; top:0; left:0; width:100%; height:100%; }
 .content .toc { margin:0; padding:0; list-style:none; }
-.pagination { margin:1em 0; }
-.footer { margin-top:1em; padding-top:1em; border-top:1px solid #eee; }
+.content .pagination { margin:1em 0; }
+.footer { margin-top:1em; padding-top:1em; border-top:1px solid #eee; clear:both; }
 .footer a { color:#4183c4; }
 .footer a:hover { color:#4183c4; text-decoration:underline; }
 .left { float:left; margin:0 1em 0 0; }
 .center { display:block; margin:0 auto; }
 .right { float:right; margin:0 0 0 1em; }
+
+/* Navigation */
+
+.navigation { display:block; float:right; }
+.navigation { margin-top:0.95em; margin-bottom:1.5em; line-height:2em; font-weight:500; }
+.navigation a { color:#333; padding:0 0.3em; display:inline-block; }
+.navigation a:hover { color:#4183c4; text-decoration:underline; }
+.navigation ul { margin:0 -0.3em; padding:0; list-style:none; }
+.navigation li { display:inline; }
+.navigation li a.active { color:#333; }
+.navigation li a.active:hover { color:#4183c4; }
+.navigation-banner { clear:both; }
+.navigationsearch { margin-bottom:1em; }
+.navigationsearch .search-form { position:relative; }
+.navigationsearch .search-text { font-family:inherit; font-size:inherit; font-weight:inherit; }
+.navigationsearch .search-text { padding:0.5em; border:2px solid #eee; width:100%; box-sizing:border-box; }
+.navigationsearch .search-text { background-color:#fff; background-image:linear-gradient(to bottom, #fff, #fff); }
+.navigationsearch .search-button { position:absolute; top:0; right:0; }
+.navigationsearch .search-button { font-family:inherit; font-size:inherit; font-weight:inherit; }
+.navigationsearch .search-button { margin:5px; padding:0.3em; border:none; background-color:transparent; }
 
 /* Reengineered from GitHub */
 
@@ -101,7 +109,7 @@ a, img { border:none; text-decoration:none; }
 
 /* Responsive and print */
 
-.page { margin:0 auto; max-width:860px; }
+.page { margin:0 auto; max-width:920px; }
 
 @media screen and (min-width:62em) {
 	body { width:62em; margin:1em auto; }
@@ -113,6 +121,8 @@ a, img { border:none; text-decoration:none; }
 	.sitename h1, .sitename, .navigation, .page { margin:0; padding:0; border:0; }
 	.sitename, .navigation { float:none; }
 	.sitename-logo { width:24px; height:24px; }
+	.with-sidebar .main { margin-right:0em; }
+	.with-sidebar .sidebar { display:none; }	
 }
 @media print {
 	body, h1, h2, h3, h4, h5, h6 { background-color:white; color:black; }

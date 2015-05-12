@@ -1,4 +1,4 @@
-<div class="content wikipages">
+<div class="content main">
 <h1><?php echo $yellow->page->getHtml("titleWiki") ?></h1>
 <ul>
 <?php foreach($yellow->page->getPages() as $page): ?>

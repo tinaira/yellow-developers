@@ -1,4 +1,4 @@
-<div class="content wiki">
+<div class="content main">
 <div class="entry">
 <div class="entry-header"><h1><?php echo $yellow->page->getHtml("titleContent") ?></h1></div>
 <div class="entry-content"><?php echo $yellow->page->getContent() ?></div>

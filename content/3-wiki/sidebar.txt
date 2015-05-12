@@ -1,0 +1,8 @@
+---
+Title: Sidebar
+Status: hidden
+---
+* [Recent changes](/wiki/special:changes/)  
+* [Coffee](/wiki/tag:coffee/)  
+* [Example](/wiki/tag:example/)  
+* [Search](/search/)  

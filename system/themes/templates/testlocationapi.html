@@ -1,6 +1,4 @@
 <?php $yellow->snippet("header") ?>
-<?php $yellow->snippet("sitename") ?>
-<?php $yellow->snippet("navigation") ?>
 <?php $pages = $yellow->pages->index(true, true) ?>
 <?php $yellow->page->setLastModified($pages->getModified()) ?>
 <?php $yellow->page->setHeader("Cache-Control", "max-age=60") ?>

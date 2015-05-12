@@ -1,4 +1,4 @@
-<div class="content feed">
+<div class="content main">
 <h1><?php echo $yellow->page->getHtml("title") ?></h1>
 <ul>
 <?php foreach($yellow->page->getPages() as $page): ?>

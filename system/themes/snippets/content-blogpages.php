@@ -1,4 +1,4 @@
-<div class="content blogpages">
+<div class="content main">
 <?php if($yellow->page->isExisting("titleBlog")): ?>
 <h1><?php echo $yellow->page->getHtml("titleBlog") ?></h1>
 <?php endif ?>
