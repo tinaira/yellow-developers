@@ -4,4 +4,8 @@ Published: 2013-05-30
 Author: Yellow
 Tag: Example
 ---
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna pizza. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Yellow is for people who make websites. Create small web pages, blogs and wikis. The focus is on people and that it's useful for you. No database, no admin panel, no upload manager, no complex framework. Most people don't need all of this. Let's concentrate on the essential aspects, on people and tools that work together. If you are interested in simple things, find out more. [--more--]
+
+* It's just fun to use
+* Only files and folders
+* Not much to learn

@@ -1,7 +1,7 @@
 ---
-Title: Test folder
+Title: Test folder name
 ---
 
-This page tests file in a folder. 
+This page tests sub folder. 
 
-A page in a sub folder is available in a location with the folder name.
+A folder name can be used as location.

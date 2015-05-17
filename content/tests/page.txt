@@ -1,7 +1,7 @@
 ---
 Title: Tests
 ---
-For developers and friends. [You can login for testing](@pageedit).
+For developers and friends.
 
 * [file-name-unicode-äö](file-name-unicode-äö)
 * [file-name-whitespace](file-name-whitespace)

@@ -5,7 +5,7 @@
 // Feed plugin
 class YellowFeed
 {
-	const Version = "0.5.2";
+	const Version = "0.5.3";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -23,8 +23,8 @@ class YellowFeed
 		$output = "";
 		if($name == "header")
 		{
-			$locationFeed = $this->yellow->config->get("serverBase");
-			$locationFeed .= $this->yellow->config->get("feedLocation")."page:".$this->yellow->config->get("feedFileXml");
+			$locationFeed = $this->yellow->config->get("serverBase").$this->yellow->config->get("feedLocation");
+			$locationFeed .= $this->yellow->config->get("contentPagination").":".$this->yellow->config->get("feedFileXml");
 			$output = "<link rel=\"alternate\" type=\"application/rss+xml\" href=\"$locationFeed\" />\n";
 		}
 		return $output;
@@ -35,7 +35,8 @@ class YellowFeed
 	{
 		if($this->yellow->page->get("template") == "feed")
 		{
-			if($_REQUEST["page"] == $this->yellow->config->get("feedFileXml"))
+			$pagination = $this->yellow->config->get("contentPagination");
+			if($_REQUEST[$pagination] == $this->yellow->config->get("feedFileXml"))
 			{
 				$pages = $this->yellow->pages->index(false, false);
 				$pages->sort("modified", false)->limit($this->yellow->config->get("feedPaginationLimit"));

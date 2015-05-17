@@ -5,7 +5,7 @@
 // Wiki plugin
 class YellowWiki
 {
-	const Version = "0.5.2";
+	const Version = "0.5.3";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -31,7 +31,8 @@ class YellowWiki
 		{
 			if($this->yellow->toolbox->isLocationArgs($this->yellow->toolbox->getLocation()))
 			{
-				$pages = $this->yellow->page->getChildren(!$this->yellow->page->isVisible());				
+				$pages = $this->yellow->page->getChildren(!$this->yellow->page->isVisible());
+				$pages->append($this->yellow->page);
 				$pagesFilter = array();
 				if($_REQUEST["special"] == "changes")
 				{

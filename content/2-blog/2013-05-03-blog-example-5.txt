@@ -1,5 +1,5 @@
 ---
-Title: Enjoy writing
+Title: Blog example five
 Published: 2013-05-03
 Author: Yellow
 Tag: Example

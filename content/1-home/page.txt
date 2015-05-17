@@ -4,6 +4,4 @@ TitleNavigation: Demo
 ---
 [image yellow.jpg]
 
-[You can edit this page](@pageedit).
-
-Start by editing this website. Just give it a try. If you have to read the documentation first, then we have done something wrong. The documentation gives you more information about how to create small web pages, blogs and wikis.
+[You can edit this page](@pageedit). The documentation gives you more information about how to create small web pages, blogs and wikis.

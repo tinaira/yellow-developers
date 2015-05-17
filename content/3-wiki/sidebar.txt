@@ -2,7 +2,13 @@
 Title: Sidebar
 Status: hidden
 ---
+Tools
+
 * [Recent changes](/wiki/special:changes/)  
-* [Coffee](/wiki/tag:coffee/)  
 * [Example](/wiki/tag:example/)  
-* [Search](/search/)  
+* [Coffee](/wiki/tag:coffee/)
+
+Links
+
+* [Twitter](https://twitter.com/datenstromse)
+* [Github](https://github.com/datenstrom)
