@@ -1,12 +1,12 @@
 ---
 Title: Test image parsing
 ---
-This page tests image parsing for image list.
+This page tests image gallery parsing.
 
 Small images:
 
-[snippet imagelist .*theme.jpg themes 25%]
+[imagegallery .*theme.jpg themes 25%]
 
 Big images:
 
-[snippet imagelist .*theme.jpg]
+[imagegallery .*theme.jpg]

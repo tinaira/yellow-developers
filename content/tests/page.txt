@@ -14,7 +14,6 @@ For developers and friends.
 * [page-draft-status](page-draft-status)
 * [page-language-error](page-language-error)
 * [page-parser-error](page-parser-error)
-* [page-snippet-error](page-snippet-error)
 * [page-template-error](page-template-error)
 * [page-theme-error](page-theme-error)
 * [redirect-to-home](redirect-to-home)

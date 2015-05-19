@@ -9,5 +9,5 @@
 <?php endif ?>
 </div>
 </div>
-<?php echo $yellow->page->getExtra() ?>
+<?php echo $yellow->page->getExtra("content-blog") ?>
 </div>

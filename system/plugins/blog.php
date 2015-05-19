@@ -5,14 +5,103 @@
 // Blog plugin
 class YellowBlog
 {
-	const Version = "0.5.1";
+	const Version = "0.5.4";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
 	function onLoad($yellow)
 	{
 		$this->yellow = $yellow;
+		$this->yellow->config->setDefault("blogWithSidebar", "0");
 		$this->yellow->config->setDefault("blogPaginationLimit", "5");
+	}
+	
+	// Handle page meta data parsing
+	function onParseMeta($page)
+	{
+		if(substru($page->get("template"), 0,4)=="blog" && $this->yellow->config->get("blogWithSidebar"))
+		{
+			if(!$page->isExisting("sidebar")) $page->set("sidebar", "sidebar");
+		}
+	}
+	
+	// Handle page content parsing of custom block
+	function onParseContentBlock($page, $name, $text, $typeShortcut)
+	{
+		$output = NULL;
+		if($name=="blogarchive" && $typeShortcut)
+		{
+			list($location) = $this->yellow->toolbox->getTextArgs($text);
+			$blog = $this->yellow->pages->find($location);
+			$pages = $blog ? $blog->getChildren(!$blog->isVisible()) : $this->yellow->pages->clean();
+			$pages->filter("template", "blog");
+			$page->setLastModified($pages->getModified());
+			$months = array();
+			foreach($pages as $page) if(preg_match("/^(\d+\-\d+)\-/", $page->get("published"), $matches)) ++$months[$matches[1]];
+			if(count($months))
+			{
+				uksort($months, strnatcasecmp);
+				$months = array_reverse($months);
+				$output = "<div class=\"".htmlspecialchars($name)."\">\n";
+				$output .= "<ul>\n";
+				foreach($months as $key=>$value)
+				{
+					$output .= "<li><a href=\"".$blog->getLocation().$this->yellow->toolbox->normaliseArgs("published:$key")."\">";
+					$output .= htmlspecialchars($this->yellow->text->normaliseDate($key))."</a></li>\n";
+				}
+				$output .= "</ul>\n";
+				$output .= "</div>";
+			} else {
+				$output = "[".htmlspecialchars($name)." not found]";
+			}
+		}
+		if($name=="blogrecent" && $typeShortcut)
+		{
+			list($location, $pagesMax) = $this->yellow->toolbox->getTextArgs($text);
+			$blog = $this->yellow->pages->find($location);
+			$pages = $blog ? $blog->getChildren(!$blog->isVisible()) : $this->yellow->pages->clean();
+			$pages->filter("template", "blog")->sort("published", false)->limit($pagesMax);
+			$page->setLastModified($pages->getModified());
+			if(count($pages))
+			{
+				$output = "<div class=\"".htmlspecialchars($name)."\">\n";
+				$output .= "<ul>\n";
+				foreach($pages as $page)
+				{
+					$output .= "<li><a href=\"".$page->getLocation()."\">".$page->getHtml("titleNavigation")."</a></li>\n";
+				}
+				$output .= "</ul>\n";
+				$output .= "</div>";
+			} else {
+				$output = "[".htmlspecialchars($name)." not found]";
+			}
+		}
+		if($name=="blogtags" && $typeShortcut)
+		{
+			list($location) = $this->yellow->toolbox->getTextArgs($text);
+			$blog = $this->yellow->pages->find($location);
+			$pages = $blog ? $blog->getChildren(!$blog->isVisible()) : $this->yellow->pages->clean();
+			$pages->filter("template", "blog");
+			$page->setLastModified($pages->getModified());
+			$tags = array();
+			foreach($pages as $page) if($page->isExisting("tag")) foreach(preg_split("/,\s*/", $page->get("tag")) as $tag) ++$tags[$tag];
+			if(count($tags))
+			{
+				uksort($tags, strnatcasecmp);
+				$output = "<div class=\"".htmlspecialchars($name)."\">\n";
+				$output .= "<ul>\n";
+				foreach($tags as $key=>$value)
+				{
+					$output .= "<li><a href=\"".$blog->getLocation().$this->yellow->toolbox->normaliseArgs("tag:$key")."\">";
+					$output .= htmlspecialchars($key)."</a></li>\n";
+				}
+				$output .= "</ul>\n";
+				$output .= "</div>";
+			} else {
+				$output = "[".htmlspecialchars($name)." not found]";
+			}
+		}
+		return $output;
 	}
 	
 	// Handle page parsing

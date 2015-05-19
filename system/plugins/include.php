@@ -5,7 +5,7 @@
 // Include plugin
 class YellowInclude
 {
-	const Version = "0.5.1";
+	const Version = "0.5.2";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -20,8 +20,7 @@ class YellowInclude
 		$output = NULL;
 		if($name=="include" && $typeShortcut)
 		{
-			$args = explode(' ', $text);
-			list($fileName) = $args;
+			list($fileName) = $this->yellow->toolbox->getTextArgs($text);
 			$location = $this->yellow->lookup->findLocationFromFile($fileName);
 			$content = $this->yellow->pages->find($location);
 			if($content)
@@ -30,24 +29,6 @@ class YellowInclude
 				$output = $content->getContent();
 			} else {
 				$page->error(500, "Include '$fileName' does not exist!");
-			}
-		}
-		if($name=="snippet" && $typeShortcut)
-		{
-			$args = explode(' ', $text);
-			list($snippet) = $args;
-			$fileNameSnippet = $this->yellow->config->get("snippetDir")."$snippet.php";
-			if(is_file($fileNameSnippet))
-			{
-				ob_start();
-				$page->setLastModified(filemtime($fileNameSnippet));
-				$this->yellow->pages->snippetArgs = $args;
-				global $yellow;
-				require($fileNameSnippet);
-				$output = ob_get_contents();
-				ob_end_clean();
-			} else {
-				$page->error(500, "Snippet '$snippet' does not exist!");
 			}
 		}
 		return $output;

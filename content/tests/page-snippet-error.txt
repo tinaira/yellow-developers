@@ -1,6 +1,0 @@
----
-Title: Test snippet error
----
-This page tests snippet error.
-
-[snippet none]

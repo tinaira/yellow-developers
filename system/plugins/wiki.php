@@ -5,23 +5,76 @@
 // Wiki plugin
 class YellowWiki
 {
-	const Version = "0.5.3";
+	const Version = "0.5.4";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
 	function onLoad($yellow)
 	{
 		$this->yellow = $yellow;
+		$this->yellow->config->setDefault("wikiWithSidebar", "1");
 		$this->yellow->config->setDefault("wikiPaginationLimit", "30");
 	}
 	
 	// Handle page meta data parsing
 	function onParseMeta($page)
 	{
-		if(substru($page->get("template"), 0,4) == "wiki")
+		if(substru($page->get("template"), 0,4)=="wiki" && $this->yellow->config->get("wikiWithSidebar"))
 		{
 			if(!$page->isExisting("sidebar")) $page->set("sidebar", "sidebar");
 		}
+	}
+	
+	// Handle page content parsing of custom block
+	function onParseContentBlock($page, $name, $text, $typeShortcut)
+	{
+		$output = NULL;
+		if($name=="wikirecent" && $typeShortcut)
+		{
+			list($location, $pagesMax) = $this->yellow->toolbox->getTextArgs($text);
+			$wiki = $this->yellow->pages->find($location);
+			$pages = $wiki ? $wiki->getChildren(!$wiki->isVisible())->append($wiki) : $this->yellow->pages->clean();
+			$pages->sort("modified", false)->limit($pagesMax);
+			$page->setLastModified($pages->getModified());
+			if(count($pages))
+			{
+				$output = "<div class=\"".htmlspecialchars($name)."\">\n";
+				$output .= "<ul>\n";
+				foreach($pages as $page)
+				{
+					$output .= "<li><a href=\"".$page->getLocation()."\">".$page->getHtml("titleNavigation")."</a></li>\n";
+				}
+				$output .= "</ul>\n";
+				$output .= "</div>";
+			} else {
+				$output = "[".htmlspecialchars($name)." not found]";
+			}
+		}
+		if($name=="wikitags" && $typeShortcut)
+		{
+			list($location) = $this->yellow->toolbox->getTextArgs($text);
+			$wiki = $this->yellow->pages->find($location);
+			$pages = $wiki ? $wiki->getChildren(!$wiki->isVisible())->append($wiki) : $this->yellow->pages->clean();
+			$page->setLastModified($pages->getModified());
+			$tags = array();
+			foreach($pages as $page) if($page->isExisting("tag")) foreach(preg_split("/,\s*/", $page->get("tag")) as $tag) ++$tags[$tag];
+			if(count($tags))
+			{
+				uksort($tags, strnatcasecmp);
+				$output = "<div class=\"".htmlspecialchars($name)."\">\n";
+				$output .= "<ul>\n";
+				foreach($tags as $key=>$value)
+				{
+					$output .= "<li><a href=\"".$wiki->getLocation().$this->yellow->toolbox->normaliseArgs("tag:$key")."\">";
+					$output .= htmlspecialchars($key)."</a></li>\n";
+				}
+				$output .= "</ul>\n";
+				$output .= "</div>";
+			} else {
+				$output = "[".htmlspecialchars($name)." not found]";
+			}
+		}
+		return $output;
 	}
 	
 	// Handle page parsing
@@ -31,8 +84,7 @@ class YellowWiki
 		{
 			if($this->yellow->toolbox->isLocationArgs($this->yellow->toolbox->getLocation()))
 			{
-				$pages = $this->yellow->page->getChildren(!$this->yellow->page->isVisible());
-				$pages->append($this->yellow->page);
+				$pages = $this->yellow->page->getChildren(!$this->yellow->page->isVisible())->append($this->yellow->page);
 				$pagesFilter = array();
 				if($_REQUEST["special"] == "changes")
 				{

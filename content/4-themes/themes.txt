@@ -2,5 +2,3 @@
 Title: Themes
 ---
 Great technology is useful in function and aesthetic.
-
-[snippet pagelist - themes 25%]
