@@ -47,7 +47,7 @@ class YellowWiki
 				$output .= "</ul>\n";
 				$output .= "</div>";
 			} else {
-				$output = "[".htmlspecialchars($name)." not found]";
+				$page->error(500, "Wikirecent '$location' does not exist!");
 			}
 		}
 		if($name=="wikitags" && $typeShortcut)
@@ -71,7 +71,7 @@ class YellowWiki
 				$output .= "</ul>\n";
 				$output .= "</div>";
 			} else {
-				$output = "[".htmlspecialchars($name)." not found]";
+				$page->error(500, "Wikitags '$location' does not exist!");
 			}
 		}
 		return $output;

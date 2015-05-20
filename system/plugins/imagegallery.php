@@ -24,21 +24,24 @@ class YellowImagegallery
 			list($pattern, $style, $size) = $this->yellow->toolbox->getTextArgs($text);
 			if(empty($style)) $style = $this->yellow->config->get("imagegalleryStyle");
 			if(empty($size)) $size = "100%";
-			$output = "<ul class=\"".htmlspecialchars($style)."\">\n";
-			if($this->yellow->plugins->isExisting("image"))
+			$files = empty($pattern) ? $page->getFiles(true) : $this->yellow->files->index(true, true)->match("/$pattern/");
+			if(count($files) && $this->yellow->plugins->isExisting("image"))
 			{
-				$files = empty($pattern) ? $page->getFiles(true) : $this->yellow->files->index(true, true)->match("/$pattern/");
+				$page->setLastModified($files->getModified());
+				$output = "<ul class=\"".htmlspecialchars($style)."\">\n";
 				foreach($files as $file)
 				{
 					list($src, $width, $height) = $this->yellow->plugins->get("image")->getImageInfo($file->fileName, $size, $size);
-					$output .= "<li><a href=\"".htmlspecialchars($file->getLocation())."\">";
-					$output .="<img src=\"".htmlspecialchars($src)."\" width=\"".htmlspecialchars($width)."\" height=\"".
-						htmlspecialchars($height)."\" alt=\"".htmlspecialchars(basename($file->getLocation()))."\" title=\"".
-						htmlspecialchars(basename($file->getLocation()))."\" />";
+					$output .= "<li><a href=\"".$file->getLocation()."\">";
+					$output .= "<img src=\"".htmlspecialchars($src)."\" width=\"".htmlspecialchars($width)."\" height=\"".
+						htmlspecialchars($height)."\" alt=\"".basename($file->getLocation())."\" title=\"".
+						basename($file->getLocation())."\" />";
 					$output .= "</a></li>\n";
 				}
+				$output .= "</ul>";
+			} else {
+				$page->error(500, "Imagegallery '$pattern' does not exist!");
 			}
-			$output .= "</ul>";
 		}
 		return $output;
 	}

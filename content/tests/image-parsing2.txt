@@ -5,7 +5,7 @@ This page tests image gallery parsing.
 
 Small images:
 
-[imagegallery .*theme.jpg themes 25%]
+[imagegallery .*theme.jpg fourpages 25%]
 
 Big images:
 

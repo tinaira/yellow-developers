@@ -52,7 +52,7 @@ class YellowBlog
 				$output .= "</ul>\n";
 				$output .= "</div>";
 			} else {
-				$output = "[".htmlspecialchars($name)." not found]";
+				$page->error(500, "Blogarchive '$location' does not exist!");
 			}
 		}
 		if($name=="blogrecent" && $typeShortcut)
@@ -73,7 +73,7 @@ class YellowBlog
 				$output .= "</ul>\n";
 				$output .= "</div>";
 			} else {
-				$output = "[".htmlspecialchars($name)." not found]";
+				$page->error(500, "Blogrecent '$location' does not exist!");
 			}
 		}
 		if($name=="blogtags" && $typeShortcut)
@@ -98,7 +98,7 @@ class YellowBlog
 				$output .= "</ul>\n";
 				$output .= "</div>";
 			} else {
-				$output = "[".htmlspecialchars($name)." not found]";
+				$page->error(500, "Blogtags '$location' does not exist!");
 			}
 		}
 		return $output;
