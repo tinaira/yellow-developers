@@ -49,7 +49,7 @@ class YellowImagegallery
 	// Handle page extra HTML data
 	function onExtra($name)
 	{
-		$output = "";
+		$output = NULL;
 		if($name == "header")
 		{
 			//TODO: See https://github.com/datenstrom/yellow/issues/70

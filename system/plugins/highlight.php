@@ -2,18 +2,18 @@
 // Copyright (c) 2013-2015 Datenstrom, http://datenstrom.se
 // This file may be used and distributed under the terms of the public license.
 
-// Syntax highlight plugin
-class YellowSyntaxhighlight
+// Highlight plugin
+class YellowHighlight
 {
-	const Version = "0.5.2";
+	const Version = "0.5.3";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
 	function onLoad($yellow)
 	{
 		$this->yellow = $yellow;
-		$this->yellow->config->setDefault("syntaxStylesheetDefault", "0");
-		$this->yellow->config->setDefault("syntaxLineNumber", "0");
+		$this->yellow->config->setDefault("highlightStylesheetDefault", "0");
+		$this->yellow->config->setDefault("highlightLineNumber", "0");
 	}
 	
 	// Handle page content parsing of custom block
@@ -23,10 +23,11 @@ class YellowSyntaxhighlight
 		if(!empty($name) && !$typeShortcut)
 		{
 			list($name, $lineNumber) = explode(':', $name);
-			if(is_null($lineNumber)) $lineNumber = $this->yellow->config->get("syntaxLineNumber");
+			if(is_null($lineNumber)) $lineNumber = $this->yellow->config->get("highlightLineNumber");
 			$geshi = new GeSHi(trim($text), $name);
-			$geshi->set_language_path($this->yellow->config->get("pluginDir")."/syntaxhighlight/");
+			$geshi->set_language_path($this->yellow->config->get("pluginDir")."/highlight/");
 			$geshi->set_header_type(GESHI_HEADER_PRE_TABLE);
+			$geshi->set_overall_class("highlight");
 			$geshi->enable_line_numbers($lineNumber ? GESHI_NORMAL_LINE_NUMBERS : GESHI_NO_LINE_NUMBERS);
 			$geshi->start_line_numbers_at($lineNumber);
 			$geshi->enable_classes(true);
@@ -40,17 +41,17 @@ class YellowSyntaxhighlight
 	// Handle page extra HTML data
 	function onExtra($name)
 	{
-		$output = "";
+		$output = NULL;
 		if($name == "header")
 		{
-			if(!$this->yellow->config->get("syntaxStylesheetDefault"))
+			if(!$this->yellow->config->get("highlightStylesheetDefault"))
 			{
-				$locationStylesheet = $this->yellow->config->get("serverBase").$this->yellow->config->get("pluginLocation")."syntaxhighlight.css";
-				$fileNameStylesheet = $this->yellow->config->get("pluginDir")."syntaxhighlight.css";
+				$locationStylesheet = $this->yellow->config->get("serverBase").$this->yellow->config->get("pluginLocation")."highlight.css";
+				$fileNameStylesheet = $this->yellow->config->get("pluginDir")."highlight.css";
 				if(is_file($fileNameStylesheet)) $output = "<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"$locationStylesheet\" />\n";
 			} else {
 				$geshi = new GeSHi();
-				$geshi->set_language_path($this->yellow->config->get("pluginDir")."/syntaxhighlight/");
+				$geshi->set_language_path($this->yellow->config->get("pluginDir")."/highlight/");
 				foreach($geshi->get_supported_languages() as $language)
 				{
 					if($language == "geshi") continue;
@@ -64,7 +65,7 @@ class YellowSyntaxhighlight
 	}
 }
 	
-require_once("syntaxhighlight/geshi.php");
+require_once("highlight/geshi.php");
 
-$yellow->plugins->register("syntaxhighlight", "YellowSyntaxhighlight", YellowSyntaxhighlight::Version);
+$yellow->plugins->register("highlight", "YellowHighlight", YellowHighlight::Version);
 ?>

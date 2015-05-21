@@ -5,7 +5,7 @@
 // Feed plugin
 class YellowFeed
 {
-	const Version = "0.5.3";
+	const Version = "0.5.4";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -17,19 +17,6 @@ class YellowFeed
 		$this->yellow->config->setDefault("feedFileXml", "feed.xml");
 	}
 
-	// Handle page extra HTML data
-	function onExtra($name)
-	{
-		$output = "";
-		if($name == "header")
-		{
-			$locationFeed = $this->yellow->config->get("serverBase").$this->yellow->config->get("feedLocation");
-			$locationFeed .= $this->yellow->config->get("contentPagination").":".$this->yellow->config->get("feedFileXml");
-			$output = "<link rel=\"alternate\" type=\"application/rss+xml\" href=\"$locationFeed\" />\n";
-		}
-		return $output;
-	}
-	
 	// Handle page parsing
 	function onParsePage()
 	{
@@ -71,6 +58,19 @@ class YellowFeed
 				$this->yellow->page->setLastModified($pages->getModified());
 			}
 		}
+	}
+	
+	// Handle page extra HTML data
+	function onExtra($name)
+	{
+		$output = NULL;
+		if($name == "header")
+		{
+			$locationFeed = $this->yellow->config->get("serverBase").$this->yellow->config->get("feedLocation");
+			$locationFeed .= $this->yellow->config->get("contentPagination").":".$this->yellow->config->get("feedFileXml");
+			$output = "<link rel=\"alternate\" type=\"application/rss+xml\" href=\"$locationFeed\" />\n";
+		}
+		return $output;
 	}
 }
 

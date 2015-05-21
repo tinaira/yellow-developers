@@ -5,7 +5,7 @@
 // Preview plugin
 class YellowPreview
 {
-	const Version = "0.5.1";
+	const Version = "0.5.2";
 	var $yellow;			//access to API
 
 	// Handle initialisation
@@ -22,6 +22,7 @@ class YellowPreview
 		if($name=="preview" && $typeShortcut)
 		{
 			list($location, $style, $size) = $this->yellow->toolbox->getTextArgs($text);
+			if(empty($location)) $location = $page->location;
 			if(empty($style)) $style = $this->yellow->config->get("previewStyle");
 			if(empty($size)) $size = "100%";
 			$content = $this->yellow->pages->find($location);
@@ -47,6 +48,12 @@ class YellowPreview
 			}
 		}
 		return $output;
+	}
+
+	// Handle page extra HTML data
+	function onExtra($name)
+	{
+		return $this->onParseContentBlock($this->yellow->page, $name, "", true);
 	}
 }
 

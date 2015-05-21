@@ -5,13 +5,14 @@
 // Blog plugin
 class YellowBlog
 {
-	const Version = "0.5.4";
+	const Version = "0.5.5";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
 	function onLoad($yellow)
 	{
 		$this->yellow = $yellow;
+		$this->yellow->config->setDefault("blogLocation", "/blog/");
 		$this->yellow->config->setDefault("blogWithSidebar", "0");
 		$this->yellow->config->setDefault("blogPaginationLimit", "5");
 	}
@@ -32,6 +33,7 @@ class YellowBlog
 		if($name=="blogarchive" && $typeShortcut)
 		{
 			list($location) = $this->yellow->toolbox->getTextArgs($text);
+			if(empty($location)) $location = $this->yellow->config->get("blogLocation");
 			$blog = $this->yellow->pages->find($location);
 			$pages = $blog ? $blog->getChildren(!$blog->isVisible()) : $this->yellow->pages->clean();
 			$pages->filter("template", "blog");
@@ -50,7 +52,7 @@ class YellowBlog
 					$output .= htmlspecialchars($this->yellow->text->normaliseDate($key))."</a></li>\n";
 				}
 				$output .= "</ul>\n";
-				$output .= "</div>";
+				$output .= "</div>\n";
 			} else {
 				$page->error(500, "Blogarchive '$location' does not exist!");
 			}
@@ -58,6 +60,7 @@ class YellowBlog
 		if($name=="blogrecent" && $typeShortcut)
 		{
 			list($location, $pagesMax) = $this->yellow->toolbox->getTextArgs($text);
+			if(empty($location)) $location = $this->yellow->config->get("blogLocation");
 			$blog = $this->yellow->pages->find($location);
 			$pages = $blog ? $blog->getChildren(!$blog->isVisible()) : $this->yellow->pages->clean();
 			$pages->filter("template", "blog")->sort("published", false)->limit($pagesMax);
@@ -71,7 +74,7 @@ class YellowBlog
 					$output .= "<li><a href=\"".$page->getLocation()."\">".$page->getHtml("titleNavigation")."</a></li>\n";
 				}
 				$output .= "</ul>\n";
-				$output .= "</div>";
+				$output .= "</div>\n";
 			} else {
 				$page->error(500, "Blogrecent '$location' does not exist!");
 			}
@@ -79,6 +82,7 @@ class YellowBlog
 		if($name=="blogtags" && $typeShortcut)
 		{
 			list($location) = $this->yellow->toolbox->getTextArgs($text);
+			if(empty($location)) $location = $this->yellow->config->get("blogLocation");
 			$blog = $this->yellow->pages->find($location);
 			$pages = $blog ? $blog->getChildren(!$blog->isVisible()) : $this->yellow->pages->clean();
 			$pages->filter("template", "blog");
@@ -96,7 +100,7 @@ class YellowBlog
 					$output .= htmlspecialchars($key)."</a></li>\n";
 				}
 				$output .= "</ul>\n";
-				$output .= "</div>";
+				$output .= "</div>\n";
 			} else {
 				$page->error(500, "Blogtags '$location' does not exist!");
 			}
@@ -139,6 +143,12 @@ class YellowBlog
 			$this->yellow->page->setLastModified($pages->getModified());
 			$this->yellow->page->setHeader("Cache-Control", "max-age=60");
 		}
+	}
+
+	// Handle page extra HTML data
+	function onExtra($name)
+	{
+		return $this->onParseContentBlock($this->yellow->page, $name, "", true);
 	}
 }
 

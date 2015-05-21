@@ -5,7 +5,7 @@
 // Disqus plugin
 class YellowDisqus
 {
-	const Version = "0.5.1";
+	const Version = "0.5.2";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -18,8 +18,8 @@ class YellowDisqus
 	// Handle page extra HTML data
 	function onExtra($name)
 	{
-		$output = "";
-		if($name == "content-blog")
+		$output = NULL;
+		if($name=="disqus" || $name=="comments")
 		{
 			$shortname = $this->yellow->config->get("disqusShortname");
 			$output = "<div id=\"disqus_thread\"></div>\n";

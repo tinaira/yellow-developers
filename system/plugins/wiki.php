@@ -5,13 +5,14 @@
 // Wiki plugin
 class YellowWiki
 {
-	const Version = "0.5.4";
+	const Version = "0.5.5";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
 	function onLoad($yellow)
 	{
 		$this->yellow = $yellow;
+		$this->yellow->config->setDefault("wikiLocation", "/");
 		$this->yellow->config->setDefault("wikiWithSidebar", "1");
 		$this->yellow->config->setDefault("wikiPaginationLimit", "30");
 	}
@@ -32,6 +33,7 @@ class YellowWiki
 		if($name=="wikirecent" && $typeShortcut)
 		{
 			list($location, $pagesMax) = $this->yellow->toolbox->getTextArgs($text);
+			if(empty($location)) $location = $this->yellow->config->get("wikiLocation");
 			$wiki = $this->yellow->pages->find($location);
 			$pages = $wiki ? $wiki->getChildren(!$wiki->isVisible())->append($wiki) : $this->yellow->pages->clean();
 			$pages->sort("modified", false)->limit($pagesMax);
@@ -45,7 +47,7 @@ class YellowWiki
 					$output .= "<li><a href=\"".$page->getLocation()."\">".$page->getHtml("titleNavigation")."</a></li>\n";
 				}
 				$output .= "</ul>\n";
-				$output .= "</div>";
+				$output .= "</div>\n";
 			} else {
 				$page->error(500, "Wikirecent '$location' does not exist!");
 			}
@@ -53,6 +55,7 @@ class YellowWiki
 		if($name=="wikitags" && $typeShortcut)
 		{
 			list($location) = $this->yellow->toolbox->getTextArgs($text);
+			if(empty($location)) $location = $this->yellow->config->get("wikiLocation");
 			$wiki = $this->yellow->pages->find($location);
 			$pages = $wiki ? $wiki->getChildren(!$wiki->isVisible())->append($wiki) : $this->yellow->pages->clean();
 			$page->setLastModified($pages->getModified());
@@ -69,7 +72,7 @@ class YellowWiki
 					$output .= htmlspecialchars($key)."</a></li>\n";
 				}
 				$output .= "</ul>\n";
-				$output .= "</div>";
+				$output .= "</div>\n";
 			} else {
 				$page->error(500, "Wikitags '$location' does not exist!");
 			}
@@ -121,6 +124,12 @@ class YellowWiki
 				$this->yellow->page->setHeader("Cache-Control", "max-age=60");
 			}
 		}
+	}
+	
+	// Handle page extra HTML data
+	function onExtra($name)
+	{
+		return $this->onParseContentBlock($this->yellow->page, $name, "", true);
 	}
 }
 
