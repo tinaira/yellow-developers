@@ -1,4 +1,4 @@
-/* Default theme 0.5.3 */
+/* Default theme 0.5.4 */
 /* Designer: Mark Mayberg */
 
 html, body, div, form, pre, span, tr, th, td { margin:0; padding:0; border:0; vertical-align:baseline; }
@@ -21,7 +21,6 @@ a, img { border:none; text-decoration:none; }
 .sitename h1 a { color:#111; text-decoration:none; }
 .with-sidebar .main { margin-right:13em; }
 .with-sidebar .sidebar { float:right; width:12em; margin-top:4.4em; overflow:hidden; }
-.with-sidebar .sidebar .navigationside ul { margin:0; padding:0; list-style:none; }
 .content h1:first-child, .content>*:first-child { margin-top:0; }
 .content h1 a:hover { text-decoration:none; }
 .content img { max-width:100%; height:auto; }
@@ -48,17 +47,28 @@ a, img { border:none; text-decoration:none; }
 .navigation ul { margin:0 -0.3em; padding:0; list-style:none; }
 .navigation li { display:inline; }
 
-.navigationtree { margin-bottom:1em; line-height:2em; }
-.navigationtree a { color:#111; padding:0 0.3em; display:inline-block; }
-.navigationtree a:hover { color:#07d; }
-.navigationtree ul { margin:0 -0.3em; padding:0; list-style:none; }
-.navigationtree li { display:inline; }
-.navigationtree ul li { display:inline-block; position:relative; cursor:pointer; margin:0; }
-.navigationtree ul li:hover {}
-.navigationtree ul li ul { padding:0.3em; position:absolute; width:13em; background:#fff; z-index:100; display:none; }
-.navigationtree ul li ul { border:1px solid #bbb; border-radius:4px; box-shadow:2px 4px 10px rgba(0, 0, 0, 0.2); }
-.navigationtree ul li ul li { display:block; }
-.navigationtree ul li:hover ul { display:block; }
+.navigation-search { padding-bottom:1em; }
+.navigation-search .search-form { position:relative; }
+.navigation-search .search-text { font-family:inherit; font-size:inherit; font-weight:inherit; }
+.navigation-search .search-text { padding:0.5em; border:1px solid #bbb; border-radius:4px; width:100%; box-sizing:border-box; }
+.navigation-search .search-text { background-color:#fff; background-image:linear-gradient(to bottom, #fff, #fff); }
+.navigation-search .search-button { position:absolute; top:0; right:0; }
+.navigation-search .search-button { font-family:inherit; font-size:inherit; font-weight:inherit; }
+.navigation-search .search-button { margin:5px; padding:0.3em; border:none; background-color:transparent; }
+
+.navigation-sidebar ul { margin:0; padding:0; list-style:none; }
+
+.navigation-tree { margin-bottom:1em; line-height:2em; }
+.navigation-tree a { color:#111; padding:0 0.3em; display:inline-block; }
+.navigation-tree a:hover { color:#07d; }
+.navigation-tree ul { margin:0 -0.3em; padding:0; list-style:none; }
+.navigation-tree li { display:inline; }
+.navigation-tree ul li { display:inline-block; position:relative; cursor:pointer; margin:0; }
+.navigation-tree ul li:hover {}
+.navigation-tree ul li ul { padding:0.3em; position:absolute; width:13em; background:#fff; z-index:100; display:none; }
+.navigation-tree ul li ul { border:1px solid #bbb; border-radius:4px; box-shadow:2px 4px 10px rgba(0, 0, 0, 0.2); }
+.navigation-tree ul li ul li { display:block; }
+.navigation-tree ul li:hover ul { display:block; }
 
 /* Forms and buttons */
 
@@ -101,6 +111,7 @@ a, img { border:none; text-decoration:none; }
 	body { margin:0.5em; font-size:0.9em; }
 	.sitename h1, h1, h2 { font-size:1.3em; }
 	.sitename h1, .sitename, .navigation, .footer, .page { margin:0; padding:0; border:0; }
+	.navigation-search { padding-top: 0.5em; }
 	.with-sidebar .main { margin-right:0em; }
 	.with-sidebar .sidebar { display:none; }
 }

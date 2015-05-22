@@ -1,4 +1,4 @@
-/* Knowhow theme 0.5.3 */
+/* Knowhow theme 0.5.4 */
 /* Designer: Mark Mayberg */
 
 html, body, div, form, pre, span, tr, th, td { margin:0; padding:0; border:0; vertical-align:baseline; }
@@ -29,9 +29,8 @@ a, img { border:none; text-decoration:none; }
 	vertical-align:middle;
 }
 .with-sidebar .main { margin-right:280px; }
-.with-sidebar .sidebar { float:right; width:230px; margin-top:4.1em; padding:10px; overflow:hidden; }
+.with-sidebar .sidebar { float:right; width:230px; margin-top:5.3em; padding:10px; overflow:hidden; }
 .with-sidebar .sidebar { border:solid 1px #eee; border-radius:3px; font-size:13px; }
-.with-sidebar .sidebar .navigationside ul { margin:0; padding:5px; list-style:none; }
 .content h1:first-child, .content>*:first-child { margin-top:0; }
 .content h1 a { color:#333; }
 .content h1 a:hover { color:#333; text-decoration:none; }
@@ -61,26 +60,28 @@ a, img { border:none; text-decoration:none; }
 .navigation li a.active { color:#333; }
 .navigation li a.active:hover { color:#4183c4; }
 
-.navigationtree { display:block; float:right; }
-.navigationtree { margin-top:0.95em; margin-bottom:1.5em; line-height:2em; font-weight:500; }
-.navigationtree a { color:#333; padding:0 0.3em; display:inline-block; }
-.navigationtree ul { margin:0 -0.3em; padding:0; list-style:none; }
-.navigationtree li { display:inline; }
-.navigationtree ul li { display:inline-block; position:relative; cursor:pointer; margin:0; }
-.navigationtree ul li:hover {}
-.navigationtree ul li ul { padding:0.3em; position:absolute; width:13em; background:#fff; z-index:100; display:none; }
-.navigationtree ul li ul { border:1px solid #bbb; border-radius:4px; box-shadow:2px 4px 10px rgba(0, 0, 0, 0.2); }
-.navigationtree ul li ul li { font-weight:normal; display:block; }
-.navigationtree ul li:hover ul { display:block; }
+.navigation-search { padding:0.5em 0; }
+.navigation-search .search-form { position:relative; }
+.navigation-search .search-text { font-family:inherit; font-size:inherit; font-weight:inherit; }
+.navigation-search .search-text { padding:0.5em; border:2px solid #eee; width:100%; box-sizing:border-box; }
+.navigation-search .search-text { background-color:#fff; background-image:linear-gradient(to bottom, #fff, #fff); }
+.navigation-search .search-button { position:absolute; top:0; right:0; }
+.navigation-search .search-button { font-family:inherit; font-size:inherit; font-weight:inherit; }
+.navigation-search .search-button { margin:5px; padding:0.3em; border:none; background-color:transparent; }
 
-.navigationsearch { margin-bottom:1em; }
-.navigationsearch .search-form { position:relative; }
-.navigationsearch .search-text { font-family:inherit; font-size:inherit; font-weight:inherit; }
-.navigationsearch .search-text { padding:0.5em; border:2px solid #eee; width:100%; box-sizing:border-box; }
-.navigationsearch .search-text { background-color:#fff; background-image:linear-gradient(to bottom, #fff, #fff); }
-.navigationsearch .search-button { position:absolute; top:0; right:0; }
-.navigationsearch .search-button { font-family:inherit; font-size:inherit; font-weight:inherit; }
-.navigationsearch .search-button { margin:5px; padding:0.3em; border:none; background-color:transparent; }
+.navigation-sidebar ul { margin:0; }
+
+.navigation-tree { display:block; float:right; }
+.navigation-tree { margin-top:0.95em; margin-bottom:1.5em; line-height:2em; font-weight:500; }
+.navigation-tree a { color:#333; padding:0 0.3em; display:inline-block; }
+.navigation-tree ul { margin:0 -0.3em; padding:0; list-style:none; }
+.navigation-tree li { display:inline; }
+.navigation-tree ul li { display:inline-block; position:relative; cursor:pointer; margin:0; }
+.navigation-tree ul li:hover {}
+.navigation-tree ul li ul { padding:0.3em; position:absolute; width:13em; background:#fff; z-index:100; display:none; }
+.navigation-tree ul li ul { border:1px solid #bbb; border-radius:4px; box-shadow:2px 4px 10px rgba(0, 0, 0, 0.2); }
+.navigation-tree ul li ul li { font-weight:normal; display:block; }
+.navigation-tree ul li:hover ul { display:block; }
 
 /* Reengineered from GitHub */
 
@@ -134,6 +135,7 @@ a, img { border:none; text-decoration:none; }
 	.sitename h1, .sitename, .navigation, .page { margin:0; padding:0; border:0; }
 	.sitename, .navigation { float:none; }
 	.sitename-logo { width:24px; height:24px; }
+	.navigation-search { padding-top: 0.5em; }
 	.with-sidebar .main { margin-right:0em; }
 	.with-sidebar .sidebar { display:none; }	
 }

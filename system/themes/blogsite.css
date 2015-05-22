@@ -1,4 +1,4 @@
-/* Blogsite theme 0.5.3 */
+/* Blogsite theme 0.5.4 */
 /* Designer: Mark Mayberg */
 
 html, body, div, form, pre, span, tr, th, td { margin:0; padding:0; border:0; vertical-align:baseline; }
@@ -30,7 +30,6 @@ a, img { border:none; text-decoration:none; }
 }
 .with-sidebar .main { margin-right:13em; }
 .with-sidebar .sidebar { float:right; width:12em; margin-top:4.8em; overflow:hidden; }
-.with-sidebar .sidebar .navigationside ul { margin:0; padding:0; list-style:none; }
 .content { padding:1.5em; }
 .content h1:first-child, .content>*:first-child { margin-top:0; }
 .content h1 a:hover { text-decoration:none; }
@@ -60,23 +59,34 @@ a, img { border:none; text-decoration:none; }
 .navigation li a.active:hover { color:#111; }
 .navigation li { display:inline; }
 
-.navigationtree { padding:0 0.5em; background-color:#000; line-height:2.5em; }
-.navigationtree a { color:#bbb; padding:0 1em; display:inline-block; }
-.navigationtree a:hover { color:#111; background-color:#eee; text-decoration:none; }
-.navigationtree ul { margin:0; padding:0; list-style:none; text-align:center; }
-.navigationtree li a.active { color:#fff; }
-.navigationtree li a.active:hover { color:#111; }
-.navigationtree li { display:inline; }
-.navigationtree ul li { display:inline-block; position:relative; cursor:pointer; margin:0; }
-.navigationtree ul li:hover {}
-.navigationtree ul li ul { padding:0; position:absolute; width:15em; background:#eee; z-index:100; display:none; }
-.navigationtree ul li ul { border:1px solid #bbb; box-shadow:2px 4px 10px rgba(0, 0, 0, 0.2); }
-.navigationtree ul li ul li { display:block; text-align:left; }
-.navigationtree ul li ul li a { color:#111; width:13em; }
-.navigationtree ul li ul li a.active { color:#111; }
-.navigationtree ul li ul li a.active:hover { color:#fff; }
-.navigationtree ul li ul li a:hover { background-color:#000; color:#fff; }
-.navigationtree ul li:hover ul { display:block; }
+.navigation-search { padding:1.5em; }
+.navigation-search .search-form { position:relative; }
+.navigation-search .search-text { font-family:inherit; font-size:inherit; font-weight:inherit; }
+.navigation-search .search-text { padding:0.5em; border:1px solid #bbb; border-radius:4px; width:100%; box-sizing:border-box; }
+.navigation-search .search-text { background-color:#fff; background-image:linear-gradient(to bottom, #fff, #fff); }
+.navigation-search .search-button { position:absolute; top:0; right:0; }
+.navigation-search .search-button { font-family:inherit; font-size:inherit; font-weight:inherit; }
+.navigation-search .search-button { margin:5px; padding:0.3em; border:none; background-color:transparent; }
+
+.navigation-sidebar ul { margin:0; }
+
+.navigation-tree { padding:0 0.5em; background-color:#000; line-height:2.5em; }
+.navigation-tree a { color:#bbb; padding:0 1em; display:inline-block; }
+.navigation-tree a:hover { color:#111; background-color:#eee; text-decoration:none; }
+.navigation-tree ul { margin:0; padding:0; list-style:none; text-align:center; }
+.navigation-tree li a.active { color:#fff; }
+.navigation-tree li a.active:hover { color:#111; }
+.navigation-tree li { display:inline; }
+.navigation-tree ul li { display:inline-block; position:relative; cursor:pointer; margin:0; }
+.navigation-tree ul li:hover {}
+.navigation-tree ul li ul { padding:0; position:absolute; width:15em; background:#eee; z-index:100; display:none; }
+.navigation-tree ul li ul { border:1px solid #bbb; box-shadow:2px 4px 10px rgba(0, 0, 0, 0.2); }
+.navigation-tree ul li ul li { display:block; text-align:left; }
+.navigation-tree ul li ul li a { color:#111; width:13em; }
+.navigation-tree ul li ul li a.active { color:#111; }
+.navigation-tree ul li ul li a.active:hover { color:#fff; }
+.navigation-tree ul li ul li a:hover { background-color:#000; color:#fff; }
+.navigation-tree ul li:hover ul { display:block; }
 
 /* Forms and buttons */
 
@@ -120,7 +130,7 @@ a, img { border:none; text-decoration:none; }
 	body { font-size:0.9em; }
 	.sitename h1, h1, h2 { font-size:1.2em; }
 	.sitename h1, .sitename, .navigation, .footer, .page { margin:0; padding:0; }
-	.sitename, .content, .footer { padding:1em; }
+	.sitename, .navigation-search, .content, .footer { padding:1em; }
 	.with-sidebar .main { margin-right:0em; }
 	.with-sidebar .sidebar { display:none; }	
 }
