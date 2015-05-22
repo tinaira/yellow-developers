@@ -1,5 +1,5 @@
 /* Default theme 0.5.3 */
-/* Designer: Datenstrom Sweden */
+/* Designer: Mark Mayberg */
 
 html, body, div, form, pre, span, tr, th, td { margin:0; padding:0; border:0; vertical-align:baseline; }
 body { 
@@ -47,6 +47,18 @@ a, img { border:none; text-decoration:none; }
 .navigation a:hover { color:#07d; }
 .navigation ul { margin:0 -0.3em; padding:0; list-style:none; }
 .navigation li { display:inline; }
+
+.navigationtree { margin-bottom:1em; line-height:2em; }
+.navigationtree a { color:#111; padding:0 0.3em; display:inline-block; }
+.navigationtree a:hover { color:#07d; }
+.navigationtree ul { margin:0 -0.3em; padding:0; list-style:none; }
+.navigationtree li { display:inline; }
+.navigationtree ul li { display:inline-block; position:relative; cursor:pointer; margin:0; }
+.navigationtree ul li:hover {}
+.navigationtree ul li ul { padding:0.3em; position:absolute; width:13em; background:#fff; z-index:100; display:none; }
+.navigationtree ul li ul { border:1px solid #bbb; border-radius:4px; box-shadow:2px 4px 10px rgba(0, 0, 0, 0.2); }
+.navigationtree ul li ul li { display:block; }
+.navigationtree ul li:hover ul { display:block; }
 
 /* Forms and buttons */
 

@@ -1,4 +1,4 @@
-/* Knowhow theme 0.2.1 */
+/* Knowhow theme 0.5.3 */
 /* Designer: Mark Mayberg */
 
 html, body, div, form, pre, span, tr, th, td { margin:0; padding:0; border:0; vertical-align:baseline; }
@@ -51,6 +51,7 @@ a, img { border:none; text-decoration:none; }
 
 /* Navigation */
 
+.navigation-banner { clear:both; }
 .navigation { display:block; float:right; }
 .navigation { margin-top:0.95em; margin-bottom:1.5em; line-height:2em; font-weight:500; }
 .navigation a { color:#333; padding:0 0.3em; display:inline-block; }
@@ -59,7 +60,19 @@ a, img { border:none; text-decoration:none; }
 .navigation li { display:inline; }
 .navigation li a.active { color:#333; }
 .navigation li a.active:hover { color:#4183c4; }
-.navigation-banner { clear:both; }
+
+.navigationtree { display:block; float:right; }
+.navigationtree { margin-top:0.95em; margin-bottom:1.5em; line-height:2em; font-weight:500; }
+.navigationtree a { color:#333; padding:0 0.3em; display:inline-block; }
+.navigationtree ul { margin:0 -0.3em; padding:0; list-style:none; }
+.navigationtree li { display:inline; }
+.navigationtree ul li { display:inline-block; position:relative; cursor:pointer; margin:0; }
+.navigationtree ul li:hover {}
+.navigationtree ul li ul { padding:0.3em; position:absolute; width:13em; background:#fff; z-index:100; display:none; }
+.navigationtree ul li ul { border:1px solid #bbb; border-radius:4px; box-shadow:2px 4px 10px rgba(0, 0, 0, 0.2); }
+.navigationtree ul li ul li { font-weight:normal; display:block; }
+.navigationtree ul li:hover ul { display:block; }
+
 .navigationsearch { margin-bottom:1em; }
 .navigationsearch .search-form { position:relative; }
 .navigationsearch .search-text { font-family:inherit; font-size:inherit; font-weight:inherit; }

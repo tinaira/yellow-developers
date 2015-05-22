@@ -1,4 +1,4 @@
-/* Blogsite theme 0.2.1 */
+/* Blogsite theme 0.5.3 */
 /* Designer: Mark Mayberg */
 
 html, body, div, form, pre, span, tr, th, td { margin:0; padding:0; border:0; vertical-align:baseline; }
@@ -57,8 +57,26 @@ a, img { border:none; text-decoration:none; }
 .navigation a:hover { color:#111; background-color:#eee; text-decoration:none; }
 .navigation ul { margin:0; padding:0; list-style:none; text-align:center; }
 .navigation li a.active { color:#fff; }
-.navigation li a.active:hover { color:#111; text-decoration:none; }
+.navigation li a.active:hover { color:#111; }
 .navigation li { display:inline; }
+
+.navigationtree { padding:0 0.5em; background-color:#000; line-height:2.5em; }
+.navigationtree a { color:#bbb; padding:0 1em; display:inline-block; }
+.navigationtree a:hover { color:#111; background-color:#eee; text-decoration:none; }
+.navigationtree ul { margin:0; padding:0; list-style:none; text-align:center; }
+.navigationtree li a.active { color:#fff; }
+.navigationtree li a.active:hover { color:#111; }
+.navigationtree li { display:inline; }
+.navigationtree ul li { display:inline-block; position:relative; cursor:pointer; margin:0; }
+.navigationtree ul li:hover {}
+.navigationtree ul li ul { padding:0; position:absolute; width:15em; background:#eee; z-index:100; display:none; }
+.navigationtree ul li ul { border:1px solid #bbb; box-shadow:2px 4px 10px rgba(0, 0, 0, 0.2); }
+.navigationtree ul li ul li { display:block; text-align:left; }
+.navigationtree ul li ul li a { color:#111; width:13em; }
+.navigationtree ul li ul li a.active { color:#111; }
+.navigationtree ul li ul li a.active:hover { color:#fff; }
+.navigationtree ul li ul li a:hover { background-color:#000; color:#fff; }
+.navigationtree ul li:hover ul { display:block; }
 
 /* Forms and buttons */
 
