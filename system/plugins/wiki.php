@@ -12,7 +12,7 @@ class YellowWiki
 	function onLoad($yellow)
 	{
 		$this->yellow = $yellow;
-		$this->yellow->config->setDefault("wikiLocation", "/");
+		$this->yellow->config->setDefault("wikiLocation", "/wiki/");
 		$this->yellow->config->setDefault("wikiWithSidebar", "1");
 		$this->yellow->config->setDefault("wikiPaginationLimit", "30");
 	}
