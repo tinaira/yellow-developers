@@ -1,8 +1,8 @@
 ---
-Sitename: Blogsite
-Navigation: navigation-tree
 Title: Blogsite theme
+Sitename: Blogsite
 Theme: blogsite
+Navigation: navigation-tree
 ---
 Blogsite is a basic blogger theme. 
 [Download latest version](https://github.com/datenstrom/yellow-extensions/tree/master/themes/blogsite).

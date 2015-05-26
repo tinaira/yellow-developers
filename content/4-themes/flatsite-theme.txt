@@ -1,6 +1,6 @@
 ---
-Sitename: Flatsite
 Title: Flatsite theme
+Sitename: Flatsite
 Theme: flatsite
 ---
 Flatsite is a clean business theme. 

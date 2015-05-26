@@ -4,4 +4,4 @@ TitleNavigation: Demo
 ---
 [image yellow.jpg]
 
-[You can edit this page](@pageedit). The documentation gives you more information about how to create small web pages, blogs and wikis.
+You can [edit this page]. The documentation gives you more information about how to create small web pages, blogs and wikis.

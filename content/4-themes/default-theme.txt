@@ -1,6 +1,6 @@
 ---
-Sitename: Default
 Title: Default theme
+Sitename: Default
 Theme: default
 ---
 The theme that comes with Yellow. 
