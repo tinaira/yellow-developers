@@ -45,7 +45,7 @@ yellow.webinterface =
 				this.createPane("yellow-pane-user", true, body.firstChild);
 				yellow.toolbox.addEvent(document.getElementById("yellow-pane-edit-page"), "keyup", yellow.onUpdate);
 				yellow.toolbox.addEvent(document.getElementById("yellow-pane-edit-page"), "change", yellow.onUpdate);
-			} else {
+			} else if(yellow.config.login) {
 				this.createBar("yellow-bar", false, body.firstChild);
 				this.createPane("yellow-pane-login", false, body.firstChild);
 				if(yellow.config.login) this.showPane("yellow-pane-login");
