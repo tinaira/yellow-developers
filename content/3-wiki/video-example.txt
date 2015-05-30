@@ -1,0 +1,7 @@
+---
+Title: Video example
+Tag: Example
+---
+You can show videos.
+
+[youtube fhs55HEl-Gc]

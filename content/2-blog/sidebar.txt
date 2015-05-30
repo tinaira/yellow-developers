@@ -1,0 +1,11 @@
+---
+Title: Sidebar
+Status: hidden
+---
+Recent
+
+[blogrecent /blog/]
+
+Archive
+
+[blogarchive /blog/]

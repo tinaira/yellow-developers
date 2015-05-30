@@ -5,7 +5,7 @@
 // Blog plugin
 class YellowBlog
 {
-	const Version = "0.5.5";
+	const Version = "0.5.6";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -61,6 +61,7 @@ class YellowBlog
 		{
 			list($location, $pagesMax) = $this->yellow->toolbox->getTextArgs($text);
 			if(empty($location)) $location = $this->yellow->config->get("blogLocation");
+			if(empty($pagesMax)) $pagesMax = 10;
 			$blog = $this->yellow->pages->find($location);
 			$pages = $blog ? $blog->getChildren(!$blog->isVisible()) : $this->yellow->pages->clean();
 			$pages->filter("template", "blog")->sort("published", false)->limit($pagesMax);
@@ -77,6 +78,29 @@ class YellowBlog
 				$output .= "</div>\n";
 			} else {
 				$page->error(500, "Blogrecent '$location' does not exist!");
+			}
+		}
+		if($name=="blogrelated" && $typeShortcut)
+		{
+			list($location, $pagesMax) = $this->yellow->toolbox->getTextArgs($text);
+			if(empty($location)) $location = $this->yellow->config->get("blogLocation");
+			if(empty($pagesMax)) $pagesMax = 4;
+			$blog = $this->yellow->pages->find($location);
+			$pages = $blog ? $blog->getChildren(!$blog->isVisible()) : $this->yellow->pages->clean();
+			$pages->filter("template", "blog")->similar($page->getPage("main"))->limit($pagesMax);
+			$page->setLastModified($pages->getModified());
+			if(count($pages))
+			{
+				$output = "<div class=\"".htmlspecialchars($name)."\">\n";
+				$output .= "<ul>\n";
+				foreach($pages as $page)
+				{
+					$output .= "<li><a href=\"".$page->getLocation()."\">".$page->getHtml("titleNavigation")."</a></li>\n";
+				}
+				$output .= "</ul>\n";
+				$output .= "</div>\n";
+			} else {
+				$page->error(500, "Blogrelated '$location' does not exist!");
 			}
 		}
 		if($name=="blogtags" && $typeShortcut)

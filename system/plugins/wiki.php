@@ -5,7 +5,7 @@
 // Wiki plugin
 class YellowWiki
 {
-	const Version = "0.5.5";
+	const Version = "0.5.6";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -34,6 +34,7 @@ class YellowWiki
 		{
 			list($location, $pagesMax) = $this->yellow->toolbox->getTextArgs($text);
 			if(empty($location)) $location = $this->yellow->config->get("wikiLocation");
+			if(empty($pagesMax)) $pagesMax = 10;			
 			$wiki = $this->yellow->pages->find($location);
 			$pages = $wiki ? $wiki->getChildren(!$wiki->isVisible())->append($wiki) : $this->yellow->pages->clean();
 			$pages->sort("modified", false)->limit($pagesMax);
@@ -50,6 +51,29 @@ class YellowWiki
 				$output .= "</div>\n";
 			} else {
 				$page->error(500, "Wikirecent '$location' does not exist!");
+			}
+		}
+		if($name=="wikirelated" && $typeShortcut)
+		{
+			list($location, $pagesMax) = $this->yellow->toolbox->getTextArgs($text);
+			if(empty($location)) $location = $this->yellow->config->get("wikiLocation");
+			if(empty($pagesMax)) $pagesMax = 4;
+			$wiki = $this->yellow->pages->find($location);
+			$pages = $wiki ? $wiki->getChildren(!$wiki->isVisible())->append($wiki) : $this->yellow->pages->clean();
+			$pages->similar($page->getPage("main"))->limit($pagesMax);
+			$page->setLastModified($pages->getModified());
+			if(count($pages))
+			{
+				$output = "<div class=\"".htmlspecialchars($name)."\">\n";
+				$output .= "<ul>\n";
+				foreach($pages as $page)
+				{
+					$output .= "<li><a href=\"".$page->getLocation()."\">".$page->getHtml("titleNavigation")."</a></li>\n";
+				}
+				$output .= "</ul>\n";
+				$output .= "</div>\n";
+			} else {
+				$page->error(500, "Wikirelated '$location' does not exist!");
 			}
 		}
 		if($name=="wikitags" && $typeShortcut)

@@ -1,5 +1,5 @@
 ---
-Title: How to make good coffee
+Title: How to make coffee
 Tag: Example, Coffee
 ---
 Coffee is a beverage made from the roasted beans of the coffee plant.

@@ -2,7 +2,7 @@
 Title: Image example
 Tag: Example
 ---
-Image in different sizes.
+You can show images in different sizes.
 
 [image yellow.jpg Example - 60%]
 [image yellow.jpg Example - 30%]

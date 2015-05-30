@@ -5,7 +5,7 @@
 // Table of contents plugin
 class YellowToc
 {
-	const Version = "0.5.1";
+	const Version = "0.5.2";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -17,11 +17,11 @@ class YellowToc
 	// Handle page content parsing
 	function onParseContentText($page, $text)
 	{
-		$callback = function($matches) use ($text)
+		$callback = function($matches) use ($page)
 		{
 			$output = "<ul class=\"toc\">\n";
 			$major = $minor = 0;
-			preg_match_all("/<h(\d) id=\"([^\"]+)\">(.*?)<\/h\d>/i", $text, $matches, PREG_SET_ORDER);
+			preg_match_all("/<h(\d) id=\"([^\"]+)\">(.*?)<\/h\d>/i", $page->getPage("main")->parserData, $matches, PREG_SET_ORDER);
 			foreach($matches as $match)
 			{
 				switch($match[1])
