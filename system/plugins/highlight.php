@@ -5,13 +5,14 @@
 // Highlight plugin
 class YellowHighlight
 {
-	const Version = "0.5.3";
+	const Version = "0.5.4";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
 	function onLoad($yellow)
 	{
 		$this->yellow = $yellow;
+		$this->yellow->config->setDefault("highlightClass", "highlight");
 		$this->yellow->config->setDefault("highlightStylesheetDefault", "0");
 		$this->yellow->config->setDefault("highlightLineNumber", "0");
 	}
@@ -22,12 +23,14 @@ class YellowHighlight
 		$output = NULL;
 		if(!empty($name) && !$typeShortcut)
 		{
-			list($name, $lineNumber) = explode(':', $name);
+			list($language, $class, $id) = $this->getHighlightInfo($name);
+			list($language, $lineNumber) = explode(':', $language);
 			if(is_null($lineNumber)) $lineNumber = $this->yellow->config->get("highlightLineNumber");
-			$geshi = new GeSHi(trim($text), $name);
+			$geshi = new GeSHi(trim($text), $language);
 			$geshi->set_language_path($this->yellow->config->get("pluginDir")."/highlight/");
 			$geshi->set_header_type(GESHI_HEADER_PRE_TABLE);
-			$geshi->set_overall_class("highlight");
+			$geshi->set_overall_class($class);
+			$geshi->set_overall_id($id);
 			$geshi->enable_line_numbers($lineNumber ? GESHI_NORMAL_LINE_NUMBERS : GESHI_NO_LINE_NUMBERS);
 			$geshi->start_line_numbers_at($lineNumber);
 			$geshi->enable_classes(true);
@@ -62,6 +65,19 @@ class YellowHighlight
 			}
 		}
 		return $output;
+	}
+	
+	// Return highlight info, split up name
+	function getHighlightInfo($name)
+	{
+		$class = $this->yellow->config->get("highlightClass");
+		foreach(explode(' ', $name) as $token)
+		{
+			if(empty($language)) { $language = $token; continue; }
+			if($token[0] == '.') $class = $class." ".substru($token, 1);
+			if($token[0] == '#') $id = substru($token, 1);
+		}
+		return array($language, $class, $id);
 	}
 }
 	

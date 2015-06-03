@@ -20,7 +20,7 @@ class YellowBlog
 	// Handle page meta data parsing
 	function onParseMeta($page)
 	{
-		if(substru($page->get("template"), 0,4)=="blog" && $this->yellow->config->get("blogWithSidebar"))
+		if(substru($page->get("template"), 0, 4)=="blog" && $this->yellow->config->get("blogWithSidebar"))
 		{
 			if(!$page->isExisting("sidebar")) $page->set("sidebar", "sidebar");
 		}

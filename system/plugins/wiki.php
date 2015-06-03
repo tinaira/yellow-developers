@@ -20,7 +20,7 @@ class YellowWiki
 	// Handle page meta data parsing
 	function onParseMeta($page)
 	{
-		if(substru($page->get("template"), 0,4)=="wiki" && $this->yellow->config->get("wikiWithSidebar"))
+		if(substru($page->get("template"), 0, 4)=="wiki" && $this->yellow->config->get("wikiWithSidebar"))
 		{
 			if(!$page->isExisting("sidebar")) $page->set("sidebar", "sidebar");
 		}
