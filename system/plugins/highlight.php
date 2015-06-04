@@ -5,7 +5,7 @@
 // Highlight plugin
 class YellowHighlight
 {
-	const Version = "0.5.4";
+	const Version = "0.5.5";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -23,20 +23,21 @@ class YellowHighlight
 		$output = NULL;
 		if(!empty($name) && !$typeShortcut)
 		{
-			list($language, $class, $id) = $this->getHighlightInfo($name);
-			list($language, $lineNumber) = explode(':', $language);
-			if(is_null($lineNumber)) $lineNumber = $this->yellow->config->get("highlightLineNumber");
-			$geshi = new GeSHi(trim($text), $language);
-			$geshi->set_language_path($this->yellow->config->get("pluginDir")."/highlight/");
-			$geshi->set_header_type(GESHI_HEADER_PRE_TABLE);
-			$geshi->set_overall_class($class);
-			$geshi->set_overall_id($id);
-			$geshi->enable_line_numbers($lineNumber ? GESHI_NORMAL_LINE_NUMBERS : GESHI_NO_LINE_NUMBERS);
-			$geshi->start_line_numbers_at($lineNumber);
-			$geshi->enable_classes(true);
-			$geshi->enable_keyword_links(false);
-			$output = $geshi->parse_code();
-			$output = preg_replace("#<pre(.*?)>(.+?)</pre>#s", "<pre$1><code>$2</code></pre>", $output);
+			list($language, $lineNumber, $class, $id) = $this->getHighlightInfo($name);
+			if(!empty($language))
+			{
+				$geshi = new GeSHi(trim($text), $language);
+				$geshi->set_language_path($this->yellow->config->get("pluginDir")."/highlight/");
+				$geshi->set_header_type(GESHI_HEADER_PRE_TABLE);
+				$geshi->set_overall_class($class);
+				$geshi->set_overall_id($id);
+				$geshi->enable_line_numbers($lineNumber ? GESHI_NORMAL_LINE_NUMBERS : GESHI_NO_LINE_NUMBERS);
+				$geshi->start_line_numbers_at($lineNumber);
+				$geshi->enable_classes(true);
+				$geshi->enable_keyword_links(false);
+				$output = $geshi->parse_code();
+				$output = preg_replace("#<pre(.*?)>(.+?)</pre>#s", "<pre$1><code>$2</code></pre>", $output);
+			}
 		}
 		return $output;
 	}
@@ -73,11 +74,16 @@ class YellowHighlight
 		$class = $this->yellow->config->get("highlightClass");
 		foreach(explode(' ', $name) as $token)
 		{
-			if(empty($language)) { $language = $token; continue; }
+			if(empty($language) && preg_match("/^[\w\:]+$/", $token))
+			{
+			   list($language, $lineNumber) = explode(':', $token);
+			   if(is_null($lineNumber)) $lineNumber = $this->yellow->config->get("highlightLineNumber");
+			   continue;
+			}
 			if($token[0] == '.') $class = $class." ".substru($token, 1);
 			if($token[0] == '#') $id = substru($token, 1);
 		}
-		return array($language, $class, $id);
+		return array($language, $lineNumber, $class, $id);
 	}
 }
 	
