@@ -21,10 +21,10 @@ class YellowImage
 	}
 
 	// Handle page content parsing of custom block
-	function onParseContentBlock($page, $name, $text, $typeShortcut)
+	function onParseContentBlock($page, $name, $text, $shortcut)
 	{
 		$output = NULL;
-		if($name=="image" && $typeShortcut)
+		if($name=="image" && $shortcut)
 		{
 			if(!$this->graphicsLibrary)
 			{

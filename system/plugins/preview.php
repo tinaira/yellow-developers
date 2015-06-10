@@ -5,7 +5,7 @@
 // Preview plugin
 class YellowPreview
 {
-	const Version = "0.5.2";
+	const Version = "0.5.3";
 	var $yellow;			//access to API
 
 	// Handle initialisation
@@ -16,10 +16,10 @@ class YellowPreview
 	}
 	
 	// Handle page content parsing of custom block
-	function onParseContentBlock($page, $name, $text, $typeShortcut)
+	function onParseContentBlock($page, $name, $text, $shortcut)
 	{
 		$output = NULL;
-		if($name=="preview" && $typeShortcut)
+		if($name=="preview" && $shortcut)
 		{
 			list($location, $style, $size) = $this->yellow->toolbox->getTextArgs($text);
 			if(empty($location)) $location = $page->location;
@@ -35,11 +35,12 @@ class YellowPreview
 				{
 					$fileName = $this->yellow->config->get("imageDir").basename($page->location).".jpg";
 					list($src, $width, $height) = $this->yellow->plugins->get("image")->getImageInfo($fileName, $size, $size);
+					$title = $page->get("titlePreview"); if(empty($title)) $title = $page->get("title");
 					$output .= "<li><a href=\"".$page->getLocation()."\">";
 					$output .= "<img src=\"".htmlspecialchars($src)."\" width=\"".htmlspecialchars($width)."\" height=\"".
-					htmlspecialchars($height)."\" alt=\"".htmlspecialchars($page->getHtml("title"))."\" title=\"".
-						htmlspecialchars($page->getHtml("title"))."\" /></a><br />";
-					$output .= "<a href=\"".$page->getLocation()."\">".$page->getHtml("title")."</a>";
+						htmlspecialchars($height)."\" alt=\"".htmlspecialchars($title)."\" title=\"".
+						htmlspecialchars($title)."\" /></a><br />";
+					$output .= "<a href=\"".$page->getLocation()."\">".htmlspecialchars($title)."</a>";
 					$output .= "</li>\n";
 				}
 				$output .= "</ul>";

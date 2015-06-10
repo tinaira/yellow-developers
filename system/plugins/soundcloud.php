@@ -16,10 +16,10 @@ class YellowSoundcloud
 	}
 	
 	// Handle page content parsing of custom block
-	function onParseContentBlock($page, $name, $text, $typeShortcut)
+	function onParseContentBlock($page, $name, $text, $shortcut)
 	{
 		$output = NULL;
-		if($name=="soundcloud" && $typeShortcut)
+		if($name=="soundcloud" && $shortcut)
 		{
 			list($id, $style, $width, $height) = $this->yellow->toolbox->getTextArgs($text);
 			if(empty($style)) $style = $this->yellow->config->get("soundcloudStyle");

@@ -18,10 +18,10 @@ class YellowHighlight
 	}
 	
 	// Handle page content parsing of custom block
-	function onParseContentBlock($page, $name, $text, $typeShortcut)
+	function onParseContentBlock($page, $name, $text, $shortcut)
 	{
 		$output = NULL;
-		if(!empty($name) && !$typeShortcut)
+		if(!empty($name) && !$shortcut)
 		{
 			list($language, $lineNumber, $class, $id) = $this->getHighlightInfo($name);
 			if(!empty($language))

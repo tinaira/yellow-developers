@@ -27,10 +27,10 @@ class YellowBlog
 	}
 	
 	// Handle page content parsing of custom block
-	function onParseContentBlock($page, $name, $text, $typeShortcut)
+	function onParseContentBlock($page, $name, $text, $shortcut)
 	{
 		$output = NULL;
-		if($name=="blogarchive" && $typeShortcut)
+		if($name=="blogarchive" && $shortcut)
 		{
 			list($location) = $this->yellow->toolbox->getTextArgs($text);
 			if(empty($location)) $location = $this->yellow->config->get("blogLocation");
@@ -57,7 +57,7 @@ class YellowBlog
 				$page->error(500, "Blogarchive '$location' does not exist!");
 			}
 		}
-		if($name=="blogrecent" && $typeShortcut)
+		if($name=="blogrecent" && $shortcut)
 		{
 			list($location, $pagesMax) = $this->yellow->toolbox->getTextArgs($text);
 			if(empty($location)) $location = $this->yellow->config->get("blogLocation");
@@ -80,7 +80,7 @@ class YellowBlog
 				$page->error(500, "Blogrecent '$location' does not exist!");
 			}
 		}
-		if($name=="blogrelated" && $typeShortcut)
+		if($name=="blogrelated" && $shortcut)
 		{
 			list($location, $pagesMax) = $this->yellow->toolbox->getTextArgs($text);
 			if(empty($location)) $location = $this->yellow->config->get("blogLocation");
@@ -103,7 +103,7 @@ class YellowBlog
 				$page->error(500, "Blogrelated '$location' does not exist!");
 			}
 		}
-		if($name=="blogtags" && $typeShortcut)
+		if($name=="blogtags" && $shortcut)
 		{
 			list($location) = $this->yellow->toolbox->getTextArgs($text);
 			if(empty($location)) $location = $this->yellow->config->get("blogLocation");

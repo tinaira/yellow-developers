@@ -27,10 +27,10 @@ class YellowWiki
 	}
 	
 	// Handle page content parsing of custom block
-	function onParseContentBlock($page, $name, $text, $typeShortcut)
+	function onParseContentBlock($page, $name, $text, $shortcut)
 	{
 		$output = NULL;
-		if($name=="wikirecent" && $typeShortcut)
+		if($name=="wikirecent" && $shortcut)
 		{
 			list($location, $pagesMax) = $this->yellow->toolbox->getTextArgs($text);
 			if(empty($location)) $location = $this->yellow->config->get("wikiLocation");
@@ -53,7 +53,7 @@ class YellowWiki
 				$page->error(500, "Wikirecent '$location' does not exist!");
 			}
 		}
-		if($name=="wikirelated" && $typeShortcut)
+		if($name=="wikirelated" && $shortcut)
 		{
 			list($location, $pagesMax) = $this->yellow->toolbox->getTextArgs($text);
 			if(empty($location)) $location = $this->yellow->config->get("wikiLocation");
@@ -76,7 +76,7 @@ class YellowWiki
 				$page->error(500, "Wikirelated '$location' does not exist!");
 			}
 		}
-		if($name=="wikitags" && $typeShortcut)
+		if($name=="wikitags" && $shortcut)
 		{
 			list($location) = $this->yellow->toolbox->getTextArgs($text);
 			if(empty($location)) $location = $this->yellow->config->get("wikiLocation");

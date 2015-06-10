@@ -16,10 +16,10 @@ class YellowVimeo
 	}
 	
 	// Handle page content parsing of custom block
-	function onParseContentBlock($page, $name, $text, $typeShortcut)
+	function onParseContentBlock($page, $name, $text, $shortcut)
 	{
 		$output = NULL;
-		if($name=="vimeo" && $typeShortcut)
+		if($name=="vimeo" && $shortcut)
 		{
 			list($id, $style, $width, $height) = $this->yellow->toolbox->getTextArgs($text);
 			if(empty($style)) $style = $this->yellow->config->get("vimeoStyle");

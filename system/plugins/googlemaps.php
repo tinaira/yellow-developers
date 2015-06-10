@@ -17,10 +17,10 @@ class YellowGooglemaps
 	}
 	
 	// Handle page content parsing of custom block
-	function onParseContentBlock($page, $name, $text, $typeShortcut)
+	function onParseContentBlock($page, $name, $text, $shortcut)
 	{
 		$output = NULL;
-		if($name=="googlemaps" && $typeShortcut)
+		if($name=="googlemaps" && $shortcut)
 		{
 			list($address, $zoom, $style, $width, $height) = $this->yellow->toolbox->getTextArgs($text);
 			if(empty($zoom)) $zoom = $this->yellow->config->get("googlemapsZoom");

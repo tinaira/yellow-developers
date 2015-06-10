@@ -16,10 +16,10 @@ class YellowImagegallery
 	}
 	
 	// Handle page content parsing of custom block
-	function onParseContentBlock($page, $name, $text, $typeShortcut)
+	function onParseContentBlock($page, $name, $text, $shortcut)
 	{
 		$output = NULL;
-		if($name=="imagegallery" && $typeShortcut)
+		if($name=="imagegallery" && $shortcut)
 		{
 			list($pattern, $style, $size) = $this->yellow->toolbox->getTextArgs($text);
 			if(empty($style)) $style = $this->yellow->config->get("imagegalleryStyle");
