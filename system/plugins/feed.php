@@ -5,7 +5,7 @@
 // Feed plugin
 class YellowFeed
 {
-	const Version = "0.5.4";
+	const Version = "0.5.5";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -38,7 +38,7 @@ class YellowFeed
 				$output .= "<language>".$this->yellow->page->getHtml("language")."</language>\r\n";
 				foreach($pages as $page)
 				{
-					$description = $this->yellow->toolbox->createTextDescription($page->getContent(), 1024, false);
+					$description = $this->yellow->toolbox->createTextDescription($page->getContent(), 1024, false, "<!--more-->");
 					$output .= "<item>\r\n";
 					$output .= "<title>".$page->getHtml("title")."</title>\r\n";
 					$output .= "<link>".$page->getUrl()."</link>\r\n";
