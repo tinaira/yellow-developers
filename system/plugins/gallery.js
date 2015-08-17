@@ -1,4 +1,4 @@
-// Yellow imagegallery
+// Gallery plugin
 
 var initPhotoSwipeFromDOM = function() {
 	
