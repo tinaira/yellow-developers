@@ -3,13 +3,13 @@ Title: Test image parsing
 ---
 This page tests image parsing.
 
-JPG in different sizes
+JPG in different sizes:
 
 [image yellow.jpg Example - 300 300]
 [image yellow.jpg Example - 200 200]
 [image yellow.jpg Example - 100 100]
 
-JPG in different sizes (percentage)
+JPG in different sizes (percentage):
 
 [image yellow.jpg Example - 50%]
 [image yellow.jpg Example - 25%]

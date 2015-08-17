@@ -3,10 +3,14 @@ Title: Test image parsing
 ---
 This page tests image gallery parsing.
 
-Small images:
+Normal gallery:
 
-[imagegallery .*theme.jpg fourpages 25%]
+[gallery photo.*jpg - 20%]
 
-Big images:
+Simple gallery:
 
-[imagegallery .*theme.jpg]
+[gallery photo.*jpg simple 20%]
+
+Large gallery:
+
+[gallery .*theme.jpg simple]
