@@ -2,6 +2,6 @@
 Title: Gallery example
 Tag: Example
 ---
-You can show images galleries.
+You can show image galleries.
 
 [gallery photo.*jpg - 20%]
