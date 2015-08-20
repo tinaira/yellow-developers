@@ -1,4 +1,4 @@
-/* Knowhow theme 0.5.5 */
+/* Knowhow theme 0.5.6 */
 /* Designer: Mark Mayberg */
 
 html, body, div, form, pre, span, tr, th, td { margin:0; padding:0; border:0; vertical-align:baseline; }
@@ -53,8 +53,8 @@ a, img { border:none; text-decoration:none; }
 .navigation-banner { clear:both; }
 .navigation { display:block; float:right; }
 .navigation { margin-top:0.95em; margin-bottom:1.5em; line-height:2em; font-weight:500; }
-.navigation a { color:#333; padding:0 0.3em; display:inline-block; }
-.navigation a:hover { color:#4183c4; text-decoration:underline; }
+.navigation a { color:#333; text-decoration:none; padding:0 0.3em; }
+.navigation a:hover { color:#4183c4; text-decoration:none; }
 .navigation ul { margin:0 -0.3em; padding:0; list-style:none; }
 .navigation li { display:inline; }
 .navigation li a.active { color:#333; }
@@ -73,7 +73,8 @@ a, img { border:none; text-decoration:none; }
 
 .navigation-tree { display:block; float:right; }
 .navigation-tree { margin-top:0.95em; margin-bottom:1.5em; line-height:2em; font-weight:500; }
-.navigation-tree a { color:#333; padding:0 0.3em; display:inline-block; }
+.navigation-tree a { color:#333; text-decoration:none; padding:0 0.3em; }
+.navigation-tree a:hover { color:#4183c4; text-decoration:none; }
 .navigation-tree ul { margin:0 -0.3em; padding:0; list-style:none; }
 .navigation-tree li { display:inline; }
 .navigation-tree ul li { display:inline-block; position:relative; cursor:pointer; margin:0; }
@@ -133,7 +134,7 @@ a, img { border:none; text-decoration:none; }
 	.content { margin:0.5em 0; font-size:1.0em; }
 	.sitename h1, .content h1, .content h2, .content h3 { font-size:1.3em; }
 	.sitename h1, .sitename, .navigation, .page { margin:0; padding:0; border:0; }
-	.sitename, .navigation { float:none; }
+	.sitename, .navigation, .navigation-tree { float:none; }
 	.sitename-logo { width:24px; height:24px; }
 	.navigation-search { padding-top: 0.5em; }
 	.with-sidebar .main { margin-right:0em; }

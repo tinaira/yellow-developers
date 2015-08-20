@@ -1,4 +1,4 @@
-/* Default theme 0.5.5 */
+/* Default theme 0.5.6 */
 /* Designer: Mark Mayberg */
 
 html, body, div, form, pre, span, tr, th, td { margin:0; padding:0; border:0; vertical-align:baseline; }
@@ -42,7 +42,7 @@ a, img { border:none; text-decoration:none; }
 /* Navigation */
 
 .navigation { margin-bottom:1em; line-height:2em; }
-.navigation a { color:#111; padding:0 0.3em; display:inline-block; }
+.navigation a { color:#111; padding:0 0.3em; }
 .navigation a:hover { color:#07d; }
 .navigation ul { margin:0 -0.3em; padding:0; list-style:none; }
 .navigation li { display:inline; }
@@ -59,7 +59,7 @@ a, img { border:none; text-decoration:none; }
 .navigation-sidebar ul { margin:0; padding:0; list-style:none; }
 
 .navigation-tree { margin-bottom:1em; line-height:2em; }
-.navigation-tree a { color:#111; padding:0 0.3em; display:inline-block; }
+.navigation-tree a { color:#111; padding:0 0.3em; }
 .navigation-tree a:hover { color:#07d; }
 .navigation-tree ul { margin:0 -0.3em; padding:0; list-style:none; }
 .navigation-tree li { display:inline; }
