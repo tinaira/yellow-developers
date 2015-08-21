@@ -5,7 +5,7 @@
 // Gallery plugin
 class YellowGallery
 {
-	const Version = "0.5.1";
+	const Version = "0.5.2";
 	var $yellow;			//access to API
 
 	// Handle initialisation
@@ -35,7 +35,7 @@ class YellowGallery
 			if(count($files) && $this->yellow->plugins->isExisting("image"))
 			{
 				$page->setLastModified($files->getModified());
-				$output = "<div class=\"".htmlspecialchars($style)."\">\n";
+				$output = "<div class=\"".htmlspecialchars($style)."\" data-fullscreenel=\"false\" data-shareel=\"false\">\n";
 				foreach($files as $file)
 				{
 					list($widthInput, $heightInput) = $this->yellow->toolbox->detectImageInfo($file->fileName);

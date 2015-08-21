@@ -1,4 +1,4 @@
-// Gallery plugin
+// Gallery plugin 0.5.2
 
 var initPhotoSwipeFromDOM = function() {
 	
@@ -25,15 +25,51 @@ var initPhotoSwipeFromDOM = function() {
 				h: parseInt(size[1], 10),
 			};
 			if(childElements.length > 0) {
-				item.msrc = childElements[0].getAttribute('src'); // thumbnail
+				item.msrc = childElements[0].getAttribute('src');
 				if(childElements.length > 1) {
-					item.title = childElements[1].innerHTML; // caption
+					item.title = childElements[1].innerHTML;
 				}
 			}
 			item.el = el;
 			items.push(item);
 		}
 		return items;
+	};
+	
+	// Parse gallery options from DOM
+	var parseOptions = function(el) {
+		keyNames = ['galleryUID', 'mainClass', 'showHideOpacity', 'showAnimationDuration', 'hideAnimationDuration',
+					'bgOpacity', 'allowPanToNext', 'pinchToClose', 'closeOnScroll', 'escKey', 'arrowKeys',
+					'closeEl', 'captionEl', 'fullscreenEl', 'zoomEl', 'shareEl', 'counterEl',
+					'arrowEl', 'preloaderEl', 'tapToClose', 'tapToToggleControls', 'clickToCloseNonZoomable'],
+		numKeyNames = keyNames.length,
+		numAttributes = el.attributes.length,
+		options = {
+			mainClass: 'pswp--minimal--dark',
+			tapToClose: true,
+			tapToToggleControls: false,
+		};
+		
+		for(var i = 0; i < numAttributes; i++) {
+			var att = el.attributes[i], key, value;
+			if(att.nodeName.substring(0, 5) == 'data-') {
+				key = att.nodeName.substring(5);
+				for(var j = 0; j < numKeyNames; j++) {
+					if (key == keyNames[j].toLowerCase()) {
+						key = keyNames[j];
+						break;
+					}
+				}
+				switch(att.nodeValue)
+				{
+					case 'true': value = true; break;
+					case 'false': value = false; break;
+					default: value = att.nodeValue;
+				}
+				options[key] = value;
+			}
+		}
+		return options;
 	};
 
 	// Parse gallery and picture index from URL
@@ -144,27 +180,20 @@ var initPhotoSwipeFromDOM = function() {
 	
 	// Open gallery
 	var openPhotoSwipe = function(index, galleryElements, disableAnimation, fromURL) {
-		var template = createTemplate('.pswp'),
+		var gallery,
+		template = createTemplate('.pswp'),
 		items = parseElements(galleryElements),
-		gallery,
-		options;
+		options = parseOptions(galleryElements);
 		
-		options = {
-			mainClass: 'pswp--minimal--dark',	//custom options
-			fullscreenEl: false,
-			shareEl: false,
-			tapToClose: true,
-			tapToToggleControls: false,
-			
-			galleryUID: galleryElements.getAttribute('data-pswp-uid'),
-			
-			getThumbBoundsFn: function(index) {
-				var thumbnail = items[index].el.children[0],
-				pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
-				rect = thumbnail.getBoundingClientRect();
-				return {x:rect.left, y:rect.top + pageYScroll, w:rect.width};
-			}
+		options['getThumbBoundsFn'] = function(index) {
+			var thumbnail = items[index].el.children[0],
+			pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+			rect = thumbnail.getBoundingClientRect();
+			return {x:rect.left, y:rect.top + pageYScroll, w:rect.width};
 		};
+		if(disableAnimation) {
+			options.showAnimationDuration = 0;
+		}
 		if(fromURL) {
 			if(options.galleryPIDs) {
 				for(var j = 0; j < items.length; j++) {
@@ -182,26 +211,23 @@ var initPhotoSwipeFromDOM = function() {
 		if(isNaN(options.index)) {
 			return;
 		}
-		if(disableAnimation) {
-			options.showAnimationDuration = 0;
-		}
 		gallery = new PhotoSwipe( template, PhotoSwipeUI_Default, items, options);
 		gallery.init();
 	};
 	
-	// check gallery elements and bind events
+	// Check gallery elements and bind events
 	var galleryElements = document.querySelectorAll( '.photoswipe' );
 	for(var i = 0, l = galleryElements.length; i < l; i++) {
-		galleryElements[i].setAttribute('data-pswp-uid', i+1);
+		galleryElements[i].setAttribute('data-galleryuid', i+1);
 		galleryElements[i].onclick = onClickGallery;
 	}
 	
-	// check if URL contains gid and pid
+	// Check if URL contains gid and pid
 	if(galleryElements.length)
 	{
-		var hashData = parseHash();
-		if(hashData.pid && hashData.gid) {
-			openPhotoSwipe( hashData.pid,  galleryElements[ hashData.gid - 1 ], true, true );
+		var params = parseHash();
+		if(params.pid && params.gid) {
+			openPhotoSwipe( params.pid,  galleryElements[ params.gid - 1 ], true, true );
 		}
 	}
 };

@@ -5,7 +5,7 @@
 // Fotorama plugin
 class YellowFotorama
 {
-	const Version = "0.5.1";
+	const Version = "0.5.2";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -15,9 +15,10 @@ class YellowFotorama
 		$this->yellow->config->setDefault("fotoramaCdn", "https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/");
 		$this->yellow->config->setDefault("fotoramaStyle", "fotorama");
 		$this->yellow->config->setDefault("fotoramaNav", "dots");
+		$this->yellow->config->setDefault("fotoramaAutoplay", "0");
 		if(!$this->yellow->config->isExisting("jqueryCdn"))
 		{
-		   $this->yellow->config->setDefault("jqueryCdn", "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/");
+		   $this->yellow->config->setDefault("jqueryCdn", "https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/");
 		}
 	}
 	
@@ -27,9 +28,10 @@ class YellowFotorama
 		$output = NULL;
 		if($name=="fotorama" && $shortcut)
 		{
-			list($pattern, $style, $nav) = $this->yellow->toolbox->getTextArgs($text);
+			list($pattern, $style, $nav, $autoplay) = $this->yellow->toolbox->getTextArgs($text);
 			if(empty($style)) $style = $this->yellow->config->get("fotoramaStyle");
 			if(empty($nav)) $nav = $this->yellow->config->get("fotoramaNav");
+			if(empty($autoplay)) $autoplay = $this->yellow->config->get("fotoramaAutoplay");
 			if(empty($pattern))
 			{
 				$files = $page->getFiles(true);
@@ -40,7 +42,8 @@ class YellowFotorama
 			if(count($files))
 			{
 				$page->setLastModified($files->getModified());
-				$output = "<div class=\"".htmlspecialchars($style)."\" data-nav=\"".htmlspecialchars($nav)."\" data-loop=\"true\">\n";
+				$output = "<div class=\"".htmlspecialchars($style)."\" data-nav=\"".htmlspecialchars($nav)."\" data-autoplay=\"".
+					htmlspecialchars($autoplay)."\" data-loop=\"true\">\n";
 				foreach($files as $file)
 				{
 					list($width, $height) = $this->yellow->toolbox->detectImageInfo($file->fileName);
@@ -67,7 +70,7 @@ class YellowFotorama
 			$jqueryCdn = $this->yellow->config->get("jqueryCdn");
 			$output = "<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"{$fotoramaCdn}fotorama.css\" />\n";
 			$output .= "<script type=\"text/javascript\" src=\"{$jqueryCdn}jquery.min.js\"></script>\n";
-			$output .= "<script type=\"text/javascript\" src=\"{$fotoramaCdn}fotorama.js\"></script>\n";
+			$output .= "<script type=\"text/javascript\" src=\"{$fotoramaCdn}fotorama.min.js\"></script>\n";
 		}
 		return $output;
 	}
