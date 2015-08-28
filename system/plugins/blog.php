@@ -5,7 +5,7 @@
 // Blog plugin
 class YellowBlog
 {
-	const Version = "0.5.6";
+	const Version = "0.5.7";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -13,17 +13,7 @@ class YellowBlog
 	{
 		$this->yellow = $yellow;
 		$this->yellow->config->setDefault("blogLocation", "/blog/");
-		$this->yellow->config->setDefault("blogWithSidebar", "0");
 		$this->yellow->config->setDefault("blogPaginationLimit", "5");
-	}
-	
-	// Handle page meta data parsing
-	function onParseMeta($page)
-	{
-		if(substru($page->get("template"), 0, 4)=="blog" && $this->yellow->config->get("blogWithSidebar"))
-		{
-			if(!$page->isExisting("sidebar")) $page->set("sidebar", "sidebar");
-		}
 	}
 	
 	// Handle page content parsing of custom block
