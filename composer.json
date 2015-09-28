@@ -3,6 +3,6 @@
     "description": "Yellow demo with an example website, blog and wiki.",
     "keywords": ["yellow", "flat-file", "cms"],
     "require": {
-        "php": ">=5.3.0",
+        "php": ">=5.3.0"
     }
 }
