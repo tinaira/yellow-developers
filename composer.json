@@ -1,9 +1,0 @@
-{
-    "name": "datenstrom/yellow-demo",
-    "description": "Yellow demo with an example website, blog and wiki.",
-    "keywords": ["yellow", "flat-file", "cms"],
-    "license": "GPL-2.0",
-    "require": {
-        "php": ">=5.3.0"
-    }
-}
