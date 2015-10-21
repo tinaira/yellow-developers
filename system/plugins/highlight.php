@@ -5,7 +5,7 @@
 // Highlight plugin
 class YellowHighlight
 {
-	const Version = "0.5.5";
+	const Version = "0.6.1";
 	var $yellow;			//access to API
 	
 	// Handle initialisation

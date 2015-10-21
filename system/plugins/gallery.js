@@ -1,4 +1,4 @@
-// Gallery plugin 0.5.2
+// Gallery plugin 0.6.1
 
 var initPhotoSwipeFromDOM = function() {
 	

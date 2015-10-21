@@ -5,7 +5,7 @@
 // Blog plugin
 class YellowBlog
 {
-	const Version = "0.5.7";
+	const Version = "0.6.1";
 	var $yellow;			//access to API
 	
 	// Handle initialisation

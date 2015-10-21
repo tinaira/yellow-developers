@@ -58,7 +58,7 @@ class YellowCommandline
 		return 200;
 	}
 	
-	// Show software version
+	// Show software version and updates
 	function versionCommand($args)
 	{
 		$statusCode = 0;
@@ -518,12 +518,9 @@ class YellowCommandline
 	// Return plugin version URL from repository
 	function getPluginVersionUrl($url)
 	{
-		if(!$this->yellow->lookup->isFileLocation($url))
+		if(preg_match("#^https://github.com/(.+)$#", $url, $matches))
 		{
-			if(preg_match("#^https://github.com/(.+)$#", $url, $matches))
-			{
-				$url = "https://raw.githubusercontent.com/".$matches[1]."/master/version.ini";
-			}
+			$url = "https://raw.githubusercontent.com/".$matches[1]."/master/version.ini";
 		}
 		return $url;
 	}

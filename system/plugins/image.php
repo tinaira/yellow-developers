@@ -5,7 +5,7 @@
 // Image plugin
 class YellowImage
 {
-	const Version = "0.5.1";
+	const Version = "0.6.1";
 	var $yellow;			//access to API
 	var $graphicsLibrary;	//graphics library support? (boolean)
 

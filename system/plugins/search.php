@@ -5,7 +5,7 @@
 // Search plugin
 class YellowSearch
 {
-	const Version = "0.5.2";
+	const Version = "0.6.1";
 	var $yellow;			//access to API
 	
 	// Handle initialisation

@@ -5,7 +5,7 @@
 // Wiki plugin
 class YellowWiki
 {
-	const Version = "0.5.7";
+	const Version = "0.6.1";
 	var $yellow;			//access to API
 	
 	// Handle initialisation

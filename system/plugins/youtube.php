@@ -5,7 +5,7 @@
 // Youtube plugin
 class YellowYoutube
 {
-	const Version = "0.5.1";
+	const Version = "0.6.1";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
