@@ -1,4 +1,4 @@
-// Gallery plugin 0.6.1
+// Gallery plugin 0.6.2
 
 var initPhotoSwipeFromDOM = function() {
 	
@@ -38,7 +38,8 @@ var initPhotoSwipeFromDOM = function() {
 	
 	// Parse gallery options from DOM
 	var parseOptions = function(el) {
-		keyNames = ['galleryUID', 'mainClass', 'showHideOpacity', 'showAnimationDuration', 'hideAnimationDuration',
+		keyNames = ['galleryUID', 'mainClass', 'thumbSquare',
+					'showHideOpacity', 'showAnimationDuration', 'hideAnimationDuration',
 					'bgOpacity', 'allowPanToNext', 'pinchToClose', 'closeOnScroll', 'escKey', 'arrowKeys',
 					'closeEl', 'captionEl', 'fullscreenEl', 'zoomEl', 'shareEl', 'counterEl',
 					'arrowEl', 'preloaderEl', 'tapToClose', 'tapToToggleControls', 'clickToCloseNonZoomable'],
@@ -184,13 +185,20 @@ var initPhotoSwipeFromDOM = function() {
 		template = createTemplate('.pswp'),
 		items = parseElements(galleryElements),
 		options = parseOptions(galleryElements);
-		
 		options['getThumbBoundsFn'] = function(index) {
 			var thumbnail = items[index].el.children[0],
 			pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
 			rect = thumbnail.getBoundingClientRect();
 			return {x:rect.left, y:rect.top + pageYScroll, w:rect.width};
 		};
+		if(options.thumbSquare)
+		{
+			options.showHideOpacity = true;
+			options.showAnimationDuration = 0;
+			for(var j = 0; j < items.length; j++) {
+				items[j].msrc = false;
+			}
+		}
 		if(disableAnimation) {
 			options.showAnimationDuration = 0;
 		}

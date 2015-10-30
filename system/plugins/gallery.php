@@ -5,7 +5,7 @@
 // Gallery plugin
 class YellowGallery
 {
-	const Version = "0.6.1";
+	const Version = "0.6.2";
 	var $yellow;			//access to API
 
 	// Handle initialisation
@@ -35,7 +35,9 @@ class YellowGallery
 			if(count($files) && $this->yellow->plugins->isExisting("image"))
 			{
 				$page->setLastModified($files->getModified());
-				$output = "<div class=\"".htmlspecialchars($style)."\" data-fullscreenel=\"false\" data-shareel=\"false\">\n";
+				$output = "<div class=\"".htmlspecialchars($style)."\" data-fullscreenel=\"false\" data-shareel=\"false\"";
+				if(substru($size, -1, 1) != "%") $output .= " data-thumbsquare=\"true\"";
+				$output .= ">\n";
 				foreach($files as $file)
 				{
 					list($widthInput, $heightInput) = $this->yellow->toolbox->detectImageInfo($file->fileName);
@@ -44,7 +46,7 @@ class YellowGallery
 					$output .= "<img src=\"".htmlspecialchars($src)."\" width=\"".htmlspecialchars($width)."\" height=\"".
 						htmlspecialchars($height)."\" alt=\"".basename($file->getLocation())."\" title=\"".
 						basename($file->getLocation())."\" />";
-					$output .= "</a>\n";
+					$output .= "</a> \n";
 				}
 				$output .= "</div>";
 			} else {
