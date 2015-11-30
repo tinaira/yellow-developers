@@ -5,7 +5,7 @@
 // Feed plugin
 class YellowFeed
 {
-	const Version = "0.6.1";
+	const Version = "0.6.2";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -15,6 +15,7 @@ class YellowFeed
 		$this->yellow->config->setDefault("feedPaginationLimit", "30");
 		$this->yellow->config->setDefault("feedLocation", "/feed/");
 		$this->yellow->config->setDefault("feedFileXml", "feed.xml");
+		$this->yellow->config->setDefault("feedFilter", "");
 	}
 
 	// Handle page parsing
@@ -22,11 +23,15 @@ class YellowFeed
 	{
 		if($this->yellow->page->get("template") == "feed")
 		{
+			$feedFilter = $this->yellow->config->get("feedFilter");
+			$chronologicalOrder = ($this->yellow->config->get("feedFilter") != "blog");
 			$pagination = $this->yellow->config->get("contentPagination");
 			if($_REQUEST[$pagination] == $this->yellow->config->get("feedFileXml"))
 			{
 				$pages = $this->yellow->pages->index(false, false);
-				$pages->sort("modified", false)->limit($this->yellow->config->get("feedPaginationLimit"));
+				if(!empty($feedFilter)) $pages->filter("template", $feedFilter);
+				$pages->sort($chronologicalOrder ? "modified" : "published", false);
+				$pages->limit($this->yellow->config->get("feedPaginationLimit"));
 				$this->yellow->page->setLastModified($pages->getModified());
 				$this->yellow->page->setHeader("Content-Type", "application/rss+xml; charset=utf-8");
 				$output = "<?xml version=\"1.0\" encoding=\"utf-8\"\077>\r\n";
@@ -38,11 +43,13 @@ class YellowFeed
 				$output .= "<language>".$this->yellow->page->getHtml("language")."</language>\r\n";
 				foreach($pages as $page)
 				{
+					$timestamp = strtotime($page->get($chronologicalOrder ? "modified" : "published"));
 					$description = $this->yellow->toolbox->createTextDescription($page->getContent(), 1024, false, "<!--more-->");
 					$output .= "<item>\r\n";
 					$output .= "<title>".$page->getHtml("title")."</title>\r\n";
 					$output .= "<link>".$page->getUrl()."</link>\r\n";
-					$output .= "<guid isPermaLink=\"false\">".$page->getUrl()."?".$page->getModified()."</guid>\r\n";
+					$output .= "<pubDate>".date(DATE_RSS, $timestamp)."</pubDate>\r\n";
+					$output .= "<guid isPermaLink=\"false\">".$page->getUrl()."?".$timestamp."</guid>\r\n";
 					$output .= "<description><![CDATA[".$description."]]></description>\r\n";
 					$output .= "</item>\r\n";
 				}
@@ -51,9 +58,11 @@ class YellowFeed
 				$this->yellow->page->setOutput($output);
 			} else {
 				$pages = $this->yellow->pages->index(false, false);
-				$pages->sort("modified");
+				if(!empty($feedFilter)) $pages->filter("template", $feedFilter);
+				$pages->sort($chronologicalOrder ? "modified" : "published");
 				$pages->pagination($this->yellow->config->get("feedPaginationLimit"));
 				if(!$pages->getPaginationNumber()) $this->yellow->page->error(404);
+				$this->yellow->page->set("feedChronologicalOrder", $chronologicalOrder);
 				$this->yellow->page->setPages($pages);
 				$this->yellow->page->setLastModified($pages->getModified());
 			}
