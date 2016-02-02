@@ -17,7 +17,7 @@ code { font-size:1.1em; }
 a { color:#4183c4; }
 a:hover { color:#4183c4; text-decoration:underline; }
 a, img { border:none; text-decoration:none; }
-.yellow-bar { margin:0 auto; max-width:920px; font-weight:500; }
+.yellow-bar { margin:0 auto; max-width:980px; font-weight:500; }
 .sitename { display:block; float:left; }
 .sitename h1 { margin:0; font-size:2em; }
 .sitename h1 a { color:#333; text-decoration:none; }
