@@ -2,7 +2,7 @@
 // Copyright (c) 2013-2015 Datenstrom, http://datenstrom.se
 // This file may be used and distributed under the terms of the public license.
 
-// Google map plugin
+// Googlemaps plugin
 class YellowGooglemaps
 {
 	const Version = "0.6.1";

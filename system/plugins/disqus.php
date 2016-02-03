@@ -1,11 +1,11 @@
 <?php
-// Copyright (c) 2013-2015 Datenstrom, http://datenstrom.se
+// Copyright (c) 2013-2016 Datenstrom, http://datenstrom.se
 // This file may be used and distributed under the terms of the public license.
 
 // Disqus plugin
 class YellowDisqus
 {
-	const Version = "0.6.1";
+	const Version = "0.6.2";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -22,10 +22,11 @@ class YellowDisqus
 		if($name=="disqus" || $name=="comments")
 		{
 			$shortname = $this->yellow->config->get("disqusShortname");
+			$url = $this->yellow->page->get("pageRead");
 			$output = "<div id=\"disqus_thread\"></div>\n";
 			$output .= "<script type=\"text/javascript\">\n";
-			$output .= "var disqus_shortname = '".htmlspecialchars($shortname)."';\n";
-			$output .= "var disqus_url = '".$this->yellow->page->get("pageRead")."';\n";
+			$output .= "var disqus_shortname = '".strspecialchars($shortname)."';\n";
+			$output .= "var disqus_url = '".strspecialchars($url)."';\n";
 			$output .= "(function() {\n";
 			$output .= "var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;\n";
 			$output .= "dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';\n";
