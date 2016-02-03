@@ -2898,7 +2898,6 @@ class YellowToolbox
 // Unicode support for PHP
 mb_internal_encoding("UTF-8");
 function strempty($string) { return is_null($string) || $string===""; }
-function strspecialchars($string) { return addcslashes($string, "\'\"\\\/"); }
 function strreplaceu() { return call_user_func_array("str_replace", func_get_args()); }
 function strtoloweru() { return call_user_func_array("mb_strtolower", func_get_args()); }
 function strtoupperu() { return call_user_func_array("mb_strtoupper", func_get_args()); }
@@ -2910,6 +2909,7 @@ function strrposu() { return call_user_func_array("mb_strrpos", func_get_args())
 function strrposb() { return call_user_func_array("strrpos", func_get_args()); }
 function substru() { return call_user_func_array("mb_substr", func_get_args()); }
 function substrb() { return call_user_func_array("substr", func_get_args()); }
+function rawjsencode($string) { return addcslashes($string, "\'\"\\\/"); }
 
 // Error reporting for PHP
 error_reporting(E_ALL ^ E_NOTICE);
