@@ -25,8 +25,8 @@ class YellowDisqus
 			$url = $this->yellow->page->get("pageRead");
 			$output = "<div id=\"disqus_thread\"></div>\n";
 			$output .= "<script type=\"text/javascript\">\n";
-			$output .= "var disqus_shortname = '".rawjsencode($shortname)."';\n";
-			$output .= "var disqus_url = '".rawjsencode($url)."';\n";
+			$output .= "var disqus_shortname = '".strencode($shortname)."';\n";
+			$output .= "var disqus_url = '".strencode($url)."';\n";
 			$output .= "(function() {\n";
 			$output .= "var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;\n";
 			$output .= "dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';\n";
