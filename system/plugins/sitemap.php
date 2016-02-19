@@ -1,11 +1,11 @@
 <?php
-// Copyright (c) 2013-2015 Datenstrom, http://datenstrom.se
+// Copyright (c) 2013-2016 Datenstrom, http://datenstrom.se
 // This file may be used and distributed under the terms of the public license.
 
 // Sitemap plugin
 class YellowSitemap
 {
-	const Version = "0.6.1";
+	const Version = "0.6.3";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -50,8 +50,9 @@ class YellowSitemap
 		$output = NULL;
 		if($name == "header")
 		{
+			$pagination = $this->yellow->config->get("contentPagination");
 			$locationSitemap = $this->yellow->config->get("serverBase").$this->yellow->config->get("sitemapLocation");
-			$locationSitemap .= $this->yellow->config->get("contentPagination").":".$this->yellow->config->get("sitemapFileXml");
+			$locationSitemap .= $this->yellow->toolbox->normaliseArgs("$pagination:".$this->yellow->config->get("sitemapFileXml"), false);
 			$output = "<link rel=\"sitemap\" type=\"text/xml\" href=\"$locationSitemap\" />\n";
 		}
 		return $output;

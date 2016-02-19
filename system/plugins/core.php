@@ -124,8 +124,8 @@ class YellowCore
 			if($this->toolbox->isRequestCleanUrl($location))
 			{
 				$statusCode = 303;
-				$locationArgs = $this->toolbox->getLocationArgsCleanUrl($this->config->get("contentPagination"));
-				$location = $this->lookup->normaliseUrl($serverScheme, $serverName, $base, $location.$locationArgs);
+				$location = $location.$this->getRequestLocationArgsClean();
+				$location = $this->lookup->normaliseUrl($serverScheme, $serverName, $base, $location);
 				$this->sendStatus($statusCode, $location);
 			}
 		} else {
@@ -252,7 +252,7 @@ class YellowCore
 		$serverScheme = empty($serverScheme) ? $this->config->get("serverScheme") : $serverScheme;
 		$serverName = empty($serverName) ? $this->config->get("serverName") : $serverName;
 		$base = empty($base) ? $this->config->get("serverBase") : $base;
-		$location = $this->toolbox->getLocationClean();
+		$location = $this->toolbox->getLocation();
 		$location = substru($location, strlenu($base));
 		if(preg_match("/\.(css|js|jpg|png|txt|woff)$/", $location))
 		{
@@ -268,6 +268,12 @@ class YellowCore
 		}
 		if(empty($fileName)) $fileName = $this->lookup->findFileFromLocation($location);
 		return array($serverScheme, $serverName, $base, $location, $fileName);
+	}
+	
+	// Return request location
+	function getRequestLocationArgsClean()
+	{
+		return $this->toolbox->getLocationArgsClean($this->config->get("contentPagination"));
 	}
 	
 	// Return request language
@@ -2125,6 +2131,7 @@ class YellowLookup
 				} else if(!preg_match("#^$pageBase#", $location)) {
 					$location = $pageBase.$location;
 				}
+				$location = strreplaceu(':', $this->yellow->toolbox->getLocationArgsSeparator(), $location);
 			}
 		} else {
 			if($filterStrict && !preg_match("/^(http|https|ftp|mailto):/", $location)) $location = "error-xss-filter";
@@ -2280,52 +2287,52 @@ class YellowToolbox
 	}
 	
 	// Return location from current HTTP request
-	function getLocation()
+	function getLocation($filterStrict = true)
 	{
-		$uri = $_SERVER["REQUEST_URI"];
-		return rawurldecode(($pos = strposu($uri, '?')) ? substru($uri, 0, $pos) : $uri);
-	}
-	
-	// Return location from current HTTP request, remove unwanted path tokens
-	function getLocationClean()
-	{
-		$string = $this->getLocation();
-		$location = ($string[0]=='/') ? '' : '/';
-		for($pos=0; $pos<strlenb($string); ++$pos)
+		$location = $_SERVER["REQUEST_URI"];
+		$location = rawurldecode(($pos = strposu($location, '?')) ? substru($location, 0, $pos) : $location);
+		if($filterStrict)
 		{
-			if($string[$pos] == '/')
+			$locationFiltered = "";
+			if($location[0] != '/') $location = '/'.$location;
+			for($pos=0; $pos<strlenb($location); ++$pos)
 			{
-				if($string[$pos+1] == '/') continue;
-				if($string[$pos+1] == '.')
+				if($location[$pos] == '/')
 				{
-					$posNew = $pos+1; while($string[$posNew] == '.') ++$posNew;
-					if($string[$posNew]=='/' || $string[$posNew]=='')
+					if($location[$pos+1] == '/') continue;
+					if($location[$pos+1] == '.')
 					{
-						$pos = $posNew-1;
-						continue;
+						$posNew = $pos+1; while($location[$posNew] == '.') ++$posNew;
+						if($location[$posNew]=='/' || $location[$posNew]=='')
+						{
+							$pos = $posNew-1;
+							continue;
+						}
 					}
 				}
+				$locationFiltered .= $location[$pos];
 			}
-			$location .= $string[$pos];
-		}
-		if(preg_match("/^(.*?\/)([^\/]+:.*)$/", $location, $matches))
-		{
-			$_SERVER["LOCATION"] = $location = $matches[1];
-			$_SERVER["LOCATION_ARGS"] = $matches[2];
-			foreach(explode('/', $matches[2]) as $token)
+			$location = $locationFiltered;
+			$separator = $this->getLocationArgsSeparator();
+			if(preg_match("/^(.*?\/)([^\/]+$separator.*)$/", $location, $matches))
 			{
-				preg_match("/^(.*?):(.*)$/", $token, $matches);
-				if(!empty($matches[1]) && !strempty($matches[2]))
+				$_SERVER["LOCATION"] = $location = $matches[1];
+				$_SERVER["LOCATION_ARGS"] = $matches[2];
+				foreach(explode('/', $matches[2]) as $token)
 				{
-					$matches[1] = strreplaceu(array("\x1c", "\x1d"), array('/', ':'), $matches[1]);
-					$matches[2] = strreplaceu(array("\x1c", "\x1d"), array('/', ':'), $matches[2]);
-					$_REQUEST[$matches[1]] = $matches[2];
+					preg_match("/^(.*?)$separator(.*)$/", $token, $matches);
+					if(!empty($matches[1]) && !strempty($matches[2]))
+					{
+						$matches[1] = strreplaceu(array("\x1c", "\x1d", "\x1e"), array('/', ':', '='), $matches[1]);
+						$matches[2] = strreplaceu(array("\x1c", "\x1d", "\x1e"), array('/', ':', '='), $matches[2]);
+						$_REQUEST[$matches[1]] = $matches[2];
+					}
 				}
+			} else {
+				$_SERVER["LOCATION"] = $location;
+				$_SERVER["LOCATION_ARGS"] = "";
 			}
-		} else {
-			$_SERVER["LOCATION"] = $location;
-			$_SERVER["LOCATION_ARGS"] = "";
-		}		
+		}
 		return $location;
 	}
 	
@@ -2335,13 +2342,14 @@ class YellowToolbox
 		return $_SERVER["LOCATION_ARGS"];
 	}
 	
-	// Return location arguments from current HTTP request, modify an argument
+	// Return location arguments from current HTTP request, modify existing arguments
 	function getLocationArgsNew($arg, $pagination)
 	{
+		$separator = $this->getLocationArgsSeparator();
 		preg_match("/^(.*?):(.*)$/", $arg, $args);
 		foreach(explode('/', $_SERVER["LOCATION_ARGS"]) as $token)
 		{
-			preg_match("/^(.*?):(.*)$/", $token, $matches);
+			preg_match("/^(.*?)$separator(.*)$/", $token, $matches);
 			if($matches[1] == $args[1]) { $matches[2] = $args[2]; $found = true; }
 			if(!empty($matches[1]) && !strempty($matches[2]))
 			{
@@ -2356,43 +2364,51 @@ class YellowToolbox
 		}
 		if(!empty($locationArgs))
 		{
-			if(!$this->isLocationArgsPagination($locationArgs, $pagination)) $locationArgs .= '/';
 			$locationArgs = $this->normaliseArgs($locationArgs, false, false);
+			if(!$this->isLocationArgsPagination($locationArgs, $pagination)) $locationArgs .= '/';
 		}
 		return $locationArgs;
 	}
 	
-	// Return location arguments from current HTTP request, convert form into clean URL
-	function getLocationArgsCleanUrl($pagination)
+	// Return location arguments from current HTTP request, convert form parameters
+	function getLocationArgsClean($pagination)
 	{
 		foreach(array_merge($_GET, $_POST) as $key=>$value)
 		{
 			if(!empty($key) && !strempty($value))
 			{
 				if(!empty($locationArgs)) $locationArgs .= '/';
-				$key = strreplaceu(array('/', ':'), array("\x1c", "\x1d"), $key);
-				$value = strreplaceu(array('/', ':'), array("\x1c", "\x1d"), $value);
+				$key = strreplaceu(array('/', ':', '='), array("\x1c", "\x1d", "\x1e"), $key);
+				$value = strreplaceu(array('/', ':', '='), array("\x1c", "\x1d", "\x1e"), $value);
 				$locationArgs .= "$key:$value";
 			}
 		}
 		if(!empty($locationArgs))
 		{
-			if(!$this->isLocationArgsPagination($locationArgs, $pagination)) $locationArgs .= '/';
 			$locationArgs = $this->normaliseArgs($locationArgs, false, false);
+			if(!$this->isLocationArgsPagination($locationArgs, $pagination)) $locationArgs .= '/';
 		}
 		return $locationArgs;
+	}
+
+	// Return location arguments separator
+	function getLocationArgsSeparator()
+	{
+		return (strtoupperu(substru(PHP_OS, 0, 3)) != "WIN") ? ':' : '=';
 	}
 	
 	// Check if location contains location arguments
 	function isLocationArgs($location)
 	{
-		return preg_match("/[^\/]+:.*$/", $location);
+		$separator = $this->getLocationArgsSeparator();
+		return preg_match("/[^\/]+$separator.*$/", $location);
 	}
 	
 	// Check if location contains pagination arguments
 	function isLocationArgsPagination($location, $pagination)
 	{
-		return preg_match("/^(.*\/)?$pagination:.*$/", $location);
+		$separator = $this->getLocationArgsSeparator();
+		return preg_match("/^(.*\/)?$pagination$separator.*$/", $location);
 	}
 
 	// Check if script location is requested
@@ -2429,7 +2445,8 @@ class YellowToolbox
 	{
 		if($appendSlash) $text .= '/';
 		if($filterStrict) $text = strreplaceu(' ', '-', strtoloweru($text));
-		return strreplaceu(array('%3A','%2F'), array(':','/'), rawurlencode($text));
+		$text = strreplaceu(':', $this->getLocationArgsSeparator(), $text);
+		return strreplaceu(array('%2F','%3A','%3D'), array('/',':','='), rawurlencode($text));
 	}
 	
 	// Normalise text into UTF-8 NFC

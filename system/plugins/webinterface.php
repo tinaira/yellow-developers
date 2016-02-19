@@ -661,7 +661,6 @@ class YellowUsers
 		if($this->isExisting($email))
 		{
 			$serverScheme = $this->yellow->config->get("webinterfaceServerScheme");
-			$serverName = $this->yellow->config->get("webinterfaceServerName");
 			$location = $this->yellow->config->get("serverBase").$this->yellow->config->get("webinterfaceLocation");
 			$session = $this->yellow->toolbox->createHash($this->users[$email]["hash"], "sha256");
 			if(empty($session)) $session = "error-hash-algorithm-sha256";
@@ -673,7 +672,6 @@ class YellowUsers
 	function destroyCookie($cookieName)
 	{
 		$serverScheme = $this->yellow->config->get("webinterfaceServerScheme");
-		$serverName = $this->yellow->config->get("webinterfaceServerName");
 		$location = $this->yellow->config->get("serverBase").$this->yellow->config->get("webinterfaceLocation");
 		setcookie($cookieName, "", time()-3600, $location, "", $serverScheme=="https");
 	}

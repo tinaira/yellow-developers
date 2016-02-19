@@ -1,11 +1,11 @@
 <?php
-// Copyright (c) 2013-2015 Datenstrom, http://datenstrom.se
+// Copyright (c) 2013-2016 Datenstrom, http://datenstrom.se
 // This file may be used and distributed under the terms of the public license.
 
 // Feed plugin
 class YellowFeed
 {
-	const Version = "0.6.2";
+	const Version = "0.6.3";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -75,8 +75,9 @@ class YellowFeed
 		$output = NULL;
 		if($name == "header")
 		{
+			$pagination = $this->yellow->config->get("contentPagination");			
 			$locationFeed = $this->yellow->config->get("serverBase").$this->yellow->config->get("feedLocation");
-			$locationFeed .= $this->yellow->config->get("contentPagination").":".$this->yellow->config->get("feedFileXml");
+			$locationFeed .= $this->yellow->toolbox->normaliseArgs("$pagination:".$this->yellow->config->get("feedFileXml"), false);
 			$output = "<link rel=\"alternate\" type=\"application/rss+xml\" href=\"$locationFeed\" />\n";
 		}
 		return $output;
