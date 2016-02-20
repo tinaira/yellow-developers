@@ -5,7 +5,7 @@
 // Yellow core
 class YellowCore
 {
-	const Version = "0.6.2";
+	const Version = "0.6.3";
 	var $page;				//current page
 	var $pages;				//pages from file system
 	var $files;				//files from file system
@@ -82,6 +82,21 @@ class YellowCore
 		list($pathRoot, $pathHome) = $this->lookup->getContentInformation();
 		$this->config->set("contentRootDir", $pathRoot);
 		$this->config->set("contentHomeDir", $pathHome);
+	}
+	
+	// Handle command
+	function command($name, $args = NULL)
+	{
+		$statusCode = 0;
+		if($this->plugins->isExisting($name))
+		{
+			$plugin = $this->plugins->plugins[$name];
+			if(method_exists($plugin["obj"], "onCommand")) $statusCode = $plugin["obj"]->onCommand(func_get_args());
+		} else {
+			$statusCode = 500;
+			$this->page->error($statusCode, "Plugin '$name' does not exist!");
+		}
+		return $statusCode;
 	}
 	
 	// Handle request
@@ -184,7 +199,7 @@ class YellowCore
 		}
 		$this->page = new YellowPage($this);
 		$this->page->setRequestInformation($serverScheme, $serverName, $base, $location, $fileName);
-		$this->page->parseData($this->toolbox->getFileData($fileName), $cacheable, $statusCode, $pageError);
+		$this->page->parseData($this->toolbox->readFile($fileName), $cacheable, $statusCode, $pageError);
 		$this->text->setLanguage($this->page->get("language"));
 		$this->page->parseContent();
 		return $fileName;
@@ -229,7 +244,7 @@ class YellowCore
 			if(!$cacheable) @header("Cache-Control: no-cache, must-revalidate");
 			@header("Content-Type: ".$this->toolbox->getMimeContentType($fileName));
 			@header("Last-Modified: ".$lastModifiedFormatted);
-			echo $this->toolbox->getFileData($fileName);
+			echo $this->toolbox->readFile($fileName);
 		}
 		return $statusCode;
 	}
@@ -244,6 +259,13 @@ class YellowCore
 		{
 			foreach($this->page->headerData as $key=>$value) echo "YellowCore::sendStatus $key: $value<br/>\n";
 		}
+	}
+	
+	// Parse snippet
+	function snippet($name, $args = NULL)
+	{
+		$this->pages->snippetArgs = func_get_args();
+		$this->page->parseSnippet($name);
 	}
 	
 	// Return request information
@@ -297,7 +319,7 @@ class YellowCore
 	// Return static file from cache if available
 	function getStaticFileFromCache($location, $fileName, $cacheable, $statusCode)
 	{
-		if(PHP_SAPI != "cli" && $cacheable)
+		if(PHP_SAPI!="cli" && $cacheable)
 		{
 			if($statusCode == 200)
 			{
@@ -333,28 +355,6 @@ class YellowCore
 			$ok = $this->config->get("multiLanguageMode");
 		}
 		return $ok;
-	}
-	
-	// Execute command
-	function command($name, $args = NULL)
-	{
-		$statusCode = 0;
-		if($this->plugins->isExisting($name))
-		{
-			$plugin = $this->plugins->plugins[$name];
-			if(method_exists($plugin["obj"], "onCommand")) $statusCode = $plugin["obj"]->onCommand(func_get_args());
-		} else {
-			$statusCode = 500;
-			$this->page->error($statusCode, "Plugin '$name' does not exist!");
-		}
-		return $statusCode;
-	}
-	
-	// Execute snippet
-	function snippet($name, $args = NULL)
-	{
-		$this->pages->snippetArgs = func_get_args();
-		$this->page->parseSnippet($name);
 	}
 }
 	
@@ -424,14 +424,9 @@ class YellowPage
 	{
 		if($this->statusCode == 0)
 		{
-			$fileHandle = @fopen($this->fileName, "r");
-			if($fileHandle)
-			{
-				$this->statusCode = 200;
-				$this->rawData = fread($fileHandle, filesize($this->fileName));
-				fclose($fileHandle);
-				$this->parseMeta();
-			}
+			$this->rawData = $this->yellow->toolbox->readFile($this->fileName);
+			$this->statusCode = 200;
+			$this->parseMeta();
 		}
 	}
 	
@@ -508,7 +503,11 @@ class YellowPage
 				if(method_exists($plugin["obj"], "onParseContentRaw"))
 				{
 					$this->parser = $plugin["obj"];
-					$this->parserData = $this->parser->onParseContentRaw($this, $this->getContent(true));
+					$this->parserData = $this->getContent(true);
+					$this->parserData = preg_replace("/@pageRead/i", $this->get("pageRead"), $this->parserData);
+					$this->parserData = preg_replace("/@pageEdit/i", $this->get("pageEdit"), $this->parserData);
+					$this->parserData = preg_replace("/@pageError/i", $this->get("pageError"), $this->parserData);
+					$this->parserData = $this->parser->onParseContentRaw($this, $this->parserData);
 					foreach($this->yellow->plugins->plugins as $key=>$value)
 					{
 						if(method_exists($value["obj"], "onParseContentText"))
@@ -1216,20 +1215,11 @@ class YellowPages
 				$fileNames = $this->yellow->lookup->findChildrenFromLocation($location);
 				foreach($fileNames as $fileName)
 				{
-					$fileHandle = @fopen($fileName, "r");
-					if($fileHandle)
-					{
-						$fileData = fread($fileHandle, 4096);
-						$statusCode = filesize($fileName) <= 4096 ? 200 : 0;
-						fclose($fileHandle);
-					} else {
-						$fileData = "";
-						$statusCode = 0;
-					}
 					$page = new YellowPage($this->yellow);
 					$page->setRequestInformation($serverScheme, $serverName, $base,
 						$this->yellow->lookup->findLocationFromFile($fileName), $fileName);
-					$page->parseData($fileData, false, $statusCode);
+					$page->parseData($this->yellow->toolbox->readFile($fileName, 4096), false, 0);
+					if(strlenb($page->rawData) < 4096) $page->statusCode = 200;
 					array_push($this->pages[$location], $page);
 				}
 			}
@@ -1305,7 +1295,7 @@ class YellowPages
 		return new YellowPageCollection($this->yellow);
 	}
 	
-	// Return available languages
+	// Return languages in multi language mode
 	function getLanguages($showInvisible = false)
 	{
 		$languages = array();
@@ -1618,20 +1608,17 @@ class YellowConfig
 	// Load configuration from file
 	function load($fileName)
 	{
-		$fileData = @file($fileName);
-		if($fileData)
+		if(defined("DEBUG") && DEBUG>=2) echo "YellowConfig::load file:$fileName<br/>\n";
+		$this->modified = filemtime($fileName);
+		$fileData = $this->yellow->toolbox->readFile($fileName);
+		foreach($this->yellow->toolbox->getTextLines($fileData) as $line)
 		{
-			if(defined("DEBUG") && DEBUG>=2) echo "YellowConfig::load file:$fileName<br/>\n";
-			$this->modified = filemtime($fileName);
-			foreach($fileData as $line)
+			if(preg_match("/^\#/", $line)) continue;
+			preg_match("/^\s*(.*?)\s*:\s*(.*?)\s*$/", $line, $matches);
+			if(!empty($matches[1]) && !strempty($matches[2]))
 			{
-				if(preg_match("/^\#/", $line)) continue;
-				preg_match("/^\s*(.*?)\s*:\s*(.*?)\s*$/", $line, $matches);
-				if(!empty($matches[1]) && !strempty($matches[2]))
-				{
-					$this->set(lcfirst($matches[1]), $matches[2]);
-					if(defined("DEBUG") && DEBUG>=3) echo "YellowConfig::load ".lcfirst($matches[1]).":$matches[2]<br/>\n";
-				}
+				$this->set(lcfirst($matches[1]), $matches[2]);
+				if(defined("DEBUG") && DEBUG>=3) echo "YellowConfig::load ".lcfirst($matches[1]).":$matches[2]<br/>\n";
 			}
 		}
 	}
@@ -1718,26 +1705,22 @@ class YellowText
 		$regex = "/^".basename($fileName)."$/";
 		foreach($this->yellow->toolbox->getDirectoryEntries($path, $regex, true, false) as $entry)
 		{
-			$fileData = @file($entry);
-			if($fileData)
+			if(defined("DEBUG") && DEBUG>=2) echo "YellowText::load file:$entry<br/>\n";
+			$language = "";
+			$this->modified = max($this->modified, filemtime($entry));
+			$fileData = $this->yellow->toolbox->readFile($entry);
+			foreach($this->yellow->toolbox->getTextLines($fileData) as $line)
 			{
-				if(defined("DEBUG") && DEBUG>=2) echo "YellowText::load file:$entry<br/>\n";
-				$this->modified = max($this->modified, filemtime($entry));
-				$language = "";
-				foreach($fileData as $line)
+				if(preg_match("/^\#/", $line)) continue;
+				preg_match("/^\s*(.*?)\s*:\s*(.*?)\s*$/", $line, $matches);
+				if(empty($language))
 				{
-					preg_match("/^\s*(.*?)\s*:\s*(.*?)\s*$/", $line, $matches);
-					if(lcfirst($matches[1])=="language" && !strempty($matches[2])) { $language = $matches[2]; break; }
+					if(lcfirst($matches[1])=="language" && !strempty($matches[2])) $language = $matches[2];
 				}
-				foreach($fileData as $line)
+				if(!empty($language) && !empty($matches[1]) && !strempty($matches[2]))
 				{
-					if(preg_match("/^\#/", $line)) continue;
-					preg_match("/^\s*(.*?)\s*:\s*(.*?)\s*$/", $line, $matches);
-					if(!empty($language) && !empty($matches[1]) && !strempty($matches[2]))
-					{
-						$this->setText(lcfirst($matches[1]), $matches[2], $language);
-						if(defined("DEBUG") && DEBUG>=3) echo "YellowText::load ".lcfirst($matches[1]).":$matches[2]<br/>\n";
-					}
+					$this->setText(lcfirst($matches[1]), $matches[2], $language);
+					if(defined("DEBUG") && DEBUG>=3) echo "YellowText::load ".lcfirst($matches[1]).":$matches[2]<br/>\n";
 				}
 			}
 		}
@@ -1793,7 +1776,6 @@ class YellowText
 			} else {
 				foreach($this->text[$language] as $key=>$value)
 				{
-					if(substru($key, 0, strlenu("language")) == "language") $text[$key] = $value;
 					if(substru($key, 0, strlenu($filterStart)) == $filterStart) $text[$key] = $value;
 				}
 			}
@@ -1813,6 +1795,14 @@ class YellowText
 		$format = preg_replace("/(?<!\\\)D/", addcslashes(substru($weekday, 0, 3), 'A..Za..z'), $format);
 		$format = preg_replace("/(?<!\\\)l/", addcslashes($weekday, 'A..Za..z'), $format);
 		return date($format, $timestamp);
+	}
+	
+	// Return languages
+	function getLanguages()
+	{
+		$languages = array();
+		foreach($this->text as $key=>$value) array_push($languages, $key);
+		return $languages;
 	}
 	
 	// Return text modification date, Unix time or HTTP format
@@ -2627,7 +2617,7 @@ class YellowToolbox
 			$path = dirname($fileName);
 			if(!empty($path) && !is_dir($path)) @mkdir($path, 0777, true);
 		}
-		$fileHandle = @fopen($fileName, "w");
+		$fileHandle = @fopen($fileName, "wb");
 		if($fileHandle)
 		{
 			fwrite($fileHandle, $fileData);
