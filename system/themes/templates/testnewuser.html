@@ -7,7 +7,7 @@
 <?php $email = trim($_REQUEST["email"]); if(empty($email)) $email = "demo@demo.com"; ?>
 <?php $password = trim($_REQUEST["password"]); if(empty($password)) $password = "demo"; ?>
 <?php if($yellow->plugins->isExisting("webinterface")): ?>
-<?php $user = $yellow->plugins->get("webinterface")->users->getUserInfo($email, $password, "", "", ""); ?>
+<?php $user = $yellow->plugins->get("webinterface")->users->getUserInfo($email, $password, "Yellow", "", ""); ?>
 <?php endif ?>
 <?php endif ?>
 <h1><?php echo $yellow->page->getHtml("title") ?></h1>
@@ -21,7 +21,7 @@
 </form>
 <?php else: ?>
 <p>
-1. Go to your Yellow installation, where the yellow.php is.<br />
+1. Go to your Yellow installation, where the <code>yellow.php</code> is.<br />
 2. Open file <code>system/config/user.ini</code> and add the following line to the end:<br />
 </p>
 <p><?php echo "<code>".htmlspecialchars($user)."</code>" ?></p>
