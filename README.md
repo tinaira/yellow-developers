@@ -1,6 +1,6 @@
 Yellow developers
 =================
-[![Yellow](https://raw.githubusercontent.com/wiki/datenstrom/yellow/images/yellow.jpg)](http://datenstrom.se/yellow)
+[![Yellow](https://raw.githubusercontent.com/datenstrom/yellow-developers/master/media/images/yellow-photo.jpg)](http://datenstrom.se/yellow)
 
 Yellow is for people who make websites. [Get support](http://developers.datenstrom.se/help/support).
 
