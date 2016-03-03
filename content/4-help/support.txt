@@ -20,7 +20,7 @@ Connect with other Yellow users and find professional help from the community.
 ## How to contribute
 
 * [Create plugins](https://github.com/datenstrom/yellow-extensions/tree/master/plugins)
-* [Create themes](https://github.com/datenstrom/yellow-extensions/tree/master/themes)
+* [Create themes](https://github.com/datenstrom/yellow-themes)
 * [Translate Yellow](https://github.com/datenstrom/yellow-extensions/tree/master/languages)
 
 ## Thank you

@@ -21,7 +21,7 @@ Tausche dich mit anderen Yellow-Benutzern aus und finde professionelle Hilfe.
 ## Mach mit
 
 * [Erstelle Plugins](https://github.com/datenstrom/yellow-extensions/tree/master/plugins)
-* [Erstelle Themes](https://github.com/datenstrom/yellow-extensions/tree/master/themes)
+* [Erstelle Themes](https://github.com/datenstrom/yellow-themes)
 * [Übersetze Yellow](https://github.com/datenstrom/yellow-extensions/tree/master/languages)
 
 ## Danke
