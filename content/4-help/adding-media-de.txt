@@ -1,0 +1,49 @@
+---
+Title: Medien hinzufügen 
+Sidebar: sidebar-de
+Language: de
+---
+Alle Medien befinden sich im `media`-Verzeichnis. Hier speicherst du Bilder und Dateien.
+
+[image screenshot-media.png Screenshot]
+
+Alle `media`-Verzeichnisse stehen auf deiner Webseite zur Verfügung. Das `downloads`-Verzeichnis enthält Dateien zum Herunterladen. Das `images`-Verzeichnis ist zum Speichern deiner Bilder gedacht. Bei einer kleinen Webseite kannst du alle Bilder in dieses Verzeichnis ablegen. Du kannst auch weitere Verzeichnisse erstellen und Dateien so organisieren wie du willst.
+
+Bilder
+------
+Hier ist beschreiben wie man Bilder auf einer Seite verwendet. Öffne die Datei `content/1-home/page.txt` in deinem Lieblingseditor. Füge `![image](icon.png)` zum Text der Seite hinzu. Die Startseite zeigt jetzt das Icon deiner Webseite an. 
+
+`![image](icon.png)` zeigt `http://website/media/images/icon.png`  
+`![image](picture.jpg)` zeigt `http://website/media/images/picture.jpg`  
+
+Es gibt auch das [Image Plugin](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/image) um Bildgrößen zu ändern und Thumbnails zu erzeugen.
+
+`[image icon.png]` zeigt `http://website/media/images/icon.png`  
+`[image picture.jpg]` zeigt `http://website/media/images/picture.jpg`  
+
+Bilder in unterschiedliche Größen:
+
+    [image picture.jpg Picture - 64 64]
+    [image picture.jpg Picture - 320 200]
+    [image picture.jpg Picture - 50%]
+
+Videos
+------
+Du kannst das [Youtube Plugin](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/youtube) und [Vimeo Plugin](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/vimeo) benutzen um Videos einzubinden.
+
+`[youtube fhs55HEl-Gc]` zeigt `http://www.youtube.com/watch?v=fhs55HEl-Gc`  
+`[vimeo 13387502]` zeigt `http://vimeo.com/13387502`  
+
+Ein Youtube-Video einbinden:
+
+    [youtube fhs55HEl-Gc]
+    [youtube fhs55HEl-Gc left 200 112]
+    [youtube fhs55HEl-Gc right 200 112]
+
+Ein Vimeo-Video einbinden:
+
+    [vimeo 13387502]
+    [vimeo 13387502 left 200 112]
+    [vimeo 13387502 right 200 112]
+
+[Weiter: Einstellungen ändern →](changing-settings-de)

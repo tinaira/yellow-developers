@@ -1,0 +1,124 @@
+---
+Title: How to make a blog
+Sidebar: sidebar
+Language: en
+---
+Learn how to make a blog with Yellow.
+
+## Install blog
+
+[Download and install the Yellow blog plugin](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/blog).
+
+Your blog is immediately available as `http://website/blog/` or `http://website/`, depending on how you configure your `content` folder. If you want the blog on your home page, rename the blog folder to '1-blog' and delete '1-home'.
+
+The main configuration for your blog is file `system/config/config.ini`. You can define the default settings of your website here. For a new installation you should set `Sitename`, `Author` and `Language`. There are [plugins](/plugins/) and [themes](/themes/) you can download.
+ 
+## Writing blog pages
+
+Have a look inside your `content` folder, there's the blog folder with all your blog pages. Open the file `2013-04-07-blog-example.txt`. You'll see settings and text of the page. You can change `Title` and other [settings](yellow-api#meta-data) at the top of a page. Here's an example:
+
+```
+---
+Title: Blog example
+Published: 2013-04-07
+Author: Yellow
+Tag: Example
+---
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
+tempor incididunt ut labore et dolore magna pizza. Ut enim ad minim veniam, 
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo. 
+```
+
+To create a new blog page, add a new file to the blog folder. Set `Published` and more settings at the top of a page. Dates should be written in the format [YYYY-MM-DD](yellow-api#date-format). The publishing date will be used to sort blog pages. You can use `Tag` to group similar pages together. Here's another example:
+
+```
+---
+Title: Fika is good for you
+Published: 2013-06-01
+Author: Yellow
+Tag: Example, Coffee
+---
+Fika is a Swedish custom. It's a social coffee break where people 
+gather to have a cup of coffee or tea together. You can have fika with 
+colleagues at work. You can invite your friends to fika. Fika is such 
+an important part of life in Sweden that it is both a verb and a noun. 
+Do you fika?
+```
+
+Now let's add a video with the [Youtube plugin](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/youtube):
+
+```
+---
+Title: Fika is good for you
+Published: 2013-06-01
+Author: Yellow
+Tag: Example, Coffee
+---
+Fika is a Swedish custom. It's a social coffee break where people 
+gather to have a cup of coffee or tea together. You can have fika with 
+colleagues at work. You can invite your friends to fika. Fika is such 
+an important part of life in Sweden that it is both a verb and a noun. 
+Do you fika?
+
+[youtube aS52d3hcHfs]
+```
+
+Let's show the video when a visitor clicks on the blog page. You can add `[--more--]` where your want the break:
+
+```
+---
+Title: Fika is good for you
+Published: 2013-06-01
+Author: Yellow
+Tag: Example, Coffee
+---
+Fika is a Swedish custom. It's a social coffee break where people 
+gather to have a cup of coffee or tea together. You can have fika with 
+colleagues at work. You can invite your friends to fika. Fika is such 
+an important part of life in Sweden that it is both a verb and a noun. 
+Do you fika? [--more--]
+
+[youtube aS52d3hcHfs]
+```
+
+## Creating a sidebar
+
+To create a sidebar add the file `sidebar.txt` to your blog folder. The sidebar 
+is automatically shown on all blog pages. Here's an example sidebar:
+
+```
+---
+Title: Sidebar
+Status: hidden
+---
+Links
+
+* [Twitter](https://twitter.com/datenstromse)
+* [GitHub](https://github.com/datenstrom)
+```
+
+You can use [shortcuts](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/blog#how-to-configure-a-blog) to show information about the blog. Here's another example:
+
+```
+---
+Title: Sidebar
+Status: hidden
+---
+Recent
+
+[blogrecent /blog/]
+
+Archive
+
+[blogarchive /blog/]
+```
+
+## Advanced features
+
+* [How to add comments to your blog](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/disqus)
+* [How to add a contact page to your blog](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/contact)
+* [How to add a feed to your blog](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/feed)
+* [How to make a draft page](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/draft)
+* [How to make a static blog](web-server-configuration#static-website)
+
+[Next: How to make a wiki →](how-to-make-a-wiki)

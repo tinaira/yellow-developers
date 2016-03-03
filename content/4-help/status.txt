@@ -1,0 +1,12 @@
+---
+Title: Status
+Sidebar: none
+Language: en
+Information: Please do not translate this file, English only
+---
+Current website status and automated tests.
+|||
+|---|---|
+|**datenstrom.se**|[![Site status](http://datenstrom.se/media/images/online.svg)](http://datenstrom.se)
+|**datenstrom/yellow**|[![Build status](https://travis-ci.org/datenstrom/yellow.svg?branch=master)](https://travis-ci.org/datenstrom/yellow)
+|**datenstrom/yellow-developers**|[![Build status](https://travis-ci.org/datenstrom/yellow-demo.svg?branch=master)](https://travis-ci.org/datenstrom/yellow-demo)

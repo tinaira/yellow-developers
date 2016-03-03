@@ -1,0 +1,49 @@
+---
+Title: Ajouter des fichiers
+Sidebar: sidebar-fr
+Language: fr
+---
+Les fichiers sont localisés dans le dossier `media`. Vous pouvez y placer des images et des fichiers.
+
+[image screenshot-media.png Screenshot]
+
+Tout les fichiers présents dans le répertoire `media` sont accessibles sur votre site web. Le répertoire `downloads` contient des fichiers à télécharger. Le répertoire `images` est l'endroit où stocker vos images. Pour un petit site web, mettez-y toutes vos images. Vous pouvez aussi créer des dossiers additionnels et organiser vos fichiers comme il vous convient.
+
+Images
+------
+Voici comment afficher des images. Ouvrez le fichier  `content/1-home/page.txt` dans votre éditeur de texte favori. Ajoutez `![image](icon.png)` en tant que texte sur la page. La page d'accueil affiche à présent l’icône du site web. 
+
+`![image](icon.png)` affiche `http://website/media/images/icon.png`  
+`![image](picture.jpg)` affiche `http://website/media/images/picture.jpg`  
+
+Le [plugin image](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/image) permet de simplifier l'intégration des images, mais aussi de redimensionner automatiquement ses images et de créer des miniatures.
+
+`[image icon.png]` affiche `http://website/media/images/icon.png`  
+`[image picture.jpg]` affiche `http://website/media/images/picture.jpg`  
+
+Images de différentes tailles:
+
+    [image picture.jpg Picture - 64 64]
+    [image picture.jpg Picture - 320 200]
+    [image picture.jpg Picture - 50%]
+
+Vidéos
+------
+Vous pouvez utiliser le [plugin Youtube](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/youtube) et le [plugin Vimeo](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/vimeo) pour intégrer facilement des vidéos. Il suffit de noter le numéro à la fin de l'url de la vidéo.
+
+`[youtube fhs55HEl-Gc]` affiche `http://www.youtube.com/watch?v=fhs55HEl-Gc`  
+`[vimeo 13387502]` affiche `http://vimeo.com/13387502`  
+
+Insérer une vidéo Youtube:
+
+    [youtube fhs55HEl-Gc]
+    [youtube fhs55HEl-Gc left 200 112]
+    [youtube fhs55HEl-Gc right 200 112]
+
+Insérer une vidéo Vimeo:
+
+    [vimeo 13387502]
+    [vimeo 13387502 left 200 112]
+    [vimeo 13387502 right 200 112]
+
+[Suivant: Modifier les paramètres →](changing-settings-fr)

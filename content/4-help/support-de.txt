@@ -1,0 +1,47 @@
+---
+Title: Support Deutsch
+TitleContent: Support
+Sidebar: sidebar-de
+Language: de
+---
+Tausche dich mit anderen Yellow-Benutzern aus und finde professionelle Hilfe. 
+
+## Support finden
+
+* [Diskutiere Probleme und Vorschläge](https://github.com/datenstrom/yellow/issues)
+* [Chatte mit den Entwicklern](https://gitter.im/datenstrom/yellow)
+* [Frage einen Menschen](http://datenstrom.se/contact/)
+
+## Folge uns
+
+* [GitHub @datenstrom](https://github.com/datenstrom)
+* [Gitter @datenstrom](https://gitter.im/datenstrom/yellow)
+* [Twitter @datenstromse](https://twitter.com/datenstromse)
+
+## Mach mit
+
+* [Erstelle Plugins](https://github.com/datenstrom/yellow-extensions/tree/master/plugins)
+* [Erstelle Themes](https://github.com/datenstrom/yellow-extensions/tree/master/themes)
+* [Übersetze Yellow](https://github.com/datenstrom/yellow-extensions/tree/master/languages)
+
+## Danke
+
+Yellow ist kostenlos und Open-Source, erstellt von Menschen die Yellow benutzen. Im Herzen von Open-Source ist die Idee, dass wir durch gemeinsamen Code zusammen bessere Software machen können. Mitmachen und Kommentare sind sehr willkommen. [Komm an Bord](https://github.com/datenstrom/).
+
+* Adam Engel, Übersetzer
+* Ádám Tuba, Übersetzer
+* Alexander Schäferdiek, Entwickler
+* Andreas Dielacher, Entwickler
+* Сергей Ворон, Übersetzer
+* David Garcia, Übersetzer
+* David Fehrmann, Core
+* Diogo Costa, Übersetzer
+* Gwan-Sik Eom, Übersetzer
+* Hyson Lee, Übersetzer
+* Jef Lippiatt, Entwickler
+* Jimmy Ofisia, Übersetzer
+* Juh Nibreh, Core
+* Luca Lischetti, Übersetzer
+* Mark Seuffert, Core
+* Robin Vannieuwenhuijse, Übersetzer
+* Ufo Vyhuleny, Übersetzer

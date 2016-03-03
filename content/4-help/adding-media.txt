@@ -1,0 +1,49 @@
+---
+Title: Adding media 
+Sidebar: sidebar
+Language: en
+---
+All media is located in the `media` folder. You can store your images and other files here.
+
+[image screenshot-media.png Screenshot]
+
+All `media` folders are available on your website. The `downloads` folder contains files to download. The `images` folder is the place to store your images. For a small website put all images inside this folder. You can also create additional folders and organise files as you like.
+
+Images
+------
+Here's how to use images on a page. Open the file `content/1-home/page.txt` in your favorite text editor. Add `![image](icon.png)` to the text of the page. The home page shows now the website icon. 
+
+`![image](icon.png)` shows `http://website/media/images/icon.png`  
+`![image](picture.jpg)` shows  `http://website/media/images/picture.jpg`  
+
+You can also use the [image plugin](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/image) to resize images and create thumbnails.
+
+`[image icon.png]` shows `http://website/media/images/icon.png`  
+`[image picture.jpg]` shows `http://website/media/images/picture.jpg`  
+
+Images in different sizes:
+
+    [image picture.jpg Picture - 64 64]
+    [image picture.jpg Picture - 320 200]
+    [image picture.jpg Picture - 50%]
+
+Videos
+------
+You can use the [Youtube plugin](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/youtube) and [Vimeo plugin](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/vimeo) to embed videos.
+
+`[youtube fhs55HEl-Gc]` shows `http://www.youtube.com/watch?v=fhs55HEl-Gc`  
+`[vimeo 13387502]` shows `http://vimeo.com/13387502`  
+
+Embedding a Youtube video:
+
+    [youtube fhs55HEl-Gc]
+    [youtube fhs55HEl-Gc left 200 112]
+    [youtube fhs55HEl-Gc right 200 112]
+
+Embedding a Vimeo video:
+
+    [vimeo 13387502]
+    [vimeo 13387502 left 200 112]
+    [vimeo 13387502 right 200 112]
+
+[Next: Changing settings →](changing-settings)

@@ -1,0 +1,48 @@
+---
+Title: Thèmes de Yellow
+Sidebar: sidebar-fr
+Language: fr
+---
+>> [Todo: You can help us and translate this page](https://github.com/datenstrom/yellow-developers)
+
+Customise the visual design of your website.
+
+Themes
+------
+Themes define the visual design of your website. Start with a [theme](/themes/) that you like and adjust it. There's a default theme defined in file `system/config/config.ini`. A different theme can be defined in the [settings](https://github.com/datenstrom/yellow/wiki/Yellow-API#meta-data) at the top of each page, for example `Theme: default`.
+
+Style sheet
+-----------
+A theme consists of a [style sheet](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) and additional files, for example fonts and images. To use a custom style sheet set the `Theme` setting at the top of a page. You can also create a style sheet with the name of a content folder and it will be automatically used.
+ 
+Here's an example style sheet file `system/themes/default.css`:
+
+```
+html, body, div, form, pre, span, tr, th, td { margin:0; padding:0; border:0; vertical-align:baseline; }
+body { background-color:#fff; color:#717171; margin:1em; }
+h1, h2, h3, h4, h5, h6 { color:#07d; font-weight:normal; }
+a { color:#07d; text-decoration:none; }
+a:hover { color:#07d; text-decoration:underline; }
+.sitename h1 a { color:#717171; text-decoration:none; }
+```
+
+JavaScript
+----------
+You can put [JavaScript](http://en.wikipedia.org/wiki/JavaScript) into a file which has a similar name as the style sheet and it will be automatically included.  This allows you to create themes with advanced features. For script addicts there's also an excellent [jQuery plugin](https://github.com/nogginfuel/yellow-plugin-jquery).
+
+Here's an example JavaScript file `system/themes/default.js`:
+
+```
+var ready = function() 
+{
+	console.log("Hello world");
+	// Add more JavaScript code here
+}
+if(window.addEventListener) {
+	window.addEventListener('load', ready, false);
+} else {
+	window.attachEvent('onload', ready);
+}
+```
+
+[Next: Yellow API →](yellow-api)

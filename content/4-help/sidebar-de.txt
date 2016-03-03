@@ -1,0 +1,34 @@
+---
+Title: Sidebar
+Status: hidden
+---
+Sprache
+
+* [Deutsch](/help/help-de)
+* [English](/help/)
+* [Français](/help/help-fr)
+
+Erste Schritte
+
+* [Inhalt hinzufügen](adding-content-de)
+* [Medien hinzufügen](adding-media-de)
+* [Einstellungen ändern](changing-settings-de)
+
+Anleitungen
+
+* [Webseiten erstellen](how-to-make-a-website-de)
+* [Blog erstellen](how-to-make-a-blog-de)
+* [Wiki erstellen](how-to-make-a-wiki-de)
+* [Benutzerkonto hinzufügen](how-to-add-a-user-account-de)
+
+Einstellungen
+
+* [Webservereinstellungen](web-server-configuration-de)
+* [Spracheinstellungen](language-configuration-de)
+* [Sicherheitseinstellungen](security-configuration-de)
+
+Entwickler
+
+* [Yellow-Templates](yellow-templates-de)
+* [Yellow-Themes](yellow-themes-de)
+* [Yellow-API](yellow-api)

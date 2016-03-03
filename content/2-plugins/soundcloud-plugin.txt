@@ -1,0 +1,8 @@
+---
+Title: Soundcloud plugin
+TitlePreview: Soundcloud 
+---
+Embed Soundcloud audio tracks.
+[Download plugin](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/soundcloud).
+
+[soundcloud 101175715]

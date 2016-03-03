@@ -1,0 +1,29 @@
+---
+Title: Einstellungen ändern
+Sidebar: sidebar-de
+Language: de
+---
+Alle Einstellungen befinden sich im `system`-Verzeichnis. Hier machst du Anpassungen.
+
+[image screenshot-system.png Screenshot]
+
+Das `config`-Verzeichnis enthält Konfigurationsdateien. Das `plugins`-Verzeichnis enthält die Yellow-Software. Das `themes`-Verzeichnis ist für das Aussehen der Webseite zuständig. Änderungen in diesen Verzeichnissen wirkt sich auf die gesamte Webseite aus.
+
+Einstellungen
+-------------
+Die zentrale Konfigurationsdatei ist `system/config/config.ini`. Hier ist ein Beispiel:
+
+    Sitename: Anna Svensson Design
+    Author: Anna Svensson
+    Language: de
+    Theme: flatsite
+
+Dort kann man die Standardeinstellungen festlegen. Die individuellen Einstellungen lassen sich oben auf jeder Seite festlegen. Bei einer neuen Installation sollte man `Sitename`, `Author` und `Language` anpassen.
+
+Falls Probleme auftreten wird eine Fehlerseite angezeigt. Wenn der Webbrowser eine Datei anfragt die der Webserver nicht finden kann wird "File not found" angezeigt. Die Datei `system/config/page-error-404.txt` legt fest wie eine fehlende Datei aussieht.
+
+Erweiterungen
+-------------
+Yellow konzentriert sich auf's Wesentliche, auf Menschen und Werkzeuge die zusammenarbeiten. Man bekommt die wichtigsten Sachen um Webseiten zu erstellen und kann Schritt für Schritt mehr hinzufügen. Es gibt [Plugins](/plugins/) und [Themes](/themes/) zum Herunterladen.
+
+[Weiter: Webseiten erstellen →](how-to-make-a-website-de)

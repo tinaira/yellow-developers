@@ -1,0 +1,8 @@
+---
+Title: Vimeo plugin
+TitlePreview: Vimeo 
+---
+Embed Vimeo videos.
+[Download plugin](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/vimeo).
+
+[vimeo 13387502]

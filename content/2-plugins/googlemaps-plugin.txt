@@ -1,0 +1,8 @@
+---
+Title: Googlemaps plugin
+TitlePreview: Googlemaps 
+---
+Embed Gooogle maps.
+[Download plugin](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/googlemaps).
+
+[googlemaps Stockholm]

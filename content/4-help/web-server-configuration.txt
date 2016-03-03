@@ -1,0 +1,114 @@
+---
+Title: Web server configuration
+Sidebar: sidebar
+Language: en
+---
+Here's how to set up different [web servers](http://news.netcraft.com/archives/category/web-server-survey/).
+
+## Apache
+
+The `.htaccess` configuration file for the [Apache](http://httpd.apache.org) web server:
+
+```apache
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+DirectoryIndex index.html yellow.php
+RewriteRule ^(cache|content|system)/ error [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ yellow.php [L]
+</IfModule>
+```
+
+On a shared web server add `RewriteBase` to your configuration file:
+
+```apache
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteBase /~userid/
+DirectoryIndex index.html yellow.php
+RewriteRule ^(cache|content|system)/ error [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ yellow.php [L]
+</IfModule>
+```
+
+On your own web server enable the rewrite module. You also need to set `AllowOverride All` for the directory containing Yellow. Once the rewrite module is configured your website should work. Contact your web hosting provider if you have any trouble doing this.
+
+## Nginx
+
+The `nginx.conf` configuration file for the [Nginx](http://nginx.org/) web server:
+
+```nginx
+server {
+    listen 80;
+    server_name website.com;
+    root /var/www/website/;
+    index index.html yellow.php;
+
+    location /cache {
+        rewrite ^(.*)$ /error break;
+    }
+
+    location /content {
+        rewrite ^(.*)$ /error break;
+    }
+
+    location /system {
+        rewrite ^(.*)$ /error break;
+    }
+
+    location / {
+        if (!-e $request_filename) {
+            rewrite ^/(.*)$ /yellow.php last;
+            break;
+        }
+    }
+
+    location ~ \.php$ {
+        fastcgi_split_path_info ^(.+\.php)(/.+)$;
+        fastcgi_pass 127.0.0.1:9000;
+        fastcgi_index yellow.php;
+        include fastcgi_params;
+    }
+}
+```
+
+## Static website
+
+Yellow is a flat-file CMS and a static site generator. As a static site generator, it offers a build command that you can run from within a folder containing the Yellow installation and it then outputs a completely static website.
+
+You can create files from the [command line](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/commandline). Open the file `system/config/config.ini` and configure `ServerScheme`, `ServerName`, `ServerBase` and `ServerTime`. To see the current [server settings](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/core#example) add a `[yellow server]` shortcut to a page.
+
+1. Open a terminal window.
+2. Go to your Yellow installation, where the `yellow.php` is.
+3. Type the following line: `php yellow.php build /var/www/website`
+
+This will build a completely static website in folder `/var/www/website`. A static website doesn't need a Yellow installation anymore. Most websites, blogs and wikis can be made this way. Upload the folder to your web hosting and build a new version when needed.
+
+As an alternative to a static website you can add individual web pages to a cache. Here's an example: `php yellow.php build cache /blog/blog-example`. To clean the cache type the following line: `php yellow.php clean`.
+
+## Custom 404 page
+
+When a web browser requests a file that the web server cannot find your website will show a “File not found”  page. The file `system/config/page-error-404.txt` defines how a missing file looks like. Here's an example:
+
+~~~~
+---
+Title: File not found
+---
+The requested file was not found. Oh no...
+~~~~
+
+If you use Yellow as a flat-file CMS there's nothing more to configure. If you use Yellow as a static site generator there's one additional step. Configure your web server to display your custom error page instead of its default 404 page. 
+
+For [Apache](http://httpd.apache.org) add the following to your configuration file:
+
+    ErrorDocument 404 /404.html
+
+For [Nginx](http://nginx.org/) add the following to your configuration file:
+
+    error_page 404 /404.html;
+
+[Next: Language configuration →](language-configuration)

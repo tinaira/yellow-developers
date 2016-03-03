@@ -1,7 +1,0 @@
----
-Title: Gallery example
-Tag: Example
----
-You can show image galleries.
-
-[gallery photo.*jpg - 20%]

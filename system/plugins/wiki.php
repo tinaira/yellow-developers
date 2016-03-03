@@ -5,7 +5,7 @@
 // Wiki plugin
 class YellowWiki
 {
-	const Version = "0.6.2";
+	const Version = "0.6.3";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -14,6 +14,16 @@ class YellowWiki
 		$this->yellow = $yellow;
 		$this->yellow->config->setDefault("wikiLocation", "/wiki/");
 		$this->yellow->config->setDefault("wikiPaginationLimit", "30");
+	}
+
+	// Handle page meta data parsing
+	function onParseMeta($page)
+	{
+		$wikiLocationLength = strlenu($this->yellow->config->get("wikiLocation"));
+		if(substru($page->location, 0, $wikiLocationLength) == $this->yellow->config->get("wikiLocation"))
+		{
+			if($page->get("template") == $this->yellow->config->get("template")) $page->set("template", "wiki");
+		}
 	}
 	
 	// Handle page content parsing of custom block

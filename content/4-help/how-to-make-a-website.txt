@@ -1,0 +1,90 @@
+---
+Title: How to make a website
+Sidebar: sidebar
+Language: en
+---
+Learn how to make a website with Yellow. 
+
+## Install website
+
+[Download and install Yellow](https://github.com/datenstrom/yellow/).  
+
+Your website is immediately available. The installation of Yellow comes with two pages, 'Home' and 'About'. They are just an example to get you started, change them as you like. You can create your website by adding more files and folders.
+
+The main configuration for your website is file `system/config/config.ini`. You can define the default settings of your website here. For a new installation you should set `Sitename`, `Author` and `Language`. There are [plugins](/plugins/) and [themes](/themes/) you can download.
+
+## Writing web pages
+
+Have a look inside your `content` folder, here are all your web pages. Open the file `content/1-home/page.txt`. You'll see settings and text of the page. You can change `Title` and other [settings](yellow-api#meta-data) at the top of a page. Here's an example:
+
+```
+---
+Title: Home
+---
+Your website works! 
+
+You can now [edit this page] or use your text editor. 
+```
+
+To create a new page, add a new file to the home folder. Set the `Title` at the top of a page. To add something to the navigation, create a new `content` folder with a numerical prefix. The prefix will be used to sort the navigation. You can create pages in any folder. Here's another example:
+
+```
+---
+Title: Yellow is for people who make websites
+---
+You can [edit this page]. The documentation gives you more information 
+about how to create small web pages, blogs and wikis.
+```
+
+Now let's add an image with the [image plugin](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/image):
+
+```
+---
+Title: Yellow is for people who make websites
+---
+[image yellow.jpg]
+
+You can [edit this page]. The documentation gives you more information 
+about how to create small web pages, blogs and wikis.
+```
+
+Let's show a different title in the navigation:
+
+```
+---
+Title: Yellow is for people who make websites
+TitleNavigation: Home
+---
+[image yellow.jpg]
+
+You can [edit this page]. The documentation gives you more information 
+about how to create small web pages, blogs and wikis.
+```
+
+You can add more [settings](yellow-api#meta-data) at the top of a page.
+
+## Creating a sidebar
+
+To create a sidebar add the file `sidebar.txt` to a content folder. The sidebar 
+is automatically shown on all pages in the same folder. Here's an example sidebar:
+
+```
+---
+Title: Sidebar
+Status: hidden
+---
+Links
+
+* [Twitter](https://twitter.com/datenstromse)
+* [GitHub](https://github.com/datenstrom)
+```
+
+## Advanced features
+
+* [How to add a contact page to your website](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/contact)
+* [How to add a sitemap to your website](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/sitemap)
+* [How to add a feed to your website](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/feed)
+* [How to add a search to your website](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/search)
+* [How to make a static website](web-server-configuration#static-website)
+
+[Next: How to make a blog →](how-to-make-a-blog)

@@ -1,0 +1,46 @@
+---
+Title: Support
+Sidebar: sidebar
+Language: en
+---
+Connect with other Yellow users and find professional help from the community.
+
+## How to get support
+
+* [Discus problems and suggestions](https://github.com/datenstrom/yellow/issues)
+* [Chat with the developers](https://gitter.im/datenstrom/yellow)
+* [Contact a human](http://datenstrom.se/contact/)
+
+## Where to find us
+
+* [GitHub @datenstrom](https://github.com/datenstrom)
+* [Gitter @datenstrom](https://gitter.im/datenstrom/yellow)
+* [Twitter @datenstromse](https://twitter.com/datenstromse)
+
+## How to contribute
+
+* [Create plugins](https://github.com/datenstrom/yellow-extensions/tree/master/plugins)
+* [Create themes](https://github.com/datenstrom/yellow-extensions/tree/master/themes)
+* [Translate Yellow](https://github.com/datenstrom/yellow-extensions/tree/master/languages)
+
+## Thank you
+
+Yellow is free and open source, made by the people who use Yellow. At the heart of open source is the idea that by sharing code, we can make better software together. Contributions and feedback are very welcome. [Join us](https://github.com/datenstrom/).
+
+* Adam Engel, translator
+* Ádám Tuba, translator
+* Alexander Schäferdiek, developer
+* Andreas Dielacher, developer
+* Сергей Ворон, translator
+* David Garcia, translator
+* David Fehrmann, core
+* Diogo Costa, translator
+* Gwan-Sik Eom, translator
+* Hyson Lee, translator
+* Jef Lippiatt, developer
+* Jimmy Ofisia, translator
+* Juh Nibreh, core
+* Luca Lischetti, translator
+* Mark Seuffert, core
+* Robin Vannieuwenhuijse, translator
+* Ufo Vyhuleny, translator

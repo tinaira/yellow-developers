@@ -1,6 +1,0 @@
----
-Title: Themes
----
-Great technology is useful in function and aesthetic.
-
-[preview /themes/ fourpages 25%]

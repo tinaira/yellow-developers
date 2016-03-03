@@ -1,0 +1,90 @@
+---
+Title: Yellow templates
+Sidebar: sidebar
+Language: en
+---
+Customise the functionality of your website.
+
+Templates
+---------
+Templates define the functionality of your website. Let's see how templates are made in Yellow. There's a default template defined in file `system/config/config.ini`. A different template can be defined in the [settings](yellow-api#meta-data) at the top of each page, for example `Template: default`.
+
+Here's an example template file `system/themes/templates/default.html`:
+
+    <?php $yellow->snippet("header") ?>
+    <?php $yellow->snippet("content-sidebar") ?>
+    <?php $yellow->snippet("content-main") ?>
+    <?php $yellow->snippet("footer") ?>
+
+Snippets are the building blocks of your website. They are small pieces of [PHP](https://en.wikipedia.org/wiki/PHP) code, written with some help of the [Yellow API](yellow-api). You can put everything into one template, but it's often more practical to split things up into multiple files and reuse them. 
+
+Here's an example snippet file `system/themes/snippets/content-main.php`:
+
+    <div class="content main">
+    <h1><?php echo $yellow->page->getHtml("titleContent") ?></h1>
+    <?php echo $yellow->page->getContent() ?>
+    </div>
+
+Custom template
+---------------
+To use a custom template set the `Template` setting at the top of a page. You can also create a template with the name of a content folder and it will be automatically used. This allows you to put your own code into Yellow and generate any [HTML](http://en.wikipedia.org/wiki/HTML) code you want. 
+
+Here's an example template file `system/themes/templates/home.html`:
+
+    <?php $yellow->snippet("header") ?>
+    <?php $yellow->snippet("content-sidebar") ?>
+    <?php $yellow->snippet("content-home") ?>
+    <?php $yellow->snippet("footer") ?>
+
+Here's an example snippet file `system/themes/snippets/content-home.php`:
+
+    <div class="content main">
+    <h1><?php echo $yellow->page->getHtml("titleContent") ?></h1>
+    <?php echo $yellow->page->getContent() ?>
+    <?php /* Add more PHP code here */ ?>
+    </div>
+
+Custom navigation
+-----------------
+To use a custom navigation open file `system/config/config.ini` and change the `Navigation` setting. A different navigation can be defined in the [settings](yellow-api#meta-data) at the top of each page, for example `Navigation: navigation`. You can also create your own navigation snippet.
+
+The following navigations are available:
+
+`Navigation: navigation` shows navigation with top level pages  
+`Navigation: navigation-tree` shows navigation with dropdown menu   
+`Navigation: navigation-multilanguage`  shows navigation with [language selection](language-configuration#multi-language-mode)   
+`Navigation: navigation-search`  shows search bar from the [search plugin](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/search)  
+`Navigation: navigation-sidebar` shows navigation in the sidebar  
+
+Here's an example snippet file `system/themes/snippets/navigation.php`:
+
+    <?php $pages = $yellow->pages->top() ?>
+    <?php $yellow->page->setLastModified($pages->getModified()) ?>
+    <div class="navigation">
+    <ul>
+    <?php foreach($pages as $page): ?>
+    <li><a<?php echo $page->isActive() ? " class=\"active\"" : "" ?> href="<?php echo $page->getLocation() ?>"><?php echo $page->getHtml("titleNavigation") ?></a></li>
+    <?php endforeach ?>
+    <?php /* Add more PHP code here */ ?>
+    </ul>
+    </div>
+    <div class="navigation-banner"></div>
+
+Custom sidebar
+--------------
+To use a custom sidebar add the file `sidebar.txt` to a content folder. The sidebar is automatically shown on all pages in the same folder. If you want a page with a different sidebar, set the `Sidebar` setting at the top of a page. 
+
+Here's an example sidebar file `content/1-home/sidebar.txt`:
+
+```
+---
+Title: Sidebar
+Status: hidden
+---
+Links
+
+* [Twitter](https://twitter.com/datenstromse)
+* [GitHub](https://github.com/datenstrom)
+```
+
+[Next: Yellow themes →](yellow-themes)

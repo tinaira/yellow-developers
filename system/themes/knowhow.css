@@ -1,4 +1,4 @@
-/* Knowhow theme 0.6.2 */
+/* Knowhow theme 0.6.3 */
 /* Designer: Mark Mayberg */
 
 html, body, div, form, pre, span, tr, th, td { margin:0; padding:0; border:0; vertical-align:baseline; }
@@ -37,7 +37,7 @@ a, img { border:none; text-decoration:none; }
 .content img { max-width:100%; height:auto; }
 .content form { margin:1em 0; }
 .content table { border-spacing:0; border-collapse:collapse; }
-.content .flexible { position:relative; padding-bottom:56.25%; padding-top:30px; }
+.content .flexible { position:relative; padding-top:0; padding-bottom:56.25%; }
 .content .flexible iframe { position:absolute; top:0; left:0; width:100%; height:100%; }
 .content .toc { margin:0; padding:0; list-style:none; }
 .content .pagination { margin:1em 0; }
@@ -137,7 +137,7 @@ a, img { border:none; text-decoration:none; }
 	.sitename h1, .sitename, .navigation, .page { margin:0; padding:0; border:0; }
 	.sitename, .navigation, .navigation-tree { float:none; }
 	.sitename-logo { width:24px; height:24px; }
-	.navigation-search { padding-top: 0.5em; }
+	.navigation-search { padding-top:0.5em; }
 	.with-sidebar .main { margin-right:0em; }
 	.with-sidebar .sidebar { display:none; }	
 }

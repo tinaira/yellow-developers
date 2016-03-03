@@ -1,7 +1,8 @@
 ---
-Title: Tests
+Title: Yellow tests
+TitleNavigation: Tests
 ---
-For developers and friends.
+A collection of tests for developers.
 
 * [file-name-unicode-äö](file-name-unicode-äö)
 * [file-name-whitespace](file-name-whitespace)

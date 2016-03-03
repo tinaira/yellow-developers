@@ -1,0 +1,29 @@
+---
+Title: Changing settings
+Sidebar: sidebar
+Language: en
+---
+All settings are located in the `system` folder. You can adjust your website here.
+
+[image screenshot-system.png Screenshot]
+
+The `config` folder contains configuration files. The `plugins` folder contains the Yellow software. The `themes` folder is for the visual design of your website. Changes in these folders affect the entire website.
+
+Configuration
+-------------
+The main configuration file is `system/config/config.ini`. Here's an example:
+
+    Sitename: Anna Svensson Design
+    Author: Anna Svensson
+    Language: en
+    Theme: flatsite
+
+You can define the default settings of your website here. Individual settings can be defined at the top of each page. For a new installation you should set `Sitename`, `Author` and `Language`.
+
+When something goes wrong an error page is shown. When a web browser requests a file that the web server cannot find your website will show a “File not found” page. The file `system/config/page-error-404.txt` defines how a missing file looks like.
+
+Extensions
+----------
+Yellow concentrates on the essential aspects, on people and tools that work together. You get the most important things to make websites and can add more. For example a contact page or search. There are [plugins](/plugins/) and [themes](/themes/) you can download.
+
+[Next: How to make a website →](how-to-make-a-website)

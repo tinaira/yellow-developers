@@ -1,5 +1,5 @@
 ---
-Title: Welcome to the Yellow demo
+Title: Yellow is for people who make websites
 TitleNavigation: Demo
 ---
 [image yellow.jpg]

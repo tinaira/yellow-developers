@@ -1,0 +1,30 @@
+---
+Title: How to add a user account
+Sidebar: sidebar
+Language: en
+---
+Learn how to add a user account to Yellow.
+
+## Adding user online
+
+You can create a user account online:
+
+1. Go to https://developers.datenstrom.se/tests/new-user
+2. Follow instructions to create user account.
+
+## Adding user via command line
+
+You can add a user account from the [command line](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/commandline):
+
+1. Open a terminal window.
+2. Go to your Yellow installation, where the `yellow.php` is.
+3. Type the following line: `php yellow.php user email@example.com horsebattery`  
+4. Now you can login with `email@example.com` and password `horsebattery`.
+
+All users are stored in file `system/config/user.ini`. The configuration file uses the format `email: password hash, name, language, status, home`. Most entries should be self-explaining, the password is stored as encrypted bcrypt hash, at the end is the user's home page. Users can not change pages outside their home page.
+
+## Adding user via web browser
+
+Do you want to create user accounts on your own website? Isn't it strange that you have to read this documentation. You're absolutely right. We are open for [suggestions](https://github.com/datenstrom/yellow/issues). 
+
+[Next: Web server configuration →](web-server-configuration)

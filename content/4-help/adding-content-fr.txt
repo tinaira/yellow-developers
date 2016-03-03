@@ -1,0 +1,43 @@
+---
+Title: Ajouter des pages
+Sidebar: sidebar-fr
+Language: fr
+---
+Les pages de votre site se trouvent dans le dossier `content`. Vous pouvez mettre à jour votre site web à partir de ce dossier.
+
+[image screenshot-content.png Screenshot]
+
+L'[installation de Yellow](https://github.com/datenstrom/yellow) propose deux pages par défaut. Elles sont juste un exemple pour commencer, tout changer comme vous le souhaitez. Le contenu de tout les dossiers présents dans `content` est accessible sur votre site. Chaque dossier dispose d'un fichier appelé `page.txt` ou 'nom-du-fichier.txt`. Vous pouvez y ajouter d'autres fichiers texte. Par principe, ce que vous voyez dans votre gestionnaire de fichiers représente le site web que vous aurez.
+
+Fichiers et dossiers
+--------------------
+La navigation est automatiquement créée à partir de vos dossiers présents dans le dossier `content`. Seuls les dossiers avec un préfixe sont présentés dans la navigation. Les dossiers avec un préfixe sont pour les pages visibles, les dossiers sans préfixes sont pour les pages invisibles. La différence est que seules les pages visibles apparaissent dans la navigation et dans la recherche. Tous les fichiers et les dossiers peuvent avoir un préfixe:
+
+1. Avec un préfixe numérique, p. ex. `1-home` `2-about`
+2. Avec un préfixe de la date, p. ex. `2013-04-07-blog-example.txt`
+3. L'absence de préfixe pour ne pas trier, p. ex. `wiki-page.txt`
+
+Préfixe et suffixe sont retirés de l'url afin de rendre la navigation meilleure. Par exemple le dossier `content/2-about/` est accessible à l'adresse `http://website/about/`. Le fichier `content/2-about/contact.txt` devient quand à lui `http://website/about/contact`. 
+
+Fichiers texte
+--------------
+Regardons de plus près les fichiers texte. Ouvrez le fichier `content/1-home/page.txt` dans votre éditeur de texte préféré. Vous y verrez la configuration et le texte pour la page. Vous pouvez modifier le titre `Title` et ajouter d'autres [paramètres](yellow-api#meta-data) en haut de la page. Voici un exemple:
+
+    ---
+    Title: Accueil
+    ---
+    Votre site web fonctionne!
+    
+    Vous pouvez [edit - modifier cette page] ou utilisez un éditeur de texte.
+
+Vous pouvez écrire vos pages avec [Markdown](http://fr.wikipedia.org/wiki/Markdown) ou en HTML. Markdown est un moyen pratique pour éditer des pages Web. En gros, il suffit d'écrire du texte comme si vous écriviez une adresse e-mail et il se transforme en une page web. Voici quelques exemples de syntaxe Markdown:
+
+    Normal *italique* **gras** `code`
+
+Créer une liste:
+
+    * point une
+    * point deux
+    * point trois
+
+[Suivant: Ajouter des fichiers →](adding-media-fr)

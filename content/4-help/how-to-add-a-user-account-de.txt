@@ -1,0 +1,30 @@
+---
+Title: Benutzerkonto hinzufügen
+Sidebar: sidebar-de
+Language: de
+---
+Lerne wie man wie man ein Benutzerkonto in Yellow erstellt.
+
+## Benutzer online erstellen
+
+Du kannst ein Benutzerkonto online erstellen:
+
+1. Gehe zu https://developers.datenstrom.se/tests/new-user
+2. Folge der Anleitung um ein Benutzerkonto zu erstellen.
+
+## Benutzer in der Befehlszeile erstellen
+
+Du kannst ein Benutzerkonto in der [Befehlszeile](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/commandline) erstellen:
+
+1. Öffne ein Terminal-Fenster.
+2. Gehe zu deiner Yellow-Installation, dort wo sich die `yellow.php` befindet.
+3. Gib die folgende Zeile ein: `php yellow.php user email@example.com horsebattery`  
+4. Jetzt kannst du dich einloggen mit `email@example.com` und Passwort `horsebattery`.
+
+Alle Benutzer sind gespeichert in der Datei `system/config/user.ini`. Die Konfigurationsdatei benutzt das Format `email: password hash, name, language, status, home`. Die meisten Einträge sollten sich von selbst erklären, das Passwort ist ein verschlüsselter Bcrypt-Hash, am Ende befindet sich die Startseite. Benutzer können nicht ausserhalb ihrer Startseite editieren.
+
+## Benutzer im Webbrowser erstellen
+
+Möchtest du Benutzerkontos auf deiner eigenen Webseite verwalten? Merkwürdig dass man diese Dokumentation lesen muss? Du hast vollkommen Recht. Wir sind offen für [Vorschläge](https://github.com/datenstrom/yellow/issues).
+
+[Weiter: Webservereinstellungen →](web-server-configuration-de)

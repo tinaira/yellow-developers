@@ -1,0 +1,28 @@
+---
+Title: Sicherheitseinstellungen
+Sidebar: sidebar-de
+Language: de
+---
+>> [Todo: You can help us and translate this page](https://github.com/datenstrom/yellow-developers)
+
+Here's how to set up a website with better security.
+
+## Secure server
+
+Check if your web server supports [HTTPS](https://en.wikipedia.org/wiki/HTTPS) and the Internet connection will be encrypted. It's best if your website is only available via HTTPS. This protects your user account from being stolen, but it's not supported by every web hosting provider.
+
+You need a web server with SSL/TLS and valid certificate.
+
+## User restrictions
+
+If you have more than one person editing a website, restrict [user accounts](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/webinterface) and only parts of the website can be changed. This protects your website from being changed in a web browser, but it doesn't prevent changes in the file system.  
+
+You can [test restrictions](http://developers.datenstrom.se), log in with `guest@guest.com` + `guest`.
+
+## Safe mode
+
+If you have more than one person editing a website, enable safe mode and only [Markdown](http://en.wikipedia.org/wiki/Markdown) is possible for text formatting. This protects your website from unwanted content, but it also disables  [HTML](http://en.wikipedia.org/wiki/HTML) and [JavaScript](http://en.wikipedia.org/wiki/JavaScript) in content files.
+
+Open file `system/config/config.ini` and change `ParserSafeMode: 1`.
+
+[Next: Yellow templates →](yellow-templates-de)

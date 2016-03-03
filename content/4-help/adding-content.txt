@@ -1,0 +1,43 @@
+---
+Title: Adding content 
+Sidebar: sidebar
+Language: en
+---
+All content is located in the `content` folder. You can update your website here.
+
+[image screenshot-content.png Screenshot]
+
+The [installation of Yellow](https://github.com/datenstrom/yellow) comes with two pages. This is just an example to get you started, change everything as you like. All `content` folders are available on your website. Every folder has a file called `page.txt` or with the name of the folder. You can also add more text files. Basically, what you see in the file manager is the website you get.
+
+Files and folders
+-----------------
+The navigation is automatically created from your `content` folders. Only folders with a prefix are shown in the navigation. Folders with prefix are for visible pages, folders without prefix are for invisible pages. The difference is that only the visible pages show up in navigation and search. All files and folders can have a prefix:
+
+1. Folders can have a numerical prefix, e.g. `1-home` `2-about`
+2. Files can have a date prefix for sorting, e.g. `2013-04-07-blog-example.txt`
+3. No prefix means there is no special order, e.g. `wiki-page.txt`
+
+Prefix and suffix are removed from the location, so that it looks better. For example the folder `content/2-about/` is available on your website as `http://website/about/`. The file `content/2-about/contact.txt` becomes `http://website/about/contact`. 
+
+Text files
+----------
+Let's have a closer look at text files. Open the file `content/1-home/page.txt` in your favorite text editor. You'll see settings and text of the page. You can change `Title` and other [settings](yellow-api#meta-data) at the top of a page. Here's an example:
+
+    ---
+    Title: Home
+    ---
+    Your website works!
+    
+    You can now [edit this page] or use your text editor.
+
+You can write pages in [Markdown](http://en.wikipedia.org/wiki/Markdown) and HTML. Markdown is a practical way to edit web pages. For the most part, write text like an email and it becomes a web page. Here's an example how to format text:
+
+    Normal *italic* **bold** `code`
+
+Making a list:
+
+    * item one
+    * item two
+    * item three
+
+[Next: Adding media →](adding-media)
