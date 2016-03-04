@@ -25,6 +25,6 @@ All users are stored in file `system/config/user.ini`. The configuration file us
 
 ## Adding user via web browser
 
-Do you want to create user accounts on your own website? Isn't it strange that you have to read this documentation. You're absolutely right. We are open for [suggestions](https://github.com/datenstrom/yellow/issues). 
+Do you want to create user accounts on your own website? Isn't it strange that you have to read this instructions. You're absolutely right. We are open for [suggestions](https://github.com/datenstrom/yellow/issues). 
 
 [Next: Web server configuration →](web-server-configuration)

@@ -5,4 +5,4 @@ TitlePreview: Slideshare
 Embed Slideshare presentations.
 [Download plugin](https://github.com/datenstrom/yellow-plugins/tree/master/slideshare).
 
-[slideshare 16220047]
+[slideshare 37321279]

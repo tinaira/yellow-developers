@@ -352,34 +352,32 @@ YellowCore::sendPage Content-Type: text/html; charset=UTF-8
 YellowCore::sendPage Content-Modified: Fri, 30 Jan 2015 09:30:12 GMT
 YellowCore::sendPage Last-Modified: Mon, 02 Feb 2015 13:19:03 GMT
 YellowCore::sendPage theme:system/themes/flatsite.css template:blogpages parser:markdown
-YellowCore::processRequest file:content/2-blog/blog.txt handler:core
-YellowCore::request status:200 location:/blog/
+YellowCore::processRequest file:content/2-plugins/1-blog-plugin/page.txt handler:core
+YellowCore::request status:200 location:/plugins/blog-plugin/
 YellowCore::request time:19 ms
 ```
 
 Get file system information by increasing debug level to `<?php define("DEBUG", 2);`
 ```
 YellowConfig::load file:system/config/config.ini
-YellowText::load file:system/config/language-en.ini
+YellowText::load file:system/plugins/language-de.txt
+YellowText::load file:system/plugins/language-en.txt
+YellowText::load file:system/plugins/language-fr.txt
 YellowUsers::load file:system/config/user.ini
-YellowLookup::findFileFromLocation /blog/ -> content/2-blog/blog.txt
-YellowPages::scanLocation location:/blog/
-YellowLookup::findLocationFromFile /blog/blog-example <- content/2-blog/2013-04-07-blog-example.txt
-YellowLookup::findLocationFromFile /blog/blog-example-2 <- content/2-blog/2013-04-22-blog-example-2.txt
-YellowLookup::findLocationFromFile /blog/blog-example-3 <- content/2-blog/2013-05-01-blog-example-3.txt
-YellowLookup::findLocationFromFile /blog/blog-example-4 <- content/2-blog/2013-05-02-blog-example-4.txt
-YellowLookup::findLocationFromFile /blog/blog-example-5 <- content/2-blog/2013-05-03-blog-example-5.txt
-YellowLookup::findLocationFromFile /blog/made-for-people <- content/2-blog/2013-05-30-made-for-people.txt
-YellowLookup::findLocationFromFile /blog/fika-is-good-for-you <- content/2-blog/2013-06-01-fika-is-good-for-you.txt
+YellowLookup::findFileFromLocation /plugins/blog-plugin/ -> content/2-plugins/1-blog-plugin/page.txt
+YellowPages::scanLocation location:/plugins/blog-plugin/
+YellowLookup::findLocationFromFile /plugins/blog-plugin/blog-example <- content/2-plugins/1-blog-plugin/2013-04-07-blog-example.txt
+YellowLookup::findLocationFromFile /plugins/blog-plugin/blog-example-2 <- content/2-plugins/1-blog-plugin/2013-04-22-blog-example-2.txt
+YellowLookup::findLocationFromFile /plugins/blog-plugin/blog-example-3 <- content/2-plugins/1-blog-plugin/2013-05-01-blog-example-3.txt
 ```
 
 Get maximum information by increasing debug level to `<?php define("DEBUG", 3);`
 ```
-Yellow 0.6.1, PHP 5.5.27, Apache/2.4.16 Darwin
+Yellow 0.6.3, PHP 5.5.30, Apache/2.4.16 Darwin
 YellowConfig::load file:system/config/config.ini
-YellowConfig::load key:sitename Yellow
-YellowConfig::load key:author Yellow
-YellowConfig::load key:language en
+YellowConfig::load sitename:Yellow developers
+YellowConfig::load author:Yellow
+YellowConfig::load language:en
 ...
 ```
 

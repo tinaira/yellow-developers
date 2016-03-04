@@ -32,7 +32,7 @@ To create a new page, add a new file to the home folder. Set the `Title` at the 
 ---
 Title: Yellow is for people who make websites
 ---
-You can [edit this page]. The documentation gives you more information 
+You can [edit this page]. The help gives you more information 
 about how to create small web pages, blogs and wikis.
 ```
 
@@ -44,7 +44,7 @@ Title: Yellow is for people who make websites
 ---
 [image yellow.jpg]
 
-You can [edit this page]. The documentation gives you more information 
+You can [edit this page]. The help gives you more information 
 about how to create small web pages, blogs and wikis.
 ```
 
@@ -57,7 +57,7 @@ TitleNavigation: Home
 ---
 [image yellow.jpg]
 
-You can [edit this page]. The documentation gives you more information 
+You can [edit this page]. The help gives you more information 
 about how to create small web pages, blogs and wikis.
 ```
 

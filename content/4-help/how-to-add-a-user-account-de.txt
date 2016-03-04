@@ -25,6 +25,6 @@ Alle Benutzer sind gespeichert in der Datei `system/config/user.ini`. Die Konfig
 
 ## Benutzer im Webbrowser erstellen
 
-Möchtest du Benutzerkontos auf deiner eigenen Webseite verwalten? Merkwürdig dass man diese Dokumentation lesen muss? Du hast vollkommen Recht. Wir sind offen für [Vorschläge](https://github.com/datenstrom/yellow/issues).
+Möchtest du Benutzerkontos auf deiner eigenen Webseite verwalten? Merkwürdig dass man eine Anleitung lesen muss? Du hast vollkommen Recht. Wir sind offen für [Vorschläge](https://github.com/datenstrom/yellow/issues).
 
 [Weiter: Webservereinstellungen →](web-server-configuration-de)
