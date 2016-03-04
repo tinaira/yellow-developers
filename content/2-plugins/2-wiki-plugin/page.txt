@@ -4,7 +4,7 @@ TitlePreview: Wiki
 Template: wikipages
 ---
 Wiki for your website. 
-[Download plugin](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/wiki).
+[Download plugin](https://github.com/datenstrom/yellow-plugins/tree/master/wiki).
 
 Create small web pages, blogs and wikis. Yellow is for people who make websites. The focus is on people and that it's useful for you. No database, no admin panel, no complex framework. Most people don't need all of this. Let's concentrate on the essential aspects, on people and tools that work together. If you are interested in simple things, find out more.
 

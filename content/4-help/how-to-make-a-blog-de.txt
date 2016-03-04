@@ -9,7 +9,7 @@ Learn how to make a blog with Yellow.
 
 ## Install blog
 
-[Download and install the Yellow blog plugin](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/blog).
+[Download and install the Yellow blog plugin](https://github.com/datenstrom/yellow-plugins/tree/master/blog).
 
 Your blog is immediately available as `http://website/blog/` or `http://website/`, depending on how you configure your `content` folder. If you want the blog on your home page, rename the blog folder to '1-blog' and delete '1-home'.
 
@@ -47,7 +47,7 @@ an important part of life in Sweden that it is both a verb and a noun.
 Do you fika?
 ```
 
-Now let's add a video with the [Youtube plugin](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/youtube):
+Now let's add a video with the [Youtube plugin](https://github.com/datenstrom/yellow-plugins/tree/master/youtube):
 
 ```
 ---
@@ -99,7 +99,7 @@ Links
 * [GitHub](https://github.com/datenstrom)
 ```
 
-You can use [shortcuts](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/blog#how-to-configure-a-blog) to show information about the blog. Here's another example:
+You can use [shortcuts](https://github.com/datenstrom/yellow-plugins/tree/master/blog#how-to-configure-a-blog) to show information about the blog. Here's another example:
 
 ```
 ---
@@ -117,10 +117,10 @@ Archive
 
 ## Advanced features
 
-* [How to add comments to your blog](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/disqus)
-* [How to add a contact page to your blog](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/contact)
-* [How to add a feed to your blog](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/feed)
-* [How to make a draft page](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/draft)
+* [How to add comments to your blog](https://github.com/datenstrom/yellow-plugins/tree/master/disqus)
+* [How to add a contact page to your blog](https://github.com/datenstrom/yellow-plugins/tree/master/contact)
+* [How to add a feed to your blog](https://github.com/datenstrom/yellow-plugins/tree/master/feed)
+* [How to make a draft page](https://github.com/datenstrom/yellow-plugins/tree/master/draft)
 * [How to make a static blog](web-server-configuration-de#static-website)
 
 [Next: How to make a wiki →](how-to-make-a-wiki-de)

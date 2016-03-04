@@ -3,7 +3,7 @@ Title: Image plugin
 TitlePreview: Image 
 ---
 Resizable images and thumbnails.
-[Download plugin](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/image).
+[Download plugin](https://github.com/datenstrom/yellow-plugins/tree/master/image).
 
 [image yellow.jpg Example - 60%]
 [image yellow.jpg Example - 30%]

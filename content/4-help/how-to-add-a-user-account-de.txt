@@ -14,7 +14,7 @@ Du kannst ein Benutzerkonto online erstellen:
 
 ## Benutzer in der Befehlszeile erstellen
 
-Du kannst ein Benutzerkonto in der [Befehlszeile](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/commandline) erstellen:
+Du kannst ein Benutzerkonto in der [Befehlszeile](https://github.com/datenstrom/yellow-plugins/tree/master/commandline) erstellen:
 
 1. Öffne ein Terminal-Fenster.
 2. Gehe zu deiner Yellow-Installation, dort wo sich die `yellow.php` befindet.

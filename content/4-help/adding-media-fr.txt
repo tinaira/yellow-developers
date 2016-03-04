@@ -16,7 +16,7 @@ Voici comment afficher des images. Ouvrez le fichier  `content/1-home/page.txt` 
 `![image](icon.png)` affiche `http://website/media/images/icon.png`  
 `![image](picture.jpg)` affiche `http://website/media/images/picture.jpg`  
 
-Le [plugin image](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/image) permet de simplifier l'intégration des images, mais aussi de redimensionner automatiquement ses images et de créer des miniatures.
+Le [plugin image](https://github.com/datenstrom/yellow-plugins/tree/master/image) permet de simplifier l'intégration des images, mais aussi de redimensionner automatiquement ses images et de créer des miniatures.
 
 `[image icon.png]` affiche `http://website/media/images/icon.png`  
 `[image picture.jpg]` affiche `http://website/media/images/picture.jpg`  
@@ -29,7 +29,7 @@ Images de différentes tailles:
 
 Vidéos
 ------
-Vous pouvez utiliser le [plugin Youtube](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/youtube) et le [plugin Vimeo](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/vimeo) pour intégrer facilement des vidéos. Il suffit de noter le numéro à la fin de l'url de la vidéo.
+Vous pouvez utiliser le [plugin Youtube](https://github.com/datenstrom/yellow-plugins/tree/master/youtube) et le [plugin Vimeo](https://github.com/datenstrom/yellow-plugins/tree/master/vimeo) pour intégrer facilement des vidéos. Il suffit de noter le numéro à la fin de l'url de la vidéo.
 
 `[youtube fhs55HEl-Gc]` affiche `http://www.youtube.com/watch?v=fhs55HEl-Gc`  
 `[vimeo 13387502]` affiche `http://vimeo.com/13387502`  

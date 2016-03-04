@@ -16,7 +16,7 @@ Here's how to use images on a page. Open the file `content/1-home/page.txt` in y
 `![image](icon.png)` shows `http://website/media/images/icon.png`  
 `![image](picture.jpg)` shows  `http://website/media/images/picture.jpg`  
 
-You can also use the [image plugin](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/image) to resize images and create thumbnails.
+You can also use the [image plugin](https://github.com/datenstrom/yellow-plugins/tree/master/image) to resize images and create thumbnails.
 
 `[image icon.png]` shows `http://website/media/images/icon.png`  
 `[image picture.jpg]` shows `http://website/media/images/picture.jpg`  
@@ -29,7 +29,7 @@ Images in different sizes:
 
 Videos
 ------
-You can use the [Youtube plugin](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/youtube) and [Vimeo plugin](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/vimeo) to embed videos.
+You can use the [Youtube plugin](https://github.com/datenstrom/yellow-plugins/tree/master/youtube) and [Vimeo plugin](https://github.com/datenstrom/yellow-plugins/tree/master/vimeo) to embed videos.
 
 `[youtube fhs55HEl-Gc]` shows `http://www.youtube.com/watch?v=fhs55HEl-Gc`  
 `[vimeo 13387502]` shows `http://vimeo.com/13387502`  

@@ -80,7 +80,7 @@ server {
 
 Yellow is a flat-file CMS and a static site generator. As a static site generator, it offers a build command that you can run from within a folder containing the Yellow installation and it then outputs a completely static website.
 
-You can create files from the [command line](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/commandline). Open the file `system/config/config.ini` and configure `ServerScheme`, `ServerName`, `ServerBase` and `ServerTime`. To see the current [server settings](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/core#example) add a `[yellow server]` shortcut to a page.
+You can create files from the [command line](https://github.com/datenstrom/yellow-plugins/tree/master/commandline). Open the file `system/config/config.ini` and configure `ServerScheme`, `ServerName`, `ServerBase` and `ServerTime`. To see the current [server settings](https://github.com/datenstrom/yellow-plugins/tree/master/core#example) add a `[yellow server]` shortcut to a page.
 
 1. Open a terminal window.
 2. Go to your Yellow installation, where the `yellow.php` is.

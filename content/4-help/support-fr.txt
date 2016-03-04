@@ -20,9 +20,9 @@ Vous êtes au bon endroit, nous sommes là pour vous aider.
 
 ## Comment contribuer
 
-* [Créer des plugins](https://github.com/datenstrom/yellow-extensions/tree/master/plugins)
+* [Créer des plugins](https://github.com/datenstrom/yellow-plugins)
 * [Créer des thèmes](https://github.com/datenstrom/yellow-themes)
-* [Traduire Yellow](https://github.com/datenstrom/yellow-extensions/tree/master/languages)
+* [Traduire Yellow](https://github.com/datenstrom/yellow-plugins/tree/master/language)
 
 ## Remerciements
 

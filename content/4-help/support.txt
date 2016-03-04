@@ -19,9 +19,9 @@ Connect with other Yellow users and find professional help from the community.
 
 ## How to contribute
 
-* [Create plugins](https://github.com/datenstrom/yellow-extensions/tree/master/plugins)
+* [Create plugins](https://github.com/datenstrom/yellow-plugins)
 * [Create themes](https://github.com/datenstrom/yellow-themes)
-* [Translate Yellow](https://github.com/datenstrom/yellow-extensions/tree/master/languages)
+* [Translate Yellow](https://github.com/datenstrom/yellow-plugins/tree/master/language)
 
 ## Thank you
 

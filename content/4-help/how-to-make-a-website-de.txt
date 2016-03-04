@@ -38,7 +38,7 @@ You can [edit this page]. The documentation gives you more information
 about how to create small web pages, blogs and wikis.
 ```
 
-Now let's add an image with the [image plugin](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/image):
+Now let's add an image with the [image plugin](https://github.com/datenstrom/yellow-plugins/tree/master/image):
 
 ```
 ---
@@ -83,10 +83,10 @@ Links
 
 ## Advanced features
 
-* [How to add a contact page to your website](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/contact)
-* [How to add a sitemap to your website](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/sitemap)
-* [How to add a feed to your website](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/feed)
-* [How to add a search to your website](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/search)
+* [How to add a contact page to your website](https://github.com/datenstrom/yellow-plugins/tree/master/contact)
+* [How to add a sitemap to your website](https://github.com/datenstrom/yellow-plugins/tree/master/sitemap)
+* [How to add a feed to your website](https://github.com/datenstrom/yellow-plugins/tree/master/feed)
+* [How to add a search to your website](https://github.com/datenstrom/yellow-plugins/tree/master/search)
 * [How to make a static website](web-server-configuration-de#static-website)
 
 [Next: How to make a blog →](how-to-make-a-blog-de)

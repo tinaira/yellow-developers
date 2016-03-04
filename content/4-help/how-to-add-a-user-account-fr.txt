@@ -16,7 +16,7 @@ You can create a user account online:
 
 ## Adding user via command line
 
-You can add a user account from the [command line](https://github.com/datenstrom/yellow-extensions/tree/master/plugins/commandline):
+You can add a user account from the [command line](https://github.com/datenstrom/yellow-plugins/tree/master/commandline):
 
 1. Open a terminal window.
 2. Go to your Yellow installation, where the `yellow.php` is.

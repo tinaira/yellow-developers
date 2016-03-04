@@ -20,9 +20,9 @@ Tausche dich mit anderen Yellow-Benutzern aus und finde professionelle Hilfe.
 
 ## Mach mit
 
-* [Erstelle Plugins](https://github.com/datenstrom/yellow-extensions/tree/master/plugins)
+* [Erstelle Plugins](https://github.com/datenstrom/yellow-plugins)
 * [Erstelle Themes](https://github.com/datenstrom/yellow-themes)
-* [Übersetze Yellow](https://github.com/datenstrom/yellow-extensions/tree/master/languages)
+* [Übersetze Yellow](https://github.com/datenstrom/yellow-plugins/tree/master/language)
 
 ## Danke
 
