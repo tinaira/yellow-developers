@@ -26,22 +26,6 @@ Vous êtes au bon endroit, nous sommes là pour vous aider.
 
 ## Remerciements
 
-Yellow est libre et open source, créé par les gens qui utilisent Yellow. Au cœur de l'open source est l'idée ne en partageant le code, nous pouvons faire de meilleurs logiciels ensemble. Contributions et commentaires sont les bienvenus. [Rejoignez-nous](https://github.com/datenstrom/).
+Yellow est libre et open source, créé par les gens qui utilisent Yellow. Au cœur de l'open source est l'idée ne en partageant le code, nous pouvons faire de meilleurs logiciels ensemble. Contributions et commentaires sont les bienvenus.
 
-* Adam Engel, traducteur
-* Ádám Tuba, traducteur
-* Alexander Schäferdiek, développeur
-* Andreas Dielacher, développeur
-* Сергей Ворон, traducteur
-* David Garcia, traducteur
-* David Fehrmann, core
-* Diogo Costa, traducteur
-* Gwan-Sik Eom, traducteur
-* Hyson Lee, traducteur
-* Jef Lippiatt, développeur
-* Jimmy Ofisia, traducteur
-* Juh Nibreh, core
-* Luca Lischetti, traducteur
-* Mark Seuffert, core
-* Robin Vannieuwenhuijse, traducteur
-* Ufo Vyhuleny, traducteur
+Grand merci aux [core maintainers](https://github.com/datenstrom/yellow/graphs/contributors) et [tous les contributeurs](https://github.com/datenstrom/yellow-plugins/graphs/contributors).

@@ -25,22 +25,6 @@ Connect with other Yellow users and find professional help from the community.
 
 ## Thank you
 
-Yellow is free and open source, made by the people who use Yellow. At the heart of open source is the idea that by sharing code, we can make better software together. Contributions and feedback are very welcome. [Join us](https://github.com/datenstrom/).
+Yellow is free and open source, made by the people who use Yellow. At the heart of open source is the idea that by sharing code, we can make better software together. Contributions and feedback are very welcome.
 
-* Adam Engel, translator
-* Ádám Tuba, translator
-* Alexander Schäferdiek, developer
-* Andreas Dielacher, developer
-* Сергей Ворон, translator
-* David Garcia, translator
-* David Fehrmann, core
-* Diogo Costa, translator
-* Gwan-Sik Eom, translator
-* Hyson Lee, translator
-* Jef Lippiatt, developer
-* Jimmy Ofisia, translator
-* Juh Nibreh, core
-* Luca Lischetti, translator
-* Mark Seuffert, core
-* Robin Vannieuwenhuijse, translator
-* Ufo Vyhuleny, translator
+Big thanks to [core maintainers](https://github.com/datenstrom/yellow/graphs/contributors) and [all contributors](https://github.com/datenstrom/yellow-plugins/graphs/contributors).

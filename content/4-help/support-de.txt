@@ -26,22 +26,6 @@ Tausche dich mit anderen Yellow-Benutzern aus und finde professionelle Hilfe.
 
 ## Danke
 
-Yellow ist kostenlos und Open-Source, erstellt von Menschen die Yellow benutzen. Im Herzen von Open-Source ist die Idee, dass wir durch gemeinsamen Code zusammen bessere Software machen können. Mitmachen und Kommentare sind sehr willkommen. [Komm an Bord](https://github.com/datenstrom/).
+Yellow ist kostenlos und Open-Source, erstellt von Menschen die Yellow benutzen. Im Herzen von Open-Source ist die Idee, dass wir durch gemeinsamen Code zusammen bessere Software machen können. Mitmachen und Vorschläge sind sehr willkommen.
 
-* Adam Engel, Übersetzer
-* Ádám Tuba, Übersetzer
-* Alexander Schäferdiek, Entwickler
-* Andreas Dielacher, Entwickler
-* Сергей Ворон, Übersetzer
-* David Garcia, Übersetzer
-* David Fehrmann, Core
-* Diogo Costa, Übersetzer
-* Gwan-Sik Eom, Übersetzer
-* Hyson Lee, Übersetzer
-* Jef Lippiatt, Entwickler
-* Jimmy Ofisia, Übersetzer
-* Juh Nibreh, Core
-* Luca Lischetti, Übersetzer
-* Mark Seuffert, Core
-* Robin Vannieuwenhuijse, Übersetzer
-* Ufo Vyhuleny, Übersetzer
+Großen Dank an die [Core-Maintainer](https://github.com/datenstrom/yellow/graphs/contributors) und [alle Mitwirkenden](https://github.com/datenstrom/yellow-plugins/graphs/contributors).
