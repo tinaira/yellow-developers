@@ -61,7 +61,7 @@ class YellowHighlight
 					$geshi->set_language($language);
 					$outputData .= $geshi->get_stylesheet(false);
 				}
-				$output = "<style type=\"text/css\">\n$outputData</style>";
+				$output .= "<style type=\"text/css\">\n$outputData</style>\n";
 			}
 		}
 		return $output;

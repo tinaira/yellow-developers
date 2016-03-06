@@ -58,11 +58,12 @@ class YellowEmojiawesome
 				foreach($this->getLookupData() as $entry)
 				{
 					$class = $this->normaliseClass("ea-$entry[shortname]");
+					$image = $entry[image];
 					$outputData .= ".$class {\n";
-					$outputData .= "	background-image: url(\"{$cdn}svg/$entry[image].svg\");\n";
+					$outputData .= "	background-image: url(\"{$cdn}svg/$image.svg\");\n";
 					$outputData .= "}\n";
 				}
-				$output = "<style type=\"text/css\">\n$outputData</style>";
+				$output .= "<style type=\"text/css\">\n$outputData</style>\n";
 			}
 		}
 		return $output;
