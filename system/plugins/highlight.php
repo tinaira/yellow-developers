@@ -1,11 +1,11 @@
 <?php
-// Copyright (c) 2013-2015 Datenstrom, http://datenstrom.se
+// Copyright (c) 2013-2016 Datenstrom, http://datenstrom.se
 // This file may be used and distributed under the terms of the public license.
 
 // Highlight plugin
 class YellowHighlight
 {
-	const Version = "0.6.1";
+	const Version = "0.6.2";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -13,7 +13,7 @@ class YellowHighlight
 	{
 		$this->yellow = $yellow;
 		$this->yellow->config->setDefault("highlightClass", "highlight");
-		$this->yellow->config->setDefault("highlightStylesheetDefault", "0");
+		$this->yellow->config->setDefault("highlightStylesheetGenerate", "0");
 		$this->yellow->config->setDefault("highlightLineNumber", "0");
 	}
 	
@@ -48,21 +48,20 @@ class YellowHighlight
 		$output = NULL;
 		if($name == "header")
 		{
-			if(!$this->yellow->config->get("highlightStylesheetDefault"))
+			$locationStylesheet = $this->yellow->config->get("serverBase").$this->yellow->config->get("pluginLocation")."highlight.css";
+			$fileNameStylesheet = $this->yellow->config->get("pluginDir")."highlight.css";
+			if(is_file($fileNameStylesheet)) $output = "<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"$locationStylesheet\" />\n";
+			if($this->yellow->config->get("highlightStylesheetGenerate"))
 			{
-				$locationStylesheet = $this->yellow->config->get("serverBase").$this->yellow->config->get("pluginLocation")."highlight.css";
-				$fileNameStylesheet = $this->yellow->config->get("pluginDir")."highlight.css";
-				if(is_file($fileNameStylesheet)) $output = "<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"$locationStylesheet\" />\n";
-			} else {
 				$geshi = new GeSHi();
 				$geshi->set_language_path($this->yellow->config->get("pluginDir")."/highlight/");
 				foreach($geshi->get_supported_languages() as $language)
 				{
 					if($language == "geshi") continue;
 					$geshi->set_language($language);
-					$output .= $geshi->get_stylesheet(false);
+					$outputData .= $geshi->get_stylesheet(false);
 				}
-				$output = "<style type=\"text/css\">\n$output</style>";
+				$output = "<style type=\"text/css\">\n$outputData</style>";
 			}
 		}
 		return $output;

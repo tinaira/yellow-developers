@@ -5,13 +5,27 @@
 // Fontawesome plugin
 class YellowFontawesome
 {
-	const Version = "0.6.2";
+	const Version = "0.6.3";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
 	function onLoad($yellow)
 	{
 		$this->yellow = $yellow;
+	}
+	
+	// Handle page content parsing of custom block
+	function onParseContentBlock($page, $name, $text, $shortcut)
+	{
+		$output = NULL;
+		if($name=="fa" && $shortcut)
+		{
+			list($shortname, $style) = $this->yellow->toolbox->getTextArgs($text);
+			if(preg_match("/fa-(.+)/", $shortname, $matches)) $shortname = $matches[1];
+			$class = trim("fa fa-$shortname $style");
+			$output = "<i class=\"".htmlspecialchars($class)."\"></i>";
+		}
+		return $output;
 	}
 	
 	// Handle page extra HTML data
