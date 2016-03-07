@@ -4,7 +4,7 @@ Sidebar: sidebar
 Language: en
 Information: Please do not translate this file, English only
 ---
-Yellow has an API for developers. We <3 developers.
+Yellow has an API for developers. We :heart: developers.
 
 [toc]
 
