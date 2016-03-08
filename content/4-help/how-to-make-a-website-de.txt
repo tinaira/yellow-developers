@@ -87,6 +87,6 @@ Links
 * [How to add a sitemap to your website](https://github.com/datenstrom/yellow-plugins/tree/master/sitemap)
 * [How to add a feed to your website](https://github.com/datenstrom/yellow-plugins/tree/master/feed)
 * [How to add a search to your website](https://github.com/datenstrom/yellow-plugins/tree/master/search)
-* [How to make a static website](web-server-configuration-de#static-website)
+* [How to make a static website](web-server-configuration-de#statische-webseite)
 
 [Next: How to make a blog →](how-to-make-a-blog-de)

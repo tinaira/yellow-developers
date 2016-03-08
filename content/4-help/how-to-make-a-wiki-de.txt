@@ -88,6 +88,6 @@ Links
 * [How to add a sitemap to your wiki](https://github.com/datenstrom/yellow-plugins/tree/master/sitemap)
 * [How to add a contact page to your wiki](https://github.com/datenstrom/yellow-plugins/tree/master/contact)
 * [How to make a table of contents](https://github.com/datenstrom/yellow-plugins/tree/master/toc)
-* [How to make a static wiki](web-server-configuration-de#static-website)
+* [How to make a static wiki](web-server-configuration-de#statische-webseite)
 
 [Next: How to add a user account →](how-to-add-a-user-account-de)

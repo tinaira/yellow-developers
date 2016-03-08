@@ -3,13 +3,11 @@ Title: Webservereinstellungen
 Sidebar: sidebar-de
 Language: de
 ---
->> [Todo: You can help us and translate this page](https://github.com/datenstrom/yellow-developers)
-
-Here's how to set up different [web servers](http://news.netcraft.com/archives/category/web-server-survey/).
+Hier ist beschrieben wie man unterschiedliche [Webserver](http://news.netcraft.com/archives/category/web-server-survey/) konfiguriert.
 
 ## Apache
 
-The `.htaccess` configuration file for the [Apache](http://httpd.apache.org) web server:
+Die `.htaccess` Konfigurationsdatei für den [Apache](http://httpd.apache.org)-Webserver:
 
 ```apache
 <IfModule mod_rewrite.c>
@@ -22,8 +20,7 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^ yellow.php [L]
 </IfModule>
 ```
-
-On a shared web server add `RewriteBase` to your configuration file:
+Auf einem gemeinsam benutzen Webserver fügt man `RewriteBase` hinzu:
 
 ```apache
 <IfModule mod_rewrite.c>
@@ -37,11 +34,11 @@ RewriteRule ^ yellow.php [L]
 </IfModule>
 ```
 
-On your own web server enable the rewrite module. You also need to set `AllowOverride All` for the directory containing Yellow. Once the rewrite module is configured your website should work. Contact your web hosting provider if you have any trouble doing this.
+Auf seinem eigenem Webserver aktiviert man das Rewrite-Modul. Konfiguriere `AllowOverride All` für das Yellow-Verzeichnis. Sobald das Rewrite-Modul konfiguriert ist sollte deine Webseite funktionieren. Frage deinen Webhoster falls es Probleme damit gibt.  
 
 ## Nginx
 
-The `nginx.conf` configuration file for the [Nginx](http://nginx.org/) web server:
+Die `nginx.conf` Konfigurationsdatei für den [Nginx](http://nginx.org/)-Webserver:
 
 ```nginx
 server {
@@ -78,23 +75,25 @@ server {
 }
 ```
 
-## Static website
+## Statische Webseite
 
-Yellow is a flat-file CMS and a static site generator. As a static site generator, it offers a build command that you can run from within a folder containing the Yellow installation and it then outputs a completely static website.
+Yellow ist ein Flat-File-CMS und ein Static-Site-Generator. Um statische Seiten zu erstellen führt man einen Build-Befehl im Verzeichnis aus in dem sich die Yellow-Installation befindet und man bekommt dann eine komplett statische Webseite.
 
-You can create files from the [command line](https://github.com/datenstrom/yellow-plugins/tree/master/commandline). Open the file `system/config/config.ini` and configure `ServerScheme`, `ServerName`, `ServerBase` and `ServerTime`. To see the current [server settings](https://github.com/datenstrom/yellow-plugins/tree/master/core#example) add a `[yellow server]` shortcut to a page.
+Du kannst statische Seiten in der [Befehlszeile](https://github.com/datenstrom/yellow-plugins/tree/master/commandline) erstellen:
 
-1. Open a terminal window.
-2. Go to your Yellow installation, where the `yellow.php` is.
-3. Type the following line: `php yellow.php build /var/www/website`
+1. Öffne ein Terminal-Fenster.
+2. Gehe zu deiner Yellow-Installation, dort wo sich die `yellow.php` befindet.
+3. Gib die folgende Zeile ein: `php yellow.php build /var/www/website`
 
-This will build a completely static website in folder `/var/www/website`. A static website doesn't need a Yellow installation anymore. Most websites, blogs and wikis can be made this way. Upload the folder to your web hosting and build a new version when needed.
+Das erstellt eine komplett statische Webseite im Verzeichnis `/var/www/website`. Eine statische Webseite braucht keine Yellow-Installation mehr. Die meisten Webseiten lassen sich damit erstellen. Lade Verzeichnis auf dein Webhosting hoch und erstelle bei Bedarf eine neue Version.
 
-As an alternative to a static website you can add individual web pages to a cache. Here's an example: `php yellow.php build cache /blog/blog-example`. To clean the cache type the following line: `php yellow.php clean`.
+Vor der ersten Benutzung sollte man die Datei `system/config/config.ini` konfigurieren. Dort stellt man `ServerScheme`, `ServerName`, `ServerBase` und `ServerTime` ein. Um die [aktuellen Einstellungen](https://github.com/datenstrom/yellow-plugins/tree/master/core#example) zu sehen fügt man `[yellow server]` zum Text einer Seite hinzu.
 
-## Custom 404 page
+Als Alternative zu einer statischen Webseite kann man auch einzelne Webseiten zum Cache hinzufügen. Hier ist ein Beispiel: `php yellow.php build cache /blog/blog-example`. Zum Löschen gibt man die folgende Zeile ein: `php yellow.php clean`.
 
-When a web browser requests a file that the web server cannot find your website will show a “File not found”  page. The file `system/config/page-error-404.txt` defines how a missing file looks like. Here's an example:
+## Eigene 404-Seite
+
+Wenn der Webbrowser eine Datei anfragt die der Webserver nicht finden kann wird "File not found" angezeigt. Die Datei `system/config/page-error-404.txt` legt fest wie eine fehlende Datei aussieht. Hier ist ein Beispiel:
 
 ~~~~
 ---
@@ -103,14 +102,14 @@ Title: File not found
 The requested file was not found. Oh no...
 ~~~~
 
-If you use Yellow as a flat-file CMS there's nothing more to configure. If you use Yellow as a static site generator there's one additional step. Configure your web server to display your custom error page instead of its default 404 page. 
+Falls du Yellow als Flat-File-CMS benutzt dann gibt es nichts weiteres zu tun. Falls du Yellow als Static-Site-Generator benutzt dann gibt es einen zusätzlichen Schritt. Konfiguriere deinen Webserver so dass er deine eigene Fehlerseite anzeigt statt der eingebauten 404-Seite.
 
-For [Apache](http://httpd.apache.org) add the following to your configuration file:
+Bei [Apache](http://httpd.apache.org) fügt man das Folgende zur Konfigurationsdatei hinzu:
 
     ErrorDocument 404 /404.html
 
-For [Nginx](http://nginx.org/) add the following to your configuration file:
+Bei [Nginx](http://nginx.org/) fügt man das Folgende zur Konfigurationsdatei hinzu:
 
     error_page 404 /404.html;
 
-[Next: Language configuration →](language-configuration-de)
+[Weiter: Spracheinstellungen →](language-configuration-de)

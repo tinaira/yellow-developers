@@ -80,7 +80,7 @@ server {
 
 Yellow is a flat-file CMS and a static site generator. As a static site generator, it offers a build command that you can run from within a folder containing the Yellow installation and it then outputs a completely static website.
 
-You can create files from the [command line](https://github.com/datenstrom/yellow-plugins/tree/master/commandline). Open the file `system/config/config.ini` and configure `ServerScheme`, `ServerName`, `ServerBase` and `ServerTime`. To see the current [server settings](https://github.com/datenstrom/yellow-plugins/tree/master/core#example) add a `[yellow server]` shortcut to a page.
+You can create files from the [command line](https://github.com/datenstrom/yellow-plugins/tree/master/commandline). 
 
 1. Open a terminal window.
 2. Go to your Yellow installation, where the `yellow.php` is.
@@ -88,7 +88,9 @@ You can create files from the [command line](https://github.com/datenstrom/yello
 
 This will build a completely static website in folder `/var/www/website`. A static website doesn't need a Yellow installation anymore. Most websites, blogs and wikis can be made this way. Upload the folder to your web hosting and build a new version when needed.
 
-As an alternative to a static website you can add individual web pages to a cache. Here's an example: `php yellow.php build cache /blog/blog-example`. To clean the cache type the following line: `php yellow.php clean`.
+Before the first use your should configure the file `system/config/config.ini`. Here you set `ServerScheme`, `ServerName`, `ServerBase` and `ServerTime`. To see the [current settings](https://github.com/datenstrom/yellow-plugins/tree/master/core#example) add a `[yellow server]` shortcut to a page.
+
+As an alternative to a static website you can also add individual web pages to a cache. Here's an example: `php yellow.php build cache /blog/blog-example`. To clean the cache type the following line: `php yellow.php clean`.
 
 ## Custom 404 page
 
@@ -101,7 +103,7 @@ Title: File not found
 The requested file was not found. Oh no...
 ~~~~
 
-If you use Yellow as a flat-file CMS there's nothing more to configure. If you use Yellow as a static site generator there's one additional step. Configure your web server to display your custom error page instead of its default 404 page. 
+If you use Yellow as a flat-file CMS there's nothing more to do. If you use Yellow as a static site generator there's one additional step. Configure your web server to display your custom error page instead of its default 404 page. 
 
 For [Apache](http://httpd.apache.org) add the following to your configuration file:
 

@@ -121,6 +121,6 @@ Archive
 * [How to add a contact page to your blog](https://github.com/datenstrom/yellow-plugins/tree/master/contact)
 * [How to add a feed to your blog](https://github.com/datenstrom/yellow-plugins/tree/master/feed)
 * [How to make a draft page](https://github.com/datenstrom/yellow-plugins/tree/master/draft)
-* [How to make a static blog](web-server-configuration-de#static-website)
+* [How to make a static blog](web-server-configuration-de#statische-webseite)
 
 [Next: How to make a wiki →](how-to-make-a-wiki-de)

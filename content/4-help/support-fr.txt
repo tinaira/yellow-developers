@@ -22,10 +22,10 @@ Vous êtes au bon endroit, nous sommes là pour vous aider.
 
 * [Créer des plugins](https://github.com/datenstrom/yellow-plugins)
 * [Créer des thèmes](https://github.com/datenstrom/yellow-themes)
-* [Traduire Yellow](https://github.com/datenstrom/yellow-plugins/tree/master/language)
+* [Traduire Yellow](https://github.com/datenstrom/yellow-plugins/tree/master/language) et [la documentation](/search/query:todo/)
 
 ## Remerciements
 
-Yellow est libre et open source, créé par les gens qui utilisent Yellow. Au cœur de l'open source est l'idée ne en partageant le code, nous pouvons faire de meilleurs logiciels ensemble. Contributions et commentaires sont les bienvenus.
+Yellow est libre et open source, créé par les gens qui utilisent Yellow. Au cœur de l'open source est l'idée ne en partageant le code, nous pouvons faire de meilleurs logiciels ensemble. Contributions et commentaires sont les bienvenus. Sous licence [GPLv2](http://opensource.org/licenses/GPL-2.0).
 
 Grand merci aux [core maintainers](https://github.com/datenstrom/yellow/graphs/contributors) et [tous les contributeurs](https://github.com/datenstrom/yellow-plugins/graphs/contributors).
