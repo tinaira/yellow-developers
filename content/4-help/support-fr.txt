@@ -22,7 +22,7 @@ Vous êtes au bon endroit, nous sommes là pour vous aider.
 
 * [Créer des plugins](https://github.com/datenstrom/yellow-plugins)
 * [Créer des thèmes](https://github.com/datenstrom/yellow-themes)
-* [Traduire Yellow](https://github.com/datenstrom/yellow-plugins/tree/master/language) et [la documentation](/search/query:todo/)
+* [Traduire Yellow](https://github.com/datenstrom/yellow-plugins/tree/master/language)
 
 ## Remerciements
 
