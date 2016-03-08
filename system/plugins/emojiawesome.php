@@ -17,7 +17,7 @@ class YellowEmojiawesome
 		$this->yellow->config->setDefault("emojiawesomeNormaliseUnicode", "0");
 	}
 	
-	// Handle page content parsing of custom block
+	// Handle page content parsing of custom blocks
 	function onParseContentBlock($page, $name, $text, $shortcut)
 	{
 		$output = NULL;
@@ -32,6 +32,11 @@ class YellowEmojiawesome
 				$output .= " title=\"".htmlspecialchars(":$shortname:")."\"";
 				$output .= "></i>";
 			}
+		} else if(($name=="emojifyText") && $shortcut) {
+			if($this->yellow->config->get("emojiawesomeNormaliseUnicode")) $text = $this->normaliseUnicode($text);
+			$output = preg_replace_callback("/\:([\w\+\-\_]+)\:/", array(&$this, "callbackEmojify"), $text);
+		} else if(($name=="emojifyNormalise") && $shortcut) {
+			$output = $this->normaliseUnicode($text);
 		}
 		return $output;
 	}
@@ -78,8 +83,8 @@ class YellowEmojiawesome
 	// Normalise emoji UTF-8 into shortname
 	function normaliseUnicode($text)
 	{
-		//TODO: raw Unicode should be converted too, wunderfeyd wunderfeyd wunderfeyd
-		return $text;
+		$lookup = $this->getReverseLookupData();
+		return str_replace(array_keys($lookup), array_values($lookup), $text);
 	}
 	
 	// Check if emoji shortname exists
@@ -90,6 +95,14 @@ class YellowEmojiawesome
 		return $found;
 	}
 	
+	// Callback for emoji replace function
+	function callbackEmojify($matches)
+	{
+		$output = $this->onParseContentBlock(null, "", trim($matches[1]), true);
+		if(is_null($output)) $output = htmlspecialchars($matches[0], ENT_NOQUOTES);
+		return $output;
+	}
+
 	// Return emoji lookup data
 	function getLookupData()
 	{
@@ -924,6 +937,15 @@ class YellowEmojiawesome
 			array("shortname"=>"x", "utf8"=>"\xe2\x9d\x8c", "image"=>"274c"),
 			array("shortname"=>"zero", "utf8"=>"", "image"=>"30-20e3"),
 		);
+	}
+
+	// Return utf8 to shortname lookup data
+	function getReverseLookupData()
+	{
+		$lookup = array();
+		foreach($this->getLookupData() as $entry) $lookup[$entry["utf8"]] = ":".$entry["shortname"].":";
+		krsort($lookup);
+		return $lookup;
 	}
 }
 
