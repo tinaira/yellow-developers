@@ -3,72 +3,69 @@ Title: Webseiten erstellen
 Sidebar: sidebar-de
 Language: de
 ---
->> [Todo: You can help us and translate this page](https://github.com/datenstrom/yellow-developers)
+Lerne wie man eine Webseite mit Yellow macht.
 
-Learn how to make a website with Yellow. 
+## Webseite installieren
 
-## Install website
+[Yellow herunterladen und installieren](https://github.com/datenstrom/yellow/).
 
-[Download and install Yellow](https://github.com/datenstrom/yellow/).  
+Deine Webseite ist sofort erreichbar. Die Installation von Yellow kommt mit zwei Seiten, "Home" und "About". Das ist nur ein Beispiel um loszulegen, verändere alles so wie du willst. Man kann eine Webseite erstellen, indem man weitere Dateien und Verzeichnisse hinzufügt. 
 
-Your website is immediately available. The installation of Yellow comes with two pages, 'Home' and 'About'. They are just an example to get you started, change them as you like. You can create your website by adding more files and folders.
+Die zentrale Konfigurationsdatei ist `system/config/config.ini`. Dort kann man die Standardeinstellungen festlegen. Die individuellen Einstellungen lassen sich oben auf jeder Seite festlegen. Bei einer neuen Installation sollte man `Sitename`, `Author` und `Language` anpassen. Es gibt [Plugins](/plugins/) und [Themes](/themes/) zum Herunterladen.
 
-The main configuration for your website is file `system/config/config.ini`. You can define the default settings of your website here. For a new installation you should set `Sitename`, `Author` and `Language`. There are [plugins](/plugins/) and [themes](/themes/) you can download.
+## Webseiten schreiben
 
-## Writing web pages
-
-Have a look inside your `content` folder, here are all your web pages. Open the file `content/1-home/page.txt`. You'll see settings and text of the page. You can change `Title` and other [settings](yellow-api#meta-data) at the top of a page. Here's an example:
+Lass uns einen Blick ins `content`-Verzeichnis werfen, hier sind alle Webseiten. Öffne die Datei `content/1-home/page.txt`. Es werden Einstellungen und Text der Seite angezeigt. Ganz oben auf der Seite kannst du `Title` und weitere [Einstellungen](yellow-api#meta-data) ändern. Hier ist ein Beispiel:
 
 ```
 ---
 Title: Home
 ---
-Your website works! 
+Deine Webseite funktioniert!
 
-You can now [edit this page] or use your text editor. 
+Du kannst [edit - diese Seite bearbeiten] oder einen Texteditor benutzen.
 ```
 
-To create a new page, add a new file to the home folder. Set the `Title` at the top of a page. To add something to the navigation, create a new `content` folder with a numerical prefix. The prefix will be used to sort the navigation. You can create pages in any folder. Here's another example:
-
-```
----
-Title: Yellow is for people who make websites
----
-You can [edit this page]. The help gives you more information 
-about how to create small web pages, blogs and wikis.
-```
-
-Now let's add an image with the [image plugin](https://github.com/datenstrom/yellow-plugins/tree/master/image):
+Um eine neue Seite hinzuzufügen erstellst du eine neue Datei im Home-Verzeichnis oder einem anderen `content`-Verzeichnis. Den `Title` legst du ganz oben auf der Seite fest. Um die Navigation zu erweitern erstellst du ein neues `content`-Verzeichnis mit numerischen Präfix. Hier ist noch ein Beispiel:
 
 ```
 ---
-Title: Yellow is for people who make websites
+Title: Yellow ist für Menschen die Webseiten machen
+---
+Du kannst [edit - diese Seite bearbeiten]. Die Hilfe gibt die weitere 
+Informationen wie man kleine Webseiten, Blogs und Wikis erstellt.
+```
+
+Ein Bild hinzufügen mit dem [Image-Plugin](https://github.com/datenstrom/yellow-plugins/tree/master/image):
+
+```
+---
+Title: Yellow ist für Menschen die Webseiten machen
 ---
 [image yellow.jpg]
 
-You can [edit this page]. The help gives you more information 
-about how to create small web pages, blogs and wikis.
+Du kannst [edit - diese Seite bearbeiten]. Die Hilfe gibt die weitere 
+Informationen wie man kleine Webseiten, Blogs und Wikis erstellt.
 ```
 
-Let's show a different title in the navigation:
+Einen anderen Titel in der Navigation anzeigen:
 
 ```
 ---
-Title: Yellow is for people who make websites
+Title: Yellow ist für Menschen die Webseiten machen
 TitleNavigation: Home
 ---
 [image yellow.jpg]
 
-You can [edit this page]. The help gives you more information 
-about how to create small web pages, blogs and wikis.
+Du kannst [edit - diese Seite bearbeiten]. Die Hilfe gibt die weitere 
+Informationen wie man kleine Webseiten, Blogs und Wikis erstellt.
 ```
 
-You can add more [settings](yellow-api#meta-data) at the top of a page.
+Ganz oben auf der Seite kannst du weitere [Einstellungen](yellow-api#meta-data) ändern. 
 
-## Creating a sidebar
+## Sidebar erstellen
 
-To create a sidebar add the file `sidebar.txt` to a content folder. The sidebar 
-is automatically shown on all pages in the same folder. Here's an example sidebar:
+Erstelle die Datei `sidebar.txt` in einem `content`-Verzeichnis. Die Sidebar wird automatisch auf allen Seiten im gleichen Verzeichnis angezeigt. Hier ist eine Beispiel-Sidebar:
 
 ```
 ---
@@ -81,12 +78,12 @@ Links
 * [GitHub](https://github.com/datenstrom)
 ```
 
-## Advanced features
+## Erweiterte Funktionen
 
-* [How to add a contact page to your website](https://github.com/datenstrom/yellow-plugins/tree/master/contact)
-* [How to add a sitemap to your website](https://github.com/datenstrom/yellow-plugins/tree/master/sitemap)
-* [How to add a feed to your website](https://github.com/datenstrom/yellow-plugins/tree/master/feed)
-* [How to add a search to your website](https://github.com/datenstrom/yellow-plugins/tree/master/search)
-* [How to make a static website](web-server-configuration-de#statische-webseite)
+* [Kontaktseite zu deiner Webseite hinzufügen](https://github.com/datenstrom/yellow-plugins/tree/master/contact)
+* [Sitemap zu deiner Webseite hinzufügen](https://github.com/datenstrom/yellow-plugins/tree/master/sitemap)
+* [Feed zu deiner Webseite hinzufügen](https://github.com/datenstrom/yellow-plugins/tree/master/feed)
+* [Suche zu deiner Webseite hinzufügen](https://github.com/datenstrom/yellow-plugins/tree/master/search)
+* [Statische Webseite erstellen](web-server-configuration-de#statische-webseite)
 
-[Next: How to make a blog →](how-to-make-a-blog-de)
+[Weiter: Blog erstellen →](how-to-make-a-blog-de)

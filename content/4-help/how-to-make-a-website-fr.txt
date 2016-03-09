@@ -9,7 +9,7 @@ Learn how to make a website with Yellow.
 
 ## Install website
 
-[Download and install Yellow](https://github.com/datenstrom/yellow/).  
+[Download and install Yellow](https://github.com/datenstrom/yellow/).
 
 Your website is immediately available. The installation of Yellow comes with two pages, 'Home' and 'About'. They are just an example to get you started, change them as you like. You can create your website by adding more files and folders.
 
@@ -28,7 +28,7 @@ Your website works!
 You can now [edit this page] or use your text editor. 
 ```
 
-To create a new page, add a new file to the home folder. Set the `Title` at the top of a page. To add something to the navigation, create a new `content` folder with a numerical prefix. The prefix will be used to sort the navigation. You can create pages in any folder. Here's another example:
+To create a new page, add a new file to the home folder or another `content` folder. Set the `Title` at the top of a page. To add something to the navigation, create a new `content` folder with a numerical prefix. The prefix will be used to sort the navigation. Here's another example:
 
 ```
 ---
@@ -67,7 +67,7 @@ You can add more [settings](yellow-api#meta-data) at the top of a page.
 
 ## Creating a sidebar
 
-To create a sidebar add the file `sidebar.txt` to a content folder. The sidebar 
+To create a sidebar add the file `sidebar.txt` to a `content` folder. The sidebar 
 is automatically shown on all pages in the same folder. Here's an example sidebar:
 
 ```

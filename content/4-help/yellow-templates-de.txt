@@ -74,7 +74,7 @@ Here's an example snippet file `system/themes/snippets/navigation.php`:
 
 Custom sidebar
 --------------
-To use a custom sidebar add the file `sidebar.txt` to a content folder. The sidebar is automatically shown on all pages in the same folder. If you want a page with a different sidebar, set the `Sidebar` setting at the top of a page. 
+To use a custom sidebar add the file `sidebar.txt` to a `content` folder. The sidebar is automatically shown on all pages in the same folder. If you want a page with a different sidebar, set the `Sidebar` setting at the top of a page. 
 
 Here's an example sidebar file `content/1-home/sidebar.txt`:
 

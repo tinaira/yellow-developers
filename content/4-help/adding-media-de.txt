@@ -7,7 +7,7 @@ Alle Medien befinden sich im `media`-Verzeichnis. Hier speicherst du Bilder und 
 
 [image screenshot-media.png Screenshot]
 
-Alle `media`-Verzeichnisse stehen auf deiner Webseite zur Verfügung. Das `downloads`-Verzeichnis enthält Dateien zum Herunterladen. Das `images`-Verzeichnis ist zum Speichern deiner Bilder gedacht. Bei einer kleinen Webseite kannst du alle Bilder in dieses Verzeichnis ablegen. Du kannst auch weitere Verzeichnisse erstellen und Dateien so organisieren wie du willst.
+Alle `media`-Verzeichnisse stehen auf deiner Webseite zur Verfügung. Das `downloads`-Verzeichnis enthält Dateien zum Herunterladen. Das `images`-Verzeichnis ist zum Speichern deiner Bilder gedacht. Bei einer kleinen Webseite kannst du alle Bilder in diesem Verzeichnis ablegen. Du kannst auch weitere Verzeichnisse erstellen und Dateien organisieren wie du willst.
 
 Bilder
 ------
@@ -16,7 +16,7 @@ Hier ist beschreiben wie man Bilder auf einer Seite verwendet. Öffne die Datei 
 `![image](icon.png)` zeigt `http://website/media/images/icon.png`  
 `![image](picture.jpg)` zeigt `http://website/media/images/picture.jpg`  
 
-Es gibt auch das [Image Plugin](https://github.com/datenstrom/yellow-plugins/tree/master/image) um Bildgrößen zu ändern und Thumbnails zu erzeugen.
+Es gibt auch das [Image-Plugin](https://github.com/datenstrom/yellow-plugins/tree/master/image) um Bildgrößen zu ändern und Thumbnails zu erzeugen.
 
 `[image icon.png]` zeigt `http://website/media/images/icon.png`  
 `[image picture.jpg]` zeigt `http://website/media/images/picture.jpg`  
@@ -29,7 +29,7 @@ Bilder in unterschiedliche Größen:
 
 Videos
 ------
-Du kannst das [Youtube Plugin](https://github.com/datenstrom/yellow-plugins/tree/master/youtube) und [Vimeo Plugin](https://github.com/datenstrom/yellow-plugins/tree/master/vimeo) benutzen um Videos einzubinden.
+Du kannst das [Youtube-Plugin](https://github.com/datenstrom/yellow-plugins/tree/master/youtube) und [Vimeo-Plugin](https://github.com/datenstrom/yellow-plugins/tree/master/vimeo) benutzen um Videos einzubinden.
 
 `[youtube fhs55HEl-Gc]` zeigt `http://www.youtube.com/watch?v=fhs55HEl-Gc`  
 `[vimeo 13387502]` zeigt `http://vimeo.com/13387502`  
