@@ -18,4 +18,4 @@ More themes by Yellow developers:
   Envisioned is a minimalistic theme inspired by Edward Tufte.
 
 [Download all themes](https://github.com/datenstrom/yellow-themes).
-Develop your own themes with the [developers kit](https://github.com/datenstrom/yellow-developers).
+Make your own themes with the [developers kit](https://github.com/datenstrom/yellow-developers).

@@ -14,9 +14,9 @@ Vous êtes au bon endroit, nous sommes là pour vous aider.
 
 ## Suivez-nous
 
+* [Twitter @datenstromse](https://twitter.com/datenstromse)
 * [GitHub @datenstrom](https://github.com/datenstrom)
 * [Gitter @datenstrom](https://gitter.im/datenstrom/yellow)
-* [Twitter @datenstromse](https://twitter.com/datenstromse)
 
 ## Comment contribuer
 

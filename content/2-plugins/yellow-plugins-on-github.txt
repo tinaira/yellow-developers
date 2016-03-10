@@ -96,4 +96,4 @@ More plugins by Yellow developers:
   Image gallery in CSS only.
 
 [Download all plugins](https://github.com/datenstrom/yellow-plugins).
-Develop your own plugins with the [developers kit](https://github.com/datenstrom/yellow-developers).
+Make your own plugins with the [developers kit](https://github.com/datenstrom/yellow-developers).

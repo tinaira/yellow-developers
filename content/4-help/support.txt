@@ -13,9 +13,9 @@ Connect with other Yellow users and find professional help from the community.
 
 ## Where to find us
 
+* [Twitter @datenstromse](https://twitter.com/datenstromse)
 * [GitHub @datenstrom](https://github.com/datenstrom)
 * [Gitter @datenstrom](https://gitter.im/datenstrom/yellow)
-* [Twitter @datenstromse](https://twitter.com/datenstromse)
 
 ## How to contribute
 

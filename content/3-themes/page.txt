@@ -7,4 +7,4 @@ Great technology is useful in function and aesthetic.
 [preview /themes/ threepages 33%]
 
 [Download all themes](https://github.com/datenstrom/yellow-themes).
-Develop your own themes with the [developers kit](https://github.com/datenstrom/yellow-developers).
+Make your own themes with the [developers kit](https://github.com/datenstrom/yellow-developers).

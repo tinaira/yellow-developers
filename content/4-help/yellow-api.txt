@@ -351,7 +351,7 @@ Open the file `system/plugins/core.php`, change first line to `<?php define("DEB
 YellowCore::sendPage Content-Type: text/html; charset=UTF-8
 YellowCore::sendPage Content-Modified: Fri, 30 Jan 2015 09:30:12 GMT
 YellowCore::sendPage Last-Modified: Mon, 02 Feb 2015 13:19:03 GMT
-YellowCore::sendPage theme:system/themes/flatsite.css template:blogpages parser:markdown
+YellowCore::sendPage theme:flatsite template:blogpages parser:markdown
 YellowCore::processRequest file:content/2-plugins/1-blog-plugin/page.txt handler:core
 YellowCore::request status:200 location:/plugins/blog-plugin/
 YellowCore::request time:19 ms
@@ -385,7 +385,7 @@ Notes
 -----
 Some tips for Yellow developers: 
 
-1. Put your own code on GitHub. Create a new repository for each new plugin/theme, the name of your repository should be `yellow-something` or `yellow-type-something`. The idea is to keep experimental plugins separate from the stable ones and take the stress away from developers. We're looking forward to see what you create. [Read more](https://github.com/datenstrom/yellow-plugins/blob/master/README.md).
+1. Put your code on GitHub. Create a new repository for each new plugin/theme, the name of your repository should be `yellow-type-something` or `yellow-something`. The idea is to keep experimental plugins separate from the stable ones and take the stress away from developers. We're looking forward to see what you create. [Read more](https://github.com/datenstrom/yellow-plugins/blob/master/README.md).
 
 2. Yellow works with relative locations, this means relative to your `ServerBase`. In your own code you can use `$yellow->page->location` to access the relative page location and `$yellow->page->getLocation()` to access the absolute page location. This is known to not be a good solution and will be changed. [Read more](https://github.com/datenstrom/yellow/issues/127).
 

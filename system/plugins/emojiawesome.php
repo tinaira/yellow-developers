@@ -5,7 +5,7 @@
 // Emojiawesome plugin
 class YellowEmojiawesome
 {
-	const Version = "0.6.2";
+	const Version = "0.6.3";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -14,10 +14,10 @@ class YellowEmojiawesome
 		$this->yellow = $yellow;
 		$this->yellow->config->setDefault("emojiawesomeCdn", "https://cdnjs.cloudflare.com/ajax/libs/twemoji/2.0.0/");
 		$this->yellow->config->setDefault("emojiawesomeStylesheetGenerate", "0");
-		$this->yellow->config->setDefault("emojiawesomeNormaliseUnicode", "0");
+		$this->yellow->config->setDefault("emojiawesomeNormaliseText", "0");
 	}
 	
-	// Handle page content parsing of custom blocks
+	// Handle page content parsing of custom block
 	function onParseContentBlock($page, $name, $text, $shortcut)
 	{
 		$output = NULL;
@@ -32,11 +32,6 @@ class YellowEmojiawesome
 				$output .= " title=\"".htmlspecialchars(":$shortname:")."\"";
 				$output .= "></i>";
 			}
-		} else if(($name=="emojifyText") && $shortcut) {
-			if($this->yellow->config->get("emojiawesomeNormaliseUnicode")) $text = $this->normaliseUnicode($text);
-			$output = preg_replace_callback("/\:([\w\+\-\_]+)\:/", array(&$this, "callbackEmojify"), $text);
-		} else if(($name=="emojifyNormalise") && $shortcut) {
-			$output = $this->normaliseUnicode($text);
 		}
 		return $output;
 	}
@@ -44,7 +39,7 @@ class YellowEmojiawesome
 	// Handle page content parsing
 	function onParseContentText($page, $text)
 	{
-		if($this->yellow->config->get("emojiawesomeNormaliseUnicode")) $text = $this->normaliseUnicode($text);
+		if($this->yellow->config->get("emojiawesomeNormaliseText")) $text = $this->normaliseText($text, true, false);
 		return $text;
 	}
 
@@ -80,11 +75,28 @@ class YellowEmojiawesome
 		return strreplaceu(array("+1", "-1", "_"), array("plus1", "minus1", "-"), $text);
 	}
 	
-	// Normalise emoji UTF-8 into shortname
-	function normaliseUnicode($text)
+	// Normalise text with emoji, convert UTF8 and shortcode
+	function normaliseText($text, $convertUtf8 = true, $convertShortcode = true)
 	{
-		$lookup = $this->getReverseLookupData();
-		return str_replace(array_keys($lookup), array_values($lookup), $text);
+		if($convertUtf8)
+		{
+			$lookup = array();
+			foreach($this->getLookupData() as $entry) $lookup[$entry["utf8"]] = ":".$entry["shortname"].":";
+			krsort($lookup);
+			$text = str_replace(array_keys($lookup), array_values($lookup), $text);
+		}
+		if($convertShortcode)
+		{
+			$thisCompatible = $this;
+			$callback = function($matches) use ($thisCompatible)
+			{
+				$output = $thisCompatible->onParseContentBlock(null, "", $matches[1], true);
+				if(is_null($output)) $output = $matches[0];
+				return $output;
+			};
+			$text = preg_replace_callback("/\:([\w\+\-\_]+)\:/", $callback, $text);
+		}
+		return $text;
 	}
 	
 	// Check if emoji shortname exists
@@ -95,14 +107,6 @@ class YellowEmojiawesome
 		return $found;
 	}
 	
-	// Callback for emoji replace function
-	function callbackEmojify($matches)
-	{
-		$output = $this->onParseContentBlock(null, "", trim($matches[1]), true);
-		if(is_null($output)) $output = htmlspecialchars($matches[0], ENT_NOQUOTES);
-		return $output;
-	}
-
 	// Return emoji lookup data
 	function getLookupData()
 	{
@@ -937,15 +941,6 @@ class YellowEmojiawesome
 			array("shortname"=>"x", "utf8"=>"\xe2\x9d\x8c", "image"=>"274c"),
 			array("shortname"=>"zero", "utf8"=>"", "image"=>"30-20e3"),
 		);
-	}
-
-	// Return utf8 to shortname lookup data
-	function getReverseLookupData()
-	{
-		$lookup = array();
-		foreach($this->getLookupData() as $entry) $lookup[$entry["utf8"]] = ":".$entry["shortname"].":";
-		krsort($lookup);
-		return $lookup;
 	}
 }
 
