@@ -39,7 +39,7 @@ class YellowEmojiawesome
 	// Handle page content parsing
 	function onParseContentText($page, $text)
 	{
-		if($this->yellow->config->get("emojiawesomeNormaliseText")) $text = $this->normaliseText($text, true, false);
+		if($this->yellow->config->get("emojiawesomeNormaliseText")) $text = $this->normaliseText($text);
 		return $text;
 	}
 

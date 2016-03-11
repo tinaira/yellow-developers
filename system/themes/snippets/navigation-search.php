@@ -8,7 +8,7 @@
 </ul>
 </div>
 <div class="navigation-banner"></div>
-<div class="navigation-search" ?>
+<div class="navigation-search">
 <form class="search-form" action="<?php echo $yellow->page->base ?>/search/" method="post">
 <input class="search-text" type="text" name="query" placeholder="<?php echo $yellow->text->getHtml("searchButton") ?>" value="<?php echo htmlspecialchars($_REQUEST["query"]) ?>" />
 <?php if($yellow->plugins->isExisting("fontawesome")):?>

@@ -12,7 +12,7 @@
 <a href="https://gitter.im/datenstrom/yellow"><i class="fa fa-comment"></i> Gitter</a> 
 </div>
 </div>
-<div class="footer-banner"></class>
+<div class="footer-banner"></div>
 </div>
 <?php echo $yellow->page->getExtra("footer") ?>
 </body>
