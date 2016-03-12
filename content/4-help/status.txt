@@ -4,7 +4,7 @@ Sidebar: none
 Language: en
 Information: Please do not translate this file, English only
 ---
-Current website status and automated tests.
+Status of website and automated tests.
 |||
 |---|---|
 |**datenstrom.se**|[![Site status](http://datenstrom.se/media/images/online.svg)](http://datenstrom.se)

@@ -5,7 +5,7 @@
 // Wiki plugin
 class YellowWiki
 {
-	const Version = "0.6.3";
+	const Version = "0.6.4";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -19,10 +19,13 @@ class YellowWiki
 	// Handle page meta data parsing
 	function onParseMeta($page)
 	{
-		$wikiLocationLength = strlenu($this->yellow->config->get("wikiLocation"));
-		if(substru($page->location, 0, $wikiLocationLength) == $this->yellow->config->get("wikiLocation"))
+		if(!$page->isError())
 		{
-			if($page->get("template") == $this->yellow->config->get("template")) $page->set("template", "wiki");
+			$wikiLocationLength = strlenu($this->yellow->config->get("wikiLocation"));
+			if(substru($page->location, 0, $wikiLocationLength) == $this->yellow->config->get("wikiLocation"))
+			{
+				if($page->get("template") == $this->yellow->config->get("template")) $page->set("template", "wiki");
+			}
 		}
 	}
 	
@@ -74,6 +77,29 @@ class YellowWiki
 				$output .= "</div>\n";
 			} else {
 				$page->error(500, "Wikirelated '$location' does not exist!");
+			}
+		}
+		if($name=="wikipages" && $shortcut)
+		{
+			list($location, $pagesMax) = $this->yellow->toolbox->getTextArgs($text);
+			if(empty($location)) $location = $this->yellow->config->get("wikiLocation");
+			if(empty($pagesMax)) $pagesMax = 10;
+			$wiki = $this->yellow->pages->find($location);
+			$pages = $wiki ? $wiki->getChildren(!$wiki->isVisible())->append($wiki) : $this->yellow->pages->clean();
+			$pages->sort("title")->limit($pagesMax);
+			$page->setLastModified($pages->getModified());
+			if(count($pages))
+			{
+				$output = "<div class=\"".htmlspecialchars($name)."\">\n";
+				$output .= "<ul>\n";
+				foreach($pages as $page)
+				{
+					$output .= "<li><a href=\"".$page->getLocation()."\">".$page->getHtml("titleNavigation")."</a></li>\n";
+				}
+				$output .= "</ul>\n";
+				$output .= "</div>\n";
+			} else {
+				$page->error(500, "Wikirecent '$location' does not exist!");
 			}
 		}
 		if($name=="wikitags" && $shortcut)

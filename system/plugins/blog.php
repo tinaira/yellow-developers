@@ -5,7 +5,7 @@
 // Blog plugin
 class YellowBlog
 {
-	const Version = "0.6.3";
+	const Version = "0.6.4";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -19,10 +19,13 @@ class YellowBlog
 	// Handle page meta data parsing
 	function onParseMeta($page)
 	{
-		$blogLocationLength = strlenu($this->yellow->config->get("blogLocation"));
-		if(substru($page->location, 0, $blogLocationLength) == $this->yellow->config->get("blogLocation"))
+		if(!$page->isError())
 		{
-			if($page->get("template") == $this->yellow->config->get("template")) $page->set("template", "blog");
+			$blogLocationLength = strlenu($this->yellow->config->get("blogLocation"));
+			if(substru($page->location, 0, $blogLocationLength) == $this->yellow->config->get("blogLocation"))
+			{
+				if($page->get("template") == $this->yellow->config->get("template")) $page->set("template", "blog");
+			}
 		}
 	}
 	

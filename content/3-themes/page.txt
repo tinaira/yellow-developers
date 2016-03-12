@@ -2,9 +2,6 @@
 Title: Yellow themes
 TitleNavigation: Themes
 ---
-Great technology is useful in function and aesthetic.
+Great technology is useful in function and aesthetic. [Download all themes](https://github.com/datenstrom/yellow-themes).
 
 [preview /themes/ threepages 33%]
-
-[Download all themes](https://github.com/datenstrom/yellow-themes).
-Make your own themes with the [developers kit](https://github.com/datenstrom/yellow-developers).

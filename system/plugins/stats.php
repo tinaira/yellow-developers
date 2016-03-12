@@ -5,7 +5,7 @@
 // Statistics command plugin
 class YellowStats
 {
-	const Version = "0.6.2";
+	const Version = "0.6.3";
 	var $yellow;			//access to API
 	var $views;				//detected views
 
@@ -25,7 +25,7 @@ class YellowStats
 	// Handle command help
 	function onCommandHelp()
 	{
-		return "stats [DAYS FILENAME]\n";
+		return "stats [DAYS LOCATION FILENAME]\n";
 	}
 	
 	// Handle command
@@ -44,39 +44,62 @@ class YellowStats
 	function statsCommand($args)
 	{
 		$statusCode = 0;
-		list($dummy, $command, $days, $fileName) = $args;
-		if($this->checkStaticConfig())
+		list($dummy, $command, $days, $location, $fileName) = $args;
+		if(empty($location) || $location[0]=='/')
 		{
-			if(empty($days)) $days = $this->yellow->config->get("statsDays");
-			if(empty($fileName))
+			if($this->checkStaticConfig())
 			{
-				$path = $this->yellow->config->get("statsLogDir");
-				$regex = "/^".basename($this->yellow->config->get("statsLogFile"))."$/";
-				$fileNames = $this->yellow->toolbox->getDirectoryEntries($path, $regex, true, false);
-				$statusCode = $this->analyseRequests($days, $path, $fileNames);
+				$statusCode = $this->processRequests($days, $location, $fileName);
 			} else {
-				$statusCode = $this->analyseRequests($days, dirname($fileName), array($fileName));
+				$statusCode = 500;
+				$this->views = 0;
+				$fileName = $this->yellow->config->get("configDir").$this->yellow->config->get("configFile");
+				echo "ERROR creating statistics: Please configure ServerScheme, ServerName,  ServerBase, ServerTime in file '$fileName'!\n";
 			}
+			echo "Yellow $command: $days day".($days!=1 ? 's' : '').", ";
+			echo "$this->views view".($this->views!=1 ? 's' : '')."\n";
 		} else {
-			$statusCode = 500;
-			$this->views = 0;
-			$fileName = $this->yellow->config->get("configDir").$this->yellow->config->get("configFile");
-			echo "ERROR creating statistics: Please configure ServerScheme, ServerName,  ServerBase, ServerTime in file '$fileName'!\n";
+			$statusCode = 400;
+			echo "Yellow $command: Invalid arguments\n";
 		}
-		echo "Yellow $command: $days day".($days!=1 ? 's' : '').", ";
-		echo "$this->views view".($this->views!=1 ? 's' : '')."\n";
+		return $statusCode;
+	}
+	
+	// Analyse and show statistics
+	function processRequests($days, $location, $fileName)
+	{
+		$this->yellow->toolbox->timerStart($time);
+		if(empty($location)) $location = "/";
+		if(empty($days)) $days = $this->yellow->config->get("statsDays");		
+		if(empty($fileName))
+		{
+			$path = $this->yellow->config->get("statsLogDir");
+			$regex = "/^".basename($this->yellow->config->get("statsLogFile"))."$/";
+			$fileNames = $this->yellow->toolbox->getDirectoryEntries($path, $regex, true, false);
+			list($statusCode, $sites, $content, $search, $errors) = $this->analyseRequests($days, $location, $fileNames);
+		} else {
+			list($statusCode, $sites, $content, $search, $errors) = $this->analyseRequests($days, $location, array($fileName));
+		}
+		if($statusCode == 200)
+		{
+			$this->showRequests($sites, "Referring sites");
+			$this->showRequests($content, "Popular content");
+			$this->showRequests($search, "Search queries");
+			$this->showRequests($errors, "Error pages");
+		}
+		$this->yellow->toolbox->timerStop($time);
+		if(defined("DEBUG") && DEBUG>=1) echo "YellowStats::processRequests time:$time ms\n";
 		return $statusCode;
 	}
 	
 	// Analyse logfile requests
-	function analyseRequests($days, $path, $fileNames)
+	function analyseRequests($days, $locationMatch, $fileNames)
 	{
-		$this->yellow->toolbox->timerStart($time);
 		$this->views = 0;
+		$sites = $content = $search = $errors = $clients = array();
 		if(!empty($fileNames))
 		{
 			$statusCode = 200;
-			$sites = $content = $search = $errors = $clients = array();
 			$timeStop = time() - (60 * 60 * 24 * $days);
 			$locationSelf = $this->yellow->config->get("serverBase");
 			$locationIgnore = $this->yellow->config->get("statsLocationIgnore");
@@ -103,6 +126,7 @@ class YellowStats
 							if($this->checkRequestArguments($method, $location, $referer))
 							{
 								if(!preg_match("#^$locationSelf#", $location)) continue;
+								if(!preg_match("#^$locationSelf$locationMatch#", $location)) continue;
 								if(preg_match("#^$locationSelf(.*)/($locationIgnore)/#", $location)) continue;
 								if(preg_match("#^$locationSelf(.*)/robots.txt$#", $location)) continue;
 								if(preg_match("#$spamFilter#i", $referer.$userAgent)) continue;
@@ -125,32 +149,24 @@ class YellowStats
 					echo "ERROR reading logfiles: Can't read file '$fileName'!\n";
 				}
 			}
-			if($statusCode == 200)
-			{
-				unset($sites["-"]); unset($search["-"]);
-				$this->showRequests($sites, "Referring sites");
-				$this->showRequests($content, "Popular content");
-				$this->showRequests($search, "Search queries");
-				$this->showRequests($errors, "Error pages");
-			}
+			unset($sites["-"]); unset($search["-"]);
 		} else {
 			$statusCode = 500;
+			$path = $this->yellow->config->get("statsLogDir");
 			echo "ERROR reading logfiles: Can't find files in directory '$path'!\n";
 		}
-		$this->yellow->toolbox->timerStop($time);
-		if(defined("DEBUG") && DEBUG>=1) echo "YellowStats::analyseRequests time:$time ms\n";
-		return $statusCode;
+		return array($statusCode, $sites, $content, $search, $errors);
 	}
 	
 	// Show top requests
 	function showRequests($array, $text)
 	{
+		uasort($array, strnatcasecmp);
+		$array = array_reverse(array_filter($array, function($value) { return $value>0; }));
+		$array = array_slice($array, 0, $this->yellow->config->get("statsLinesMax"));
 		if(!empty($array))
 		{
 			echo "$text\n\n";
-			uasort($array, strnatcasecmp);
-			$array = array_reverse(array_filter($array, function($value) { return $value>0; }));
-			$array = array_slice($array, 0, $this->yellow->config->get("statsLinesMax"));
 			foreach($array as $key=>$value) echo "- $value $key\n";
 			echo "\n";
 		}
