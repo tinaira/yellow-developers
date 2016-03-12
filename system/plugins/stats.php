@@ -7,6 +7,7 @@ class YellowStats
 {
 	const Version = "0.6.3";
 	var $yellow;			//access to API
+	var $days;				//detected days
 	var $views;				//detected views
 
 	// Handle plugin initialisation
@@ -52,11 +53,11 @@ class YellowStats
 				$statusCode = $this->processRequests($days, $location, $fileName);
 			} else {
 				$statusCode = 500;
-				$this->views = 0;
+				$this->days = $this->views = 0;
 				$fileName = $this->yellow->config->get("configDir").$this->yellow->config->get("configFile");
 				echo "ERROR creating statistics: Please configure ServerScheme, ServerName,  ServerBase, ServerTime in file '$fileName'!\n";
 			}
-			echo "Yellow $command: $days day".($days!=1 ? 's' : '').", ";
+			echo "Yellow $command: $this->days day".($this->days!=1 ? 's' : '').", ";
 			echo "$this->views view".($this->views!=1 ? 's' : '')."\n";
 		} else {
 			$statusCode = 400;
@@ -95,11 +96,12 @@ class YellowStats
 	// Analyse logfile requests
 	function analyseRequests($days, $locationMatch, $fileNames)
 	{
-		$this->views = 0;
+		$this->days = $this->views = 0;
 		$sites = $content = $search = $errors = $clients = array();
 		if(!empty($fileNames))
 		{
 			$statusCode = 200;
+			$timeStart = $timeFound = time();
 			$timeStop = time() - (60 * 60 * 24 * $days);
 			$locationSelf = $this->yellow->config->get("serverBase");
 			$locationIgnore = $this->yellow->config->get("statsLocationIgnore");
@@ -117,7 +119,8 @@ class YellowStats
 						if(preg_match("/^(\S+) (\S+) (\S+) \[(.+)\] \"(\S+) (.*?) (\S+)\" (\S+) (\S+) \"(.*?)\" \"(.*?)\"$/", $line, $matches))
 						{
 							list($line, $ip, $dummy1, $dummy2, $timestamp, $method, $uri, $protocol, $status, $size, $referer, $userAgent) = $matches;
-							if(strtotime($timestamp) < $timeStop) break;
+							$timeFound = strtotime($timestamp);
+							if($timeFound < $timeStop) break;
 							$location = $this->getLocation($uri);
 							$referer = $this->getReferer($referer, $refererSelf);
 							$clientsRequestThrottle = substru($timestamp, 0, 17).$method.$location;
@@ -150,6 +153,8 @@ class YellowStats
 				}
 			}
 			unset($sites["-"]); unset($search["-"]);
+			if($locationMatch != "/") $search = array();
+			$this->days = $timeStart!=$timeFound ? $days : 0;
 		} else {
 			$statusCode = 500;
 			$path = $this->yellow->config->get("statsLogDir");
