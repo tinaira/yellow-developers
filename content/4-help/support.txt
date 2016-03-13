@@ -19,12 +19,13 @@ Connect with other Yellow users and find professional help from the community.
 
 ## How to contribute
 
+* [Download developers kit](https://github.com/datenstrom/yellow-developers)
+* [Create a translation](https://github.com/datenstrom/yellow-plugins/tree/master/language)
 * [Create plugins](https://github.com/datenstrom/yellow-plugins)
 * [Create themes](https://github.com/datenstrom/yellow-themes)
-* [Translate Yellow](https://github.com/datenstrom/yellow-plugins/tree/master/language)
 
 ## Thank you
 
 Yellow is free and open source, made by the people who use Yellow. At the heart of open source is the idea that by sharing code, we can make better software together. Contributions and feedback are very welcome. Licensed under [GPLv2](http://opensource.org/licenses/GPL-2.0).
 
-Big thanks to [core maintainers](https://github.com/datenstrom/yellow/graphs/contributors) and [all contributors](https://github.com/datenstrom/yellow-plugins/graphs/contributors).
+Big thanks to [core maintainers](https://github.com/datenstrom/yellow/graphs/contributors) and [contributors](https://github.com/datenstrom/yellow-plugins/graphs/contributors).

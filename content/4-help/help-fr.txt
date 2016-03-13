@@ -31,5 +31,3 @@ Yellow est fait pour les gens qui font des sites web. [Obtenir de l'aide](suppor
 * [Templates de Yellow](yellow-templates-fr)
 * [Thèmes de Yellow](yellow-themes-fr)
 * [Interface de programmation (API)](yellow-api)
-
-Uniquement des fichiers et des dossiers. [Télécharger développeurs kit](https://github.com/datenstrom/yellow-developers).

@@ -1,0 +1,63 @@
+---
+Title: Markdown cheat sheet
+Sidebar: sidebar
+Language: en
+---
+>>> [Todo: You can help us and improve this page](https://github.com/datenstrom/yellow-developers)
+
+## Text formatting
+
+Normal *italic* **bold** `code`
+
+* item one
+* item two
+* item three
+
+## Shortcuts
+
+Here's a list of common shortcuts:
+
+`[image icon.png]` = add [image](https://github.com/datenstrom/yellow-plugins/tree/master/image)  
+`[gallery photo.*jpg - 20%]` = add [image gallery](https://github.com/datenstrom/yellow-plugins/tree/master/gallery)  
+`[youtube fhs55HEl-Gc]` = embed [Youtube video](https://github.com/datenstrom/yellow-plugins/tree/master/youtube)  
+`[vimeo 13387502]` = embed [Vimeo video](https://github.com/datenstrom/yellow-plugins/tree/master/vimeo)  
+`[soundcloud 101175715]` = embed [Soundcloud audio track](https://github.com/datenstrom/yellow-plugins/tree/master/soundcloud)  
+`[slideshare 37321279]` = embed [Slideshare presentation](https://github.com/datenstrom/yellow-plugins/tree/master/slideshare)  
+`[googlemaps Stockholm]` = embed [Google map](https://github.com/datenstrom/yellow-plugins/tree/master/googlemaps)  
+`[blogrecent /blog/]` = show recent [blog pages](https://github.com/datenstrom/yellow-plugins/tree/master/blog)  
+`[wikirecent /wiki/]` = show recent [wiki pages](https://github.com/datenstrom/yellow-plugins/tree/master/wiki)  
+`[yellow]` = show current [software version](https://github.com/datenstrom/yellow-plugins/tree/master/wiki)  
+
+Here's a list of popular emoji:
+
+`:smile:` = :smile:
+`:grinning:` = :grinning:
+`:angry:` = :angry:  
+`:heart:`  = :heart:
+`:coffee:` = :coffee:
+`:+1:` = :+1:
+
+## Settings
+
+Here's a list of common settings:
+
+`Title` = page title  
+`TitleContent` = page title shown in content  
+`TitleNavigation` = page title shown in navigation  
+`TitleHeader` = page title used in header  
+`Description` = page description  
+`Keywords` = page keyword(s), comma separated  
+`Author` = page author(s), comma separated  
+`Language` = page language  
+`Theme` = page theme  
+`Template` = page template  
+`Modified` = page modification date, [YYYY-MM-DD](yellow-api#date-format) format  
+`Published` = page publication date, [YYYY-MM-DD](yellow-api#date-format) format  
+`Tag` = page tag(s) for categorisation, comma separated  
+`Status` = page status for workflow  
+`Navigation` = page navigation  
+`Sidebar` = page sidebar  
+`Redirect` = new location or URL  
+`Robots` = robots meta data used in header  
+`Sitename` = sitename used in header and footer  
+`Parser` = parser for text files  

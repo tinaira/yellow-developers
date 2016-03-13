@@ -3,26 +3,25 @@ Title: Sicherheitseinstellungen
 Sidebar: sidebar-de
 Language: de
 ---
->> [Todo: You can help us and translate this page](https://github.com/datenstrom/yellow-developers)
 
-Here's how to set up a website with better security.
+Hier ist beschrieben wie man eine Webseite mit besserer Sicherheit konfiguriert.
 
-## Secure server
+## Sicherer Server
 
-Check if your web server supports [HTTPS](https://en.wikipedia.org/wiki/HTTPS) and the Internet connection will be encrypted. It's best if your website is only available via HTTPS. This protects your user account from being stolen, but it's not supported by every web hosting provider.
+Überprüfe ob dein Webserver [HTTPS](https://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol_Secure) unterstützt und ob die Internetverbindung verschlüsselt ist. Am Besten ist es wenn deine Webseite nur über HTTPS erreichbar ist. Damit wird dein Benutzerkonto vor Diebstahl geschützt, jedoch wird es nicht von allen Webhoster unterstützt.
 
-You need a web server with SSL/TLS and valid certificate.
+Du brauchst einen Webserver mit SSL/TLS und gültigem Zertifikat.
 
-## User restrictions
+## Benutzerbeschränkungen
 
-If you have more than one person editing a website, restrict [user accounts](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface) and only parts of the website can be changed. This protects your website from being changed in a web browser, but it doesn't prevent changes in the file system.  
+Falls mehrere Person eine Webseite bearbeiten, beschränke [Benutzerkontos](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface) und nur Teile der Webseite können verändert werden. Damit wird deine Webseite vor Veränderungen im Webbrowser geschützt, jedoch werden Änderungen im Dateisystem nicht verhindert.
 
-You can [test restrictions](http://developers.datenstrom.se), log in with `guest@guest.com` + `guest`.
+Du kannst [Beschränkungen testen](http://developers.datenstrom.se), einloggen mit `guest@guest.com` + `guest`.
 
-## Safe mode
+## Abgesicherter Modus
 
-If you have more than one person editing a website, enable safe mode and only [Markdown](http://en.wikipedia.org/wiki/Markdown) is possible for text formatting. This protects your website from unwanted content, but it also disables  [HTML](http://en.wikipedia.org/wiki/HTML) and [JavaScript](http://en.wikipedia.org/wiki/JavaScript) in content files.
+Falls mehrere Person eine Webseite bearbeiten, aktiviere den abgesicherten Modus und nur [Markdown](http://de.wikipedia.org/wiki/Markdown) ist möglich. Damit wird deine Webseite vor unerwünschten Inhalten geschützt, jedoch wird gleichzeitig auch [HTML](https://de.wikipedia.org/wiki/Hypertext_Markup_Language) and [JavaScript](http://de.wikipedia.org/wiki/JavaScript) im Seiteninhalt deaktiviert.
 
-Open file `system/config/config.ini` and change `ParserSafeMode: 1`.
+Öffne die Datei `system/config/config.ini` und ändere `ParserSafeMode: 1`.
 
-[Next: Yellow templates →](yellow-templates-de)
+[Weiter: Yellow-Templates →](yellow-templates-de)

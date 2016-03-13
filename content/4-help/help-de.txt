@@ -31,5 +31,3 @@ Yellow ist für Menschen die Webseiten machen. [Support finden](support-de).
 * [Yellow-Templates](yellow-templates-de)
 * [Yellow-Themes](yellow-themes-de)
 * [Yellow-API](yellow-api)
-
-Nur Dateien und Verzeichnisse. [Entwickler-Paket herunterladen](https://github.com/datenstrom/yellow-developers).

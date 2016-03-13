@@ -20,9 +20,10 @@ Vous êtes au bon endroit, nous sommes là pour vous aider.
 
 ## Comment contribuer
 
+* [Télécharger développeurs kit](https://github.com/datenstrom/yellow-developers)
+* [Créer une traduction](https://github.com/datenstrom/yellow-plugins/tree/master/language)
 * [Créer des plugins](https://github.com/datenstrom/yellow-plugins)
 * [Créer des thèmes](https://github.com/datenstrom/yellow-themes)
-* [Traduire Yellow](https://github.com/datenstrom/yellow-plugins/tree/master/language)
 
 ## Remerciements
 
