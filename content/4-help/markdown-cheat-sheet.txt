@@ -3,43 +3,66 @@ Title: Markdown cheat sheet
 Sidebar: sidebar
 Language: en
 ---
->>> [Todo: You can help us and improve this page](https://github.com/datenstrom/yellow-developers)
+>> [Todo: You can help us and improve this page](https://github.com/datenstrom/yellow-developers)
 
-## Text formatting
+Markdown is a practical way to edit web pages.
 
-Normal *italic* **bold** `code`
+## Basics
 
-* item one
-* item two
-* item three
+Formatting text:
+
+    Normal *italic* **bold** `code`
+
+Making a list:
+
+    * item one
+    * item two
+    * item three
+
+Making an ordered list:
+
+    1. item one
+    2. item two
+    3. item three
+
+Making a header:
+
+    # Header 1
+    ## Header 2
+    ### Header 3
+
+Making links
+
+    [Link to page](/help/how-to-make-website) 
+    [Link to website](http://datenstrom.se)  
+    https://en.wikipedia.org/wiki/Markdown
+
+Adding an image:
+
+    ![image](picture.jpg)
+
+Adding emoji:
+
+    :smile: :grinning: :angry: :heart: :coffee: :+1:
+
+For a list of available emoji see [emoji cheat sheet](http://emoji-cheat-sheet.com).
 
 ## Shortcuts
 
-Here's a list of common shortcuts:
-
-`[image icon.png]` = add [image](https://github.com/datenstrom/yellow-plugins/tree/master/image)  
+`[image picture.jpg]` = add [image and thumbnail](https://github.com/datenstrom/yellow-plugins/tree/master/image)  
 `[gallery photo.*jpg - 20%]` = add [image gallery](https://github.com/datenstrom/yellow-plugins/tree/master/gallery)  
 `[youtube fhs55HEl-Gc]` = embed [Youtube video](https://github.com/datenstrom/yellow-plugins/tree/master/youtube)  
 `[vimeo 13387502]` = embed [Vimeo video](https://github.com/datenstrom/yellow-plugins/tree/master/vimeo)  
-`[soundcloud 101175715]` = embed [Soundcloud audio track](https://github.com/datenstrom/yellow-plugins/tree/master/soundcloud)  
+`[soundcloud 101175715]` = embed [Soundcloud audio](https://github.com/datenstrom/yellow-plugins/tree/master/soundcloud)  
 `[slideshare 37321279]` = embed [Slideshare presentation](https://github.com/datenstrom/yellow-plugins/tree/master/slideshare)  
-`[googlemaps Stockholm]` = embed [Google map](https://github.com/datenstrom/yellow-plugins/tree/master/googlemaps)  
+`[googlemaps Stockholm]` = embed [Google maps](https://github.com/datenstrom/yellow-plugins/tree/master/googlemaps)  
 `[blogrecent /blog/]` = show recent [blog pages](https://github.com/datenstrom/yellow-plugins/tree/master/blog)  
 `[wikirecent /wiki/]` = show recent [wiki pages](https://github.com/datenstrom/yellow-plugins/tree/master/wiki)  
-`[yellow]` = show current [software version](https://github.com/datenstrom/yellow-plugins/tree/master/wiki)  
+`[yellow]` = show [software version](https://github.com/datenstrom/yellow-plugins/tree/master/core)  
 
-Here's a list of popular emoji:
-
-`:smile:` = :smile:
-`:grinning:` = :grinning:
-`:angry:` = :angry:  
-`:heart:`  = :heart:
-`:coffee:` = :coffee:
-`:+1:` = :+1:
+For a list of available shortcuts see [plugins](https://github.com/datenstrom/yellow-plugins).
 
 ## Settings
-
-Here's a list of common settings:
 
 `Title` = page title  
 `TitleContent` = page title shown in content  
