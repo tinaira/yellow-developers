@@ -1,0 +1,86 @@
+---
+Title: Markdown-Spickzettel
+Sidebar: sidebar-de
+Language: de
+---
+Markdown ist eine praktische Art um Webseiten zu bearbeiten.
+
+## Grundlagen
+
+Text formatieren:
+
+    Normal *Kursiv* **Fettschrift** `Code`
+
+Eine Liste erstellen:
+
+    * Punkt eins
+    * Punkt zwei
+    * Punkt drei
+
+Eine sortierte Liste erstellen:
+
+    1. Punkt eins
+    2. Punkt zwei
+    3. Punkt drei
+
+Eine Überschrift erstellen:
+
+    # Überschrift 1
+    ## Überschrift 2
+    ### Überschrift 3
+
+Zitate erstellen:
+
+    > Hier ist ein Zitat
+    >> Hier ist ein Zitat im Zitat
+    >>> Hier ist ein Zitat im Zitat im Zitat
+
+Links erstellen:
+
+    [Link zu Seite](/help/how-to-make-website) 
+    [Link zu Webseite](http://datenstrom.se)  
+    https://en.wikipedia.org/wiki/Markdown
+
+Ein Bild hinzufügen:
+
+    ![image](picture.jpg)
+
+Emoji hinzufügen, mit Hilfe eines [Plugins](https://github.com/datenstrom/yellow-plugins/tree/master/emojiawesome):
+
+    :smile: :grinning: :angry: :heart: :coffee: :+1:
+
+## Abkürzungen
+
+`[image picture.jpg]` = [Bilder und Thumbnails](https://github.com/datenstrom/yellow-plugins/tree/master/image) hinzufügen  
+`[gallery photo.*jpg - 20%]` = [Bildergallerie](https://github.com/datenstrom/yellow-plugins/tree/master/gallery) hinzufügen  
+`[youtube fhs55HEl-Gc]` = [Youtube-Video](https://github.com/datenstrom/yellow-plugins/tree/master/youtube) einbinden  
+`[vimeo 13387502]` = [Vimeo-Video](https://github.com/datenstrom/yellow-plugins/tree/master/vimeo) einbinden  
+`[soundcloud 101175715]` = [Soundcloud-Audio](https://github.com/datenstrom/yellow-plugins/tree/master/soundcloud) einbinden  
+`[slideshare 37321279]` = [Slideshare-Präsentation](https://github.com/datenstrom/yellow-plugins/tree/master/slideshare) einbinden  
+`[googlemaps Stockholm]` = [Google-Maps](https://github.com/datenstrom/yellow-plugins/tree/master/googlemaps) einbinden  
+`[blogrecent /blog/]` = [neuste Blogseiten](https://github.com/datenstrom/yellow-plugins/tree/master/blog) anzeigen  
+`[wikirecent /wiki/]` = [neuste Wikiseiten](https://github.com/datenstrom/yellow-plugins/tree/master/wiki) anzeigen  
+`[yellow]` = [Software-Version](https://github.com/datenstrom/yellow-plugins/tree/master/core) anzeigen  
+
+## Einstellungen
+
+`Title` = Seitentitel  
+`TitleContent` = Seitentitel der im Inhalt angezeigt wird  
+`TitleNavigation` = Seitentitel der in der Navigation angezeigt wird  
+`TitleHeader` = Seitentitel der im Header benutzt wird  
+`Description` = Beschreibung der Seite  
+`Keywords` = Stichwörter der Seite, durch Komma getrennt  
+`Author` = Autoren der Seite, durch Komma getrennt  
+`Language` = Sprache der Seite  
+`Theme` = Theme der Seite  
+`Template` = Template der Seite  
+`Modified` = Änderungsdatum der Seite, [YYYY-MM-DD](yellow-api#date-format) Format  
+`Published` = Veröffentlichungsdatum der Seite, [YYYY-MM-DD](yellow-api#date-format) Format  
+`Tag` = Tags zur Kategorisierung der Seite, durch Komma getrennt  
+`Status` = Status für Arbeitsablauf  
+`Navigation` = Navigation der Seite  
+`Sidebar` = Seitenleiste der Seite  
+`Redirect` = neuer Ort oder URL  
+`Robots` = Robots-Meta-Daten die im Header benutzt werden  
+`Sitename` = Sitename der im Footer benutzt wird   
+`Parser` = Parser für Textdateien  

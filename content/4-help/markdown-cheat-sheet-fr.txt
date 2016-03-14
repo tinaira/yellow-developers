@@ -1,8 +1,10 @@
 ---
-Title: Markdown cheat sheet
-Sidebar: sidebar
-Language: en
+Title: Markdown antisèche
+Sidebar: sidebar-fr
+Language: fr
 ---
+>> [Todo: You can help us and translate this page](https://github.com/datenstrom/yellow-developers)
+
 Markdown is a practical way to edit web pages.
 
 ## Basics
