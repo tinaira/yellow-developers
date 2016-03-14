@@ -3,7 +3,7 @@ Title: Markdown cheat sheet
 Sidebar: sidebar
 Language: en
 ---
->> [Todo: You can help us and improve this page](https://github.com/datenstrom/yellow-developers)
+>> [Todo: You can help us and improve this page](https://github.com/datenstrom/yellow-developers/blob/master/content/4-help/markdown-cheat-sheet.txt).
 
 Markdown is a practical way to edit web pages.
 
@@ -31,7 +31,7 @@ Making a header:
     ## Header 2
     ### Header 3
 
-Making links
+Making links:
 
     [Link to page](/help/how-to-make-website) 
     [Link to website](http://datenstrom.se)  
@@ -49,7 +49,7 @@ For a list of available emoji see [emoji cheat sheet](http://emoji-cheat-sheet.c
 
 ## Shortcuts
 
-`[image picture.jpg]` = add [image and thumbnail](https://github.com/datenstrom/yellow-plugins/tree/master/image)  
+`[image picture.jpg]` = add [images and thumbnails](https://github.com/datenstrom/yellow-plugins/tree/master/image)  
 `[gallery photo.*jpg - 20%]` = add [image gallery](https://github.com/datenstrom/yellow-plugins/tree/master/gallery)  
 `[youtube fhs55HEl-Gc]` = embed [Youtube video](https://github.com/datenstrom/yellow-plugins/tree/master/youtube)  
 `[vimeo 13387502]` = embed [Vimeo video](https://github.com/datenstrom/yellow-plugins/tree/master/vimeo)  
