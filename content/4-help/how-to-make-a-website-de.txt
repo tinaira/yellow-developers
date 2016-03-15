@@ -26,13 +26,13 @@ Deine Webseite funktioniert!
 Du kannst [edit - diese Seite bearbeiten] oder einen Texteditor benutzen.
 ```
 
-Um eine neue Seite hinzuzufügen erstellst du eine neue Datei im Home-Verzeichnis oder einem anderen `content`-Verzeichnis. Den `Title` legst du ganz oben auf der Seite fest. Um die Navigation zu erweitern erstellst du ein neues Verzeichnis mit numerischen Präfix. Der Präfix bestimmt die Position in der Navigation. Hier ist noch ein Beispiel:
+Um eine neue Seite hinzuzufügen, erstellst du eine neue Datei im Home-Verzeichnis oder einem anderen `content`-Verzeichnis. Den `Title` legst du ganz oben auf der Seite fest. Um die Navigation zu erweitern, erstellst du ein neues Verzeichnis mit numerischen Präfix. Das Präfix bestimmt die Position in der Navigation. Hier ist noch ein Beispiel:
 
 ```
 ---
 Title: Yellow ist für Menschen die Webseiten machen
 ---
-Du kannst [edit - diese Seite bearbeiten]. Die Hilfe gibt die weitere 
+Du kannst [edit - diese Seite bearbeiten]. Die Hilfe gibt dir weitere 
 Informationen wie man kleine Webseiten, Blogs und Wikis erstellt.
 ```
 
@@ -44,7 +44,7 @@ Title: Yellow ist für Menschen die Webseiten machen
 ---
 [image yellow.jpg]
 
-Du kannst [edit - diese Seite bearbeiten]. Die Hilfe gibt die weitere 
+Du kannst [edit - diese Seite bearbeiten]. Die Hilfe gibt dir weitere 
 Informationen wie man kleine Webseiten, Blogs und Wikis erstellt.
 ```
 
@@ -57,7 +57,7 @@ TitleNavigation: Home
 ---
 [image yellow.jpg]
 
-Du kannst [edit - diese Seite bearbeiten]. Die Hilfe gibt die weitere 
+Du kannst [edit - diese Seite bearbeiten]. Die Hilfe gibt dir weitere 
 Informationen wie man kleine Webseiten, Blogs und Wikis erstellt.
 ```
 

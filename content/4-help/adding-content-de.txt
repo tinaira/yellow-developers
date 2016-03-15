@@ -7,17 +7,17 @@ Alle Inhalte befinden sich im `content`-Verzeichnis. Hier aktualisierst du deine
 
 [image screenshot-content.png Screenshot]
 
-Die [Installation von Yellow](https://github.com/datenstrom/yellow) kommt mit zwei Seiten. Das ist nur ein Beispiel um loszulegen, verändere alles so wie du willst. Alle `content`-Verzeichnisse stehen auf deiner Webseite zur Verfügung. In jedem Verzeichnis gibt es eine Datei mit Namen `page.txt` oder dem Namen des Verzeichnisses. Man kann auch weitere Textdateien hinzufügen. Im Prinzip ist das was du im Dateimanager siehst die Webseite die du bekommst.
+Die [Installation von Yellow](https://github.com/datenstrom/yellow) kommt mit zwei Seiten. Das ist nur ein Beispiel um loszulegen. Verändere alles so wie du willst. Alle `content`-Verzeichnisse stehen auf deiner Webseite zur Verfügung. In jedem Verzeichnis gibt es eine Datei mit Namen `page.txt` oder dem Namen des Verzeichnisses. Man kann auch weitere Textdateien hinzufügen. Im Prinzip ist das, was du im Dateimanager siehst, die Webseite die du bekommst.
 
 Dateien und Verzeichnisse
 -------------------------
-Die Navigation wird automatisch aus deinen `content`-Verzeichnissen erstellt. Es werden nur Verzeichnisse mit einem Präfix in der Navigation angezeigt. Verzeichnisse mit Präfix sind für sichtbare Seiten, Verzeichnisse ohne Präfix sind für unsichtbare Seiten. Der Unterschied ist dass nur die sichtbaren Seiten in Navigation und Suche auftauchen. Alle Dateien und Verzeichnisse können einen Präfix benutzen:
+Die Navigation wird automatisch aus deinen `content`-Verzeichnissen erstellt. Es werden nur Verzeichnisse mit einem Präfix in der Navigation angezeigt. Verzeichnisse mit Präfix sind für sichtbare Seiten, Verzeichnisse ohne Präfix sind für unsichtbare Seiten. Der Unterschied ist, dass nur die sichtbaren Seiten in Navigation und Suche auftauchen. Alle Dateien und Verzeichnisse können ein Präfix benutzen:
 
-1. Verzeichnisse können einen numerischen Präfix haben, z.B. `1-home` `2-about`
-2. Dateien können einen Datumspräfix haben, z.B. `2013-04-07-blog-example.txt`
-3. Ohne Präfix bedeutet es gibt keine besondere Reihenfolge, z.B. `wiki-page.txt`
+1. Verzeichnisse können ein numerisches Präfix haben, z.B. `1-home` oder `2-about`
+2. Dateien können ein Datumspräfix haben, z.B. `2013-04-07-blog-example.txt`
+3. Ohne Präfix gibt es keine besondere Reihenfolge, z.B. `wiki-page.txt`
 
-Präfix und Suffix werden aus der Adresse entfernt, damit es besser aussieht. Zum Beispiel ist das Verzeichnis `content/2-about/` vorhanden als `http://website/about/`. Die Datei `content/2-about/contact.txt` wird zu `http://website/about/contact`.
+Präfixe und Suffixe werden aus der Adresse entfernt, damit es besser aussieht. Zum Beispiel ist das Verzeichnis `content/2-about/` vorhanden als `http://website/about/`. Die Datei `content/2-about/contact.txt` wird zu `http://website/about/contact`.
 
 Textdateien
 -----------

@@ -20,7 +20,7 @@ Die zentrale Konfigurationsdatei ist `system/config/config.ini`. Hier ist ein Be
 
 Dort kann man die Standardeinstellungen festlegen. Die individuellen Einstellungen lassen sich oben auf jeder Seite festlegen. Bei einer neuen Installation sollte man `Sitename`, `Author` und `Language` anpassen.
 
-Falls Probleme auftreten wird eine Fehlerseite angezeigt. Wenn der Webbrowser eine Datei anfragt die der Webserver nicht finden kann wird "File not found" angezeigt. Die Datei `system/config/page-error-404.txt` legt fest wie eine fehlende Datei aussieht.
+Falls Probleme auftreten wird eine Fehlerseite angezeigt. Wenn der Webbrowser eine Datei anfragt die der Webserver nicht finden kann wird "File not found" ausgegeben. Die Datei `system/config/page-error-404.txt` legt fest wie eine fehlende Datei aussieht.
 
 Erweiterungen
 -------------

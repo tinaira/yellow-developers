@@ -77,7 +77,7 @@ server {
 
 ## Statische Webseite
 
-Yellow ist ein Flat-File-CMS und ein Static-Site-Generator. Um statische Seiten zu erstellen führt man einen Build-Befehl im Verzeichnis aus in dem sich die Yellow-Installation befindet und man bekommt dann eine komplett statische Webseite erstellt.
+Yellow ist ein Flat-File-CMS und ein Static-Site-Generator. Um statische Seiten zu erstellen führe einen Build-Befehl im Verzeichnis der Yellow-Installation aus. Daraufhin wird eine komplett statische Webseite erstellt.
 
 Du kannst statische Seiten in der [Befehlszeile](https://github.com/datenstrom/yellow-plugins/tree/master/commandline) erstellen:
 
@@ -93,7 +93,7 @@ Als Alternative zu einer statischen Webseite kann man auch einzelne Webseiten zu
 
 ## Eigene 404-Seite
 
-Wenn der Webbrowser eine Datei anfragt die der Webserver nicht finden kann wird "File not found" angezeigt. Die Datei `system/config/page-error-404.txt` legt fest wie eine fehlende Datei aussieht. Hier ist ein Beispiel:
+Wenn der Webbrowser eine Datei anfragt die der Webserver nicht finden kann wird "File not found" ausgegeben. Die Datei `system/config/page-error-404.txt` legt fest wie eine fehlende Datei aussieht. Hier ist ein Beispiel:
 
 ~~~~
 ---
@@ -102,7 +102,7 @@ Title: File not found
 The requested file was not found. Oh no...
 ~~~~
 
-Falls du Yellow als Flat-File-CMS benutzt dann gibt es nichts weiteres zu tun. Falls du Yellow als Static-Site-Generator benutzt dann gibt es einen zusätzlichen Schritt. Konfiguriere deinen Webserver so dass er deine eigene Fehlerseite anzeigt statt der eingebauten 404-Seite.
+Falls du Yellow als Flat-File-CMS benutzt, gibt es nichts weiteres zu tun. Falls du Yellow als Static-Site-Generator benutzt, gibt es einen zusätzlichen Schritt. Konfiguriere deinen Webserver so, dass er deine eigene Fehlerseite anzeigt statt der eingebauten 404-Seite.
 
 Bei [Apache](http://httpd.apache.org) fügt man das Folgende zur Konfigurationsdatei hinzu:
 

@@ -8,7 +8,7 @@ Hier ist beschrieben wie man eine Webseite mit besserer Sicherheit konfiguriert.
 
 ## Sicherer Server
 
-Überprüfe ob dein Webserver [HTTPS](https://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol_Secure) unterstützt und ob die Internetverbindung verschlüsselt ist. Am Besten ist es wenn deine Webseite nur über HTTPS erreichbar ist. Damit wird dein Benutzerkonto vor Diebstahl geschützt, jedoch wird es nicht von allen Webhoster unterstützt.
+Überprüfe ob dein Webserver [HTTPS](https://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol_Secure) unterstützt und ob die Internetverbindung verschlüsselt ist. Am Besten ist es wenn deine Webseite nur über HTTPS erreichbar ist. Damit wird dein Benutzerkonto vor Diebstahl geschützt, jedoch wird es nicht von allen Webhostern unterstützt.
 
 Du brauchst einen Webserver mit SSL/TLS und gültigem Zertifikat.
 

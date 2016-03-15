@@ -26,7 +26,7 @@ Eine Deutsche Seite:
 Title: Über uns
 Language: de
 ---
-Wo zusammenwächst was zusammen gehört.
+Wo zusammenwächst, was zusammen gehört.
 ```
 
 Eine Französische Seite:
@@ -49,7 +49,7 @@ Der Screenshot zeigt die Verzeichnisse `1-en`, `2-de` und `3-fr`. Das erzeugt di
 
 [image screenshot-language2.png Screenshot]
 
-Der zweite Screenshot zeigt die Verzeichnisse `1-en`, `2-de`, `3-fr` und `default`. Das erzeugt die folgenden URLs `http://website/en/` `http://website/de/` `http://website/fr/` und eine Startseite `http://website/` welche automatisch die Sprache des Besuchers entdeckt. 
+Der zweite Screenshot zeigt die Verzeichnisse `1-en`, `2-de`, `3-fr` und `default`. Das erzeugt die folgenden URLs `http://website/en/` `http://website/de/` `http://website/fr/` und eine Startseite `http://website/` welche automatisch die Sprache des Besuchers ermittelt. 
 
 Wenn man die [Navigation anpassen](yellow-templates-de#custom-navigation) will, öffnet man die Datei `system/config/config.ini` und ändert `Navigation: navigation-multilanguage`. Du kannst auch eine Sprachauswahl irgendwo anders in deine Webseite einbauen.
 

@@ -11,7 +11,7 @@ Alle `media`-Verzeichnisse stehen auf deiner Webseite zur Verfügung. Das `downl
 
 Bilder
 ------
-Hier ist beschreiben wie man Bilder auf einer Seite verwendet. Öffne die Datei `content/1-home/page.txt` in deinem Lieblingseditor. Füge `![image](icon.png)` zum Text der Seite hinzu. Die Startseite zeigt jetzt das Icon deiner Webseite an. 
+Hier ist beschreiben wie man Bilder auf einer Seite verwendet. Öffne die Datei `content/1-home/page.txt` in deinem Lieblingseditor und füge `![image](icon.png)` zum Text der Seite hinzu. Die Startseite zeigt jetzt das Icon deiner Webseite an. 
 
 `![image](icon.png)` zeigt `http://website/media/images/icon.png`  
 `![image](picture.jpg)` zeigt `http://website/media/images/picture.jpg`  
