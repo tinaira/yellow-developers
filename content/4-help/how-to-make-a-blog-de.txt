@@ -17,7 +17,7 @@ The main configuration for your blog is file `system/config/config.ini`. You can
  
 ## Writing blog pages
 
-Have a look inside your `content` folder, there's the blog folder with all your blog pages. Open the file `2013-04-07-blog-example.txt`. You'll see settings and text of the page. You can change `Title` and other [settings](yellow-api#meta-data) at the top of a page. Here's an example:
+Have a look inside your `content` folder, there's the blog folder with all your blog pages. Open the file `2013-04-07-blog-example.txt`. You'll see settings and text of the page. You can change `Title` and other [settings](markdown-cheat-sheet#settings) at the top of a page. Here's an example:
 
 ```
 ---
@@ -82,6 +82,8 @@ Do you fika? [--more--]
 
 [youtube aS52d3hcHfs]
 ```
+
+You can write blog pages in [Markdown](markdown-cheat-sheet).
 
 ## Creating a sidebar
 

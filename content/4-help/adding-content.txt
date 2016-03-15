@@ -21,7 +21,7 @@ Prefix and suffix are removed from the location, so that it looks better. For ex
 
 Text files
 ----------
-Let's have a closer look at text files. Open the file `content/1-home/page.txt` in your favorite text editor. You'll see settings and text of the page. You can change `Title` and other [settings](yellow-api#meta-data) at the top of a page. Here's an example:
+Let's have a closer look at text files. Open the file `content/1-home/page.txt` in your favorite text editor. You'll see settings and text of the page. You can change `Title` and other [settings](markdown-cheat-sheet#settings) at the top of a page. Here's an example:
 
     ---
     Title: Home
@@ -30,7 +30,7 @@ Let's have a closer look at text files. Open the file `content/1-home/page.txt` 
     
     You can now [edit this page] or use your text editor.
 
-You can write pages in [Markdown](http://en.wikipedia.org/wiki/Markdown) and HTML. Markdown is a practical way to edit web pages. For the most part, write text like an email and it becomes a web page. Here's an example how to format text:
+You can write pages in [Markdown](markdown-cheat-sheet). Markdown is a practical way to edit web pages. For the most part, write text like an email and it becomes a web page. Here's an example how to format text:
 
     Normal *italic* **bold** `code`
 

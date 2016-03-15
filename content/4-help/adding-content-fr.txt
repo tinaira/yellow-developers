@@ -21,7 +21,7 @@ Préfixe et suffixe sont retirés de l'url afin de rendre la navigation meilleur
 
 Fichiers texte
 --------------
-Regardons de plus près les fichiers texte. Ouvrez le fichier `content/1-home/page.txt` dans votre éditeur de texte préféré. Vous y verrez la configuration et le texte pour la page. Vous pouvez modifier le titre `Title` et ajouter d'autres [paramètres](yellow-api#meta-data) en haut de la page. Voici un exemple:
+Regardons de plus près les fichiers texte. Ouvrez le fichier `content/1-home/page.txt` dans votre éditeur de texte préféré. Vous y verrez la configuration et le texte pour la page. Vous pouvez modifier le titre `Title` et ajouter d'autres [paramètres](markdown-cheat-sheet-fr#paramètres) en haut de la page. Voici un exemple:
 
     ---
     Title: Accueil
@@ -30,7 +30,7 @@ Regardons de plus près les fichiers texte. Ouvrez le fichier `content/1-home/pa
     
     Vous pouvez [edit - modifier cette page] ou utilisez un éditeur de texte.
 
-Vous pouvez écrire vos pages avec [Markdown](http://fr.wikipedia.org/wiki/Markdown) ou en HTML. Markdown est un moyen pratique pour éditer des pages Web. En gros, il suffit d'écrire du texte comme si vous écriviez une adresse e-mail et il se transforme en une page web. Voici quelques exemples de syntaxe Markdown:
+Vous pouvez écrire vos pages avec [Markdown](markdown-cheat-sheet-fr). Markdown est un moyen pratique pour éditer des pages web. En gros, il suffit d'écrire du texte comme si vous écriviez une adresse e-mail et il se transforme en une page web. Voici quelques exemples de syntaxe Markdown:
 
     Normal *italique* **gras** `code`
 

@@ -15,7 +15,7 @@ Die zentrale Konfigurationsdatei ist `system/config/config.ini`. Dort kann man d
 
 ## Webseiten schreiben
 
-Lass uns einen Blick ins `content`-Verzeichnis werfen, hier sind alle Webseiten. Öffne die Datei `content/1-home/page.txt`. Es werden Einstellungen und Text der Seite angezeigt. Ganz oben auf der Seite kannst du `Title` und weitere [Einstellungen](yellow-api#meta-data) ändern. Hier ist ein Beispiel:
+Lass uns einen Blick ins `content`-Verzeichnis werfen, hier sind alle Webseiten. Öffne die Datei `content/1-home/page.txt`. Es werden Einstellungen und Text der Seite angezeigt. Ganz oben auf der Seite kannst du `Title` und weitere [Einstellungen](markdown-cheat-sheet-de#einstellungen) ändern. Hier ist ein Beispiel:
 
 ```
 ---
@@ -26,7 +26,7 @@ Deine Webseite funktioniert!
 Du kannst [edit - diese Seite bearbeiten] oder einen Texteditor benutzen.
 ```
 
-Um eine neue Seite hinzuzufügen erstellst du eine neue Datei im Home-Verzeichnis oder einem anderen `content`-Verzeichnis. Den `Title` legst du ganz oben auf der Seite fest. Um die Navigation zu erweitern erstellst du ein neues `content`-Verzeichnis mit numerischen Präfix. Hier ist noch ein Beispiel:
+Um eine neue Seite hinzuzufügen erstellst du eine neue Datei im Home-Verzeichnis oder einem anderen `content`-Verzeichnis. Den `Title` legst du ganz oben auf der Seite fest. Um die Navigation zu erweitern erstellst du ein neues Verzeichnis mit numerischen Präfix. Der Präfix bestimmt die Position in der Navigation. Hier ist noch ein Beispiel:
 
 ```
 ---
@@ -61,7 +61,7 @@ Du kannst [edit - diese Seite bearbeiten]. Die Hilfe gibt die weitere
 Informationen wie man kleine Webseiten, Blogs und Wikis erstellt.
 ```
 
-Ganz oben auf der Seite kannst du weitere [Einstellungen](yellow-api#meta-data) ändern. 
+Du kannst Seiten mit [Markdown](markdown-cheat-sheet-de) schreiben. 
 
 ## Sidebar erstellen
 

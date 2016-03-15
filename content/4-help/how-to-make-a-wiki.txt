@@ -15,7 +15,7 @@ The main configuration for your wiki is file `system/config/config.ini`. You can
 
 ## Writing wiki pages
 
-Have a look inside your `content` folder, there's the wiki folder with all your wiki pages. Open the file `wiki-page.txt`. You'll see settings and text of the page. You can change `Title` and other [settings](yellow-api#meta-data) at the top of a page. Here's an example:
+Have a look inside your `content` folder, there's the wiki folder with all your wiki pages. Open the file `wiki-page.txt`. You'll see settings and text of the page. You can change `Title` and other [settings](markdown-cheat-sheet#settings) at the top of a page. Here's an example:
 
 ```
 ---
@@ -47,6 +47,8 @@ coffee, French press, Moka pot, Turkish coffee and many more. Find out
 what's your favorite.
 3. Enjoy.
 ```
+
+You can write wiki pages in [Markdown](markdown-cheat-sheet).
 
 ## Creating a sidebar
 

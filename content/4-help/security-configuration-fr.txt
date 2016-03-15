@@ -21,7 +21,7 @@ You can [test restrictions](http://developers.datenstrom.se), log in with `guest
 
 ## Safe mode
 
-If you have more than one person editing a website, enable safe mode and only [Markdown](http://en.wikipedia.org/wiki/Markdown) is possible for text formatting. This protects your website from unwanted content, but it also disables [HTML](http://en.wikipedia.org/wiki/HTML) and [JavaScript](http://en.wikipedia.org/wiki/JavaScript) in page content.
+If you have more than one person editing a website, enable safe mode and only [Markdown](markdown-cheat-sheet) is possible for text formatting. This protects your website from unwanted content, but it also disables HTML and JavaScript in page content.
 
 Open file `system/config/config.ini` and change `ParserSafeMode: 1`.
 

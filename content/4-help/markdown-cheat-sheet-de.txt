@@ -58,9 +58,9 @@ Emoji hinzufügen, mit Hilfe eines [Plugins](https://github.com/datenstrom/yello
 `[soundcloud 101175715]` = [Soundcloud-Audio](https://github.com/datenstrom/yellow-plugins/tree/master/soundcloud) einbinden  
 `[slideshare 37321279]` = [Slideshare-Präsentation](https://github.com/datenstrom/yellow-plugins/tree/master/slideshare) einbinden  
 `[googlemaps Stockholm]` = [Google-Maps](https://github.com/datenstrom/yellow-plugins/tree/master/googlemaps) einbinden  
-`[blogrecent /blog/]` = [neuste Blogseiten](https://github.com/datenstrom/yellow-plugins/tree/master/blog) anzeigen  
-`[wikirecent /wiki/]` = [neuste Wikiseiten](https://github.com/datenstrom/yellow-plugins/tree/master/wiki) anzeigen  
-`[yellow]` = [Software-Version](https://github.com/datenstrom/yellow-plugins/tree/master/core) anzeigen  
+`[blogrecent /blog/]` = [neuste Blogseiten](https://github.com/datenstrom/yellow-plugins/tree/master/blog#how-to-configure-a-blog) anzeigen  
+`[wikirecent /wiki/]` = [neuste Wikiseiten](https://github.com/datenstrom/yellow-plugins/tree/master/wiki#how-to-configure-a-wiki) anzeigen  
+`[toc]` = [Inhaltsübersicht](https://github.com/datenstrom/yellow-plugins/tree/master/toc) anzeigen  
 
 ## Einstellungen
 

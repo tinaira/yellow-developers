@@ -21,7 +21,7 @@ Präfix und Suffix werden aus der Adresse entfernt, damit es besser aussieht. Zu
 
 Textdateien
 -----------
-Lass uns einen Blick auf Textdateien werfen. Öffne die Datei `content/1-home/page.txt` in deinem Lieblingseditor. Es werden Einstellungen und Text der Seite angezeigt. Ganz oben auf der Seite kannst du `Title` und weitere [Einstellungen](yellow-api#meta-data) ändern. Hier ist ein Beispiel:
+Lass uns einen Blick auf Textdateien werfen. Öffne die Datei `content/1-home/page.txt` in deinem Lieblingseditor. Es werden Einstellungen und Text der Seite angezeigt. Ganz oben auf der Seite kannst du `Title` und weitere [Einstellungen](markdown-cheat-sheet-de#einstellungen) ändern. Hier ist ein Beispiel:
 
     ---
     Title: Home
@@ -30,7 +30,7 @@ Lass uns einen Blick auf Textdateien werfen. Öffne die Datei `content/1-home/pa
     
     Du kannst [edit - diese Seite bearbeiten] oder einen Texteditor benutzen.
 
-Du kannst Seiten mit [Markdown](http://de.wikipedia.org/wiki/Markdown) und HTML schreiben. Markdown ist eine praktische Art um Webseiten zu bearbeiten. Zum größten Teil schreibt man Text wie eine E-Mail und es wird zur Webseite. Hier ist ein Beispiel wie man Text formatiert:
+Du kannst Seiten mit [Markdown](markdown-cheat-sheet-de) schreiben. Markdown ist eine praktische Art um Webseiten zu bearbeiten. Zum größten Teil schreibt man Text wie eine E-Mail und es wird zur Webseite. Hier ist ein Beispiel wie man Text formatiert:
 
     Normal *Kursiv* **Fettschrift** `Code`
 

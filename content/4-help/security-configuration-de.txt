@@ -20,7 +20,7 @@ Du kannst [Beschränkungen testen](http://developers.datenstrom.se), einloggen m
 
 ## Abgesicherter Modus
 
-Falls mehrere Person eine Webseite bearbeiten, aktiviere den abgesicherten Modus und nur [Markdown](http://de.wikipedia.org/wiki/Markdown) ist möglich. Damit wird deine Webseite vor unerwünschten Inhalten geschützt, jedoch wird gleichzeitig auch [HTML](https://de.wikipedia.org/wiki/Hypertext_Markup_Language) and [JavaScript](http://de.wikipedia.org/wiki/JavaScript) im Seiteninhalt deaktiviert.
+Falls mehrere Person eine Webseite bearbeiten, aktiviere den abgesicherten Modus und nur [Markdown](markdown-cheat-sheet-de) ist möglich. Damit wird deine Webseite vor unerwünschten Inhalten geschützt, jedoch wird gleichzeitig auch HTML and JavaScript im Seiteninhalt deaktiviert.
 
 Öffne die Datei `system/config/config.ini` und ändere `ParserSafeMode: 1`.
 

@@ -17,7 +17,7 @@ The main configuration for your website is file `system/config/config.ini`. You 
 
 ## Writing web pages
 
-Have a look inside your `content` folder, here are all your web pages. Open the file `content/1-home/page.txt`. You'll see settings and text of the page. You can change `Title` and other [settings](yellow-api#meta-data) at the top of a page. Here's an example:
+Have a look inside your `content` folder, here are all your web pages. Open the file `content/1-home/page.txt`. You'll see settings and text of the page. You can change `Title` and other [settings](markdown-cheat-sheet#settings) at the top of a page. Here's an example:
 
 ```
 ---
@@ -63,7 +63,7 @@ You can [edit this page]. The help gives you more information
 about how to create small web pages, blogs and wikis.
 ```
 
-You can add more [settings](yellow-api#meta-data) at the top of a page.
+You can write pages in [Markdown](markdown-cheat-sheet).
 
 ## Creating a sidebar
 

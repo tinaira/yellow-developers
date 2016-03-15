@@ -24,13 +24,13 @@ The following objects are available:
 Yellow page gives access to current page:
 
 **$yellow->page->get($key)**  
-Return page [meta data](#meta-data)  
+Return page meta data, [see notes about meta data](#notes) 
 
 **$yellow->page->getHtml($key)**  
-Return page [meta data](#meta-data), HTML encoded  
+Return page meta data, HTML encoded  
 
 **$yellow->page->getDate($key, $dateFormat = "")**  
-Return page [meta data](#meta-data) as [language specific date](#date-format)  
+Return page meta data as [language specific date](#date-format)  
 
 **$yellow->page->getContent($rawFormat = false)**  
 Return page content, HTML encoded or raw format
@@ -102,7 +102,7 @@ Check if page with error
 Check if response header exists
 
 **$yellow->page->isExisting($key)**  
-Check if page [meta data](#meta-data) exists  
+Check if page meta data exists  
 
 **$yellow->page->isPage($key)**  
 Check if related page exists  
@@ -112,13 +112,13 @@ Check if related page exists
 Yellow page collection gives access to these functions:
 
 **$pages->filter($key, $value, $exactMatch = true)**  
-Filter page collection by [meta data](#meta-data)  
+Filter page collection by meta data  
 
 **$pages->sort($key, $ascendingOrder = true)**  
-Sort page collection by [meta data](#meta-data)  
+Sort page collection by meta data  
 
 **$pages->similar($page, $ascendingOrder = false)**  
-Sort page collection by [meta data](#meta-data) similarity
+Sort page collection by meta data similarity
 
 **$pages->merge($input)**  
 Merge page collection
@@ -274,7 +274,7 @@ Handle initialisation
 Handle request
 
 **function onParseMeta($page)**  
-Handle page [meta data](#meta-data) parsing
+Handle page meta data parsing
 
 **function onParseContentRaw($page, $text)**  
 Handle page content parsing of raw format
@@ -299,36 +299,6 @@ Handle [command](https://github.com/datenstrom/yellow-plugins/tree/master/comman
 
 **function onCommandHelp()**  
 Handle [command help](https://github.com/datenstrom/yellow-plugins/tree/master/commandline)
-
-Meta data
----------
-The following settings are available:
-
-`title` = page title  
-`titleContent` = page title shown in content  
-`titleNavigation` = page title shown in navigation  
-`titleHeader` = page title used in header  
-`description` = page description  
-`keywords` = page keyword(s), comma separated  
-`author` = page author(s), comma separated  
-`language` = page language  
-`theme` = page theme  
-`template` = page template  
-`modified` = page modification date, [YYYY-MM-DD](#date-format) format  
-`published` = page publication date, [YYYY-MM-DD](#date-format) format  
-`tag` = page tag(s) for categorisation, comma separated  
-`status` = page status for workflow  
-`navigation` = page navigation  
-`sidebar` = page sidebar  
-`redirect` = new location or URL  
-`robots` = robots meta data used in header  
-`sitename` = sitename used in header and footer  
-`parser` = parser for text files  
-`pageRead` = URL for reading page  
-`pageEdit` = URL for editing page  
-`pageError` = description for error page  
-`pageFile` = file name of page  
-`pageType` = file extension  
 
 Date format
 -----------
@@ -387,9 +357,9 @@ Some tips for Yellow developers:
 
 1. Put your code on GitHub. Create a new repository for each new plugin/theme, the name of your repository should be `yellow-type-something` or `yellow-something`. The idea is to keep experimental plugins separate from the stable ones and take the stress away from developers. We're looking forward to see what you create. [Read more](https://github.com/datenstrom/yellow-plugins/blob/master/README.md).
 
-2. Yellow works with relative locations, this means relative to your `ServerBase`. In your own code you can use `$yellow->page->location` to access the relative page location and `$yellow->page->getLocation()` to access the absolute page location. This is known to not be a good solution and will be changed. [Read more](https://github.com/datenstrom/yellow/issues/127).
+2. Meta data, configuration and text strings are stored starting with a upper case character, for example `Title`. The internal data starts with a lower case character and it's converted when loading from files. Which means your code has to use a lowercase name, for example `title`. This is known to cause confusion. [Read more](https://github.com/datenstrom/yellow/issues/126).
 
-3. Configuration, text and settings are stored starting with a upper case character, for example `Title`. The internal data starts with a lower case character and it's converted when loading from files. Which means your code has to use a lowercase name, for example `title`. This is known to cause confusion. [Read more](https://github.com/datenstrom/yellow/issues/126).
+3. Yellow works with relative locations, this means relative to your `ServerBase`. In your own code you can use `$yellow->page->location` to access the relative page location and `$yellow->page->getLocation()` to access the absolute page location. This is known to not be a good solution and will be changed. [Read more](https://github.com/datenstrom/yellow/issues/127).
 
 4. Additional HTML data can be inserted via function `onExtra()`, for example to add HTML headers. At the moment this works only for the current page `$yellow->page`. What's missing is a mechanism to insert HTML data to pages in a loop, for example in content snippets. This is something to be improved.
 
