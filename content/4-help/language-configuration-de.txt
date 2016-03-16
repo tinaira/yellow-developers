@@ -3,7 +3,7 @@ Title: Spracheinstellungen
 Sidebar: sidebar-de
 Language: de
 ---
-Hier ist beschrieben wie man eine Webseite mit verschiedenen Sprachen konfiguriert.
+Wie man eine Webseite mit verschiedenen Sprachen konfiguriert.
 
 ## Sprachen
 

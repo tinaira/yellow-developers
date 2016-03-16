@@ -8,8 +8,8 @@ Yellow has an API for developers. We :heart: developers.
 
 [toc]
 
-Objects
--------
+## Objects
+
 The following objects are available:
 
 [$yellow->page](#yellow-page) gives access to current page  
@@ -30,7 +30,7 @@ Return page meta data, [see notes about meta data](#notes)
 Return page meta data, HTML encoded  
 
 **$yellow->page->getDate($key, $dateFormat = "")**  
-Return page meta data as [language specific date](#date-format)  
+Return page meta data as [language specific date](#date-formats)  
 
 **$yellow->page->getContent($rawFormat = false)**  
 Return page content, HTML encoded or raw format
@@ -263,8 +263,8 @@ Check if language exists
 **$yellow->text->isExisting($key, $language = "")**  
 Check if text string exists
 
-Events
-------
+## Events
+
 The following plugin events are available:
 
 **function onLoad($yellow)**  
@@ -300,8 +300,8 @@ Handle [command](https://github.com/datenstrom/yellow-plugins/tree/master/comman
 **function onCommandHelp()**  
 Handle [command help](https://github.com/datenstrom/yellow-plugins/tree/master/commandline)
 
-Date format
------------
+## Date formats
+
 The following date formats are available: 
 
 `YYYY-MM-DD` = date starting with the year, e.g. `2013-04-07`  
@@ -313,8 +313,8 @@ When dates are displayed they are converted to a language specific date:
 `dateFormatMedium` = medium date, e.g. `2013-04-07` or `07.04.2013`  
 `dateFormatLong` = long date, e.g. `2013-04-07 11:30`   
 
-Debugging
----------
+## Debugging
+
 Open the file `system/plugins/core.php`, change first line to `<?php define("DEBUG", 1);`  
 
 ```
@@ -351,8 +351,8 @@ YellowConfig::load language:en
 ...
 ```
 
-Notes
------
+## Notes
+
 Some tips for Yellow developers: 
 
 1. Put your code on GitHub. Create a new repository for each new plugin/theme, the name of your repository should be `yellow-type-something` or `yellow-something`. The idea is to keep experimental plugins separate from the stable ones and take the stress away from developers. We're looking forward to see what you create. [Read more](https://github.com/datenstrom/yellow-plugins/blob/master/README.md).

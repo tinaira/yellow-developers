@@ -4,7 +4,7 @@ Sidebar: sidebar-de
 Language: de
 ---
 
-Hier ist beschrieben wie man eine Webseite mit besserer Sicherheit konfiguriert.
+Wie man eine Webseite mit besserer Sicherheit konfiguriert.
 
 ## Sicherer Server
 

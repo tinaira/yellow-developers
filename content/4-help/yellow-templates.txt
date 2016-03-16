@@ -5,8 +5,8 @@ Language: en
 ---
 Customise the functionality of your website.
 
-Templates
----------
+## Templates
+
 Templates define the functionality of your website. Let's see how templates are made in Yellow. There's a default template defined in file `system/config/config.ini`. A different template can be defined in the [settings](markdown-cheat-sheet#settings) at the top of each page, for example `Template: default`.
 
 Here's an example template file `system/themes/templates/default.html`:
@@ -16,7 +16,7 @@ Here's an example template file `system/themes/templates/default.html`:
     <?php $yellow->snippet("content-main") ?>
     <?php $yellow->snippet("footer") ?>
 
-Snippets are the building blocks of your website. They are small pieces of [PHP](https://en.wikipedia.org/wiki/PHP) code, written with some help of the [Yellow API](yellow-api). You can put everything into one template, but it's often more practical to split things up into multiple files and reuse them. 
+Snippets are the building blocks of your website. They are small pieces of [PHP](https://en.wikipedia.org/wiki/PHP) code, written with some help of the [Yellow API](yellow-api). You can put everything into one template, but it's often more practical to split code up into multiple snippets and reuse them. 
 
 Here's an example snippet file `system/themes/snippets/content-main.php`:
 
@@ -25,9 +25,9 @@ Here's an example snippet file `system/themes/snippets/content-main.php`:
     <?php echo $yellow->page->getContent() ?>
     </div>
 
-Custom template
----------------
-To use a custom template set the `Template` setting at the top of a page. You can also create a template with the name of a content folder and it will be automatically used. This allows you to put your own code into Yellow and generate any [HTML](http://en.wikipedia.org/wiki/HTML) code you want. 
+## Custom template
+
+To use a custom template set the `Template` setting at the top of a page. You can also create a template with the name of a `content` folder and it will be automatically used. This allows you to develop your own code and generate any [HTML](http://en.wikipedia.org/wiki/HTML) code with Yellow. 
 
 Here's an example template file `system/themes/templates/home.html`:
 
@@ -44,9 +44,9 @@ Here's an example snippet file `system/themes/snippets/content-home.php`:
     <?php /* Add more PHP code here */ ?>
     </div>
 
-Custom navigation
------------------
-To use a custom navigation open file `system/config/config.ini` and change the `Navigation` setting. A different navigation can be defined in the [settings](markdown-cheat-sheet#settings) at the top of each page, for example `Navigation: navigation`. You can also create your own navigation snippet.
+## Custom navigation
+
+To adjust the navigation open file `system/config/config.ini` and change the `Navigation` setting. A different navigation can be defined in the [settings](markdown-cheat-sheet#settings) at the top of each page, for example `Navigation: navigation`.
 
 The following navigations are available:
 
@@ -70,9 +70,9 @@ Here's an example snippet file `system/themes/snippets/navigation.php`:
     </div>
     <div class="navigation-banner"></div>
 
-Custom sidebar
---------------
-To use a custom sidebar add the file `sidebar.txt` to a `content` folder. The sidebar is automatically shown on all pages in the same folder. If you want a page with a different sidebar, set the `Sidebar` setting at the top of a page. 
+## Custom sidebar
+
+To create a sidebar add the file `sidebar.txt` to a `content` folder. The sidebar is automatically shown on all pages in the same folder. A different sidebar can be defined in the [settings](markdown-cheat-sheet#settings) at the top of each page.
 
 Here's an example sidebar file `content/1-home/sidebar.txt`:
 

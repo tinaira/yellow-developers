@@ -9,8 +9,8 @@ Tout les paramètres se trouvent dans le dossier `system`. Ici vous pouvez faire
 
 Le dossier `config` contient les fichiers de configurations. Le dossier `plugins` contient l'application Yellow. Le dossier `themes` concerne l'aspect visuel de votre site web. Apporter des changements dans ces dossiers affectera entièrement votre site web.
 
-Configuration
--------------
+## Configuration
+
 Le fichier de configuration principal est `system/config/config.ini`. Voici un exemple:
 
     Sitename: Anna Svensson Design
@@ -22,8 +22,8 @@ Vous pouvez y définir les paramètres par défaut pour votre site web. Les para
 
 Quand quelque chose ne marche pas, votre site web vous indiquera l'erreur. Quand un navigateur web demande un fichier que le serveur web ne peut pas trouver, votre site web affichera "File not found". Le fichier `system/config/page-error-404.txt` définit l'aperçu d'une page introuvable.
 
-Extensions
-----------
+## Extensions
+
 Yellow s'installe avec un minimum de fonctionnalité. Vous avez de quoi créer un site web et quelques pages, mais vous souhaitez peut-être intégrer un formulaire de contact ou un moteur de recherche ? Il existe une liste de [plugins](/plugins/) et de [thèmes](/themes/) spécifiques à télécharger.
 
 [Suivant: Comment faire un site web →](how-to-make-a-website-fr)

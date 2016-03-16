@@ -9,17 +9,21 @@ Alle Medien befinden sich im `media`-Verzeichnis. Hier speicherst du Bilder und 
 
 Alle `media`-Verzeichnisse stehen auf deiner Webseite zur Verfügung. Das `downloads`-Verzeichnis enthält Dateien zum Herunterladen. Das `images`-Verzeichnis ist zum Speichern deiner Bilder gedacht. Bei einer kleinen Webseite kannst du alle Bilder in diesem Verzeichnis ablegen. Du kannst auch weitere Verzeichnisse erstellen und Dateien organisieren wie du willst.
 
-Bilder
-------
-Hier ist beschreiben wie man Bilder auf einer Seite verwendet. Öffne die Datei `content/1-home/page.txt` in deinem Lieblingseditor und füge `![image](icon.png)` zum Text der Seite hinzu. Die Startseite zeigt jetzt das Icon deiner Webseite an. 
+## Bilder
 
-`![image](icon.png)` zeigt `http://website/media/images/icon.png`  
+Hier ist beschreiben wie man Bilder auf einer Seite verwendet. Öffne die Datei `content/1-home/page.txt` in deinem Lieblingseditor und füge `![image](picture.jpg)` zum Text der Seite hinzu. Die Startseite zeigt jetzt ein schönes Bild an. 
+
 `![image](picture.jpg)` zeigt `http://website/media/images/picture.jpg`  
 
 Es gibt auch das [Image-Plugin](https://github.com/datenstrom/yellow-plugins/tree/master/image) um Bildgrößen zu ändern und Thumbnails zu erzeugen.
 
-`[image icon.png]` zeigt `http://website/media/images/icon.png`  
 `[image picture.jpg]` zeigt `http://website/media/images/picture.jpg`  
+
+Bilder in unterschiedliche Stilen:
+
+    [image picture.jpg Picture left]
+    [image picture.jpg Picture centre]
+    [image picture.jpg Picture right]
 
 Bilder in unterschiedliche Größen:
 
@@ -27,8 +31,8 @@ Bilder in unterschiedliche Größen:
     [image picture.jpg Picture - 320 200]
     [image picture.jpg Picture - 50%]
 
-Videos
-------
+## Videos
+
 Du kannst das [Youtube-Plugin](https://github.com/datenstrom/yellow-plugins/tree/master/youtube) und [Vimeo-Plugin](https://github.com/datenstrom/yellow-plugins/tree/master/vimeo) benutzen um Videos einzubinden.
 
 `[youtube fhs55HEl-Gc]` zeigt `http://www.youtube.com/watch?v=fhs55HEl-Gc`  

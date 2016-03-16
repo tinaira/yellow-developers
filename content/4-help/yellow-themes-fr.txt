@@ -7,13 +7,13 @@ Language: fr
 
 Customise the visual design of your website.
 
-Themes
-------
+## Themes
+
 Themes define the visual design of your website. Start with a [theme](/themes/) that you like and adjust it. There's a default theme defined in file `system/config/config.ini`. A different theme can be defined in the [settings](markdown-cheat-sheet#settings) at the top of each page, for example `Theme: default`.
 
-Style sheet
------------
-A theme consists of a [style sheet](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) and additional files, for example fonts and images. To use a custom style sheet set the `Theme` setting at the top of a page. You can also create a style sheet with the name of a content folder and it will be automatically used.
+## Style sheet
+
+A theme consists of a [style sheet](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) and additional files, for example fonts and images. To use a custom style sheet set the `Theme` setting at the top of a page. You can also create a style sheet with the name of a `content` folder and it will be automatically used.
  
 Here's an example style sheet file `system/themes/default.css`:
 
@@ -26,8 +26,8 @@ a:hover { color:#07d; text-decoration:underline; }
 .sitename h1 a { color:#717171; text-decoration:none; }
 ```
 
-JavaScript
-----------
+## JavaScript
+
 You can put [JavaScript](http://en.wikipedia.org/wiki/JavaScript) into a file which has a similar name as the style sheet and it will be automatically included.  This allows you to create themes with advanced features. For script addicts there's also an excellent [jQuery plugin](https://github.com/nogginfuel/yellow-plugin-jquery).
 
 Here's an example JavaScript file `system/themes/default.js`:

@@ -31,7 +31,7 @@ tempor incididunt ut labore et dolore magna pizza. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo. 
 ```
 
-To create a new blog page, add a new file to the blog folder. Set `Published` and more settings at the top of a page. Dates should be written in the format [YYYY-MM-DD](yellow-api#date-format). The publishing date will be used to sort blog pages. You can use `Tag` to group similar pages together. Here's another example:
+To create a new blog page, add a new file to the blog folder. Set `Published` and more settings at the top of a page. Dates should be written in the format [YYYY-MM-DD](yellow-api#date-formats). The publishing date will be used to sort blog pages. You can use `Tag` to group similar pages together. Here's another example:
 
 ```
 ---

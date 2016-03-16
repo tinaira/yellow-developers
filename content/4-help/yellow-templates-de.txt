@@ -3,42 +3,40 @@ Title: Yellow-Templates
 Sidebar: sidebar-de
 Language: de
 ---
->> [Todo: You can help us and translate this page](https://github.com/datenstrom/yellow-developers)
+Passe die Funktionalität deiner Webseite an.
 
-Customise the functionality of your website.
+## Templates
 
-Templates
----------
-Templates define the functionality of your website. Let's see how templates are made in Yellow. There's a default template defined in file `system/config/config.ini`. A different template can be defined in the [settings](markdown-cheat-sheet#settings) at the top of each page, for example `Template: default`.
+Templates bestimmen die Funktionalität deiner Webseite. Das Standardtemplate wird in der Datei `system/config/config.ini` festgelegt. Eine anderes Template lässt sich in den [Einstellungen](markdown-cheat-sheet-de#einstellungen) ganz oben auf jeder Seite festlegen, zum Beispiel `Template: default`. 
 
-Here's an example template file `system/themes/templates/default.html`:
+Hier ist eine Beispiel-Templatedatei `system/themes/templates/default.html`:
 
     <?php $yellow->snippet("header") ?>
     <?php $yellow->snippet("content-sidebar") ?>
     <?php $yellow->snippet("content-main") ?>
     <?php $yellow->snippet("footer") ?>
 
-Snippets are the building blocks of your website. They are small pieces of [PHP](https://en.wikipedia.org/wiki/PHP) code, written with some help of the [Yellow API](yellow-api). You can put everything into one template, but it's often more practical to split things up into multiple files and reuse them. 
+Snippets sind die Bausteine deiner Webseite. Es sind kleine Stücke [PHP-Code](https://de.wikipedia.org/wiki/PHP), die mit Hilfe der [Yellow-API](yellow-api) erstellt werden. Du kannst alles in ein Template schreiben, aber es ist häufig praktischer den Code in mehrere Snippets aufzuteilen und wiederzubenutzten.
 
-Here's an example snippet file `system/themes/snippets/content-main.php`:
+Hier ist eine Beispiel-Snippetdatei `system/themes/snippets/content-main.php`:
 
     <div class="content main">
     <h1><?php echo $yellow->page->getHtml("titleContent") ?></h1>
     <?php echo $yellow->page->getContent() ?>
     </div>
 
-Custom template
----------------
-To use a custom template set the `Template` setting at the top of a page. You can also create a template with the name of a content folder and it will be automatically used. This allows you to put your own code into Yellow and generate any [HTML](http://en.wikipedia.org/wiki/HTML) code you want. 
+## Template anpassen
 
-Here's an example template file `system/themes/templates/home.html`:
+Um ein anderes Template zu benutzen, legst du `Template` ganz oben auf einer Seite fest. Du kannst auch ein Template mit dem Namen eines `content`-Verzeichnisses erstellen und es wird automatisch benutzt. Das ermöglicht es beliebigen [HTML-Code](https://de.wikipedia.org/wiki/Hypertext_Markup_Language) mit Yellow zu erzeugen.
+
+Hier ist eine Beispiel-Templatedatei `system/themes/templates/home.html`:
 
     <?php $yellow->snippet("header") ?>
     <?php $yellow->snippet("content-sidebar") ?>
     <?php $yellow->snippet("content-home") ?>
     <?php $yellow->snippet("footer") ?>
 
-Here's an example snippet file `system/themes/snippets/content-home.php`:
+Hier ist eine Beispiel-Snippetdatei `system/themes/snippets/content-home.php`:
 
     <div class="content main">
     <h1><?php echo $yellow->page->getHtml("titleContent") ?></h1>
@@ -46,19 +44,19 @@ Here's an example snippet file `system/themes/snippets/content-home.php`:
     <?php /* Add more PHP code here */ ?>
     </div>
 
-Custom navigation
------------------
-To use a custom navigation open file `system/config/config.ini` and change the `Navigation` setting. A different navigation can be defined in the [settings](markdown-cheat-sheet#settings) at the top of each page, for example `Navigation: navigation`. You can also create your own navigation snippet.
+## Navigation anpassen
 
-The following navigations are available:
+Um die Navigation anzupassen, öffne die Datei `system/config/config.ini` und ändere `Navigation`. Eine andere Navigation lässt sich in den [Einstellungen](markdown-cheat-sheet-de#einstellungen) ganz oben auf jeder Seite festlegen, zum Beispiel `Navigation: navigation`. 
 
-`Navigation: navigation` shows navigation with top level pages  
-`Navigation: navigation-tree` shows navigation with dropdown menu   
-`Navigation: navigation-multilanguage`  shows navigation with [language selection](language-configuration#multi-language-mode)   
-`Navigation: navigation-search`  shows search bar from the [search plugin](https://github.com/datenstrom/yellow-plugins/tree/master/search)  
-`Navigation: navigation-sidebar` shows navigation in the sidebar  
+Die folgenden Navigationen sind vorhanden:
 
-Here's an example snippet file `system/themes/snippets/navigation.php`:
+`Navigation: navigation` zeigt Navigation mit Hauptseiten  
+`Navigation: navigation-tree` zeigt Navigation mit Dropdown-Menü   
+`Navigation: navigation-multilanguage`  zeigt Navigation mit [Sprachauswahl](language-configuration-de#mehrsprachen-modus)   
+`Navigation: navigation-search`  zeigt Suchzeile vom [Search-Plugin](https://github.com/datenstrom/yellow-plugins/tree/master/search)  
+`Navigation: navigation-sidebar` zeigt Navigation in der Sidebar  
+
+Hier ist eine Beispiel-Snippetdatei `system/themes/snippets/navigation.php`:
 
     <?php $pages = $yellow->pages->top() ?>
     <?php $yellow->page->setLastModified($pages->getModified()) ?>
@@ -72,11 +70,11 @@ Here's an example snippet file `system/themes/snippets/navigation.php`:
     </div>
     <div class="navigation-banner"></div>
 
-Custom sidebar
---------------
-To use a custom sidebar add the file `sidebar.txt` to a `content` folder. The sidebar is automatically shown on all pages in the same folder. If you want a page with a different sidebar, set the `Sidebar` setting at the top of a page. 
+## Sidebar anpassen
 
-Here's an example sidebar file `content/1-home/sidebar.txt`:
+Um eine Sidebar zu erzeugen, erstelle die Datei `sidebar.txt` in einem `content`-Verzeichnis. Die Sidebar wird automatisch auf allen Seiten im gleichen Verzeichnis angezeigt. Eine andere Sidebar lässt sich in den [Einstellungen](markdown-cheat-sheet-de#einstellungen) ganz oben auf jeder Seite festlegen.
+
+Hier ist eine Beispiel-Sidebar `content/1-home/sidebar.txt`:
 
 ```
 ---
@@ -89,4 +87,4 @@ Links
 * [GitHub](https://github.com/datenstrom)
 ```
 
-[Next: Yellow themes →](yellow-themes-de)
+[Weiter: Yellow-Themes →](yellow-themes-de)
