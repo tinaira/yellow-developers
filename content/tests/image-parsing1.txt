@@ -28,9 +28,3 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 JPG without alternative text, class, width, height (original)
 
 [image yellow.jpg]
-
-PNG in different sizes
-
-[image icon.png Example - 400%]
-[image icon.png Example - 200%] 
-[image icon.png Example - 100%] 
