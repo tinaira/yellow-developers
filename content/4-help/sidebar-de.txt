@@ -29,6 +29,6 @@ Einstellungen
 
 Entwickler
 
-* [Yellow-Templates](yellow-templates-de)
 * [Yellow-Themes](yellow-themes-de)
+* [Yellow-Templates](yellow-templates-de)
 * [Yellow-API](yellow-api)

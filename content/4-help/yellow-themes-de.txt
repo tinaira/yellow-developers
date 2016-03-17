@@ -3,7 +3,7 @@ Title: Yellow-Themes
 Sidebar: sidebar-de
 Language: de
 ---
-Passe das Aussehen deiner Webseite an.
+Du kannst das Aussehen deiner Webseite anpassen.
 
 ## Themes
 
@@ -26,7 +26,7 @@ a:hover { color:#07d; text-decoration:underline; }
 
 ## JavaScript
 
-Du kannst [JavaScript](http://de.wikipedia.org/wiki/JavaScript) in eine Datei speichern, die so ähnlich heisst wie das Stylesheet und sie wird automatisch eingebunden. Das ermöglicht es Themes mit aufwendigen Funktionen zu erstellen. Für Script-Abhängige gibt es auch ein hervorragendes [jQuery-Plugin](https://github.com/nogginfuel/yellow-plugin-jquery).
+Du kannst [JavaScript](http://de.wikipedia.org/wiki/JavaScript) in eine Datei abspeichern, die so ähnlich heisst wie das Stylesheet und sie wird automatisch eingebunden. Das ermöglicht es Themes mit aufwendigen Funktionen zu erstellen. Für Script-Abhängige gibt es auch ein hervorragendes [jQuery-Plugin](https://github.com/nogginfuel/yellow-plugin-jquery).
 
 Hier ist ein Beispiel-JavaScript `system/themes/default.js`:
 
@@ -43,4 +43,10 @@ if(window.addEventListener) {
 }
 ```
 
-[Weiter: Yellow API →](yellow-api)
+## Siteicon
+
+Das Siteicon, auch Favicon genannt ist ein kleines Bild, das stellvertretend für eine Webseite ist. Das Standardicon wird in der Datei `system/config/config.ini` festgelegt. Eine anderes Icon lässt sich in den [Einstellungen](markdown-cheat-sheet-de#einstellungen) auf jeder Seite festlegen, zum Beispiel `Siteicon: icon`.
+
+Um das Icon deiner Webseite zu ändern, überschreibe die Datei `system/themes/icon.png`.
+
+[Weiter: Yellow-Templates →](yellow-templates-de)

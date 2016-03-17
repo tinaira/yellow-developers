@@ -29,6 +29,6 @@ Configurations
 
 Developers
 
-* [Yellow templates](yellow-templates)
 * [Yellow themes](yellow-themes)
+* [Yellow templates](yellow-templates)
 * [Yellow API](yellow-api)

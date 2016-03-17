@@ -29,6 +29,6 @@ Yellow is for people who make websites. [Get support](support).
 
 ## Developers
 
-* [Yellow templates](yellow-templates)
 * [Yellow themes](yellow-themes)
+* [Yellow templates](yellow-templates)
 * [Yellow API](yellow-api)

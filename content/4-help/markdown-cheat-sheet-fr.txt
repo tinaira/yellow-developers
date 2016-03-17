@@ -76,13 +76,14 @@ Ajout d'emoji, avec l'aide d'un [plugin](https://github.com/datenstrom/yellow-pl
 `Language` = page language  
 `Theme` = page theme  
 `Template` = page template  
-`Modified` = page modification date, [YYYY-MM-DD](yellow-api#date-formats) format  
-`Published` = page publication date, [YYYY-MM-DD](yellow-api#date-formats) format  
+`Modified` = page modification date, [YYYY-MM-DD](yellow-api#formats) format  
+`Published` = page publication date, [YYYY-MM-DD](yellow-api#formats) format  
 `Tag` = page tag(s) for categorisation, comma separated  
 `Status` = page status for workflow  
 `Navigation` = page navigation  
 `Sidebar` = page sidebar  
+`Siteicon` = icon of the website  
+`Sitename` = name of the website  
 `Redirect` = new location or URL  
 `Robots` = robots meta data used in header  
-`Sitename` = sitename used in header and footer  
 `Parser` = parser for text files  

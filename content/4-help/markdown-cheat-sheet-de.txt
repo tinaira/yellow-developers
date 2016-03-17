@@ -74,13 +74,14 @@ Emoji hinzufügen, mit Hilfe eines [Plugins](https://github.com/datenstrom/yello
 `Language` = Sprache der Seite  
 `Theme` = Theme der Seite  
 `Template` = Template der Seite  
-`Modified` = Änderungsdatum der Seite, [YYYY-MM-DD](yellow-api#date-formats) Format  
-`Published` = Veröffentlichungsdatum der Seite, [YYYY-MM-DD](yellow-api#date-formats) Format  
+`Modified` = Änderungsdatum der Seite, [YYYY-MM-DD](yellow-api#formats) Format  
+`Published` = Veröffentlichungsdatum der Seite, [YYYY-MM-DD](yellow-api#formats) Format  
 `Tag` = Tags zur Kategorisierung der Seite, durch Komma getrennt  
 `Status` = Status für Arbeitsablauf  
 `Navigation` = Navigation der Seite  
 `Sidebar` = Seitenleiste der Seite  
+`Siteicon` = Icon der Webseite  
+`Sitename` = Name der Webseite   
 `Redirect` = neuer Ort oder URL  
 `Robots` = Robots-Meta-Daten die im Header benutzt werden  
-`Sitename` = Sitename der im Header und Footer benutzt wird   
 `Parser` = Parser für Textdateien  

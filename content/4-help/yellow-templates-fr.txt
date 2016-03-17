@@ -5,7 +5,7 @@ Language: fr
 ---
 >> [Todo: You can help us and translate this page](https://github.com/datenstrom/yellow-developers)
 
-Customise the functionality of your website.
+You can customise the functionality of your website.
 
 ## Templates
 
@@ -67,7 +67,6 @@ Here's an example snippet file `system/themes/snippets/navigation.php`:
     <?php foreach($pages as $page): ?>
     <li><a<?php echo $page->isActive() ? " class=\"active\"" : "" ?> href="<?php echo $page->getLocation() ?>"><?php echo $page->getHtml("titleNavigation") ?></a></li>
     <?php endforeach ?>
-    <?php /* Add more PHP code here */ ?>
     </ul>
     </div>
     <div class="navigation-banner"></div>
@@ -89,4 +88,4 @@ Links
 * [GitHub](https://github.com/datenstrom)
 ```
 
-[Next: Yellow themes →](yellow-themes-fr)
+[Next: Yellow API →](yellow-api)

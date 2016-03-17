@@ -3,7 +3,7 @@ Title: Yellow-Templates
 Sidebar: sidebar-de
 Language: de
 ---
-Passe die Funktionalität deiner Webseite an.
+Du kannst die Funktionalität deiner Webseite anpassen.
 
 ## Templates
 
@@ -65,7 +65,6 @@ Hier ist eine Beispiel-Snippetdatei `system/themes/snippets/navigation.php`:
     <?php foreach($pages as $page): ?>
     <li><a<?php echo $page->isActive() ? " class=\"active\"" : "" ?> href="<?php echo $page->getLocation() ?>"><?php echo $page->getHtml("titleNavigation") ?></a></li>
     <?php endforeach ?>
-    <?php /* Add more PHP code here */ ?>
     </ul>
     </div>
     <div class="navigation-banner"></div>
@@ -87,4 +86,4 @@ Links
 * [GitHub](https://github.com/datenstrom)
 ```
 
-[Weiter: Yellow-Themes →](yellow-themes-de)
+[Weiter: Yellow API →](yellow-api)

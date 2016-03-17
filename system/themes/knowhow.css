@@ -24,9 +24,9 @@ a, img { border:none; text-decoration:none; }
 .sitename h1 a { color:#333; text-decoration:none; }
 .sitename-logo {
 	display:inline-block;
-	background-image:url(knowhow-logo.png);
+	background-image:url(knowhow.png);
 	background-size:cover;
-	width:48px; height:48px; margin:0 8px 5px 0;
+	width:64px; height:64px; margin:0 8px 6px 0;
 	vertical-align:middle;
 }
 .with-sidebar .main { margin-right:280px; }

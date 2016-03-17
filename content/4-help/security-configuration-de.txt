@@ -24,4 +24,4 @@ Falls mehrere Person eine Webseite bearbeiten, aktiviere den abgesicherten Modus
 
 Öffne die Datei `system/config/config.ini` und ändere `ParserSafeMode: 1`.
 
-[Weiter: Yellow-Templates →](yellow-templates-de)
+[Weiter: Yellow-Themes →](yellow-themes-de)

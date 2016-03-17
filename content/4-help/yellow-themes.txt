@@ -3,7 +3,7 @@ Title: Yellow themes
 Sidebar: sidebar
 Language: en
 ---
-Customise the visual design of your website.
+You can customise the visual design of your website.
 
 ## Themes
 
@@ -43,4 +43,10 @@ if(window.addEventListener) {
 }
 ```
 
-[Next: Yellow API →](yellow-api)
+## Site icon
+
+The site icon, also called favicon, is a small image that is associated with a website. There's a default icon defined in file `system/config/config.ini`. A different icon can be defined in the [settings](markdown-cheat-sheet#settings) at the top of each page, for example `Siteicon: icon`.
+
+To change the icon of your website overwrite file `system/themes/icon.png`.
+
+[Next: Yellow templates →](yellow-templates)

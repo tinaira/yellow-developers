@@ -5,7 +5,7 @@
 // Statistics command plugin
 class YellowStats
 {
-	const Version = "0.6.3";
+	const Version = "0.6.4";
 	var $yellow;			//access to API
 	var $days;				//detected days
 	var $views;				//detected views
@@ -107,6 +107,8 @@ class YellowStats
 			$locationIgnore = $this->yellow->config->get("statsLocationIgnore");
 			$refererSelf = $this->yellow->config->get("serverName").$this->yellow->config->get("serverBase");
 			$spamFilter = $this->yellow->config->get("statsSpamFilter");
+			$robotsFile = $this->yellow->config->get("robotsFile");
+			$faviconFile = $this->yellow->config->get("faviconFile");
 			foreach($fileNames as $fileName)
 			{
 				if(defined("DEBUG") && DEBUG>=1) echo "YellowStats::analyseRequests file:$fileName\n";
@@ -131,7 +133,8 @@ class YellowStats
 								if(!preg_match("#^$locationSelf#", $location)) continue;
 								if(!preg_match("#^$locationSelf$locationMatch#", $location)) continue;
 								if(preg_match("#^$locationSelf(.*)/($locationIgnore)/#", $location)) continue;
-								if(preg_match("#^$locationSelf(.*)/robots.txt$#", $location)) continue;
+								if(preg_match("#^$locationSelf(.*)/($robotsFile)$#", $location)) continue;
+								if(preg_match("#^$locationSelf(.*)/($faviconFile)$#", $location)) continue;								
 								if(preg_match("#$spamFilter#i", $referer.$userAgent)) continue;
 								if($status>=301 && $status<=303) continue;
 								if($status < 400)
