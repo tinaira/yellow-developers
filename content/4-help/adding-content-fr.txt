@@ -7,7 +7,7 @@ Les pages de votre site se trouvent dans le dossier `content`. Vous pouvez mettr
 
 [image screenshot-content.png Screenshot]
 
-L'[installation de Yellow](https://github.com/datenstrom/yellow) propose deux pages par défaut. Elles sont juste un exemple pour commencer, tout changer comme vous le souhaitez. Le contenu de tout les dossiers présents dans `content` est accessible sur votre site. Chaque dossier dispose d'un fichier appelé `page.txt` ou 'nom-du-fichier.txt`. Vous pouvez y ajouter d'autres fichiers texte. Par principe, ce que vous voyez dans votre gestionnaire de fichiers représente le site web que vous aurez.
+L'[installation de Yellow](https://github.com/datenstrom/yellow) propose deux pages par défaut. Elles sont juste un exemple pour commencer, vous pourrez tout changer comme vous le souhaitez. Le contenu de tout les dossiers présents dans `content` est accessible sur votre site. Chaque dossier dispose d'un fichier appelé `page.txt` ou 'nom-du-fichier.txt`. Vous pouvez y ajouter d'autres fichiers texte. Par principe, ce que vous voyez dans votre gestionnaire de fichiers représente le site web que vous aurez.
 
 ## Fichiers et dossiers
 
@@ -30,7 +30,7 @@ Regardons de plus près les fichiers texte. Ouvrez le fichier `content/1-home/pa
     
     Vous pouvez [edit - modifier cette page] ou utilisez un éditeur de texte.
 
-Vous pouvez écrire vos pages avec [Markdown](markdown-cheat-sheet-fr). Markdown est un moyen pratique pour éditer des pages web. En gros, il suffit d'écrire du texte comme si vous écriviez une adresse e-mail et il se transforme en une page web. Voici quelques exemples de syntaxe Markdown:
+Vous pouvez écrire vos pages à l'aide de la syntaxe [Markdown](markdown-cheat-sheet-fr). Markdown est un moyen pratique pour éditer des pages web. En gros, il suffit d'écrire du texte comme si vous écriviez une adresse e-mail et il se transforme en une page web. Voici quelques exemples de syntaxe Markdown:
 
     Normal *italique* **gras** `code`
 
