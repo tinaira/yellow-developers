@@ -3,19 +3,18 @@ Title: Blog erstellen
 Sidebar: sidebar-de
 Language: de
 ---
->> [Todo: You can help us and translate this page](https://github.com/datenstrom/yellow-developers)
 
-Learn how to make a blog with Yellow.
+Wie man ein Blog mit Yellow einrichtet.
 
-## Install blog
+## Blog installieren
 
-[Download and install the Yellow blog plugin](https://github.com/datenstrom/yellow-plugins/tree/master/blog).
+[Lade das Blog-Plugin für Yellow herunter und installiere es](https://github.com/datenstrom/yellow-plugins/tree/master/blog).
 
-Your blog is immediately available as `http://website/blog/` or `http://website/`, depending on how you configure your `content` folder. If you want the blog on your home page, rename the blog folder to '1-blog' and delete '1-home'.
+Je nach Konfiguration deines Ordners `content` ist das Blog dann gleich unter `http://website/blog/` oder `http://website/` abrufbar. Soll das Blog deine Homepage sein, benenne das Blog-Verzeichnis zu '1-blog' um und lösche '1-home'.
 
-The main configuration for your blog is file `system/config/config.ini`. You can define the default settings of your website here. For a new installation you should set `Sitename`, `Author` and `Language`. There are [plugins](/plugins/) and [themes](/themes/) you can download.
+Die Hauptkonfiguration für dein Blog ist in der Datei `system/config/config.ini`. Dort kannst du die Standardeinstellungen deiner Website definieren. Bei einer Neuinstallation sollten die Werte `Sitename`, `Author` und `Language` gesetzt werden. Es stehen [Plugins](/plugins/) und [Themes](/themes/) zum Herunterladen bereit.
  
-## Writing blog pages
+## Blogeinträge schreiben
 
 Have a look inside your `content` folder, there's the blog folder with all your blog pages. Open the file `2013-04-07-blog-example.txt`. You'll see settings and text of the page. You can change `Title` and other [settings](markdown-cheat-sheet#settings) at the top of a page. Here's an example:
 
