@@ -1,5 +1,5 @@
 /* Blogsite theme */
-/* Version: 0.6.4 */
+/* Version: 0.6.5 */
 /* Designer: Mark Mayberg */
 
 html, body, div, form, pre, span, tr, th, td { margin:0; padding:0; border:0; vertical-align:baseline; }
@@ -52,6 +52,19 @@ a, img { border:none; text-decoration:none; }
 .footer a { color:#07d; }
 .footer a:hover { color:#07d; text-decoration:underline; }
 .footer-left, .footer-right { float:none; }
+.footer-right a {
+	display:inline-block;
+	box-sizing:border-box;
+	border-radius:20px;
+	width:30px;
+	height:30px;
+	margin:1.5em 0.1em;
+	padding:3px;
+	text-align:center;
+	background-color:#ccc;
+	color:#fff;
+}
+.footer-right a:hover { background-color:#07d; color:#fff; }
 .left { float:left; margin:0 1em 0 0; }
 .center { display:block; margin:0 auto; }
 .right { float:right; margin:0 0 0 1em; }
