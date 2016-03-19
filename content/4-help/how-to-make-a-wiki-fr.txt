@@ -3,21 +3,19 @@ Title: Comment faire un wiki
 Sidebar: sidebar-fr
 Language: fr
 ---
->> [Todo: You can help us and translate this page](https://github.com/datenstrom/yellow-developers)
+Apprenez à faire un wiki avec Yellow.
 
-Learn how to make a wiki with Yellow.
+## Installer un wiki
 
-## Install wiki
+[Téléchargez et installez le plugin Yellow wiki](https://github.com/datenstrom/yellow-plugins/tree/master/wiki).
 
-[Download and install the Yellow wiki plugin](https://github.com/datenstrom/yellow-plugins/tree/master/wiki).
+Votre wiki est immédiatement accessible à `http://website/wiki/` ou `http://website/`, celà dépend de la configuration de votre dossier `content`. Si vous souhaitez faire du wiki votre page d'accueil, renommez le dossier wiki en `1-wiki` et supprimez `1-home`.
 
-Your wiki is immediately available as `http://website/wiki/` or `http://website/`, depending on how you configure your `content` folder. If you want the wiki on your home page, rename the wiki folder to '1-wiki' and delete '1-home'.
+Le fichier de configuration principal de votre wiki est `system/config/config.ini`. Vous pouvez y définir les paramètres par défaut de votre site. Lors d'une nouvelle installation, vous devriez configurer `Sitename`, `Author` et `Language`. Il existe des [plugins](/plugins/) et des [thèmes](/themes/) à télécharger.
 
-The main configuration for your wiki is file `system/config/config.ini`. You can define the default settings of your website here. For a new installation you should set `Sitename`, `Author` and `Language`. There are [plugins](/plugins/) and [themes](/themes/) you can download.
+## Écrire une page de wiki
 
-## Writing wiki pages
-
-Have a look inside your `content` folder, there's the wiki folder with all your wiki pages. Open the file `wiki-page.txt`. You'll see settings and text of the page. You can change `Title` and other [settings](markdown-cheat-sheet#settings) at the top of a page. Here's an example:
+Jetons un oeil dans le dossier `content`, où se trouve le dossier de votre wiki avec toutes vos pages de wiki. Ouvrez le fichier `wiki-page.txt`. Vous y verrez les paramètres et le texte de la page. Vous pouvez changer le titre de la page `Title` ainsi que d'autres [paramètres](markdown-cheat-sheet#settings) en haut de la page. Voici un exemple:
 
 ```
 ---
@@ -31,7 +29,7 @@ tempor incididunt ut labore et dolore magna pizza. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo. 
 ```
 
-To create a new wiki page, add a new file to the wiki folder. Set `Title` and more settings at the top of a page. You can use `Tag` to group similar pages together. Here's another example:
+Pour créer une nouvelle page de wiki, ajoutez un nouveau fichier dans le dossier de wiki. Définissez le `Title` et d'autres paramètres en haut de la page. Vous pouvez utiliser `Tag` pour grouper des pages similaires entres elles. Voici un autre exemple:
 
 ```
 ---
@@ -50,12 +48,11 @@ what's your favorite.
 3. Enjoy.
 ```
 
-You can write wiki pages in [Markdown](markdown-cheat-sheet).
+Vous pouvez écrire vos pages de wiki en [Markdown](markdown-cheat-sheet).
 
-## Creating a sidebar
+## Créer une sidebar
 
-To create a sidebar open the file `sidebar.txt` in your wiki folder. The sidebar 
-is automatically shown on all wiki pages. Here's an example sidebar:
+Pour créer une sidebar (menu latéral), ajoutez le fichier `sidebar.txt` dans le dossier de votre wiki. La sidebar est automatiquement visible sur toutes les pages de votre wiki. Voici un exemple de sidebar:
 
 ```
 ---
@@ -66,7 +63,7 @@ Status: hidden
 * [Example](/wiki/tag:example/)  
 ```
 
-You can use [shortcuts](https://github.com/datenstrom/yellow-plugins/tree/master/wiki#how-to-configure-a-wiki) to show information about the wiki. Here's another example:
+Vous pouvez utiliser des [raccourcis](https://github.com/datenstrom/yellow-plugins/tree/master/wiki#how-to-configure-a-wiki) afin d'afficher des informations à propos du wiki. Encore un exemple:
 
 ```
 ---
@@ -86,10 +83,10 @@ Links
 
 ## Advanced features
 
-* [How to add a search to your wiki](https://github.com/datenstrom/yellow-plugins/tree/master/search)
-* [How to add a sitemap to your wiki](https://github.com/datenstrom/yellow-plugins/tree/master/sitemap)
-* [How to add a contact page to your wiki](https://github.com/datenstrom/yellow-plugins/tree/master/contact)
-* [How to make a table of contents](https://github.com/datenstrom/yellow-plugins/tree/master/toc)
-* [How to make a static wiki](web-server-configuration-fr#static-website)
+* [Comment ajouter un moteur de recherche à votre wiki](https://github.com/datenstrom/yellow-plugins/tree/master/search)
+* [Comment ajouter un sitemap à votre wiki](https://github.com/datenstrom/yellow-plugins/tree/master/sitemap)
+* [Comment ajouter une page de contact à votre wiki](https://github.com/datenstrom/yellow-plugins/tree/master/contact)
+* [Comment ajouter une table des matières](https://github.com/datenstrom/yellow-plugins/tree/master/toc)
+* [Comment créer un wiki statique](web-server-configuration-fr#static-website)
 
-[Next: How to add a user account →](how-to-add-a-user-account-fr)
+[Suivant: Comment ajouter un compte utilisateur →](how-to-add-a-user-account-fr)
