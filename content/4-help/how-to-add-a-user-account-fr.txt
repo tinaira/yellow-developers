@@ -3,30 +3,28 @@ Title: Comment ajouter un compte utilisateur
 Sidebar: sidebar-fr
 Language: fr
 ---
->> [Todo: You can help us and translate this page](https://github.com/datenstrom/yellow-developers)
+Voici comment ajouter un compte utilisateur à Yellow
 
-Learn how to add a user account to Yellow.
+## Ajouter un utilisateur en ligne
 
-## Adding user online
+Vous pouvez créer un compte utilisateur en ligne:
 
-You can create a user account online:
+1. Rendez-vous sur https://developers.datenstrom.se/tests/new-user
+2. Suivez les instructions afin de créer un compte utilisateur
 
-1. Go to https://developers.datenstrom.se/tests/new-user
-2. Follow instructions to create user account.
+## Ajouter un utilisateur en ligne de commande
 
-## Adding user via command line
+Vous pouvez créer un compte utilisateur depuis une interface en [ligne de commande](https://github.com/datenstrom/yellow-plugins/tree/master/commandline)
 
-You can add a user account from the [command line](https://github.com/datenstrom/yellow-plugins/tree/master/commandline):
+1. Ouvrez une fenêtre de terminal
+2. Rendez-vous dans le dossier d'installation de Yellow, où se trouve le fichier `yellow.php`
+3. Entrez la ligne suivante: `php yellow.php user email@example.com horsebattery`
+4. Vous pouvez maintenant vous connecter avec `email@example.com` et le mot de passe `horsebattery`
 
-1. Open a terminal window.
-2. Go to your Yellow installation, where the `yellow.php` is.
-3. Type the following line: `php yellow.php user email@example.com horsebattery`  
-4. Now you can login with `email@example.com` and password `horsebattery`.
+Tout les utilisateurs sont stockés dans le fichier `system/config/user.ini`. Ce fichier de configuration utilise le format suivant `email: password hash, name, language, status, home`. La plupart des entrées doivent être explicites, le mot de passe est chiffré en bcrypt-Hash, à la fin il s'agit de la page d'accueil de l'utilisateur. Les utilisateurs ne peuvent pas modifier les pages au-delà de leur page d'accueil.
 
-All users are stored in file `system/config/user.ini`. The configuration file uses the format `email: password hash, name, language, status, home`. Most entries should be self-explaining, the password is stored as encrypted bcrypt hash, at the end is the user's home page. Users can not change pages outside their home page.
+## Ajouter un utilisateur depuis le navigateur web
 
-## Adding user via web browser
+Vous souhaitez créer un compte utilisateur depuis votre propre site web ? N'est-il pas étrange que vous deviez lire ces instructions ? Vous avez absolument raison. Nous sommes ouvert à toutes [suggestions](https://github.com/datenstrom/yellow/issues). 
 
-Do you want to create user accounts on your own website? Isn't it strange that you have to read this instructions. You're absolutely right. We are open for [suggestions](https://github.com/datenstrom/yellow/issues). 
-
-[Next: Web server configuration →](web-server-configuration-fr)
+[Suivant: Configuration du serveur web →](web-server-configuration-fr)
