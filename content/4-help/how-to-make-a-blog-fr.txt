@@ -3,21 +3,20 @@ Title: Comment faire un blog
 Sidebar: sidebar-fr
 Language: fr
 ---
->> [Todo: You can help us and translate this page](https://github.com/datenstrom/yellow-developers)
 
-Learn how to make a blog with Yellow.
+Apprenez à faire un blog avec Yellow.
 
-## Install blog
+## Installer un blog
 
-[Download and install the Yellow blog plugin](https://github.com/datenstrom/yellow-plugins/tree/master/blog).
+[Téléchargez and installez le plugin Yellow blog](https://github.com/datenstrom/yellow-plugins/tree/master/blog).
 
-Your blog is immediately available as `http://website/blog/` or `http://website/`, depending on how you configure your `content` folder. If you want the blog on your home page, rename the blog folder to '1-blog' and delete '1-home'.
+Votre blog est immédiatement accessible à `http://website/blog/` ou `http://website/`, celà dépend de la configuration de votre dossier `content`. Si vous souhaitez faire du blog votre page d'accueil, renommez le dossier blog en `1-blog` et supprimez `1-home`
 
-The main configuration for your blog is file `system/config/config.ini`. You can define the default settings of your website here. For a new installation you should set `Sitename`, `Author` and `Language`. There are [plugins](/plugins/) and [themes](/themes/) you can download.
- 
-## Writing blog pages
+Le fichier de configuration principal de votre blog est `system/config/config.ini`. Vous pouvez y définir les paramètres par défaut de votre site. Lors d'une nouvelle installation, vous devriez configurer `Sitename`, `Author` et `Language`. Il existe des [plugins](/plugins/) et des [thèmes](/themes/) à télécharger.
 
-Have a look inside your `content` folder, there's the blog folder with all your blog pages. Open the file `2013-04-07-blog-example.txt`. You'll see settings and text of the page. You can change `Title` and other [settings](markdown-cheat-sheet#settings) at the top of a page. Here's an example:
+## Écrire une page de blog
+
+Jetons un oeil dans le dossier `content`, où se trouve le dossier de votre blog avec toutes vos pages de blog. Ouvrez le fichier `2013-04-07-blog-example.txt`. Vous y verrez les paramètres et le texte de la page. Vous pouvez changer le titre de la page `Title` ainsi que d'autres [paramètres](markdown-cheat-sheet#settings) en haut de la page. Voici un exemple:
 
 ```
 ---
@@ -31,7 +30,7 @@ tempor incididunt ut labore et dolore magna pizza. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo. 
 ```
 
-To create a new blog page, add a new file to the blog folder. Set `Published` and more settings at the top of a page. Dates should be written in the format [YYYY-MM-DD](yellow-api#formats). The publishing date will be used to sort blog pages. You can use `Tag` to group similar pages together. Here's another example:
+Pour créer une nouvelle page de blog, ajoutez un nouveau fichier dans le dossier de votre blog. Définissez la date de publication `Published` en haut de la page. Les dates doivent être au format [YYYY-MM-DD](yellow-api#formats). La date de publication sera utilisé afin de classer les pages du blog. Vous pouvez utiliser `Tag` pour grouper des pages similaires entres elles. Voici un autre exemple:
 
 ```
 ---
@@ -47,7 +46,7 @@ an important part of life in Sweden that it is both a verb and a noun.
 Do you fika?
 ```
 
-Now let's add a video with the [Youtube plugin](https://github.com/datenstrom/yellow-plugins/tree/master/youtube):
+Maintenant ajoutons une vidéo avec le [plugin Youtube](https://github.com/datenstrom/yellow-plugins/tree/master/youtube):
 
 ```
 ---
@@ -65,7 +64,7 @@ Do you fika?
 [youtube aS52d3hcHfs]
 ```
 
-Let's show the video when a visitor clicks on the blog page. You can add `[--more--]` where your want the break:
+Faisons en sorte que la vidéo soit visible quand le visiteur clique sur la page de blog. Vous pouvez ajouter `[--more--]` à l'endroit désiré de votre rupture:
 
 ```
 ---
@@ -83,12 +82,11 @@ Do you fika? [--more--]
 [youtube aS52d3hcHfs]
 ```
 
-You can write blog pages in [Markdown](markdown-cheat-sheet).
+Vous pouvez écrire les pages du blog en [Markdown](markdown-cheat-sheet).
 
-## Creating a sidebar
+## Créer une sidebar
 
-To create a sidebar add the file `sidebar.txt` to your blog folder. The sidebar 
-is automatically shown on all blog pages. Here's an example sidebar:
+Pour créer une sidebar (menu latéral), ajoutez le fichier `sidebar.txt` dans un dossier de `content`. La sidebar est automatiquement visible sur toutes les pages de votre blog. Voici un exemple de sidebar:
 
 ```
 ---
@@ -101,7 +99,7 @@ Links
 * [GitHub](https://github.com/datenstrom)
 ```
 
-You can use [shortcuts](https://github.com/datenstrom/yellow-plugins/tree/master/blog#how-to-configure-a-blog) to show information about the blog. Here's another example:
+Vous pouvez utiliser des [raccourcis](https://github.com/datenstrom/yellow-plugins/tree/master/blog#how-to-configure-a-blog) afin d'afficher des informations à propos du blog. Encore un exemple:
 
 ```
 ---
@@ -119,10 +117,10 @@ Archive
 
 ## Advanced features
 
-* [How to add comments to your blog](https://github.com/datenstrom/yellow-plugins/tree/master/disqus)
-* [How to add a contact page to your blog](https://github.com/datenstrom/yellow-plugins/tree/master/contact)
-* [How to add a feed to your blog](https://github.com/datenstrom/yellow-plugins/tree/master/feed)
-* [How to make a draft page](https://github.com/datenstrom/yellow-plugins/tree/master/draft)
-* [How to make a static blog](web-server-configuration-fr#static-website)
+* [Comment ajouter des commentaires à votre blog](https://github.com/datenstrom/yellow-plugins/tree/master/disqus)
+* [Comment ajouter une page de contact à votre blog](https://github.com/datenstrom/yellow-plugins/tree/master/contact)
+* [Comment ajouter un feed à votre blog](https://github.com/datenstrom/yellow-plugins/tree/master/feed)
+* [Comment créer une page de brouillon](https://github.com/datenstrom/yellow-plugins/tree/master/draft)
+* [Comment créer un blog statique](web-server-configuration-fr#static-website)
 
-[Next: How to make a wiki →](how-to-make-a-wiki-fr)
+[Suivant: Comment faire un wiki →](how-to-make-a-wiki-fr)
