@@ -122,4 +122,4 @@ Archiv
 * [Eine Entwurfseite erstellen](https://github.com/datenstrom/yellow-plugins/tree/master/draft)
 * [Ein statisches Blog erstellen](web-server-configuration-de#statische-webseite)
 
-[Next: Wiki erstellen →](how-to-make-a-wiki-de)
+[Weiter: Wiki erstellen →](how-to-make-a-wiki-de)

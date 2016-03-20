@@ -15,7 +15,7 @@ Le fichier de configuration principal de votre site web est `system/config/confi
 
 ## Écrire une page web
 
-Jetons un oeil dans le dossier `content`, où se trouvent toutes vos pages web. Ouvrer le fichier `content/1-home/page.txt`. Vous y verrez les paramètres et le texte de la page. Vous pouvez changer le titre de la page `Title` ainsi que d'autres [paramètres](markdown-cheat-sheet#settings) en haut de la page. Voici un exemple:
+Jetons un oeil dans le dossier `content`, où se trouvent toutes vos pages web. Ouvrer le fichier `content/1-home/page.txt`. Vous y verrez les paramètres et le texte de la page. Vous pouvez changer le titre de la page `Title` ainsi que d'autres [paramètres](markdown-cheat-sheet-fr#paramètres) en haut de la page. Voici un exemple:
 
 ```
 ---
@@ -61,7 +61,7 @@ You can [edit this page]. The help gives you more information
 about how to create small web pages, blogs and wikis.
 ```
 
-Vous pouvez écrire vos pages en [Markdown](markdown-cheat-sheet)
+Vous pouvez écrire vos pages en [Markdown](markdown-cheat-sheet-fr)
 
 ## Créer une sidebar
 

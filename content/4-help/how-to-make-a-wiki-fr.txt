@@ -15,7 +15,7 @@ Le fichier de configuration principal de votre wiki est `system/config/config.in
 
 ## Écrire une page de wiki
 
-Jetons un oeil dans le dossier `content`, où se trouve le dossier de votre wiki avec toutes vos pages de wiki. Ouvrez le fichier `wiki-page.txt`. Vous y verrez les paramètres et le texte de la page. Vous pouvez changer le titre de la page `Title` ainsi que d'autres [paramètres](markdown-cheat-sheet#settings) en haut de la page. Voici un exemple:
+Jetons un oeil dans le dossier `content`, où se trouve le dossier de votre wiki avec toutes vos pages de wiki. Ouvrez le fichier `wiki-page.txt`. Vous y verrez les paramètres et le texte de la page. Vous pouvez changer le titre de la page `Title` ainsi que d'autres [paramètres](markdown-cheat-sheet-fr#paramètres) en haut de la page. Voici un exemple:
 
 ```
 ---
@@ -48,7 +48,7 @@ what's your favorite.
 3. Enjoy.
 ```
 
-Vous pouvez écrire vos pages de wiki en [Markdown](markdown-cheat-sheet).
+Vous pouvez écrire vos pages de wiki en [Markdown](markdown-cheat-sheet-fr).
 
 ## Créer une sidebar
 

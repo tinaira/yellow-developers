@@ -91,4 +91,4 @@ Links
 * [Ein Inhaltsverzeichnis zum Wiki hinzufügen](https://github.com/datenstrom/yellow-plugins/tree/master/toc)
 * [Ein statisches Wiki erstellen](web-server-configuration-de#statische-webseite)
 
-[Next: Benutzerkonto hinzufügen →](how-to-add-a-user-account-de)
+[Weiter: Benutzerkonto hinzufügen →](how-to-add-a-user-account-de)

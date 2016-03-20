@@ -3,7 +3,6 @@ Title: Comment faire un blog
 Sidebar: sidebar-fr
 Language: fr
 ---
-
 Apprenez à faire un blog avec Yellow.
 
 ## Installer un blog
@@ -16,7 +15,7 @@ Le fichier de configuration principal de votre blog est `system/config/config.in
 
 ## Écrire une page de blog
 
-Jetons un oeil dans le dossier `content`, où se trouve le dossier de votre blog avec toutes vos pages de blog. Ouvrez le fichier `2013-04-07-blog-example.txt`. Vous y verrez les paramètres et le texte de la page. Vous pouvez changer le titre de la page `Title` ainsi que d'autres [paramètres](markdown-cheat-sheet#settings) en haut de la page. Voici un exemple:
+Jetons un oeil dans le dossier `content`, où se trouve le dossier de votre blog avec toutes vos pages de blog. Ouvrez le fichier `2013-04-07-blog-example.txt`. Vous y verrez les paramètres et le texte de la page. Vous pouvez changer le titre de la page `Title` ainsi que d'autres [paramètres](markdown-cheat-sheet-fr#paramètres) en haut de la page. Voici un exemple:
 
 ```
 ---
@@ -82,7 +81,7 @@ Do you fika? [--more--]
 [youtube aS52d3hcHfs]
 ```
 
-Vous pouvez écrire les pages du blog en [Markdown](markdown-cheat-sheet).
+Vous pouvez écrire les pages du blog en [Markdown](markdown-cheat-sheet-fr).
 
 ## Créer une sidebar
 
