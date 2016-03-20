@@ -12,11 +12,11 @@ Wie man ein Wiki mit Yellow erstellt.
 
 Je nach Konfiguration deines Ordners `content` ist das Wiki dann sofort unter `http://website/wiki/` oder `http://website/` abrufbar. Soll das Wiki auf deiner Homepage sein, benenne das Wiki-Verzeichnis zu '1-wiki' um und lösche '1-home'.
 
-Die Hauptkonfiguration für dein Wiki ist in der Datei `system/config/config.ini`. Dort kannst du die Standardeinstellungen deiner Website definieren. Bei einer Neuinstallation sollten die Werte `Sitename`, `Author` und `Language` gesetzt werden. Es stehen [Plugins](/plugins/) und [Themes](/themes/) zum Herunterladen bereit.
+Die zentrale Konfigurationsdatei für dein Wiki ist `system/config/config.ini`. Dort kann man die Standardeinstellungen festlegen. Die individuellen Einstellungen lassen sich oben auf jeder Seite festlegen. Bei einer neuen Installation sollte man `Sitename`, `Author` und `Language` anpassen. Es gibt [Plugins](/plugins/) und [Themes](/themes/) zum Herunterladen.
 
-## Seiten für das Wiki schreiben
+## Wikiseiten schreiben
 
-Sieh dir das Verzeichnis `content` an. Dort ist das Wikiverzeichnis mit allen Wikiseiten. Öffne die Datei `wiki-page.txt` und du siehst die Einstellungen und den Text der Seite. Du kannst `Title` und andere [Einstellungen](markdown-cheat-sheet#settings) am Anfang der Seite setzen. Hier ein Beispiel:
+Sieh dir das Verzeichnis `content` an. Dort ist das Wikiverzeichnis mit allen Wikiseiten. Öffne die Datei `wiki-page.txt` und du siehst die Einstellungen und den Text der Seite. Du kannst `Title` und andere [Einstellungen](markdown-cheat-sheet-de#einstellungen) am Anfang der Seite setzen. Hier ein Beispiel:
 
 ```
 ---
@@ -40,14 +40,19 @@ Tag: Beispiel, Kaffee
 ---
 Coffee is a beverage made from the roasted beans of the coffee plant.
 
-1. Verwende frischen Kaffee. Kaffeebohnen fangen nach dem Rösten und Mahlen sofort an, an Qualität zu verlieren. Den besten Kaffee erhält man, wenn man die frisch gemahlenen Bohnen sofort weiterverarbeitet.
-2. Eine Tasse Kaffee zubereiten. Kaffee kann durch vielerlei Methoden und mit verschiedenen Zusätzen wie Milch und Zucker zubereitet werden. Es gibt Espresso, Filterkaffee, Kaffee aus der französischen Presse, Mokka, Türkischen Kaffee und vieles mehr. Finde deinen Geschmack.
+1. Verwende frischen Kaffee. Kaffeebohnen fangen nach dem Rösten und Mahlen 
+   sofort an, an Qualität zu verlieren. Den besten Kaffee erhält man, wenn 
+   man die frisch gemahlenen Bohnen sofort weiterverarbeitet.
+2. Eine Tasse Kaffee zubereiten. Kaffee kann durch vielerlei Methoden und mit 
+   verschiedenen Zusätzen wie Milch und Zucker zubereitet werden. Es gibt 
+   Espresso, Filterkaffee, Kaffee aus der französischen Presse, Mokka, 
+   Türkischen Kaffee und vieles mehr. Finde deinen Geschmack.
 3. Genieße.
 ```
 
-Du kannst Wikiseiten in [Markdown](markdown-cheat-sheet) erstellen.
+Du kannst Wikiseiten in [Markdown](markdown-cheat-sheet-de) erstellen.
 
-## Eine Sidebar erstellen
+## Sidebar erstellen
 
 Um eine Sidebar zu erstellen, öffne die Datei `sidebar.txt` in deinem Wikiverzeichnis. Die Sidebar wird automatisch auf allen Wikiseiten angezeigt. Hier eine Beispiel-Sidebar:
 
@@ -78,7 +83,7 @@ Links
 * [Letzte Änderungen](/wiki/special:changes/)
 ```
 
-## Erweiterte Features
+## Erweiterte Funktionen
 
 * [Eine Suchfunktion zum Wiki hinzufügen](https://github.com/datenstrom/yellow-plugins/tree/master/search)
 * [Eine Sitemap zum Wiki hinzufügen](https://github.com/datenstrom/yellow-plugins/tree/master/sitemap)
