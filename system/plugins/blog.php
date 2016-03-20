@@ -5,21 +5,22 @@
 // Blog plugin
 class YellowBlog
 {
-	const Version = "0.6.4";
+	const Version = "0.6.5";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
 	function onLoad($yellow)
 	{
 		$this->yellow = $yellow;
-		$this->yellow->config->setDefault("blogLocation", "/blog/");
+		$this->yellow->config->setDefault("blogLocation", "");
 		$this->yellow->config->setDefault("blogPaginationLimit", "5");
+		$this->yellow->config->setDefault("blogPageLength", "1024");
 	}
 	
 	// Handle page meta data parsing
 	function onParseMeta($page)
 	{
-		if(!$page->isError())
+		if(!empty($this->yellow->config->get("blogLocation")) && !$page->isError())
 		{
 			$blogLocationLength = strlenu($this->yellow->config->get("blogLocation"));
 			if(substru($page->location, 0, $blogLocationLength) == $this->yellow->config->get("blogLocation"))
@@ -169,6 +170,17 @@ class YellowBlog
 			$this->yellow->page->setPages($pages);
 			$this->yellow->page->setLastModified($pages->getModified());
 			$this->yellow->page->setHeader("Cache-Control", "max-age=60");
+		}
+		if($this->yellow->page->get("template") == "blog")
+		{
+			if(!empty($this->yellow->config->get("blogLocation")))
+			{
+				$page = $this->yellow->pages->find($this->yellow->config->get("blogLocation"));
+			} else {
+				$page = $this->yellow->page;
+				if($this->yellow->lookup->isFileLocation($page->location)) $page = $page->getParent();
+			}
+			$this->yellow->page->setPage("blog", $page);
 		}
 	}
 

@@ -5,7 +5,7 @@
 // Feed plugin
 class YellowFeed
 {
-	const Version = "0.6.3";
+	const Version = "0.6.4";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -13,6 +13,7 @@ class YellowFeed
 	{
 		$this->yellow = $yellow;
 		$this->yellow->config->setDefault("feedPaginationLimit", "30");
+		$this->yellow->config->setDefault("feedPageLength", "1024");
 		$this->yellow->config->setDefault("feedLocation", "/feed/");
 		$this->yellow->config->setDefault("feedFileXml", "feed.xml");
 		$this->yellow->config->setDefault("feedFilter", "");
@@ -44,7 +45,7 @@ class YellowFeed
 				foreach($pages as $page)
 				{
 					$timestamp = strtotime($page->get($chronologicalOrder ? "modified" : "published"));
-					$description = $this->yellow->toolbox->createTextDescription($page->getContent(), 1024, false, "<!--more-->");
+					$description = $this->yellow->toolbox->createTextDescription($page->getContent(), $yellow->config->get("feedPageLength"), false, "<!--more-->");
 					$output .= "<item>\r\n";
 					$output .= "<title>".$page->getHtml("title")."</title>\r\n";
 					$output .= "<link>".$page->getUrl()."</link>\r\n";

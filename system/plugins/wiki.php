@@ -5,21 +5,21 @@
 // Wiki plugin
 class YellowWiki
 {
-	const Version = "0.6.4";
+	const Version = "0.6.5";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
 	function onLoad($yellow)
 	{
 		$this->yellow = $yellow;
-		$this->yellow->config->setDefault("wikiLocation", "/wiki/");
+		$this->yellow->config->setDefault("wikiLocation", "");
 		$this->yellow->config->setDefault("wikiPaginationLimit", "30");
 	}
 
 	// Handle page meta data parsing
 	function onParseMeta($page)
 	{
-		if(!$page->isError())
+		if(!empty($this->yellow->config->get("wikiLocation")) && !$page->isError())
 		{
 			$wikiLocationLength = strlenu($this->yellow->config->get("wikiLocation"));
 			if(substru($page->location, 0, $wikiLocationLength) == $this->yellow->config->get("wikiLocation"))
@@ -157,19 +157,30 @@ class YellowWiki
 				$pages->filter("modified", $_REQUEST["modified"], false);
 				array_push($pagesFilter, $this->yellow->text->normaliseDate($pages->getFilter()));
 			}
+			$pages->sort($chronologicalOrder ? "modified" : "title", $chronologicalOrder);
+			$pages->pagination($this->yellow->config->get("wikiPaginationLimit"));
+			if(!$pages->getPaginationNumber()) $this->yellow->page->error(404);
 			if(!empty($pagesFilter))
 			{
-				$pages->sort($chronologicalOrder ? "modified" : "title", $chronologicalOrder);
-				$pages->pagination($this->yellow->config->get("wikiPaginationLimit"));
-				if(!$pages->getPaginationNumber()) $this->yellow->page->error(404);
 				$title = implode(' ', $pagesFilter);
 				$this->yellow->page->set("titleHeader", $title." - ".$this->yellow->page->get("sitename"));
 				$this->yellow->page->set("titleWiki", $this->yellow->text->get("wikiFilter")." ".$title);
 				$this->yellow->page->set("wikipagesChronologicalOrder", $chronologicalOrder);
-				$this->yellow->page->setPages($pages);
-				$this->yellow->page->setLastModified($pages->getModified());
-				$this->yellow->page->setHeader("Cache-Control", "max-age=60");
 			}
+			$this->yellow->page->setPages($pages);
+			$this->yellow->page->setLastModified($pages->getModified());
+			$this->yellow->page->setHeader("Cache-Control", "max-age=60");
+		}
+		if($this->yellow->page->get("template") == "wiki")
+		{
+			if(!empty($this->yellow->config->get("wikiLocation")))
+			{
+				$page = $this->yellow->pages->find($this->yellow->config->get("wikiLocation"));
+			} else {
+				$page = $this->yellow->page;
+				if($this->yellow->lookup->isFileLocation($page->location)) $page = $page->getParent();
+			}
+			$this->yellow->page->setPage("wiki", $page);
 		}
 	}
 	

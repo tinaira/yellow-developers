@@ -5,14 +5,15 @@
 // Search plugin
 class YellowSearch
 {
-	const Version = "0.6.2";
+	const Version = "0.6.3";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
 	function onLoad($yellow)
 	{
 		$this->yellow = $yellow;
-		$this->yellow->config->setDefault("searchPaginationLimit", "5");		
+		$this->yellow->config->setDefault("searchPaginationLimit", "5");
+		$this->yellow->config->setDefault("searchPageLength", "250");
 	}
 	
 	// Handle page parsing
