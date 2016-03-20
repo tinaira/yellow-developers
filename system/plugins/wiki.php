@@ -19,10 +19,10 @@ class YellowWiki
 	// Handle page meta data parsing
 	function onParseMeta($page)
 	{
-		if(!empty($this->yellow->config->get("wikiLocation")) && !$page->isError())
+		if(!$page->isError())
 		{
-			$wikiLocationLength = strlenu($this->yellow->config->get("wikiLocation"));
-			if(substru($page->location, 0, $wikiLocationLength) == $this->yellow->config->get("wikiLocation"))
+			$location = $this->yellow->config->get("wikiLocation");
+			if(!empty($location) && substru($page->location, 0, strlenu($location))==$location)
 			{
 				if($page->get("template") == $this->yellow->config->get("template")) $page->set("template", "wiki");
 			}
@@ -173,9 +173,10 @@ class YellowWiki
 		}
 		if($this->yellow->page->get("template") == "wiki")
 		{
-			if(!empty($this->yellow->config->get("wikiLocation")))
+			$location = $this->yellow->config->get("wikiLocation");
+			if(!empty($location))
 			{
-				$page = $this->yellow->pages->find($this->yellow->config->get("wikiLocation"));
+				$page = $this->yellow->pages->find($location);
 			} else {
 				$page = $this->yellow->page;
 				if($this->yellow->lookup->isFileLocation($page->location)) $page = $page->getParent();

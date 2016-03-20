@@ -20,10 +20,10 @@ class YellowBlog
 	// Handle page meta data parsing
 	function onParseMeta($page)
 	{
-		if(!empty($this->yellow->config->get("blogLocation")) && !$page->isError())
+		if(!$page->isError())
 		{
-			$blogLocationLength = strlenu($this->yellow->config->get("blogLocation"));
-			if(substru($page->location, 0, $blogLocationLength) == $this->yellow->config->get("blogLocation"))
+			$location = $this->yellow->config->get("blogLocation");
+			if(!empty($location) && substru($page->location, 0, strlenu($location))==$location)
 			{
 				if($page->get("template") == $this->yellow->config->get("template")) $page->set("template", "blog");
 			}
@@ -173,9 +173,10 @@ class YellowBlog
 		}
 		if($this->yellow->page->get("template") == "blog")
 		{
-			if(!empty($this->yellow->config->get("blogLocation")))
+			$location = $this->yellow->config->get("blogLocation");
+			if(!empty($location))
 			{
-				$page = $this->yellow->pages->find($this->yellow->config->get("blogLocation"));
+				$page = $this->yellow->pages->find($location);
 			} else {
 				$page = $this->yellow->page;
 				if($this->yellow->lookup->isFileLocation($page->location)) $page = $page->getParent();
