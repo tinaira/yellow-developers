@@ -5,7 +5,7 @@
 // Statistics command plugin
 class YellowStats
 {
-	const Version = "0.6.4";
+	const Version = "0.6.5";
 	var $yellow;			//access to API
 	var $days;				//detected days
 	var $views;				//detected views
@@ -132,9 +132,12 @@ class YellowStats
 							{
 								if(!preg_match("#^$locationSelf#", $location)) continue;
 								if(!preg_match("#^$locationSelf$locationMatch#", $location)) continue;
-								if(preg_match("#^$locationSelf(.*)/($locationIgnore)/#", $location)) continue;
-								if(preg_match("#^$locationSelf(.*)/($robotsFile)$#", $location)) continue;
-								if(preg_match("#^$locationSelf(.*)/($faviconFile)$#", $location)) continue;								
+								if($locationMatch == "/")
+								{
+									if(preg_match("#^$locationSelf(.*)/($locationIgnore)/#", $location)) continue;
+									if(preg_match("#^$locationSelf(.*)/($robotsFile)$#", $location)) continue;
+									if(preg_match("#^$locationSelf(.*)/($faviconFile)$#", $location)) continue;
+								}
 								if(preg_match("#$spamFilter#i", $referer.$userAgent)) continue;
 								if($status>=301 && $status<=303) continue;
 								if($status < 400)

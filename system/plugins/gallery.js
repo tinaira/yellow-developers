@@ -1,5 +1,7 @@
-// Gallery plugin 0.6.2
+// Copyright (c) 2013-2016 Datenstrom, http://datenstrom.se
+// This file may be used and distributed under the terms of the public license.
 
+// Gallery plugin 0.6.2
 var initPhotoSwipeFromDOM = function() {
 	
 	// Parse gallery items from DOM
@@ -11,7 +13,6 @@ var initPhotoSwipeFromDOM = function() {
 		childElements,
 		size,
 		item;
-		
 		for(var i = 0; i < numNodes; i++) {
 			el = thumbElements[i];
 			if(el.nodeType !== 1) {
@@ -38,7 +39,7 @@ var initPhotoSwipeFromDOM = function() {
 	
 	// Parse gallery options from DOM
 	var parseOptions = function(el) {
-		keyNames = ['galleryUID', 'mainClass', 'thumbSquare',
+		var keyNames = ['galleryUID', 'mainClass', 'thumbSquare',
 					'showHideOpacity', 'showAnimationDuration', 'hideAnimationDuration',
 					'bgOpacity', 'allowPanToNext', 'pinchToClose', 'closeOnScroll', 'escKey', 'arrowKeys',
 					'closeEl', 'captionEl', 'fullscreenEl', 'zoomEl', 'shareEl', 'counterEl',
@@ -50,7 +51,6 @@ var initPhotoSwipeFromDOM = function() {
 			tapToClose: true,
 			tapToToggleControls: false,
 		};
-		
 		for(var i = 0; i < numAttributes; i++) {
 			var att = el.attributes[i], key, value;
 			if(att.nodeName.substring(0, 5) == 'data-') {
@@ -77,7 +77,6 @@ var initPhotoSwipeFromDOM = function() {
 	var parseHash = function() {
 		var hash = window.location.hash.substring(1),
 		params = {};
-		
 		if(hash.length < 5) {
 			return params;
 		}
@@ -91,9 +90,6 @@ var initPhotoSwipeFromDOM = function() {
 				continue;
 			}
 			params[pair[0]] = pair[1];
-		}
-		if(params.gid) {
-			params.gid = parseInt(params.gid, 10);
 		}
 		return params;
 	};
@@ -230,17 +226,17 @@ var initPhotoSwipeFromDOM = function() {
 		galleryElements[i].onclick = onClickGallery;
 	}
 	
-	// Check if URL contains gid and pid
+	// Check if URL contains gallery and picture index
 	if(galleryElements.length)
 	{
 		var params = parseHash();
-		if(params.pid && params.gid) {
+		if(params.gid>0 && params.gid<=galleryElements.length && params.pid>0) {
 			openPhotoSwipe( params.pid,  galleryElements[ params.gid - 1 ], true, true );
 		}
 	}
 };
 
-if(window.addEventListener){
+if(window.addEventListener) {
 	window.addEventListener('load', initPhotoSwipeFromDOM, false);
 } else {
 	window.attachEvent('onload', initPhotoSwipeFromDOM);

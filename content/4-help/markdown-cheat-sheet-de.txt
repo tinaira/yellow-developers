@@ -53,6 +53,7 @@ Emoji hinzufügen, mit Hilfe eines [Plugins](https://github.com/datenstrom/yello
 
 `[image picture.jpg]` = [Bilder und Thumbnails](https://github.com/datenstrom/yellow-plugins/tree/master/image) hinzufügen  
 `[gallery photo.*jpg - 20%]` = [Bildergallerie](https://github.com/datenstrom/yellow-plugins/tree/master/gallery) hinzufügen  
+`[slider photo.*jpg]` = [Bildergallerie mit Schieber](https://github.com/datenstrom/yellow-plugins/tree/master/slider) hinzufügen  
 `[youtube fhs55HEl-Gc]` = [Youtube-Video](https://github.com/datenstrom/yellow-plugins/tree/master/youtube) einbinden  
 `[vimeo 13387502]` = [Vimeo-Video](https://github.com/datenstrom/yellow-plugins/tree/master/vimeo) einbinden  
 `[soundcloud 101175715]` = [Soundcloud-Audio](https://github.com/datenstrom/yellow-plugins/tree/master/soundcloud) einbinden  
