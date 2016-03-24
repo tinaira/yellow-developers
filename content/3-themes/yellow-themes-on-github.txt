@@ -16,6 +16,8 @@ More themes by Yellow developers:
 
 * [Envisioned](https://github.com/nogginfuel/yellow-theme-envisioned):
   Envisioned is a minimalistic theme inspired by Edward Tufte.
+* [Lateral](https://github.com/nibreh/yellow-theme-lateral):
+  Lateral is a clean theme with fixed sidebar, inspired by Indexhibit.
 
 [Download all themes](https://github.com/datenstrom/yellow-themes).
 Make your own themes with the [developers kit](https://github.com/datenstrom/yellow-developers).

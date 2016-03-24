@@ -82,9 +82,9 @@ More plugins by Yellow developers:
   Add the power of jQuery to Yellow.
 * [Maintenance](https://github.com/nogginfuel/yellow-plugin-maintenance):
   Maintenance status for entire site or single page.
-* [Markbar](https://github.com/nibreh/yellow-markbar):
+* [Markbar](https://github.com/nibreh/yellow-plugin-markbar):
   WYSIWYG style toolbar for editing a page.
-* [Medialist](https://github.com/nibreh/yellow-medialist):
+* [Medialist](https://github.com/nibreh/yellow-plugin-medialist):
   Create a list of MP3/OGG/PDF media files.
 * [PageTxt](https://github.com/richi/yellow-plugin-pagetxt):
   Overwrite language entries in a page.
