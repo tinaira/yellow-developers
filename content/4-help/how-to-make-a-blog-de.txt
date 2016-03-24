@@ -9,9 +9,9 @@ Wie man ein Blog mit Yellow einrichtet.
 
 [Lade das Blog-Plugin für Yellow herunter und installiere es](https://github.com/datenstrom/yellow-plugins/tree/master/blog).
 
-Je nach Konfiguration deines Ordners `content` ist das Blog dann gleich unter `http://website/blog/` oder `http://website/` abrufbar. Soll das Blog deine Homepage sein, benenne das Blog-Verzeichnis zu '1-blog' um und lösche '1-home'.
+Je nach Konfiguration deines Ordners `content` ist das Blog direkt unter `http://website/blog/` oder `http://website/` abrufbar. Soll das Blog deine Homepage sein, benenne das Blog-Verzeichnis zu '1-blog' um und lösche '1-home'.
 
-Die zentrale Konfigurationsdatei für dein Blog ist `system/config/config.ini`. Dort kann man die Standardeinstellungen festlegen. Die individuellen Einstellungen lassen sich oben auf jeder Seite festlegen. Bei einer neuen Installation sollte man `Sitename`, `Author` und `Language` anpassen. Es gibt [Plugins](/plugins/) und [Themes](/themes/) zum Herunterladen.
+Die zentrale Konfigurationsdatei für dein Blog ist `system/config/config.ini`. Dort kann man die Standardeinstellungen festlegen. Die individuellen Einstellungen lassen sich oben auf jeder Seite festlegen. Bei einer neuen Installation sollte `Sitename`, `Author` und `Language` angepasst werden. Es gibt [Plugins](/plugins/) und [Themes](/themes/) zum Herunterladen.
  
 ## Blogeinträge schreiben
 
@@ -29,7 +29,7 @@ tempor incididunt ut labore et dolore magna pizza. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo. 
 ```
 
-Um eine neue Blogseite zu erstellen, füge dem Blogverzeichnis eine neue Datei hinzu. Setze `Published` und weitere Einstellungen am Anfang der  Seite. Datumsangaben erfolgen im Format [JJJJ-MM-TT](yellow-api#formats). Das Veröffentlichungsdatum wird zur sortierung der Blogseiten verwendet. Du kannst mit `Tag` ähnliche Seiten gruppieren. Hier ein weiteres Beispiel:
+Um eine neue Blogseite zu erstellen, füge dem Blogverzeichnis eine neue Datei hinzu. Setze `Published` und weitere Einstellungen am Anfang der Seite. Datumsangaben erfolgen im Format [JJJJ-MM-TT](yellow-api#formats). Das Veröffentlichungsdatum wird zur Sortierung der Blogseiten verwendet. Du kannst mit `Tag` ähnliche Seiten gruppieren. Hier ein weiteres Beispiel:
 
 ```
 ---
