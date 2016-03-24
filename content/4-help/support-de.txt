@@ -8,7 +8,7 @@ Tausche dich mit anderen Yellow-Benutzern aus und finde professionelle Hilfe.
 
 ## Support finden
 
-* [Diskutiere Probleme und Vorschläge](https://github.com/datenstrom/yellow/issues)
+* [Melde Probleme und Vorschläge](https://github.com/datenstrom/yellow/issues)
 * [Chatte mit den Entwicklern](https://gitter.im/datenstrom/yellow)
 * [Frage einen Menschen](http://datenstrom.se/contact/)
 
@@ -24,6 +24,7 @@ Tausche dich mit anderen Yellow-Benutzern aus und finde professionelle Hilfe.
 * [Erstelle eine Übersetzung](https://github.com/datenstrom/yellow-plugins/tree/master/language)
 * [Erstelle Plugins](https://github.com/datenstrom/yellow-plugins)
 * [Erstelle Themes](https://github.com/datenstrom/yellow-themes)
+* [Bewerte neue Funktionen](https://github.com/datenstrom/yellow/issues?q=is%3Aopen+is%3Aissue+label%3Asuggestion)
 
 ## Danke
 

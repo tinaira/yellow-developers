@@ -7,7 +7,7 @@ Connect with other Yellow users and find professional help from the community.
 
 ## How to get support
 
-* [Discus problems and suggestions](https://github.com/datenstrom/yellow/issues)
+* [Report problems and suggestions](https://github.com/datenstrom/yellow/issues)
 * [Chat with the developers](https://gitter.im/datenstrom/yellow)
 * [Contact a human](http://datenstrom.se/contact/)
 
@@ -23,6 +23,7 @@ Connect with other Yellow users and find professional help from the community.
 * [Create a translation](https://github.com/datenstrom/yellow-plugins/tree/master/language)
 * [Create plugins](https://github.com/datenstrom/yellow-plugins)
 * [Create themes](https://github.com/datenstrom/yellow-themes)
+* [Review new features](https://github.com/datenstrom/yellow/issues?q=is%3Aopen+is%3Aissue+label%3Asuggestion)
 
 ## Thank you
 
