@@ -18,6 +18,7 @@ The following objects are available:
 [$yellow->plugins](#yellow-plugins) gives access to plugins  
 [$yellow->config](#yellow-config) gives access to configuration  
 [$yellow->text](#yellow-text) gives access to text strings  
+[$yellow->toolbox](#yellow-toolbox) gives access to toolbox with helpers  
 
 ### Yellow page
 
@@ -275,6 +276,28 @@ Check if language exists
 
 **$yellow->text->isExisting($key, $language = "")**  
 Check if text string exists
+
+### Yellow toolbox
+
+Yellow toolbox gives access to toolbox with helpers:
+
+**$yellow->toolbox->getLocation($filterStrict = true)**  
+Return location from current HTTP request
+
+**$yellow->toolbox->getLocationArgs()**  
+Return location arguments from current HTTP request
+
+**$yellow->toolbox->isLocationArgs($location = "")**  
+Check if location contains location arguments
+
+**$yellow->toolbox->normaliseArgs($text, $appendSlash = true, $filterStrict = true)**  
+Normalise location arguments
+
+**$yellow->toolbox->detectBrowserLanguage($languages, $languageDefault)**  
+Detect web browser language
+
+**$yellow->toolbox->detectImageInfo($fileName)**  
+Detect image dimensions and type, png or jpg
 
 ## Events
 
