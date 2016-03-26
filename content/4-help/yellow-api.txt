@@ -219,6 +219,19 @@ Register plugin to [events](#events)
 **$yellow->plugins->isExisting($name)**  
 Check if plugin exists
 
+### Yellow themes
+
+Yellow themes gives access to themes:
+
+**$yellow->themes->getData()**  
+Return theme version
+
+**$yellow->themes->getModified($httpFormat = false)**  
+Return theme modification date, Unix time or HTTP format
+
+**$yellow->themes->isExisting($name)**  
+Check if theme exists
+
 ### Yellow config
 
 Yellow config gives access to configuration:
