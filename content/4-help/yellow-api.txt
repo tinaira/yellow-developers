@@ -16,6 +16,7 @@ The following objects are available:
 [$yellow->pages](#yellow-pages) gives access to pages from file system  
 [$yellow->files](#yellow-files) gives access to files from file system  
 [$yellow->plugins](#yellow-plugins) gives access to plugins  
+[$yellow->themes](#yellow-themes) gives access to themes  
 [$yellow->config](#yellow-config) gives access to configuration  
 [$yellow->text](#yellow-text) gives access to text strings  
 [$yellow->toolbox](#yellow-toolbox) gives access to toolbox with helpers  
@@ -268,6 +269,9 @@ Return text strings
 **$yellow->text->getDateFormatted($timestamp, $format)**  
 Return text string with human readable date, [custom date](http://php.net/manual/en/function.date.php) format  
 
+**$yellow->text->getLanguages()**  
+Return languages
+
 **$yellow->text->getModified($httpFormat = false)**  
 Return text modification date, Unix time or HTTP format
 
@@ -391,12 +395,14 @@ When dates are displayed on a page they are converted to a language specific dat
 
 Some tips for Yellow developers: 
 
-1. Put your code on GitHub. Create a new repository for each new plugin/theme, the name of your repository should be `yellow-type-something` or `yellow-something`. The idea is to keep experimental plugins separate from the stable ones and take the stress away from developers. We're looking forward to see what you create. [Read more](https://github.com/datenstrom/yellow-plugins/blob/master/README.md).
+1. Download the developers kit. The developers kit includes plugins, themes and help. You can try out how to make small web pages, blogs and wikis. It's a great place to test your code and see some examples of the Yellow API. [Read more](https://github.com/datenstrom/yellow-developers).
 
-2. Meta data, configuration and text strings are stored starting with a upper case character, for example `Title`. The internal data starts with a lower case character and it's converted when loading from files. Which means your code has to use a lowercase name, for example `title`. This is known to cause confusion. [Read more](https://github.com/datenstrom/yellow/issues/126).
+2. Put your code on GitHub. Create a new repository for each new plugin/theme, the name of your repository should be `yellow-plugin-something` or `yellow-theme-something`. We're looking forward to see what you create. [Read more](https://github.com/datenstrom/yellow-plugins/blob/master/README.md).
 
-3. Yellow works with relative locations, this means relative to your `ServerBase`. In your own code you can use `$yellow->page->location` to access the relative page location and `$yellow->page->getLocation()` to access the absolute page location. This is known to not be a good solution and will be changed. [Read more](https://github.com/datenstrom/yellow/issues/127).
+3. Meta data, configuration and text strings are stored starting with a upper case character, for example `Title`. The internal data starts with a lower case character. Which means your code has to use a lowercase name, for example `title`. This is known to cause confusion and feedback is very welcome. [Read more](https://github.com/datenstrom/yellow/issues/126).
 
-4. Additional HTML data can be inserted via function `onExtra()`, for example to add HTML headers. At the moment this works only for the current page `$yellow->page`. What's missing is a mechanism to insert HTML data to pages in a loop, for example in content snippets. This is something to be improved.
+4. Yellow works with relative locations, this means relative to your `ServerBase`. In your own code you can use `$yellow->page->location` to access the relative page location and `$yellow->page->getLocation()` to access the absolute page location. This is known to not be a good solution and will be changed. [Read more](https://github.com/datenstrom/yellow/issues/127).
 
-5. Something missing or not working as expected? [Contact us](support).
+5. Additional HTML data can be inserted via function `onExtra()`, for example to add HTML headers. At the moment this works only for the current page `$yellow->page`. What's missing is a mechanism to insert HTML data to pages in a loop, for example in content snippets. This is something to be improved.
+
+6. Something missing or not working as expected? [Contact us](support).
