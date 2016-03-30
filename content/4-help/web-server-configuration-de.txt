@@ -34,7 +34,7 @@ RewriteRule ^ yellow.php [L]
 </IfModule>
 ```
 
-Auf seinem eigenem Webserver aktiviert man das Rewrite-Modul. In der Datei `apache2.conf` muss man ausserdem noch `AllowOverride All` konfigurieren. [Hier ist ein Beispiel](http://stackoverflow.com/questions/18740419/how-to-set-allowoverride-all). Sobald das konfiguriert ist sollte deine Webseite funktionieren. Frage deinen Webhoster um Hilfe.
+Auf seinem eigenem Webserver aktiviert man das Rewrite-Modul, man muss ausserdem noch `AllowOverride All` konfigurieren. [Hier ist ein Beispiel](http://stackoverflow.com/questions/18740419/how-to-set-allowoverride-all). Sobald das konfiguriert ist sollte deine Webseite funktionieren. Frage deinen Webhoster um Hilfe falls Probleme auftreten.
 
 ## Nginx
 
