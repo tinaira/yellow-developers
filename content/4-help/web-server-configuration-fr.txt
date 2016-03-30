@@ -37,7 +37,7 @@ RewriteRule ^ yellow.php [L]
 </IfModule>
 ```
 
-On your own web server enable the rewrite module. You also need to set `AllowOverride All` for the directory containing Yellow. Once the rewrite module is configured your website should work. Contact your web hosting provider if you have any trouble doing this.
+On your own web server enable the rewrite module. In the file `apache2.conf` you also need to set `AllowOverride All` for the website directory. [Here's an example](http://stackoverflow.com/questions/18740419/how-to-set-allowoverride-all). Once this is configured your website should work. Contact your web hosting provider if you have any trouble doing this.
 
 ## Nginx
 
