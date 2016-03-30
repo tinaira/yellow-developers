@@ -14,7 +14,7 @@ The following plugins are available:
 * [Contact](https://github.com/datenstrom/yellow-plugins/tree/master/contact): 
   Email contact page for website.
 * [Core](https://github.com/datenstrom/yellow-plugins/tree/master/core): 
-  Core features for your website.
+  Core functionality for your website.
 * [Disqus](https://github.com/datenstrom/yellow-plugins/tree/master/disqus): 
   Add Disqus comments to blog.
 * [Draft](https://github.com/datenstrom/yellow-plugins/tree/master/draft): 

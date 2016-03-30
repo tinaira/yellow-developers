@@ -29,7 +29,7 @@ tempor incididunt ut labore et dolore magna pizza. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo. 
 ```
 
-Um eine neue Blogseite zu erstellen, füge dem Blogverzeichnis eine neue Datei hinzu. Setze `Published` und weitere Einstellungen am Anfang der Seite. Datumsangaben erfolgen im Format [JJJJ-MM-TT](yellow-api#formats). Das Veröffentlichungsdatum wird zur Sortierung der Blogseiten verwendet. Du kannst mit `Tag` ähnliche Seiten gruppieren. Hier ein weiteres Beispiel:
+Um eine neue Blogseite zu erstellen, füge dem Blogverzeichnis eine neue Datei hinzu. Setze `Published` und weitere Einstellungen am Anfang der Seite. Datumsangaben erfolgen im Format JJJJ-MM-TT. Das Veröffentlichungsdatum wird zur Sortierung der Blogseiten verwendet. Du kannst mit `Tag` ähnliche Seiten gruppieren. Hier ein weiteres Beispiel:
 
 ```
 ---

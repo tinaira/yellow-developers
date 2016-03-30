@@ -29,7 +29,7 @@ tempor incididunt ut labore et dolore magna pizza. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo. 
 ```
 
-Pour créer une nouvelle page de blog, ajoutez un nouveau fichier dans le dossier de votre blog. Définissez la date de publication `Published` en haut de la page. Les dates doivent être au format [YYYY-MM-DD](yellow-api#formats). La date de publication sera utilisé afin de classer les pages du blog. Vous pouvez utiliser `Tag` pour grouper des pages similaires entres elles. Voici un autre exemple:
+Pour créer une nouvelle page de blog, ajoutez un nouveau fichier dans le dossier de votre blog. Définissez la date de publication `Published` en haut de la page. Les dates doivent être au format YYYY-MM-DD. La date de publication sera utilisé afin de classer les pages du blog. Vous pouvez utiliser `Tag` pour grouper des pages similaires entres elles. Voici un autre exemple:
 
 ```
 ---

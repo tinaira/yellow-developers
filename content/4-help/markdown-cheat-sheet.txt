@@ -75,8 +75,8 @@ Adding emoji, with help of a [plugin](https://github.com/datenstrom/yellow-plugi
 `Language` = page language  
 `Theme` = page theme  
 `Template` = page template  
-`Modified` = page modification date, [YYYY-MM-DD](yellow-api#formats) format  
-`Published` = page publication date, [YYYY-MM-DD](yellow-api#formats) format  
+`Modified` = page modification date, YYYY-MM-DD format  
+`Published` = page publication date, YYYY-MM-DD format  
 `Tag` = page tag(s) for categorisation, comma separated  
 `Status` = page status for workflow  
 `Navigation` = page navigation  

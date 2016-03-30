@@ -24,7 +24,7 @@ Vous êtes au bon endroit, nous sommes là pour vous aider.
 * [Créer une traduction](https://github.com/datenstrom/yellow-plugins/tree/master/language)
 * [Créer des plugins](https://github.com/datenstrom/yellow-plugins)
 * [Créer des thèmes](https://github.com/datenstrom/yellow-themes)
-* [Examiner les nouvelles fonctionnalités](https://github.com/datenstrom/yellow/issues?q=is%3Aopen+is%3Aissue+label%3Asuggestion)
+* [Examiner suggestions](https://github.com/datenstrom/yellow/issues?q=is%3Aopen+is%3Aissue+label%3Asuggestion)
 
 ## Remerciements
 
