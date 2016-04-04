@@ -71,7 +71,7 @@ Return page extra HTML data
 Return page response header
 
 **$yellow->page->getModified($httpFormat = false)**  
-Return page content modification date, Unix time or HTTP format
+Return page modification date, Unix time or HTTP format
 
 **$yellow->page->getLastModified($httpFormat = false)**  
 Return last modification date, Unix time or HTTP format
@@ -335,10 +335,10 @@ Handle page extra HTML data
 Handle permission to change page
 
 **function onCommand($args)**  
-Handle [command](https://github.com/datenstrom/yellow-plugins/tree/master/commandline)
+Handle command
 
 **function onCommandHelp()**  
-Handle [command help](https://github.com/datenstrom/yellow-plugins/tree/master/commandline)
+Handle command help
 
 ## Debugging
 
@@ -346,7 +346,7 @@ Open the file `system/plugins/core.php`, change first line to `<?php define("DEB
 
 ```
 YellowCore::sendPage Content-Type: text/html; charset=UTF-8
-YellowCore::sendPage Content-Modified: Fri, 30 Jan 2015 09:30:12 GMT
+YellowCore::sendPage Page-Modified: Fri, 30 Jan 2015 09:30:12 GMT
 YellowCore::sendPage Last-Modified: Mon, 02 Feb 2015 13:19:03 GMT
 YellowCore::sendPage theme:flatsite template:blogpages parser:markdown
 YellowCore::processRequest file:content/2-plugins/1-blog-plugin/page.txt handler:core

@@ -5,7 +5,7 @@
 // Statistics command plugin
 class YellowStats
 {
-	const Version = "0.6.5";
+	const Version = "0.6.6";
 	var $yellow;			//access to API
 	var $days;				//detected days
 	var $views;				//detected views
@@ -147,7 +147,7 @@ class YellowStats
 									++$search[$this->getSearchUrl($location)];
 									++$this->views;
 								} else {
-									++$errors[$this->getUrl($location)." - ".$this->getErrorFormatted($status)];
+									++$errors[$this->getUrl($location)." - ".$this->getStatusFormatted($status)];
 								}
 							}
 						}
@@ -229,20 +229,10 @@ class YellowStats
 		return preg_match("#^$locationSearch([^/]+)/$#", $location) ? $this->getUrl(strtoloweru($location)) : "-";
 	}
 	
-	// Return human readable error
-	function getErrorFormatted($statusCode)
+	// Return human readable status
+	function getStatusFormatted($statusCode)
 	{
-		switch($statusCode)
-		{
-			case 400:	$text = "Bad request"; break;
-			case 401:	$text = "Unauthorised"; break;
-			case 404:	$text = "Not found"; break;
-			case 424:	$text = "Not existing"; break;
-			case 500:	$text = "Server error"; break;
-			case 503:	$text = "Service unavailable"; break;
-			default:	$text = "Error $statusCode";
-		}
-		return $text;
+		return $this->yellow->toolbox->getHttpStatusFormatted($statusCode, true);
 	}
 	
 	// Return previous text line from file, false if not found
