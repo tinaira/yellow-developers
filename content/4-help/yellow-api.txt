@@ -349,8 +349,8 @@ YellowCore::sendPage Content-Type: text/html; charset=UTF-8
 YellowCore::sendPage Page-Modified: Fri, 30 Jan 2015 09:30:12 GMT
 YellowCore::sendPage Last-Modified: Mon, 02 Feb 2015 13:19:03 GMT
 YellowCore::sendPage theme:flatsite template:blogpages parser:markdown
-YellowCore::processRequest file:content/2-plugins/1-blog-plugin/page.txt handler:core
-YellowCore::request status:200 location:/plugins/blog-plugin/
+YellowCore::processRequest file:content/2-plugins/1-blog-plugin/page.txt
+YellowCore::request status:200 location:/plugins/blog-plugin/ handler:core
 YellowCore::request time:19 ms
 ```
 
