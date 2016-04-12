@@ -11,7 +11,7 @@ Wie man ein Blog mit Yellow einrichtet.
 
 Je nach Konfiguration deines Ordners `content` ist das Blog direkt unter `http://website/blog/` oder `http://website/` abrufbar. Soll das Blog deine Homepage sein, benenne das Blog-Verzeichnis zu '1-blog' um und lösche '1-home'.
 
-Die zentrale Konfigurationsdatei für dein Blog ist `system/config/config.ini`. Dort kann man die Standardeinstellungen festlegen. Die individuellen Einstellungen lassen sich oben auf jeder Seite festlegen. Bei einer neuen Installation sollte `Sitename`, `Author` und `Language` angepasst werden. Es gibt [Plugins](/plugins/) und [Themes](/themes/) zum Herunterladen.
+Die zentrale Konfigurationsdatei für dein Blog ist `system/config/config.ini`. Dort kann man die Standardeinstellungen festlegen. Die individuellen Einstellungen lassen sich oben auf jeder Seite festlegen. Bei einer neuen Installation sollte `Sitename`, `Author`, `Email` und `Language` angepasst werden. Es gibt [Plugins](/plugins/) und [Themes](/themes/) zum Herunterladen.
  
 ## Blogeinträge schreiben
 

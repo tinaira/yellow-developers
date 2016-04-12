@@ -3,7 +3,6 @@ Title: Sicherheitseinstellungen
 Sidebar: sidebar-de
 Language: de
 ---
-
 Wie man eine Webseite mit besserer Sicherheit konfiguriert.
 
 ## Sicherer Server
@@ -14,9 +13,11 @@ Du brauchst einen Webserver mit SSL/TLS und gültigem Zertifikat.
 
 ## Benutzerbeschränkungen
 
-Falls mehrere Person eine Webseite bearbeiten, beschränke [Benutzerkontos](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface) und nur Teile der Webseite können verändert werden. Damit wird deine Webseite vor Veränderungen im Webbrowser geschützt, jedoch werden Änderungen im Dateisystem nicht verhindert.
+Falls mehrere Person eine Webseite bearbeiten, beschränke Benutzerkontos und nur Teile der Webseite können verändert werden. Damit wird deine Webseite vor Veränderungen im Webbrowser geschützt, jedoch werden Änderungen im Dateisystem nicht verhindert.
 
-Du kannst [Beschränkungen testen](http://developers.datenstrom.se), einloggen mit `guest@guest.com` + `guest`.
+Alle Benutzer sind in der Datei `system/config/user.ini` gespeichert. Ein Benutzerkonto besteht aus Email, verschlüsseltem Password, Name, Sprache, Status und am Ende befindet sich die Startseite. Benutzer können keine Seiten ausserhalb ihrer Startseite verändern.
+
+Du kannst [Benutzerbeschränkungen testen](http://developers.datenstrom.se), einloggen mit `guest@guest.de` + `guest`.
 
 ## Abgesicherter Modus
 
@@ -24,4 +25,4 @@ Falls mehrere Person eine Webseite bearbeiten, aktiviere den abgesicherten Modus
 
 Öffne die Datei `system/config/config.ini` und ändere `ParserSafeMode: 1`.
 
-[Weiter: Yellow-Themes →](yellow-themes-de)
+[Weiter: Spracheinstellungen →](language-configuration-de)

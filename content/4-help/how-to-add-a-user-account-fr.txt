@@ -3,7 +3,7 @@ Title: Comment ajouter un compte utilisateur
 Sidebar: sidebar-fr
 Language: fr
 ---
-Voici comment ajouter un compte utilisateur à Yellow
+>>> Info: This is an obsolete document and will be removed soon.
 
 ## Ajouter un utilisateur en ligne
 
@@ -26,5 +26,3 @@ Tout les utilisateurs sont stockés dans le fichier `system/config/user.ini`. Ce
 ## Ajouter un utilisateur depuis le navigateur web
 
 Vous souhaitez créer un compte utilisateur depuis votre propre site web ? N'est-il pas étrange que vous deviez lire ces instructions ? Vous avez absolument raison. Nous sommes ouvert à toutes [suggestions](https://github.com/datenstrom/yellow/issues). 
-
-[Suivant: Configuration du serveur web →](web-server-configuration-fr)

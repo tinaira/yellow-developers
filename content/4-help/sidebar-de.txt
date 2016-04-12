@@ -19,13 +19,12 @@ Anleitungen
 * [Webseiten erstellen](how-to-make-a-website-de)
 * [Blog erstellen](how-to-make-a-blog-de)
 * [Wiki erstellen](how-to-make-a-wiki-de)
-* [Benutzerkonto hinzufügen](how-to-add-a-user-account-de)
 
 Einstellungen
 
 * [Webservereinstellungen](web-server-configuration-de)
-* [Spracheinstellungen](language-configuration-de)
 * [Sicherheitseinstellungen](security-configuration-de)
+* [Spracheinstellungen](language-configuration-de)
 
 Entwickler
 

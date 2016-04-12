@@ -11,7 +11,7 @@ Learn how to make a blog with Yellow.
 
 Your blog is immediately available as `http://website/blog/` or `http://website/`, depending on how you configure your `content` folder. If you want the blog on your home page, rename the blog folder to '1-blog' and delete '1-home'.
 
-The main configuration for your blog is file `system/config/config.ini`. You can define the default settings of your website here. For a new installation you should set `Sitename`, `Author` and `Language`. There are [plugins](/plugins/) and [themes](/themes/) you can download.
+The main configuration for your blog is file `system/config/config.ini`. You can define the default settings of your website here. For a new installation you should set `Sitename`, `Author`, `Email` and `Language`. There are [plugins](/plugins/) and [themes](/themes/) you can download.
  
 ## Writing blog pages
 

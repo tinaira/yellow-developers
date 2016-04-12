@@ -331,8 +331,11 @@ Handle page parsing
 **function onExtra($name)**  
 Handle page extra HTML data
 
-**function onUserPermission($location, $fileName, $users)**  
-Handle permission to change page
+**function onUserAccount($email, $password, $action, $users)**  
+Handle user account changes
+
+**function onUserRestrictions($email, $location, $fileName, $users)**  
+Handle user restrictions to change page
 
 **function onCommand($args)**  
 Handle command
