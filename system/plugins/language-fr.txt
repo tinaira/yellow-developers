@@ -72,7 +72,7 @@ WebinterfaceRecoverStatusDone: Compte utilisateur restauré. Merci!
 WebinterfaceRecoverStatusExpire: Le compte ne peut pas être restauré. Le lien de confirmation a expiré!
 WebinterfaceWelcomeSubject: Bienvenue
 WebinterfaceWelcomeMessage: Bonjour @usershort, votre compte utilisateur a bien été créé. Amusez-vous bien en éditant le site web.
-WebinterfaceInformationSubject: Welcome back
+WebinterfaceInformationSubject: Bienvenue à nouveau
 WebinterfaceInformationMessage: Bonjour @usershort, votre compte utilisateur a bien été restauré. Amusez-vous bien en éditant le site web.
 WebinterfaceOkButton: Ok
 WebinterfaceCancelButton: Annuler
