@@ -24,11 +24,11 @@ Préfixe et suffixe sont retirés de l'url afin de rendre la navigation meilleur
 Regardons de plus près les fichiers texte. Ouvrez le fichier `content/1-home/page.txt` dans votre éditeur de texte préféré. Vous y verrez la configuration et le texte pour la page. Vous pouvez modifier le titre `Title` et ajouter d'autres [paramètres](markdown-cheat-sheet-fr#paramètres) en haut de la page. Voici un exemple:
 
     ---
-    Title: Accueil
+    Title: Home
     ---
     Votre site web fonctionne!
     
-    Vous pouvez [edit - modifier cette page] ou utilisez un éditeur de texte.
+    Vous pouvez [edit - modifier cette page] ou utiliser un éditeur de texte.
 
 Vous pouvez écrire vos pages à l'aide de la syntaxe [Markdown](markdown-cheat-sheet-fr). Markdown est un moyen pratique pour éditer des pages web. En gros, il suffit d'écrire du texte comme si vous écriviez une adresse e-mail et il se transforme en une page web. Voici quelques exemples de syntaxe Markdown:
 

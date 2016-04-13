@@ -11,7 +11,7 @@ Learn how to make a website with Yellow.
 
 Your website is immediately available. The installation of Yellow comes with two pages, 'Home' and 'About'. They are just an example to get you started, change them as you like. You can create your website by adding more files and folders.
 
-The main configuration for your website is file `system/config/config.ini`. You can define the default settings of your website here. For a new installation you should set `Sitename`, `Author`, `Email` and `Language`. There are [plugins](/plugins/) and [themes](/themes/) you can download.
+The main configuration for your website is file `system/config/config.ini`. You can define the default settings of your website here. Individual settings can be defined at the top of each page. There are [plugins](/plugins/) and [themes](/themes/) you can download.
 
 ## Writing web pages
 
@@ -26,7 +26,7 @@ Your website works!
 You can now [edit this page] or use your text editor. 
 ```
 
-To create a new page, add a new file to the home folder or another `content` folder. Set the `Title` at the top of a page. To add something to the navigation, create a new folder with a numerical prefix. The prefix defines the position in the navigation. Here's another example:
+To create a new page, add a new file to the home folder or another `content` folder. To add something to the navigation, create a new folder with a numerical prefix. Only folders with a prefix are shown in the navigation. Here's another example page:
 
 ```
 ---

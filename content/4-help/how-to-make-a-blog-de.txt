@@ -3,19 +3,19 @@ Title: Blog erstellen
 Sidebar: sidebar-de
 Language: de
 ---
-Wie man ein Blog mit Yellow einrichtet.
+Lerne wie man ein Blog mit Yellow erstellt.
 
 ## Blog installieren
 
-[Lade das Blog-Plugin für Yellow herunter und installiere es](https://github.com/datenstrom/yellow-plugins/tree/master/blog).
+[Blog-Plugin herunterladen und installieren](https://github.com/datenstrom/yellow-plugins/tree/master/blog).
 
-Je nach Konfiguration deines Ordners `content` ist das Blog direkt unter `http://website/blog/` oder `http://website/` abrufbar. Soll das Blog deine Homepage sein, benenne das Blog-Verzeichnis zu '1-blog' um und lösche '1-home'.
+Dein Blog ist sofort erreichbar unter `http://website/blog/` oder `http://website/`, je nachdem wie dein `content`-Verzeichnis konfiguriert ist. Soll das Blog auf deiner Startseite angezeigt werden, benenne das Blogverzeichnis zu "1-blog" um und lösche "1-home".
 
-Die zentrale Konfigurationsdatei für dein Blog ist `system/config/config.ini`. Dort kann man die Standardeinstellungen festlegen. Die individuellen Einstellungen lassen sich oben auf jeder Seite festlegen. Bei einer neuen Installation sollte `Sitename`, `Author`, `Email` und `Language` angepasst werden. Es gibt [Plugins](/plugins/) und [Themes](/themes/) zum Herunterladen.
+Die zentrale Konfigurationsdatei für das Blog ist `system/config/config.ini`. Dort kann man die Standardeinstellungen festlegen. Die individuellen Einstellungen lassen sich oben auf jeder Seite festlegen. Es gibt [Plugins](/plugins/) und [Themes](/themes/) zum Herunterladen.
  
 ## Blogeinträge schreiben
 
-Sieh dir das Verzeichnis `content` an. Dort ist das Blogverzeichnis mit allen Blogseiten. Öffne die Datei `2013-04-07-blog-example.txt` und du siehst die Einstellungen und den Text der Seite. Du kannst `Title` und andere [Einstellungen](markdown-cheat-sheet-de#einstellungen) am Anfang der Seite setzen. Hier ein Beispiel:
+Lass uns einen Blick ins `content`-Verzeichnis werfen, dort befindet sich das Blogverzeichnis mit allen Blogseiten. Öffne die Datei `2013-04-07-blog-example.txt`. Es werden Einstellungen und Text der Seite angezeigt. Ganz oben auf der Seite kannst du `Title` und andere [Einstellungen](markdown-cheat-sheet-de#einstellungen) ändern. Hier ist ein Beispiel:
 
 ```
 ---
@@ -29,7 +29,7 @@ tempor incididunt ut labore et dolore magna pizza. Ut enim ad minim veniam,
 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo. 
 ```
 
-Um eine neue Blogseite zu erstellen, füge dem Blogverzeichnis eine neue Datei hinzu. Setze `Published` und weitere Einstellungen am Anfang der Seite. Datumsangaben erfolgen im Format JJJJ-MM-TT. Das Veröffentlichungsdatum wird zur Sortierung der Blogseiten verwendet. Du kannst mit `Tag` ähnliche Seiten gruppieren. Hier ein weiteres Beispiel:
+Um eine neue Blogseite hinzuzufügen, erstellst du eine neue Datei im Blogverzeichnis. Ganz oben auf der Seite solltest du `Published` und weitere Einstellungen ändern. Datumsangaben erfolgen im Format JJJJ-MM-TT. Das Veröffentlichungsdatum wird zur Sortierung der Blogseiten verwendet. Mit `Tag` kann man ähnliche Seiten gruppieren. Hier ein weiteres Beispiel:
 
 ```
 ---
@@ -45,7 +45,7 @@ schwedischen Alltag, dass es sowohl als Verb als auch als Nomen verwendet
 wird.
 ```
 
-Nun lass uns ein Video hinzufügen [Youtube-Plugin](https://github.com/datenstrom/yellow-plugins/tree/master/youtube):
+Ein Video hinzufügen mit dem [Youtube-Plugin](https://github.com/datenstrom/yellow-plugins/tree/master/youtube):
 
 ```
 ---
@@ -63,7 +63,7 @@ wird.
 [youtube aS52d3hcHfs]
 ```
 
-Lass uns das Video anzeigen, sobald ein Besucher auf die Blogseite klickt. Verwende `[--more--]`, um an einer gewünschten Stelle einen Umbruch zu erzeugen.
+Das Video erst anzeigen wenn ein Besucher auf die Blogseite klickt. Du kannst `[--more--]` benutzen, um an der gewünschten Stelle einen Umbruch zu erzeugen:
 
 ```
 ---
@@ -85,7 +85,7 @@ Du kannst Blogseiten in [Markdown](markdown-cheat-sheet-de) erstellen.
 
 ## Sidebar erstellen
 
-Um eine Sidebar zu erstellen, füge die Datei `sidebar.txt` zu deinem Blogverzeichnis hinzu. Die Sidebar wird automatisch auf allen Blogseiten angezeigt. Hier eine Beispiel-Sidebar:
+Erstelle die Datei `sidebar.txt` in deinem Blogverzeichnis. Die Sidebar wird automatisch auf allen Blogseiten angezeigt. Hier ist eine Beispiel-Sidebar:
 
 ```
 ---
@@ -98,7 +98,7 @@ Links
 * [GitHub](https://github.com/datenstrom)
 ```
 
-Verwende [Kürzel](https://github.com/datenstrom/yellow-plugins/tree/master/blog#how-to-configure-a-blog), um Informationen über das Blog anzuzeigen. Hier ein weiteres Beispiel:
+Verwende [Abkürzungen](https://github.com/datenstrom/yellow-plugins/tree/master/blog#how-to-configure-a-blog), um Informationen über das Blog anzuzeigen. Ein weiteres Beispiel:
 
 ```
 ---
@@ -116,7 +116,7 @@ Archiv
 
 ## Erweiterte Funktionen
 
-* [Kommentare zum Blog hinzufügen](https://github.com/datenstrom/yellow-plugins/tree/master/disqus)
+* [Eine Kommentarfunktion zum Blog hinzufügen](https://github.com/datenstrom/yellow-plugins/tree/master/disqus)
 * [Eine Kontaktseite zum Blog hinzufügen](https://github.com/datenstrom/yellow-plugins/tree/master/contact)
 * [Einen Feed zum Blog hinzufügen](https://github.com/datenstrom/yellow-plugins/tree/master/feed)
 * [Eine Entwurfseite erstellen](https://github.com/datenstrom/yellow-plugins/tree/master/draft)

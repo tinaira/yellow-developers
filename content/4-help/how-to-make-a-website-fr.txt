@@ -9,9 +9,9 @@ Apprenez à faire un site web avec Yellow
 
 [Téléchargez et installez Yellow](https://github.com/datenstrom/yellow/).
 
-Votre site web est immédiatement accessible. L'installation de Yellow est fournie avec deux pages, 'Home' et 'About'. Elles sont juste un exemple pour commencer, vous pouvez les modifier comme il vous convient. Vous pouvez créer votre site web en ajoutant des fichiers et des dossiers.
+Votre site web est immédiatement accessible. L'installation est fournie avec deux pages, 'Home' et 'About'. Elles sont juste un exemple pour commencer, vous pouvez les modifier comme il vous convient. Vous pouvez créer votre site web en ajoutant des fichiers et des dossiers.
 
-Le fichier de configuration principal de votre site web est `system/config/config.ini`. Vous pouvez y définir les paramètres par défaut de votre site. Lors d'une nouvelle installation, vous devriez configurer `Sitename`, `Author`, `Email` et `Language`. Il existe des [plugins](/plugins/) et des [thèmes](/themes/) à télécharger.
+Le fichier de configuration principal de votre site web est `system/config/config.ini`. Vous pouvez y définir les paramètres par défaut de votre site. Les paramètres individuels peuvent être définis au haut de chaque page. Il existe des [plugins](/plugins/) et des [thèmes](/themes/) à télécharger.
 
 ## Écrire une page web
 
@@ -21,44 +21,44 @@ Jetons un oeil dans le dossier `content`, où se trouvent toutes vos pages web. 
 ---
 Title: Home
 ---
-Your website works! 
+Votre site web fonctionne!
 
-You can now [edit this page] or use your text editor. 
+Vous pouvez [edit - modifier cette page] ou utiliser un éditeur de texte.
 ```
 
-Pour créer une nouvelle page, ajoutez un nouveau fichier dans le dossier `1-home` ou dans tout autre dossier du dossier `content`. Définissez le `Title` en haut de la page. Pour ajouter votre page au menu de navigation, créez un dossier dans le dossier `content` avec un préfixe numérique. Le préfixe est utilisé afin de trier le menu de navigation. Voici un autre exemple:
+Pour créer une nouvelle page, ajoutez un nouveau fichier dans le dossier `1-home` ou dans tout autre dossier du dossier `content`. Pour ajouter votre page au menu de navigation, créez un dossier avec un préfixe numérique. Seuls les dossiers avec un préfixe sont présentés dans la navigation. Voici un autre exemple de page:
 
 ```
 ---
-Title: Yellow is for people who make websites
+Title: Yellow est fait pour les gens qui font des sites web
 ---
-You can [edit this page]. The help gives you more information 
-about how to create small web pages, blogs and wikis.
+Vous pouvez [edit - modifier cette page]. L'aide vous donne plus 
+d'informations sur la façon de créer de petites pages web, blogs et wikis.
 ```
 
 Maintenant ajoutons une image avec le [plugin image](https://github.com/datenstrom/yellow-plugins/tree/master/image):
 
 ```
 ---
-Title: Yellow is for people who make websites
+Title: Yellow est fait pour les gens qui font des sites web
 ---
 [image yellow.jpg]
 
-You can [edit this page]. The help gives you more information 
-about how to create small web pages, blogs and wikis.
+Vous pouvez [edit - modifier cette page]. L'aide vous donne plus 
+d'informations sur la façon de créer de petites pages web, blogs et wikis.
 ```
 
 Voyons comment créer un titre différent dans le menu de navigation:
 
 ```
 ---
-Title: Yellow is for people who make websites
+Title: Yellow est fait pour les gens qui font des sites web
 TitleNavigation: Home
 ---
 [image yellow.jpg]
 
-You can [edit this page]. The help gives you more information 
-about how to create small web pages, blogs and wikis.
+Vous pouvez [edit - modifier cette page]. L'aide vous donne plus 
+d'informations sur la façon de créer de petites pages web, blogs et wikis.
 ```
 
 Vous pouvez écrire vos pages en [Markdown](markdown-cheat-sheet-fr)
@@ -72,7 +72,7 @@ Pour créer une sidebar (menu latéral), ajoutez le fichier `sidebar.txt` dans u
 Title: Sidebar
 Status: hidden
 ---
-Links
+Liens
 
 * [Twitter](https://twitter.com/datenstromse)
 * [GitHub](https://github.com/datenstrom)

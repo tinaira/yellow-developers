@@ -3,7 +3,7 @@ Title: Webseiten erstellen
 Sidebar: sidebar-de
 Language: de
 ---
-Lerne wie man eine Webseite mit Yellow macht.
+Lerne wie man eine Webseite mit Yellow erstellt.
 
 ## Webseite installieren
 
@@ -11,7 +11,7 @@ Lerne wie man eine Webseite mit Yellow macht.
 
 Deine Webseite ist sofort erreichbar. Die Installation von Yellow kommt mit zwei Seiten, "Home" und "About". Das ist nur ein Beispiel um loszulegen, verändere alles so wie du willst. Man kann eine Webseite erstellen, indem man weitere Dateien und Verzeichnisse hinzufügt. 
 
-Die zentrale Konfigurationsdatei für deine Webseite ist `system/config/config.ini`. Dort kann man die Standardeinstellungen festlegen. Die individuellen Einstellungen lassen sich oben auf jeder Seite festlegen. Bei einer neuen Installation sollte man `Sitename`, `Author`, `Email` und `Language` anpassen. Es gibt [Plugins](/plugins/) und [Themes](/themes/) zum Herunterladen.
+Die zentrale Konfigurationsdatei für deine Webseite ist `system/config/config.ini`. Dort kann man die Standardeinstellungen festlegen. Die individuellen Einstellungen lassen sich oben auf jeder Seite festlegen. Es gibt [Plugins](/plugins/) und [Themes](/themes/) zum Herunterladen.
 
 ## Webseiten schreiben
 
@@ -26,7 +26,7 @@ Deine Webseite funktioniert!
 Du kannst [edit - diese Seite bearbeiten] oder einen Texteditor benutzen.
 ```
 
-Um eine neue Seite hinzuzufügen, erstellst du eine neue Datei im Home-Verzeichnis oder einem anderen `content`-Verzeichnis. Den `Title` legst du ganz oben auf der Seite fest. Um die Navigation zu erweitern, erstellst du ein neues Verzeichnis mit numerischen Präfix. Das Präfix bestimmt die Position in der Navigation. Hier ist noch ein Beispiel:
+Um eine neue Seite hinzuzufügen, erstellst du eine neue Datei im Home-Verzeichnis oder einem anderen `content`-Verzeichnis. Um die Navigation zu erweitern, erstellst du ein neues Verzeichnis mit numerischen Präfix. Es werden nur Verzeichnisse mit einem Präfix in der Navigation angezeigt. Hier ist noch eine Beispiel-Seite:
 
 ```
 ---
@@ -61,7 +61,7 @@ Du kannst [edit - diese Seite bearbeiten]. Die Hilfe gibt dir weitere
 Informationen wie man kleine Webseiten, Blogs und Wikis erstellt.
 ```
 
-Du kannst Seiten mit [Markdown](markdown-cheat-sheet-de) schreiben. 
+Du kannst Seiten in [Markdown](markdown-cheat-sheet-de) erstellen. 
 
 ## Sidebar erstellen
 
