@@ -5,15 +5,34 @@
 // Search plugin
 class YellowSearch
 {
-	const Version = "0.6.3";
+	const Version = "0.6.4";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
 	function onLoad($yellow)
 	{
 		$this->yellow = $yellow;
+		$this->yellow->config->setDefault("searchLocation", "/search/");
 		$this->yellow->config->setDefault("searchPaginationLimit", "5");
 		$this->yellow->config->setDefault("searchPageLength", "250");
+	}
+	
+	// Handle page content parsing of custom block
+	function onParseContentBlock($page, $name, $text, $shortcut)
+	{
+		$output = NULL;
+		if($name=="search" && $shortcut)
+		{
+			list($location) = $this->yellow->toolbox->getTextArgs($text);
+			if(empty($location)) $location = $this->yellow->config->get("searchLocation");
+			$output = "<div class=\"".htmlspecialchars($name)."\">\n";
+			$output .= "<form class=\"search-form\" action=\"".$this->yellow->page->base.$this->yellow->config->get("searchLocation")."\" method=\"post\">\n";
+			$output .= "<input class=\"form-control\" type=\"text\" name=\"query\" placeholder=\"".$this->yellow->text->getHtml("searchButton")."\" />\n";
+			$output .= "<input type=\"hidden\" name=\"clean-url\" />\n";
+			$output .= "</form>\n";
+			$output .= "</div>\n";
+		}
+		return $output;
 	}
 	
 	// Handle page parsing
@@ -28,7 +47,6 @@ class YellowSearch
 			{
 				$this->yellow->page->set("titleHeader", $query." - ".$this->yellow->page->get("sitename"));
 				$this->yellow->page->set("title", $this->yellow->text->get("searchQuery")." ".$query);
-				$this->yellow->page->set("searchResults", $this->yellow->text->get("searchResultsEmpty"));
 				$pages = $this->yellow->pages->clean();
 				foreach($this->yellow->pages->index(false, false) as $page)
 				{
@@ -55,8 +73,9 @@ class YellowSearch
 				$this->yellow->page->setPages($pages);
 				$this->yellow->page->setLastModified($pages->getModified());
 				$this->yellow->page->setHeader("Cache-Control", "max-age=60");
+				$this->yellow->page->set("status", count($pages) ? "done" : "empty");
 			} else {
-				$this->yellow->page->set("searchResults", $this->yellow->text->get("searchResultsNone"));
+				$this->yellow->page->set("status", "none");
 			}
 		}
 	}

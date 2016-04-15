@@ -7,7 +7,7 @@ Here's how to set up a website with different languages.
 
 ## Languages
 
-Yellow comes with multiple languages and there are more [language files](https://github.com/datenstrom/yellow-plugins/tree/master/language) you can download. The default language is defined in file `system/config/config.ini`. A different language can be defined in the [settings](markdown-cheat-sheet#settings) at the top of each page.
+Yellow comes with three languages and there are more [language files](https://github.com/datenstrom/yellow-plugins/tree/master/language) you can download. The default language is defined in file `system/config/config.ini`. A different language can be defined in the [settings](markdown-cheat-sheet#settings) at the top of each page.
 
 Here's an English page:
 

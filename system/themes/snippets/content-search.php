@@ -16,7 +16,7 @@
 </div>
 <?php endforeach ?>
 <?php else: ?>
-<p><?php echo $yellow->page->getHtml("searchResults") ?><p>
+<p><?php echo $yellow->text->getHtml("searchResults".ucfirst($yellow->page->get("status"))) ?><p>
 <?php endif ?>
 <?php $yellow->snippet("pagination", $yellow->page->getPages()) ?>
 </div>

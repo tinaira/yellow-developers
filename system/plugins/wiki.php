@@ -184,12 +184,6 @@ class YellowWiki
 			$this->yellow->page->setPage("wiki", $page);
 		}
 	}
-	
-	// Handle page extra HTML data
-	function onExtra($name)
-	{
-		return $this->onParseContentBlock($this->yellow->page, $name, "", true);
-	}
 }
 
 $yellow->plugins->register("wiki", "YellowWiki", YellowWiki::Version);

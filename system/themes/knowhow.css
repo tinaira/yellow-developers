@@ -1,5 +1,5 @@
 /* Theme: Knowhow theme */
-/* Version: 0.6.5 */
+/* Version: 0.6.6 */
 /* Designer: Mark Mayberg */
 
 html, body, div, form, pre, span, tr, th, td { margin:0; padding:0; border:0; vertical-align:baseline; }
@@ -32,6 +32,7 @@ a, img { border:none; text-decoration:none; }
 .with-sidebar .main { margin-right:280px; }
 .with-sidebar .sidebar { float:right; width:208px; margin-top:5.3em; padding:10px; overflow:hidden; }
 .with-sidebar .sidebar { border:solid 1px #eee; border-radius:3px; font-size:13px; }
+.with-sidebar .sidebar .search-form input { width:100%; box-sizing:border-box; }
 .content h1:first-child, .content>*:first-child { margin-top:0; }
 .content h1 a { color:#333; }
 .content h1 a:hover { color:#333; text-decoration:none; }
@@ -80,7 +81,7 @@ a, img { border:none; text-decoration:none; }
 .navigation-search { padding:0.5em 0; }
 .navigation-search .search-form { position:relative; }
 .navigation-search .search-text { font-family:inherit; font-size:inherit; font-weight:inherit; }
-.navigation-search .search-text { padding:0.5em; border:2px solid #eee; width:100%; box-sizing:border-box; }
+.navigation-search .search-text { padding:0.5em; border:2px solid #eee; border-radius:4px; width:100%; box-sizing:border-box; }
 .navigation-search .search-text { background-color:#fff; background-image:linear-gradient(to bottom, #fff, #fff); }
 .navigation-search .search-button { position:absolute; top:0; right:0; }
 .navigation-search .search-button { font-family:inherit; font-size:inherit; font-weight:inherit; }
@@ -113,11 +114,12 @@ a, img { border:none; text-decoration:none; }
 /* Forms and buttons */
 
 .form-control {
-	margin:0; padding:2px 4px;
+	margin:0; padding:4px 4px;
 	display:inline-block; min-width:7em;
 	background-color:#fff; color:#555;
 	background-image:linear-gradient(to bottom, #fff, #fff);
-	border:2px solid #eee;
+	border:1px solid #eee;
+	border-radius:4px;
 	font-size:0.9em; font-family:inherit; font-weight:normal; line-height:normal;
 }
 .btn {

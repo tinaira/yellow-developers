@@ -1,5 +1,5 @@
 /* Theme: Blogsite theme */
-/* Version: 0.6.5 */
+/* Version: 0.6.6 */
 /* Designer: Mark Mayberg */
 
 html, body, div, form, pre, span, tr, th, td { margin:0; padding:0; border:0; vertical-align:baseline; }
@@ -18,7 +18,7 @@ code { font-size:1.1em; }
 a { color:#07d; }
 a:hover { color:#07d; text-decoration:underline; }
 a, img { border:none; text-decoration:none; }
-.yellow-bar { margin:0 0.5em; }
+.yellow-bar { margin:1 0.5em; }
 .yellow-pane form h1 { color:#07d; }
 .sitename { text-align:center; }
 .sitename h1 { margin:0.4em 0; font-size:3.5em; }
@@ -32,6 +32,7 @@ a, img { border:none; text-decoration:none; }
 }
 .with-sidebar .main { margin-right:13em; }
 .with-sidebar .sidebar { float:right; width:12em; margin-top:4.8em; overflow:hidden; }
+.with-sidebar .sidebar .search-form input { width:100%; box-sizing:border-box; }
 .content { padding:1.5em; }
 .content h1:first-child, .content>*:first-child { margin-top:0; }
 .content h1 a:hover { text-decoration:none; }
@@ -82,7 +83,7 @@ a, img { border:none; text-decoration:none; }
 .navigation-search { padding:1.5em; }
 .navigation-search .search-form { position:relative; }
 .navigation-search .search-text { font-family:inherit; font-size:inherit; font-weight:inherit; }
-.navigation-search .search-text { padding:0.5em; border:1px solid #bbb; border-radius:4px; width:100%; box-sizing:border-box; }
+.navigation-search .search-text { padding:0.5em; border:1px solid #ccc; width:100%; box-sizing:border-box; }
 .navigation-search .search-text { background-color:#fff; background-image:linear-gradient(to bottom, #fff, #fff); }
 .navigation-search .search-button { position:absolute; top:0; right:0; }
 .navigation-search .search-button { font-family:inherit; font-size:inherit; font-weight:inherit; }
@@ -111,11 +112,11 @@ a, img { border:none; text-decoration:none; }
 /* Forms and buttons */
 
 .form-control {
-	margin:0; padding:2px 4px;
+	margin:0; padding:3px 4px;
 	display:inline-block; min-width:7em;
 	background-color:#fff; color:#555;
 	background-image:linear-gradient(to bottom, #fff, #fff);
-	border:2px solid #ccc;
+	border:1px solid #ccc;
 	font-size:0.9em; font-family:inherit; font-weight:normal; line-height:normal;
 }
 .btn {

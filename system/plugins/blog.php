@@ -184,12 +184,6 @@ class YellowBlog
 			$this->yellow->page->setPage("blog", $page);
 		}
 	}
-
-	// Handle page extra HTML data
-	function onExtra($name)
-	{
-		return $this->onParseContentBlock($this->yellow->page, $name, "", true);
-	}
 }
 
 $yellow->plugins->register("blog", "YellowBlog", YellowBlog::Version);
