@@ -11,7 +11,7 @@ Lerne wie man ein Wiki mit Yellow erstellt.
 
 Dein Wiki ist sofort erreichbar unter `http://website/wiki/` oder `http://website/`, je nachdem wie dein `content`-Verzeichnis konfiguriert ist. Soll das Wiki auf deiner Startseite angezeigt werden, benenne das Wikiverzeichnis zu "1-wiki" um und lösche "1-home".
 
-Die zentrale Konfigurationsdatei für das Wiki ist `system/config/config.ini`. Dort kann man die Standardeinstellungen festlegen. Die individuellen Einstellungen lassen sich oben auf jeder Seite festlegen. Es gibt [Plugins](/plugins/) und [Themes](/themes/) zum Herunterladen.
+Die zentrale Konfigurationsdatei für das Wiki ist `system/config/config.ini`. Dort kann man die [Standardeinstellungen](changing-settings-de#einstellungen) festlegen. Die individuellen Einstellungen lassen sich oben auf jeder Seite festlegen. Es gibt [Plugins](/plugins/) und [Themes](/themes/) zum Herunterladen.
 
 ## Wikiseiten schreiben
 

@@ -9,7 +9,7 @@ Tout les paramètres se trouvent dans le dossier `system`. Ici vous pouvez faire
 
 Le dossier `config` contient les fichiers de configurations. Le dossier `plugins` contient l'application Yellow. Le dossier `themes` concerne l'aspect visuel de votre site web. Apporter des changements dans ces dossiers affectera entièrement votre site web.
 
-## Configuration
+## Paramètres
 
 Le fichier de configuration principal est `system/config/config.ini`. Voici un exemple:
 
@@ -19,7 +19,7 @@ Le fichier de configuration principal est `system/config/config.ini`. Voici un e
     Language: fr
     Theme: flatsite
 
-Vous pouvez y définir les paramètres par défaut pour votre site web. Les paramètres individuels peuvent être définis au haut de chaque page. Lors d'une nouvelle installation, il est conseillé de changer `Sitename`, `Author`, `Email` et `Language`.
+Vous pouvez y définir les paramètres par défaut pour votre site web. Les [paramètres](markdown-cheat-sheet-fr#paramètres) individuels peuvent être définis au haut de chaque page. Lors d'une nouvelle installation, il est conseillé de changer `Sitename`, `Author`, `Email` et `Language`.
 
 Quand quelque chose ne marche pas, votre site web vous indiquera l'erreur. Quand un navigateur web demande un fichier que le serveur web ne peut pas trouver, votre site web affichera "File not found". Le fichier `system/config/page-error-404.txt` définit l'aperçu d'une page introuvable.
 

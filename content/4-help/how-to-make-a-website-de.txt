@@ -11,7 +11,7 @@ Lerne wie man eine Webseite mit Yellow erstellt.
 
 Deine Webseite ist sofort erreichbar. Die Installation von Yellow kommt mit zwei Seiten, "Home" und "About". Das ist nur ein Beispiel um loszulegen, verändere alles so wie du willst. Man kann eine Webseite erstellen, indem man weitere Dateien und Verzeichnisse hinzufügt. 
 
-Die zentrale Konfigurationsdatei für deine Webseite ist `system/config/config.ini`. Dort kann man die Standardeinstellungen festlegen. Die individuellen Einstellungen lassen sich oben auf jeder Seite festlegen. Es gibt [Plugins](/plugins/) und [Themes](/themes/) zum Herunterladen.
+Die zentrale Konfigurationsdatei für deine Webseite ist `system/config/config.ini`. Dort kann man die [Standardeinstellungen](changing-settings-de#einstellungen) festlegen. Die individuellen Einstellungen lassen sich oben auf jeder Seite festlegen. Es gibt [Plugins](/plugins/) und [Themes](/themes/) zum Herunterladen.
 
 ## Webseiten schreiben
 
