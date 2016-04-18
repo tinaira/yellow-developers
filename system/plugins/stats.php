@@ -5,7 +5,7 @@
 // Statistics command plugin
 class YellowStats
 {
-	const Version = "0.6.6";
+	const Version = "0.6.7";
 	var $yellow;			//access to API
 	var $days;				//detected days
 	var $views;				//detected views
@@ -18,7 +18,6 @@ class YellowStats
 		$this->yellow->config->setDefault("statsLinesMax", 8);
 		$this->yellow->config->setDefault("statsLogDir", "/var/log/apache2/");
 		$this->yellow->config->setDefault("statsLogFile", "(.*)access.log");
-		$this->yellow->config->setDefault("statsLocationSearch", "/search/");
 		$this->yellow->config->setDefault("statsLocationIgnore", "media|system|edit");
 		$this->yellow->config->setDefault("statsSpamFilter", "bot|crawler|spider");
 	}
@@ -212,7 +211,7 @@ class YellowStats
 		$referer = preg_replace_callback("#(\\\x[0-9a-f]{2})#", function($matches) { return chr(hexdec($matches[1])); }, $referer);
 		$referer = rawurldecode($referer);
 		if(preg_match("#^(\w+:\/\/[^/]+)$#", $referer)) $referer .= '/';
-		return preg_match("#$refererSelf#i", $referer) ? "-" : $referer;
+		return preg_match("#$refererSelf#", $referer) ? "-" : $referer;
 	}
 	
 	// Return URL, with server scheme and server name
@@ -225,7 +224,8 @@ class YellowStats
 	// Return search URL, if available
 	function getSearchUrl($location)
 	{
-		$locationSearch = $this->yellow->config->get("statsLocationSearch")."query".$this->yellow->toolbox->getLocationArgsSeparator();
+		$locationSearch = $this->yellow->config->get("serverBase").$this->yellow->config->get("searchLocation");
+		$locationSearch .= "query".$this->yellow->toolbox->getLocationArgsSeparator();
 		return preg_match("#^$locationSearch([^/]+)/$#", $location) ? $this->getUrl(strtoloweru($location)) : "-";
 	}
 	
