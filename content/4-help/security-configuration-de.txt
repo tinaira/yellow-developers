@@ -17,7 +17,7 @@ Falls mehrere Person eine Webseite bearbeiten, beschränke [Benutzerkontos](http
 
 Alle Benutzer sind in der Datei `system/config/user.ini` gespeichert. Ein Benutzerkonto besteht aus Email, verschlüsseltem Password, Name, Sprache, Status und am Ende befindet sich die Startseite. Benutzer können keine Seiten ausserhalb ihrer Startseite verändern.
 
-Du kannst [Benutzerbeschränkungen testen](http://developers.datenstrom.se), einloggen mit `guest@guest.de` + `guest`.
+Du kannst [Benutzerbeschränkungen testen](http://developers.datenstrom.se), einloggen mit `guest@guest.com` + `guest`.
 
 ## Abgesicherter Modus
 

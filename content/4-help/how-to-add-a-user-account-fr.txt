@@ -7,10 +7,11 @@ Language: fr
 
 ## Ajouter un utilisateur en ligne
 
-Vous pouvez créer un compte utilisateur en ligne:
+Vous pouvez créer un compte utilisateur depuis le [navigateur](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface):
 
-1. Rendez-vous sur https://developers.datenstrom.se/tests/new-user
-2. Suivez les instructions afin de créer un compte utilisateur
+1. Installez une nouvelle version de Yellow.
+2. Cliquez sur le lien d'édition d'une page.
+3. Suivez les instructions afin de créer un compte utilisateur.
 
 ## Ajouter un utilisateur en ligne de commande
 
@@ -20,9 +21,3 @@ Vous pouvez créer un compte utilisateur depuis une interface en [ligne de comma
 2. Rendez-vous dans le dossier d'installation de Yellow, où se trouve le fichier `yellow.php`
 3. Entrez la ligne suivante: `php yellow.php user email@example.com horsebattery`
 4. Vous pouvez maintenant vous connecter avec `email@example.com` et le mot de passe `horsebattery`
-
-Tout les utilisateurs sont stockés dans le fichier `system/config/user.ini`. Ce fichier de configuration utilise le format suivant `email: password hash, name, language, status, home`. La plupart des entrées doivent être explicites, le mot de passe est chiffré en bcrypt-Hash, à la fin il s'agit de la page d'accueil de l'utilisateur. Les utilisateurs ne peuvent pas modifier les pages au-delà de leur page d'accueil.
-
-## Ajouter un utilisateur depuis le navigateur web
-
-Vous souhaitez créer un compte utilisateur depuis votre propre site web ? N'est-il pas étrange que vous deviez lire ces instructions ? Vous avez absolument raison. Nous sommes ouvert à toutes [suggestions](https://github.com/datenstrom/yellow/issues). 

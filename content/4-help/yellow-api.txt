@@ -366,19 +366,17 @@ YellowText::load file:system/plugins/language-fr.txt
 YellowUsers::load file:system/config/user.ini
 YellowLookup::findFileFromLocation /plugins/blog-plugin/ -> content/2-plugins/1-blog-plugin/page.txt
 YellowPages::scanLocation location:/plugins/blog-plugin/
-YellowLookup::findLocationFromFile /plugins/blog-plugin/blog-example <- content/2-plugins/1-blog-plugin/2013-04-07-blog-example.txt
-YellowLookup::findLocationFromFile /plugins/blog-plugin/blog-example-2 <- content/2-plugins/1-blog-plugin/2013-04-22-blog-example-2.txt
-YellowLookup::findLocationFromFile /plugins/blog-plugin/blog-example-3 <- content/2-plugins/1-blog-plugin/2013-05-01-blog-example-3.txt
 ```
 
 Get maximum information by increasing debug level to `<?php define("DEBUG", 3);`
 ```
-Yellow 0.6.3, PHP 5.5.30, Apache/2.4.16 Darwin
+Yellow 0.6.4, PHP 5.5.31, Apache/2.4.18 Darwin
 YellowConfig::load file:system/config/config.ini
 YellowConfig::load sitename:Yellow developers
 YellowConfig::load author:Yellow
+YellowConfig::load email:noreply@datenstrom.se
 YellowConfig::load language:en
-...
+YellowConfig::load theme:flatsite
 ```
 
 ## Formats
