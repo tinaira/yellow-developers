@@ -1,5 +1,5 @@
 ---
 Title: Test location API
-Template: testlocationapi
+Template: locationapi
 ---
 This page tests location API.
