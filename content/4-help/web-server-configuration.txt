@@ -21,12 +21,12 @@ RewriteRule ^ yellow.php [L]
 </IfModule>
 ```
 
-On a shared web server add `RewriteBase` to your configuration file:
+When your website doesn't work, please check the following steps. If Yellow has been installed in a subfolder, you should add `RewriteBase` to your configuration file. This will fix most web server problems. Here's an example:
 
 ```apache
 <IfModule mod_rewrite.c>
 RewriteEngine on
-RewriteBase /~userid/
+RewriteBase /yellow/
 DirectoryIndex index.html yellow.php
 RewriteRule ^(cache|content|system)/ error [L]
 RewriteCond %{REQUEST_FILENAME} !-f
@@ -35,7 +35,7 @@ RewriteRule ^ yellow.php [L]
 </IfModule>
 ```
 
-On your own web server enable the rewrite module, you also need to set `AllowOverride All`. [Here's an example](http://stackoverflow.com/questions/18740419/how-to-set-allowoverride-all). Once this is configured your website should work. Contact your web hosting provider if you have any trouble doing this.
+When your website still doesn't work, please check the Apache web server. You have to enable the [rewrite module](http://stackoverflow.com/questions/18740419/how-to-set-allowoverride-all) and set `AllowOverride All`. Once the rewrite module is enabled your website should work.
 
 ## Nginx
 

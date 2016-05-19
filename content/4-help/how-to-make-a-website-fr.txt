@@ -5,6 +5,8 @@ Language: fr
 ---
 Apprenez à faire un site web avec Yellow
 
+[image screenshot-website.jpg Screenshot]
+
 ## Installer votre site
 
 [Téléchargez et installez Yellow](https://github.com/datenstrom/yellow/).
@@ -78,7 +80,7 @@ Liens
 * [GitHub](https://github.com/datenstrom)
 ```
 
-## Fonctionnalités avancées
+## Plus de fonctionnalités
 
 * [Comment ajouter une page de contact à votre site](https://github.com/datenstrom/yellow-plugins/tree/master/contact)
 * [Comment ajouter un sitemap à votre site](https://github.com/datenstrom/yellow-plugins/tree/master/sitemap)

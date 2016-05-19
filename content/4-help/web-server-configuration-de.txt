@@ -20,12 +20,14 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^ yellow.php [L]
 </IfModule>
 ```
-Auf einem gemeinsam benutzen Webserver fügt man `RewriteBase` hinzu:
+
+Wenn deine Webseite nicht funktioniert, überprüfe bitte die folgenden Schritte. Falls Yellow in einem Unterverzeichnis installiert wurde, sollte man `RewriteBase` zur Konfigurationsdatei hinzufügen. Das behebt die meisten Webserver-Probleme. Hier ist ein Beispiel:
+
 
 ```apache
 <IfModule mod_rewrite.c>
 RewriteEngine on
-RewriteBase /~userid/
+RewriteBase /yellow/
 DirectoryIndex index.html yellow.php
 RewriteRule ^(cache|content|system)/ error [L]
 RewriteCond %{REQUEST_FILENAME} !-f
@@ -34,7 +36,7 @@ RewriteRule ^ yellow.php [L]
 </IfModule>
 ```
 
-Auf seinem eigenem Webserver aktiviert man das Rewrite-Modul, man muss ausserdem noch `AllowOverride All` konfigurieren. [Hier ist ein Beispiel](http://stackoverflow.com/questions/18740419/how-to-set-allowoverride-all). Sobald das konfiguriert ist sollte deine Webseite funktionieren. Frage deinen Webhoster um Hilfe falls Probleme auftreten.
+Wenn deine Webseite immer noch nicht funktioniert, überprüfe bitte den Apache-Webserver. Das [Rewrite-Modul](http://stackoverflow.com/questions/18740419/how-to-set-allowoverride-all) muss aktiviert sein und `AllowOverride All` konfiguriert sein. Sobald das Rewrite-Modul aktiviert ist, sollte deine Webseite funktionieren.
 
 ## Nginx
 
@@ -89,7 +91,7 @@ Das erstellt eine komplett statische Webseite im Verzeichnis `/var/www/website`.
 
 Als Alternative zu einer statischen Webseite kann man auch einzelne Webseiten zum Cache hinzufügen. Hier ist ein Beispiel: `php yellow.php build cache /blog/blog-example`. Zum Löschen des Caches gibt man die folgende Zeile ein: `php yellow.php clean`.
 
-## Eigene 404-Seite
+## 404-Seite anpassen
 
 Wenn der Webbrowser eine Datei anfragt die der Webserver nicht finden kann wird "File not found" ausgegeben. Die Datei `system/config/page-error-404.txt` legt fest wie eine fehlende Datei aussieht. Hier ist ein Beispiel:
 

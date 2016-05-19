@@ -115,7 +115,7 @@ Archive
 [blogarchive /blog/]
 ```
 
-## Advanced features
+## More features
 
 * [How to add comments to your blog](https://github.com/datenstrom/yellow-plugins/tree/master/disqus)
 * [How to add a contact page to your blog](https://github.com/datenstrom/yellow-plugins/tree/master/contact)

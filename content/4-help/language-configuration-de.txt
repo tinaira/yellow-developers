@@ -7,7 +7,7 @@ Wie man eine Webseite mit verschiedenen Sprachen konfiguriert.
 
 ## Sprachen
 
-Yellow kommt mit drei Sprachen und es gibt weitere [Sprachdateien](https://github.com/datenstrom/yellow-plugins/tree/master/language) zum Herunterladen. Die Standardsprache wird in der Datei `system/config/config.ini` festgelegt. Eine andere Sprache lässt sich in den [Einstellungen](markdown-cheat-sheet-de#einstellungen) ganz oben auf jeder Seite festlegen. 
+Yellow ist mehrsprachig und es gibt [Sprachdateien](https://github.com/datenstrom/yellow-plugins/tree/master/language) zum Herunterladen. Die [Standardsprache](changing-settings-de#einstellungen) wird in der Datei `system/config/config.ini` festgelegt. Eine andere Sprache lässt sich in den [Einstellungen](markdown-cheat-sheet-de#einstellungen) ganz oben auf jeder Seite festlegen, zum Beispiel `Language: en`. 
 
 Hier ist eine Englische Seite:
 
@@ -39,9 +39,15 @@ Language: fr
 Oiseaux du même plumage volent ensemble.
 ```
 
+## Einsprachen-Modus
+
+Wenn man nur eine Sprache benutzt oder einzelne Seiten übersetzen will, benutzt man den Einsprachen-Modus. Die [Standardsprache](changing-settings-de#einstellungen) wird in der Datei `system/config/config.ini` festgelegt. Der folgende Screenshot zeigt das `content`-Verzeichnis. 
+
+[image screenshot-content.png Screenshot]
+
 ## Mehrsprachen-Modus
 
-Wenn man eine ganze Webseite übersetzen will, benutzt man den Mehrsprachen-Modus. Öffne die Datei `system/config/config.ini` und ändere `MultiLanguageMode: 1`. Erstelle ein neues Verzeichnis `1-en` in deinem `content` Verzeichnis und schiebe alle Inhalte hinein.
+Wenn man eine ganze Webseite übersetzen will, benutzt man den Mehrsprachen-Modus. Öffne die Datei `system/config/config.ini` und ändere `MultiLanguageMode: 1`. Erstelle ein neues Verzeichnis `1-en` in deinem `content`-Verzeichnis und schiebe alle Inhalte hinein.
 
 [image screenshot-language1.png Screenshot]
 
@@ -49,7 +55,7 @@ Der Screenshot zeigt die Verzeichnisse `1-en`, `2-de` und `3-fr`. Das erzeugt di
 
 [image screenshot-language2.png Screenshot]
 
-Der zweite Screenshot zeigt die Verzeichnisse `1-en`, `2-de`, `3-fr` und `default`. Das erzeugt die folgenden URLs `http://website/en/` `http://website/de/` `http://website/fr/` und eine Startseite `http://website/` welche automatisch die Sprache des Besuchers ermittelt. 
+Der Screenshot zeigt die Verzeichnisse `1-en`, `2-de`, `3-fr` und `default`. Das erzeugt die folgenden URLs `http://website/en/` `http://website/de/` `http://website/fr/` und eine Startseite `http://website/` welche automatisch die Sprache des Besuchers ermittelt. 
 
 Wenn man die [Navigation anpassen](yellow-templates-de#navigation-anpassen) will, öffnet man die Datei `system/config/config.ini` und ändert `Navigation: navigation-multilanguage`. Du kannst auch eine Sprachauswahl irgendwo anders in deine Webseite einbauen.
 

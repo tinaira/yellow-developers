@@ -81,7 +81,7 @@ Links
 * [Letzte Änderungen](/wiki/special:changes/)
 ```
 
-## Erweiterte Funktionen
+## Weitere Funktionen
 
 * [Eine Suchfunktion zum Wiki hinzufügen](https://github.com/datenstrom/yellow-plugins/tree/master/search)
 * [Eine Sitemap zum Wiki hinzufügen](https://github.com/datenstrom/yellow-plugins/tree/master/sitemap)

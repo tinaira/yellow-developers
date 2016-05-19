@@ -82,7 +82,7 @@ Links
 * [Recent changes](/wiki/special:changes/)
 ```
 
-## Advanced features
+## More features
 
 * [How to add a search to your wiki](https://github.com/datenstrom/yellow-plugins/tree/master/search)
 * [How to add a sitemap to your wiki](https://github.com/datenstrom/yellow-plugins/tree/master/sitemap)

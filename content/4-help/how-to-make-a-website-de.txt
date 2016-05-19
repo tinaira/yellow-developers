@@ -1,9 +1,11 @@
 ---
-Title: Webseiten erstellen
+Title: Webseite erstellen
 Sidebar: sidebar-de
 Language: de
 ---
 Lerne wie man eine Webseite mit Yellow erstellt.
+
+[image screenshot-website.jpg Screenshot]
 
 ## Webseite installieren
 
@@ -78,7 +80,7 @@ Links
 * [GitHub](https://github.com/datenstrom)
 ```
 
-## Erweiterte Funktionen
+## Weitere Funktionen
 
 * [Eine Kontaktseite zur Webseite hinzufügen](https://github.com/datenstrom/yellow-plugins/tree/master/contact)
 * [Eine Sitemap zur Webseite hinzufügen](https://github.com/datenstrom/yellow-plugins/tree/master/sitemap)

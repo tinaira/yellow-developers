@@ -27,4 +27,4 @@ Falls Probleme auftreten wird eine Fehlerseite angezeigt. Wenn der Webbrowser ei
 
 Yellow konzentriert sich auf's Wesentliche, auf Menschen und Werkzeuge die zusammenarbeiten. Man bekommt die wichtigsten Sachen um Webseiten zu erstellen und kann Schritt für Schritt mehr hinzufügen. Es gibt [Plugins](/plugins/) und [Themes](/themes/) zum Herunterladen.
 
-[Weiter: Webseiten erstellen →](how-to-make-a-website-de)
+[Weiter: Webseite erstellen →](how-to-make-a-website-de)

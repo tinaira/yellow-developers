@@ -81,7 +81,7 @@ Links
 * [Recent changes](/wiki/special:changes/)
 ```
 
-## Advanced features
+## Plus de fonctionnalités
 
 * [Comment ajouter un moteur de recherche à votre wiki](https://github.com/datenstrom/yellow-plugins/tree/master/search)
 * [Comment ajouter un sitemap à votre wiki](https://github.com/datenstrom/yellow-plugins/tree/master/sitemap)

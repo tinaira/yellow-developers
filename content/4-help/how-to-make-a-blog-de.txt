@@ -114,7 +114,7 @@ Archiv
 [blogarchive /blog/]
 ```
 
-## Erweiterte Funktionen
+## Weitere Funktionen
 
 * [Eine Kommentarfunktion zum Blog hinzufügen](https://github.com/datenstrom/yellow-plugins/tree/master/disqus)
 * [Eine Kontaktseite zum Blog hinzufügen](https://github.com/datenstrom/yellow-plugins/tree/master/contact)
