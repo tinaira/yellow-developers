@@ -15,7 +15,7 @@ You need a web server with SSL/TLS and valid certificate.
 
 If you have more than one person editing a website, restrict [user accounts](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface) and only parts of the website can be changed. This protects your website from being changed in a web browser, but it doesn't prevent changes in the file system.  
 
-All users are stored in file `system/config/user.ini`. A user account consists of email, encrypted password, name, language, status and at the end is the user's home page. Users can not change pages outside their home page. 
+All users are stored in file `system/config/user.ini`. A user account consists of email, encrypted password, further information and at the end is the user's home page. Users can not change pages outside their home page. 
 
 You can [test user restrictions](http://developers.datenstrom.se), log in with `guest@guest.com` + `guest`.
 

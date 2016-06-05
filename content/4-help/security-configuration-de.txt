@@ -15,7 +15,7 @@ Du brauchst einen Webserver mit SSL/TLS und gültigem Zertifikat.
 
 Falls mehrere Person eine Webseite bearbeiten, beschränke [Benutzerkontos](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface) und nur Teile der Webseite können verändert werden. Damit wird deine Webseite vor Veränderungen im Webbrowser geschützt, jedoch werden Änderungen im Dateisystem nicht verhindert.
 
-Alle Benutzer sind in der Datei `system/config/user.ini` gespeichert. Ein Benutzerkonto besteht aus Email, verschlüsseltem Kennwort, Name, Sprache, Status und am Ende befindet sich die Startseite. Benutzer können keine Seiten ausserhalb ihrer Startseite verändern.
+Alle Benutzer sind in der Datei `system/config/user.ini` gespeichert. Ein Benutzerkonto besteht aus Email, verschlüsseltem Kennwort, weiteren Daten und am Ende die Startseite. Benutzer können keine Seiten ausserhalb ihrer Startseite verändern.
 
 Du kannst [Benutzerbeschränkungen testen](http://developers.datenstrom.se), einloggen mit `guest@guest.com` + `guest`.
 

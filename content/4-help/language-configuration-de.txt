@@ -51,7 +51,7 @@ Wenn man eine ganze Webseite übersetzen will, benutzt man den Mehrsprachen-Modu
 
 [image screenshot-language1.png Screenshot]
 
-Der Screenshot zeigt die Verzeichnisse `1-en`, `2-de` und `3-fr`. Das erzeugt die folgenden URLs `http://website/` `http://website/de/` `http://website/fr/` für Englisch, Deutsch und Französisch. Hier ist noch eine andere Einstellung:
+Der Screenshot zeigt die Verzeichnisse `1-en`, `2-de` und `3-fr`. Das erzeugt die folgenden URLs `http://website/` `http://website/de/` `http://website/fr/` für Englisch, Deutsch und Französisch. Hier ist noch eine weitere Einstellung:
 
 [image screenshot-language2.png Screenshot]
 
