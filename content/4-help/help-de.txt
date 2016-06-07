@@ -7,17 +7,17 @@ Language: de
 
 Yellow ist für Menschen die Webseiten machen. [Support finden](support-de).
 
-## Erste Schritte
-
-* [Inhalt hinzufügen](adding-content-de)
-* [Medien hinzufügen](adding-media-de)
-* [Einstellungen ändern](changing-settings-de)
-
 ## Anleitungen
 
 * [Webseite erstellen](how-to-make-a-website-de)
 * [Blog erstellen](how-to-make-a-blog-de)
 * [Wiki erstellen](how-to-make-a-wiki-de)
+
+## Grundlagen
+
+* [Inhalt hinzufügen](adding-content-de)
+* [Medien hinzufügen](adding-media-de)
+* [Einstellungen ändern](changing-settings-de)
 
 ## Einstellungen
 

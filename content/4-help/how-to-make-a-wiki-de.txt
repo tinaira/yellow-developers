@@ -89,4 +89,4 @@ Links
 * [Ein Inhaltsverzeichnis zum Wiki hinzufügen](https://github.com/datenstrom/yellow-plugins/tree/master/toc)
 * [Ein statisches Wiki erstellen](web-server-configuration-de#statische-webseite)
 
-[Weiter: Webservereinstellungen →](web-server-configuration-de)
+[Weiter: Inhalt hinzufügen →](adding-content-de)

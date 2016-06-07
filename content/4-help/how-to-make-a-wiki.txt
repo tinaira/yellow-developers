@@ -90,4 +90,4 @@ Links
 * [How to make a table of contents](https://github.com/datenstrom/yellow-plugins/tree/master/toc)
 * [How to make a static wiki](web-server-configuration#static-website)
 
-[Next: Web server configuration →](web-server-configuration)
+[Next: Adding content →](adding-content)

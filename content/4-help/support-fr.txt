@@ -20,11 +20,10 @@ Vous êtes au bon endroit, nous sommes là pour vous aider.
 
 ## Comment contribuer
 
-* [Télécharger le kit des développeurs](https://github.com/datenstrom/yellow-developers)
+* [Examiner les nouvelles suggestions](https://github.com/datenstrom/yellow/issues?q=is%3Aopen+is%3Aissue+label%3Asuggestion)
 * [Créer une traduction](https://github.com/datenstrom/yellow-plugins/tree/master/language)
 * [Créer des plugins](https://github.com/datenstrom/yellow-plugins)
 * [Créer des thèmes](https://github.com/datenstrom/yellow-themes)
-* [Examiner suggestions](https://github.com/datenstrom/yellow/issues?q=is%3Aopen+is%3Aissue+label%3Asuggestion)
 
 ## Remerciements
 

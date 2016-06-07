@@ -41,9 +41,11 @@ Oiseaux du même plumage volent ensemble.
 
 ## Einsprachen-Modus
 
-Wenn man nur eine Sprache benutzt oder einzelne Seiten übersetzen will, benutzt man den Einsprachen-Modus. Die [Standardsprache](changing-settings-de#einstellungen) wird in der Datei `system/config/config.ini` festgelegt. Der folgende Screenshot zeigt das `content`-Verzeichnis. 
+Wenn man nur eine Sprache spricht oder nur einzelne Seiten übersetzen will, benutzt man den Einsprachen-Modus. Dieser Modus wird automatisch nach der Installation von Yellow benutzt. Die [Standardsprache](changing-settings-de#einstellungen) wird in der Datei `system/config/config.ini` festgelegt. 
 
 [image screenshot-content.png Screenshot]
+
+Der Screenshot zeigt das `content`-Verzeichnis.
 
 ## Mehrsprachen-Modus
 

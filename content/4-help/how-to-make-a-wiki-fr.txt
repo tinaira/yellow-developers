@@ -89,4 +89,4 @@ Links
 * [Comment ajouter une table des matières](https://github.com/datenstrom/yellow-plugins/tree/master/toc)
 * [Comment créer un wiki statique](web-server-configuration-fr#static-website)
 
-[Suivant: Configuration du serveur web →](web-server-configuration-fr)
+[Suivant: Ajouter des pages →](adding-content-fr)

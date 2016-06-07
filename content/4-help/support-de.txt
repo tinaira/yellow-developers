@@ -20,11 +20,10 @@ Tausche dich mit anderen Yellow-Benutzern aus und finde professionelle Hilfe.
 
 ## Mach mit
 
-* [Entwickler-Paket herunterladen](https://github.com/datenstrom/yellow-developers)
+* [Bewerte neue Vorschläge](https://github.com/datenstrom/yellow/issues?q=is%3Aopen+is%3Aissue+label%3Asuggestion)
 * [Erstelle eine Übersetzung](https://github.com/datenstrom/yellow-plugins/tree/master/language)
 * [Erstelle Plugins](https://github.com/datenstrom/yellow-plugins)
 * [Erstelle Themes](https://github.com/datenstrom/yellow-themes)
-* [Bewerte Vorschläge](https://github.com/datenstrom/yellow/issues?q=is%3Aopen+is%3Aissue+label%3Asuggestion)
 
 ## Danke
 
