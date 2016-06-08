@@ -23,8 +23,8 @@ Changements
 Configurations
 
 * [Configuration du serveur web](web-server-configuration-fr)
-* [Configuration de la sécurité](security-configuration-fr)
 * [Configuration de la langue](language-configuration-fr)
+* [Configuration de la sécurité](security-configuration-fr)
 
 Développeurs
 

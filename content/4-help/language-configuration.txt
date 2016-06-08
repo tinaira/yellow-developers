@@ -61,4 +61,4 @@ The screenshot shows the folders `1-en`, `2-de`, `3-fr` and `default`. This give
 
 If you want to use a [custom navigation](yellow-templates#custom-navigation), open file `system/config/config.ini` and change `Navigation: navigation-multilanguage`. You can also add a language selection somewhere on your website. 
 
-[Next: Yellow themes →](yellow-themes)
+[Next: Security configuration →](security-configuration)

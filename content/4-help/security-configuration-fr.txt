@@ -27,4 +27,4 @@ If you have more than one person editing a website, enable safe mode and only [M
 
 Open file `system/config/config.ini` and change `ParserSafeMode: 1`.
 
-[Next: Language configuration →](language-configuration-fr)
+[Next: Yellow themes →](yellow-themes-fr)

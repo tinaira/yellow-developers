@@ -44,7 +44,7 @@ Now let's add an image with the [image plugin](https://github.com/datenstrom/yel
 ---
 Title: Yellow is for people who make websites
 ---
-[image yellow.jpg]
+[image picture.jpg]
 
 You can [edit this page]. The help gives you more information 
 about how to create small web pages, blogs and wikis.
@@ -57,7 +57,7 @@ Let's show a different title in the navigation:
 Title: Yellow is for people who make websites
 TitleNavigation: Home
 ---
-[image yellow.jpg]
+[image picture.jpg]
 
 You can [edit this page]. The help gives you more information 
 about how to create small web pages, blogs and wikis.

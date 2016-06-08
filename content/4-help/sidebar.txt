@@ -23,8 +23,8 @@ Basics
 Configurations
 
 * [Web server configuration](web-server-configuration)
-* [Security configuration](security-configuration)
 * [Language configuration](language-configuration)
+* [Security configuration](security-configuration)
 
 Developers
 

@@ -2,6 +2,6 @@
 Title: Yellow is for people who make websites
 TitleNavigation: Demo
 ---
-[image yellow.jpg]
+[image picture.jpg]
 
 You can [edit this page]. The help gives you more information about how to create small web pages, blogs and wikis.

@@ -5,7 +5,7 @@ TitlePreview: Image
 Resizable images and thumbnails.
 [Download plugin](https://github.com/datenstrom/yellow-plugins/tree/master/image).
 
-[image yellow.jpg Example - 60%]
-[image yellow.jpg Example - 30%]
-[image yellow.jpg Example - 20%]
-[image yellow.jpg Example - 9%]
+[image picture.jpg Example - 60%]
+[image picture.jpg Example - 30%]
+[image picture.jpg Example - 20%]
+[image picture.jpg Example - 9%]

@@ -23,8 +23,8 @@ Grundlagen
 Einstellungen
 
 * [Webservereinstellungen](web-server-configuration-de)
-* [Sicherheitseinstellungen](security-configuration-de)
 * [Spracheinstellungen](language-configuration-de)
+* [Sicherheitseinstellungen](security-configuration-de)
 
 Entwickler
 

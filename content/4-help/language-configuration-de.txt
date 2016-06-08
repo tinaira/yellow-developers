@@ -61,4 +61,4 @@ Der Screenshot zeigt die Verzeichnisse `1-en`, `2-de`, `3-fr` und `default`. Das
 
 Wenn man die [Navigation anpassen](yellow-templates-de#navigation-anpassen) will, öffnet man die Datei `system/config/config.ini` und ändert `Navigation: navigation-multilanguage`. Du kannst auch eine Sprachauswahl irgendwo anders in deine Webseite einbauen.
 
-[Weiter: Yellow-Themes →](yellow-themes-de)
+[Weiter: Sicherheitseinstellungen →](security-configuration-de)
