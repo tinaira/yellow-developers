@@ -80,7 +80,7 @@ server {
 
 ## Static website
 
-Yellow is a flat-file CMS and a static site generator. As a static site generator, it offers a build command that you can run from within a folder containing the Yellow installation and it then outputs a completely static website, that works on any web server.
+Yellow is a flat-file CMS and a static site generator. As a static site generator, it offers a build command that you can run from within a folder containing the Yellow installation. It then generates a completely static website, that works on any web server.
 
 You can create a static website from the [command line](https://github.com/datenstrom/yellow-plugins/tree/master/commandline). 
 

@@ -3,7 +3,7 @@ Title: Comment faire un site web
 Sidebar: sidebar-fr
 Language: fr
 ---
-Apprenez à faire un site web avec Yellow
+Apprenez à faire un site web avec Yellow.
 
 [image screenshot-website.jpg Screenshot]
 
@@ -83,7 +83,7 @@ Liens
 ## Plus de fonctionnalités
 
 * [Comment ajouter une page de contact à votre site](https://github.com/datenstrom/yellow-plugins/tree/master/contact)
-* [Comment ajouter un sitemap à votre site](https://github.com/datenstrom/yellow-plugins/tree/master/sitemap)
+* [Comment ajouter une galerie d'images](https://github.com/datenstrom/yellow-plugins/tree/master/gallery)
 * [Comment ajouter un feed à votre site](https://github.com/datenstrom/yellow-plugins/tree/master/feed)
 * [Comment ajouter un moteur de recherche à votre site](https://github.com/datenstrom/yellow-plugins/tree/master/search)
 * [Comment créer un site web statique](web-server-configuration-fr#static-website)
