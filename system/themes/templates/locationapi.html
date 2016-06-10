@@ -9,7 +9,7 @@
 <tr><th>Location</th><th>Parent</th><th>Children</th><th>Visible</th><th>Siblings</th><th>Information</th><th>Modified</th></tr>
 <?php foreach($pages as $page): ?>
 <tr>
-<td><a href="<?php echo $page->getLocation() ?>"><?php echo $page->getLocation() ?></a></td>
+<td><a href="<?php echo $page->getLocation(true) ?>"><?php echo $page->getLocation(true) ?></a></td>
 <td><?php echo $page->getParent()!=NULL				? "yes" : "<span style=\"color:red\">no</span>" ?></td>
 <td><?php echo count($page->getChildren(true))!=0	? "yes" : "<span style=\"color:red\">no</span>" ?></td>
 <td><?php echo $page->isVisible()					? "yes" : "<span style=\"color:red\">no</span>" ?></td>
