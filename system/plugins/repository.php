@@ -5,13 +5,14 @@
 // Repository plugin
 class YellowRepository
 {
-	const Version = "0.6.4";
+	const Version = "0.6.5";
 
 	// Handle plugin initialisation
 	function onLoad($yellow)
 	{
 		$this->yellow = $yellow;
 		$this->yellow->config->setDefault("repositoryZipArchiveDir", "zip/");
+		$this->yellow->config->setDefault("repositoryFileIgnore", "README.md|plugin.jpg|theme.jpg");
 	}
 
 	// Handle command help
@@ -51,6 +52,7 @@ class YellowRepository
 		$pathZipArchive = $path.$this->yellow->config->get("repositoryZipArchiveDir");
 		if(is_dir($pathZipArchive))
 		{
+			$fileIgnore = $this->yellow->config->get("repositoryFileIgnore");
 			foreach($this->yellow->toolbox->getDirectoryEntries($path, "/.*/", true, true, false) as $entry)
 			{
 				if("$path$entry/" == $pathZipArchive) continue;
@@ -59,7 +61,11 @@ class YellowRepository
 				if($zip->open($fileNameZipArchive, ZIPARCHIVE::OVERWRITE) === true)
 				{
 					$fileNames = $this->yellow->toolbox->getDirectoryEntriesRecursive($path.$entry, "/.*/", true, false);
-					foreach($fileNames as $fileName) $zip->addFile($fileName, substru($fileName, strlenu($path)));
+					foreach($fileNames as $fileName)
+					{
+						if(preg_match("#($fileIgnore)#", $fileName)) continue;
+						$zip->addFile($fileName, substru($fileName, strlenu($path)));
+					}
 					$zip->close();
 				} else {
 					$statusCode = 500;

@@ -3,7 +3,7 @@ Title: Support
 Sidebar: sidebar
 Language: en
 ---
-Connect with other Yellow users and find professional help from the community.
+Connect with other Yellow users and find professional help.
 
 ## How to get support
 
