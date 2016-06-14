@@ -5,7 +5,7 @@
 // Repository plugin
 class YellowRepository
 {
-	const Version = "0.6.5";
+	const Version = "0.6.6";
 
 	// Handle plugin initialisation
 	function onLoad($yellow)
@@ -96,7 +96,7 @@ class YellowRepository
 				{
 					list($version, $url) = explode(',', $matches[2]);
 					$version = $data[$matches[1]];
-					$fileDataNew .= "$matches[1]: $version\n";
+					$fileDataNew .= "$matches[1]: $version,$url\n";
 				} else {
 					$fileDataNew .= $line;
 				}
