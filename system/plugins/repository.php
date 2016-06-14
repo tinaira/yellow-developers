@@ -87,18 +87,20 @@ class YellowRepository
 		$fileNameVersion = $path.$this->yellow->config->get("commandlineVersionFile");;
 		if(is_dir($path) && is_file("$fileNameVersion"))
 		{
+			$data = $this->getSoftwareVersionFromRepository($path);
 			$fileData = $this->yellow->toolbox->readFile($fileNameVersion);
 			foreach($this->yellow->toolbox->getTextLines($fileData) as $line)
 			{
 				preg_match("/^\s*(.*?)\s*:\s*(.*?)\s*$/", $line, $matches);
-				if(empty($matches[1]) || empty($matches[2]))
+				if(!empty($matches[1]) && !is_null($data[$matches[1]]))
 				{
-					$fileDataNew .= $line;
+					list($version, $url) = explode(',', $matches[2]);
+					$version = $data[$matches[1]];
+					$fileDataNew .= "$matches[1]: $version\n";
 				} else {
-					break;
+					$fileDataNew .= $line;
 				}
 			}
-			foreach($this->getSoftwareVersionFromRepository($path) as $key=>$value) $fileDataNew .= "$key: $value\n";
 			if(!$this->yellow->toolbox->createFile($fileNameVersion, $fileDataNew))
 			{
 				$statusCode = 500;
@@ -111,7 +113,7 @@ class YellowRepository
 	// Return software version from repository
 	function getSoftwareVersionFromRepository($path)
 	{
-		$version = array();
+		$data = array();
 		foreach($this->yellow->toolbox->getDirectoryEntriesRecursive($path, "/\.(php|css)/", false, false) as $entry)
 		{
 			$key = $value = "";
@@ -132,9 +134,9 @@ class YellowRepository
 					if(!empty($line) && $line[0]!= '/') break;
 				}
 			}
-			if(!empty($key) && !empty($value)) $version[$key] = $value;
+			if(!empty($key) && !empty($value)) $data[$key] = $value;
 		}
-		return $version;
+		return $data;
 	}
 }
 

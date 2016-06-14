@@ -97,5 +97,4 @@ More plugins by Yellow developers:
 * [YCSSG](https://github.com/dieli/yellow-extension-ycssg):
   Image gallery in CSS only.
 
-[Download all plugins](https://github.com/datenstrom/yellow-plugins).
-Make your own plugins with the [developers kit](https://github.com/datenstrom/yellow-developers).
+All files are licensed under [GPLv2](http://opensource.org/licenses/GPL-2.0) unless stated otherwise.

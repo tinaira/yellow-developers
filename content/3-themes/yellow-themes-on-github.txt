@@ -19,5 +19,4 @@ More themes by Yellow developers:
 * [Lateral](https://github.com/nibreh/yellow-theme-lateral):
   Lateral is a clean theme with fixed sidebar, inspired by Indexhibit.
 
-[Download all themes](https://github.com/datenstrom/yellow-themes).
-Make your own themes with the [developers kit](https://github.com/datenstrom/yellow-developers).
+All files are licensed under [GPLv2](http://opensource.org/licenses/GPL-2.0) unless stated otherwise.
