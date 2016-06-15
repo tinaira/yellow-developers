@@ -7,28 +7,31 @@ Du kannst das Aussehen deiner Webseite anpassen.
 
 ## Themes
 
-Themes bestimmen das Aussehen deiner Webseite. Such dir ein [Theme](/themes/) aus und pass es an. Das Standardtheme wird in der Datei `system/config/config.ini` festgelegt. Eine anderes Theme lässt sich in den [Einstellungen](markdown-cheat-sheet-de#einstellungen) auf jeder Seite festlegen, zum Beispiel `Theme: default`. 
+Themes bestimmen das Aussehen deiner Webseite. Beginne mit einem [Theme](/themes/) das dir gefällt. Das Standardtheme wird in der Datei `system/config/config.ini` festgelegt. Eine anderes Theme lässt sich in den [Einstellungen](markdown-cheat-sheet-de#einstellungen) auf jeder Seite festlegen, zum Beispiel `Theme: default`. 
 
-## Stylesheet
+## Themes anpassen
 
-Ein Theme besteht aus einem [Stylesheet](https://de.wikipedia.org/wiki/Cascading_Style_Sheets) und weiteren Dateien. Um ein anderes Stylesheet zu benutzen, legst du `Theme` ganz oben auf einer Seite fest. Du kannst auch ein Stylesheet mit dem Namen eines `content`-Verzeichnisses erstellen und es wird automatisch benutzt.
+Um ein anderes Theme zu benutzen, legst du `Theme` ganz oben auf einer Seite fest. Du kannst auch ein Theme mit dem Namen eines `content`-Verzeichnisses erstellen und es wird automatisch benutzt. Ein Theme besteht aus einem [Stylesheet](https://de.wikipedia.org/wiki/Cascading_Style_Sheets) und weiteren Dateien.
 
-Hier ist ein Beispiel-Stylesheet `system/themes/default.css`:
+Hier ist eine Beispiel-Themedatei `system/themes/home.css`:
 
 ```
+/* Theme: Home theme */
+/* Version: 0.1.1 */
+/* Designer: Mark Mayberg */
+
 html, body, div, form, pre, span, tr, th, td { margin:0; padding:0; border:0; vertical-align:baseline; }
 body { background-color:#fff; color:#717171; margin:1em; }
 h1, h2, h3, h4, h5, h6 { color:#07d; font-weight:normal; }
 a { color:#07d; text-decoration:none; }
 a:hover { color:#07d; text-decoration:underline; }
-.sitename h1 a { color:#717171; text-decoration:none; }
 ```
 
 ## JavaScript
 
-Du kannst [JavaScript](http://de.wikipedia.org/wiki/JavaScript) in eine Datei abspeichern, die so ähnlich heisst wie das Stylesheet und sie wird automatisch eingebunden. Das ermöglicht es Themes mit aufwendigen Funktionen zu erstellen. Für Script-Abhängige gibt es auch ein hervorragendes [jQuery-Plugin](https://github.com/nogginfuel/yellow-plugin-jquery).
+Du kannst [JavaScript](http://de.wikipedia.org/wiki/JavaScript) in eine Datei abspeichern, die so heisst wie ein Theme und sie wird automatisch benutzt. Das ermöglicht es Themes mit weiteren Funktionen zu erstellen. Für Script-Abhängige gibt es auch ein hervorragendes [jQuery-Plugin](https://github.com/nogginfuel/yellow-plugin-jquery).
 
-Hier ist ein Beispiel-JavaScript `system/themes/default.js`:
+Hier ist ein Beispiel-JavaScript `system/themes/assets/home.js`:
 
 ```
 var ready = function() 
@@ -47,6 +50,6 @@ if(window.addEventListener) {
 
 Das Siteicon, auch Favicon genannt ist ein kleines Bild, das stellvertretend für eine Webseite ist. Das Standardicon wird in der Datei `system/config/config.ini` festgelegt. Eine anderes Icon lässt sich in den [Einstellungen](markdown-cheat-sheet-de#einstellungen) auf jeder Seite festlegen, zum Beispiel `Siteicon: icon`.
 
-Um das Icon deiner Webseite zu ändern, überschreibe die Datei `system/themes/icon.png`.
+Um das Siteicon zu ändern überschreibe die Datei `system/themes/assets/icon.png`.
 
 [Weiter: Yellow-Templates →](yellow-templates-de)

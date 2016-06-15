@@ -1,5 +1,5 @@
 /* Theme: Knowhow theme */
-/* Version: 0.6.6 */
+/* Version: 0.6.7 */
 /* Designer: Mark Mayberg */
 
 html, body, div, form, pre, span, tr, th, td { margin:0; padding:0; border:0; vertical-align:baseline; }
@@ -24,7 +24,7 @@ a, img { border:none; text-decoration:none; }
 .sitename h1 a { color:#333; text-decoration:none; }
 .sitename-logo {
 	display:inline-block;
-	background-image:url(knowhow.png);
+	background-image:url(assets/knowhow-logo.png);
 	background-size:cover;
 	width:64px; height:64px; margin:0 8px 6px 0;
 	vertical-align:middle;

@@ -1,5 +1,5 @@
 /* Theme: Blogsite theme */
-/* Version: 0.6.6 */
+/* Version: 0.6.7 */
 /* Designer: Mark Mayberg */
 
 html, body, div, form, pre, span, tr, th, td { margin:0; padding:0; border:0; vertical-align:baseline; }
@@ -25,7 +25,7 @@ a, img { border:none; text-decoration:none; }
 .sitename h1 a { color:#07d; text-decoration:none; }
 .sitename-banner {
 	padding-top:23%; 
-	background-image:url(blogsite-banner.jpg);
+	background-image:url(assets/blogsite-banner.jpg);
 	background-repeat:no-repeat; 
 	background-size:cover; 
 	background-position:center; 
