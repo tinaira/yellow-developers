@@ -2,8 +2,8 @@
 // Copyright (c) 2013-2016 Datenstrom, http://datenstrom.se
 // This file may be used and distributed under the terms of the public license.
 
-// Repository plugin
-class YellowRepository
+// Release plugin
+class YellowRelease
 {
 	const Version = "0.6.6";
 
@@ -11,14 +11,14 @@ class YellowRepository
 	function onLoad($yellow)
 	{
 		$this->yellow = $yellow;
-		$this->yellow->config->setDefault("repositoryZipArchiveDir", "zip/");
-		$this->yellow->config->setDefault("repositoryFileIgnore", "README.md|plugin.jpg|theme.jpg");
+		$this->yellow->config->setDefault("releaseZipArchiveDir", "zip/");
+		$this->yellow->config->setDefault("releaseFileIgnore", "README.md|plugin.jpg|theme.jpg");
 	}
 
 	// Handle command help
 	function onCommandHelp()
 	{
-		return "repository [DIRECTORY]\n";
+		return "release [DIRECTORY]\n";
 	}
 	
 	// Handle command
@@ -27,20 +27,20 @@ class YellowRepository
 		list($name, $command) = $args;
 		switch($command)
 		{
-			case "repository":	$statusCode = $this->repositoryCommand($args); break;
-			default:			$statusCode = 0;
+			case "release":	$statusCode = $this->releaseCommand($args); break;
+			default:		$statusCode = 0;
 		}
 		return $statusCode;
 	}
 
-	// Update repository
-	function repositoryCommand($args)
+	// Update files
+	function releaseCommand($args)
 	{
 		$statusCode = 0;
 		list($dummy, $command, $path) = $args;
 		$statusCode = max($statusCode, $this->updateSoftwareArchive($path));
 		$statusCode = max($statusCode, $this->updateSoftwareVersion($path));
-		echo "Yellow $command: Repository ".($statusCode!=200 ? "not " : "")."updated\n";
+		echo "Yellow $command: Release files ".($statusCode!=200 ? "not " : "")."updated\n";
 		return $statusCode;
 	}
 	
@@ -49,10 +49,10 @@ class YellowRepository
 	{
 		$statusCode = 200;
 		$path = rtrim(empty($path) ? getcwd() : $path, '/').'/';
-		$pathZipArchive = $path.$this->yellow->config->get("repositoryZipArchiveDir");
+		$pathZipArchive = $path.$this->yellow->config->get("releaseZipArchiveDir");
 		if(is_dir($pathZipArchive))
 		{
-			$fileIgnore = $this->yellow->config->get("repositoryFileIgnore");
+			$fileIgnore = $this->yellow->config->get("releaseFileIgnore");
 			foreach($this->yellow->toolbox->getDirectoryEntries($path, "/.*/", true, true, false) as $entry)
 			{
 				if("$path$entry/" == $pathZipArchive) continue;
@@ -69,12 +69,12 @@ class YellowRepository
 					$zip->close();
 				} else {
 					$statusCode = 500;
-					echo "ERROR updating repository: Can't write file '$fileNameZipArchive'!\n";
+					echo "ERROR updating files: Can't write file '$fileNameZipArchive'!\n";
 				}
 			}
 		} else {
 			$statusCode = 500;
-			echo "ERROR updating repository: Can't find directory '$pathZipArchive'!\n";
+			echo "ERROR updating files: Can't find directory '$pathZipArchive'!\n";
 		}
 		return $statusCode;
 	}
@@ -104,7 +104,7 @@ class YellowRepository
 			if(!$this->yellow->toolbox->createFile($fileNameVersion, $fileDataNew))
 			{
 				$statusCode = 500;
-				echo "ERROR updating repository: Can't write file '$fileNameVersion'!\n";
+				echo "ERROR updating files: Can't write file '$fileNameVersion'!\n";
 			}
 		}
 		return $statusCode;
@@ -140,5 +140,5 @@ class YellowRepository
 	}
 }
 
-$yellow->plugins->register("repository", "YellowRepository", YellowRepository::Version);
+$yellow->plugins->register("release", "YellowRelease", YellowRelease::Version);
 ?>
