@@ -25,6 +25,6 @@ When something goes wrong an error page is shown. When a web browser requests a 
 
 ## Extensions
 
-Yellow concentrates on the essential aspects. You get the most important things to make websites and can add more. For example a search or an image gallery. There are [plugins](/plugins/) and [themes](/themes/) you can download.
+Yellow concentrates on the essential aspects. You get the most important things to make websites and can add more features. For example a search or an image gallery. There are [plugins](/plugins/) and [themes](/themes/) you can download.
 
 [Next: Web server configuration →](web-server-configuration)

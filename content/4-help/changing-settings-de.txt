@@ -25,6 +25,6 @@ Falls Probleme auftreten wird eine Fehlerseite angezeigt. Wenn der Webbrowser ei
 
 ## Erweiterungen
 
-Yellow konzentriert sich auf's Wesentliche. Man bekommt die wichtigsten Sachen um Webseiten zu erstellen und kann mehr hinzufügen. Beispielsweise eine Suche oder Bildergalerie. Es gibt [Plugins](/plugins/) und [Themes](/themes/) zum Herunterladen.
+Yellow konzentriert sich auf's Wesentliche. Man bekommt die wichtigsten Sachen um Webseiten zu erstellen und kann weitere Funktionen hinzufügen. Beispielsweise eine Suche oder Bildergalerie. Es gibt [Plugins](/plugins/) und [Themes](/themes/) zum Herunterladen.
 
 [Weiter: Webservereinstellungen →](web-server-configuration-de)

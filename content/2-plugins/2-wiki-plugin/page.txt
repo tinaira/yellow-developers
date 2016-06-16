@@ -8,6 +8,6 @@ Wiki for your website.
 
 Create small web pages, blogs and wikis. Yellow is for people who make websites. The focus is on people and that it's useful for you. No database, no admin panel, no complex framework. Most people don't need all of this. If you are interested in simple things, find out more.
 
-* It's fun to use
+* Fun to use
 * Just files and folders
-* Not much to learn
+* Easy to install

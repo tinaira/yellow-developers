@@ -90,7 +90,7 @@ You can create a static website from the [command line](https://github.com/daten
 
 This will build a completely static website in folder `/var/www/website`. A static website doesn't need a Yellow installation anymore. Most websites, blogs and wikis can be made this way. Upload the folder to your web hosting and build a new version when needed.
 
-As an alternative to a static website you can also add individual web pages to a cache. Here's an example: `php yellow.php build cache /blog/blog-example`. To clean the cache type the following line: `php yellow.php clean cache`.
+As an alternative to a static website you can also add individual web pages to the cache. Here's an example: `php yellow.php build cache /blog/blog-example`. To clean the cache type the following line: `php yellow.php clean cache`.
 
 ## Custom 404 page
 
