@@ -39,7 +39,7 @@ Links erstellen:
 
     [Link zu Seite](/help/how-to-make-website) 
     [Link zu Webseite](http://datenstrom.se)  
-    https://en.wikipedia.org/wiki/Markdown
+    https://de.wikipedia.org/wiki/Markdown
 
 Ein Bild hinzufügen:
 

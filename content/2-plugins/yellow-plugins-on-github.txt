@@ -49,8 +49,6 @@ The following plugins are available:
   Image gallery with slider.
 * [Slideshare](https://github.com/datenstrom/yellow-plugins/tree/master/slideshare): 
   Embed Slideshare presentations.
-* [Smartypants](https://github.com/datenstrom/yellow-plugins/tree/master/smartypants): 
-  Better text formatting for humans.
 * [Soundcloud](https://github.com/datenstrom/yellow-plugins/tree/master/soundcloud): 
   Embed Soundcloud audio tracks.
 * [Stats](https://github.com/datenstrom/yellow-plugins/tree/master/stats): 

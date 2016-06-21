@@ -10,7 +10,7 @@ Vous êtes au bon endroit, nous sommes là pour vous aider.
 
 * [Signaler des problèmes et suggestions](https://github.com/datenstrom/yellow/issues)
 * [Chattez avec les développeurs](https://gitter.im/datenstrom/yellow)
-* [Interrogez un humain](http://datenstrom.se/contact/)
+* [Interrogez un humain](http://datenstrom.se/fr/contact/)
 
 ## Suivez-nous
 

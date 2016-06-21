@@ -10,7 +10,7 @@ Tausche dich mit anderen Yellow-Benutzern aus und finde professionelle Hilfe.
 
 * [Melde Probleme und Vorschläge](https://github.com/datenstrom/yellow/issues)
 * [Chatte mit den Entwicklern](https://gitter.im/datenstrom/yellow)
-* [Frage einen Menschen](http://datenstrom.se/contact/)
+* [Frage einen Menschen](http://datenstrom.se/de/contact/)
 
 ## Folge uns
 

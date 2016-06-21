@@ -41,7 +41,7 @@ Créer des liens:
 
     [Lien vers la page](/help/how-to-make-website) 
     [Lien vers le site](http://datenstrom.se)  
-    https://en.wikipedia.org/wiki/Markdown
+    https://fr.wikipedia.org/wiki/Markdown
 
 Ajout d'image:
 
