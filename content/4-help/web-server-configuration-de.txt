@@ -36,7 +36,9 @@ RewriteRule ^ yellow.php [L]
 </IfModule>
 ```
 
-Wenn deine Webseite immer noch nicht funktioniert, überprüfe bitte den Apache-Webserver. Falls Yellow auf einem selbst-gehosteten Webserver läuft, muss das [Rewrite-Modul](http://stackoverflow.com/questions/18740419/how-to-set-allowoverride-all) aktiviert werden und `AllowOverride All` konfiguriert sein. Das sollte alle Probleme beheben.
+Wenn deine Webseite immer noch nicht funktioniert, überprüfe bitte den Apache-Webserver. Falls Yellow auf einem selbst-gehosteten Webserver läuft, muss das [Rewrite-Modul](http://stackoverflow.com/questions/18740419/how-to-set-allowoverride-all) aktiviert werden und `AllowOverride All` im Webserver konfiguriert sein. 
+
+Stelle sicher dass der Webserver Dateien lesen und schreiben kann. Du kannst Dateirechte manuell angleichen, so dass der Webserver Dateien überschreiben kann. Als Alternative kannst du dem Webserver die Gruppe `www-data` und `umask 002` zuweisen. 
 
 ## Nginx
 
