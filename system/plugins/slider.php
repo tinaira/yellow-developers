@@ -5,7 +5,7 @@
 // Slider plugin
 class YellowSlider
 {
-	const Version = "0.6.1";
+	const Version = "0.6.2";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -43,8 +43,8 @@ class YellowSlider
 					list($widthInput, $heightInput) = $this->yellow->toolbox->detectImageInfo($file->fileName);
 					list($src, $width, $height) = $this->yellow->plugins->get("image")->getImageInfo($file->fileName, $size, $size);
 					$output .= "<img src=\"".htmlspecialchars($src)."\" width=\"".htmlspecialchars($width)."\" height=\"".
-						htmlspecialchars($height)."\" alt=\"".basename($file->getLocation())."\" title=\"".
-						basename($file->getLocation())."\" />\n";
+						htmlspecialchars($height)."\" alt=\"".basename($file->getLocation(true))."\" title=\"".
+						basename($file->getLocation(true))."\" />\n";
 				}
 				$output .= "</div>";
 			} else {

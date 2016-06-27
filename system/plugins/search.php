@@ -5,7 +5,7 @@
 // Search plugin
 class YellowSearch
 {
-	const Version = "0.6.4";
+	const Version = "0.6.5";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -56,7 +56,7 @@ class YellowSearch
 					{
 						$score = substr_count(strtoloweru($page->getContent(true)), strtoloweru($token));
 						if($score) { $searchScore += $score; $searchTokens[$token] = true; }
-						if(stristr($page->getLocation(), $token)) { $searchScore += 20; $searchTokens[$token] = true; }
+						if(stristr($page->getLocation(true), $token)) { $searchScore += 20; $searchTokens[$token] = true; }
 						if(stristr($page->get("title"), $token)) { $searchScore += 10; $searchTokens[$token] = true; }
 						if(stristr($page->get("tag"), $token)) { $searchScore += 5; $searchTokens[$token] = true; }
 						if(stristr($page->get("author"), $token)) { $searchScore += 2; $searchTokens[$token] = true; }

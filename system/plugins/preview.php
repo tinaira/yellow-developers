@@ -5,7 +5,7 @@
 // Preview plugin
 class YellowPreview
 {
-	const Version = "0.6.2";
+	const Version = "0.6.3";
 	var $yellow;			//access to API
 
 	// Handle initialisation
@@ -39,11 +39,11 @@ class YellowPreview
 					$title = $page->get("titlePreview"); if(empty($title)) $title = $page->get("title");
 					if($width && $height)
 					{
-						$output .= "<li><a href=\"".$page->getLocation()."\">";
+						$output .= "<li><a href=\"".$page->getLocation(true)."\">";
 						$output .= "<img src=\"".htmlspecialchars($src)."\" width=\"".htmlspecialchars($width)."\" height=\"".
 							htmlspecialchars($height)."\" alt=\"".htmlspecialchars($title)."\" title=\"".
 							htmlspecialchars($title)."\" /></a><br />";
-						$output .= "<a href=\"".$page->getLocation()."\">".htmlspecialchars($title)."</a>";
+						$output .= "<a href=\"".$page->getLocation(true)."\">".htmlspecialchars($title)."</a>";
 						$output .= "</li>\n";
 					}
 				}

@@ -5,7 +5,7 @@
 // Blog plugin
 class YellowBlog
 {
-	const Version = "0.6.5";
+	const Version = "0.6.6";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -52,7 +52,7 @@ class YellowBlog
 				$output .= "<ul>\n";
 				foreach($months as $key=>$value)
 				{
-					$output .= "<li><a href=\"".$blog->getLocation().$this->yellow->toolbox->normaliseArgs("published:$key")."\">";
+					$output .= "<li><a href=\"".$blog->getLocation(true).$this->yellow->toolbox->normaliseArgs("published:$key")."\">";
 					$output .= htmlspecialchars($this->yellow->text->normaliseDate($key))."</a></li>\n";
 				}
 				$output .= "</ul>\n";
@@ -76,7 +76,7 @@ class YellowBlog
 				$output .= "<ul>\n";
 				foreach($pages as $page)
 				{
-					$output .= "<li><a href=\"".$page->getLocation()."\">".$page->getHtml("titleNavigation")."</a></li>\n";
+					$output .= "<li><a href=\"".$page->getLocation(true)."\">".$page->getHtml("titleNavigation")."</a></li>\n";
 				}
 				$output .= "</ul>\n";
 				$output .= "</div>\n";
@@ -99,7 +99,7 @@ class YellowBlog
 				$output .= "<ul>\n";
 				foreach($pages as $page)
 				{
-					$output .= "<li><a href=\"".$page->getLocation()."\">".$page->getHtml("titleNavigation")."</a></li>\n";
+					$output .= "<li><a href=\"".$page->getLocation(true)."\">".$page->getHtml("titleNavigation")."</a></li>\n";
 				}
 				$output .= "</ul>\n";
 				$output .= "</div>\n";
@@ -124,7 +124,7 @@ class YellowBlog
 				$output .= "<ul>\n";
 				foreach($tags as $key=>$value)
 				{
-					$output .= "<li><a href=\"".$blog->getLocation().$this->yellow->toolbox->normaliseArgs("tag:$key")."\">";
+					$output .= "<li><a href=\"".$blog->getLocation(true).$this->yellow->toolbox->normaliseArgs("tag:$key")."\">";
 					$output .= htmlspecialchars($key)."</a></li>\n";
 				}
 				$output .= "</ul>\n";

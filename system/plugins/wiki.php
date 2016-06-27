@@ -5,7 +5,7 @@
 // Wiki plugin
 class YellowWiki
 {
-	const Version = "0.6.5";
+	const Version = "0.6.6";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -48,7 +48,7 @@ class YellowWiki
 				$output .= "<ul>\n";
 				foreach($pages as $page)
 				{
-					$output .= "<li><a href=\"".$page->getLocation()."\">".$page->getHtml("titleNavigation")."</a></li>\n";
+					$output .= "<li><a href=\"".$page->getLocation(true)."\">".$page->getHtml("titleNavigation")."</a></li>\n";
 				}
 				$output .= "</ul>\n";
 				$output .= "</div>\n";
@@ -71,7 +71,7 @@ class YellowWiki
 				$output .= "<ul>\n";
 				foreach($pages as $page)
 				{
-					$output .= "<li><a href=\"".$page->getLocation()."\">".$page->getHtml("titleNavigation")."</a></li>\n";
+					$output .= "<li><a href=\"".$page->getLocation(true)."\">".$page->getHtml("titleNavigation")."</a></li>\n";
 				}
 				$output .= "</ul>\n";
 				$output .= "</div>\n";
@@ -94,7 +94,7 @@ class YellowWiki
 				$output .= "<ul>\n";
 				foreach($pages as $page)
 				{
-					$output .= "<li><a href=\"".$page->getLocation()."\">".$page->getHtml("titleNavigation")."</a></li>\n";
+					$output .= "<li><a href=\"".$page->getLocation(true)."\">".$page->getHtml("titleNavigation")."</a></li>\n";
 				}
 				$output .= "</ul>\n";
 				$output .= "</div>\n";
@@ -118,7 +118,7 @@ class YellowWiki
 				$output .= "<ul>\n";
 				foreach($tags as $key=>$value)
 				{
-					$output .= "<li><a href=\"".$wiki->getLocation().$this->yellow->toolbox->normaliseArgs("tag:$key")."\">";
+					$output .= "<li><a href=\"".$wiki->getLocation(true).$this->yellow->toolbox->normaliseArgs("tag:$key")."\">";
 					$output .= htmlspecialchars($key)."</a></li>\n";
 				}
 				$output .= "</ul>\n";

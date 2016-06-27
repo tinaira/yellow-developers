@@ -5,7 +5,7 @@
 // Gallery plugin
 class YellowGallery
 {
-	const Version = "0.6.2";
+	const Version = "0.6.3";
 	var $yellow;			//access to API
 
 	// Handle initialisation
@@ -42,10 +42,10 @@ class YellowGallery
 				{
 					list($widthInput, $heightInput) = $this->yellow->toolbox->detectImageInfo($file->fileName);
 					list($src, $width, $height) = $this->yellow->plugins->get("image")->getImageInfo($file->fileName, $size, $size);
-					$output .= "<a href=\"".$file->getLocation()."\" data-size=\"{$widthInput}x{$heightInput}\">";
+					$output .= "<a href=\"".$file->getLocation(true)."\" data-size=\"{$widthInput}x{$heightInput}\">";
 					$output .= "<img src=\"".htmlspecialchars($src)."\" width=\"".htmlspecialchars($width)."\" height=\"".
-						htmlspecialchars($height)."\" alt=\"".basename($file->getLocation())."\" title=\"".
-						basename($file->getLocation())."\" />";
+						htmlspecialchars($height)."\" alt=\"".basename($file->getLocation(true))."\" title=\"".
+						basename($file->getLocation(true))."\" />";
 					$output .= "</a> \n";
 				}
 				$output .= "</div>";

@@ -5,7 +5,7 @@
 // Breadcrumbs plugin
 class YellowBreadcrumbs
 {
-	const Version = "0.6.1";
+	const Version = "0.6.2";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -25,14 +25,14 @@ class YellowBreadcrumbs
 			list($separator, $style) = $this->yellow->toolbox->getTextArgs($text);
 			if(empty($separator)) $separator = $this->yellow->config->get("breadcrumbsSeparator");
 			if(empty($style)) $style = $this->yellow->config->get("breadcrumbsStyle");
-			$pages = $this->yellow->pages->path($page->getLocation(), true);
+			$pages = $this->yellow->pages->path($page->getLocation(true), true);
 			$page->setLastModified($pages->getModified());
 			$output = "<div class=\"".htmlspecialchars($style)."\">";
 			$currentPage = $page;
 			foreach($pages as $page)
 			{
-				$output .= "<a href=\"".$page->getLocation()."\">".$page->getHtml("titleNavigation")."</a>";
-				if($page->getLocation() != $currentPage->getLocation()) $output .= " ".htmlspecialchars($separator)." ";
+				$output .= "<a href=\"".$page->getLocation(true)."\">".$page->getHtml("titleNavigation")."</a>";
+				if($page->getLocation(true) != $currentPage->getLocation(true)) $output .= " ".htmlspecialchars($separator)." ";
 			}
 			$output .= "</div>\n";
 		}
