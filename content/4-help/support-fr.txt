@@ -24,7 +24,7 @@ Vous êtes au bon endroit, nous sommes là pour vous aider.
 * [Créer une traduction](https://github.com/datenstrom/yellow-plugins/tree/master/language)
 * [Créer des plugins](https://github.com/datenstrom/yellow-plugins)
 * [Créer des thèmes](https://github.com/datenstrom/yellow-themes)
-* [Aidez-nous avec la traduction française (TODO)](/search/query:TODO/)
+* [Aidez-nous avec la traduction française (TODO)](http://developers.datenstrom.se/search/query:TODO/)
 
 ## Remerciements
 
