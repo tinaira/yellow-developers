@@ -3,7 +3,7 @@ Title: Configuration de la sécurité
 Sidebar: sidebar-fr
 Language: fr
 ---
->> [Todo: You can help us and translate this page](https://github.com/datenstrom/yellow-developers)
+>> [Todo: You can help us and translate this page](https://github.com/datenstrom/yellow-developers/blob/master/content/4-help/security-configuration-fr.txt)
 
 Here's how to set up a website with better security.
 
