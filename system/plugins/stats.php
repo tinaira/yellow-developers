@@ -5,7 +5,7 @@
 // Statistics command plugin
 class YellowStats
 {
-	const Version = "0.6.7";
+	const Version = "0.6.8";
 	var $yellow;			//access to API
 	var $days;				//detected days
 	var $views;				//detected views
@@ -31,7 +31,7 @@ class YellowStats
 	// Handle command
 	function onCommand($args)
 	{
-		list($name, $command) = $args;
+		list($command) = $args;
 		switch($command)
 		{
 			case "stats":	$statusCode = $this->statsCommand($args); break;
@@ -44,7 +44,7 @@ class YellowStats
 	function statsCommand($args)
 	{
 		$statusCode = 0;
-		list($dummy, $command, $days, $location, $fileName) = $args;
+		list($command, $days, $location, $fileName) = $args;
 		if(empty($location) || $location[0]=='/')
 		{
 			if($this->checkStaticConfig())

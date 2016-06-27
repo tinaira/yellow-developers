@@ -1,11 +1,11 @@
 <?php
-// Copyright (c) 2013-2015 Datenstrom, http://datenstrom.se
+// Copyright (c) 2013-2016 Datenstrom, http://datenstrom.se
 // This file may be used and distributed under the terms of the public license.
 
 // Image plugin
 class YellowImage
 {
-	const Version = "0.6.1";
+	const Version = "0.6.2";
 	var $yellow;			//access to API
 	var $graphicsLibrary;	//graphics library support? (boolean)
 
@@ -54,7 +54,7 @@ class YellowImage
 	// Handle command
 	function onCommand($args)
 	{
-		list($name, $command) = $args;
+		list($command) = $args;
 		switch($command)
 		{
 			case "clean":	$statusCode = $this->cleanCommand($args); break;

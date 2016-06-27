@@ -5,12 +5,14 @@
 // Release plugin
 class YellowRelease
 {
-	const Version = "0.6.6";
+	const Version = "0.6.7";
 
 	// Handle plugin initialisation
 	function onLoad($yellow)
 	{
 		$this->yellow = $yellow;
+		$this->yellow->config->setDefault("releasePluginsDir", "/Users/Shared/Github/yellow-plugins/");
+		$this->yellow->config->setDefault("releaseThemesDir", "/Users/Shared/Github/yellow-themes/");
 		$this->yellow->config->setDefault("releaseZipArchiveDir", "zip/");
 		$this->yellow->config->setDefault("releaseFileIgnore", "README.md|plugin.jpg|theme.jpg");
 	}
@@ -24,7 +26,7 @@ class YellowRelease
 	// Handle command
 	function onCommand($args)
 	{
-		list($name, $command) = $args;
+		list($command) = $args;
 		switch($command)
 		{
 			case "release":	$statusCode = $this->releaseCommand($args); break;
@@ -37,9 +39,20 @@ class YellowRelease
 	function releaseCommand($args)
 	{
 		$statusCode = 0;
-		list($dummy, $command, $path) = $args;
-		$statusCode = max($statusCode, $this->updateSoftwareArchive($path));
-		$statusCode = max($statusCode, $this->updateSoftwareVersion($path));
+		list($command, $path) = $args;
+		if(empty($path))
+		{
+			$path = rtrim($this->yellow->config->get("releasePluginsDir"), '/').'/';
+			$statusCode = max($statusCode, $this->updateSoftwareArchive($path));
+			$statusCode = max($statusCode, $this->updateSoftwareVersion($path));
+			$path = rtrim($this->yellow->config->get("releaseThemesDir"), '/').'/';
+			$statusCode = max($statusCode, $this->updateSoftwareArchive($path));
+			$statusCode = max($statusCode, $this->updateSoftwareVersion($path));
+		} else {
+			$path = rtrim($path, '/').'/';
+			$statusCode = max($statusCode, $this->updateSoftwareArchive($path));
+			$statusCode = max($statusCode, $this->updateSoftwareVersion($path));
+		}
 		echo "Yellow $command: Release files ".($statusCode!=200 ? "not " : "")."updated\n";
 		return $statusCode;
 	}
@@ -48,10 +61,9 @@ class YellowRelease
 	function updateSoftwareArchive($path)
 	{
 		$statusCode = 200;
-		$path = rtrim(empty($path) ? getcwd() : $path, '/').'/';
-		$pathZipArchive = $path.$this->yellow->config->get("releaseZipArchiveDir");
-		if(is_dir($pathZipArchive))
+		if(is_dir($path))
 		{
+			$pathZipArchive = $path.$this->yellow->config->get("releaseZipArchiveDir");
 			$fileIgnore = $this->yellow->config->get("releaseFileIgnore");
 			foreach($this->yellow->toolbox->getDirectoryEntries($path, "/.*/", true, true, false) as $entry)
 			{
@@ -74,7 +86,7 @@ class YellowRelease
 			}
 		} else {
 			$statusCode = 500;
-			echo "ERROR updating files: Can't find directory '$pathZipArchive'!\n";
+			echo "ERROR updating files: Can't find directory '$path'!\n";
 		}
 		return $statusCode;
 	}
@@ -83,8 +95,7 @@ class YellowRelease
 	function updateSoftwareVersion($path)
 	{
 		$statusCode = 200;
-		$path = rtrim(empty($path) ? getcwd() : $path, '/').'/';
-		$fileNameVersion = $path.$this->yellow->config->get("commandlineVersionFile");;
+		$fileNameVersion = $path.$this->yellow->config->get("updateVersionFile");
 		if(is_dir($path) && is_file("$fileNameVersion"))
 		{
 			$data = $this->getSoftwareVersionFromRepository($path);
