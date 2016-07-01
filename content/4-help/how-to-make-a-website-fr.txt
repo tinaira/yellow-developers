@@ -13,7 +13,7 @@ Apprenez à faire un site web avec Yellow.
 
 Votre site web est immédiatement accessible. L'installation est fournie avec deux pages, 'Home' et 'About'. Elles sont juste un exemple pour commencer, vous pouvez les modifier comme il vous convient. Vous pouvez créer votre site web en ajoutant des fichiers et des dossiers.
 
-Le fichier de configuration principal de votre site web est `system/config/config.ini`. Vous pouvez y définir les [paramètres par défaut](changing-settings-fr#paramètres) de votre site. Les paramètres individuels peuvent être définis au haut de chaque page. Il existe des [plugins](/plugins/) et des [thèmes](/themes/) à télécharger.
+Le fichier de configuration principal de votre site web est `system/config/config.ini`. Vous pouvez y définir les [paramètres par défaut](adjusting-system-fr#paramètres) de votre site. Les paramètres individuels peuvent être définis au haut de chaque page. Il existe des [plugins](/plugins/) et des [thèmes](/themes/) à télécharger.
 
 ## Écrire une page web
 

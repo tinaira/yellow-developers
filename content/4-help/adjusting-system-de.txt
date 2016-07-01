@@ -1,5 +1,5 @@
 ---
-Title: Einstellungen ändern
+Title: System anpassen
 Sidebar: sidebar-de
 Language: de
 ---
@@ -23,7 +23,7 @@ Dort kann man die Standardeinstellungen festlegen. Die individuellen [Einstellun
 
 Falls Probleme auftreten wird eine Fehlerseite angezeigt. Wenn der Webbrowser eine Datei anfragt die der Webserver nicht finden kann wird "File not found" ausgegeben. Die Datei `system/config/page-error-404.txt` legt fest wie eine fehlende Datei aussieht.
 
-## Erweiterungen
+## Plugins und Themes
 
 Yellow konzentriert sich auf's Wesentliche. Man bekommt die wichtigsten Sachen um Webseiten zu erstellen und kann weitere Funktionen hinzufügen. Beispielsweise eine Suche oder Bildergalerie. Es gibt [Plugins](/plugins/) und [Themes](/themes/) zum Herunterladen.
 

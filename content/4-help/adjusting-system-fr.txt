@@ -1,5 +1,5 @@
 ---
-Title: Modifier les paramètres
+Title: Ajuster le système
 Sidebar: sidebar-fr
 Language: fr
 ---

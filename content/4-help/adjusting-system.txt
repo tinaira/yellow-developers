@@ -1,5 +1,5 @@
 ---
-Title: Changing settings
+Title: Adjusting system
 Sidebar: sidebar
 Language: en
 ---
@@ -23,7 +23,7 @@ You can define the default settings of your website here. Individual [settings](
 
 When something goes wrong an error page is shown. When a web browser requests a file that the web server cannot find your website will show a “File not found” page. The file `system/config/page-error-404.txt` defines how a missing file looks like.
 
-## Extensions
+## Plugins and themes
 
 Yellow concentrates on the essential aspects. You get the most important things to make websites and can add more features. For example a search or an image gallery. There are [plugins](/plugins/) and [themes](/themes/) you can download.
 

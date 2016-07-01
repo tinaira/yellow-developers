@@ -18,7 +18,7 @@ Changements
 
 * [Ajouter des pages](adding-content-fr)
 * [Ajouter des fichiers](adding-media-fr)
-* [Modifier les paramètres](changing-settings-fr)
+* [Ajuster le système](adjusting-system-fr)
 
 Configurations
 

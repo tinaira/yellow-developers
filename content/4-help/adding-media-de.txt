@@ -50,4 +50,4 @@ Ein Vimeo-Video einbinden:
     [vimeo 13387502 left 200 112]
     [vimeo 13387502 right 200 112]
 
-[Weiter: Einstellungen ändern →](changing-settings-de)
+[Weiter: System anpassen →](adjusting-system-de)

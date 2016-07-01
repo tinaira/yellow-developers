@@ -50,4 +50,4 @@ Insérer une vidéo Vimeo:
     [vimeo 13387502 left 200 112]
     [vimeo 13387502 right 200 112]
 
-[Suivant: Modifier les paramètres →](changing-settings-fr)
+[Suivant: Ajuster le système →](adjusting-system-fr)

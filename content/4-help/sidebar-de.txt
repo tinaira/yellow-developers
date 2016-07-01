@@ -18,7 +18,7 @@ Grundlagen
 
 * [Inhalt hinzufügen](adding-content-de)
 * [Medien hinzufügen](adding-media-de)
-* [Einstellungen ändern](changing-settings-de)
+* [System anpassen](adjusting-system-de)
 
 Einstellungen
 
