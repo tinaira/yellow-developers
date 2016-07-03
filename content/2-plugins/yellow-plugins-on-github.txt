@@ -38,7 +38,7 @@ The following plugins are available:
 * [Markdown](https://github.com/datenstrom/yellow-plugins/tree/master/markdown): 
   Text formatting for humans.
 * [Piwik](https://github.com/datenstrom/yellow-plugins/tree/master/piwik): 
-  Add Piwik statistics to website.
+  Add Piwik web analytics to website.
 * [Preview](https://github.com/datenstrom/yellow-plugins/tree/master/preview): 
   Link pages with image preview.
 * [Search](https://github.com/datenstrom/yellow-plugins/tree/master/search): 
@@ -51,10 +51,10 @@ The following plugins are available:
   Embed Slideshare presentations.
 * [Soundcloud](https://github.com/datenstrom/yellow-plugins/tree/master/soundcloud): 
   Embed Soundcloud audio tracks.
-* [Stats](https://github.com/datenstrom/yellow-plugins/tree/master/stats): 
-  Create statistics from web server logfiles.
 * [Toc](https://github.com/datenstrom/yellow-plugins/tree/master/toc): 
   Table of contents.
+* [Traffic](https://github.com/datenstrom/yellow-plugins/tree/master/traffic): 
+  Create traffic analytics from web server logfiles.
 * [Vimeo](https://github.com/datenstrom/yellow-plugins/tree/master/vimeo): 
   Embed Vimeo videos.
 * [Webinterface](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface): 
