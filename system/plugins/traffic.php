@@ -2,8 +2,8 @@
 // Copyright (c) 2013-2016 Datenstrom, http://datenstrom.se
 // This file may be used and distributed under the terms of the public license.
 
-// Statistics command plugin
-class YellowStats
+// Traffic plugin
+class YellowTraffic
 {
 	const Version = "0.6.8";
 	var $yellow;			//access to API
@@ -14,18 +14,18 @@ class YellowStats
 	function onLoad($yellow)
 	{
 		$this->yellow = $yellow;
-		$this->yellow->config->setDefault("statsDays", 30);
-		$this->yellow->config->setDefault("statsLinesMax", 8);
-		$this->yellow->config->setDefault("statsLogDir", "/var/log/apache2/");
-		$this->yellow->config->setDefault("statsLogFile", "(.*)access.log");
-		$this->yellow->config->setDefault("statsLocationIgnore", "media|system|edit");
-		$this->yellow->config->setDefault("statsSpamFilter", "bot|crawler|spider");
+		$this->yellow->config->setDefault("trafficDays", 30);
+		$this->yellow->config->setDefault("trafficLinesMax", 8);
+		$this->yellow->config->setDefault("trafficLogDir", "/var/log/apache2/");
+		$this->yellow->config->setDefault("trafficLogFile", "(.*)access.log");
+		$this->yellow->config->setDefault("trafficLocationIgnore", "media|system|edit");
+		$this->yellow->config->setDefault("trafficSpamFilter", "bot|crawler|spider");
 	}
 
 	// Handle command help
 	function onCommandHelp()
 	{
-		return "stats [DAYS LOCATION FILENAME]\n";
+		return "traffic [DAYS LOCATION FILENAME]\n";
 	}
 	
 	// Handle command
@@ -34,14 +34,14 @@ class YellowStats
 		list($command) = $args;
 		switch($command)
 		{
-			case "stats":	$statusCode = $this->statsCommand($args); break;
+			case "traffic":	$statusCode = $this->trafficCommand($args); break;
 			default:		$statusCode = 0;
 		}
 		return $statusCode;
 	}
 
-	// Create statistics
-	function statsCommand($args)
+	// Create traffic analytics
+	function trafficCommand($args)
 	{
 		$statusCode = 0;
 		list($command, $days, $location, $fileName) = $args;
@@ -54,7 +54,8 @@ class YellowStats
 				$statusCode = 500;
 				$this->days = $this->views = 0;
 				$fileName = $this->yellow->config->get("configDir").$this->yellow->config->get("configFile");
-				echo "ERROR creating statistics: Please configure ServerScheme, ServerName,  ServerBase, ServerTime in file '$fileName'!\n";
+				echo "ERROR checking files: Please configure ServerScheme, ServerName,  ServerBase, ServerTime in file '$fileName'!\n";
+				echo "ERROR checking files: To see your web server configuration, open your website in a web browser!\n";
 			}
 			echo "Yellow $command: $this->days day".($this->days!=1 ? 's' : '').", ";
 			echo "$this->views view".($this->views!=1 ? 's' : '')."\n";
@@ -65,16 +66,16 @@ class YellowStats
 		return $statusCode;
 	}
 	
-	// Analyse and show statistics
+	// Analyse and show traffic
 	function processRequests($days, $location, $fileName)
 	{
 		$this->yellow->toolbox->timerStart($time);
 		if(empty($location)) $location = "/";
-		if(empty($days)) $days = $this->yellow->config->get("statsDays");		
+		if(empty($days)) $days = $this->yellow->config->get("trafficDays");
 		if(empty($fileName))
 		{
-			$path = $this->yellow->config->get("statsLogDir");
-			$regex = "/^".basename($this->yellow->config->get("statsLogFile"))."$/";
+			$path = $this->yellow->config->get("trafficLogDir");
+			$regex = "/^".basename($this->yellow->config->get("trafficLogFile"))."$/";
 			$fileNames = $this->yellow->toolbox->getDirectoryEntries($path, $regex, true, false);
 			list($statusCode, $sites, $content, $search, $errors) = $this->analyseRequests($days, $location, $fileNames);
 		} else {
@@ -88,7 +89,7 @@ class YellowStats
 			$this->showRequests($errors, "Error pages");
 		}
 		$this->yellow->toolbox->timerStop($time);
-		if(defined("DEBUG") && DEBUG>=1) echo "YellowStats::processRequests time:$time ms\n";
+		if(defined("DEBUG") && DEBUG>=1) echo "YellowTraffic::processRequests time:$time ms\n";
 		return $statusCode;
 	}
 	
@@ -103,14 +104,14 @@ class YellowStats
 			$timeStart = $timeFound = time();
 			$timeStop = time() - (60 * 60 * 24 * $days);
 			$locationSelf = $this->yellow->config->get("serverBase");
-			$locationIgnore = $this->yellow->config->get("statsLocationIgnore");
+			$locationIgnore = $this->yellow->config->get("trafficLocationIgnore");
 			$refererSelf = $this->yellow->config->get("serverName").$this->yellow->config->get("serverBase");
-			$spamFilter = $this->yellow->config->get("statsSpamFilter");
+			$spamFilter = $this->yellow->config->get("trafficSpamFilter");
 			$robotsFile = $this->yellow->config->get("robotsFile");
 			$faviconFile = $this->yellow->config->get("faviconFile");
 			foreach($fileNames as $fileName)
 			{
-				if(defined("DEBUG") && DEBUG>=1) echo "YellowStats::analyseRequests file:$fileName\n";
+				if(defined("DEBUG") && DEBUG>=1) echo "YellowTraffic::analyseRequests file:$fileName\n";
 				$fileHandle = @fopen($fileName, "r");
 				if($fileHandle)
 				{
@@ -162,7 +163,7 @@ class YellowStats
 			$this->days = $timeStart!=$timeFound ? $days : 0;
 		} else {
 			$statusCode = 500;
-			$path = $this->yellow->config->get("statsLogDir");
+			$path = $this->yellow->config->get("trafficLogDir");
 			echo "ERROR reading logfiles: Can't find files in directory '$path'!\n";
 		}
 		return array($statusCode, $sites, $content, $search, $errors);
@@ -173,7 +174,7 @@ class YellowStats
 	{
 		uasort($array, strnatcasecmp);
 		$array = array_reverse(array_filter($array, function($value) { return $value>0; }));
-		$array = array_slice($array, 0, $this->yellow->config->get("statsLinesMax"));
+		$array = array_slice($array, 0, $this->yellow->config->get("trafficLinesMax"));
 		if(!empty($array))
 		{
 			echo "$text\n\n";
@@ -281,5 +282,5 @@ class YellowStats
 	}
 }
 
-$yellow->plugins->register("stats", "YellowStats", YellowStats::Version);
+$yellow->plugins->register("traffic", "YellowTraffic", YellowTraffic::Version);
 ?>
