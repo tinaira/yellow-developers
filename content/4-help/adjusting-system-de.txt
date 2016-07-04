@@ -19,7 +19,7 @@ Die zentrale Konfigurationsdatei ist `system/config/config.ini`. Hier ist ein Be
     Language: de
     Theme: flatsite
 
-Dort kann man die Standardeinstellungen festlegen. Die individuellen [Einstellungen](markdown-cheat-sheet-de#einstellungen) lassen sich oben auf jeder Seite festlegen. Bei einer neuen Installation sollte man `Sitename`, `Author`, `Email` und `Language` anpassen.
+Dort kann man die Standardeinstellungen festlegen. Die individuellen [Einstellungen](markdown-cheat-sheet-de#einstellungen) lassen sich oben auf jeder Seite festlegen. Bei einer neuen Installation sollte man `Sitename`, `Author` und `Email` anpassen.
 
 Falls Probleme auftreten wird eine Fehlerseite angezeigt. Wenn der Webbrowser eine Datei anfragt die der Webserver nicht finden kann wird "File not found" ausgegeben. Die Datei `system/config/page-error-404.txt` legt fest wie eine fehlende Datei aussieht.
 
