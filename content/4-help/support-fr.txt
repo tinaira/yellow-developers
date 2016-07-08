@@ -23,7 +23,7 @@ Entrez en contact avec d'autres utilisateurs de Yellow et trouvez de l'aide prof
 * [Examiner les nouvelles suggestions](https://github.com/datenstrom/yellow/issues?q=is%3Aopen+is%3Aissue+label%3Asuggestion)
 * [Créer une traduction](https://github.com/datenstrom/yellow-plugins/tree/master/language)
 * [Créer des plugins et des thèmes](https://github.com/datenstrom)
-* [Montrez ce que vous avez fait avec Yellow](http://datenstrom.se/de/ideas/)
+* [Montrez ce que vous avez fait avec Yellow](http://datenstrom.se/fr/ideas/)
 * [Aidez-nous avec la traduction française (TODO)](http://developers.datenstrom.se/search/query:TODO/)
 
 ## Remerciements
