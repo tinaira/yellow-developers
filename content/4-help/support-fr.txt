@@ -4,7 +4,7 @@ TitleContent: Support
 Sidebar: sidebar-fr
 Language: fr
 ---
-Vous êtes au bon endroit, nous sommes là pour vous aider.
+Entrez en contact avec d'autres utilisateurs de Yellow et trouvez de l'aide professionnelle.
 
 ## Comment obtenir de l'aide
 
@@ -22,8 +22,8 @@ Vous êtes au bon endroit, nous sommes là pour vous aider.
 
 * [Examiner les nouvelles suggestions](https://github.com/datenstrom/yellow/issues?q=is%3Aopen+is%3Aissue+label%3Asuggestion)
 * [Créer une traduction](https://github.com/datenstrom/yellow-plugins/tree/master/language)
-* [Créer des plugins](https://github.com/datenstrom/yellow-plugins)
-* [Créer des thèmes](https://github.com/datenstrom/yellow-themes)
+* [Créer des plugins et des thèmes](https://github.com/datenstrom)
+* [Montrez ce que vous avez fait avec Yellow](http://datenstrom.se/de/ideas/)
 * [Aidez-nous avec la traduction française (TODO)](http://developers.datenstrom.se/search/query:TODO/)
 
 ## Remerciements
