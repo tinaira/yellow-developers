@@ -3,7 +3,7 @@ Title: Yellow plugins on GitHub
 Redirect: https://github.com/datenstrom/yellow-plugins
 Information: This page a is copy from the GitHub repository to improve search results
 ---
-The following plugins are available:
+Available plugins:
 
 * [Blog](https://github.com/datenstrom/yellow-plugins/tree/master/blog): 
   Blog for your website.
@@ -64,8 +64,10 @@ The following plugins are available:
 * [Youtube](https://github.com/datenstrom/yellow-plugins/tree/master/youtube): 
   Embed Youtube videos.
 
-More plugins by Yellow developers:
+More plugins by developers:
 
+* [Audio](https://github.com/schulle4u/yellow-plugin-audio):
+  HTML5 audio player.
 * [CheetJS](https://github.com/nogginfuel/yellow-plugin-cheetjs): 
   Add easter eggs via key binds.
 * [Comments](https://github.com/nasendackel/yellow-comments):
@@ -84,10 +86,14 @@ More plugins by Yellow developers:
   WYSIWYG style toolbar for editing a page.
 * [Medialist](https://github.com/nibreh/yellow-plugin-medialist):
   Create a list of MP3/OGG/PDF media files.
+* [Mixcloud](https://github.com/SAMY2K/yellow-plugin-mixcloud): 
+  Embed Mixcloud audio tracks.
 * [PageTxt](https://github.com/richi/yellow-plugin-pagetxt):
   Overwrite language entries in a page.
 * [Shariff](https://github.com/schulle4u/yellow-plugin-shariff):
   Privacy-friendly social sharing buttons for your Yellow website.
+* [Splice](https://github.com/SAMY2K/yellow-plugin-splice): 
+  Embed Splice projects.
 * [Sublime](https://github.com/nashv/YellowBlogExtensions):
   Sublime Text 3 Extensions for blogs based on Yellow.
 * [WebCLI](https://github.com/richi/yellow-plugin-cli):

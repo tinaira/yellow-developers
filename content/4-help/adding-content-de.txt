@@ -11,7 +11,7 @@ Die Installation von Yellow kommt mit zwei Seiten. Das ist nur ein Beispiel um l
 
 ## Dateien und Verzeichnisse
 
-Die Navigation wird automatisch aus deinen `content`-Verzeichnissen erstellt. Es werden nur Verzeichnisse mit einem Präfix in der Navigation angezeigt. Verzeichnisse mit Präfix sind für sichtbare Seiten, Verzeichnisse ohne Präfix sind für unsichtbare Seiten. Der Unterschied ist, dass nur die sichtbaren Seiten in Navigation und Suche auftauchen. Alle Dateien und Verzeichnisse können ein Präfix benutzen:
+Die Navigation wird automatisch aus deinen `content`-Verzeichnissen erstellt. Es werden nur Verzeichnisse mit einem Präfix in der Navigation angezeigt. Verzeichnisse mit Präfix sind für sichtbare Seiten, Verzeichnisse ohne Präfix sind für unsichtbare Seiten. Alle Dateien und Verzeichnisse können ein Präfix benutzen:
 
 1. Verzeichnisse können ein numerisches Präfix haben, z.B. `1-home` oder `2-about`
 2. Dateien können ein Datumspräfix haben, z.B. `2013-04-07-blog-example.txt`
