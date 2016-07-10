@@ -156,7 +156,7 @@ a, img { border:none; text-decoration:none; }
 	.sitename, .navigation, .navigation-tree { float:none; }
 	.sitename-logo { width:24px; height:24px; }
 	.navigation-search { padding-top:0.5em; }
-	.with-sidebar .main { margin-right:0em; }
+	.with-sidebar .main { margin-right:0; }
 	.with-sidebar .sidebar { display:none; }
 	.footer-right { display:none; }
 }

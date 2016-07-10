@@ -152,7 +152,7 @@ a, img { border:none; text-decoration:none; }
 	.sitename h1, h1, h2 { font-size:1.2em; }
 	.sitename h1, .sitename, .navigation, .footer, .page { margin:0; padding:0; }
 	.sitename, .navigation-search, .content, .footer { padding:1em; }
-	.with-sidebar .main { margin-right:0em; }
+	.with-sidebar .main { margin-right:0; }
 	.with-sidebar .sidebar { display:none; }	
 }
 @media print {
