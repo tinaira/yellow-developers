@@ -40,9 +40,9 @@ var ready = function()
 	// Add more JavaScript code here
 }
 if(window.addEventListener) {
-	window.addEventListener('load', ready, false);
+	window.addEventListener("load", ready, false);
 } else {
-	window.attachEvent('onload', ready);
+	window.attachEvent("onload", ready);
 }
 ```
 

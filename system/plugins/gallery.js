@@ -1,7 +1,7 @@
 // Copyright (c) 2013-2016 Datenstrom, http://datenstrom.se
 // This file may be used and distributed under the terms of the public license.
 
-// Gallery plugin 0.6.3
+// Gallery plugin 0.6.4
 var initPhotoSwipeFromDOM = function() {
 	
 	// Parse gallery items from DOM
@@ -9,7 +9,6 @@ var initPhotoSwipeFromDOM = function() {
 		var thumbElements = el.childNodes,
 		numNodes = thumbElements.length,
 		items = [],
-		el,
 		childElements,
 		size,
 		item;
@@ -19,14 +18,14 @@ var initPhotoSwipeFromDOM = function() {
 				continue;
 			}
 			childElements = el.children;
-			size = el.getAttribute('data-size').split('x');
+			size = el.getAttribute("data-size").split('x');
 			item = {
-				src: el.getAttribute('href'),
+				src: el.getAttribute("href"),
 				w: parseInt(size[0], 10),
 				h: parseInt(size[1], 10),
 			};
 			if(childElements.length > 0) {
-				item.msrc = childElements[0].getAttribute('src');
+				item.msrc = childElements[0].getAttribute("src");
 				if(childElements.length > 1) {
 					item.title = childElements[1].innerHTML;
 				}
@@ -39,21 +38,21 @@ var initPhotoSwipeFromDOM = function() {
 	
 	// Parse gallery options from DOM
 	var parseOptions = function(el) {
-		var keyNames = ['galleryUID', 'mainClass', 'thumbSquare',
-					'showHideOpacity', 'showAnimationDuration', 'hideAnimationDuration',
-					'bgOpacity', 'allowPanToNext', 'pinchToClose', 'closeOnScroll', 'escKey', 'arrowKeys',
-					'closeEl', 'captionEl', 'fullscreenEl', 'zoomEl', 'shareEl', 'counterEl',
-					'arrowEl', 'preloaderEl', 'tapToClose', 'tapToToggleControls', 'clickToCloseNonZoomable'],
+		var keyNames = ["galleryUID", "mainClass", "thumbSquare",
+					"showHideOpacity", "showAnimationDuration", "hideAnimationDuration",
+					"bgOpacity", "allowPanToNext", "pinchToClose", "closeOnScroll", "escKey", "arrowKeys",
+					"closeEl", "captionEl", "fullscreenEl", "zoomEl", "shareEl", "counterEl",
+					"arrowEl", "preloaderEl", "tapToClose", "tapToToggleControls", "clickToCloseNonZoomable"],
 		numKeyNames = keyNames.length,
 		numAttributes = el.attributes.length,
 		options = {
-			mainClass: 'pswp--minimal--dark',
+			mainClass: "pswp--minimal--dark",
 			tapToClose: true,
 			tapToToggleControls: false,
 		};
 		for(var i = 0; i < numAttributes; i++) {
 			var att = el.attributes[i], key, value;
-			if(att.nodeName.substring(0, 5) == 'data-') {
+			if(att.nodeName.substring(0, 5) == "data-") {
 				key = att.nodeName.substring(5);
 				for(var j = 0; j < numKeyNames; j++) {
 					if (key == keyNames[j].toLowerCase()) {
@@ -63,8 +62,8 @@ var initPhotoSwipeFromDOM = function() {
 				}
 				switch(att.nodeValue)
 				{
-					case 'true': value = true; break;
-					case 'false': value = false; break;
+					case "true": value = true; break;
+					case "false": value = false; break;
 					default: value = att.nodeValue;
 				}
 				options[key] = value;
@@ -100,42 +99,42 @@ var initPhotoSwipeFromDOM = function() {
 		var template = document.querySelectorAll(selector)[0];
 		if(!template)
 		{
-			var elementDiv = document.createElement('div');
+			var elementDiv = document.createElement("div");
 			elementDiv.className = selector.substr(1);
-			elementDiv.setAttribute('tabindex', '-1');
+			elementDiv.setAttribute("tabindex", -1);
 			elementDiv.innerHTML =
-				'<div class="pswp__bg"></div>'+
-				'<div class="pswp__scroll-wrap">'+
-				'<div class="pswp__container">'+
-				'<div class="pswp__item"></div>'+
-				'<div class="pswp__item"></div>'+
-				'<div class="pswp__item"></div>'+
-				'</div>'+
-				'<div class="pswp__ui pswp__ui--hidden">'+
-				'<div class="pswp__top-bar">'+
-				'<div class="pswp__counter"></div>'+
-				'<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>'+
-				'<button class="pswp__button pswp__button--share" title="Share"></button>'+
-				'<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>'+
-				'<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>'+
-				'<div class="pswp__preloader">'+
-				'<div class="pswp__preloader__icn">'+
-				'<div class="pswp__preloader__cut">'+
-				'<div class="pswp__preloader__donut"></div>'+
-				'</div>'+
-				'</div>'+
-				'</div>'+
-				'</div>'+
-				'<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">'+
-				'<div class="pswp__share-tooltip"></div>'+
-				'</div>'+
-				'<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>'+
-				'<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>'+
-				'<div class="pswp__caption">'+
-				'<div class="pswp__caption__center"></div>'+
-				'</div>'+
-				'</div>'+
-				'</div>';
+				"<div class=\"pswp__bg\"></div>"+
+				"<div class=\"pswp__scroll-wrap\">"+
+				"<div class=\"pswp__container\">"+
+				"<div class=\"pswp__item\"></div>"+
+				"<div class=\"pswp__item\"></div>"+
+				"<div class=\"pswp__item\"></div>"+
+				"</div>"+
+				"<div class=\"pswp__ui pswp__ui--hidden\">"+
+				"<div class=\"pswp__top-bar\">"+
+				"<div class=\"pswp__counter\"></div>"+
+				"<button class=\"pswp__button pswp__button--close\" title=\"Close (Esc)\"></button>"+
+				"<button class=\"pswp__button pswp__button--share\" title=\"Share\"></button>"+
+				"<button class=\"pswp__button pswp__button--fs\" title=\"Toggle fullscreen\"></button>"+
+				"<button class=\"pswp__button pswp__button--zoom\" title=\"Zoom in/out\"></button>"+
+				"<div class=\"pswp__preloader\">"+
+				"<div class=\"pswp__preloader__icn\">"+
+				"<div class=\"pswp__preloader__cut\">"+
+				"<div class=\"pswp__preloader__donut\"></div>"+
+				"</div>"+
+				"</div>"+
+				"</div>"+
+				"</div>"+
+				"<div class=\"pswp__share-modal pswp__share-modal--hidden pswp__single-tap\">"+
+				"<div class=\"pswp__share-tooltip\"></div>"+
+				"</div>"+
+				"<button class=\"pswp__button pswp__button--arrow--left\" title=\"Previous (arrow left)\"></button>"+
+				"<button class=\"pswp__button pswp__button--arrow--right\" title=\"Next (arrow right)\"></button>"+
+				"<div class=\"pswp__caption\">"+
+				"<div class=\"pswp__caption__center\"></div>"+
+				"</div>"+
+				"</div>"+
+				"</div>";
 			template = document.body.appendChild(elementDiv);
 		}
 		return template;
@@ -147,7 +146,7 @@ var initPhotoSwipeFromDOM = function() {
 		e.preventDefault ? e.preventDefault() : e.returnValue = false;
 		var clickedElement = e.target || e.srcElement;
 		while(clickedElement) {
-			if(clickedElement.tagName === 'A') break;
+			if(clickedElement.tagName === "A") break;
 			clickedElement = clickedElement.parentNode;
 		}
 		if(!clickedElement) {
@@ -178,10 +177,10 @@ var initPhotoSwipeFromDOM = function() {
 	// Open gallery
 	var openPhotoSwipe = function(index, galleryElements, disableAnimation, fromURL) {
 		var gallery,
-		template = createTemplate('.pswp'),
+		template = createTemplate(".pswp"),
 		items = parseElements(galleryElements),
 		options = parseOptions(galleryElements);
-		options['getThumbBoundsFn'] = function(index) {
+		options["getThumbBoundsFn"] = function(index) {
 			var thumbnail = items[index].el.children[0],
 			pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
 			rect = thumbnail.getBoundingClientRect();
@@ -220,9 +219,9 @@ var initPhotoSwipeFromDOM = function() {
 	};
 	
 	// Check gallery elements and bind events
-	var galleryElements = document.querySelectorAll( '.photoswipe' );
+	var galleryElements = document.querySelectorAll(".photoswipe");
 	for(var i = 0, l = galleryElements.length; i < l; i++) {
-		galleryElements[i].setAttribute('data-galleryuid', i+1);
+		galleryElements[i].setAttribute("data-galleryuid", i+1);
 		galleryElements[i].onclick = onClickGallery;
 	}
 	
@@ -237,7 +236,7 @@ var initPhotoSwipeFromDOM = function() {
 };
 
 if(window.addEventListener) {
-	window.addEventListener('load', initPhotoSwipeFromDOM, false);
+	window.addEventListener("load", initPhotoSwipeFromDOM, false);
 } else {
-	window.attachEvent('onload', initPhotoSwipeFromDOM);
+	window.attachEvent("onload", initPhotoSwipeFromDOM);
 }

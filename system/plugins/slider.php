@@ -5,7 +5,7 @@
 // Slider plugin
 class YellowSlider
 {
-	const Version = "0.6.2";
+	const Version = "0.6.3";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -40,7 +40,6 @@ class YellowSlider
 				$output = "<div class=\"".htmlspecialchars($style)."\" data-prevnextbuttons=\"false\" data-clickable=\"true\" data-wraparound=\"true\" data-autoplay=\"".htmlspecialchars($autoplay)."\">\n";
 				foreach($files as $file)
 				{
-					list($widthInput, $heightInput) = $this->yellow->toolbox->detectImageInfo($file->fileName);
 					list($src, $width, $height) = $this->yellow->plugins->get("image")->getImageInfo($file->fileName, $size, $size);
 					$output .= "<img src=\"".htmlspecialchars($src)."\" width=\"".htmlspecialchars($width)."\" height=\"".
 						htmlspecialchars($height)."\" alt=\"".basename($file->getLocation(true))."\" title=\"".

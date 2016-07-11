@@ -1,19 +1,19 @@
 // Copyright (c) 2013-2016 Datenstrom, http://datenstrom.se
 // This file may be used and distributed under the terms of the public license.
 
-// Slider plugin 0.6.2
+// Slider plugin 0.6.3
 var initFlickityFromDOM = function() {
 	
 	// Parse slider options from DOM
 	var parseOptions = function(el) {
-		var keyNames = ['prevNextButtons', 'pageDots', 'arrowShape', 'lazyLoad', 'autoPlay', 'initialIndex',
-					'draggable', 'clickable', 'freeScroll', 'wrapAround', 'asNavFor', 'cellSelector', 'cellAlign'],
+		var keyNames = ["prevNextButtons", "pageDots", "arrowShape", "lazyLoad", "autoPlay", "initialIndex",
+					"draggable", "clickable", "freeScroll", "wrapAround", "asNavFor", "cellSelector", "cellAlign"],
 		numKeyNames = keyNames.length,
 		numAttributes = el.attributes.length,
 		options = {};
 		for(var i = 0; i < numAttributes; i++) {
 			var att = el.attributes[i], key, value;
-			if(att.nodeName.substring(0, 5) == 'data-') {
+			if(att.nodeName.substring(0, 5) == "data-") {
 				key = att.nodeName.substring(5);
 				for(var j = 0; j < numKeyNames; j++) {
 					if (key == keyNames[j].toLowerCase()) {
@@ -23,8 +23,8 @@ var initFlickityFromDOM = function() {
 				}
 				switch(att.nodeValue)
 				{
-					case 'true': value = true; break;
-					case 'false': value = false; break;
+					case "true": value = true; break;
+					case "false": value = false; break;
 					default: value = att.nodeValue;
 				}
 				options[key] = value;
@@ -56,12 +56,12 @@ var initFlickityFromDOM = function() {
 	
 	// Initialise slider elements and bind events
 	var sliders = {};
-	var sliderElements = document.querySelectorAll( '.flickity' );
+	var sliderElements = document.querySelectorAll(".flickity");
 	for(var i = 0, l = sliderElements.length; i < l; i++) {
 		var options = parseOptions(sliderElements[i]);
 		sliders[i] = new Flickity(sliderElements[i], options);
 		if(options.clickable) {
-			sliders[i].on('staticClick', function() { this.next(options.wrapAround) });
+			sliders[i].on("staticClick", function() { this.next(options.wrapAround); });
 		}
 	}
 	
@@ -76,7 +76,7 @@ var initFlickityFromDOM = function() {
 };
 
 if(window.addEventListener) {
-	window.addEventListener('load', initFlickityFromDOM, false);
+	window.addEventListener("load", initFlickityFromDOM, false);
 } else {
-	window.attachEvent('onload', initFlickityFromDOM);
+	window.attachEvent("onload", initFlickityFromDOM);
 }
