@@ -2,31 +2,34 @@
 // This file may be used and distributed under the terms of the public license.
 
 // Gallery plugin 0.6.4
-var initPhotoSwipeFromDOM = function() {
-	
+var initPhotoSwipeFromDOM = function()
+{
 	// Parse gallery items from DOM
-	var parseElements = function(el) {
+	var parseElements = function(el)
+	{
 		var thumbElements = el.childNodes,
 		numNodes = thumbElements.length,
 		items = [],
 		childElements,
 		size,
 		item;
-		for(var i = 0; i < numNodes; i++) {
+		for(var i=0; i<numNodes; i++)
+		{
 			el = thumbElements[i];
-			if(el.nodeType !== 1) {
-				continue;
-			}
+			if(el.nodeType !== 1) continue;
 			childElements = el.children;
 			size = el.getAttribute("data-size").split('x');
-			item = {
+			item =
+			{
 				src: el.getAttribute("href"),
 				w: parseInt(size[0], 10),
 				h: parseInt(size[1], 10),
 			};
-			if(childElements.length > 0) {
+			if(childElements.length > 0)
+			{
 				item.msrc = childElements[0].getAttribute("src");
-				if(childElements.length > 1) {
+				if(childElements.length > 1)
+				{
 					item.title = childElements[1].innerHTML;
 				}
 			}
@@ -37,7 +40,8 @@ var initPhotoSwipeFromDOM = function() {
 	};
 	
 	// Parse gallery options from DOM
-	var parseOptions = function(el) {
+	var parseOptions = function(el)
+	{
 		var keyNames = ["galleryUID", "mainClass", "thumbSquare",
 					"showHideOpacity", "showAnimationDuration", "hideAnimationDuration",
 					"bgOpacity", "allowPanToNext", "pinchToClose", "closeOnScroll", "escKey", "arrowKeys",
@@ -45,17 +49,22 @@ var initPhotoSwipeFromDOM = function() {
 					"arrowEl", "preloaderEl", "tapToClose", "tapToToggleControls", "clickToCloseNonZoomable"],
 		numKeyNames = keyNames.length,
 		numAttributes = el.attributes.length,
-		options = {
+		options =
+		{
 			mainClass: "pswp--minimal--dark",
 			tapToClose: true,
 			tapToToggleControls: false,
 		};
-		for(var i = 0; i < numAttributes; i++) {
+		for(var i=0; i<numAttributes; i++)
+		{
 			var att = el.attributes[i], key, value;
-			if(att.nodeName.substring(0, 5) == "data-") {
+			if(att.nodeName.substring(0, 5) == "data-")
+			{
 				key = att.nodeName.substring(5);
-				for(var j = 0; j < numKeyNames; j++) {
-					if (key == keyNames[j].toLowerCase()) {
+				for(var j=0; j<numKeyNames; j++)
+				{
+					if (key == keyNames[j].toLowerCase())
+					{
 						key = keyNames[j];
 						break;
 					}
@@ -73,21 +82,17 @@ var initPhotoSwipeFromDOM = function() {
 	};
 
 	// Parse gallery and picture index from URL
-	var parseHash = function() {
+	var parseHash = function()
+	{
 		var hash = window.location.hash.substring(1),
 		params = {};
-		if(hash.length < 5) {
-			return params;
-		}
+		if(hash.length < 5) return params;
 		var vars = hash.split('&');
-		for (var i = 0; i < vars.length; i++) {
-			if(!vars[i]) {
-				continue;
-			}
+		for (var i = 0; i < vars.length; i++)
+		{
+			if(!vars[i]) continue;
 			var pair = vars[i].split('=');
-			if(pair.length < 2) {
-				continue;
-			}
+			if(pair.length < 2) continue;
 			params[pair[0]] = pair[1];
 		}
 		return params;
@@ -141,66 +146,72 @@ var initPhotoSwipeFromDOM = function() {
 	};
 	
 	// Handle when user clicks on gallery
-	var onClickGallery = function(e) {
+	var onClickGallery = function(e)
+	{
 		e = e || window.event;
 		e.preventDefault ? e.preventDefault() : e.returnValue = false;
 		var clickedElement = e.target || e.srcElement;
-		while(clickedElement) {
+		while(clickedElement)
+		{
 			if(clickedElement.tagName === "A") break;
 			clickedElement = clickedElement.parentNode;
 		}
-		if(!clickedElement) {
-			return;
-		}
+		if(!clickedElement) return;
 		var clickedGallery = clickedElement.parentNode;
 		var childNodes = clickedElement.parentNode.childNodes,
 		numChildNodes = childNodes.length,
 		nodeIndex = 0,
 		index;
 		
-		for (var i = 0; i < numChildNodes; i++) {
-			if(childNodes[i].nodeType !== 1) {
-				continue;
-			}
-			if(childNodes[i] === clickedElement) {
+		for (var i = 0; i < numChildNodes; i++)
+		{
+			if(childNodes[i].nodeType !== 1) continue;
+			if(childNodes[i] === clickedElement)
+			{
 				index = nodeIndex;
 				break;
 			}
 			nodeIndex++;
 		}
-		if(index >= 0) {
-			openPhotoSwipe( index, clickedGallery );
-		}
+		if(index >= 0) openPhotoSwipe(index, clickedGallery);
 		return false;
 	};
 	
 	// Open gallery
-	var openPhotoSwipe = function(index, galleryElements, disableAnimation, fromURL) {
+	var openPhotoSwipe = function(index, galleryElements, disableAnimation, fromURL)
+	{
 		var gallery,
 		template = createTemplate(".pswp"),
 		items = parseElements(galleryElements),
 		options = parseOptions(galleryElements);
-		options["getThumbBoundsFn"] = function(index) {
+		options["getThumbBoundsFn"] = function(index)
+		{
 			var thumbnail = items[index].el.children[0],
 			pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
 			rect = thumbnail.getBoundingClientRect();
-			return {x:rect.left, y:rect.top + pageYScroll, w:rect.width};
+			return { x:rect.left, y:rect.top + pageYScroll, w:rect.width };
 		};
 		if(options.thumbSquare)
 		{
 			options.showHideOpacity = true;
 			options.showAnimationDuration = 0;
-			for(var j = 0; j < items.length; j++) {
-				items[j].msrc = false;
+			for(var i=0; i<items.length; i++)
+			{
+				items[i].msrc = false;
 			}
 		}
-		if(disableAnimation) {
+		if(disableAnimation)
+		{
 			options.showAnimationDuration = 0;
 		}
-		if(fromURL) {
-			if(options.galleryPIDs) {
-				for(var j = 0; j < items.length; j++) {
-					if(items[j].pid == index) {
+		if(fromURL)
+		{
+			if(options.galleryPIDs)
+			{
+				for(var j=0; j<items.length; j++)
+				{
+					if(items[j].pid == index)
+					{
 						options.index = j;
 						break;
 					}
@@ -211,16 +222,15 @@ var initPhotoSwipeFromDOM = function() {
 		} else {
 			options.index = parseInt(index, 10);
 		}
-		if(isNaN(options.index)) {
-			return;
-		}
-		gallery = new PhotoSwipe( template, PhotoSwipeUI_Default, items, options);
+		if(isNaN(options.index)) return;
+		gallery = new PhotoSwipe(template, PhotoSwipeUI_Default, items, options);
 		gallery.init();
 	};
 	
 	// Check gallery elements and bind events
 	var galleryElements = document.querySelectorAll(".photoswipe");
-	for(var i = 0, l = galleryElements.length; i < l; i++) {
+	for(var i=0, l=galleryElements.length; i<l; i++)
+	{
 		galleryElements[i].setAttribute("data-galleryuid", i+1);
 		galleryElements[i].onclick = onClickGallery;
 	}
@@ -229,8 +239,9 @@ var initPhotoSwipeFromDOM = function() {
 	if(galleryElements.length)
 	{
 		var params = parseHash();
-		if(params.gid>0 && params.gid<=galleryElements.length && params.pid>0) {
-			openPhotoSwipe( params.pid,  galleryElements[ params.gid - 1 ], true, true );
+		if(params.gid>0 && params.gid<=galleryElements.length && params.pid>0)
+		{
+			openPhotoSwipe(params.pid,  galleryElements[ params.gid - 1 ], true, true);
 		}
 	}
 };
