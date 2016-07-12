@@ -63,7 +63,7 @@ var initPhotoSwipeFromDOM = function()
 				key = att.nodeName.substring(5);
 				for(var j=0; j<numKeyNames; j++)
 				{
-					if (key == keyNames[j].toLowerCase())
+					if(key == keyNames[j].toLowerCase())
 					{
 						key = keyNames[j];
 						break;
@@ -88,7 +88,7 @@ var initPhotoSwipeFromDOM = function()
 		params = {};
 		if(hash.length < 5) return params;
 		var vars = hash.split('&');
-		for (var i = 0; i < vars.length; i++)
+		for(var i = 0; i < vars.length; i++)
 		{
 			if(!vars[i]) continue;
 			var pair = vars[i].split('=');
@@ -163,7 +163,7 @@ var initPhotoSwipeFromDOM = function()
 		nodeIndex = 0,
 		index;
 		
-		for (var i = 0; i < numChildNodes; i++)
+		for(var i = 0; i < numChildNodes; i++)
 		{
 			if(childNodes[i].nodeType !== 1) continue;
 			if(childNodes[i] === clickedElement)
@@ -241,7 +241,7 @@ var initPhotoSwipeFromDOM = function()
 		var params = parseHash();
 		if(params.gid>0 && params.gid<=galleryElements.length && params.pid>0)
 		{
-			openPhotoSwipe(params.pid,  galleryElements[ params.gid - 1 ], true, true);
+			openPhotoSwipe(params.pid, galleryElements[params.gid - 1], true, true);
 		}
 	}
 };

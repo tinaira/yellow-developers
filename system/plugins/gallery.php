@@ -30,7 +30,7 @@ class YellowGallery
 				$files = $page->getFiles(true);
 			} else {
 				$images = $this->yellow->config->get("imageDir");
-				$files =  $this->yellow->files->index(true, true)->match("#$images$pattern#");
+				$files = $this->yellow->files->index(true, true)->match("#$images$pattern#");
 			}
 			if(count($files) && $this->yellow->plugins->isExisting("image"))
 			{

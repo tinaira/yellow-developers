@@ -20,7 +20,7 @@ var initFlickityFromDOM = function()
 				key = att.nodeName.substring(5);
 				for(var j=0; j<numKeyNames; j++)
 				{
-					if (key == keyNames[j].toLowerCase())
+					if(key == keyNames[j].toLowerCase())
 					{
 						key = keyNames[j];
 						break;
