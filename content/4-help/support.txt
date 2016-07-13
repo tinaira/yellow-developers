@@ -8,7 +8,7 @@ Connect with other Yellow users and find professional help.
 ## How to get support
 
 * [Report problems and suggestions](https://github.com/datenstrom/yellow/issues)
-* [Chat with the developers](https://gitter.im/datenstrom/yellow)
+* [Talk with the developers](https://gitter.im/datenstrom/yellow)
 * [Contact a human](http://datenstrom.se/contact/)
 
 ## Where to find us
@@ -28,4 +28,4 @@ Connect with other Yellow users and find professional help.
 
 Yellow is free and open source, made by the people who use Yellow. At the heart of open source is the idea that by sharing code, we can make better software together. Contributions and feedback are very welcome. Licensed under [GPLv2](http://opensource.org/licenses/GPL-2.0).
 
-Big thanks to [core maintainers](https://github.com/datenstrom/yellow/graphs/contributors) and [contributors](https://github.com/datenstrom/yellow-plugins/graphs/contributors).
+Big thanks to [makers](https://github.com/orgs/datenstrom/people) and [contributors](https://github.com/datenstrom/yellow-plugins/graphs/contributors).

@@ -9,7 +9,7 @@ Tausche dich mit anderen Yellow-Benutzern aus und finde professionelle Hilfe.
 ## Support finden
 
 * [Melde Probleme und Vorschläge](https://github.com/datenstrom/yellow/issues)
-* [Chatte mit den Entwicklern](https://gitter.im/datenstrom/yellow)
+* [Rede mit den Entwicklern](https://gitter.im/datenstrom/yellow)
 * [Frage einen Menschen](http://datenstrom.se/de/contact/)
 
 ## Folge uns
@@ -29,4 +29,4 @@ Tausche dich mit anderen Yellow-Benutzern aus und finde professionelle Hilfe.
 
 Yellow ist kostenlos und Open-Source, erstellt von Menschen die Yellow benutzen. Im Herzen von Open-Source ist die Idee, dass wir zusammen durch gemeinsamen Code bessere Software machen können. Mitmachen und Vorschläge sind sehr willkommen. Lizensiert unter [GPLv2](http://opensource.org/licenses/GPL-2.0).
 
-Großen Dank an die [Core-Maintainer](https://github.com/datenstrom/yellow/graphs/contributors) und [Mitwirkenden](https://github.com/datenstrom/yellow-plugins/graphs/contributors).
+Großen Dank an [Hersteller](https://github.com/orgs/datenstrom/people) und [Mitwirkende](https://github.com/datenstrom/yellow-plugins/graphs/contributors).
