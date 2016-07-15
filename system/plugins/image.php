@@ -5,7 +5,7 @@
 // Image plugin
 class YellowImage
 {
-	const Version = "0.6.2";
+	const Version = "0.6.3";
 	var $yellow;			//access to API
 	var $graphicsLibrary;	//graphics library support? (boolean)
 
@@ -67,12 +67,16 @@ class YellowImage
 	function cleanCommand($args)
 	{
 		$statusCode = 0;
-		$path = $this->yellow->config->get("imageThumbnailDir");
-		foreach($this->yellow->toolbox->getDirectoryEntries($path, "/.*/", false, false) as $entry)
+		list($command, $path) = $args;
+		if($path == "all")
 		{
-			if(!$this->yellow->toolbox->deleteFile($entry)) $statusCode = 500;
+			$path = $this->yellow->config->get("imageThumbnailDir");
+			foreach($this->yellow->toolbox->getDirectoryEntries($path, "/.*/", false, false) as $entry)
+			{
+				if(!$this->yellow->toolbox->deleteFile($entry)) $statusCode = 500;
+			}
+			if($statusCode == 500) echo "ERROR cleaning thumbnails: Can't delete files in directory '$path'!\n";
 		}
-		if($statusCode == 500) echo "ERROR cleaning thumbnails: Can't delete files in directory '$path'!\n";
 		return $statusCode;
 	}
 

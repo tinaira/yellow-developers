@@ -310,6 +310,9 @@ The following plugin events are available:
 **function onLoad($yellow)**  
 Handle initialisation
 
+**function onUpdate($name)**  
+Handle update
+
 **function onRequest($serverScheme, $serverName, $base, $location, $fileName)**  
 Handle request
 

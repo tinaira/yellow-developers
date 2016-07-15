@@ -9,11 +9,15 @@ Lerne wie man eine Webseite mit Yellow erstellt.
 
 ## Webseite installieren
 
-[Yellow herunterladen und installieren](https://github.com/datenstrom/yellow/).
+1. [Yellow herunterladen und entpacken](https://github.com/datenstrom/yellow/archive/master.zip).
+2. Kopiere alle Dateien auf dein Webhosting.
+3. Öffne deine Webseite in einem Webbrowser.
 
 Deine Webseite ist sofort erreichbar. Die Installation von Yellow kommt mit zwei Seiten, "Home" und "About". Das ist nur ein Beispiel um loszulegen, verändere alles so wie du willst. Man kann eine Webseite erstellen, indem man weitere Dateien und Verzeichnisse hinzufügt. 
 
-Die zentrale Konfigurationsdatei für deine Webseite ist `system/config/config.ini`. Dort kann man die [Standardeinstellungen](adjusting-system-de#einstellungen) festlegen. Die individuellen Einstellungen lassen sich oben auf jeder Seite festlegen. Es gibt [Plugins](/plugins/) und [Themes](/themes/) zum Herunterladen.
+Die zentrale Konfigurationsdatei ist `system/config/config.ini`. Dort kannst du die Standardeinstellungen festlegen. Die individuellen Einstellungen lassen sich oben auf jeder Seite festlegen. Es gibt [Plugins](/plugins/) und [Themes](/themes/) zum Herunterladen.
+
+Wenn deine Webseite nicht funktioniert, überprüfe bitte die [Webserver-Konfiguration](web-server-configuration-de).
 
 ## Webseiten schreiben
 

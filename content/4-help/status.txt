@@ -4,10 +4,10 @@ Sidebar: none
 Language: en
 Information: Please do not translate this file, English only
 ---
-This website is using [yellow]. [Download latest version](https://github.com/datenstrom/yellow).
+This website is using [yellow]. [See what's new](https://github.com/datenstrom/yellow/releases).
 
 ||||
 |---|---|---|
 |**datenstrom.se**|[![Site status](http://datenstrom.se/media/images/online.svg)](http://datenstrom.se)
-|**datenstrom/yellow**|[![Build status](https://travis-ci.org/datenstrom/yellow.svg?branch=master)](https://travis-ci.org/datenstrom/yellow)|[![Codacy status](https://api.codacy.com/project/badge/grade/f565b048bdff4b0e90391d3d93384b2f)](https://www.codacy.com/app/markseu/yellow)
-|**datenstrom/yellow-developers**|[![Build status](https://travis-ci.org/datenstrom/yellow-developers.svg?branch=master)](https://travis-ci.org/datenstrom/yellow-developers)|[![Codacy status](https://api.codacy.com/project/badge/grade/238ea263acd94e36a8dc105a9c0c80fa)](https://www.codacy.com/app/markseu/yellow-developers)
+|**datenstrom/yellow**|[![Build status](https://travis-ci.org/datenstrom/yellow.svg?branch=master)](https://travis-ci.org/datenstrom/yellow)|[![Code quality](https://img.shields.io/codacy/grade/f565b048bdff4b0e90391d3d93384b2f/master.svg)](https://www.codacy.com/app/markseu/yellow)
+|**datenstrom/yellow-developers**|[![Build status](https://travis-ci.org/datenstrom/yellow-developers.svg?branch=master)](https://travis-ci.org/datenstrom/yellow-developers)|[![Code quality](https://img.shields.io/codacy/grade/238ea263acd94e36a8dc105a9c0c80fa/master.svg)](https://www.codacy.com/app/markseu/yellow-developers)
