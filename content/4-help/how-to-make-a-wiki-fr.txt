@@ -3,16 +3,21 @@ Title: Comment faire un wiki
 Sidebar: sidebar-fr
 Language: fr
 ---
+>> [Todo: You can help us and translate this page](https://github.com/datenstrom/yellow-developers/blob/master/content/4-help/how-to-make-a-wiki-fr.txt)
+
 Apprenez à faire un wiki avec Yellow.
 
 ## Installer un wiki
 
-[Téléchargez et installez le plugin wiki](https://github.com/datenstrom/yellow-plugins/tree/master/wiki).
+1. [Install Yellow](how-to-make-a-website-fr).
+2. [Install wiki plugin](https://github.com/datenstrom/yellow-plugins/tree/master/wiki).
+3. Open your website in a web browser.
 
-Votre wiki est immédiatement accessible à `http://website/wiki/` ou `http://website/`, celà dépend de la configuration de votre dossier `content`. Si vous souhaitez faire du wiki votre page d'accueil, renommez le dossier wiki en `1-wiki` et supprimez `1-home`.
+Your wiki is immediately available as `http://website/wiki/`. To make the wiki your home page, go to your `content` folder, rename the blog folder to '1-wiki' and delete '1-home'. This is just an example to get you started, change everything as you like.
 
-Le fichier de configuration principal de votre wiki est `system/config/config.ini`. Vous pouvez y définir les [paramètres par défaut](adjusting-system-fr#paramètres) de votre site. Les paramètres individuels peuvent être définis au haut de chaque page. Il existe des [plugins](/plugins/) et des [thèmes](/themes/) à télécharger.
+Le fichier de configuration principal est `system/config/config.ini`. Vous pouvez y définir les paramètres par défaut de votre site. Les paramètres individuels peuvent être définis au haut de chaque page. Il existe des [plugins](/plugins/) et des [thèmes](/themes/) à télécharger.
 
+Lorsque votre wiki ne fonctionne pas, s'il vous plaît vérifier la [configuration du serveur web](web-server-configuration-fr).
 ## Écrire une page de wiki
 
 Jetons un oeil dans le dossier `content`, où se trouve le dossier de votre wiki avec toutes vos pages de wiki. Ouvrez le fichier `wiki-page.txt`. Vous y verrez les paramètres et le texte de la page. Vous pouvez changer le titre de la page `Title` ainsi que d'autres [paramètres](markdown-cheat-sheet-fr#paramètres) en haut de la page. Voici un exemple:
