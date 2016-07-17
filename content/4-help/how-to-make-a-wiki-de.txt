@@ -11,7 +11,7 @@ Lerne wie man ein Wiki mit Yellow erstellt.
 2. [Wiki-Plugin installieren](https://github.com/datenstrom/yellow-plugins/tree/master/wiki).
 3. Öffne deine Webseite in einem Webbrowser.
 
-Dein Wiki ist sofort erreichbar unter `http://website/blog/`. Um das Wiki auf der Startseite anzuzeigen, gehe in dein `content`-Verzeichnis, benenne das Wikiverzeichnis zu "1-wiki" um und lösche "1-home". Das ist nur ein Beispiel um loszulegen, verändere alles so wie du willst.
+Dein Wiki ist sofort erreichbar unter `http://website/wiki/`. Um das Wiki auf der Startseite anzuzeigen, gehe in dein `content`-Verzeichnis, benenne das Wikiverzeichnis zu "1-wiki" um und lösche "1-home". Das ist nur ein Beispiel um loszulegen, verändere alles so wie du willst.
 
 Die zentrale Konfigurationsdatei ist `system/config/config.ini`. Dort kannst du die Standardeinstellungen festlegen. Die individuellen Einstellungen lassen sich oben auf jeder Seite festlegen. Es gibt [Plugins](/plugins/) und [Themes](/themes/) zum Herunterladen.
 
