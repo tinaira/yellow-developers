@@ -5,7 +5,7 @@
 // Table of contents plugin
 class YellowToc
 {
-	const Version = "0.6.1";
+	const VERSION = "0.6.1";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -41,5 +41,5 @@ class YellowToc
 	}
 }
 
-$yellow->plugins->register("toc", "YellowToc", YellowToc::Version);
+$yellow->plugins->register("toc", "YellowToc", YellowToc::VERSION);
 ?>

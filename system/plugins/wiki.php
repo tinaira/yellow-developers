@@ -5,7 +5,7 @@
 // Wiki plugin
 class YellowWiki
 {
-	const Version = "0.6.6";
+	const VERSION = "0.6.6";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -24,7 +24,7 @@ class YellowWiki
 			$location = $this->yellow->config->get("wikiLocation");
 			if(!empty($location) && substru($page->location, 0, strlenu($location))==$location)
 			{
-				if($page->get("template") == $this->yellow->config->get("template")) $page->set("template", "wiki");
+				if($page->get("template")==$this->yellow->config->get("template")) $page->set("template", "wiki");
 			}
 		}
 	}
@@ -32,7 +32,7 @@ class YellowWiki
 	// Handle page content parsing of custom block
 	function onParseContentBlock($page, $name, $text, $shortcut)
 	{
-		$output = NULL;
+		$output = null;
 		if($name=="wikirecent" && $shortcut)
 		{
 			list($location, $pagesMax) = $this->yellow->toolbox->getTextArgs($text);
@@ -133,11 +133,11 @@ class YellowWiki
 	// Handle page parsing
 	function onParsePage()
 	{
-		if($this->yellow->page->get("template") == "wikipages")
+		if($this->yellow->page->get("template")=="wikipages")
 		{
 			$pages = $this->yellow->page->getChildren(!$this->yellow->page->isVisible())->append($this->yellow->page);
 			$pagesFilter = array();
-			if($_REQUEST["special"] == "changes")
+			if($_REQUEST["special"]=="changes")
 			{
 				$chronologicalOrder = true;
 				array_push($pagesFilter, $this->yellow->text->get("wikiSpecialChanges"));
@@ -171,7 +171,7 @@ class YellowWiki
 			$this->yellow->page->setLastModified($pages->getModified());
 			$this->yellow->page->setHeader("Cache-Control", "max-age=60");
 		}
-		if($this->yellow->page->get("template") == "wiki")
+		if($this->yellow->page->get("template")=="wiki")
 		{
 			$location = $this->yellow->config->get("wikiLocation");
 			if(!empty($location))
@@ -186,5 +186,5 @@ class YellowWiki
 	}
 }
 
-$yellow->plugins->register("wiki", "YellowWiki", YellowWiki::Version);
+$yellow->plugins->register("wiki", "YellowWiki", YellowWiki::VERSION);
 ?>

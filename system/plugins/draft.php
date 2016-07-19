@@ -5,7 +5,7 @@
 // Draft status plugin
 class YellowDraft
 {
-	const Version = "0.6.1";
+	const VERSION = "0.6.1";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -18,7 +18,7 @@ class YellowDraft
 	// Handle page meta data parsing
 	function onParseMeta($page)
 	{
-		if($page->get("status") == "draft") $page->visible = false;
+		if($page->get("status")=="draft") $page->visible = false;
 	}
 	
 	// Handle page parsing
@@ -31,5 +31,5 @@ class YellowDraft
 	}
 }
 
-$yellow->plugins->register("draft", "YellowDraft", YellowDraft::Version);
+$yellow->plugins->register("draft", "YellowDraft", YellowDraft::VERSION);
 ?>

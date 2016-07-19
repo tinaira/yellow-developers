@@ -5,7 +5,7 @@
 // Preview plugin
 class YellowPreview
 {
-	const Version = "0.6.3";
+	const VERSION = "0.6.3";
 	var $yellow;			//access to API
 
 	// Handle initialisation
@@ -18,7 +18,7 @@ class YellowPreview
 	// Handle page content parsing of custom block
 	function onParseContentBlock($page, $name, $text, $shortcut)
 	{
-		$output = NULL;
+		$output = null;
 		if($name=="preview" && $shortcut)
 		{
 			list($location, $style, $size) = $this->yellow->toolbox->getTextArgs($text);
@@ -62,5 +62,5 @@ class YellowPreview
 	}
 }
 
-$yellow->plugins->register("preview", "YellowPreview", YellowPreview::Version);
+$yellow->plugins->register("preview", "YellowPreview", YellowPreview::VERSION);
 ?>

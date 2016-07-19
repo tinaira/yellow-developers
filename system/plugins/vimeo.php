@@ -5,7 +5,7 @@
 // Vimeo plugin
 class YellowVimeo
 {
-	const Version = "0.6.1";
+	const VERSION = "0.6.1";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -18,7 +18,7 @@ class YellowVimeo
 	// Handle page content parsing of custom block
 	function onParseContentBlock($page, $name, $text, $shortcut)
 	{
-		$output = NULL;
+		$output = null;
 		if($name=="vimeo" && $shortcut)
 		{
 			list($id, $style, $width, $height) = $this->yellow->toolbox->getTextArgs($text);
@@ -32,5 +32,5 @@ class YellowVimeo
 	}
 }
 
-$yellow->plugins->register("vimeo", "YellowVimeo", YellowVimeo::Version);
+$yellow->plugins->register("vimeo", "YellowVimeo", YellowVimeo::VERSION);
 ?>

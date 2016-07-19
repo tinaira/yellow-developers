@@ -5,7 +5,7 @@
 // Emojiawesome plugin
 class YellowEmojiawesome
 {
-	const Version = "0.6.3";
+	const VERSION = "0.6.3";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -20,7 +20,7 @@ class YellowEmojiawesome
 	// Handle page content parsing of custom block
 	function onParseContentBlock($page, $name, $text, $shortcut)
 	{
-		$output = NULL;
+		$output = null;
 		if((empty($name) || $name=="ea") && $shortcut)
 		{
 			list($shortname, $style) = $this->yellow->toolbox->getTextArgs($text);
@@ -46,8 +46,8 @@ class YellowEmojiawesome
 	// Handle page extra HTML data
 	function onExtra($name)
 	{
-		$output = NULL;
-		if($name == "header")
+		$output = null;
+		if($name=="header")
 		{
 			$locationStylesheet = $this->yellow->config->get("serverBase").$this->yellow->config->get("pluginLocation")."emojiawesome.css";
 			$fileNameStylesheet = $this->yellow->config->get("pluginDir")."emojiawesome.css";
@@ -103,7 +103,7 @@ class YellowEmojiawesome
 	function isShortname($shortname)
 	{
 		$found = false;
-		foreach($this->getLookupData() as $entry) if($entry["shortname"] == $shortname) { $found = true; break; }
+		foreach($this->getLookupData() as $entry) if($entry["shortname"]==$shortname) { $found = true; break; }
 		return $found;
 	}
 	
@@ -944,5 +944,5 @@ class YellowEmojiawesome
 	}
 }
 
-$yellow->plugins->register("emojiawesome", "YellowEmojiawesome", YellowEmojiawesome::Version);
+$yellow->plugins->register("emojiawesome", "YellowEmojiawesome", YellowEmojiawesome::VERSION);
 ?>

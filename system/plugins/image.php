@@ -5,7 +5,7 @@
 // Image plugin
 class YellowImage
 {
-	const Version = "0.6.3";
+	const VERSION = "0.6.3";
 	var $yellow;			//access to API
 	var $graphicsLibrary;	//graphics library support? (boolean)
 
@@ -23,7 +23,7 @@ class YellowImage
 	// Handle page content parsing of custom block
 	function onParseContentBlock($page, $name, $text, $shortcut)
 	{
-		$output = NULL;
+		$output = null;
 		if($name=="image" && $shortcut)
 		{
 			if(!$this->graphicsLibrary)
@@ -68,14 +68,14 @@ class YellowImage
 	{
 		$statusCode = 0;
 		list($command, $path) = $args;
-		if($path == "all")
+		if($path=="all")
 		{
 			$path = $this->yellow->config->get("imageThumbnailDir");
 			foreach($this->yellow->toolbox->getDirectoryEntries($path, "/.*/", false, false) as $entry)
 			{
 				if(!$this->yellow->toolbox->deleteFile($entry)) $statusCode = 500;
 			}
-			if($statusCode == 500) echo "ERROR cleaning thumbnails: Can't delete files in directory '$path'!\n";
+			if($statusCode==500) echo "ERROR cleaning thumbnails: Can't delete files in directory '$path'!\n";
 		}
 		return $statusCode;
 	}
@@ -156,7 +156,7 @@ class YellowImage
 		$widthDiff = abs($widthOutput - $widthFit);
 		$heightDiff = abs($heightOutput - $heightFit);
 		$imageOutput = $this->createImage($widthOutput, $heightOutput);
-		if($heightFit > $heightOutput)
+		if($heightFit>$heightOutput)
 		{
 			imagecopyresampled($imageOutput, $imageInput, 0, $heightDiff/-2, 0, 0, $widthOutput, $heightFit, $widthInput, $heightInput);
 		} else {
@@ -173,7 +173,7 @@ class YellowImage
 		{
 			$value = $matches[1];
 			$unit = $matches[2];
-			if($unit == "%") $value = intval($valueBase * $value / 100);
+			if($unit=="%") $value = intval($valueBase * $value / 100);
 		}
 		return $value;
 	}
@@ -183,16 +183,16 @@ class YellowImage
 	{
 		$fileDateInput = is_file($fileNameInput) ? filemtime($fileNameInput) : 0;
 		$fileDateOutput = is_file($fileNameOutput) ? filemtime($fileNameOutput) : 0;
-		return $fileDateInput != $fileDateOutput;
+		return $fileDateInput!=$fileDateOutput;
 	}
 
 	// Check graphics library support
 	function isGraphicsLibrary()
 	{
 		return extension_loaded("gd") && function_exists("gd_info") &&
-			((imagetypes()&(IMG_JPG|IMG_PNG)) == (IMG_JPG|IMG_PNG));
+			((imagetypes()&(IMG_JPG|IMG_PNG))==(IMG_JPG|IMG_PNG));
 	}
 }
 
-$yellow->plugins->register("image", "YellowImage", YellowImage::Version);
+$yellow->plugins->register("image", "YellowImage", YellowImage::VERSION);
 ?>

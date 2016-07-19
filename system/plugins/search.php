@@ -5,7 +5,7 @@
 // Search plugin
 class YellowSearch
 {
-	const Version = "0.6.5";
+	const VERSION = "0.6.5";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -20,7 +20,7 @@ class YellowSearch
 	// Handle page content parsing of custom block
 	function onParseContentBlock($page, $name, $text, $shortcut)
 	{
-		$output = NULL;
+		$output = null;
 		if($name=="search" && $shortcut)
 		{
 			list($location) = $this->yellow->toolbox->getTextArgs($text);
@@ -38,9 +38,9 @@ class YellowSearch
 	// Handle page parsing
 	function onParsePage()
 	{
-		if($this->yellow->page->get("template") == "search")
+		if($this->yellow->page->get("template")=="search")
 		{
-			if(PHP_SAPI == "cli") $this->yellow->page->error(500, "Static website not supported!");
+			if(PHP_SAPI=="cli") $this->yellow->page->error(500, "Static website not supported!");
 			$query = trim($_REQUEST["query"]);
 			$tokens = array_slice(array_unique(array_filter(explode(' ', $query), "strlen")), 0, 10);
 			if(!empty($tokens))
@@ -61,7 +61,7 @@ class YellowSearch
 						if(stristr($page->get("tag"), $token)) { $searchScore += 5; $searchTokens[$token] = true; }
 						if(stristr($page->get("author"), $token)) { $searchScore += 2; $searchTokens[$token] = true; }
 					}
-					if(count($tokens) == count($searchTokens))
+					if(count($tokens)==count($searchTokens))
 					{
 						$page->set("searchscore", $searchScore);
 						$pages->append($page);
@@ -81,5 +81,5 @@ class YellowSearch
 	}
 }
 
-$yellow->plugins->register("search", "YellowSearch", YellowSearch::Version);
+$yellow->plugins->register("search", "YellowSearch", YellowSearch::VERSION);
 ?>

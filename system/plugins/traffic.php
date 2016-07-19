@@ -5,7 +5,7 @@
 // Traffic plugin
 class YellowTraffic
 {
-	const Version = "0.6.8";
+	const VERSION = "0.6.8";
 	var $yellow;			//access to API
 	var $days;				//detected days
 	var $views;				//detected views
@@ -81,7 +81,7 @@ class YellowTraffic
 		} else {
 			list($statusCode, $sites, $content, $search, $errors) = $this->analyseRequests($days, $location, array($fileName));
 		}
-		if($statusCode == 200)
+		if($statusCode==200)
 		{
 			$this->showRequests($sites, "Referring sites");
 			$this->showRequests($content, "Popular content");
@@ -116,23 +116,23 @@ class YellowTraffic
 				if($fileHandle)
 				{
 					$filePos = filesize($fileName)-1; $fileTop = -1;
-					while(($line = $this->getFileLinePrevious($fileHandle, $filePos, $fileTop, $dataBuffer)) !== false)
+					while(($line = $this->getFileLinePrevious($fileHandle, $filePos, $fileTop, $dataBuffer))!==false)
 					{
 						if(preg_match("/^(\S+) (\S+) (\S+) \[(.+)\] \"(\S+) (.*?) (\S+)\" (\S+) (\S+) \"(.*?)\" \"(.*?)\"$/", $line, $matches))
 						{
 							list($line, $ip, $dummy1, $dummy2, $timestamp, $method, $uri, $protocol, $status, $size, $referer, $userAgent) = $matches;
 							$timeFound = strtotime($timestamp);
-							if($timeFound < $timeStop) break;
+							if($timeFound<$timeStop) break;
 							$location = $this->getLocation($uri);
 							$referer = $this->getReferer($referer, $refererSelf);
 							$clientsRequestThrottle = substru($timestamp, 0, 17).$method.$location;
-							if($clients[$ip] == $clientsRequestThrottle) { --$sites[$referer]; continue; }
+							if($clients[$ip]==$clientsRequestThrottle) { --$sites[$referer]; continue; }
 							$clients[$ip] = $clientsRequestThrottle;
 							if($this->checkRequestArguments($method, $location, $referer))
 							{
 								if(!preg_match("#^$locationSelf#", $location)) continue;
 								if(!preg_match("#^$locationSelf$locationMatch#", $location)) continue;
-								if($locationMatch == "/")
+								if($locationMatch=="/")
 								{
 									if(preg_match("#^$locationSelf(.*)/($locationIgnore)/#", $location)) continue;
 									if(preg_match("#^$locationSelf(.*)/($robotsFile)$#", $location)) continue;
@@ -140,7 +140,7 @@ class YellowTraffic
 								}
 								if(preg_match("#$spamFilter#i", $referer.$userAgent)) continue;
 								if($status>=301 && $status<=303) continue;
-								if($status < 400)
+								if($status<400)
 								{
 									++$content[$this->getUrl($location)];
 									++$sites[$referer];
@@ -159,7 +159,7 @@ class YellowTraffic
 				}
 			}
 			unset($sites["-"]); unset($search["-"]);
-			if($locationMatch != "/") $search = array();
+			if($locationMatch!="/") $search = array();
 			$this->days = $timeStart!=$timeFound ? $days : 0;
 		} else {
 			$statusCode = 500;
@@ -239,7 +239,7 @@ class YellowTraffic
 	// Return previous text line from file, false if not found
 	function getFileLinePrevious($fileHandle, &$filePos, &$fileTop, &$dataBuffer)
 	{
-		if($filePos >= 0)
+		if($filePos>=0)
 		{
 			$line = "";
 			$lineEndingSearch = false;
@@ -252,7 +252,7 @@ class YellowTraffic
 					$line = substru($dataBuffer, $currentPos+1, $endPos-$currentPos).$line;
 					break;
 				}
-				if($currentPos == 0)
+				if($currentPos==0)
 				{
 					$line = substru($dataBuffer, $currentPos, $endPos-$currentPos+1).$line;
 					$endPos = $this->getFileLineBuffer($fileHandle, $filePos-1, $fileTop, $dataBuffer);
@@ -268,10 +268,10 @@ class YellowTraffic
 	// Update text line buffer
 	function getFileLineBuffer($fileHandle, $filePos, &$fileTop, &$dataBuffer)
 	{
-		if($filePos >= 0)
+		if($filePos>=0)
 		{
 			$top = intval($filePos / 4096) * 4096;
-			if($fileTop != $top)
+			if($fileTop!=$top)
 			{
 				$fileTop = $top;
 				fseek($fileHandle, $fileTop);
@@ -282,5 +282,5 @@ class YellowTraffic
 	}
 }
 
-$yellow->plugins->register("traffic", "YellowTraffic", YellowTraffic::Version);
+$yellow->plugins->register("traffic", "YellowTraffic", YellowTraffic::VERSION);
 ?>

@@ -5,7 +5,7 @@
 // Highlight plugin
 class YellowHighlight
 {
-	const Version = "0.6.3";
+	const VERSION = "0.6.3";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -20,7 +20,7 @@ class YellowHighlight
 	// Handle page content parsing of custom block
 	function onParseContentBlock($page, $name, $text, $shortcut)
 	{
-		$output = NULL;
+		$output = null;
 		if(!empty($name) && !$shortcut)
 		{
 			list($language, $fileName, $lineNumber, $class, $id) = $this->getHighlightInfo($name);
@@ -47,8 +47,8 @@ class YellowHighlight
 	// Handle page extra HTML data
 	function onExtra($name)
 	{
-		$output = NULL;
-		if($name == "header")
+		$output = null;
+		if($name=="header")
 		{
 			$locationStylesheet = $this->yellow->config->get("serverBase").$this->yellow->config->get("pluginLocation")."highlight.css";
 			$fileNameStylesheet = $this->yellow->config->get("pluginDir")."highlight.css";
@@ -84,8 +84,8 @@ class YellowHighlight
 			   if(is_null($lineNumber)) $lineNumber = $this->yellow->config->get("highlightLineNumber");
 			   continue;
 			}
-			if($token[0] == '.') $class = $class." ".substru($token, 1);
-			if($token[0] == '#') $id = substru($token, 1);
+			if($token[0]=='.') $class = $class." ".substru($token, 1);
+			if($token[0]=='#') $id = substru($token, 1);
 		}
 		$fileName = $this->yellow->config->get("pluginDir")."/highlight-$language.php";
 		return array($language, $fileName, $lineNumber, $class, $id);
@@ -4880,5 +4880,5 @@ if (!function_exists('geshi_highlight')) {
     }
 }
 
-$yellow->plugins->register("highlight", "YellowHighlight", YellowHighlight::Version);
+$yellow->plugins->register("highlight", "YellowHighlight", YellowHighlight::VERSION);
 ?>

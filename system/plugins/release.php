@@ -5,7 +5,7 @@
 // Release plugin
 class YellowRelease
 {
-	const Version = "0.6.9";
+	const VERSION = "0.6.9";
 
 	// Handle plugin initialisation
 	function onLoad($yellow)
@@ -243,5 +243,5 @@ class YellowRelease
 	}
 }
 
-$yellow->plugins->register("release", "YellowRelease", YellowRelease::Version);
+$yellow->plugins->register("release", "YellowRelease", YellowRelease::VERSION);
 ?>

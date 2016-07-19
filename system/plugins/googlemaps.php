@@ -5,7 +5,7 @@
 // Googlemaps plugin
 class YellowGooglemaps
 {
-	const Version = "0.6.1";
+	const VERSION = "0.6.1";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -19,7 +19,7 @@ class YellowGooglemaps
 	// Handle page content parsing of custom block
 	function onParseContentBlock($page, $name, $text, $shortcut)
 	{
-		$output = NULL;
+		$output = null;
 		if($name=="googlemaps" && $shortcut)
 		{
 			list($address, $zoom, $style, $width, $height) = $this->yellow->toolbox->getTextArgs($text);
@@ -35,5 +35,5 @@ class YellowGooglemaps
 	}
 }
 
-$yellow->plugins->register("googlemaps", "YellowGooglemaps", YellowGooglemaps::Version);
+$yellow->plugins->register("googlemaps", "YellowGooglemaps", YellowGooglemaps::VERSION);
 ?>

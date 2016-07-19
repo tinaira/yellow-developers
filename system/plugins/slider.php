@@ -5,7 +5,7 @@
 // Slider plugin
 class YellowSlider
 {
-	const Version = "0.6.3";
+	const VERSION = "0.6.3";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -20,7 +20,7 @@ class YellowSlider
 	// Handle page content parsing of custom block
 	function onParseContentBlock($page, $name, $text, $shortcut)
 	{
-		$output = NULL;
+		$output = null;
 		if($name=="slider" && $shortcut)
 		{
 			list($pattern, $style, $size, $autoplay) = $this->yellow->toolbox->getTextArgs($text);
@@ -56,8 +56,8 @@ class YellowSlider
 	// Handle page extra HTML data
 	function onExtra($name)
 	{
-		$output = NULL;
-		if($name == "header")
+		$output = null;
+		if($name=="header")
 		{
 			$sliderCdn = $this->yellow->config->get("sliderCdn");
 			$pluginLocation = $this->yellow->config->get("serverBase").$this->yellow->config->get("pluginLocation");
@@ -70,5 +70,5 @@ class YellowSlider
 	}
 }
 
-$yellow->plugins->register("slider", "YellowSlider", YellowSlider::Version);
+$yellow->plugins->register("slider", "YellowSlider", YellowSlider::VERSION);
 ?>

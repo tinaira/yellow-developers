@@ -5,7 +5,7 @@
 // Breadcrumbs plugin
 class YellowBreadcrumbs
 {
-	const Version = "0.6.2";
+	const VERSION = "0.6.2";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -19,7 +19,7 @@ class YellowBreadcrumbs
 	// Handle page content parsing of custom block
 	function onParseContentBlock($page, $name, $text, $shortcut)
 	{
-		$output = NULL;
+		$output = null;
 		if($name=="breadcrumbs" && $shortcut)
 		{
 			list($separator, $style) = $this->yellow->toolbox->getTextArgs($text);
@@ -32,7 +32,7 @@ class YellowBreadcrumbs
 			foreach($pages as $page)
 			{
 				$output .= "<a href=\"".$page->getLocation(true)."\">".$page->getHtml("titleNavigation")."</a>";
-				if($page->getLocation(true) != $currentPage->getLocation(true)) $output .= " ".htmlspecialchars($separator)." ";
+				if($page->getLocation(true)!=$currentPage->getLocation(true)) $output .= " ".htmlspecialchars($separator)." ";
 			}
 			$output .= "</div>\n";
 		}
@@ -46,5 +46,5 @@ class YellowBreadcrumbs
 	}
 }
 
-$yellow->plugins->register("breadcrumbs", "YellowBreadcrumbs", YellowBreadcrumbs::Version);
+$yellow->plugins->register("breadcrumbs", "YellowBreadcrumbs", YellowBreadcrumbs::VERSION);
 ?>

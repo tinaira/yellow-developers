@@ -38,10 +38,10 @@ Return page meta data as [language specific date](#formats)
 Return page content, HTML encoded or raw format
 
 **$yellow->page->getParent()**  
-Return parent page relative to current page, NULL if none
+Return parent page relative to current page, null if none
 
 **$yellow->page->getParentTop($homeFailback = true)**  
-Return top-level page for current page, NULL if none
+Return top-level page for current page, null if none
 
 **$yellow->page->getSiblings($showInvisible = false)**  
 Return [page collection](#yellow-page-collection) with pages on the same level as current page
@@ -172,7 +172,7 @@ Check if there is a pagination
 Yellow pages gives access to pages from file system:
 
 **$yellow->pages->find($location, $absoluteLocation = false)**  
-Return [page](#yellow-page) from file system, NULL if not found
+Return [page](#yellow-page) from file system, null if not found
 
 **$yellow->pages->index($showInvisible = false, $multiLang = false, $levelMax = 0)**  
 Return [page collection](#yellow-page-collection) with all pages
@@ -194,7 +194,7 @@ Return [page collection](#yellow-page-collection) that is empty
 Yellow files gives access to files from file system:
 
 **$yellow->files->find($location, $absoluteLocation = false)**  
-Return [page](#yellow-page) with media file information, NULL if not found
+Return [page](#yellow-page) with media file information, null if not found
 
 **$yellow->files->index($showInvisible = false, $multiPass = false, $levelMax = 0)**  
 Return [page collection](#yellow-page-collection) with all media files

@@ -5,7 +5,7 @@
 // Soundcloud plugin
 class YellowSoundcloud
 {
-	const Version = "0.6.1";
+	const VERSION = "0.6.1";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -18,7 +18,7 @@ class YellowSoundcloud
 	// Handle page content parsing of custom block
 	function onParseContentBlock($page, $name, $text, $shortcut)
 	{
-		$output = NULL;
+		$output = null;
 		if($name=="soundcloud" && $shortcut)
 		{
 			list($id, $style, $width, $height) = $this->yellow->toolbox->getTextArgs($text);
@@ -34,5 +34,5 @@ class YellowSoundcloud
 	}
 }
 
-$yellow->plugins->register("soundcloud", "YellowSoundcloud", YellowSoundcloud::Version);
+$yellow->plugins->register("soundcloud", "YellowSoundcloud", YellowSoundcloud::VERSION);
 ?>

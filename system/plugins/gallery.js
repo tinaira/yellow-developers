@@ -16,7 +16,7 @@ var initPhotoSwipeFromDOM = function()
 		for(var i=0; i<numNodes; i++)
 		{
 			el = thumbElements[i];
-			if(el.nodeType !== 1) continue;
+			if(el.nodeType!==1) continue;
 			childElements = el.children;
 			size = el.getAttribute("data-size").split('x');
 			item =
@@ -25,10 +25,10 @@ var initPhotoSwipeFromDOM = function()
 				w: parseInt(size[0], 10),
 				h: parseInt(size[1], 10),
 			};
-			if(childElements.length > 0)
+			if(childElements.length>0)
 			{
 				item.msrc = childElements[0].getAttribute("src");
-				if(childElements.length > 1)
+				if(childElements.length>1)
 				{
 					item.title = childElements[1].innerHTML;
 				}
@@ -58,12 +58,12 @@ var initPhotoSwipeFromDOM = function()
 		for(var i=0; i<numAttributes; i++)
 		{
 			var att = el.attributes[i], key, value;
-			if(att.nodeName.substring(0, 5) == "data-")
+			if(att.nodeName.substring(0, 5)=="data-")
 			{
 				key = att.nodeName.substring(5);
 				for(var j=0; j<numKeyNames; j++)
 				{
-					if(key == keyNames[j].toLowerCase())
+					if(key==keyNames[j].toLowerCase())
 					{
 						key = keyNames[j];
 						break;
@@ -86,13 +86,13 @@ var initPhotoSwipeFromDOM = function()
 	{
 		var hash = window.location.hash.substring(1),
 		params = {};
-		if(hash.length < 5) return params;
+		if(hash.length<5) return params;
 		var vars = hash.split('&');
-		for(var i = 0; i < vars.length; i++)
+		for(var i=0; i<vars.length; i++)
 		{
 			if(!vars[i]) continue;
 			var pair = vars[i].split('=');
-			if(pair.length < 2) continue;
+			if(pair.length<2) continue;
 			params[pair[0]] = pair[1];
 		}
 		return params;
@@ -153,7 +153,7 @@ var initPhotoSwipeFromDOM = function()
 		var clickedElement = e.target || e.srcElement;
 		while(clickedElement)
 		{
-			if(clickedElement.tagName === "A") break;
+			if(clickedElement.tagName == "A") break;
 			clickedElement = clickedElement.parentNode;
 		}
 		if(!clickedElement) return;
@@ -163,17 +163,17 @@ var initPhotoSwipeFromDOM = function()
 		nodeIndex = 0,
 		index;
 		
-		for(var i = 0; i < numChildNodes; i++)
+		for(var i=0; i<numChildNodes; i++)
 		{
-			if(childNodes[i].nodeType !== 1) continue;
-			if(childNodes[i] === clickedElement)
+			if(childNodes[i].nodeType!==1) continue;
+			if(childNodes[i] == clickedElement)
 			{
 				index = nodeIndex;
 				break;
 			}
 			nodeIndex++;
 		}
-		if(index >= 0) openPhotoSwipe(index, clickedGallery);
+		if(index>=0) openPhotoSwipe(index, clickedGallery);
 		return false;
 	};
 	
@@ -210,7 +210,7 @@ var initPhotoSwipeFromDOM = function()
 			{
 				for(var j=0; j<items.length; j++)
 				{
-					if(items[j].pid == index)
+					if(items[j].pid==index)
 					{
 						options.index = j;
 						break;

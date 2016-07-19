@@ -5,7 +5,7 @@
 // Gallery plugin
 class YellowGallery
 {
-	const Version = "0.6.4";
+	const VERSION = "0.6.4";
 	var $yellow;			//access to API
 
 	// Handle initialisation
@@ -19,7 +19,7 @@ class YellowGallery
 	// Handle page content parsing of custom block
 	function onParseContentBlock($page, $name, $text, $shortcut)
 	{
-		$output = NULL;
+		$output = null;
 		if($name=="gallery" && $shortcut)
 		{
 			list($pattern, $style, $size) = $this->yellow->toolbox->getTextArgs($text);
@@ -36,7 +36,7 @@ class YellowGallery
 			{
 				$page->setLastModified($files->getModified());
 				$output = "<div class=\"".htmlspecialchars($style)."\" data-fullscreenel=\"false\" data-shareel=\"false\"";
-				if(substru($size, -1, 1) != "%") $output .= " data-thumbsquare=\"true\"";
+				if(substru($size, -1, 1)!="%") $output .= " data-thumbsquare=\"true\"";
 				$output .= ">\n";
 				foreach($files as $file)
 				{
@@ -59,8 +59,8 @@ class YellowGallery
 	// Handle page extra HTML data
 	function onExtra($name)
 	{
-		$output = NULL;
-		if($name == "header")
+		$output = null;
+		if($name=="header")
 		{
 			$photoswipeCdn = $this->yellow->config->get("galleryPhotoswipeCdn");
 			$pluginLocation = $this->yellow->config->get("serverBase").$this->yellow->config->get("pluginLocation");
@@ -74,5 +74,5 @@ class YellowGallery
 	}
 }
 
-$yellow->plugins->register("gallery", "YellowGallery", YellowGallery::Version);
+$yellow->plugins->register("gallery", "YellowGallery", YellowGallery::VERSION);
 ?>

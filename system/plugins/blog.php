@@ -5,7 +5,7 @@
 // Blog plugin
 class YellowBlog
 {
-	const Version = "0.6.6";
+	const VERSION = "0.6.6";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -25,7 +25,7 @@ class YellowBlog
 			$location = $this->yellow->config->get("blogLocation");
 			if(!empty($location) && substru($page->location, 0, strlenu($location))==$location)
 			{
-				if($page->get("template") == $this->yellow->config->get("template")) $page->set("template", "blog");
+				if($page->get("template")==$this->yellow->config->get("template")) $page->set("template", "blog");
 			}
 		}
 	}
@@ -33,7 +33,7 @@ class YellowBlog
 	// Handle page content parsing of custom block
 	function onParseContentBlock($page, $name, $text, $shortcut)
 	{
-		$output = NULL;
+		$output = null;
 		if($name=="blogarchive" && $shortcut)
 		{
 			list($location) = $this->yellow->toolbox->getTextArgs($text);
@@ -139,7 +139,7 @@ class YellowBlog
 	// Handle page parsing
 	function onParsePage()
 	{
-		if($this->yellow->page->get("template") == "blogpages")
+		if($this->yellow->page->get("template")=="blogpages")
 		{
 			$pages = $this->yellow->page->getChildren(!$this->yellow->page->isVisible());
 			$pagesFilter = array();
@@ -171,7 +171,7 @@ class YellowBlog
 			$this->yellow->page->setLastModified($pages->getModified());
 			$this->yellow->page->setHeader("Cache-Control", "max-age=60");
 		}
-		if($this->yellow->page->get("template") == "blog")
+		if($this->yellow->page->get("template")=="blog")
 		{
 			$location = $this->yellow->config->get("blogLocation");
 			if(!empty($location))
@@ -186,5 +186,5 @@ class YellowBlog
 	}
 }
 
-$yellow->plugins->register("blog", "YellowBlog", YellowBlog::Version);
+$yellow->plugins->register("blog", "YellowBlog", YellowBlog::VERSION);
 ?>

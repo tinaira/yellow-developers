@@ -5,7 +5,7 @@
 // Slideshare plugin
 class YellowSlideshare
 {
-	const Version = "0.6.1";
+	const VERSION = "0.6.1";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -18,7 +18,7 @@ class YellowSlideshare
 	// Handle page content parsing of custom block
 	function onParseContentBlock($page, $name, $text, $shortcut)
 	{
-		$output = NULL;
+		$output = null;
 		if($name=="slideshare" && $shortcut)
 		{
 			list($id, $style, $width, $height) = $this->yellow->toolbox->getTextArgs($text);
@@ -32,5 +32,5 @@ class YellowSlideshare
 	}
 }
 
-$yellow->plugins->register("slideshare", "YellowSlideshare", YellowSlideshare::Version);
+$yellow->plugins->register("slideshare", "YellowSlideshare", YellowSlideshare::VERSION);
 ?>
