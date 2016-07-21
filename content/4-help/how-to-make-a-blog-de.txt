@@ -7,15 +7,15 @@ Lerne wie man ein Blog mit Yellow erstellt.
 
 ## Blog installieren
 
-1. [Yellow installieren](how-to-make-a-website-de).
-2. [Blog-Plugin installieren](https://github.com/datenstrom/yellow-plugins/tree/master/blog).
+1. [Yellow herunterladen und installieren](how-to-make-a-website-de).
+2. [Blog-Plugin herunterladen und installieren](https://github.com/datenstrom/yellow-plugins/tree/master/blog).
 3. Öffne deine Webseite in einem Webbrowser.
 
 Dein Blog ist sofort erreichbar unter `http://website/blog/`. Um das Blog auf der Startseite anzuzeigen, gehe in dein `content`-Verzeichnis, benenne das Blogverzeichnis zu "1-blog" um und lösche "1-home". Das ist nur ein Beispiel um loszulegen, verändere alles so wie du willst.
 
 Die zentrale Konfigurationsdatei ist `system/config/config.ini`. Dort kannst du die Standardeinstellungen festlegen. Die individuellen Einstellungen lassen sich oben auf jeder Seite festlegen. Es gibt [Plugins](/plugins/) und [Themes](/themes/) zum Herunterladen.
 
-Wenn dein Blog nicht funktioniert, überprüfe bitte die [Webserver-Konfiguration](web-server-configuration-de).
+Wenn dein Blog nicht funktioniert, überprüfe bitte die [Webservereinstellungen](web-server-configuration-de).
  
 ## Blogeinträge schreiben
 

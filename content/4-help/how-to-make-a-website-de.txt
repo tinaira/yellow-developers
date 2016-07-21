@@ -17,7 +17,7 @@ Deine Webseite ist sofort erreichbar. Die Installation von Yellow kommt mit zwei
 
 Die zentrale Konfigurationsdatei ist `system/config/config.ini`. Dort kannst du die Standardeinstellungen festlegen. Die individuellen Einstellungen lassen sich oben auf jeder Seite festlegen. Es gibt [Plugins](/plugins/) und [Themes](/themes/) zum Herunterladen.
 
-Wenn deine Webseite nicht funktioniert, überprüfe bitte die [Webserver-Konfiguration](web-server-configuration-de).
+Wenn deine Webseite nicht funktioniert, überprüfe bitte die [Webservereinstellungen](web-server-configuration-de).
 
 ## Webseiten schreiben
 
