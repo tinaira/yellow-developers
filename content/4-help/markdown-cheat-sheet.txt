@@ -38,7 +38,7 @@ Making quotes:
 Making links:
 
     [Link to page](/help/how-to-make-website) 
-    [Link to website](http://datenstrom.se)  
+    [Link to website](https://datenstrom.se)  
     https://en.wikipedia.org/wiki/Markdown
 
 Adding an image:

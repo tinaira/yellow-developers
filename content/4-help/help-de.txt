@@ -3,7 +3,7 @@ Title: Yellow-Hilfe
 Sidebar: sidebar-de
 Language: de
 ---
-[[image yellow-photo.jpg]](http://datenstrom.se/yellow/yellow-deutsch)
+[[image yellow-photo.jpg]](https://datenstrom.se/de/yellow/)
 
 Yellow ist für Menschen die Webseiten machen. [Support finden](support-de).
 

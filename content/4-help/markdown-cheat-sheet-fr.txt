@@ -40,7 +40,7 @@ Créer des citations:
 Créer des liens:
 
     [Lien vers la page](/help/how-to-make-website) 
-    [Lien vers le site](http://datenstrom.se)  
+    [Lien vers le site](https://datenstrom.se)  
     https://fr.wikipedia.org/wiki/Markdown
 
 Ajout d'image:

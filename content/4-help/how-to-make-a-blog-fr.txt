@@ -13,7 +13,7 @@ Apprenez à faire un blog avec Yellow.
 2. [Download and install blog plugin](https://github.com/datenstrom/yellow-plugins/tree/master/blog).
 3. Open your website in a web browser.
 
-Your blog is immediately available as `http://website/blog/`. To make the blog your home page, go to your `content` folder, rename the blog folder to '1-blog' and delete '1-home'. This is just an example to get you started, change everything as you like.
+Your blog is immediately available. To show the blog on your home page, go to your `content` folder, rename the blog folder to '1-blog' and delete '1-home'. This is just an example to get you started, change everything as you like.
 
 Le fichier de configuration principal est `system/config/config.ini`. Vous pouvez y définir les paramètres par défaut de votre site. Les paramètres individuels peuvent être définis au haut de chaque page. Il existe des [plugins](/plugins/) et des [thèmes](/themes/) à télécharger.
 

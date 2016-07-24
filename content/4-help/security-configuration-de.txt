@@ -7,21 +7,21 @@ Wie man eine Webseite mit besserer Sicherheit konfiguriert.
 
 ## Sicherer Server
 
-Überprüfe ob dein Webserver [HTTPS](https://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol_Secure) unterstützt und ob die Internetverbindung verschlüsselt ist. Am Besten ist es wenn deine Webseite nur über HTTPS erreichbar ist. Damit wird dein Benutzerkonto vor Diebstahl geschützt, jedoch wird es nicht von allen Webhostern unterstützt.
+Überprüfe ob dein Webserver [HTTPS](https://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol_Secure) unterstützt und ob die Internetverbindung verschlüsselt ist. Am Besten ist es wenn deine Webseite nur über HTTPS erreichbar ist. Das dient dem Datenschutz, jedoch wird es nicht von allen Webhostern unterstützt.
 
-Du brauchst einen Webserver mit SSL/TLS und gültigem Zertifikat.
+Du brauchst einen Webserver mit TLS und gültigem Zertifikat.
 
 ## Benutzerbeschränkungen
 
-Falls mehrere Person eine Webseite bearbeiten, beschränke [Benutzerkontos](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface) und nur Teile der Webseite können verändert werden. Damit wird deine Webseite vor Veränderungen im Webbrowser geschützt, jedoch werden Änderungen im Dateisystem nicht verhindert.
+Falls mehrere Person eine Webseite bearbeiten, beschränke [Benutzerkontos](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface) und nur Teile der Webseite können verändert werden. Damit wird deine Webseite vor Veränderungen im Webbrowser geschützt, jedoch werden Änderungen via FTP und SSH nicht verhindert
 
 Alle Benutzer sind in der Datei `system/config/user.ini` gespeichert. Ein Benutzerkonto besteht aus Email, verschlüsseltem Kennwort, weiteren Daten und am Ende die [Startseite](https://github.com/datenstrom/yellow-developers/blob/master/system/config/user.ini). Benutzer können keine Seiten ausserhalb ihrer Startseite verändern.
 
-Du kannst [Benutzerbeschränkungen testen](http://developers.datenstrom.se), einloggen mit `guest@guest.com` + `guest`.
+Du kannst [Benutzerbeschränkungen testen](https://developers.datenstrom.se), einloggen mit `guest@guest.com` + `guest`.
 
 ## Abgesicherter Modus
 
-Falls mehrere Person eine Webseite bearbeiten, aktiviere den abgesicherten Modus und nur [Markdown](markdown-cheat-sheet-de) ist möglich. Damit wird deine Webseite vor unerwünschten Inhalten geschützt, jedoch wird gleichzeitig auch HTML and JavaScript im Seiteninhalt deaktiviert.
+Falls mehrere Person eine Webseite bearbeiten, aktiviere den abgesicherten Modus und nur [Markdown](markdown-cheat-sheet-de) ist möglich. Damit wird deine Webseite vor unerwünschten Inhalten geschützt, jedoch wird gleichzeitig auch HTML und JavaScript im Seiteninhalt deaktiviert.
 
 Öffne die Datei `system/config/config.ini` und ändere `ParserSafeMode: 1`.
 

@@ -55,6 +55,8 @@ Available plugins:
   Table of contents.
 * [Traffic](https://github.com/datenstrom/yellow-plugins/tree/master/traffic): 
   Create traffic analytics from web server logfiles.
+* [Update](https://github.com/datenstrom/yellow-plugins/tree/master/update): 
+  Update your website.
 * [Vimeo](https://github.com/datenstrom/yellow-plugins/tree/master/vimeo): 
   Embed Vimeo videos.
 * [Webinterface](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface): 

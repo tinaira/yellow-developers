@@ -35,8 +35,8 @@ Images de différentes tailles:
 
 Vous pouvez utiliser le [plugin Youtube](https://github.com/datenstrom/yellow-plugins/tree/master/youtube) et le [plugin Vimeo](https://github.com/datenstrom/yellow-plugins/tree/master/vimeo) pour intégrer facilement des vidéos. Il suffit de noter le numéro à la fin de l'url de la vidéo.
 
-`[youtube fhs55HEl-Gc]` affiche `http://www.youtube.com/watch?v=fhs55HEl-Gc`  
-`[vimeo 13387502]` affiche `http://vimeo.com/13387502`  
+`[youtube fhs55HEl-Gc]` affiche `https://www.youtube.com/watch?v=fhs55HEl-Gc`  
+`[vimeo 13387502]` affiche `https://vimeo.com/13387502`  
 
 Insérer une vidéo Youtube:
 

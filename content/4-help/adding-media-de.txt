@@ -35,8 +35,8 @@ Bilder in unterschiedliche Größen:
 
 Du kannst das [Youtube-Plugin](https://github.com/datenstrom/yellow-plugins/tree/master/youtube) und [Vimeo-Plugin](https://github.com/datenstrom/yellow-plugins/tree/master/vimeo) benutzen um Videos einzubinden.
 
-`[youtube fhs55HEl-Gc]` zeigt `http://www.youtube.com/watch?v=fhs55HEl-Gc`  
-`[vimeo 13387502]` zeigt `http://vimeo.com/13387502`  
+`[youtube fhs55HEl-Gc]` zeigt `https://www.youtube.com/watch?v=fhs55HEl-Gc`  
+`[vimeo 13387502]` zeigt `https://vimeo.com/13387502`  
 
 Ein Youtube-Video einbinden:
 

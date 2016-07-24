@@ -35,8 +35,8 @@ Images in different sizes:
 
 You can use the [Youtube plugin](https://github.com/datenstrom/yellow-plugins/tree/master/youtube) and [Vimeo plugin](https://github.com/datenstrom/yellow-plugins/tree/master/vimeo) to embed videos.
 
-`[youtube fhs55HEl-Gc]` shows `http://www.youtube.com/watch?v=fhs55HEl-Gc`  
-`[vimeo 13387502]` shows `http://vimeo.com/13387502`  
+`[youtube fhs55HEl-Gc]` shows `https://www.youtube.com/watch?v=fhs55HEl-Gc`  
+`[vimeo 13387502]` shows `https://vimeo.com/13387502`  
 
 Embedding a Youtube video:
 

@@ -7,17 +7,17 @@ Here's how to set up a website with better security.
 
 ## Secure server
 
-Check if your web server supports [HTTPS](https://en.wikipedia.org/wiki/HTTPS) and if the Internet connection is encrypted. It's best if your website is only available via HTTPS. This protects your user account from being stolen, but it's not supported by every web hosting provider.
+Check if your web server supports [HTTPS](https://en.wikipedia.org/wiki/HTTPS) and if the Internet connection is encrypted. It's best if your website is only available via HTTPS. This is for data privacy protection, but it's not supported by every web hosting provider.
 
-You need a web server with SSL/TLS and valid certificate.
+You need a web server with TLS and valid certificate.
 
 ## User restrictions
 
-If you have more than one person editing a website, restrict [user accounts](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface) and only parts of the website can be changed. This protects your website from being changed in a web browser, but it doesn't prevent changes in the file system.  
+If you have more than one person editing a website, restrict [user accounts](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface) and only parts of the website can be changed. This protects your website from being changed in a web browser, but it doesn't prevent changes via FTP and SSH.  
 
 All users are stored in file `system/config/user.ini`. A user account consists of email, encrypted password, further information and at the end is the user's [home page](https://github.com/datenstrom/yellow-developers/blob/master/system/config/user.ini). Users can not change pages outside their home page.
 
-You can [test user restrictions](http://developers.datenstrom.se), log in with `guest@guest.com` + `guest`.
+You can [test user restrictions](https://developers.datenstrom.se), log in with `guest@guest.com` + `guest`.
 
 ## Safe mode
 

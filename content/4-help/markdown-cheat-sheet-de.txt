@@ -38,7 +38,7 @@ Zitate erstellen:
 Links erstellen:
 
     [Link zu Seite](/help/how-to-make-website) 
-    [Link zu Webseite](http://datenstrom.se)  
+    [Link zu Webseite](https://datenstrom.se)  
     https://de.wikipedia.org/wiki/Markdown
 
 Ein Bild hinzufügen:

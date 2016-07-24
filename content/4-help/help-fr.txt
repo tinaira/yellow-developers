@@ -3,7 +3,7 @@ Title: Yellow aide
 Sidebar: sidebar-fr
 Language: fr
 ---
-[[image yellow-photo.jpg]](http://datenstrom.se/yellow/yellow-français)
+[[image yellow-photo.jpg]](https://datenstrom.se/fr/yellow/)
 
 Yellow est fait pour les gens qui font des sites web. [Obtenir de l'aide](support-fr).
 

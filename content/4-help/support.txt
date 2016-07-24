@@ -9,7 +9,7 @@ Connect with other Yellow users and find professional help.
 
 * [Report problems and suggestions](https://github.com/datenstrom/yellow/issues)
 * [Talk with the developers](https://gitter.im/datenstrom/yellow)
-* [Contact a human](http://datenstrom.se/contact/)
+* [Contact a human](https://datenstrom.se/contact/)
 
 ## Where to find us
 
@@ -22,7 +22,7 @@ Connect with other Yellow users and find professional help.
 * [Review new suggestions](https://github.com/datenstrom/yellow/issues?q=is%3Aopen+is%3Aissue+label%3Asuggestion)
 * [Create a translation](https://github.com/datenstrom/yellow-plugins/tree/master/language)
 * [Create plugins and themes](https://github.com/datenstrom)
-* [Show what you have made](http://datenstrom.se/ideas/)
+* [Show what you have made](https://datenstrom.se/ideas/)
 
 ## Thank you
 

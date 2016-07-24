@@ -10,7 +10,7 @@ Tausche dich mit anderen Yellow-Benutzern aus und finde professionelle Hilfe.
 
 * [Melde Probleme und Vorschläge](https://github.com/datenstrom/yellow/issues)
 * [Rede mit den Entwicklern](https://gitter.im/datenstrom/yellow)
-* [Frage einen Menschen](http://datenstrom.se/de/contact/)
+* [Frage einen Menschen](https://datenstrom.se/de/contact/)
 
 ## Folge uns
 
@@ -23,7 +23,7 @@ Tausche dich mit anderen Yellow-Benutzern aus und finde professionelle Hilfe.
 * [Bewerte neue Vorschläge](https://github.com/datenstrom/yellow/issues?q=is%3Aopen+is%3Aissue+label%3Asuggestion)
 * [Erstelle eine Übersetzung](https://github.com/datenstrom/yellow-plugins/tree/master/language)
 * [Erstelle Plugins und Themes](https://github.com/datenstrom)
-* [Zeige was du gemacht hast](http://datenstrom.se/de/ideas/)
+* [Zeige was du gemacht hast](https://datenstrom.se/de/ideas/)
 
 ## Danke
 
