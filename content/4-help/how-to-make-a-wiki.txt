@@ -13,9 +13,7 @@ Learn how to make a wiki with Yellow.
 
 Your wiki is immediately available. To show the wiki on your home page, go to your `content` folder, rename the wiki folder to '1-wiki' and delete '1-home'. This is just an example to get you started, change everything as you like.
 
-The main configuration file is `system/config/config.ini`. You can define the default settings of your website here. Individual settings can be defined at the top of each page. There are [plugins](/plugins/) and [themes](/themes/) you can download.
-
-When your wiki doesn't work, please check the [web server configuration](web-server-configuration).
+When there are problems, please check [web server configuration](web-server-configuration) and [system settings](adjusting-system#system-settings).
 
 ## Writing wiki pages
 

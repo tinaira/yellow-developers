@@ -9,7 +9,7 @@ All settings are located in the `system` folder. You can adjust your website her
 
 The `config` folder contains configuration files. The `plugins` folder contains the Yellow software. The `themes` folder is for the visual design of your website. Changes in these folders affect the entire website.
 
-## Settings
+## System settings
 
 The main configuration file is `system/config/config.ini`. Here's an example:
 
@@ -21,7 +21,7 @@ The main configuration file is `system/config/config.ini`. Here's an example:
 
 You can define the default settings of your website here. Individual [settings](markdown-cheat-sheet#settings) can be defined at the top of each page. For a new installation you should set `Sitename`, `Author` and `Email`.
 
-When something goes wrong an error page is shown. When a web browser requests a file that the web server cannot find your website will show a “File not found” page. The file `system/config/page-error-404.txt` defines how a missing file looks like.
+When there are problems an error page is shown. When a web browser requests a file that the web server cannot find your website will show a “File not found” page. The file `system/config/page-error-404.txt` defines how a missing file looks like.
 
 ## Plugins and themes
 

@@ -15,9 +15,7 @@ Apprenez à faire un blog avec Yellow.
 
 Your blog is immediately available. To show the blog on your home page, go to your `content` folder, rename the blog folder to '1-blog' and delete '1-home'. This is just an example to get you started, change everything as you like.
 
-Le fichier de configuration principal est `system/config/config.ini`. Vous pouvez y définir les paramètres par défaut de votre site. Les paramètres individuels peuvent être définis au haut de chaque page. Il existe des [plugins](/plugins/) et des [thèmes](/themes/) à télécharger.
-
-Lorsque votre blog ne fonctionne pas, s'il vous plaît vérifier la [configuration du serveur web](web-server-configuration-fr).
+S'il y a des problèmes, vérifiez la [configuration du serveur web](web-server-configuration-fr) et les [paramètres du système](adjusting-system-fr#paramètres-du-système).
 
 ## Écrire une page de blog
 

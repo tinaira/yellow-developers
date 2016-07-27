@@ -21,12 +21,12 @@ Tausche dich mit anderen Yellow-Benutzern aus und finde professionelle Hilfe.
 ## Mach mit
 
 * [Bewerte neue Vorschläge](https://github.com/datenstrom/yellow/issues?q=is%3Aopen+is%3Aissue+label%3Asuggestion)
-* [Erstelle eine Übersetzung](https://github.com/datenstrom/yellow-plugins/tree/master/language)
+* [Erstelle eine neue Übersetzung](https://github.com/datenstrom/yellow-plugins/tree/master/language)
 * [Erstelle Plugins und Themes](https://github.com/datenstrom)
 * [Zeige was du gemacht hast](https://datenstrom.se/de/ideas/)
 
 ## Danke
 
-Yellow ist kostenlos und Open-Source, erstellt von Menschen die Yellow benutzen. Im Herzen von Open-Source ist die Idee, dass wir zusammen durch gemeinsamen Code bessere Software machen können. Mitmachen und Vorschläge sind sehr willkommen. Lizensiert unter [GPLv2](http://opensource.org/licenses/GPL-2.0).
+Yellow ist kostenlos und Open-Source, erstellt von Menschen die Yellow benutzen. Im Herzen von Open-Source ist die Idee, dass wir zusammen durch gemeinsamen Code bessere Software machen können. Mitmachen und Vorschläge sind sehr willkommen. Lizensiert unter [GPLv2](https://opensource.org/licenses/GPL-2.0).
 
-Großen Dank an [Hersteller](https://github.com/orgs/datenstrom/people) und [Mitwirkende](https://github.com/datenstrom/yellow-plugins/graphs/contributors).
+Großen Dank an [Mitglieder](https://github.com/orgs/datenstrom/people) und [Mitwirkende](https://github.com/datenstrom/yellow-plugins/graphs/contributors).

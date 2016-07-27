@@ -13,9 +13,7 @@ Lerne wie man ein Blog mit Yellow erstellt.
 
 Dein Blog ist sofort erreichbar. Um das Blog auf deiner Startseite anzuzeigen, gehe in dein `content`-Verzeichnis, benenne das Blogverzeichnis zu "1-blog" um und lösche "1-home". Das ist nur ein Beispiel um loszulegen, verändere alles so wie du willst.
 
-Die zentrale Konfigurationsdatei ist `system/config/config.ini`. Dort kannst du die Standardeinstellungen festlegen. Die individuellen Einstellungen lassen sich oben auf jeder Seite festlegen. Es gibt [Plugins](/plugins/) und [Themes](/themes/) zum Herunterladen.
-
-Wenn dein Blog nicht funktioniert, überprüfe bitte die [Webservereinstellungen](web-server-configuration-de).
+Falls Probleme auftreten, überprüfe bitte [Webservereinstellungen](web-server-configuration-de) und [Systemeinstellungen](adjusting-system-de#systemeinstellungen).
  
 ## Blogeinträge schreiben
 

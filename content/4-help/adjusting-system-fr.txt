@@ -9,7 +9,7 @@ Tout les paramètres se trouvent dans le dossier `system`. Ici vous pouvez faire
 
 Le dossier `config` contient les fichiers de configurations. Le dossier `plugins` contient l'application Yellow. Le dossier `themes` concerne l'aspect visuel de votre site web. Apporter des changements dans ces dossiers affectera entièrement votre site web.
 
-## Paramètres
+## Paramètres du système
 
 Le fichier de configuration principal est `system/config/config.ini`. Voici un exemple:
 

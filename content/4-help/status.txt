@@ -4,7 +4,7 @@ Sidebar: none
 Language: en
 Information: Please do not translate this file, English only
 ---
-This website is using [yellow]. [See what's new](https://github.com/datenstrom/yellow/releases).
+This website is made with [yellow]. [See what's new](https://github.com/datenstrom/yellow/releases).
 
 ||||
 |---|---|---|

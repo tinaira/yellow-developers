@@ -9,7 +9,7 @@ Alle Einstellungen befinden sich im `system`-Verzeichnis. Hier machst du Anpassu
 
 Das `config`-Verzeichnis enthält Konfigurationsdateien. Das `plugins`-Verzeichnis enthält die Yellow-Software. Das `themes`-Verzeichnis ist für das Aussehen der Webseite zuständig. Änderungen in diesen Verzeichnissen wirkt sich auf die gesamte Webseite aus.
 
-## Einstellungen
+## Systemeinstellungen
 
 Die zentrale Konfigurationsdatei ist `system/config/config.ini`. Hier ist ein Beispiel:
 

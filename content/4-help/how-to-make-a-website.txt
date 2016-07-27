@@ -13,11 +13,9 @@ Learn how to make a website with Yellow.
 2. Copy all files to your web hosting.
 3. Open your website in a web browser.
 
-Your website is immediately available. The installation of Yellow comes with two pages, 'Home' and 'About'. This is just an example to get you started, change everything as you like. You can make a website by adding more files and folders.
+Your website is immediately available. The installation of Yellow comes with two pages, 'Home' and 'About'. This is just an example to get you started, change everything as you like. You can make a website by adding more files and folders. 
 
-The main configuration file is `system/config/config.ini`. You can define the default settings of your website here. Individual settings can be defined at the top of each page. There are [plugins](/plugins/) and [themes](/themes/) you can download.
-
-When your website doesn't work, please check the [web server configuration](web-server-configuration).
+When there are problems, please check [web server configuration](web-server-configuration) and [system settings](adjusting-system#system-settings).
 
 ## Writing web pages
 

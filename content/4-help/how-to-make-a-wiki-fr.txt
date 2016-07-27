@@ -15,9 +15,8 @@ Apprenez à faire un wiki avec Yellow.
 
 Your wiki is immediately available. To show the wiki on your home page, go to your `content` folder, rename the wiki folder to '1-wiki' and delete '1-home'. This is just an example to get you started, change everything as you like.
 
-Le fichier de configuration principal est `system/config/config.ini`. Vous pouvez y définir les paramètres par défaut de votre site. Les paramètres individuels peuvent être définis au haut de chaque page. Il existe des [plugins](/plugins/) et des [thèmes](/themes/) à télécharger.
+S'il y a des problèmes, vérifiez la [configuration du serveur web](web-server-configuration-fr) et les [paramètres du système](adjusting-system-fr#paramètres-du-système).
 
-Lorsque votre wiki ne fonctionne pas, s'il vous plaît vérifier la [configuration du serveur web](web-server-configuration-fr).
 ## Écrire une page de wiki
 
 Jetons un oeil dans le dossier `content`, où se trouve le dossier de votre wiki avec toutes vos pages de wiki. Ouvrez le fichier `wiki-page.txt`. Vous y verrez les paramètres et le texte de la page. Vous pouvez changer le titre de la page `Title` ainsi que d'autres [paramètres](markdown-cheat-sheet-fr#paramètres) en haut de la page. Voici un exemple:

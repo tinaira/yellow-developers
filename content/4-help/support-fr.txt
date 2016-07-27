@@ -21,13 +21,13 @@ Entrez en contact avec d'autres utilisateurs de Yellow et trouvez de l'aide prof
 ## Comment contribuer
 
 * [Examiner les nouvelles suggestions](https://github.com/datenstrom/yellow/issues?q=is%3Aopen+is%3Aissue+label%3Asuggestion)
-* [Créer une traduction](https://github.com/datenstrom/yellow-plugins/tree/master/language)
+* [Créer une nouvelle traduction](https://github.com/datenstrom/yellow-plugins/tree/master/language)
 * [Créer des plugins et des thèmes](https://github.com/datenstrom)
 * [Montrez ce que vous avez fait avec Yellow](https://datenstrom.se/fr/ideas/)
 * [Aidez-nous avec la traduction française (TODO)](https://developers.datenstrom.se/search/query:TODO/)
 
 ## Remerciements
 
-Yellow est libre et open source, créé par les gens qui utilisent Yellow. Au cœur de l'open source se trouve l'idée qu'en partageant le code, nous pouvons faire de meilleurs logiciels ensemble. Contributions et commentaires sont les bienvenus. Sous licence [GPLv2](http://opensource.org/licenses/GPL-2.0).
+Yellow est libre et open source, créé par les gens qui utilisent Yellow. Au cœur de l'open source se trouve l'idée qu'en partageant le code, nous pouvons faire de meilleurs logiciels ensemble. Contributions et commentaires sont les bienvenus. Sous licence [GPLv2](https://opensource.org/licenses/GPL-2.0).
 
-Grand merci aux [fabricants](https://github.com/orgs/datenstrom/people) et [contributeurs](https://github.com/datenstrom/yellow-plugins/graphs/contributors).
+Grand merci aux [membres](https://github.com/orgs/datenstrom/people) et [contributeurs](https://github.com/datenstrom/yellow-plugins/graphs/contributors).
