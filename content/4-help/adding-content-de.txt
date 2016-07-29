@@ -7,7 +7,7 @@ Alle Inhalte befinden sich im `content`-Verzeichnis. Hier aktualisierst du deine
 
 [image screenshot-content.png Screenshot]
 
-Die Installation von Yellow kommt mit zwei Seiten. Das ist nur ein Beispiel um loszulegen. Verändere alles so wie du willst. Alle `content`-Verzeichnisse stehen auf deiner Webseite zur Verfügung. In jedem Verzeichnis gibt es eine Datei mit Namen `page.txt` oder dem Namen des Verzeichnisses. Man kann auch weitere Textdateien hinzufügen. Im Prinzip ist das, was du im Dateimanager siehst, die Webseite die du bekommst.
+Der Screenshot zeigt Yellow nach der Installation. Das ist nur ein Beispiel um loszulegen. Verändere alles so wie du willst. Alle `content`-Verzeichnisse stehen auf deiner Webseite zur Verfügung. In jedem Verzeichnis gibt es eine Datei mit Namen `page.txt` oder dem Namen des Verzeichnisses. Man kann auch weitere Dateien hinzufügen. Im Prinzip ist das, was du im Dateimanager siehst, die Webseite die du bekommst.
 
 ## Dateien und Verzeichnisse
 
