@@ -13,11 +13,11 @@ The screenshot shows Yellow after the installation. This is just an example to g
 
 The navigation is automatically created from your `content` folders. Only folders with a prefix are shown in the navigation. Folders with prefix are for visible pages, folders without prefix are for invisible pages. All files and folders can have a prefix:
 
-1. Folders can have a numerical prefix, e.g. `1-home` `2-about`
+1. Folders can have a numerical prefix, e.g. `1-home` `9-about`
 2. Files can have a date prefix for sorting, e.g. `2013-04-07-blog-example.txt`
 3. No prefix means there is no special order, e.g. `wiki-page.txt`
 
-Prefix and suffix are removed from the location, so that it looks better. For example the folder `content/2-about/` is available on your website as `http://website/about/`. The file `content/2-about/contact.txt` becomes `http://website/about/contact`. 
+Prefix and suffix are removed from the location, so that it looks better. For example the folder `content/9-about/` is available on your website as `http://website/about/`. The file `content/9-about/contact.txt` becomes `http://website/about/contact`. 
 
 ## Text files
 

@@ -11,3 +11,5 @@ Yellow is for people who make websites. Create small web pages, blogs and wikis.
 * Fun to use
 * Just files and folders
 * Installed in a few seconds
+
+Here's a [wiki example](wiki-example).

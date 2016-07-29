@@ -9,11 +9,11 @@ Apprenez à faire un blog avec Yellow.
 
 ## Installer un blog
 
-1. [Download and install Yellow](how-to-make-a-website-fr).
-2. [Download and install blog plugin](https://github.com/datenstrom/yellow-plugins/tree/master/blog).
-3. Open your website in a web browser.
+1. [Download and unzip Yellow](https://github.com/datenstrom/yellow/archive/master.zip).
+2. Copy all files to your web hosting.
+3. Open your website in a web browser and select 'Blog'.
 
-Your blog is immediately available. To show the blog on your home page, go to your `content` folder, rename the blog folder to '1-blog' and delete '1-home'. This is just an example to get you started, change everything as you like.
+Your blog is immediately available. To show the blog on your home page, go to your `content` folder and delete the `1-home` folder. This is just an example to get you started, change everything as you like.
 
 S'il y a des problèmes, vérifiez la [configuration du serveur web](web-server-configuration-fr) et les [paramètres du système](adjusting-system-fr#paramètres-du-système).
 

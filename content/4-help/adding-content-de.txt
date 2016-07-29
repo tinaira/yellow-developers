@@ -13,11 +13,11 @@ Der Screenshot zeigt Yellow nach der Installation. Das ist nur ein Beispiel um l
 
 Die Navigation wird automatisch aus deinen `content`-Verzeichnissen erstellt. Es werden nur Verzeichnisse mit einem Präfix in der Navigation angezeigt. Verzeichnisse mit Präfix sind für sichtbare Seiten, Verzeichnisse ohne Präfix sind für unsichtbare Seiten. Alle Dateien und Verzeichnisse können ein Präfix benutzen:
 
-1. Verzeichnisse können ein numerisches Präfix haben, z.B. `1-home` oder `2-about`
+1. Verzeichnisse können ein numerisches Präfix haben, z.B. `1-home` oder `9-about`
 2. Dateien können ein Datumspräfix haben, z.B. `2013-04-07-blog-example.txt`
 3. Ohne Präfix gibt es keine besondere Reihenfolge, z.B. `wiki-page.txt`
 
-Präfixe und Suffixe werden aus der Adresse entfernt, damit es besser aussieht. Zum Beispiel ist das Verzeichnis `content/2-about/` vorhanden als `http://website/about/`. Die Datei `content/2-about/contact.txt` wird zu `http://website/about/contact`.
+Präfixe und Suffixe werden aus der Adresse entfernt, damit es besser aussieht. Zum Beispiel ist das Verzeichnis `content/9-about/` vorhanden als `http://website/about/`. Die Datei `content/9-about/contact.txt` wird zu `http://website/about/contact`.
 
 ## Textdateien
 

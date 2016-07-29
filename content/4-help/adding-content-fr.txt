@@ -13,11 +13,11 @@ La capture d'écran montre Yellow après l'installation. Elles sont juste un exe
 
 La navigation est automatiquement créée à partir de vos dossiers présents dans le dossier `content`. Seuls les dossiers avec un préfixe sont présentés dans la navigation. Les dossiers avec un préfixe sont pour les pages visibles, les dossiers sans préfixes sont pour les pages invisibles. Tous les fichiers et les dossiers peuvent avoir un préfixe:
 
-1. Avec un préfixe numérique, p. ex. `1-home` `2-about`
+1. Avec un préfixe numérique, p. ex. `1-home` `9-about`
 2. Avec un préfixe de la date, p. ex. `2013-04-07-blog-example.txt`
 3. L'absence de préfixe pour ne pas trier, p. ex. `wiki-page.txt`
 
-Préfixe et suffixe sont retirés de l'url afin de rendre la navigation meilleure. Par exemple le dossier `content/2-about/` est accessible à l'adresse `http://website/about/`. Le fichier `content/2-about/contact.txt` devient quand à lui `http://website/about/contact`. 
+Préfixe et suffixe sont retirés de l'url afin de rendre la navigation meilleure. Par exemple le dossier `content/9-about/` est accessible à l'adresse `http://website/about/`. Le fichier `content/9-about/contact.txt` devient quand à lui `http://website/about/contact`. 
 
 ## Fichiers texte
 
