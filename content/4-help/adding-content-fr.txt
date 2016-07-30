@@ -7,7 +7,7 @@ Les pages de votre site se trouvent dans le dossier `content`. Vous pouvez mettr
 
 [image screenshot-content.png Screenshot]
 
-La capture d'écran montre Yellow après l'installation. Elles sont juste un exemple pour commencer, vous pourrez tout changer comme vous le souhaitez. Le contenu de tout les dossiers présents dans `content` est accessible sur votre site. Chaque dossier dispose d'un fichier appelé `page.txt` ou avec le nom du dossier. Vous pouvez y ajouter d'autres fichiers. Par principe, ce que vous voyez dans votre gestionnaire de fichiers représente le site web que vous aurez.
+La capture d'écran montre Yellow après l'installation. Le contenu de tout les dossiers présents dans `content` est accessible sur votre site. Chaque dossier dispose d'un fichier appelé `page.txt` ou avec le nom du dossier. Vous pouvez y ajouter d'autres fichiers. Par principe, ce que vous voyez dans votre gestionnaire de fichiers représente le site web que vous aurez.
 
 ## Fichiers et dossiers
 
