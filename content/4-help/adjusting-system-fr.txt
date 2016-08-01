@@ -23,8 +23,12 @@ Vous pouvez y définir les paramètres par défaut pour votre site web. Les [par
 
 Quand quelque chose ne marche pas, votre site web vous indiquera l'erreur. Quand un navigateur web demande un fichier que le serveur web ne peut pas trouver, votre site web affichera "File not found". Le fichier `system/config/page-error-404.txt` définit l'aperçu d'une page introuvable.
 
+## Comptes utilisateur
+
+Vous pouvez modifier votre site web dans un navigateur web. La [interface web](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface) vous permet de créer de nouveaux comptes utilisateurs, modifier les paramètres de l'utilisateur et les mots de passe. Tous les comptes d'utilisateurs sont stockés dans le fichier `system/config/user.ini`.
+
 ## Plugins et thèmes
 
-Yellow s'installe avec un minimum de fonctionnalité. Vous avez de quoi créer un site web et quelques pages, mais vous souhaitez peut-être intégrer un moteur de recherche ou une galerie d'images ? Il existe une liste de [plugins](/plugins/) et de [thèmes](/themes/) spécifiques à télécharger.
+Yellow s'installe avec un minimum de fonctionnalité. Vous avez de quoi créer un site web et quelques pages, mais vous souhaitez peut-être intégrer un blog ou une galerie d'images ? Il existe une liste de [plugins](/plugins/) et de [thèmes](/themes/) spécifiques à télécharger.
 
 [Suivant: Configuration du serveur web →](web-server-configuration-fr)
