@@ -2,7 +2,7 @@
 <div class="footer-left">
 <a href="<?php echo $yellow->text->get("yellowUrl") ?>">Made with Yellow</a>.
 <a href="<?php echo $yellow->page->base."/help/status" ?>">Status</a>.
-<a href="<?php echo $yellow->page->get("pageEdit") ?>">Edit</a>.
+<a href="<?php echo $yellow->page->get("pageEdit") ?>">Edit</a>. &nbsp;
 </div>
 <div class="footer-right">
 <a href="https://twitter.com/datenstromse"><i class="fa fa-twitter" title="Twitter"></i></a>
