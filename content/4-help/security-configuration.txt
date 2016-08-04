@@ -13,7 +13,7 @@ You need a web server with TLS and valid certificate.
 
 ## User restrictions
 
-If you have more than one person editing a website, restrict [user accounts](adjusting-system#user-accounts) and only parts of the website can be changed. This protects your website from being changed in a web browser, but it doesn't prevent changes via FTP and SSH.  
+If you have more than one person editing a website, restrict users and only parts of the website can be changed. This protects your website from being changed in a web browser, but it doesn't prevent changes via FTP and SSH.  
 
 All user accounts are stored in file `system/config/user.ini`. A user account consists of email, encrypted password and at the end is the [user's home page](https://github.com/datenstrom/yellow-developers/blob/master/system/config/user.ini). Users can not change pages outside their home page.
 

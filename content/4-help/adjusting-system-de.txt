@@ -9,6 +9,10 @@ Alle Einstellungen befinden sich im `system`-Verzeichnis. Hier machst du Anpassu
 
 Das `config`-Verzeichnis enthält Konfigurationsdateien. Das `plugins`-Verzeichnis enthält die Yellow-Software. Das `themes`-Verzeichnis ist für das Aussehen der Webseite zuständig. Änderungen in diesen Verzeichnissen wirkt sich auf die gesamte Webseite aus.
 
+## Plugins und Themes
+
+Yellow konzentriert sich auf's Wesentliche. Du bekommst die wichtigsten Sachen um eine Webseite zu erstellen und kannst weitere Funktionen hinzufügen. Wie wäre es beispielsweise mit einem Blog oder einer Bildergalerie? Es gibt [Plugins](/plugins/) und [Themes](/themes/) zum Herunterladen.
+
 ## Systemeinstellungen
 
 Die zentrale Konfigurationsdatei ist `system/config/config.ini`. Hier ist ein Beispiel:
@@ -21,14 +25,8 @@ Die zentrale Konfigurationsdatei ist `system/config/config.ini`. Hier ist ein Be
 
 Dort kannst du die Standardeinstellungen festlegen. Die individuellen [Einstellungen](markdown-cheat-sheet-de#einstellungen) lassen sich oben auf jeder Seite festlegen. Bei einer neuen Installation sollte man `Sitename`, `Author` und `Email` anpassen.
 
-Falls Probleme auftreten wird eine Fehlerseite angezeigt. Wenn der Webbrowser eine Datei anfragt die der Webserver nicht finden kann wird "File not found" ausgegeben. Die Datei `system/config/page-error-404.txt` legt fest wie eine fehlende Datei aussieht.
+## Benutzereinstellungen
 
-## Benutzerkonten
-
-Du kannst deine Webseite im Webbrowser bearbeiten. Im [Webinterface](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface) lassen sich neue Benutzerkonten anlegen, Benutzereinstellungen und Kennwörter ändern. Alle Benutzerkonten sind in der Datei `system/config/user.ini` gespeichert. 
-
-## Plugins und Themes
-
-Yellow konzentriert sich auf's Wesentliche. Man bekommt die wichtigsten Sachen um kleine Webseiten zu erstellen und kann weitere Funktionen hinzufügen. Wie wäre es beispielsweise mit einem Blog oder einer Bildergalerie? Es gibt [Plugins](/plugins/) und [Themes](/themes/) zum Herunterladen.
+Alle Benutzerkonten sind in der Datei `system/config/user.ini` gespeichert. Im [Webinterface](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface) kannst du neue Benutzerkonten anlegen und Passwörter ändern. Der Webmaster wird in der Datei `system/config/config.ini` festgelegt, zum Beispiel `Email: anna@svensson.de`.
 
 [Weiter: Webservereinstellungen →](web-server-configuration-de)

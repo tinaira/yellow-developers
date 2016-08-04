@@ -3,6 +3,6 @@ Title: Youtube plugin
 TitlePreview: Youtube 
 ---
 Embed Youtube videos.
-[Download plugin](https://github.com/datenstrom/yellow-plugins/tree/master/youtube).
+[Install plugin](https://github.com/datenstrom/yellow-plugins/tree/master/youtube).
 
 [youtube fhs55HEl-Gc]

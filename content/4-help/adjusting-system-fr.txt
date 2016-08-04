@@ -9,6 +9,10 @@ Tout les paramètres se trouvent dans le dossier `system`. Ici vous pouvez faire
 
 Le dossier `config` contient les fichiers de configurations. Le dossier `plugins` contient l'application Yellow. Le dossier `themes` concerne l'aspect visuel de votre site web. Apporter des changements dans ces dossiers affectera entièrement votre site web.
 
+## Plugins et thèmes
+
+Yellow s'installe avec un minimum de fonctionnalité. Vous avez de quoi créer un site web et quelques pages, mais vous souhaitez peut-être intégrer un blog ou une galerie d'images ? Il existe une liste de [plugins](/plugins/) et de [thèmes](/themes/) spécifiques à télécharger.
+
 ## Paramètres du système
 
 Le fichier de configuration principal est `system/config/config.ini`. Voici un exemple:
@@ -21,14 +25,8 @@ Le fichier de configuration principal est `system/config/config.ini`. Voici un e
 
 Vous pouvez y définir les paramètres par défaut pour votre site web. Les [paramètres](markdown-cheat-sheet-fr#paramètres) individuels peuvent être définis au haut de chaque page. Lors d'une nouvelle installation, il est conseillé de changer `Sitename`, `Author` et `Email`.
 
-Quand quelque chose ne marche pas, votre site web vous indiquera l'erreur. Quand un navigateur web demande un fichier que le serveur web ne peut pas trouver, votre site web affichera "File not found". Le fichier `system/config/page-error-404.txt` définit l'aperçu d'une page introuvable.
+## Paramètres utilisateur
 
-## Comptes utilisateur
-
-Vous pouvez modifier votre site web dans un navigateur web. La [interface web](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface) vous permet de créer de nouveaux comptes utilisateurs, modifier les paramètres de l'utilisateur et les mots de passe. Tous les comptes d'utilisateurs sont stockés dans le fichier `system/config/user.ini`.
-
-## Plugins et thèmes
-
-Yellow s'installe avec un minimum de fonctionnalité. Vous avez de quoi créer un site web et quelques pages, mais vous souhaitez peut-être intégrer un blog ou une galerie d'images ? Il existe une liste de [plugins](/plugins/) et de [thèmes](/themes/) spécifiques à télécharger.
+Tous les comptes d'utilisateurs sont stockés dans le fichier `system/config/user.ini`. La [interface web](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface) vous permet de créer de nouveaux comptes d'utilisateurs. Le webmaster est défini dans le fichier `system/config/config.ini`, par exemple `Email: anna@svensson.fr`.
 
 [Suivant: Configuration du serveur web →](web-server-configuration-fr)

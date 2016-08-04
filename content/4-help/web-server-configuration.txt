@@ -92,9 +92,9 @@ This will build a completely static website in folder `/var/www/website`. A stat
 
 As an alternative to a static website you can also add individual web pages to the cache. Here's an example: `php yellow.php build cache /blog/blog-example`. To clean the cache type the following line: `php yellow.php clean cache`.
 
-## Custom 404 page
+## Error page
 
-When a web browser requests a file that the web server cannot find your website will show a “File not found”  page. The file `system/config/page-error-404.txt` defines how a missing file looks like. Here's an example:
+When there are problems an error page is shown. When a web browser requests a file that the web server cannot find your website will show a “File not found”  page. The file `system/config/page-error-404.txt` defines how a missing file looks like:
 
 ~~~~
 ---

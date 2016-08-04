@@ -65,6 +65,7 @@ Here's an example snippet file `system/themes/snippets/navigation.php`:
     <?php foreach($pages as $page): ?>
     <li><a<?php echo $page->isActive() ? " class=\"active\"" : "" ?> href="<?php echo $page->getLocation(true) ?>"><?php echo $page->getHtml("titleNavigation") ?></a></li>
     <?php endforeach ?>
+    <!-- Add more HTML code here -->
     </ul>
     </div>
     <div class="navigation-banner"></div>

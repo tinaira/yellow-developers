@@ -3,6 +3,6 @@ Title: Gallery plugin
 TitlePreview: Gallery 
 ---
 Image gallery with popup. 
-[Download plugin](https://github.com/datenstrom/yellow-plugins/tree/master/gallery).
+[Install plugin](https://github.com/datenstrom/yellow-plugins/tree/master/gallery).
 
 [gallery photo.*jpg - 20%]

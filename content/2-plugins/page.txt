@@ -3,6 +3,6 @@ Title: Yellow plugins
 TitleNavigation: Plugins
 Sidebar: none
 ---
-Great technology is simple to use and adjust. [Download all plugins](https://github.com/datenstrom/yellow-plugins).
+Great technology is simple to use and adjust. [See all plugins](https://github.com/datenstrom/yellow-plugins).
 
 [preview /plugins/ threepages 33%]

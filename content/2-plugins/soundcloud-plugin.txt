@@ -3,6 +3,6 @@ Title: Soundcloud plugin
 TitlePreview: Soundcloud 
 ---
 Embed Soundcloud audio tracks.
-[Download plugin](https://github.com/datenstrom/yellow-plugins/tree/master/soundcloud).
+[Install plugin](https://github.com/datenstrom/yellow-plugins/tree/master/soundcloud).
 
 [soundcloud 101175715]

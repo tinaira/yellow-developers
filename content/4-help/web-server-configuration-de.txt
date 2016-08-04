@@ -93,9 +93,9 @@ Das erstellt eine komplett statische Webseite im Verzeichnis `/var/www/website`.
 
 Als Alternative zu einer statischen Webseite kann man auch einzelne Webseiten zum Cache hinzufügen. Hier ist ein Beispiel: `php yellow.php build cache /blog/blog-example`. Zum Löschen des Caches gibt man die folgende Zeile ein: `php yellow.php clean`.
 
-## 404-Seite anpassen
+## Fehlerseite
 
-Wenn der Webbrowser eine Datei anfragt die der Webserver nicht finden kann wird "File not found" ausgegeben. Die Datei `system/config/page-error-404.txt` legt fest wie eine fehlende Datei aussieht. Hier ist ein Beispiel:
+Falls Probleme auftreten wird eine Fehlerseite angezeigt. Wenn der Webbrowser eine Datei anfragt die der Webserver nicht finden kann wird "File not found" ausgegeben. Die Datei `system/config/page-error-404.txt` legt fest wie eine fehlende Datei aussieht:
 
 ~~~~
 ---
