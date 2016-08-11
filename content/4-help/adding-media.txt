@@ -7,7 +7,7 @@ All media is located in the `media` folder. You can store your images and other 
 
 [image screenshot-media.png Screenshot]
 
-All `media` folders are available on your website. The `downloads` folder contains files to download. The `images` folder is the place to store your images. For a small website put all images inside this folder. You can also create additional folders and organise files as you like.
+The `media` folders are available on your website. The `downloads` folder contains files to download. The `images` folder is the place to store your images. For a small website put all images inside this folder. You can also create additional folders and organise files as you like.
 
 ## Images
 

@@ -7,7 +7,7 @@ Alle Medien befinden sich im `media`-Verzeichnis. Hier speicherst du Bilder und 
 
 [image screenshot-media.png Screenshot]
 
-Alle `media`-Verzeichnisse stehen auf deiner Webseite zur Verfügung. Das `downloads`-Verzeichnis enthält Dateien zum Herunterladen. Das `images`-Verzeichnis ist zum Speichern deiner Bilder gedacht. Bei einer kleinen Webseite kannst du alle Bilder in diesem Verzeichnis ablegen. Du kannst auch weitere Verzeichnisse erstellen und Dateien organisieren wie du willst.
+Die `media`-Verzeichnisse stehen auf deiner Webseite zur Verfügung. Das `downloads`-Verzeichnis enthält Dateien zum Herunterladen. Das `images`-Verzeichnis ist zum Speichern deiner Bilder gedacht. Bei einer kleinen Webseite kannst du alle Bilder in diesem Verzeichnis ablegen. Du kannst auch weitere Verzeichnisse erstellen und Dateien organisieren wie du willst.
 
 ## Bilder
 

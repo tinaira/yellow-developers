@@ -7,7 +7,7 @@ Alle Inhalte befinden sich im `content`-Verzeichnis. Hier aktualisierst du deine
 
 [image screenshot-content.png Screenshot]
 
-Der Screenshot zeigt Yellow nach der Installation. Alle `content`-Verzeichnisse stehen auf deiner Webseite zur Verfügung. In jedem Verzeichnis gibt es eine Datei mit Namen `page.txt` oder dem Namen des Verzeichnisses. Man kann auch weitere Dateien hinzufügen. Im Prinzip ist das, was du im Dateimanager siehst, die Webseite die du bekommst.
+Die `content`-Verzeichnisse stehen auf deiner Webseite zur Verfügung. In jedem Verzeichnis gibt es eine Datei mit Namen `page.txt` oder dem Namen des Verzeichnisses. Man kann auch weitere Dateien hinzufügen. Im Prinzip ist das, was du im Dateimanager siehst, die Webseite die du bekommst.
 
 ## Dateien und Verzeichnisse
 

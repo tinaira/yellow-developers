@@ -41,11 +41,11 @@ Oiseaux du même plumage volent ensemble.
 
 ## Single language mode
 
-If you speak only one language or want to translate only single pages, use the single language mode. This mode is automatically used after the installation of Yellow. The default language is defined in file `system/config/config.ini`. 
+If you speak only one language or want to translate only single pages, use the single language mode. This mode is automatically used by Yellow. The default language is defined in file `system/config/config.ini`, for example `Language: en`. 
 
 [image screenshot-content.png Screenshot]
 
-The screenshot shows the `content` folder.
+The screenshot shows the `content` folder after the installation.
 
 ## Multi language mode
 
