@@ -61,7 +61,6 @@ WebinterfaceSettingsStatusInvalid: S'il vous plaît, veuillez entrer une adresse
 WebinterfaceSettingsStatusExists: S'il vous plaît, veuillez entrer une adresse email différent.
 WebinterfaceSettingsStatusWeak: S'il vous plaît, choisissez un mot de passe différent.
 WebinterfaceSettingsStatusNext: Votre compte a été changé, vérifiez vos emails.
-
 WebinterfaceConfirmSubject: Confirmation d'un compte utilisateur
 WebinterfaceConfirmMessage: Bonjour @usershort, veuillez confirmer votre compte utilisateur. Cliquez sur le lien suivant.
 WebinterfaceConfirmStatusDone: Votre compte utilisateur est confirmé et en attente d'approbation. Merci!
@@ -82,7 +81,6 @@ WebinterfaceChangeSubject: Changement d'un compte utilisateur
 WebinterfaceChangeMessage: Bonjour @usershort, veuillez confirmer que vous souhaitez modifier votre compte utilisateur. Cliquez sur le lien suivant.
 WebinterfaceChangeStatusDone: Compte utilisateur changé. Merci!
 WebinterfaceChangeStatusExpired: Le compte ne peut pas être changé. Le lien de confirmation a expiré!
-
 WebinterfaceWelcomeSubject: Bienvenue
 WebinterfaceWelcomeMessage: Bonjour @usershort, votre compte utilisateur a bien été créé. Amusez-vous bien en éditant le site web.
 WebinterfaceInformationSubject: Bienvenue à nouveau

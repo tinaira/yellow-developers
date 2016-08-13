@@ -61,7 +61,6 @@ WebinterfaceSettingsStatusInvalid: Please enter a valid email.
 WebinterfaceSettingsStatusExists: Please enter a different email.
 WebinterfaceSettingsStatusWeak: Please enter a different password.
 WebinterfaceSettingsStatusNext: User account will be changed, please check your emails.
-
 WebinterfaceConfirmSubject: Confirm user account
 WebinterfaceConfirmMessage: Hi @usershort, please confirm your user account. Click the following link.
 WebinterfaceConfirmStatusDone: User account confirmed and waiting for approval. Thank you!
@@ -82,7 +81,6 @@ WebinterfaceChangeSubject: Change user account
 WebinterfaceChangeMessage: Hi @usershort, please confirm that you want to change your user account. Click the following link.
 WebinterfaceChangeStatusDone: User account changed. Thank you!
 WebinterfaceChangeStatusExpired: User account can not be changed. Link has expired!
-
 WebinterfaceWelcomeSubject: Welcome
 WebinterfaceWelcomeMessage: Hi @usershort, your user account has been created. Have fun editing the website.
 WebinterfaceInformationSubject: Welcome back

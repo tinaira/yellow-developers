@@ -61,7 +61,6 @@ WebinterfaceSettingsStatusInvalid: Bitte eine gültige E-Mail angeben.
 WebinterfaceSettingsStatusExists: Bitte eine andere E-Mail angeben.
 WebinterfaceSettingsStatusWeak: Bitte eine anderes Kennwort angeben.
 WebinterfaceSettingsStatusNext: Benutzerkonto wird geändert, bitte überprüfe deine E-Mails.
-
 WebinterfaceConfirmSubject: Benutzerkonto bestätigen
 WebinterfaceConfirmMessage: Hallo @usershort, bitte bestätige dein Benutzerkonto. Klicke auf den folgenden Link.
 WebinterfaceConfirmStatusDone: Benutzerkonto wurde bestätigt und wartet auf Genehmigung. Vielen Dank!
@@ -82,7 +81,6 @@ WebinterfaceChangeSubject: Benutzerkonto ändern
 WebinterfaceChangeMessage: Hallo @usershort, bitte bestätige dass du dein Benutzerkonto ändern möchtest. Klicke auf den folgenden Link.
 WebinterfaceChangeStatusDone: Benutzerkonto wurde geändert. Vielen Dank!
 WebinterfaceChangeStatusExpired: Benutzerkonto kann nicht geändert werden. Link ist abgelaufen!
-
 WebinterfaceWelcomeSubject: Willkommen
 WebinterfaceWelcomeMessage: Hallo @usershort, dein Benutzerkonto wurde erstellt. Viel Spass beim Bearbeiten der Webseite.
 WebinterfaceInformationSubject: Willkommen zurück
