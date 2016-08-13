@@ -11,7 +11,7 @@ Lerne wie man ein Blog mit Yellow erstellt.
 2. Kopiere alle Dateien auf dein Webhosting.
 3. Öffne deine Webseite in einem Webbrowser und wähle "Blog" aus.
 
-Dein Blog ist sofort erreichbar. Um das Blog auf deiner Startseite anzuzeigen, gehe in dein `content`-Verzeichnis und lösche das `1-home`-Verzeichnis. Das ist nur ein Beispiel um loszulegen, verändere alles so wie du willst.
+Dein Blog ist sofort erreichbar. Die Installation von Yellow kommt mit mehreren Seiten, "Home", "Blog" und "About". Das ist nur ein Beispiel um loszulegen, verändere alles so wie du willst. Du kannst "Home" löschen, wenn du das Blog auf der Startseite anzeigen willst.
 
 Falls Probleme auftreten, überprüfe bitte [Webservereinstellungen](web-server-configuration-de) und [Systemeinstellungen](adjusting-system-de#systemeinstellungen).
  

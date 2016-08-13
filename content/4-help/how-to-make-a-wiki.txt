@@ -11,7 +11,7 @@ Learn how to make a wiki with Yellow.
 2. Copy all files to your web hosting.
 3. Open your website in a web browser and select 'Wiki'.
 
-Your wiki is immediately available. To show the wiki on your home page, go to your `content` folder and delete the `1-home` folder. This is just an example to get you started, change everything as you like.
+Your wiki is immediately available. The installation of Yellow comes with several pages, 'Home', 'Wiki' and 'About'. This is just an example to get you started, change everything as you like. You can delete 'Home', if you want to show the wiki on the home page.
 
 When there are problems, please check [web server configuration](web-server-configuration) and [system settings](adjusting-system#system-settings).
 

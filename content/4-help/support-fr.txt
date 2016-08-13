@@ -28,6 +28,6 @@ Entrez en contact avec d'autres utilisateurs de Yellow et trouvez de l'aide prof
 
 ## Remerciements
 
-Yellow est libre et open source, créé par les gens qui utilisent Yellow. Au cœur de l'open source se trouve l'idée qu'en partageant le code, nous pouvons faire de meilleurs logiciels ensemble. Contributions et commentaires sont les bienvenus. Sous licence [GPLv2](https://opensource.org/licenses/GPL-2.0).
+Yellow est libre et open source, créé par les gens qui utilisent Yellow. Au cœur de l'open source se trouve l'idée que nous pouvons faire de meilleurs logiciels ensemble. Contributions et commentaires sont les bienvenus. Sous licence [GPLv2](https://opensource.org/licenses/GPL-2.0).
 
 Grand merci aux [membres](https://github.com/orgs/datenstrom/people) et [contributeurs](https://github.com/datenstrom/yellow-plugins/graphs/contributors).
