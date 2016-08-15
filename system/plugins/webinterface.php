@@ -277,7 +277,7 @@ class YellowWebinterface
 		if(empty($name) || empty($email) || empty($password)) $this->response->status = "incomplete";
 		if($this->response->status=="ok") $this->response->status = $this->getUserAccount($email, $password, $this->response->action);
 		if($this->response->status=="ok" && $this->response->isLoginRestrictions()) $this->response->status = "next";
-		if($this->response->status=="ok" && $this->users->isExisting($email)) $this->response->status = "next";
+		if($this->response->status=="ok" && $this->users->isTaken($email)) $this->response->status = "next";
 		if($this->response->status=="ok")
 		{
 			$fileNameUser = $this->yellow->config->get("configDir").$this->yellow->config->get("webinterfaceUserFile");
@@ -393,19 +393,19 @@ class YellowWebinterface
 		{
 			if(empty($email)) $this->response->status = "invalid";
 			if($this->response->status=="ok") $this->response->status = $this->getUserAccount($email, $password, $this->response->action);
-			if($this->response->status=="ok" && $email!=$emailSource && $this->users->isExisting($email)) $this->response->status = "exists";
+			if($this->response->status=="ok" && $email!=$emailSource && $this->users->isTaken($email)) $this->response->status = "exists";
 			if($this->response->status=="ok" && $email!=$emailSource)
 			{
 				$pending = $emailSource;
 				$fileNameUser = $this->yellow->config->get("configDir").$this->yellow->config->get("webinterfaceUserFile");
-				$this->response->status = $this->users->update($fileNameUser, $email, "no", $name, $language, "unconfirmed", $pending) ? "ok" : "error";
+				$this->response->status = $this->users->update($fileNameUser, $email, "no", $name, $language, "unconfirmed", "", $pending) ? "ok" : "error";
 				if($this->response->status=="error") $this->yellow->page->error(500, "Can't write file '$fileNameUser'!");
 			}
 			if($this->response->status=="ok")
 			{
 				$pending = $email.':'.(empty($password) ? $this->users->getHash($emailSource) : $this->users->createHash($password));
 				$fileNameUser = $this->yellow->config->get("configDir").$this->yellow->config->get("webinterfaceUserFile");
-				$this->response->status = $this->users->update($fileNameUser, $emailSource, "", $name, $language, "", $pending) ? "ok" : "error";
+				$this->response->status = $this->users->update($fileNameUser, $emailSource, "", $name, $language, "", "", $pending) ? "ok" : "error";
 				if($this->response->status=="error") $this->yellow->page->error(500, "Can't write file '$fileNameUser'!");
 			}
 			if($this->response->status=="ok")
@@ -443,7 +443,7 @@ class YellowWebinterface
 		if($this->response->status=="ok")
 		{
 			$emailSource = $this->users->getPending($email);
-			if(!$this->users->isExisting($emailSource) || $this->users->getStatus($emailSource)!="active") $this->response->status = "done";
+			if($this->users->getStatus($emailSource)!="active") $this->response->status = "done";
 		}
 		if($this->response->status=="ok")
 		{
@@ -734,6 +734,7 @@ class YellowResponse
 			preg_match("/^([\d\-\_\.]*)(.*)$/", $page->get("title"), $matches);
 			if(preg_match("/\d$/", $matches[1])) $matches[1] .= '-';
 			$page->fileName = $this->yellow->lookup->findFilePageNew($fileName, $matches[1]);
+			$page->location = $this->yellow->lookup->findLocationFromFile($page->fileName);
 		}
 		if($this->webinterface->getUserRestrictions($this->userEmail, $page->location, $page->fileName))
 		{
@@ -1009,9 +1010,10 @@ class YellowUsers
 			preg_match("/^\s*(.*?)\s*:\s*(.*?)\s*$/", $line, $matches);
 			if(!empty($matches[1]) && !empty($matches[2]))
 			{
-				list($hash, $name, $language, $status, $pending, $home) = explode(',', $matches[2]);
+				list($hash, $name, $language, $status, $modified, $pending, $home) = explode(',', $matches[2]);
+				if(!is_numeric($modified)) { $home = $pending; $pending = $modified; $modified = 946684800; } //TODO: remove later, converts old file format
 				$home = empty($home) ? $pending : $home; //TODO: remove later, converts old file format
-				$this->set($matches[1], $hash, $name, $language, $status, $pending, $home);
+				$this->set($matches[1], $hash, $name, $language, $status, $modified, $pending, $home);
 				if(defined("DEBUG") && DEBUG>=3) echo "YellowUsers::load email:$matches[1]<br/>\n";
 			}
 		}
@@ -1026,12 +1028,13 @@ class YellowUsers
 			preg_match("/^\s*(.*?)\s*:\s*(.*?)\s*$/", $line, $matches);
 			if(!empty($matches[1]) && !empty($matches[2]))
 			{
-				list($hash, $name, $language, $status, $pending, $home) = explode(',', $matches[2]);
+				list($hash, $name, $language, $status, $modified, $pending, $home) = explode(',', $matches[2]);
 				if($status=="active" || $status=="inactive")
 				{
+					if(!is_numeric($modified)) { $home = $pending; $pending = $modified; $modified = 946684800; } //TODO: remove later, converts old file format
 					$home = empty($home) ? $pending : $home; //TODO: remove later, converts old file format
 					$pending = $this->yellow->config->get("webinterfaceUserPending");
-					$fileDataNew .= "$matches[1]: $hash,$name,$language,$status,$pending,$home\n";
+					$fileDataNew .= "$matches[1]: $hash,$name,$language,$status,$modified,$pending,$home\n";
 				}
 			} else {
 				$fileDataNew .= $line;
@@ -1041,7 +1044,7 @@ class YellowUsers
 	}
 	
 	// Update users in file
-	function update($fileName, $email, $password = "", $name = "", $language = "", $status = "", $pending = "", $home = "")
+	function update($fileName, $email, $password = "", $name = "", $language = "", $status = "", $modified = "", $pending = "", $home = "")
 	{
 		if(!empty($password)) $hash = $this->createHash($password);
 		if($this->isExisting($email))
@@ -1051,6 +1054,7 @@ class YellowUsers
 			$name = strreplaceu(',', '-', empty($name) ? $this->users[$email]["name"] : $name);
 			$language = strreplaceu(',', '-', empty($language) ? $this->users[$email]["language"] : $language);
 			$status = strreplaceu(',', '-', empty($status) ? $this->users[$email]["status"] : $status);
+			$modified = strreplaceu(',', '-', empty($modified) ? time() : $modified);
 			$pending = strreplaceu(',', '-', empty($pending) ? $this->users[$email]["pending"] : $pending);
 			$home = strreplaceu(',', '-', empty($home) ? $this->users[$email]["home"] : $home);
 		} else {
@@ -1059,28 +1063,29 @@ class YellowUsers
 			$name = strreplaceu(',', '-', empty($name) ? $this->yellow->config->get("sitename") : $name);
 			$language = strreplaceu(',', '-', empty($language) ? $this->yellow->config->get("language") : $language);
 			$status = strreplaceu(',', '-', empty($status) ? $this->yellow->config->get("webinterfaceUserStatus") : $status);
+			$modified = strreplaceu(',', '-', empty($modified) ? time() : $modified);
 			$pending = strreplaceu(',', '-', empty($pending) ? $this->yellow->config->get("webinterfaceUserPending") : $pending);
 			$home = strreplaceu(',', '-', empty($home) ? $this->yellow->config->get("webinterfaceUserHome") : $home);
 		}
-		$this->set($email, $hash, $name, $language, $status, $pending, $home);
+		$this->set($email, $hash, $name, $language, $status, $modified, $pending, $home);
 		$fileData = $this->yellow->toolbox->readFile($fileName);
 		foreach($this->yellow->toolbox->getTextLines($fileData) as $line)
 		{
 			preg_match("/^\s*(.*?)\s*:\s*(.*?)\s*$/", $line, $matches);
 			if(!empty($matches[1]) && $matches[1]==$email)
 			{
-				$fileDataNew .= "$email: $hash,$name,$language,$status,$pending,$home\n";
+				$fileDataNew .= "$email: $hash,$name,$language,$status,$modified,$pending,$home\n";
 				$found = true;
 			} else {
 				$fileDataNew .= $line;
 			}
 		}
-		if(!$found) $fileDataNew .= "$email: $hash,$name,$language,$status,$pending,$home\n";
+		if(!$found) $fileDataNew .= "$email: $hash,$name,$language,$status,$modified,$pending,$home\n";
 		return $this->yellow->toolbox->createFile($fileName, $fileDataNew);
 	}
 
 	// Set user data
-	function set($email, $hash, $name, $language, $status, $pending, $home)
+	function set($email, $hash, $name, $language, $status, $modified, $pending, $home)
 	{
 		$this->users[$email] = array();
 		$this->users[$email]["email"] = $email;
@@ -1088,6 +1093,7 @@ class YellowUsers
 		$this->users[$email]["name"] = $name;
 		$this->users[$email]["language"] = $language;
 		$this->users[$email]["status"] = $status;
+		$this->users[$email]["modified"] = $modified;
 		$this->users[$email]["pending"] = $pending;
 		$this->users[$email]["home"] = $home;
 	}
@@ -1125,7 +1131,7 @@ class YellowUsers
 	{
 		$serverScheme = $this->yellow->config->get("webinterfaceServerScheme");
 		$location = $this->yellow->config->get("serverBase").$this->yellow->config->get("webinterfaceLocation");
-		setcookie($cookieName, "", time()-3600, $location, "", $serverScheme=="https");
+		setcookie($cookieName, "", time()-60*60, $location, "", $serverScheme=="https");
 	}
 	
 	// Create password hash
@@ -1188,6 +1194,12 @@ class YellowUsers
 		return $this->isExisting($email) ? $this->users[$email]["status"] : "";
 	}
 	
+	// Return user modified
+	function getModified($email = "")
+	{
+		return $this->isExisting($email) ? $this->users[$email]["modified"] : "";
+	}
+
 	// Return user pending
 	function getPending($email = "")
 	{
@@ -1218,7 +1230,20 @@ class YellowUsers
 		usort($data, strnatcasecmp);
 		return $data;
 	}
-
+	
+	// Check if user is taken
+	function isTaken($email)
+	{
+		$taken = false;
+		if($this->isExisting($email))
+		{
+			$status = $this->users[$email]["status"];
+			$reserved = $this->users[$email]["modified"] + 60*60*24;
+			if($status=="active" || $status=="inactive" || $reserved>time()) $taken = true;
+		}
+		return $taken;
+	}
+	
 	// Check if user exists
 	function isExisting($email)
 	{
