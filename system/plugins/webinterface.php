@@ -5,7 +5,7 @@
 // Web interface plugin
 class YellowWebinterface
 {
-	const VERSION = "0.6.11";
+	const VERSION = "0.6.12";
 	var $yellow;			//access to API
 	var $response;			//web interface response
 	var $users;				//web interface users
@@ -188,6 +188,8 @@ class YellowWebinterface
 				case "settings":	$statusCode = $this->processRequestSettings($serverScheme, $serverName, $base, $location, $fileName); break;
 				case "reconfirm":	$statusCode = $this->processRequestReconfirm($serverScheme, $serverName, $base, $location, $fileName); break;
 				case "change":		$statusCode = $this->processRequestChange($serverScheme, $serverName, $base, $location, $fileName); break;
+				case "version":		$statusCode = $this->processRequestVersion($serverScheme, $serverName, $base, $location, $fileName); break;
+				case "update":		$statusCode = $this->processRequestUpdate($serverScheme, $serverName, $base, $location, $fileName); break;
 				case "create":		$statusCode = $this->processRequestCreate($serverScheme, $serverName, $base, $location, $fileName); break;
 				case "edit":		$statusCode = $this->processRequestEdit($serverScheme, $serverName, $base, $location, $fileName); break;
 				case "delete":		$statusCode = $this->processRequestDelete($serverScheme, $serverName, $base, $location, $fileName); break;
@@ -393,7 +395,7 @@ class YellowWebinterface
 		{
 			if(empty($email)) $this->response->status = "invalid";
 			if($this->response->status=="ok") $this->response->status = $this->getUserAccount($email, $password, $this->response->action);
-			if($this->response->status=="ok" && $email!=$emailSource && $this->users->isTaken($email)) $this->response->status = "exists";
+			if($this->response->status=="ok" && $email!=$emailSource && $this->users->isTaken($email)) $this->response->status = "taken";
 			if($this->response->status=="ok" && $email!=$emailSource)
 			{
 				$pending = $emailSource;
@@ -495,6 +497,59 @@ class YellowWebinterface
 			if($this->response->status=="error") $this->yellow->page->error(500, "Can't send email on this server!");
 		}
 		$statusCode = $this->yellow->processRequest($serverScheme, $serverName, $base, $location, $fileName, false);
+		return $statusCode;
+	}
+	
+	// Process request to show version
+	function processRequestVersion($serverScheme, $serverName, $base, $location, $fileName)
+	{
+		$this->response->action = "version";
+		$this->response->status = "ok";
+		if($this->yellow->plugins->isExisting("update"))
+		{
+			list($statusCode, $dataCurrent) = $this->yellow->plugins->get("update")->getSoftwareVersion();
+			list($statusCode, $dataLatest) = $this->yellow->plugins->get("update")->getSoftwareVersion(true);
+			foreach($dataCurrent as $key=>$value)
+			{
+				if(strnatcasecmp($dataCurrent[$key], $dataLatest[$key])<0)
+				{
+					if(!empty($this->response->rawDataOutput)) $this->response->rawDataOutput .= "<br />\n";
+					$this->response->rawDataOutput .= "$key $dataLatest[$key]";
+					++$updates;
+					++$count; if($count>=4) { $this->response->rawDataOutput .= "…"; break; }
+				}
+			}
+			$this->response->status = $updates ? "updates" : "latest";
+			if($statusCode!=200)
+			{
+				$this->yellow->page->statusCode = 500;
+				$this->yellow->page->set("pageError", "Can't check for updates on this server!");
+				$this->response->status = "error";
+			}
+		}
+		$statusCode = $this->yellow->processRequest($serverScheme, $serverName, $base, $location, $fileName, false);
+		return $statusCode;
+	}
+	
+	// Process request to update software
+	function processRequestUpdate($serverScheme, $serverName, $base, $location, $fileName)
+	{
+		$statusCode = 0;
+		if($this->response->isUserWebmaster())
+		{
+			$statusCode = $this->yellow->command("update");
+			if($statusCode==200)
+			{
+				$statusCode = 303;
+				$location = $this->yellow->lookup->normaliseUrl($serverScheme, $serverName, $base, $location);
+				$this->yellow->sendStatus($statusCode, $location);
+			} else {
+				$statusCode = 500;
+				$this->yellow->page->statusCode = 500;
+				$this->yellow->page->set("pageError", "Can't install updates on this server!");
+				$this->yellow->processRequest($serverScheme, $serverName, $base, $location, $fileName, false);
+			}
+		}
 		return $statusCode;
 	}
 	
@@ -689,6 +744,7 @@ class YellowResponse
 	var $active;			//web interface is active? (boolean)
 	var $rawDataSource;		//raw data of page for comparison
 	var $rawDataEdit;		//raw data of page for editing
+	var $rawDataOutput;		//raw data of dynamic output
 	var $language;			//response language
 	var $action;			//response action
 	var $status;			//response status
@@ -790,6 +846,7 @@ class YellowResponse
 			$data["rawDataSource"] = $this->rawDataSource;
 			$data["rawDataEdit"] = $this->rawDataEdit;
 			$data["rawDataNew"] = $this->getRawDataNew();
+			$data["rawDataOutput"] = strval($this->rawDataOutput);
 			$data["pageFile"] = $this->yellow->page->get("pageFile");
 			$data["parserSafeMode"] = $this->yellow->page->parserSafeMode;
 		}

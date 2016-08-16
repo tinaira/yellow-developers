@@ -5,7 +5,7 @@
 // Traffic plugin
 class YellowTraffic
 {
-	const VERSION = "0.6.8";
+	const VERSION = "0.6.9";
 	var $yellow;			//access to API
 	var $days;				//detected days
 	var $views;				//detected views
@@ -55,7 +55,7 @@ class YellowTraffic
 				$this->days = $this->views = 0;
 				$fileName = $this->yellow->config->get("configDir").$this->yellow->config->get("configFile");
 				echo "ERROR checking files: Please configure ServerScheme, ServerName, ServerBase, ServerTime in file '$fileName'!\n";
-				echo "ERROR checking files: To see your web server configuration, open your website in a web browser!\n";
+				echo "ERROR checking files: Open your website in a web browser, if you want to see your server settings!\n";
 			}
 			echo "Yellow $command: $this->days day".($this->days!=1 ? 's' : '').", ";
 			echo "$this->views view".($this->views!=1 ? 's' : '')."\n";
