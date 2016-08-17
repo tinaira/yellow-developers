@@ -5,14 +5,13 @@
 // Slider plugin
 class YellowSlider
 {
-	const VERSION = "0.6.3";
+	const VERSION = "0.6.5";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
 	function onLoad($yellow)
 	{
 		$this->yellow = $yellow;
-		$this->yellow->config->setDefault("sliderCdn", "https://cdnjs.cloudflare.com/ajax/libs/flickity/1.2.0/");
 		$this->yellow->config->setDefault("sliderStyle", "flickity");
 		$this->yellow->config->setDefault("sliderAutoplay", "false");
 	}
@@ -59,11 +58,9 @@ class YellowSlider
 		$output = null;
 		if($name=="header")
 		{
-			$sliderCdn = $this->yellow->config->get("sliderCdn");
 			$pluginLocation = $this->yellow->config->get("serverBase").$this->yellow->config->get("pluginLocation");
-			$output = "<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"{$sliderCdn}flickity.css\" />\n";
-			$output .= "<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"{$pluginLocation}slider.css\" />\n";
-			$output .= "<script type=\"text/javascript\" src=\"{$sliderCdn}flickity.pkgd.min.js\"></script>\n";
+			$output = "<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"{$pluginLocation}slider.css\" />\n";
+			$output .= "<script type=\"text/javascript\" src=\"{$pluginLocation}slider-flickity.pkgd.min.js\"></script>\n";
 			$output .= "<script type=\"text/javascript\" src=\"{$pluginLocation}slider.js\"></script>\n";
 		}
 		return $output;

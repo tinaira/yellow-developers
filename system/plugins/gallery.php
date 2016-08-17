@@ -1,18 +1,17 @@
 <?php
-// Copyright (c) 2013-2015 Datenstrom, http://datenstrom.se
+// Copyright (c) 2013-2016 Datenstrom, http://datenstrom.se
 // This file may be used and distributed under the terms of the public license.
 
 // Gallery plugin
 class YellowGallery
 {
-	const VERSION = "0.6.4";
+	const VERSION = "0.6.5";
 	var $yellow;			//access to API
 
 	// Handle initialisation
 	function onLoad($yellow)
 	{
 		$this->yellow = $yellow;
-		$this->yellow->config->setDefault("galleryPhotoswipeCdn", "https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.0/");
 		$this->yellow->config->setDefault("galleryStyle", "photoswipe");
 	}
 	
@@ -62,12 +61,9 @@ class YellowGallery
 		$output = null;
 		if($name=="header")
 		{
-			$photoswipeCdn = $this->yellow->config->get("galleryPhotoswipeCdn");
 			$pluginLocation = $this->yellow->config->get("serverBase").$this->yellow->config->get("pluginLocation");
-			$output = "<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"{$photoswipeCdn}photoswipe.css\" />\n";
-			$output .= "<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"{$photoswipeCdn}default-skin/default-skin.css\" />\n";
-			$output .= "<script type=\"text/javascript\" src=\"{$photoswipeCdn}photoswipe.min.js\"></script>\n";
-			$output .= "<script type=\"text/javascript\" src=\"{$photoswipeCdn}photoswipe-ui-default.min.js\"></script>\n";
+			$output = "<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"{$pluginLocation}gallery.css\" />\n";
+			$output .= "<script type=\"text/javascript\" src=\"{$pluginLocation}gallery-photoswipe.pkgd.min.js\"></script>\n";
 			$output .= "<script type=\"text/javascript\" src=\"{$pluginLocation}gallery.js\"></script>\n";
 		}
 		return $output;

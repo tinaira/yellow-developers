@@ -1,7 +1,7 @@
 // Copyright (c) 2013-2016 Datenstrom, http://datenstrom.se
 // This file may be used and distributed under the terms of the public license.
 
-// Slider plugin 0.6.3
+// Slider plugin 0.6.5
 var initFlickityFromDOM = function()
 {	
 	// Parse slider options from DOM
