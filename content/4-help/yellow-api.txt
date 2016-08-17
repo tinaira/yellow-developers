@@ -297,11 +297,38 @@ Check if location contains location arguments
 **$yellow->toolbox->normaliseArgs($text, $appendSlash = true, $filterStrict = true)**  
 Normalise location arguments
 
-**$yellow->toolbox->detectBrowserLanguage($languages, $languageDefault)**  
-Detect web browser language
+**$yellow->toolbox->readFile($fileName, $sizeMax = 0)**  
+Read file, empty string if not found  
 
-**$yellow->toolbox->detectImageInfo($fileName)**  
-Detect image dimensions and type, png or jpg
+**$yellow->toolbox->createFile($fileName, $fileData, $mkdir = false)**  
+Create file  
+
+**$yellow->toolbox->modifyFile($fileName, $modified)**  
+Set file modification date, Unix time  
+
+**$yellow->toolbox->copyFile($fileNameSource, $fileNameDest, $mkdir = false)**  
+Copy file  
+
+**$yellow->toolbox->renameFile($fileNameSource, $fileNameDest, $mkdir = false)**  
+Rename file  
+
+**$yellow->toolbox->deleteFile($fileName, $pathTrash = "")**  
+Delete file  
+
+**$yellow->toolbox->deleteDirectory($path, $pathTrash = "")**  
+Delete directory  
+
+**$yellow->toolbox->getFileExtension($fileName)**  
+Return file extension  
+
+**$yellow->toolbox->getFileModified($fileName)**  
+Return file modification date, Unix time  
+
+**$yellow->toolbox->getTextLines($text)**  
+Return lines from text string  
+
+**$yellow->toolbox->getTextArgs($text, $optional = "-")**  
+Return arguments from text string  
 
 ## Events
 
