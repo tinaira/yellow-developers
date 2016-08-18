@@ -5,7 +5,7 @@
 // Image plugin
 class YellowImage
 {
-	const VERSION = "0.6.3";
+	const VERSION = "0.6.4";
 	var $yellow;			//access to API
 	var $graphicsLibrary;	//graphics library support? (boolean)
 
@@ -103,7 +103,7 @@ class YellowImage
 				{
 					$image = $this->resizeImage($image, $widthInput, $heightInput, $widthOutput, $heightOutput);
 					if(!$this->saveImage($fileNameOutput, $type, $image) ||
-					   !$this->yellow->toolbox->modifyFile($fileNameOutput, filemtime($fileName)))
+					   !$this->yellow->toolbox->modifyFile($fileNameOutput, $this->yellow->toolbox->getFileModified($fileName)))
 					{
 						$this->yellow->page->error(500, "Image '$fileNameOutput' can't be saved!");
 					}
@@ -181,9 +181,7 @@ class YellowImage
 	// Check if file needs to be updated
 	function isFileNotUpdated($fileNameInput, $fileNameOutput)
 	{
-		$fileDateInput = is_file($fileNameInput) ? filemtime($fileNameInput) : 0;
-		$fileDateOutput = is_file($fileNameOutput) ? filemtime($fileNameOutput) : 0;
-		return $fileDateInput!=$fileDateOutput;
+		return $this->yellow->toolbox->getFileModified($fileNameInput)!=$this->yellow->toolbox->getFileModified($fileNameOutput);
 	}
 
 	// Check graphics library support

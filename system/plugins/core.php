@@ -222,7 +222,7 @@ class YellowCore
 	// Send file response
 	function sendFile($statusCode, $fileName, $cacheable)
 	{
-		$lastModifiedFormatted = $this->toolbox->getHttpDateFormatted(filemtime($fileName));
+		$lastModifiedFormatted = $this->toolbox->getHttpDateFormatted($this->toolbox->getFileModified($fileName));
 		if($statusCode==200 && $cacheable && $this->toolbox->isRequestNotModified($lastModifiedFormatted))
 		{
 			$statusCode = 304;
@@ -334,7 +334,7 @@ class YellowCore
 	// Return static file from cache if available
 	function getStaticFileFromCache($location, $fileName, $cacheable)
 	{
-		if(is_readable($fileName) && $cacheable && PHP_SAPI!="cli")
+		if($cacheable && PHP_SAPI!="cli")
 		{
 			$location .= $this->toolbox->getLocationArgs();
 			$fileNameStatic = rtrim($this->config->get("staticDir"), '/').$location;
@@ -347,11 +347,16 @@ class YellowCore
 	// Check if static file
 	function isStaticFile($location, $fileName, $cacheable)
 	{
-		$fileName = $this->getStaticFileFromCache($location, $fileName, $cacheable);
-		$staticDirLength = strlenu($this->config->get("staticDir"));
-		$systemDirLength = strlenu($this->config->get("systemDir"));
-		return substru($fileName, 0, $staticDirLength)==$this->config->get("staticDir") ||
-			substru($fileName, 0, $systemDirLength)==$this->config->get("systemDir");
+		$ok = false;
+		if(is_readable($fileName))
+		{
+			$fileName = $this->getStaticFileFromCache($location, $fileName, $cacheable);
+			$staticDirLength = strlenu($this->config->get("staticDir"));
+			$systemDirLength = strlenu($this->config->get("systemDir"));
+			$ok = substru($fileName, 0, $staticDirLength)==$this->config->get("staticDir") ||
+				substru($fileName, 0, $systemDirLength)==$this->config->get("systemDir");
+		}
+		return $ok;
 	}
 	
 	// Check if request can be redirected into content directory
@@ -1743,7 +1748,7 @@ class YellowConfig
 	function load($fileName)
 	{
 		if(defined("DEBUG") && DEBUG>=2) echo "YellowConfig::load file:$fileName<br/>\n";
-		$this->modified = filemtime($fileName);
+		$this->modified = $this->yellow->toolbox->getFileModified($fileName);
 		$fileData = $this->yellow->toolbox->readFile($fileName);
 		foreach($this->yellow->toolbox->getTextLines($fileData) as $line)
 		{
@@ -2774,24 +2779,6 @@ class YellowToolbox
 		return $entries;
 	}
 	
-	// Return file extension
-	function getFileExtension($fileName)
-	{
-		return strtoloweru(($pos = strrposu($fileName, '.')) ? substru($fileName, $pos+1) : "");
-	}
-	
-	// Return file modification date, Unix time
-	function getFileModified($fileName)
-	{
-		$modified = is_readable($fileName) ? filemtime($fileName) : 0;
-		if($modified==0)
-		{
-			$path = dirname($fileName);
-			$modified = is_readable($path) ? filemtime($path) : 0;
-		}
-		return $modified;
-	}
-	
 	// Read file, empty string if not found
 	function readFile($fileName, $sizeMax = 0)
 	{
@@ -2906,6 +2893,18 @@ class YellowToolbox
 			$ok = @rename($path, $pathDest);
 		}
 		return $ok;
+	}
+	
+	// Return file extension
+	function getFileExtension($fileName)
+	{
+		return strtoloweru(($pos = strrposu($fileName, '.')) ? substru($fileName, $pos+1) : "");
+	}
+	
+	// Return file modification date, Unix time
+	function getFileModified($fileName)
+	{
+		return is_file($fileName) ? filemtime($fileName) : 0;
 	}
 	
 	// Return lines from text string
