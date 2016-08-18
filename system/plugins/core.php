@@ -288,7 +288,7 @@ class YellowCore
 		$base = empty($base) ? $this->config->get("serverBase") : $base;
 		$location = $this->toolbox->getLocation();
 		$location = substru($location, strlenu($base));
-		if(preg_match("/\.(css|ico|js|jpg|png|txt|woff)$/", $location))
+		if(preg_match("/\.(css|ico|js|jpg|png|svg|txt|woff)$/", $location))
 		{
 			$pluginLocationLength = strlenu($this->config->get("pluginLocation"));
 			$themeLocationLength = strlenu($this->config->get("themeLocation"));
@@ -2727,6 +2727,7 @@ class YellowToolbox
 			"js" => "application/javascript",
 			"jpg" => "image/jpeg",
 			"png" => "image/png",
+			"svg" => "image/svg+xml",
 			"txt" => "text/plain",
 			"woff" => "application/font-woff",
 			"xml" => "text/xml; charset=utf-8");
@@ -3096,7 +3097,7 @@ class YellowToolbox
 		return $language;
 	}
 	
-	// Detect image dimensions and type, png or jpg
+	// Detect image dimensions and type for jpg/png/svg
 	function detectImageInfo($fileName)
 	{
 		$width = $height = 0;
@@ -3104,17 +3105,8 @@ class YellowToolbox
 		$fileHandle = @fopen($fileName, "rb");
 		if($fileHandle)
 		{
-			if(substru(strtoloweru($fileName), -3)=="png")
+			if(substru(strtoloweru($fileName), -3)=="jpg")
 			{
-				$dataSignature = fread($fileHandle, 8);
-				$dataHeader = fread($fileHandle, 16);
-				if(!feof($fileHandle) && $dataSignature=="\x89PNG\r\n\x1a\n")
-				{
-					$width = (ord($dataHeader[10])<<8) + ord($dataHeader[11]);
-					$height = (ord($dataHeader[14])<<8) + ord($dataHeader[15]);
-					$type = "png";
-				}
-			} else if(substru(strtoloweru($fileName), -3)=="jpg") {
 				$dataBufferSizeMax = filesize($fileName);
 				$dataBufferSize = min($dataBufferSizeMax, 4096);
 				$dataBuffer = fread($fileHandle, $dataBufferSize);
@@ -3141,6 +3133,27 @@ class YellowToolbox
 							if(feof($fileHandle)) { $dataBufferSize = 0; break; }
 						}
 					}
+				}
+			} else if(substru(strtoloweru($fileName), -3)=="png") {
+				$dataSignature = fread($fileHandle, 8);
+				$dataHeader = fread($fileHandle, 16);
+				if(!feof($fileHandle) && $dataSignature=="\x89PNG\r\n\x1a\n")
+				{
+					$width = (ord($dataHeader[10])<<8) + ord($dataHeader[11]);
+					$height = (ord($dataHeader[14])<<8) + ord($dataHeader[15]);
+					$type = "png";
+				}
+			} else if(substru(strtoloweru($fileName), -3)=="svg") {
+				$dataBufferSizeMax = filesize($fileName);
+				$dataBufferSize = min($dataBufferSizeMax, 4096);
+				$dataBuffer = fread($fileHandle, $dataBufferSize);
+				$dataSignature = substrb($dataBuffer, 0, 5);
+				if(!feof($fileHandle) && $dataSignature=="\x3csvg\x20")
+				{
+					$dataBuffer = ($pos = strposu($dataBuffer, '>')) ? substru($dataBuffer, 0, $pos) : $dataBuffer;
+					if(preg_match("/ width=\"(\d+)\"/", $dataBuffer, $matches)) $width = $matches[1];
+					if(preg_match("/ height=\"(\d+)\"/", $dataBuffer, $matches)) $height = $matches[1];
+					$type = "svg";
 				}
 			}
 			fclose($fileHandle);

@@ -5,7 +5,7 @@
 // Image plugin
 class YellowImage
 {
-	const VERSION = "0.6.4";
+	const VERSION = "0.6.5";
 	var $yellow;			//access to API
 	var $graphicsLibrary;	//graphics library support? (boolean)
 
@@ -87,10 +87,10 @@ class YellowImage
 		list($widthInput, $heightInput, $type) = $this->yellow->toolbox->detectImageInfo($fileName);
 		$widthOutput = $this->convertValueAndUnit($widthOutput, $widthInput);
 		$heightOutput = $this->convertValueAndUnit($heightOutput, $heightInput);
-		if($widthInput==$widthOutput && $heightInput==$heightOutput)
+		if(($widthInput==$widthOutput && $heightInput==$heightOutput) || $type=="svg")
 		{
 			$src = $this->yellow->config->get("serverBase").$this->yellow->config->get("imageLocation").$fileNameShort;
-			$width = $widthInput; $height = $heightInput;
+			$width = $widthOutput; $height = $heightOutput;
 		} else {
 			$fileNameThumb = ltrim(str_replace(array("/", "\\", "."), "-", dirname($fileNameShort)."/".pathinfo($fileName, PATHINFO_FILENAME)), "-");
 			$fileNameThumb .= "-".$widthOutput."x".$heightOutput;
@@ -99,14 +99,11 @@ class YellowImage
 			if($this->isFileNotUpdated($fileName, $fileNameOutput))
 			{
 				$image = $this->loadImage($fileName, $type);
-				if($image)
+				if(!is_null($image)) $image = $this->resizeImage($image, $widthInput, $heightInput, $widthOutput, $heightOutput);
+				if(!$this->saveImage($fileNameOutput, $type, $image) ||
+				   !$this->yellow->toolbox->modifyFile($fileNameOutput, $this->yellow->toolbox->getFileModified($fileName)))
 				{
-					$image = $this->resizeImage($image, $widthInput, $heightInput, $widthOutput, $heightOutput);
-					if(!$this->saveImage($fileNameOutput, $type, $image) ||
-					   !$this->yellow->toolbox->modifyFile($fileNameOutput, $this->yellow->toolbox->getFileModified($fileName)))
-					{
-						$this->yellow->page->error(500, "Image '$fileNameOutput' can't be saved!");
-					}
+					$this->yellow->page->error(500, "Image '$fileNameOutput' can't be saved!");
 				}
 			}
 			$src = $this->yellow->config->get("serverBase").$this->yellow->config->get("imageThumbnailLocation").$fileNameThumb;
@@ -118,7 +115,7 @@ class YellowImage
 	// Load image from file
 	function loadImage($fileName, $type)
 	{
-		$image = false;
+		$image = null;
 		switch($type)
 		{
 			case "jpg":	$image = @imagecreatefromjpeg($fileName); break;

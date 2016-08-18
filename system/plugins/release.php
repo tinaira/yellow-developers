@@ -5,7 +5,7 @@
 // Release plugin
 class YellowRelease
 {
-	const VERSION = "0.6.10";
+	const VERSION = "0.6.11";
 
 	// Handle plugin initialisation
 	function onLoad($yellow)
@@ -99,10 +99,13 @@ class YellowRelease
 					$fileDataNew .= $line;
 				}
 			}
-			if(!$this->yellow->toolbox->createFile($fileName, $fileDataNew))
+			if($fileData != $fileDataNew)
 			{
-				$statusCode = 500;
-				echo "ERROR updating files: Can't write file '$fileName'!\n";
+				if(!$this->yellow->toolbox->createFile($fileName, $fileDataNew))
+				{
+					$statusCode = 500;
+					echo "ERROR updating files: Can't write file '$fileName'!\n";
+				}
 			}
 			if(defined("DEBUG") && DEBUG>=2) echo "YellowRelease::updateSoftwareVersion file:$fileName<br/>\n";
 		}
@@ -127,10 +130,13 @@ class YellowRelease
 					$fileDataNew .= $line;
 				}
 			}
-			if(!$this->yellow->toolbox->createFile($fileName, $fileDataNew))
+			if($fileData != $fileDataNew)
 			{
-				$statusCode = 500;
-				echo "ERROR updating files: Can't write file '$fileName'!\n";
+				if(!$this->yellow->toolbox->createFile($fileName, $fileDataNew))
+				{
+					$statusCode = 500;
+					echo "ERROR updating files: Can't write file '$fileName'!\n";
+				}
 			}
 			if(defined("DEBUG") && DEBUG>=2) echo "YellowRelease::updateSoftwareInformation file:$fileName<br/>\n";
 		}
@@ -156,10 +162,13 @@ class YellowRelease
 					$fileDataNew .= $line;
 				}
 			}
-			if(!$this->yellow->toolbox->createFile($fileName, $fileDataNew))
+			if($fileData != $fileDataNew)
 			{
-				$statusCode = 500;
-				echo "ERROR updating files: Can't write file '$fileName'!\n";
+					if(!$this->yellow->toolbox->createFile($fileName, $fileDataNew))
+				{
+					$statusCode = 500;
+					echo "ERROR updating files: Can't write file '$fileName'!\n";
+				}
 			}
 			if(defined("DEBUG") && DEBUG>=2) echo "YellowRelease::updateSoftwareDocumentation file:$fileName<br/>\n";
 		}
@@ -183,13 +192,15 @@ class YellowRelease
 				$fileNameZipArchive = "$pathZipArchive$entry.zip";
 				if($zip->open($fileNameZipArchive, ZIPARCHIVE::OVERWRITE)===true)
 				{
+					$modified = 0;
 					$fileNames = $this->yellow->toolbox->getDirectoryEntries($path.$entry, "/.*/", true, false);
 					foreach($fileNames as $fileName)
 					{
 						if(preg_match("#($fileIgnore)#", $fileName)) continue;
 						$zip->addFile($fileName, substru($fileName, strlenu($path)));
+						$modified = max($modified, $this->yellow->toolbox->getFileModified($fileName));
 					}
-					if(!$zip->close())
+					if(!$zip->close() || !$this->yellow->toolbox->modifyFile($fileNameZipArchive, $modified))
 					{
 						$statusCode = 500;
 						echo "ERROR updating files: Can't write file '$fileNameZipArchive'!\n";
