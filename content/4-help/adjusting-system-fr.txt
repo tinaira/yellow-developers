@@ -27,6 +27,6 @@ Vous pouvez y définir les paramètres par défaut pour votre site web. Les [par
 
 ## Paramètres utilisateur
 
-Tous les comptes d'utilisateurs sont stockés dans le fichier `system/config/user.ini`. La [interface web](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface) vous permet de créer de nouveaux comptes d'utilisateurs. Le webmaster est défini dans le fichier `system/config/config.ini`, par exemple `Email: anna@svensson.fr`.
+Tous les comptes d'utilisateurs sont stockés dans le fichier `system/config/user.ini`. L'[interface web](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface) vous permet de créer de nouveaux comptes d'utilisateurs. Le webmaster est défini dans le fichier `system/config/config.ini`, par exemple `Email: anna@svensson.fr`.
 
 [Suivant: Configuration du serveur web →](web-server-configuration-fr)
