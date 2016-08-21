@@ -11,9 +11,9 @@ Apprenez à faire un site web avec Yellow.
 
 ## Installer votre site
 
-1. [Download and unzip Yellow](https://github.com/datenstrom/yellow/archive/master.zip).
-2. Copy all files to your web hosting.
-3. Open your website in a web browser.
+1. [Téléchargez et dézippez Yellow](https://github.com/datenstrom/yellow/archive/master.zip).
+2. Copiez tout les fichiers chez votre hébergeur.
+3. Accédez à votre site depuis un navigateur web.
 
 Votre site web est immédiatement accessible. L'installation est fournie avec deux pages, 'Home' et 'About'. Elles sont juste un exemple pour commencer, vous pouvez les modifier comme il vous convient. Vous pouvez créer votre site web en ajoutant des fichiers et des dossiers.
 
