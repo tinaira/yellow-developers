@@ -9,11 +9,11 @@ Apprenez à faire un blog avec Yellow.
 
 ## Installer un blog
 
-1. [Download and unzip Yellow](https://github.com/datenstrom/yellow/archive/master.zip).
-2. Copy all files to your web hosting.
-3. Open your website in a web browser and select 'Blog'.
+1. [Téléchargez et dézippez Yellow](https://github.com/datenstrom/yellow/archive/master.zip).
+2. Copiez tout les fichiers chez votre hébergeur.
+3. Accédez à votre site depuis un navigateur web et choisissez 'Blog'.
 
-Your blog is immediately available. The installation of Yellow comes with several pages, 'Home', 'Blog' and 'About'. This is just an example to get you started, change everything as you like. You can delete 'Home', if you want to show the blog on the home page.
+Votre blog est immédiatement accessible. L'installation est fournie avec plusieurs pages, 'Home', 'Blog' et 'About'. Elles sont juste un exemple pour commencer, vous pouvez les modifier comme il vous convient. Vous pouvez supprimer 'Home', si vous souhaitez faire de votre blog la page d'accueil.
 
 S'il y a des problèmes, vérifiez la [configuration du serveur web](web-server-configuration-fr) et les [paramètres du système](adjusting-system-fr#paramètres-du-système).
 
