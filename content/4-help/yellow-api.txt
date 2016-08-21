@@ -59,7 +59,7 @@ Return [page collection](#yellow-page-collection) with additional pages for curr
 Return related page
 
 **$yellow->page->getLocation($absoluteLocation = true)**  
-Return page location, [see note about locations](#notes)
+Return page location
 
 **$yellow->page->getUrl()**  
 Return page URL with server scheme and server name
@@ -303,9 +303,6 @@ Read file, empty string if not found
 **$yellow->toolbox->createFile($fileName, $fileData, $mkdir = false)**  
 Create file  
 
-**$yellow->toolbox->modifyFile($fileName, $modified)**  
-Set file modification date, Unix time  
-
 **$yellow->toolbox->copyFile($fileNameSource, $fileNameDest, $mkdir = false)**  
 Copy file  
 
@@ -318,11 +315,14 @@ Delete file
 **$yellow->toolbox->deleteDirectory($path, $pathTrash = "")**  
 Delete directory  
 
-**$yellow->toolbox->getFileExtension($fileName)**  
-Return file extension  
+**$yellow->toolbox->modifyFile($fileName, $modified)**  
+Set file modification date, Unix time  
 
 **$yellow->toolbox->getFileModified($fileName)**  
 Return file modification date, Unix time  
+
+**$yellow->toolbox->getFileExtension($fileName)**  
+Return file extension  
 
 **$yellow->toolbox->getTextLines($text)**  
 Return lines from text string  
@@ -430,6 +430,6 @@ Some tips for developers:
 
 2. Put your code on GitHub. Create a new repository for each new plugin/theme. The name of your repository should be `yellow-plugin-something` or `yellow-theme-something`. We're looking forward to see what you create. [Read more](https://github.com/datenstrom/yellow/issues?q=label%3Anews%20).
 
-3. Most locations are relative locations, which means relative to your home page. Use `$yellow->page->getLocation(true)` to access the absolute page location and `$yellow->page->getUrl()` to access the complete page URL.
+3. Use relative locations, which means relative to your home page. You can use `$page->getLocation(true)` to access the absolute page location and `$page->getUrl()` to access the complete page URL. [See example](https://github.com/datenstrom/yellow-developers/blob/master/system/themes/templates/locationapi.html).
 
-4. Have a question? Something not working as expected? [Contact us](support).
+4. We hope Yellow is useful for you. We hope you'll use it to create many web pages, blogs and wikis. Have a question? Something not working as expected? [Contact us](support).
