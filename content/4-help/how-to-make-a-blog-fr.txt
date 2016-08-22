@@ -102,7 +102,7 @@ Links
 * [GitHub](https://github.com/datenstrom)
 ```
 
-Vous pouvez utiliser des [raccourcis](https://github.com/datenstrom/yellow-plugins/tree/master/blog#how-to-configure-a-blog) afin d'afficher des informations à propos du blog. Encore un exemple:
+Vous pouvez utiliser des [raccourcis](https://github.com/datenstrom/yellow-plugins/tree/master/blog#how-to-configure-a-blog) afin d'afficher des informations à propos du blog.
 
 ```
 ---
@@ -116,6 +116,22 @@ Recent
 Archive
 
 [blogarchive /blog/]
+```
+
+Voici les mêmes raccourcis, si le blog est situé sur la page d'accueil:
+
+```
+---
+Title: Sidebar
+Status: hidden
+---
+Recent
+
+[blogrecent /]
+
+Archive
+
+[blogarchive /]
 ```
 
 ## Plus de fonctionnalités

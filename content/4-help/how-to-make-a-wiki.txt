@@ -62,11 +62,13 @@ is automatically shown on all wiki pages. Here's an example sidebar:
 Title: Sidebar
 Status: hidden
 ---
-* [Recent changes](/wiki/special:changes/)  
-* [Example](/wiki/tag:example/)  
+Links
+
+* [Twitter](https://twitter.com/datenstromse)
+* [GitHub](https://github.com/datenstrom)
 ```
 
-You can use [shortcuts](https://github.com/datenstrom/yellow-plugins/tree/master/wiki#how-to-configure-a-wiki) to show information about the wiki. Here's another example:
+You can use [shortcuts](https://github.com/datenstrom/yellow-plugins/tree/master/wiki#how-to-configure-a-wiki) to show information about the wiki:
 
 ```
 ---
@@ -75,13 +77,31 @@ Status: hidden
 ---
 Recent
 
-[wikirecent /wiki/ 3]
+[wikirecent /wiki/]
 
 Links
 
 * [Example](/wiki/tag:example/)  
 * [Coffee](/wiki/tag:coffee/)
 * [Recent changes](/wiki/special:changes/)
+```
+
+Here are the same shortcuts, if the wiki is located on the home page:
+
+```
+---
+Title: Sidebar
+Status: hidden
+---
+Recent
+
+[wikirecent /]
+
+Links
+
+* [Example](/tag:example/)  
+* [Coffee](/tag:coffee/)
+* [Recent changes](/special:changes/)
 ```
 
 ## More features

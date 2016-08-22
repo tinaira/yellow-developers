@@ -100,7 +100,7 @@ Links
 * [GitHub](https://github.com/datenstrom)
 ```
 
-Verwende [Abkürzungen](https://github.com/datenstrom/yellow-plugins/tree/master/blog#how-to-configure-a-blog), um Informationen über das Blog anzuzeigen. Ein weiteres Beispiel:
+Verwende [Abkürzungen](https://github.com/datenstrom/yellow-plugins/tree/master/blog#how-to-configure-a-blog), um Informationen über das Blog anzuzeigen.
 
 ```
 ---
@@ -114,6 +114,22 @@ Neu
 Archiv
 
 [blogarchive /blog/]
+```
+
+Hier sind die selben Abkürzungen, falls sich das Blog auf der Startseite befindet:
+
+```
+---
+Title: Sidebar
+Status: hidden
+---
+Neu
+
+[blogrecent /]
+
+Archiv
+
+[blogarchive /]
 ```
 
 ## Weitere Funktionen

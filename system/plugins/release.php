@@ -99,7 +99,7 @@ class YellowRelease
 					$fileDataNew .= $line;
 				}
 			}
-			if($fileData != $fileDataNew)
+			if($fileData!=$fileDataNew)
 			{
 				if(!$this->yellow->toolbox->createFile($fileName, $fileDataNew))
 				{
@@ -130,7 +130,7 @@ class YellowRelease
 					$fileDataNew .= $line;
 				}
 			}
-			if($fileData != $fileDataNew)
+			if($fileData!=$fileDataNew)
 			{
 				if(!$this->yellow->toolbox->createFile($fileName, $fileDataNew))
 				{
@@ -162,9 +162,9 @@ class YellowRelease
 					$fileDataNew .= $line;
 				}
 			}
-			if($fileData != $fileDataNew)
+			if($fileData!=$fileDataNew)
 			{
-					if(!$this->yellow->toolbox->createFile($fileName, $fileDataNew))
+				if(!$this->yellow->toolbox->createFile($fileName, $fileDataNew))
 				{
 					$statusCode = 500;
 					echo "ERROR updating files: Can't write file '$fileName'!\n";

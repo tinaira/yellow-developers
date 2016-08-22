@@ -61,11 +61,13 @@ Du kannst Wikiseiten in [Markdown](markdown-cheat-sheet-de) erstellen.
 Title: Sidebar
 Status: hidden
 ---
-* [Letzte Änderungen](/wiki/special:Änderungen/)  
-* [Beispiel](/wiki/tag:Beispiel/)  
+Links
+
+* [Twitter](https://twitter.com/datenstromse)
+* [GitHub](https://github.com/datenstrom)
 ```
 
-Verwende [Abkürzungen](https://github.com/datenstrom/yellow-plugins/tree/master/wiki#how-to-configure-a-wiki), um Informationen über das Wiki anzuzeigen. Ein weiteres Beispiel:
+Verwende [Abkürzungen](https://github.com/datenstrom/yellow-plugins/tree/master/wiki#how-to-configure-a-wiki), um Informationen über das Wiki anzuzeigen:
 
 ```
 ---
@@ -74,13 +76,31 @@ Status: hidden
 ---
 Neu
 
-[wikirecent /wiki/ 3]
+[wikirecent /wiki/]
 
 Links
 
 * [Beispiel](/wiki/tag:example/)  
 * [Kaffee](/wiki/tag:coffee/)
 * [Letzte Änderungen](/wiki/special:changes/)
+```
+
+Hier sind die selben Abkürzungen, falls sich das Wiki auf der Startseite befindet:
+
+```
+---
+Title: Sidebar
+Status: hidden
+---
+Neu
+
+[wikirecent /]
+
+Links
+
+* [Beispiel](/tag:example/)  
+* [Kaffee](/tag:coffee/)
+* [Letzte Änderungen](/special:changes/)
 ```
 
 ## Weitere Funktionen

@@ -63,11 +63,12 @@ Pour créer une sidebar (menu latéral), ajoutez le fichier `sidebar.txt` dans l
 Title: Sidebar
 Status: hidden
 ---
-* [Recent changes](/wiki/special:changes/)  
-* [Example](/wiki/tag:example/)  
-```
+Links
 
-Vous pouvez utiliser des [raccourcis](https://github.com/datenstrom/yellow-plugins/tree/master/wiki#how-to-configure-a-wiki) afin d'afficher des informations à propos du wiki. Encore un exemple:
+* [Twitter](https://twitter.com/datenstromse)
+* [GitHub](https://github.com/datenstrom)```
+
+Vous pouvez utiliser des [raccourcis](https://github.com/datenstrom/yellow-plugins/tree/master/wiki#how-to-configure-a-wiki) afin d'afficher des informations à propos du wiki:
 
 ```
 ---
@@ -76,13 +77,31 @@ Status: hidden
 ---
 Recent
 
-[wikirecent /wiki/ 3]
+[wikirecent /wiki/]
 
 Links
 
 * [Example](/wiki/tag:example/)  
 * [Coffee](/wiki/tag:coffee/)
 * [Recent changes](/wiki/special:changes/)
+```
+
+Voici les mêmes raccourcis, si le wiki est situé sur la page d'accueil:
+
+```
+---
+Title: Sidebar
+Status: hidden
+---
+Recent
+
+[wikirecent /]
+
+Links
+
+* [Example](/tag:example/)  
+* [Coffee](/tag:coffee/)
+* [Recent changes](/special:changes/)
 ```
 
 ## Plus de fonctionnalités

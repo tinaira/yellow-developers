@@ -400,11 +400,11 @@ YellowPages::scanLocation location:/plugins/blog-plugin/
 
 Get maximum information by increasing debug level to `<?php define("DEBUG", 3);`
 ```
-Yellow 0.6.4, PHP 5.5.31, Apache/2.4.18 Darwin
+Yellow 0.6.5, PHP 5.5.36, Apache/2.4.18 Darwin
 YellowConfig::load file:system/config/config.ini
 YellowConfig::load Sitename:Yellow developers
 YellowConfig::load Author:Yellow
-YellowConfig::load Email:noreply@datenstrom.se
+YellowConfig::load Email:webmaster
 YellowConfig::load Language:en
 YellowConfig::load Theme:flatsite
 ```

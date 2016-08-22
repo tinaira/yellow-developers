@@ -5,7 +5,7 @@
 // Image plugin
 class YellowImage
 {
-	const VERSION = "0.6.5";
+	const VERSION = "0.6.6";
 	var $yellow;			//access to API
 	var $graphicsLibrary;	//graphics library support? (boolean)
 
@@ -28,7 +28,7 @@ class YellowImage
 		{
 			if(!$this->graphicsLibrary)
 			{
-				$this->yellow->page->error(500, "Plugin 'image' requires GD library with JPEG and PNG support!");
+				$this->yellow->page->error(500, "Plugin 'image' requires GD library with JPG and PNG support!");
 				return $output;
 			}
 			list($name, $alt, $style, $width, $height) = $this->yellow->toolbox->getTextArgs($text);
@@ -99,8 +99,8 @@ class YellowImage
 			if($this->isFileNotUpdated($fileName, $fileNameOutput))
 			{
 				$image = $this->loadImage($fileName, $type);
-				if(!is_null($image)) $image = $this->resizeImage($image, $widthInput, $heightInput, $widthOutput, $heightOutput);
-				if(!$this->saveImage($fileNameOutput, $type, $image) ||
+				$image = $this->resizeImage($image, $widthInput, $heightInput, $widthOutput, $heightOutput);
+				if(!$this->saveImage($image, $fileNameOutput, $type) ||
 				   !$this->yellow->toolbox->modifyFile($fileNameOutput, $this->yellow->toolbox->getFileModified($fileName)))
 				{
 					$this->yellow->page->error(500, "Image '$fileNameOutput' can't be saved!");
@@ -115,7 +115,7 @@ class YellowImage
 	// Load image from file
 	function loadImage($fileName, $type)
 	{
-		$image = null;
+		$image = false;
 		switch($type)
 		{
 			case "jpg":	$image = @imagecreatefromjpeg($fileName); break;
@@ -124,19 +124,7 @@ class YellowImage
 		return $image;
 	}
 
-	// Save image as file
-	function saveImage($fileName, $type, $image)
-	{
-		$ok = false;
-		switch($type)
-		{
-			case "jpg":	$ok = @imagejpeg($image, $fileName, $this->yellow->config->get("imageJpegQuality")); break;
-			case "png":	$ok = @imagepng($image, $fileName); break;
-		}
-		return $ok;
-	}
-
-	// Create image
+	// Create image from scratch
 	function createImage($width, $height)
 	{
 		$image = imagecreatetruecolor($width, $height);
@@ -146,7 +134,7 @@ class YellowImage
 	}
 
 	// Resize image
-	function resizeImage($imageInput, $widthInput, $heightInput, $widthOutput, $heightOutput)
+	function resizeImage($image, $widthInput, $heightInput, $widthOutput, $heightOutput)
 	{
 		$widthFit = $widthInput * ($heightOutput / $heightInput);
 		$heightFit = $heightInput * ($widthOutput / $widthInput);
@@ -155,13 +143,25 @@ class YellowImage
 		$imageOutput = $this->createImage($widthOutput, $heightOutput);
 		if($heightFit>$heightOutput)
 		{
-			imagecopyresampled($imageOutput, $imageInput, 0, $heightDiff/-2, 0, 0, $widthOutput, $heightFit, $widthInput, $heightInput);
+			imagecopyresampled($imageOutput, $image, 0, $heightDiff/-2, 0, 0, $widthOutput, $heightFit, $widthInput, $heightInput);
 		} else {
-			imagecopyresampled($imageOutput, $imageInput, $widthDiff/-2, 0, 0, 0, $widthFit, $heightOutput, $widthInput, $heightInput);
+			imagecopyresampled($imageOutput, $image, $widthDiff/-2, 0, 0, 0, $widthFit, $heightOutput, $widthInput, $heightInput);
 		}
 		return $imageOutput;
 	}
 
+	// Save image to file
+	function saveImage($image, $fileName, $type)
+	{
+		$ok = false;
+		switch($type)
+		{
+			case "jpg":	$ok = @imagejpeg($image, $fileName, $this->yellow->config->get("imageJpegQuality")); break;
+			case "png":	$ok = @imagepng($image, $fileName); break;
+		}
+		return $ok;
+	}
+	
 	// Return value according to unit
 	function convertValueAndUnit($text, $valueBase)
 	{
