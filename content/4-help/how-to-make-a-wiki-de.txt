@@ -80,9 +80,9 @@ Neu
 
 Links
 
-* [Beispiel](/wiki/tag:example/)  
-* [Kaffee](/wiki/tag:coffee/)
 * [Letzte Änderungen](/wiki/special:changes/)
+* [Beispiel](/tag:beispiel/)  
+* [Kaffee](/tag:kaffee/)
 ```
 
 Hier sind die selben Abkürzungen, falls sich das Wiki auf der Startseite befindet:
@@ -98,9 +98,9 @@ Neu
 
 Links
 
-* [Beispiel](/tag:example/)  
-* [Kaffee](/tag:coffee/)
 * [Letzte Änderungen](/special:changes/)
+* [Beispiel](/tag:beispiel/)  
+* [Kaffee](/tag:kaffee/)
 ```
 
 ## Weitere Funktionen

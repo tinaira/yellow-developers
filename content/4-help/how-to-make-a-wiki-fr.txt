@@ -81,9 +81,9 @@ Recent
 
 Links
 
+* [Recent changes](/wiki/special:changes/)
 * [Example](/wiki/tag:example/)  
 * [Coffee](/wiki/tag:coffee/)
-* [Recent changes](/wiki/special:changes/)
 ```
 
 Voici les mêmes raccourcis, si le wiki est situé sur la page d'accueil:
@@ -99,9 +99,9 @@ Recent
 
 Links
 
+* [Recent changes](/special:changes/)
 * [Example](/tag:example/)  
 * [Coffee](/tag:coffee/)
-* [Recent changes](/special:changes/)
 ```
 
 ## Plus de fonctionnalités

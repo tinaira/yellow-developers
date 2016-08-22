@@ -8,6 +8,6 @@ Recent
 
 Links
 
+* [Recent changes](/plugins/wiki-plugin/special:changes/)  
 * [Example](/plugins/wiki-plugin/tag:example/)  
 * [Coffee](/plugins/wiki-plugin/tag:coffee/)
-* [Recent changes](/plugins/wiki-plugin/special:changes/)  

@@ -5,7 +5,7 @@
 // Wiki plugin
 class YellowWiki
 {
-	const VERSION = "0.6.6";
+	const VERSION = "0.6.7";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -167,6 +167,7 @@ class YellowWiki
 				$this->yellow->page->set("titleWiki", $this->yellow->text->get("wikiFilter")." ".$title);
 				$this->yellow->page->set("wikipagesChronologicalOrder", $chronologicalOrder);
 			}
+			$this->yellow->page->set("content", !empty($pagesFilter) ? "content-wikipages" : "content-wiki");
 			$this->yellow->page->setPages($pages);
 			$this->yellow->page->setLastModified($pages->getModified());
 			$this->yellow->page->setHeader("Cache-Control", "max-age=60");
