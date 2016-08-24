@@ -428,7 +428,7 @@ Some tips for developers:
 
 1. [Download the developers kit](https://github.com/datenstrom/yellow-developers). The developers kit includes plugins, themes, examples and documentation. You can try out how to make small web pages, blogs and wikis. It's a great place to get started with the Yellow API.
 
-2. Put your code on GitHub. Create a new repository for each new plugin/theme. The name of your repository should be `yellow-plugin-something` or `yellow-theme-something`. We're looking forward to see what you create. [Read more](https://github.com/datenstrom/yellow/issues?q=label%3Anews%20).
+2. [Put your code on GitHub](https://github.com/datenstrom/yellow/issues?q=label%3Anews%20). Create a new repository for each new plugin/theme. The name of your repository should be `yellow-plugin-something` or `yellow-theme-something`. When your code becomes stable, you can move the plugin/theme to the main repository.
 
 3. Use relative locations, which means relative to your home page. You can use `$page->getLocation(true)` to access the absolute page location and `$page->getUrl()` to access the complete page URL. [See example](https://github.com/datenstrom/yellow-developers/blob/master/system/themes/templates/locationapi.html).
 
