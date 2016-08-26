@@ -1,7 +1,7 @@
 ---
-Title: Knowhow theme
-TitlePreview: Knowhow
 Sitename: Knowhow
+Title: Knowhow theme
+Description: GitHub-like knowledge base
 Theme: knowhow
 Navigation: navigation-search
 ---

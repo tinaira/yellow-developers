@@ -1,6 +1,6 @@
 ---
 Title: Wiki plugin
-TitlePreview: Wiki
+Description: Wiki for your website
 Template: wikipages
 ---
 Wiki for your website. 

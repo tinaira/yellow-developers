@@ -1,6 +1,6 @@
 ---
 Title: Youtube plugin
-TitlePreview: Youtube 
+Description: Embed Youtube videos 
 ---
 Embed Youtube videos.
 [Install plugin](https://github.com/datenstrom/yellow-plugins/tree/master/youtube).

@@ -1,6 +1,6 @@
 ---
 Title: Googlemaps plugin
-TitlePreview: Googlemaps 
+Description: Embed Gooogle maps 
 ---
 Embed Gooogle maps.
 [Install plugin](https://github.com/datenstrom/yellow-plugins/tree/master/googlemaps).

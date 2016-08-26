@@ -5,7 +5,7 @@
 // Image plugin
 class YellowImage
 {
-	const VERSION = "0.6.6";
+	const VERSION = "0.6.7";
 	var $yellow;			//access to API
 	var $graphicsLibrary;	//graphics library support? (boolean)
 
@@ -166,13 +166,13 @@ class YellowImage
 	function convertValueAndUnit($text, $valueBase)
 	{
 		$value = $unit = "";
-		if(preg_match("/(\d+)(\S*)/", $text, $matches))
+		if(preg_match("/([\d\.]+)(\S*)/", $text, $matches))
 		{
 			$value = $matches[1];
 			$unit = $matches[2];
-			if($unit=="%") $value = intval($valueBase * $value / 100);
+			if($unit=="%") $value = $valueBase * $value / 100;
 		}
-		return $value;
+		return intval($value);
 	}
 
 	// Check if file needs to be updated

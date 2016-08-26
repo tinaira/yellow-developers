@@ -1,11 +1,12 @@
 ---
 Title: Image plugin
-TitlePreview: Image 
+Description: Resizable images and thumbnails 
 ---
 Resizable images and thumbnails.
 [Install plugin](https://github.com/datenstrom/yellow-plugins/tree/master/image).
 
-[image picture.jpg Example - 60%]
-[image picture.jpg Example - 30%]
+[image picture.jpg Example - 65%]
+
+[image picture.jpg Example - 34%]
 [image picture.jpg Example - 20%]
-[image picture.jpg Example - 9%]
+[image picture.jpg Example - 10%]

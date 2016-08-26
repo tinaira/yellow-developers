@@ -13,4 +13,4 @@ Simple gallery:
 
 Large gallery:
 
-[gallery .*theme.jpg simple]
+[gallery .*theme.png simple]

@@ -3,9 +3,9 @@ Title: How to make a website
 Sidebar: sidebar
 Language: en
 ---
-Learn how to make a website with Yellow. 
+[image screenshot-website.png Screenshot - 50%]
 
-[image screenshot-website.jpg Screenshot]
+Learn how to make a website with Yellow. 
 
 ## Install website
 
@@ -46,7 +46,7 @@ Now let's add an image with the [image plugin](https://github.com/datenstrom/yel
 ---
 Title: Yellow is for people who make websites
 ---
-[image picture.jpg]
+[image picture.jpg Picture rounded]
 
 You can [edit this page]. The help gives you more information 
 about how to create small web pages, blogs and wikis.
@@ -59,7 +59,7 @@ Let's show a different title in the navigation:
 Title: Yellow is for people who make websites
 TitleNavigation: Home
 ---
-[image picture.jpg]
+[image picture.jpg Picture rounded]
 
 You can [edit this page]. The help gives you more information 
 about how to create small web pages, blogs and wikis.

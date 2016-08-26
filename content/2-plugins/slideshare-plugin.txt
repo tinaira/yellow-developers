@@ -1,6 +1,6 @@
 ---
 Title: Slideshare plugin
-TitlePreview: Slideshare
+Description: Embed Slideshare presentations
 ---
 Embed Slideshare presentations.
 [Install plugin](https://github.com/datenstrom/yellow-plugins/tree/master/slideshare).

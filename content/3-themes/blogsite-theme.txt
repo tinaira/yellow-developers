@@ -1,7 +1,7 @@
 ---
-Title: Blogsite theme
-TitlePreview: Blogsite
 Sitename: Blogsite
+Title: Blogsite theme
+Description: Basic blogger theme
 Theme: blogsite
 Navigation: navigation
 ---

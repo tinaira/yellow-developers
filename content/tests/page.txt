@@ -5,8 +5,7 @@ TitleNavigation: Tests
 A collection of tests for developers.
 
 * [file-name-unicode-äö](file-name-unicode-äö)
-* [file-name-whitespace](file-name-whitespace)
-* [folder-name](folder-name/)* [image-parsing1](image-parsing1)
+* [file-name-whitespace](file-name-whitespace)* [image-parsing1](image-parsing1)
 * [image-parsing2](image-parsing2)
 * [link-parsing](link-parsing)
 * [location-api](location-api)

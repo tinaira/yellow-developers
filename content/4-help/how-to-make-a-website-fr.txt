@@ -5,9 +5,9 @@ Language: fr
 ---
 >> [Todo: You can help us and translate this page](https://github.com/datenstrom/yellow-developers/blob/master/content/4-help/how-to-make-a-website-fr.txt)
 
-Apprenez à faire un site web avec Yellow.
+[image screenshot-website.png Screenshot - 50%]
 
-[image screenshot-website.jpg Screenshot]
+Apprenez à faire un site web avec Yellow.
 
 ## Installer votre site
 
@@ -48,7 +48,7 @@ Maintenant ajoutons une image avec le [plugin image](https://github.com/datenstr
 ---
 Title: Yellow est fait pour les gens qui font des sites web
 ---
-[image picture.jpg]
+[image picture.jpg Picture rounded]
 
 Vous pouvez [edit - modifier cette page]. L'aide vous donne plus 
 d'informations sur la façon de créer de petites pages web, blogs et wikis.
@@ -61,7 +61,7 @@ Voyons comment créer un titre différent dans le menu de navigation:
 Title: Yellow est fait pour les gens qui font des sites web
 TitleNavigation: Home
 ---
-[image picture.jpg]
+[image picture.jpg Picture rounded]
 
 Vous pouvez [edit - modifier cette page]. L'aide vous donne plus 
 d'informations sur la façon de créer de petites pages web, blogs et wikis.

@@ -3,9 +3,9 @@ Title: Webseite erstellen
 Sidebar: sidebar-de
 Language: de
 ---
-Lerne wie man eine Webseite mit Yellow erstellt.
+[image screenshot-website.png Screenshot - 50%]
 
-[image screenshot-website.jpg Screenshot]
+Lerne wie man eine Webseite mit Yellow erstellt.
 
 ## Webseite installieren
 
@@ -46,7 +46,7 @@ Ein Bild hinzufügen mit dem [Image-Plugin](https://github.com/datenstrom/yellow
 ---
 Title: Yellow ist für Menschen die Webseiten machen
 ---
-[image picture.jpg]
+[image picture.jpg Picture rounded]
 
 Du kannst [edit - diese Seite bearbeiten]. Die Hilfe gibt dir weitere 
 Informationen wie man kleine Webseiten, Blogs und Wikis erstellt.
@@ -59,7 +59,7 @@ Einen anderen Titel in der Navigation anzeigen:
 Title: Yellow ist für Menschen die Webseiten machen
 TitleNavigation: Home
 ---
-[image picture.jpg]
+[image picture.jpg Picture rounded]
 
 Du kannst [edit - diese Seite bearbeiten]. Die Hilfe gibt dir weitere 
 Informationen wie man kleine Webseiten, Blogs und Wikis erstellt.

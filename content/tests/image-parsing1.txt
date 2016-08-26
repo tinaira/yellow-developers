@@ -11,8 +11,8 @@ JPG in different sizes:
 
 JPG in different sizes (percentage):
 
-[image picture.jpg Example - 50%]
-[image picture.jpg Example - 25%]
+[image picture.jpg Example - 65%]
+[image picture.jpg Example - 20%]
 [image picture.jpg Example - 10%]
 
 JPG with class left:

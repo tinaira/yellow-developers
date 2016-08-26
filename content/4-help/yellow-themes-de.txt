@@ -29,7 +29,7 @@ a:hover { color:#07d; text-decoration:underline; }
 
 ## JavaScript
 
-Du kannst [JavaScript](http://de.wikipedia.org/wiki/JavaScript) in eine Datei abspeichern, die so heisst wie ein Theme und sie wird automatisch benutzt. Das ermöglicht es Themes mit weiteren Funktionen zu erstellen. Für Script-Abhängige gibt es auch ein hervorragendes [jQuery-Plugin](https://github.com/nogginfuel/yellow-plugin-jquery).
+Um ein Theme zu erweitern gibt es die Möglichkeit [JavaScript](http://de.wikipedia.org/wiki/JavaScript) einzubinden. Du kannst ein Script mit dem Namen eines Themes erstellen und es wird zusammen mit dem Theme eingebunden. Das ermöglicht es beliebige dynamische Funktionen mit Yellow zu erstellen.
 
 Hier ist ein Beispiel-JavaScript `system/themes/assets/home.js`:
 
@@ -48,7 +48,7 @@ if(window.addEventListener) {
 
 ## Siteicon
 
-Das Siteicon, auch Favicon genannt ist ein kleines Bild, das stellvertretend für eine Webseite ist. Das Standardicon wird in der Datei `system/config/config.ini` festgelegt. Eine anderes Icon lässt sich in den [Einstellungen](markdown-cheat-sheet-de#einstellungen) auf jeder Seite festlegen, zum Beispiel `Siteicon: icon`.
+Das Siteicon, auch Favicon genannt, ist ein kleines Bild das stellvertretend für eine Webseite ist. Das Standardicon wird in der Datei `system/config/config.ini` festgelegt. Eine anderes Icon lässt sich in den [Einstellungen](markdown-cheat-sheet-de#einstellungen) auf jeder Seite festlegen, zum Beispiel `Siteicon: icon`.
 
 Um das Siteicon zu ändern überschreibe die Datei `system/themes/assets/icon.png`.
 

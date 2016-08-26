@@ -5,7 +5,7 @@
 // Release plugin
 class YellowRelease
 {
-	const VERSION = "0.6.11";
+	const VERSION = "0.6.12";
 
 	// Handle plugin initialisation
 	function onLoad($yellow)
@@ -14,7 +14,7 @@ class YellowRelease
 		$this->yellow->config->setDefault("releasePluginsDir", "/Users/Shared/Github/yellow-plugins/");
 		$this->yellow->config->setDefault("releaseThemesDir", "/Users/Shared/Github/yellow-themes/");
 		$this->yellow->config->setDefault("releaseZipArchiveDir", "zip/");
-		$this->yellow->config->setDefault("releaseZipFileIgnore", "README.md|plugin.jpg|theme.jpg");
+		$this->yellow->config->setDefault("releaseZipFileIgnore", "README.md|screenshot.jpg|screenshot.png");
 		$this->yellow->config->setDefault("releaseDocumentationFile", "README.md");
 	}
 

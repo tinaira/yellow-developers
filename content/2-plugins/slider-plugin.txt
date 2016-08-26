@@ -1,6 +1,6 @@
 ---
 Title: Slider plugin
-TitlePreview: Slider 
+Description: Image gallery with slider 
 ---
 Image gallery with slider. 
 [Install plugin](https://github.com/datenstrom/yellow-plugins/tree/master/slider).

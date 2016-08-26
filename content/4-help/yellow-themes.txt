@@ -29,7 +29,7 @@ a:hover { color:#07d; text-decoration:underline; }
 
 ## JavaScript
 
-You can put [JavaScript](http://en.wikipedia.org/wiki/JavaScript) into a file with the name of a theme and it will be automatically used. This allows you to create themes with more features. For script addicts there's also an excellent [jQuery plugin](https://github.com/nogginfuel/yellow-plugin-jquery).
+To extend a theme you have the possibility to use [JavaScript](http://en.wikipedia.org/wiki/JavaScript). You can create a script with the name of a theme and it will be included together with the theme. This allows you to create any dynamic feature with Yellow.
 
 Here's an example JavaScript file `system/themes/assets/home.js`:
 

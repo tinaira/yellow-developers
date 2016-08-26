@@ -1,7 +1,0 @@
----
-Title: Test folder name
----
-
-This page tests sub folder. 
-
-A folder name can be used as location.

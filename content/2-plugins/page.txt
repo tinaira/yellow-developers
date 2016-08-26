@@ -1,8 +1,7 @@
 ---
 Title: Yellow plugins
 TitleNavigation: Plugins
-Sidebar: none
 ---
-Great technology is simple to use and adjust. [See all plugins](https://github.com/datenstrom/yellow-plugins).
+[preview /plugins/ - 40.5%]
 
-[preview /plugins/ threepages 33%]
+Want to install more features? [See all plugins](/help/yellow-plugins-on-github).

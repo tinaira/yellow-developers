@@ -1,7 +1,6 @@
 ---
 Title: Blog plugin
-TitlePreview: Blog
+Description: Blog for your website
 Template: blogpages
-Description: Blog
 ---
 This page is automatically generated.
