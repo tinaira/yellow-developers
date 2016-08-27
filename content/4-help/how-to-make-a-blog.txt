@@ -136,7 +136,7 @@ Archive
 ## More features
 
 * [How to add comments to your blog](https://github.com/datenstrom/yellow-plugins/tree/master/disqus)
-* [How to add a contact page to your blog](https://github.com/datenstrom/yellow-plugins/tree/master/contact)
+* [How to add a search to your blog](https://github.com/datenstrom/yellow-plugins/tree/master/search)
 * [How to add a feed to your blog](https://github.com/datenstrom/yellow-plugins/tree/master/feed)
 * [How to make a draft page](https://github.com/datenstrom/yellow-plugins/tree/master/draft)
 * [How to make a static blog](web-server-configuration#static-website)

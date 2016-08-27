@@ -85,10 +85,10 @@ Links
 
 ## More features
 
-* [How to add a contact page to your website](https://github.com/datenstrom/yellow-plugins/tree/master/contact)
 * [How to add an image gallery to your website](https://github.com/datenstrom/yellow-plugins/tree/master/gallery)
-* [How to add a feed to your website](https://github.com/datenstrom/yellow-plugins/tree/master/feed)
 * [How to add a search to your website](https://github.com/datenstrom/yellow-plugins/tree/master/search)
+* [How to add a feed to your website](https://github.com/datenstrom/yellow-plugins/tree/master/feed)
+* [How to add a contact page to your website](https://github.com/datenstrom/yellow-plugins/tree/master/contact)
 * [How to make a static website](web-server-configuration#static-website)
 
 [Next: How to make a blog →](how-to-make-a-blog)

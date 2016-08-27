@@ -135,7 +135,7 @@ Archiv
 ## Weitere Funktionen
 
 * [Eine Kommentarfunktion zum Blog hinzufügen](https://github.com/datenstrom/yellow-plugins/tree/master/disqus)
-* [Eine Kontaktseite zum Blog hinzufügen](https://github.com/datenstrom/yellow-plugins/tree/master/contact)
+* [Eine Suche zum Blog hinzufügen](https://github.com/datenstrom/yellow-plugins/tree/master/search)
 * [Einen Feed zum Blog hinzufügen](https://github.com/datenstrom/yellow-plugins/tree/master/feed)
 * [Eine Entwurfseite erstellen](https://github.com/datenstrom/yellow-plugins/tree/master/draft)
 * [Ein statisches Blog erstellen](web-server-configuration-de#statische-webseite)

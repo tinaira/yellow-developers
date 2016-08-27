@@ -1,6 +1,6 @@
 ---
 Title: Markdown antisèche
-Sidebar: sidebar-fr
+Sidebar: none
 Language: fr
 ---
 >> [Todo: You can help us and translate this page](https://github.com/datenstrom/yellow-developers/blob/master/content/4-help/markdown-cheat-sheet-fr.txt)
@@ -47,13 +47,17 @@ Ajout d'image:
 
     ![image](picture.jpg)
 
-Ajout d'emoji, avec l'aide d'un [plugin](https://github.com/datenstrom/yellow-plugins/tree/master/emojiawesome):
+Ajout d'image avec le [plugin image](https://github.com/datenstrom/yellow-plugins/tree/master/image):
+
+    [image picture.jpg)
+
+Ajout d'emoji avec le [plugin emoji](https://github.com/datenstrom/yellow-plugins/tree/master/emojiawesome):
 
     :smile: :grinning: :angry: :heart: :coffee: :+1:
 
 ## Raccourcis
 
-`[image picture.jpg]` = add [images and thumbnails](https://github.com/datenstrom/yellow-plugins/tree/master/image)  
+`[image picture.jpg - 50%]` = add [image thumbnail](https://github.com/datenstrom/yellow-plugins/tree/master/image)  
 `[gallery photo.*jpg - 20%]` = add [image gallery](https://github.com/datenstrom/yellow-plugins/tree/master/gallery)  
 `[slider photo.*jpg]` = add [image gallery with slider](https://github.com/datenstrom/yellow-plugins/tree/master/slider)  
 `[youtube fhs55HEl-Gc]` = embed [Youtube video](https://github.com/datenstrom/yellow-plugins/tree/master/youtube)  
@@ -63,6 +67,7 @@ Ajout d'emoji, avec l'aide d'un [plugin](https://github.com/datenstrom/yellow-pl
 `[googlemaps Stockholm]` = embed [Google maps](https://github.com/datenstrom/yellow-plugins/tree/master/googlemaps)  
 `[blogrecent /blog/]` = show [recent blog pages](https://github.com/datenstrom/yellow-plugins/tree/master/blog#how-to-configure-a-blog)  
 `[wikirecent /wiki/]` = show [recent wiki pages](https://github.com/datenstrom/yellow-plugins/tree/master/wiki#how-to-configure-a-wiki)  
+`[fa fa-envelope-o]` = show [icons and symbols](https://github.com/datenstrom/yellow-plugins/tree/master/fontawesome)  
 `[toc]` = show [table of contents](https://github.com/datenstrom/yellow-plugins/tree/master/toc)  
 
 ## Paramètres

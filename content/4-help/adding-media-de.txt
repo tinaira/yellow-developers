@@ -15,7 +15,7 @@ Hier ist beschreiben wie man Bilder auf einer Seite verwendet. Öffne die Datei 
 
 `![image](picture.jpg)` zeigt `http://website/media/images/picture.jpg`  
 
-Es gibt auch das [Image-Plugin](https://github.com/datenstrom/yellow-plugins/tree/master/image) um Bildgrößen zu ändern und Thumbnails zu erzeugen.
+Es gibt auch das [Image-Plugin](https://github.com/datenstrom/yellow-plugins/tree/master/image) um Bildgrößen zu ändern und Miniaturbilder zu erzeugen.
 
 `[image picture.jpg]` zeigt `http://website/media/images/picture.jpg`  
 

@@ -106,10 +106,10 @@ Links
 
 ## More features
 
+* [How to add a table of contents to your wiki](https://github.com/datenstrom/yellow-plugins/tree/master/toc)
 * [How to add a search to your wiki](https://github.com/datenstrom/yellow-plugins/tree/master/search)
 * [How to add a sitemap to your wiki](https://github.com/datenstrom/yellow-plugins/tree/master/sitemap)
 * [How to add a contact page to your wiki](https://github.com/datenstrom/yellow-plugins/tree/master/contact)
-* [How to make a table of contents](https://github.com/datenstrom/yellow-plugins/tree/master/toc)
 * [How to make a static wiki](web-server-configuration#static-website)
 
 [Next: Adding content →](adding-content)

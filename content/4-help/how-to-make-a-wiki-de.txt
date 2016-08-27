@@ -105,10 +105,10 @@ Links
 
 ## Weitere Funktionen
 
+* [Ein Inhaltsverzeichnis zum Wiki hinzufügen](https://github.com/datenstrom/yellow-plugins/tree/master/toc)
 * [Eine Suchfunktion zum Wiki hinzufügen](https://github.com/datenstrom/yellow-plugins/tree/master/search)
 * [Eine Sitemap zum Wiki hinzufügen](https://github.com/datenstrom/yellow-plugins/tree/master/sitemap)
 * [Eine Kontaktseite zum Wiki hinzufügen](https://github.com/datenstrom/yellow-plugins/tree/master/contact)
-* [Ein Inhaltsverzeichnis zum Wiki hinzufügen](https://github.com/datenstrom/yellow-plugins/tree/master/toc)
 * [Ein statisches Wiki erstellen](web-server-configuration-de#statische-webseite)
 
 [Weiter: Inhalt hinzufügen →](adding-content-de)

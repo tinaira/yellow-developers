@@ -1,6 +1,6 @@
 ---
 Title: Markdown-Spickzettel
-Sidebar: sidebar-de
+Sidebar: none
 Language: de
 ---
 Markdown ist eine praktische Art um Webseiten zu bearbeiten.
@@ -45,13 +45,17 @@ Ein Bild hinzufügen:
 
     ![image](picture.jpg)
 
-Emoji hinzufügen, mit Hilfe eines [Plugins](https://github.com/datenstrom/yellow-plugins/tree/master/emojiawesome):
+Ein Bild hinzufügen mit dem [Image-Plugin](https://github.com/datenstrom/yellow-plugins/tree/master/image):
+
+    [image picture.jpg]
+
+Emoji hinzufügen mit dem [Emoji-Plugin](https://github.com/datenstrom/yellow-plugins/tree/master/emojiawesome):
 
     :smile: :grinning: :angry: :heart: :coffee: :+1:
 
 ## Abkürzungen
 
-`[image picture.jpg]` = [Bilder und Thumbnails](https://github.com/datenstrom/yellow-plugins/tree/master/image) hinzufügen  
+`[image picture.jpg - 50%]` = [Miniaturbild](https://github.com/datenstrom/yellow-plugins/tree/master/image) hinzufügen  
 `[gallery photo.*jpg - 20%]` = [Bildergallerie](https://github.com/datenstrom/yellow-plugins/tree/master/gallery) hinzufügen  
 `[slider photo.*jpg]` = [Bildergallerie mit Schieber](https://github.com/datenstrom/yellow-plugins/tree/master/slider) hinzufügen  
 `[youtube fhs55HEl-Gc]` = [Youtube-Video](https://github.com/datenstrom/yellow-plugins/tree/master/youtube) einbinden  
@@ -61,6 +65,7 @@ Emoji hinzufügen, mit Hilfe eines [Plugins](https://github.com/datenstrom/yello
 `[googlemaps Stockholm]` = [Google-Maps](https://github.com/datenstrom/yellow-plugins/tree/master/googlemaps) einbinden  
 `[blogrecent /blog/]` = [neuste Blogseiten](https://github.com/datenstrom/yellow-plugins/tree/master/blog#how-to-configure-a-blog) anzeigen  
 `[wikirecent /wiki/]` = [neuste Wikiseiten](https://github.com/datenstrom/yellow-plugins/tree/master/wiki#how-to-configure-a-wiki) anzeigen  
+`[fa fa-envelope-o]` = [Ikonen und Symbole](https://github.com/datenstrom/yellow-plugins/tree/master/fontawesome) anzeigen  
 `[toc]` = [Inhaltsübersicht](https://github.com/datenstrom/yellow-plugins/tree/master/toc) anzeigen  
 
 ## Einstellungen

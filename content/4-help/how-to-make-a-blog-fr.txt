@@ -137,7 +137,7 @@ Archive
 ## Plus de fonctionnalités
 
 * [Comment ajouter des commentaires à votre blog](https://github.com/datenstrom/yellow-plugins/tree/master/disqus)
-* [Comment ajouter une page de contact à votre blog](https://github.com/datenstrom/yellow-plugins/tree/master/contact)
+* [Comment ajouter un moteur de recherche à votre blog](https://github.com/datenstrom/yellow-plugins/tree/master/search)
 * [Comment ajouter un feed à votre blog](https://github.com/datenstrom/yellow-plugins/tree/master/feed)
 * [Comment créer une page de brouillon](https://github.com/datenstrom/yellow-plugins/tree/master/draft)
 * [Comment créer un blog statique](web-server-configuration-fr#static-website)

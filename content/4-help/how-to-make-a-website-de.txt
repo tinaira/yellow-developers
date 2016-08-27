@@ -84,10 +84,10 @@ Links
 
 ## Weitere Funktionen
 
-* [Eine Kontaktseite zur Webseite hinzufügen](https://github.com/datenstrom/yellow-plugins/tree/master/contact)
 * [Eine Bildergalerie zur Webseite hinzufügen](https://github.com/datenstrom/yellow-plugins/tree/master/gallery)
-* [Einen Feed zur Webseite hinzufügen](https://github.com/datenstrom/yellow-plugins/tree/master/feed)
 * [Eine Suche zur Webseite hinzufügen](https://github.com/datenstrom/yellow-plugins/tree/master/search)
+* [Einen Feed zur Webseite hinzufügen](https://github.com/datenstrom/yellow-plugins/tree/master/feed)
+* [Eine Kontaktseite zur Webseite hinzufügen](https://github.com/datenstrom/yellow-plugins/tree/master/contact)
 * [Eine statische Webseite erstellen](web-server-configuration-de#statische-webseite)
 
 [Weiter: Blog erstellen →](how-to-make-a-blog-de)
