@@ -5,7 +5,7 @@
 // Preview plugin
 class YellowPreview
 {
-	const VERSION = "0.6.8";
+	const VERSION = "0.6.9";
 	var $yellow;			//access to API
 
 	// Handle initialisation
@@ -29,37 +29,42 @@ class YellowPreview
 			$content = $this->yellow->pages->find($location);
 			$pages = $content ? $content->getChildren() : $this->yellow->pages->clean();
 			$pages->sort("title");
-			if(count($pages) && $this->yellow->plugins->isExisting("image"))
+			if($this->yellow->plugins->isExisting("image"))
 			{
-				$page->setLastModified($pages->getModified());
-				$output = "<div class=\"".htmlspecialchars($style)."\">\n";
-				$output .= "<ul>\n";
-				foreach($pages as $page)
+				if(count($pages))
 				{
-					foreach(array("jpg", "png", "svg") as $fileExtension)
+					$page->setLastModified($pages->getModified());
+					$output = "<div class=\"".htmlspecialchars($style)."\">\n";
+					$output .= "<ul>\n";
+					foreach($pages as $page)
 					{
-						$fileName = $this->yellow->config->get("imageDir").basename($page->location).".".$fileExtension;
-						list($src, $width, $height) = $this->yellow->plugins->get("image")->getImageInfo($fileName, $size, $size);
-						if($width && $height) break;
+						foreach(array("jpg", "png", "svg") as $fileExtension)
+						{
+							$fileName = $this->yellow->config->get("imageDir").basename($page->location).".".$fileExtension;
+							list($src, $width, $height) = $this->yellow->plugins->get("image")->getImageInfo($fileName, $size, $size);
+							if($width && $height) break;
+						}
+						if(!is_readable($fileName))
+						{
+							$fileName = $this->yellow->config->get("imageDir").$this->yellow->config->get("previewImage");
+							list($src, $width, $height) = $this->yellow->plugins->get("image")->getImageInfo($fileName, $size, $size);
+						}
+						$title = $page->get("titlePreview"); if(empty($title)) $title = $page->get("title");
+						$description = $page->get("descriptionPreview"); if(empty($description)) $description = $page->get("description");
+						$output .= "<li><a href=\"".$page->getLocation(true)."\">";
+						$output .= "<span class=\"preview-image\"><img src=\"".htmlspecialchars($src)."\" width=\"".
+							htmlspecialchars($width)."\" height=\"".
+							htmlspecialchars($height)."\" alt=\"".htmlspecialchars($title)."\" title=\"".
+							htmlspecialchars($title)."\" /></span><br />";
+						$output .= "<span class=\"preview-description\">".htmlspecialchars($description)."</span></a></li>\n";
 					}
-					if(!is_readable($fileName))
-					{
-						$fileName = $this->yellow->config->get("imageDir").$this->yellow->config->get("previewImage");
-						list($src, $width, $height) = $this->yellow->plugins->get("image")->getImageInfo($fileName, $size, $size);
-					}
-					$title = $page->get("titlePreview"); if(empty($title)) $title = $page->get("title");
-					$description = $page->get("descriptionPreview"); if(empty($description)) $description = $page->get("description");
-					$output .= "<li><a href=\"".$page->getLocation(true)."\">";
-					$output .= "<span class=\"preview-image\"><img src=\"".htmlspecialchars($src)."\" width=\"".
-						htmlspecialchars($width)."\" height=\"".
-						htmlspecialchars($height)."\" alt=\"".htmlspecialchars($title)."\" title=\"".
-						htmlspecialchars($title)."\" /></span><br />";
-					$output .= "<span class=\"preview-description\">".htmlspecialchars($description)."</span></a></li>\n";
+					$output .= "</ul>\n";
+					$output .= "</div>\n";
+				} else {
+					$page->error(500, "Preview '$location' does not exist!");
 				}
-				$output .= "</ul>\n";
-				$output .= "</div>\n";
 			} else {
-				$page->error(500, "Preview '$location' does not exist!");
+				$page->error(500, "Preview requires 'image' plugin!");
 			}
 		}
 		return $output;

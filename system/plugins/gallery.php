@@ -5,7 +5,7 @@
 // Gallery plugin
 class YellowGallery
 {
-	const VERSION = "0.6.5";
+	const VERSION = "0.6.6";
 	var $yellow;			//access to API
 
 	// Handle initialisation
@@ -31,25 +31,30 @@ class YellowGallery
 				$images = $this->yellow->config->get("imageDir");
 				$files = $this->yellow->files->index(true, true)->match("#$images$pattern#");
 			}
-			if(count($files) && $this->yellow->plugins->isExisting("image"))
+			if($this->yellow->plugins->isExisting("image"))
 			{
-				$page->setLastModified($files->getModified());
-				$output = "<div class=\"".htmlspecialchars($style)."\" data-fullscreenel=\"false\" data-shareel=\"false\"";
-				if(substru($size, -1, 1)!="%") $output .= " data-thumbsquare=\"true\"";
-				$output .= ">\n";
-				foreach($files as $file)
+				if(count($files))
 				{
-					list($widthInput, $heightInput) = $this->yellow->toolbox->detectImageInfo($file->fileName);
-					list($src, $width, $height) = $this->yellow->plugins->get("image")->getImageInfo($file->fileName, $size, $size);
-					$output .= "<a href=\"".$file->getLocation(true)."\" data-size=\"{$widthInput}x{$heightInput}\">";
-					$output .= "<img src=\"".htmlspecialchars($src)."\" width=\"".htmlspecialchars($width)."\" height=\"".
-						htmlspecialchars($height)."\" alt=\"".basename($file->getLocation(true))."\" title=\"".
-						basename($file->getLocation(true))."\" />";
-					$output .= "</a> \n";
+					$page->setLastModified($files->getModified());
+					$output = "<div class=\"".htmlspecialchars($style)."\" data-fullscreenel=\"false\" data-shareel=\"false\"";
+					if(substru($size, -1, 1)!="%") $output .= " data-thumbsquare=\"true\"";
+					$output .= ">\n";
+					foreach($files as $file)
+					{
+						list($widthInput, $heightInput) = $this->yellow->toolbox->detectImageInfo($file->fileName);
+						list($src, $width, $height) = $this->yellow->plugins->get("image")->getImageInfo($file->fileName, $size, $size);
+						$output .= "<a href=\"".$file->getLocation(true)."\" data-size=\"{$widthInput}x{$heightInput}\">";
+						$output .= "<img src=\"".htmlspecialchars($src)."\" width=\"".htmlspecialchars($width)."\" height=\"".
+							htmlspecialchars($height)."\" alt=\"".basename($file->getLocation(true))."\" title=\"".
+							basename($file->getLocation(true))."\" />";
+						$output .= "</a> \n";
+					}
+					$output .= "</div>";
+				} else {
+					$page->error(500, "Gallery '$pattern' does not exist!");
 				}
-				$output .= "</div>";
 			} else {
-				$page->error(500, "Gallery '$pattern' does not exist!");
+				$page->error(500, "Gallery requires 'image' plugin!");
 			}
 		}
 		return $output;
@@ -63,7 +68,6 @@ class YellowGallery
 		{
 			$pluginLocation = $this->yellow->config->get("serverBase").$this->yellow->config->get("pluginLocation");
 			$output = "<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"{$pluginLocation}gallery.css\" />\n";
-			$output .= "<script type=\"text/javascript\" src=\"{$pluginLocation}gallery-photoswipe.pkgd.min.js\"></script>\n";
 			$output .= "<script type=\"text/javascript\" src=\"{$pluginLocation}gallery.js\"></script>\n";
 		}
 		return $output;

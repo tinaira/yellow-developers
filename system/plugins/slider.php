@@ -5,7 +5,7 @@
 // Slider plugin
 class YellowSlider
 {
-	const VERSION = "0.6.5";
+	const VERSION = "0.6.6";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -33,20 +33,25 @@ class YellowSlider
 				$images = $this->yellow->config->get("imageDir");
 				$files = $this->yellow->files->index(true, true)->match("#$images$pattern#");
 			}
-			if(count($files) && $this->yellow->plugins->isExisting("image"))
+			if($this->yellow->plugins->isExisting("image"))
 			{
-				$page->setLastModified($files->getModified());
-				$output = "<div class=\"".htmlspecialchars($style)."\" data-prevnextbuttons=\"false\" data-clickable=\"true\" data-wraparound=\"true\" data-autoplay=\"".htmlspecialchars($autoplay)."\">\n";
-				foreach($files as $file)
+				if(count($files))
 				{
-					list($src, $width, $height) = $this->yellow->plugins->get("image")->getImageInfo($file->fileName, $size, $size);
-					$output .= "<img src=\"".htmlspecialchars($src)."\" width=\"".htmlspecialchars($width)."\" height=\"".
-						htmlspecialchars($height)."\" alt=\"".basename($file->getLocation(true))."\" title=\"".
-						basename($file->getLocation(true))."\" />\n";
+					$page->setLastModified($files->getModified());
+					$output = "<div class=\"".htmlspecialchars($style)."\" data-prevnextbuttons=\"false\" data-clickable=\"true\" data-wraparound=\"true\" data-autoplay=\"".htmlspecialchars($autoplay)."\">\n";
+					foreach($files as $file)
+					{
+						list($src, $width, $height) = $this->yellow->plugins->get("image")->getImageInfo($file->fileName, $size, $size);
+						$output .= "<img src=\"".htmlspecialchars($src)."\" width=\"".htmlspecialchars($width)."\" height=\"".
+							htmlspecialchars($height)."\" alt=\"".basename($file->getLocation(true))."\" title=\"".
+							basename($file->getLocation(true))."\" />\n";
+					}
+					$output .= "</div>";
+				} else {
+					$page->error(500, "Slider '$pattern' does not exist!");
 				}
-				$output .= "</div>";
 			} else {
-				$page->error(500, "Slider '$pattern' does not exist!");
+				$page->error(500, "Slider requires 'image' plugin!");
 			}
 		}
 		return $output;
@@ -60,7 +65,6 @@ class YellowSlider
 		{
 			$pluginLocation = $this->yellow->config->get("serverBase").$this->yellow->config->get("pluginLocation");
 			$output = "<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"{$pluginLocation}slider.css\" />\n";
-			$output .= "<script type=\"text/javascript\" src=\"{$pluginLocation}slider-flickity.pkgd.min.js\"></script>\n";
 			$output .= "<script type=\"text/javascript\" src=\"{$pluginLocation}slider.js\"></script>\n";
 		}
 		return $output;
