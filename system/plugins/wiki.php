@@ -5,7 +5,7 @@
 // Wiki plugin
 class YellowWiki
 {
-	const VERSION = "0.6.7";
+	const VERSION = "0.6.8";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -33,6 +33,29 @@ class YellowWiki
 	function onParseContentBlock($page, $name, $text, $shortcut)
 	{
 		$output = null;
+		if($name=="wikipages" && $shortcut)
+		{
+			list($location, $pagesMax) = $this->yellow->toolbox->getTextArgs($text);
+			if(empty($location)) $location = $this->yellow->config->get("wikiLocation");
+			if(empty($pagesMax)) $pagesMax = 10;
+			$wiki = $this->yellow->pages->find($location);
+			$pages = $wiki ? $wiki->getChildren(!$wiki->isVisible())->append($wiki) : $this->yellow->pages->clean();
+			$pages->sort("title")->limit($pagesMax);
+			$page->setLastModified($pages->getModified());
+			if(count($pages))
+			{
+				$output = "<div class=\"".htmlspecialchars($name)."\">\n";
+				$output .= "<ul>\n";
+				foreach($pages as $page)
+				{
+					$output .= "<li><a href=\"".$page->getLocation(true)."\">".$page->getHtml("titleNavigation")."</a></li>\n";
+				}
+				$output .= "</ul>\n";
+				$output .= "</div>\n";
+			} else {
+				$page->error(500, "Wikipages '$location' does not exist!");
+			}
+		}
 		if($name=="wikirecent" && $shortcut)
 		{
 			list($location, $pagesMax) = $this->yellow->toolbox->getTextArgs($text);
@@ -60,7 +83,7 @@ class YellowWiki
 		{
 			list($location, $pagesMax) = $this->yellow->toolbox->getTextArgs($text);
 			if(empty($location)) $location = $this->yellow->config->get("wikiLocation");
-			if(empty($pagesMax)) $pagesMax = 4;
+			if(empty($pagesMax)) $pagesMax = 10;
 			$wiki = $this->yellow->pages->find($location);
 			$pages = $wiki ? $wiki->getChildren(!$wiki->isVisible())->append($wiki) : $this->yellow->pages->clean();
 			$pages->similar($page->getPage("main"))->limit($pagesMax);
@@ -79,33 +102,11 @@ class YellowWiki
 				$page->error(500, "Wikirelated '$location' does not exist!");
 			}
 		}
-		if($name=="wikipages" && $shortcut)
+		if($name=="wikitags" && $shortcut)
 		{
 			list($location, $pagesMax) = $this->yellow->toolbox->getTextArgs($text);
 			if(empty($location)) $location = $this->yellow->config->get("wikiLocation");
-			if(empty($pagesMax)) $pagesMax = 10;
-			$wiki = $this->yellow->pages->find($location);
-			$pages = $wiki ? $wiki->getChildren(!$wiki->isVisible())->append($wiki) : $this->yellow->pages->clean();
-			$pages->sort("title")->limit($pagesMax);
-			$page->setLastModified($pages->getModified());
-			if(count($pages))
-			{
-				$output = "<div class=\"".htmlspecialchars($name)."\">\n";
-				$output .= "<ul>\n";
-				foreach($pages as $page)
-				{
-					$output .= "<li><a href=\"".$page->getLocation(true)."\">".$page->getHtml("titleNavigation")."</a></li>\n";
-				}
-				$output .= "</ul>\n";
-				$output .= "</div>\n";
-			} else {
-				$page->error(500, "Wikirecent '$location' does not exist!");
-			}
-		}
-		if($name=="wikitags" && $shortcut)
-		{
-			list($location) = $this->yellow->toolbox->getTextArgs($text);
-			if(empty($location)) $location = $this->yellow->config->get("wikiLocation");
+			if(empty($pagesMax)) $pagesMax = 0;
 			$wiki = $this->yellow->pages->find($location);
 			$pages = $wiki ? $wiki->getChildren(!$wiki->isVisible())->append($wiki) : $this->yellow->pages->clean();
 			$page->setLastModified($pages->getModified());
@@ -113,6 +114,11 @@ class YellowWiki
 			foreach($pages as $page) if($page->isExisting("tag")) foreach(preg_split("/,\s*/", $page->get("tag")) as $tag) ++$tags[$tag];
 			if(count($tags))
 			{
+				if($pagesMax!=0 && count($tags)>$pagesMax)
+				{
+					uasort($tags, strnatcasecmp);
+					$tags = array_slice($tags, -$pagesMax);
+				}				
 				uksort($tags, strnatcasecmp);
 				$output = "<div class=\"".htmlspecialchars($name)."\">\n";
 				$output .= "<ul>\n";

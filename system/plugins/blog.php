@@ -5,7 +5,7 @@
 // Blog plugin
 class YellowBlog
 {
-	const VERSION = "0.6.6";
+	const VERSION = "0.6.8";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -61,6 +61,32 @@ class YellowBlog
 				$page->error(500, "Blogarchive '$location' does not exist!");
 			}
 		}
+		if($name=="blogauthors" && $shortcut)
+		{
+			list($location) = $this->yellow->toolbox->getTextArgs($text);
+			if(empty($location)) $location = $this->yellow->config->get("blogLocation");
+			$blog = $this->yellow->pages->find($location);
+			$pages = $blog ? $blog->getChildren(!$blog->isVisible()) : $this->yellow->pages->clean();
+			$pages->filter("template", "blog");
+			$page->setLastModified($pages->getModified());
+			$authors = array();
+			foreach($pages as $page) if($page->isExisting("author")) foreach(preg_split("/,\s*/", $page->get("author")) as $author) ++$authors[$author];
+			if(count($authors))
+			{
+				uksort($authors, strnatcasecmp);
+				$output = "<div class=\"".htmlspecialchars($name)."\">\n";
+				$output .= "<ul>\n";
+				foreach($authors as $key=>$value)
+				{
+					$output .= "<li><a href=\"".$blog->getLocation(true).$this->yellow->toolbox->normaliseArgs("author:$key")."\">";
+					$output .= htmlspecialchars($key)."</a></li>\n";
+				}
+				$output .= "</ul>\n";
+				$output .= "</div>\n";
+			} else {
+				$page->error(500, "Blogauthors '$location' does not exist!");
+			}
+		}
 		if($name=="blogrecent" && $shortcut)
 		{
 			list($location, $pagesMax) = $this->yellow->toolbox->getTextArgs($text);
@@ -88,7 +114,7 @@ class YellowBlog
 		{
 			list($location, $pagesMax) = $this->yellow->toolbox->getTextArgs($text);
 			if(empty($location)) $location = $this->yellow->config->get("blogLocation");
-			if(empty($pagesMax)) $pagesMax = 4;
+			if(empty($pagesMax)) $pagesMax = 10;
 			$blog = $this->yellow->pages->find($location);
 			$pages = $blog ? $blog->getChildren(!$blog->isVisible()) : $this->yellow->pages->clean();
 			$pages->filter("template", "blog")->similar($page->getPage("main"))->limit($pagesMax);
@@ -109,8 +135,9 @@ class YellowBlog
 		}
 		if($name=="blogtags" && $shortcut)
 		{
-			list($location) = $this->yellow->toolbox->getTextArgs($text);
+			list($location, $pagesMax) = $this->yellow->toolbox->getTextArgs($text);
 			if(empty($location)) $location = $this->yellow->config->get("blogLocation");
+			if(empty($pagesMax)) $pagesMax = 0;
 			$blog = $this->yellow->pages->find($location);
 			$pages = $blog ? $blog->getChildren(!$blog->isVisible()) : $this->yellow->pages->clean();
 			$pages->filter("template", "blog");
@@ -119,6 +146,11 @@ class YellowBlog
 			foreach($pages as $page) if($page->isExisting("tag")) foreach(preg_split("/,\s*/", $page->get("tag")) as $tag) ++$tags[$tag];
 			if(count($tags))
 			{
+				if($pagesMax!=0 && count($tags)>$pagesMax)
+				{
+					uasort($tags, strnatcasecmp);
+					$tags = array_slice($tags, -$pagesMax);
+				}
 				uksort($tags, strnatcasecmp);
 				$output = "<div class=\"".htmlspecialchars($name)."\">\n";
 				$output .= "<ul>\n";
