@@ -13,19 +13,23 @@ Templates define the functionality of your website. Let's see how templates are 
 
 Here's an example template file `system/themes/templates/default.html`:
 
-    <?php $yellow->snippet("header") ?>
-    <?php $yellow->snippet("content-sidebar") ?>
-    <?php $yellow->snippet("content-main") ?>
-    <?php $yellow->snippet("footer") ?>
+``` php
+<?php $yellow->snippet("header") ?>
+<?php $yellow->snippet("content-sidebar") ?>
+<?php $yellow->snippet("content-main") ?>
+<?php $yellow->snippet("footer") ?>
+```
 
 Snippets are the building blocks of your website. They are small pieces of [PHP](https://en.wikipedia.org/wiki/PHP) code, written with some help of the [Yellow API](yellow-api). You can put everything into one template, but it's often more practical to split code up into multiple snippets and reuse them. 
 
 Here's an example snippet file `system/themes/snippets/content-main.php`:
 
-    <div class="content main">
-    <h1><?php echo $yellow->page->getHtml("titleContent") ?></h1>
-    <?php echo $yellow->page->getContent() ?>
-    </div>
+``` php
+<div class="content main">
+<h1><?php echo $yellow->page->getHtml("titleContent") ?></h1>
+<?php echo $yellow->page->getContent() ?>
+</div>
+```
 
 ## Custom template
 
@@ -33,18 +37,22 @@ To use a custom template set the `Template` setting at the top of a page. You ca
 
 Here's an example template file `system/themes/templates/home.html`:
 
-    <?php $yellow->snippet("header") ?>
-    <?php $yellow->snippet("content-sidebar") ?>
-    <?php $yellow->snippet("content-home") ?>
-    <?php $yellow->snippet("footer") ?>
+``` php
+<?php $yellow->snippet("header") ?>
+<?php $yellow->snippet("content-sidebar") ?>
+<?php $yellow->snippet("content-home") ?>
+<?php $yellow->snippet("footer") ?>
+```
 
 Here's an example snippet file `system/themes/snippets/content-home.php`:
 
-    <div class="content main">
-    <h1><?php echo $yellow->page->getHtml("titleContent") ?></h1>
-    <?php echo $yellow->page->getContent() ?>
-    <?php /* Add more PHP code here */ ?>
-    </div>
+``` php
+<div class="content main">
+<h1><?php echo $yellow->page->getHtml("titleContent") ?></h1>
+<?php echo $yellow->page->getContent() ?>
+<?php /* Add more PHP code here */ ?>
+</div>
+```
 
 ## Custom navigation
 
@@ -60,17 +68,19 @@ The following navigations are available:
 
 Here's an example snippet file `system/themes/snippets/navigation.php`:
 
-    <?php $pages = $yellow->pages->top() ?>
-    <?php $yellow->page->setLastModified($pages->getModified()) ?>
-    <div class="navigation">
-    <ul>
-    <?php foreach($pages as $page): ?>
-    <li><a<?php echo $page->isActive() ? " class=\"active\"" : "" ?> href="<?php echo $page->getLocation(true) ?>"><?php echo $page->getHtml("titleNavigation") ?></a></li>
-    <?php endforeach ?>
-    <!-- Add more HTML code here -->
-    </ul>
-    </div>
-    <div class="navigation-banner"></div>
+``` php
+<?php $pages = $yellow->pages->top() ?>
+<?php $yellow->page->setLastModified($pages->getModified()) ?>
+<div class="navigation">
+<ul>
+<?php foreach($pages as $page): ?>
+<li><a<?php echo $page->isActive() ? " class=\"active\"" : "" ?> href="<?php echo $page->getLocation(true) ?>"><?php echo $page->getHtml("titleNavigation") ?></a></li>
+<?php endforeach ?>
+<!-- Add more HTML code here -->
+</ul>
+</div>
+<div class="navigation-banner"></div>
+```
 
 ## Custom sidebar
 

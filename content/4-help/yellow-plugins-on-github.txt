@@ -1,6 +1,7 @@
 ---
 Title: Yellow plugins on GitHub
 Redirect: https://github.com/datenstrom/yellow-plugins
+Sidebar: none
 Language: en
 Information: Please do not translate this file, English only
 ---

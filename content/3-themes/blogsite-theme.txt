@@ -2,8 +2,8 @@
 Sitename: Blogsite
 Title: Blogsite theme
 Description: Basic blogger theme
-Theme: blogsite
 Navigation: navigation
+Theme: blogsite
 ---
 Blogsite is a basic blogger theme. 
 [Install theme](https://github.com/datenstrom/yellow-themes/tree/master/blogsite).

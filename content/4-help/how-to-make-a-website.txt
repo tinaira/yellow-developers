@@ -3,9 +3,9 @@ Title: How to make a website
 Sidebar: sidebar
 Language: en
 ---
-[image screenshot-website.png Screenshot - 50%]
-
 Learn how to make a website with Yellow. 
+
+[image screenshot-website.png Screenshot - 50%]
 
 ## Install website
 

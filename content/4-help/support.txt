@@ -19,10 +19,11 @@ Connect with other Yellow users and find professional help.
 
 ## How to contribute
 
-* [Comment suggestions](https://github.com/datenstrom/yellow/issues?q=is%3Aopen+is%3Aissue+label%3Asuggestion)
 * [Show what you have made](https://twitter.com/search?q=%23madewithyellow)
-* [Create a new translation](https://github.com/datenstrom/yellow-plugins/tree/master/language)
-* [Create new plugins and themes](https://github.com/datenstrom)
+* [Answer questions](https://gitter.im/datenstrom/yellow)
+* [Review suggestions](https://github.com/datenstrom/yellow/issues?q=is%3Aopen+is%3Aissue+label%3Asuggestion)
+* [Create translations](https://github.com/datenstrom/yellow-plugins/tree/master/language)
+* [Create plugins and themes](https://github.com/datenstrom)
 
 ## Thank you
 

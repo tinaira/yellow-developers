@@ -2,8 +2,8 @@
 Sitename: Knowhow
 Title: Knowhow theme
 Description: GitHub-like knowledge base
-Theme: knowhow
 Navigation: navigation-search
+Theme: knowhow
 ---
 Knowhow is a theme for a GitHub-like knowledge base. 
 [Install theme](https://github.com/datenstrom/yellow-themes/tree/master/knowhow).

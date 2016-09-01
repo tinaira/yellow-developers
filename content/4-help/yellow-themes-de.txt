@@ -15,7 +15,7 @@ Um ein anderes Theme zu benutzen, legst du `Theme` ganz oben auf einer Seite fes
 
 Hier ist eine Beispiel-Themedatei `system/themes/home.css`:
 
-```
+``` css
 /* Theme: Home theme */
 /* Version: 0.1.1 */
 /* Designer: Mark Mayberg */
@@ -25,6 +25,28 @@ body { background-color:#fff; color:#717171; margin:1em; }
 h1, h2, h3, h4, h5, h6 { color:#07d; font-weight:normal; }
 a { color:#07d; text-decoration:none; }
 a:hover { color:#07d; text-decoration:underline; }
+.sitename a { color:#000; text-decoration:none; }
+.navigation a { color:#07d; padding-right:0.3em; }
+.navigation ul { padding:0; list-style:none; }
+.navigation li { display:inline; }
+```
+
+Hier ist eine Beispiel-Theme mit dunkler Hintergrundfarbe:
+
+``` css
+/* Theme: Home theme */
+/* Version: 0.1.2 */
+/* Designer: Mark Mayberg */
+
+html, body, div, form, pre, span, tr, th, td { margin:0; padding:0; border:0; vertical-align:baseline; }
+body { background-color:#000; color:#ddd; margin:1em; }
+h1, h2, h3, h4, h5, h6 { color:#fff; font-weight:normal; }
+a { color:#29f; text-decoration:none; }
+a:hover { color:#29f; text-decoration:underline; }
+.sitename a { color:#fff; text-decoration:none; }
+.navigation a { color:#29f; padding-right:0.3em; }
+.navigation ul { padding:0; list-style:none; }
+.navigation li { display:inline; }
 ```
 
 ## JavaScript
@@ -33,7 +55,7 @@ Um ein Theme zu erweitern gibt es die Möglichkeit [JavaScript](http://de.wikipe
 
 Hier ist ein Beispiel-JavaScript `system/themes/assets/home.js`:
 
-```
+``` javascript
 var ready = function() 
 {
 	console.log("Hello world");

@@ -3,9 +3,9 @@ Title: Webseite erstellen
 Sidebar: sidebar-de
 Language: de
 ---
-[image screenshot-website.png Screenshot - 50%]
-
 Lerne wie man eine Webseite mit Yellow erstellt.
+
+[image screenshot-website.png Screenshot - 50%]
 
 ## Webseite installieren
 

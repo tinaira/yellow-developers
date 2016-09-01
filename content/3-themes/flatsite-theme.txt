@@ -2,8 +2,8 @@
 Sitename: Flatsite
 Title: Flatsite theme
 Description: Clean business theme
-Theme: flatsite
 Navigation: navigation
+Theme: flatsite
 ---
 Flatsite is a clean business theme. 
 [Install theme](https://github.com/datenstrom/yellow-themes/tree/master/flatsite).

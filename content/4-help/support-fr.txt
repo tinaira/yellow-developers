@@ -20,11 +20,11 @@ Entrez en contact avec d'autres utilisateurs de Yellow et trouvez de l'aide prof
 
 ## Comment contribuer
 
-* [Commenter les suggestions](https://github.com/datenstrom/yellow/issues?q=is%3Aopen+is%3Aissue+label%3Asuggestion)
 * [Montrez ce que vous avez fait](https://twitter.com/search?q=%23madewithyellow)
-* [Améliorer la traduction française](https://developers.datenstrom.se/search/query:TODO/)
-* [Créer une nouvelle traduction](https://github.com/datenstrom/yellow-plugins/tree/master/language)
-* [Créer de nouvelles plugins et des thèmes](https://github.com/datenstrom)
+* [Répondre aux questions](https://gitter.im/datenstrom/yellow)
+* [Commenter les suggestions](https://github.com/datenstrom/yellow/issues?q=is%3Aopen+is%3Aissue+label%3Asuggestion)
+* [Créer des traductions](https://github.com/datenstrom/yellow-plugins/tree/master/language)
+* [Créer des plugins et des thèmes](https://github.com/datenstrom)
 
 ## Remerciements
 

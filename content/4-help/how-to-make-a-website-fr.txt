@@ -3,9 +3,9 @@ Title: Comment faire un site web
 Sidebar: sidebar-fr
 Language: fr
 ---
-[image screenshot-website.png Screenshot - 50%]
-
 Apprenez à faire un site web avec Yellow.
+
+[image screenshot-website.png Screenshot - 50%]
 
 ## Installer votre site
 
