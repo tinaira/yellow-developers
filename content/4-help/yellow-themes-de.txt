@@ -11,7 +11,7 @@ Themes bestimmen das Aussehen deiner Webseite. Beginne mit einem [Theme](/themes
 
 ## Themes anpassen
 
-Um ein anderes Theme zu benutzen, legst du `Theme` ganz oben auf einer Seite fest. Du kannst auch ein Theme mit dem Namen eines `content`-Verzeichnisses erstellen und es wird automatisch benutzt. Ein Theme besteht aus einem [Stylesheet](https://de.wikipedia.org/wiki/Cascading_Style_Sheets) und weiteren Dateien.
+Um ein Theme zu benutzen, legst du das `Theme` ganz oben auf einer Seite fest. Du kannst auch ein Theme mit dem Namen eines `content`-Verzeichnisses erstellen und es wird automatisch benutzt. Ein Theme besteht aus einem [Stylesheet](https://de.wikipedia.org/wiki/Cascading_Style_Sheets) und weiteren Dateien.
 
 Hier ist eine Beispiel-Themedatei `system/themes/home.css`:
 
@@ -31,7 +31,7 @@ a:hover { color:#07d; text-decoration:underline; }
 .navigation li { display:inline; }
 ```
 
-Hier ist eine Beispiel-Theme mit dunkler Hintergrundfarbe:
+Hier ist das selbe Theme mit dunkler Hintergrundfarbe:
 
 ``` css
 /* Theme: Home theme */
@@ -48,6 +48,8 @@ a:hover { color:#29f; text-decoration:underline; }
 .navigation ul { padding:0; list-style:none; }
 .navigation li { display:inline; }
 ```
+
+Alle Themes sollten einen eindeutigen Namen und Version haben.
 
 ## JavaScript
 

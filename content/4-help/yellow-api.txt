@@ -400,13 +400,13 @@ Here's an example snippet for showing server settings:
 </div>
 ```
 
-Here's an example snippet for showing the webmaster's email:
+Here's an example snippet for showing the webmaster's name and email:
 
 ``` php
-<?php if($yellow->config->isExisting("email")): ?>
-<?php $email = $yellow->config->getHtml("email") ?>
-<?php $emailObfuscated = strreplaceu(array('@', '.'), array("&#x40;", "&#x2E;"), $email) ?>
-<p><?php echo $emailObfuscated ?></p>
+<?php if($yellow->config->isExisting("author")): ?>
+<?php $author = $yellow->config->get("author") ?>
+<?php $email = $yellow->config->get("email") ?>
+<p><?php echo htmlspecialchars("$author - $email") ?></p>
 <?php endif ?>
 ```
 

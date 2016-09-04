@@ -11,7 +11,7 @@ Themes define the visual design of your website. Start with a [theme](/themes/) 
 
 ## Custom theme
 
-To use a custom theme set the `Theme` setting at the top of a page. You can also create a theme with the name of a `content` folder and it will be automatically used. A theme consists of a [style sheet](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) and additional files.
+To use a theme set the `Theme` setting at the top of a page. You can also create a theme with the name of a `content` folder and it will be automatically used. A theme consists of a [style sheet](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) and additional files.
  
 Here's an example theme file `system/themes/home.css`:
 
@@ -31,7 +31,7 @@ a:hover { color:#07d; text-decoration:underline; }
 .navigation li { display:inline; }
 ```
 
-Here's an example theme with dark background color:
+Here's the same theme with dark background color:
 
 ``` css
 /* Theme: Home theme */
@@ -48,6 +48,8 @@ a:hover { color:#29f; text-decoration:underline; }
 .navigation ul { padding:0; list-style:none; }
 .navigation li { display:inline; }
 ```
+
+All themes should have a unique name and version.
 
 ## JavaScript
 
