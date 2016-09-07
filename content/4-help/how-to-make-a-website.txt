@@ -5,7 +5,7 @@ Language: en
 ---
 Learn how to make a website with Yellow. 
 
-[image screenshot-website.png Screenshot - 50%]
+[image screenshot-website.png Screenshot - 55%]
 
 ## Install website
 
@@ -81,6 +81,7 @@ Links
 
 * [Twitter](https://twitter.com/datenstromse)
 * [GitHub](https://github.com/datenstrom)
+* [Instagram](https://instagram.com/datenstromse)
 ```
 
 ## More features

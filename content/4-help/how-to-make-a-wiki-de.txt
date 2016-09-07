@@ -5,6 +5,8 @@ Language: de
 ---
 Lerne wie man ein Wiki mit Yellow erstellt.
 
+[image screenshot-wiki.png Screenshot - 55%]
+
 ## Wiki installieren
 
 1. [Yellow herunterladen und entpacken](https://github.com/datenstrom/yellow/archive/master.zip).
@@ -65,6 +67,7 @@ Links
 
 * [Twitter](https://twitter.com/datenstromse)
 * [GitHub](https://github.com/datenstrom)
+* [Instagram](https://instagram.com/datenstromse)
 ```
 
 Verwende [Abkürzungen](https://github.com/datenstrom/yellow-plugins/tree/master/wiki#how-to-configure-a-wiki), um Informationen über das Wiki anzuzeigen:

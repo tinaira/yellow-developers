@@ -5,7 +5,7 @@ Language: fr
 ---
 Apprenez à faire un site web avec Yellow.
 
-[image screenshot-website.png Screenshot - 50%]
+[image screenshot-website.png Screenshot - 55%]
 
 ## Installer votre site
 
@@ -80,6 +80,7 @@ Liens
 
 * [Twitter](https://twitter.com/datenstromse)
 * [GitHub](https://github.com/datenstrom)
+* [Instagram](https://instagram.com/datenstromse)
 ```
 
 ## Plus de fonctionnalités

@@ -64,6 +64,7 @@ Ajout d'emoji avec le [plugin emoji](https://github.com/datenstrom/yellow-plugin
 `[vimeo 13387502]` = embed [Vimeo video](https://github.com/datenstrom/yellow-plugins/tree/master/vimeo)  
 `[soundcloud 101175715]` = embed [Soundcloud audio](https://github.com/datenstrom/yellow-plugins/tree/master/soundcloud)  
 `[slideshare 37321279]` = embed [Slideshare presentation](https://github.com/datenstrom/yellow-plugins/tree/master/slideshare)  
+`[googlecalendar fr.french#holiday]` = embed [Google calendar](https://github.com/datenstrom/yellow-plugins/tree/master/googlecalendar)  
 `[googlemaps Stockholm]` = embed [Google maps](https://github.com/datenstrom/yellow-plugins/tree/master/googlemaps)  
 `[blogrecent /blog/]` = show [recent blog pages](https://github.com/datenstrom/yellow-plugins/tree/master/blog#how-to-configure-a-blog)  
 `[wikirecent /wiki/]` = show [recent wiki pages](https://github.com/datenstrom/yellow-plugins/tree/master/wiki#how-to-configure-a-wiki)  

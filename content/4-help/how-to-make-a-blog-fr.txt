@@ -7,6 +7,8 @@ Language: fr
 
 Apprenez à faire un blog avec Yellow.
 
+[image screenshot-blog.png Screenshot - 55%]
+
 ## Installer un blog
 
 1. [Téléchargez et dézippez Yellow](https://github.com/datenstrom/yellow/archive/master.zip).
@@ -100,6 +102,7 @@ Links
 
 * [Twitter](https://twitter.com/datenstromse)
 * [GitHub](https://github.com/datenstrom)
+* [Instagram](https://instagram.com/datenstromse)
 ```
 
 Vous pouvez utiliser des [raccourcis](https://github.com/datenstrom/yellow-plugins/tree/master/blog#how-to-configure-a-blog) afin d'afficher des informations à propos du blog.

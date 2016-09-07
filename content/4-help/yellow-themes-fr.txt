@@ -55,7 +55,7 @@ All themes should have a unique name and version.
 
 ## JavaScript
 
-To extend a theme you have the possibility to use [JavaScript](http://en.wikipedia.org/wiki/JavaScript). You can create a script with the name of a theme and it will be included together with the theme. This allows you to create any dynamic feature with Yellow.
+To extend a theme you have the possibility to use [JavaScript](http://en.wikipedia.org/wiki/JavaScript). You can create a script with the name of a theme and it will be included together with the style sheet. This allows you to create any dynamic feature with Yellow.
 
 Here's an example JavaScript file `system/themes/assets/home.js`:
 

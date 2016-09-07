@@ -7,6 +7,8 @@ Language: fr
 
 Apprenez à faire un wiki avec Yellow.
 
+[image screenshot-wiki.png Screenshot - 55%]
+
 ## Installer un wiki
 
 1. [Téléchargez et dézippez Yellow](https://github.com/datenstrom/yellow/archive/master.zip).
@@ -66,7 +68,8 @@ Status: hidden
 Links
 
 * [Twitter](https://twitter.com/datenstromse)
-* [GitHub](https://github.com/datenstrom)```
+* [GitHub](https://github.com/datenstrom)
+* [Instagram](https://instagram.com/datenstromse)```
 
 Vous pouvez utiliser des [raccourcis](https://github.com/datenstrom/yellow-plugins/tree/master/wiki#how-to-configure-a-wiki) afin d'afficher des informations à propos du wiki:
 

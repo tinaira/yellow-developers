@@ -1,0 +1,8 @@
+---
+Title: Contact plugin
+Description: Email contact page
+---
+Email contact page for your website.
+[Install plugin](https://github.com/datenstrom/yellow-plugins/tree/master/contact).
+
+[contact]

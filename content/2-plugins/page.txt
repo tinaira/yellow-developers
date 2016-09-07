@@ -4,4 +4,4 @@ TitleNavigation: Plugins
 ---
 [preview /plugins/ - 40.5%]
 
-Want to install more features? [See all plugins](/help/yellow-plugins-on-github).
+Want to add more features? [See all plugins](/help/yellow-plugins-on-github).

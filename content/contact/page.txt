@@ -1,0 +1,7 @@
+---
+Title: Contact plugin
+Description: Contact
+Template: contact
+Status: ignore
+---
+This page is automatically generated.

@@ -62,7 +62,7 @@ The following navigations are available:
 `Navigation: navigation-tree` shows navigation with dropdown menu   
 `Navigation: navigation-multilanguage`  shows navigation with [language selection](language-configuration#multi-language-mode)   
 `Navigation: navigation-search`  shows search bar from the [search plugin](https://github.com/datenstrom/yellow-plugins/tree/master/search)  
-`Navigation: navigation-sidebar` shows navigation in the [sidebar](#custom-sidebar)  
+`Navigation: navigation-sidebar` shows navigation in the [sidebar](#sidebar)  
 
 Here's an example snippet file `system/themes/snippets/navigation.php`:
 
@@ -80,9 +80,42 @@ Here's an example snippet file `system/themes/snippets/navigation.php`:
 <div class="navigation-banner"></div>
 ```
 
-## Custom sidebar
+## Custom footer
 
-To create a sidebar add the file `sidebar.txt` to a `content` folder. The sidebar is automatically shown on all pages in the same folder. A different sidebar can be defined in the [settings](markdown-cheat-sheet#settings) at the top of each page.
+To adjust the footer change the corresponding snippet. The footer will be automatically shown on all pages. For example show information about your website and add more links.
+
+Here's an example snippet file `system/themes/snippets/footer.php`:
+
+```
+<div class="footer">
+<a href="<?php echo $yellow->page->base."/" ?>">&copy; 2016 <?php echo $yellow->page->getHtml("sitename") ?></a>.
+<a href="<?php echo $yellow->page->get("pageEdit") ?>">Edit</a>.
+<a href="<?php echo $yellow->text->get("yellowUrl") ?>">Made with Yellow</a>.
+</div>
+</div>
+<?php echo $yellow->page->getExtra("footer") ?>
+</body>
+</html>
+```
+
+Now let's add a RSS feed with the [feed plugin](https://github.com/datenstrom/yellow-plugins/tree/master/feed):
+
+```
+<div class="footer">
+<a href="<?php echo $yellow->page->base."/" ?>">&copy; 2016 <?php echo $yellow->page->getHtml("sitename") ?></a>.
+<a href="<?php echo $yellow->page->base."/feed/page:feed.xml" ?>">Feed</a>. 
+<a href="<?php echo $yellow->page->get("pageEdit") ?>">Edit</a>.
+<a href="<?php echo $yellow->text->get("yellowUrl") ?>">Made with Yellow</a>.
+</div>
+</div>
+<?php echo $yellow->page->getExtra("footer") ?>
+</body>
+</html>
+```
+
+## Sidebar
+
+To create a sidebar add the file `sidebar.txt` to any `content` folder. The sidebar is automatically shown on all pages in the same folder. A different sidebar can be defined in the [settings](markdown-cheat-sheet#settings) at the top of each page.
 
 Here's an example sidebar file `content/1-home/sidebar.txt`:
 
@@ -95,6 +128,7 @@ Links
 
 * [Twitter](https://twitter.com/datenstromse)
 * [GitHub](https://github.com/datenstrom)
+* [Instagram](https://instagram.com/datenstromse)
 ```
 
 [Next: Yellow API →](yellow-api)

@@ -1,0 +1,8 @@
+---
+Title: Vimeo plugin
+Description: Embed Vimeo videos
+---
+Embed Vimeo videos. 
+[Install plugin](https://github.com/datenstrom/yellow-plugins/tree/master/vimeo).
+
+[vimeo 5606758]

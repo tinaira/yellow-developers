@@ -35,9 +35,9 @@ var initPhotoSwipeFromDOM = function()
 			size = el.getAttribute("data-size").split('x');
 			item =
 			{
-			src: el.getAttribute("href"),
-			w: parseInt(size[0], 10),
-			h: parseInt(size[1], 10),
+				src: el.getAttribute("href"),
+				w: parseInt(size[0], 10),
+				h: parseInt(size[1], 10),
 			};
 			if(childElements.length>0)
 			{
@@ -65,9 +65,9 @@ var initPhotoSwipeFromDOM = function()
 		numAttributes = el.attributes.length,
 		options =
 		{
-		mainClass: "pswp--minimal--dark",
-		tapToClose: true,
-		tapToToggleControls: false,
+			mainClass: "pswp--minimal--dark",
+			tapToClose: true,
+			tapToToggleControls: false,
 		};
 		for(var i=0; i<numAttributes; i++)
 		{

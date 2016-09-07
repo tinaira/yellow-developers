@@ -61,6 +61,6 @@ The screenshot shows the folders `1-en`, `2-de` and `3-fr`. This gives you the f
 
 The screenshot shows the folders `1-en`, `2-de`, `3-fr` and `default`. This gives you the following URLs `http://website/en/` `http://website/de/` `http://website/fr/` and a home page `http://website/` that automatically detects the visitor's language. 
 
-If you want to use a [custom navigation](yellow-templates#custom-navigation), open file `system/config/config.ini` and change `Navigation: navigation-multilanguage`. You can also add a language selection somewhere on your website. 
+If you want to use a [custom navigation](yellow-templates#custom-navigation), open file `system/config/config.ini` and change `Navigation: navigation-multilanguage`. You can also add a language selection somewhere else on your website, for example in the [footer](yellow-templates#custom-footer).
 
 [Next: Security configuration →](security-configuration-fr)

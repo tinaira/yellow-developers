@@ -5,7 +5,7 @@ Language: de
 ---
 Lerne wie man eine Webseite mit Yellow erstellt.
 
-[image screenshot-website.png Screenshot - 50%]
+[image screenshot-website.png Screenshot - 55%]
 
 ## Webseite installieren
 
@@ -80,6 +80,7 @@ Links
 
 * [Twitter](https://twitter.com/datenstromse)
 * [GitHub](https://github.com/datenstrom)
+* [Instagram](https://instagram.com/datenstromse)
 ```
 
 ## Weitere Funktionen

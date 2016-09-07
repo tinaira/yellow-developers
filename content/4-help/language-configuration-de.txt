@@ -59,6 +59,6 @@ Der Screenshot zeigt die Verzeichnisse `1-en`, `2-de` und `3-fr`. Das erzeugt di
 
 Der Screenshot zeigt die Verzeichnisse `1-en`, `2-de`, `3-fr` und `default`. Das erzeugt die folgenden URLs `http://website/en/` `http://website/de/` `http://website/fr/` und eine Startseite `http://website/` welche automatisch die Sprache des Besuchers ermittelt. 
 
-Wenn man die [Navigation anpassen](yellow-templates-de#navigation-anpassen) will, öffnet man die Datei `system/config/config.ini` und ändert `Navigation: navigation-multilanguage`. Du kannst auch eine Sprachauswahl irgendwo anders in deine Webseite einbauen.
+Wenn man die [Navigation anpassen](yellow-templates-de#navigation-anpassen) will, öffnet man die Datei `system/config/config.ini` und ändert `Navigation: navigation-multilanguage`. Du kannst auch eine Sprachauswahl irgendwo anders in deine Webseite einfügen, beispielsweise in die [Fußzeile](yellow-templates-de#fußzeile-anpassen).
 
 [Weiter: Sicherheitseinstellungen →](security-configuration-de)

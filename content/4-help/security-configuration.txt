@@ -13,16 +13,22 @@ You need a web server with TLS and valid certificate.
 
 ## User restrictions
 
-If you have more than one person editing a website, restrict users and only parts of the website can be changed. This protects your website from being changed in a web browser, but it doesn't prevent changes via FTP and SSH.  
+If you have more than one person editing a website, restrict [user accounts](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface) and only parts of the website can be changed. This protects your website from being changed in a web browser, but it doesn't prevent changes via FTP and SSH.
 
-All user accounts are stored in file `system/config/user.ini`. A user account consists of email, encrypted password and at the end is the [user's home page](https://github.com/datenstrom/yellow-developers/blob/master/system/config/user.ini). Users can not change pages outside their home page.
+All user accounts are stored in file `system/config/user.ini`. A user account consists of email, encrypted password and [at the end](https://github.com/datenstrom/yellow-developers/blob/master/system/config/user.ini) is the user's home page. Users can not change pages outside their home page.
 
 You can [test user restrictions](https://developers.datenstrom.se), log in with `guest@guest.com` + `guest`.
 
 ## Safe mode
 
-If you have more than one person editing a website, enable safe mode and only [Markdown](markdown-cheat-sheet) is possible for text formatting. This protects your website from unwanted content, but it also disables HTML and JavaScript in page content.
+If you have more than one person editing a website, enable safe mode and only [Markdown](markdown-cheat-sheet) is possible for text formatting. This protects your website from unwanted content and nuisance, but it also disables HTML and JavaScript in page content.
 
 Open file `system/config/config.ini` and change `ParserSafeMode: 1`.
+
+## Less is more
+
+If there's nobody editing a website in a web browser, it's possible to run Yellow as flat-file CMS or static site generator. For example delete the [web interface](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface) and unused plugins. Then nobody can log in anymore and change your website.
+
+Delete `system/plugins/webinterface.php`, `webinterface.js` and `webinterface.css`.
 
 [Next: Yellow themes →](yellow-themes)

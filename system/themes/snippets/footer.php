@@ -7,7 +7,7 @@
 <div class="footer-right">
 <a href="https://twitter.com/datenstromse"><i class="fa fa-twitter" title="Twitter"></i></a>
 <a href="https://github.com/datenstrom"><i class="fa fa-github" title="GitHub"></i></a>
-<a href="https://gitter.im/datenstrom/yellow"><i class="fa fa-comment" title="Gitter"></i></a>
+<a href="https://instagram.com/datenstromse"><i class="fa fa-instagram" title="Instagram"></i></a>
 </div>
 <div class="footer-banner"></div>
 </div>
