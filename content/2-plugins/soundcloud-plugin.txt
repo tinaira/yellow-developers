@@ -6,5 +6,3 @@ Embed Soundcloud audio tracks.
 [Install plugin](https://github.com/datenstrom/yellow-plugins/tree/master/soundcloud).
 
 [soundcloud 101175715]
-
-[soundcloud 142596472]
