@@ -3,7 +3,7 @@ Title: Configuration de la sécurité
 Sidebar: sidebar-fr
 Language: fr
 ---
->> [Todo: You can help us and translate this page](https://github.com/datenstrom/yellow-developers/blob/master/content/4-help/security-configuration-fr.txt)
+>>> [Vous pouvez nous aider à traduire cette page.](https://github.com/datenstrom/yellow-developers/blob/master/content/4-help/security-configuration-fr.txt)
 
 Here's how to set up a website with better security.
 
@@ -19,7 +19,7 @@ If you have more than one person editing a website, restrict [user accounts](htt
 
 All user accounts are stored in file `system/config/user.ini`. A user account consists of email, encrypted password and [at the end](https://github.com/datenstrom/yellow-developers/blob/master/system/config/user.ini) is the user's home page. Users can not change pages outside their home page.
 
-You can [test user restrictions](https://developers.datenstrom.se), log in with `guest@guest.com` + `guest`.
+You can [test user restrictions](https://developers.datenstrom.se/edit/), log in with `guest@guest.com` + `guest`.
 
 ## Safe mode
 
@@ -29,8 +29,8 @@ Open file `system/config/config.ini` and change `ParserSafeMode: 1`.
 
 ## Less is more
 
-If there's nobody editing a website in a web browser, it's possible to run Yellow as flat-file CMS or static site generator. For example delete the [web interface](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface) and unused plugins. Then nobody can log in anymore and change your website.
+If there's nobody editing a website in a web browser, it's possible to run Yellow as pure flat-file CMS and static site generator. For example delete the [web interface](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface) and unused plugins. Then nobody can log in and change your website.
 
-Delete `system/plugins/webinterface.php`, `webinterface.js` and `webinterface.css`.
+Delete file `system/plugins/webinterface.php` to remove the user login.
 
 [Next: Yellow themes →](yellow-themes-fr)

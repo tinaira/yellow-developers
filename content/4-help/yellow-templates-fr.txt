@@ -3,7 +3,7 @@ Title: Templates de Yellow
 Sidebar: sidebar-fr
 Language: fr
 ---
->> [Todo: You can help us and translate this page](https://github.com/datenstrom/yellow-developers/blob/master/content/4-help/yellow-templates-fr.txt)
+>>> [Vous pouvez nous aider à traduire cette page.](https://github.com/datenstrom/yellow-developers/blob/master/content/4-help/yellow-templates-fr.txt)
 
 You can customise the functionality of your website.
 
@@ -88,7 +88,7 @@ To adjust the footer change the corresponding snippet. The footer will be automa
 
 Here's an example snippet file `system/themes/snippets/footer.php`:
 
-```
+``` php
 <div class="footer">
 <a href="<?php echo $yellow->page->base."/" ?>">&copy; 2016 <?php echo $yellow->page->getHtml("sitename") ?></a>.
 <a href="<?php echo $yellow->page->get("pageEdit") ?>">Edit</a>.
@@ -100,12 +100,13 @@ Here's an example snippet file `system/themes/snippets/footer.php`:
 </html>
 ```
 
-Now let's add a RSS feed with the [feed plugin](https://github.com/datenstrom/yellow-plugins/tree/master/feed):
+Here's the same snippet with social media links:
 
-```
+``` php
 <div class="footer">
-<a href="<?php echo $yellow->page->base."/" ?>">&copy; 2016 <?php echo $yellow->page->getHtml("sitename") ?></a>.
-<a href="<?php echo $yellow->page->base."/feed/page:feed.xml" ?>">Feed</a>. 
+<a href="https://twitter.com/datenstromse">Twitter</a>.
+<a href="https://github.com/datenstrom">GitHub</a>.
+<a href="https://instagram.com/datenstromse">Instagram</a>.
 <a href="<?php echo $yellow->page->get("pageEdit") ?>">Edit</a>.
 <a href="<?php echo $yellow->text->get("yellowUrl") ?>">Made with Yellow</a>.
 </div>
@@ -133,4 +134,4 @@ Links
 * [Instagram](https://instagram.com/datenstromse)
 ```
 
-[Next: Yellow API →](yellow-api)
+[Next: Yellow API →](yellow-api-fr)

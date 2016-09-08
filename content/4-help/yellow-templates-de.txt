@@ -18,7 +18,7 @@ Hier ist eine Beispiel-Templatedatei `system/themes/templates/default.html`:
 <?php $yellow->snippet("footer") ?>
 ```
 
-Snippets sind die Bausteine deiner Webseite. Es sind kleine Stücke [PHP-Code](https://de.wikipedia.org/wiki/PHP), die mit Hilfe der [Yellow-API](yellow-api) erstellt werden. Du kannst alles in ein Template schreiben, aber es ist häufig praktischer den Code in mehrere Snippets aufzuteilen und wiederzubenutzten.
+Snippets sind die Bausteine deiner Webseite. Es sind kleine Stücke [PHP-Code](https://de.wikipedia.org/wiki/PHP), die mit Hilfe der [Yellow-API](yellow-api-de) erstellt werden. Du kannst alles in ein Template schreiben, aber es ist häufig praktischer den Code in mehrere Snippets aufzuteilen und wiederzubenutzten.
 
 Hier ist eine Beispiel-Snippetdatei `system/themes/snippets/content-main.php`:
 
@@ -86,7 +86,7 @@ Um die Fußzeile anzupassen, ändere das entsprechende Snippet. Die Fußzeile wi
 
 Hier ist eine Beispiel-Snippetdatei `system/themes/snippets/footer.php`:
 
-```
+``` php
 <div class="footer">
 <a href="<?php echo $yellow->page->base."/" ?>">&copy; 2016 <?php echo $yellow->page->getHtml("sitename") ?></a>.
 <a href="<?php echo $yellow->page->get("pageEdit") ?>">Edit</a>.
@@ -98,12 +98,13 @@ Hier ist eine Beispiel-Snippetdatei `system/themes/snippets/footer.php`:
 </html>
 ```
 
-Einen RSS-Feed hinzufügen mit dem [Feed-Plugin](https://github.com/datenstrom/yellow-plugins/tree/master/feed):
+Hier ist das selbe Snippet mit Links zu soziale Medien:
 
-```
+``` php
 <div class="footer">
-<a href="<?php echo $yellow->page->base."/" ?>">&copy; 2016 <?php echo $yellow->page->getHtml("sitename") ?></a>.
-<a href="<?php echo $yellow->page->base."/feed/page:feed.xml" ?>">Feed</a>. 
+<a href="https://twitter.com/datenstromse">Twitter</a>.
+<a href="https://github.com/datenstrom">GitHub</a>.
+<a href="https://instagram.com/datenstromse">Instagram</a>.
 <a href="<?php echo $yellow->page->get("pageEdit") ?>">Edit</a>.
 <a href="<?php echo $yellow->text->get("yellowUrl") ?>">Made with Yellow</a>.
 </div>
@@ -131,4 +132,4 @@ Links
 * [Instagram](https://instagram.com/datenstromse)
 ```
 
-[Weiter: Yellow API →](yellow-api)
+[Weiter: Yellow-Programmierung →](yellow-api-de)

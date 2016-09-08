@@ -3,7 +3,7 @@ Title: Thèmes de Yellow
 Sidebar: sidebar-fr
 Language: fr
 ---
->> [Todo: You can help us and translate this page](https://github.com/datenstrom/yellow-developers/blob/master/content/4-help/yellow-themes-fr.txt)
+>>> [Vous pouvez nous aider à traduire cette page.](https://github.com/datenstrom/yellow-developers/blob/master/content/4-help/yellow-themes-fr.txt)
 
 You can customise the visual design of your website.
 

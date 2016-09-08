@@ -17,7 +17,7 @@ Falls mehrere Person eine Webseite bearbeiten, beschränke [Benutzerkonten](http
 
 Alle Benutzerkonten sind in der Datei `system/config/user.ini` gespeichert. Ein Benutzerkonto besteht aus Email, verschlüsseltem Kennwort und [am Ende](https://github.com/datenstrom/yellow-developers/blob/master/system/config/user.ini) befindet sich die Startseite des Benutzers. Benutzer können keine Seiten ausserhalb ihrer Startseite verändern.
 
-Du kannst [Benutzerbeschränkungen testen](https://developers.datenstrom.se), einloggen mit `guest@guest.com` + `guest`.
+Du kannst [Benutzerbeschränkungen testen](https://developers.datenstrom.se/edit/), einloggen mit `guest@guest.com` + `guest`.
 
 ## Abgesicherter Modus
 
@@ -27,8 +27,8 @@ Falls mehrere Person eine Webseite bearbeiten, aktiviere den abgesicherten Modus
 
 ## Weniger ist mehr
 
-Falls es niemanden gibt der eine Webseite im Webbrowser bearbeitet, kann man Yellow als Flat-File-CMS oder Static-Site-Generator betreiben. Beispielsweise kann man das [Webinterface](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface) und unbenutzte Plugins löschen. Danach kann sich niemand mehr einloggen.
+Falls es niemanden gibt der eine Webseite im Webbrowser bearbeitet, kann man Yellow als reines Flat-File-CMS und Static-Site-Generator betreiben. Beispielsweise kann man das [Webinterface](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface) und unbenutzte Plugins löschen. Dann kann sich niemand einloggen.
 
-Lösche `system/plugins/webinterface.php`, `webinterface.js` und `webinterface.css`.
+Lösche die Datei `system/plugins/webinterface.php` um das Login zu entfernen.
 
 [Weiter: Yellow-Themes →](yellow-themes-de)

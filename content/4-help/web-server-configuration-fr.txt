@@ -3,7 +3,7 @@ Title: Configuration du serveur web
 Sidebar: sidebar-fr
 Language: fr
 ---
->> [Todo: You can help us and translate this page](https://github.com/datenstrom/yellow-developers/blob/master/content/4-help/web-server-configuration-fr.txt)
+>>> [Vous pouvez nous aider à traduire cette page.](https://github.com/datenstrom/yellow-developers/blob/master/content/4-help/web-server-configuration-fr.txt)
 
 Here's how to set up different [web servers](http://news.netcraft.com/archives/category/web-server-survey/).
 

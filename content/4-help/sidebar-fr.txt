@@ -30,4 +30,4 @@ Développeurs
 
 * [Thèmes de Yellow](yellow-themes-fr)
 * [Templates de Yellow](yellow-templates-fr)
-* [Interface de programmation](yellow-api)
+* [Interface de programmation](yellow-api-fr)
