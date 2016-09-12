@@ -136,6 +136,10 @@ Archive
 [blogarchive /]
 ```
 
+## Demo
+
+[See a small blog in action](/plugins/blog-plugin/).
+
 ## More features
 
 * [How to add comments to your blog](https://github.com/datenstrom/yellow-plugins/tree/master/disqus)

@@ -39,7 +39,7 @@ Créer des citations:
 
 Créer des liens:
 
-    [Lien vers la page](/help/how-to-make-website) 
+    [Lien vers la page](/help/how-to-make-a-website)  
     [Lien vers le site](https://datenstrom.se)  
     https://fr.wikipedia.org/wiki/Markdown
 
@@ -54,6 +54,8 @@ Ajout d'image avec le [plugin image](https://github.com/datenstrom/yellow-plugin
 Ajout d'emoji avec le [plugin emoji](https://github.com/datenstrom/yellow-plugins/tree/master/emojiawesome):
 
     :smile: :grinning: :angry: :heart: :coffee: :+1:
+
+[Voir Markdown en action](/tests/markdown-format).
 
 ## Raccourcis
 
@@ -91,6 +93,7 @@ Ajout d'emoji avec le [plugin emoji](https://github.com/datenstrom/yellow-plugin
 `Sidebar` = page sidebar  
 `Siteicon` = icon of the website  
 `Sitename` = name of the website  
+`Email` = email of the webmaster  
 `Redirect` = new location or URL  
 `Robots` = robots meta data used in header  
 `Parser` = parser for text files  

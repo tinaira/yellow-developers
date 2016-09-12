@@ -83,6 +83,10 @@ Liens
 * [Instagram](https://instagram.com/datenstromse)
 ```
 
+## Démonstration
+
+[Voir un petit site web en action](/).
+
 ## Plus de fonctionnalités
 
 * [Comment ajouter une galerie d'images](https://github.com/datenstrom/yellow-plugins/tree/master/gallery)

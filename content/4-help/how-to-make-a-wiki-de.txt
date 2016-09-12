@@ -106,6 +106,10 @@ Links
 * [Kaffee](/tag:kaffee/)
 ```
 
+## Vorführung
+
+[Ein kleines Wiki in Aktion sehen](/plugins/wiki-plugin/).
+
 ## Weitere Funktionen
 
 * [Ein Inhaltsverzeichnis zum Wiki hinzufügen](https://github.com/datenstrom/yellow-plugins/tree/master/toc)

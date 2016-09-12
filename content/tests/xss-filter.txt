@@ -3,7 +3,7 @@ Title: Test XSS filter
 ---
 This page tests cross side scripting.
 
-HTML and JavaScript can be used in content files, unless the safe mode is enabled.
+HTML and JavaScript can be used, unless the safe mode is enabled.
 
 <strong>Text with <code>HTML</code></strong> <script>alert('XSS')</script>, 
 <a href="javascript:alert('XSS');">link</a>

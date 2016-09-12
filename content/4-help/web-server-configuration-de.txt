@@ -91,7 +91,7 @@ Du kannst eine statische Webseite in der [Befehlszeile](https://github.com/daten
 
 Das erstellt eine komplett statische Webseite im Verzeichnis `/var/www/website`. Eine statische Webseite braucht keine Yellow-Installation mehr. Die meisten Webseiten lassen sich damit erstellen. Lade Verzeichnis auf dein Webhosting hoch und erstelle bei Bedarf eine neue Version.
 
-Als Alternative zu einer statischen Webseite kann man auch einzelne Webseiten zum Cache hinzufügen. Hier ist ein Beispiel: `php yellow.php build cache /blog/blog-example`. Zum Löschen des Caches gibt man die folgende Zeile ein: `php yellow.php clean`.
+Als Alternative zu einer statischen Webseite kann man auch einzelne Seiten zum Cache hinzufügen. Hier ist ein Beispiel: `php yellow.php build cache /blog/blog-example`. Zum Löschen des Caches gibt man die folgende Zeile ein: `php yellow.php clean`.
 
 ## Fehlerseite
 

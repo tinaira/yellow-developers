@@ -11,24 +11,22 @@ Wie man eine Webseite mit besserer Sicherheit konfiguriert.
 
 Du brauchst einen Webserver mit TLS und gültigem Zertifikat.
 
-## Benutzerbeschränkungen
-
-Falls mehrere Person eine Webseite bearbeiten, beschränke [Benutzerkonten](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface) und nur Teile der Webseite können verändert werden. Damit wird deine Webseite vor Veränderungen im Webbrowser geschützt, jedoch werden Änderungen via FTP und SSH nicht verhindert.
-
-Alle Benutzerkonten sind in der Datei `system/config/user.ini` gespeichert. Ein Benutzerkonto besteht aus Email, verschlüsseltem Kennwort und [am Ende](https://github.com/datenstrom/yellow-developers/blob/master/system/config/user.ini) befindet sich die Startseite des Benutzers. Benutzer können keine Seiten ausserhalb ihrer Startseite verändern.
-
-Du kannst [Benutzerbeschränkungen testen](https://developers.datenstrom.se/edit/), einloggen mit `guest@guest.com` + `guest`.
-
 ## Abgesicherter Modus
 
 Falls mehrere Person eine Webseite bearbeiten, aktiviere den abgesicherten Modus und nur [Markdown](markdown-cheat-sheet-de) ist möglich. Damit wird deine Webseite vor unerwünschten Inhalten und Unfug geschützt, jedoch wird gleichzeitig auch HTML und JavaScript im Seiteninhalt deaktiviert.
 
 Öffne die Datei `system/config/config.ini` und ändere `ParserSafeMode: 1`.
 
+## Benutzerbeschränkungen
+
+Falls mehrere Person eine Webseite bearbeiten, beschränke [Benutzerkonten](adjusting-system-de#benutzerkonten) und nur Teile der Webseite können verändert werden. Damit wird deine Webseite vor Veränderungen im Webbrowser geschützt, jedoch sind Änderungen via FTP und SSH weiterhin möglich.
+
+Du kannst [Benutzerbeschränkungen testen](/tests/user-restrictions), einloggen mit `guest@guest.com` + `guest`.
+
 ## Weniger ist mehr
 
-Falls es niemanden gibt der eine Webseite im Webbrowser bearbeitet, kann man Yellow als reines Flat-File-CMS und Static-Site-Generator betreiben. Beispielsweise kann man das [Webinterface](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface) und unbenutzte Plugins löschen. Dann kann sich niemand einloggen.
+Falls niemanden eine Webseite im Webbrowser bearbeitet, kann man Yellow als reines Flat-File-CMS und Static-Site-Generator betreiben. Beispielsweise kann man das [Webinterface](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface) komplett entfernen. Danach ist es nicht mehr möglich sich einzuloggen und die Webseite zu ändern.
 
-Lösche die Datei `system/plugins/webinterface.php` um das Login zu entfernen.
+Lösche die Datei `system/plugins/webinterface.php` um das Webinterface zu entfernen.
 
 [Weiter: Yellow-Themes →](yellow-themes-de)

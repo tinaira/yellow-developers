@@ -82,7 +82,7 @@ Hier ist eine Beispiel-Snippetdatei `system/themes/snippets/navigation.php`:
 
 ## Fußzeile anpassen
 
-Um die Fußzeile anzupassen, ändere das entsprechende Snippet. Die Fußzeile wird automatisch auf allen Seiten angezeigt. Beispielsweise kannst du dort Informationen über deine Webseite anzeigen und weitere Links hinzufügen.
+Um die Fußzeile anzupassen, ändere das entsprechende Snippet. Die Fußzeile wird auf allen Seiten angezeigt. Beispielsweise kannst du dort Informationen über deine Webseite und weitere Links anzeigen.
 
 Hier ist eine Beispiel-Snippetdatei `system/themes/snippets/footer.php`:
 

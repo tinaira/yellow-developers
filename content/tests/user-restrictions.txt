@@ -1,0 +1,10 @@
+---
+Title: Test user restrictions
+---
+This page tests user restrictions.
+
+Any page can be changed, unless the user account is restricted.
+
+You can [edit this page]. You can not edit the [home page](/) with the guest user account. 
+
+Please log in with `guest@guest.com` + `guest`.

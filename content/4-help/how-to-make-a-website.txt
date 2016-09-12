@@ -84,6 +84,10 @@ Links
 * [Instagram](https://instagram.com/datenstromse)
 ```
 
+## Demo
+
+[See a small website in action](/).
+
 ## More features
 
 * [How to add an image gallery to your website](https://github.com/datenstrom/yellow-plugins/tree/master/gallery)

@@ -401,7 +401,7 @@ Here's an example snippet for showing server settings:
 </div>
 ```
 
-Here's an example snippet for showing the webmaster's name and email:
+Here's an example snippet for showing webmaster settings:
 
 ``` php
 <?php if($yellow->config->isExisting("author")): ?>

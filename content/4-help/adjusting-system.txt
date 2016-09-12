@@ -23,10 +23,18 @@ The main configuration file is `system/config/config.ini`. Here's an example:
     Language: en
     Theme: flatsite
 
-You can define the default settings of your website here. Individual [settings](markdown-cheat-sheet#settings) can be defined at the top of each page. For a new installation you should set `Sitename`, `Author` and `Email`.
+You can define the default settings here, for example the name of the website and the email of the webmaster. Individual [settings](markdown-cheat-sheet#settings) can be defined at the top of each page. For a new installation you should set `Sitename`, `Author` and `Email`. 
 
-## User settings
+## User accounts
 
-All user accounts are stored in file `system/config/user.ini`.  The [web interface](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface) allows you to create new user accounts and change passwords. The webmaster's email is defined in file `system/config/config.ini`, for example `Email: anna@svensson.com`.
+All user accounts are stored in file `system/config/user.ini`. Here's an example:
+
+    anna@svensson.com: $2y$10$j26zDnt/xaWxC/eqGKb9p.d6e3pbVENDfRzauTawNCUHHl3CCOIzG,Anna,en,active,946684800,none,/
+    demo@demo.com: $2y$10$8TKEuytrwiLSICJNlW5.yOE9CQPXJmqXL2Af6rPsSch1/9UiXEZjm,Yellow,en,active,946684800,none,/
+    guest@guest.com: $2y$10$4VENNhK/hb3US8zJdimJduratVuQloACbdmbGhoFUyqHvU6mbpPm.,Guest,en,active,946684800,none,/tests/
+
+You can use the [web interface](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface) to create new user accounts and change passwords. A user account consists of email, encrypted password, user settings and at the end of the line is the user's home page. 
+
+To restrict a user account define a home page for the user. Users are not allowed to change pages outside their own home page. The `Guest` user account for example is only allowed to change `/tests/` pages.
 
 [Next: Web server configuration →](web-server-configuration)

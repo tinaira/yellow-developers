@@ -107,6 +107,10 @@ Links
 * [Coffee](/tag:coffee/)
 ```
 
+## Démonstration
+
+[Voir un petit wiki en action](/plugins/wiki-plugin/).
+
 ## Plus de fonctionnalités
 
 * [Comment ajouter une table des matières à votre wiki](https://github.com/datenstrom/yellow-plugins/tree/master/toc)

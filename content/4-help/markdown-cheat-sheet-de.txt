@@ -37,7 +37,7 @@ Zitate erstellen:
 
 Links erstellen:
 
-    [Link zu Seite](/help/how-to-make-website) 
+    [Link zu Seite](/help/how-to-make-a-website)  
     [Link zu Webseite](https://datenstrom.se)  
     https://de.wikipedia.org/wiki/Markdown
 
@@ -52,6 +52,8 @@ Ein Bild hinzufügen mit dem [Image-Plugin](https://github.com/datenstrom/yellow
 Emoji hinzufügen mit dem [Emoji-Plugin](https://github.com/datenstrom/yellow-plugins/tree/master/emojiawesome):
 
     :smile: :grinning: :angry: :heart: :coffee: :+1:
+
+[Markdown in Aktion sehen](/tests/markdown-format).
 
 ## Abkürzungen
 
@@ -86,9 +88,10 @@ Emoji hinzufügen mit dem [Emoji-Plugin](https://github.com/datenstrom/yellow-pl
 `Tag` = Tags zur Kategorisierung der Seite, durch Komma getrennt  
 `Status` = Status für Arbeitsablauf  
 `Navigation` = Navigation der Seite  
-`Sidebar` = Seitenleiste der Seite  
+`Sidebar` = Sidebar der Seite  
 `Siteicon` = Icon der Webseite  
 `Sitename` = Name der Webseite   
-`Redirect` = neuer Ort oder URL  
+`Email` = E-Mail des Webmasters  
+`Redirect` = neue Adresse oder URL  
 `Robots` = Robots-Meta-Daten die im Header benutzt werden  
 `Parser` = Parser für Textdateien  

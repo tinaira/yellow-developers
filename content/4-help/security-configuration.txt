@@ -11,24 +11,22 @@ Check if your web server supports [HTTPS](https://en.wikipedia.org/wiki/HTTPS) a
 
 You need a web server with TLS and valid certificate.
 
-## User restrictions
-
-If you have more than one person editing a website, restrict [user accounts](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface) and only parts of the website can be changed. This protects your website from being changed in a web browser, but it doesn't prevent changes via FTP and SSH.
-
-All user accounts are stored in file `system/config/user.ini`. A user account consists of email, encrypted password and [at the end](https://github.com/datenstrom/yellow-developers/blob/master/system/config/user.ini) is the user's home page. Users can not change pages outside their home page.
-
-You can [test user restrictions](https://developers.datenstrom.se/edit/), log in with `guest@guest.com` + `guest`.
-
 ## Safe mode
 
 If you have more than one person editing a website, enable safe mode and only [Markdown](markdown-cheat-sheet) is possible for text formatting. This protects your website from unwanted content and nuisance, but it also disables HTML and JavaScript in page content.
 
 Open file `system/config/config.ini` and change `ParserSafeMode: 1`.
 
+## User restrictions
+
+If you have more than one person editing a website, restrict [user accounts](adjusting-system#user-accounts) and only parts of the website can be changed. This protects your website from being changed in a web browser, but changes via FTP and SSH are still possible.
+
+You can [test user restrictions](/tests/user-restrictions), log in with `guest@guest.com` + `guest`.
+
 ## Less is more
 
-If there's nobody editing a website in a web browser, it's possible to run Yellow as pure flat-file CMS and static site generator. For example delete the [web interface](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface) and unused plugins. Then nobody can log in and change your website.
+If there's nobody editing a website in a web browser, you can run Yellow as pure flat-file CMS and static site generator. For example remove the [web interface](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface) completely. Then it's no longer possible to log in and change the website.
 
-Delete file `system/plugins/webinterface.php` to remove the user login.
+Delete file `system/plugins/webinterface.php` to remove the web interface.
 
 [Next: Yellow themes →](yellow-themes)

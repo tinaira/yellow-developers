@@ -135,6 +135,10 @@ Archiv
 [blogarchive /]
 ```
 
+## Vorführung
+
+[Ein kleines Blog in Aktion sehen](/plugins/blog-plugin/).
+
 ## Weitere Funktionen
 
 * [Eine Kommentarfunktion zum Blog hinzufügen](https://github.com/datenstrom/yellow-plugins/tree/master/disqus)

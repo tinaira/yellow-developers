@@ -29,4 +29,4 @@ Yellow est fait pour les gens qui font des sites web. [Obtenir de l'aide](suppor
 
 * [Thèmes de Yellow](yellow-themes-fr)
 * [Templates de Yellow](yellow-templates-fr)
-* [Interface de programmation (API)](yellow-api-fr)
+* [Interface de programmation](yellow-api-fr)
