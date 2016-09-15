@@ -9,10 +9,6 @@ Alle Einstellungen befinden sich im `system`-Verzeichnis. Hier machst du Anpassu
 
 Das `config`-Verzeichnis enthält Konfigurationsdateien. Das `plugins`-Verzeichnis enthält die Yellow-Software. Das `themes`-Verzeichnis ist für das Aussehen der Webseite zuständig. Änderungen in diesen Verzeichnissen wirkt sich auf die gesamte Webseite aus.
 
-## Plugins und Themes
-
-Yellow konzentriert sich auf's Wesentliche. Du bekommst die wichtigsten Sachen um eine Webseite zu erstellen und kannst weitere Funktionen hinzufügen. Wie wäre es beispielsweise mit einem Blog oder einer Bildergalerie? Es gibt [Plugins](/plugins/) und [Themes](/themes/) zum Herunterladen.
-
 ## Systemeinstellungen
 
 Die zentrale Konfigurationsdatei ist `system/config/config.ini`. Hier ist ein Beispiel:
@@ -36,5 +32,9 @@ Alle Benutzerkonten sind in `system/config/user.ini` gespeichert. Hier ist ein B
 Du kannst das [Webinterface](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface) benutzen um neue Benutzerkonten anzulegen und Kennwörter zu ändern. Ein Benutzerkonto besteht aus E-Mail, verschlüsseltem Kennwort, verschiedenen Benutzereinstellungen und am Ende der Zeile befindet sich die Startseite des Benutzers. 
 
 Um ein Benutzerkonto zu beschränken legt man eine Startseite für den Benutzer fest. Benutzer dürfen keine Seiten ausserhalb ihrer eigenen Startseite verändern. Das `Guest` Benutzerkonto darf beispielsweise nur `/tests/`-Seiten verändern.
+
+## Plugins und Themes
+
+Yellow konzentriert sich auf's Wesentliche. Du bekommst die wichtigsten Sachen um eine kleine Webseite zu erstellen und kannst weitere Funktionen hinzufügen. Wie wäre es beispielsweise mit einem Blog oder einer Bildergalerie? Es gibt [Plugins](/plugins/) und [Themes](/themes/) zum Herunterladen.
 
 [Weiter: Webservereinstellungen →](web-server-configuration-de)

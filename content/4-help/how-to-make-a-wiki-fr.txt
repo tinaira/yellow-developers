@@ -5,7 +5,7 @@ Language: fr
 ---
 >>> [Vous pouvez nous aider à traduire cette page.](https://github.com/datenstrom/yellow-developers/blob/master/content/4-help/how-to-make-a-wiki-fr.txt)
 
-Apprenez à faire un wiki avec Yellow.
+Apprenez à faire un wiki avec Yellow. [Voir la démo](/plugins/wiki-plugin/).
 
 [image screenshot-wiki.png Screenshot - 55%]
 
@@ -106,10 +106,6 @@ Links
 * [Example](/tag:example/)  
 * [Coffee](/tag:coffee/)
 ```
-
-## Démonstration
-
-[Voir un petit wiki en action](/plugins/wiki-plugin/).
 
 ## Plus de fonctionnalités
 

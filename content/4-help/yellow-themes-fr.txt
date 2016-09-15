@@ -5,7 +5,7 @@ Language: fr
 ---
 >>> [Vous pouvez nous aider à traduire cette page.](https://github.com/datenstrom/yellow-developers/blob/master/content/4-help/yellow-themes-fr.txt)
 
-You can customise the visual design of your website.
+Vous pouvez personnaliser la conception visuelle de votre site web.
 
 ## Themes
 
@@ -13,7 +13,7 @@ Themes define the visual design of your website. Start with a [theme](/themes/) 
 
 ## Custom theme
 
-To use a theme set the `Theme` setting at the top of a page. You can also create a theme with the name of a `content` folder and it will be automatically used. A theme consists of a [style sheet](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) and additional files.
+To use a different theme set the `Theme` setting at the top of a page. You can also create a theme with the name of a `content` folder and it will be automatically used. Themes consist of a style sheet and are made with [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets).
  
 Here's an example theme file `system/themes/home.css`:
 
@@ -33,7 +33,7 @@ a:hover { color:#07d; text-decoration:underline; }
 .navigation li { display:inline; }
 ```
 
-Here's the same theme with dark background color:
+Here's the same theme file with dark background color:
 
 ``` css
 /* Theme: Home theme */
@@ -55,7 +55,7 @@ All themes should have a unique name and version.
 
 ## JavaScript
 
-To extend a theme you have the possibility to use [JavaScript](http://en.wikipedia.org/wiki/JavaScript). You can create a script with the name of a theme and it will be included together with the style sheet. This allows you to create any dynamic feature with Yellow.
+To extend a theme you have many different possibility, for example [JavaScript](http://en.wikipedia.org/wiki/JavaScript). You can create a script with the name of a theme and it will be automatically used. This allows you to create any dynamic feature with Yellow.
 
 Here's an example JavaScript file `system/themes/assets/home.js`:
 
@@ -74,7 +74,7 @@ if(window.addEventListener) {
 
 ## Site icon
 
-The site icon, also called favicon, is a small image that is associated with a website. There's a default icon defined in file `system/config/config.ini`. A different icon can be defined in the [settings](markdown-cheat-sheet#settings) at the top of each page, for example `Siteicon: icon`.
+The site icon, also called favicon, is a small image that is associated with your website. There's a default icon defined in file `system/config/config.ini`. A different icon can be defined in the [settings](markdown-cheat-sheet#settings) at the top of each page, for example `Siteicon: icon`.
 
 To change the site icon overwrite file `system/themes/assets/icon.png`.
 

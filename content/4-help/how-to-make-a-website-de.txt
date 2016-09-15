@@ -3,7 +3,7 @@ Title: Webseite erstellen
 Sidebar: sidebar-de
 Language: de
 ---
-Lerne wie man eine Webseite mit Yellow erstellt.
+Lerne wie man eine Webseite mit Yellow erstellt. [Demo anschauen](/).
 
 [image screenshot-website.png Screenshot - 55%]
 
@@ -82,10 +82,6 @@ Links
 * [GitHub](https://github.com/datenstrom)
 * [Instagram](https://instagram.com/datenstromse)
 ```
-
-## Vorführung
-
-[Eine kleine Webseite in Aktion sehen](/).
 
 ## Weitere Funktionen
 

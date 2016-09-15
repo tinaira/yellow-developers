@@ -27,7 +27,7 @@ You can [test user restrictions](/tests/user-restrictions), log in with `guest@g
 
 ## Less is more
 
-If there's nobody editing a website in a web browser, you can run Yellow as pure flat-file CMS and static site generator. For example remove the [web interface](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface) completely. Then it's no longer possible to log in and change the website.
+If there's nobody editing a website in a web browser, you can run Yellow as pure flat-file CMS and [static site generator](web-server-configuration#static-website). For example remove the [web interface](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface), then it's no longer possible to log in and change the website.
 
 Delete file `system/plugins/webinterface.php` to remove the web interface.
 

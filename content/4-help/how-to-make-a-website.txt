@@ -3,7 +3,7 @@ Title: How to make a website
 Sidebar: sidebar
 Language: en
 ---
-Learn how to make a website with Yellow. 
+Learn how to make a website with Yellow. [See demo](/).
 
 [image screenshot-website.png Screenshot - 55%]
 
@@ -83,10 +83,6 @@ Links
 * [GitHub](https://github.com/datenstrom)
 * [Instagram](https://instagram.com/datenstromse)
 ```
-
-## Demo
-
-[See a small website in action](/).
 
 ## More features
 

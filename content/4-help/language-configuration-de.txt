@@ -39,26 +39,18 @@ Language: fr
 Oiseaux du même plumage volent ensemble.
 ```
 
-## Einsprachen-Modus
-
-Wenn man nur eine Sprache spricht oder nur einzelne Seiten übersetzen will, benutzt man den Einsprachen-Modus. Dieser Modus wird automatisch von Yellow benutzt. Die Standardsprache wird in der Datei `system/config/config.ini` festgelegt, zum Beispiel `Language: de`. 
-
-[image screenshot-content.png Screenshot]
-
-Der Screenshot zeigt das `content`-Verzeichnis nach der Installation.
-
 ## Mehrsprachen-Modus
 
-Wenn man eine ganze Webseite übersetzen will, benutzt man den Mehrsprachen-Modus. Öffne die Datei `system/config/config.ini` und ändere `MultiLanguageMode: 1`. Erstelle ein neues Verzeichnis `1-en` in deinem `content`-Verzeichnis und schiebe alle Inhalte hinein.
+Wenn man eine komplette Webseite übersetzen will, benutzt man den Mehrsprachen-Modus. Öffne die Datei `system/config/config.ini` und ändere `MultiLanguageMode: 1`. Gehe ins `content`-Verzeichnis und erstelle für jede Sprache ein eigenes Verzeichnis. Hier ist ein Beispiel:
 
 [image screenshot-language1.png Screenshot]
 
-Der Screenshot zeigt die Verzeichnisse `1-en`, `2-de` und `3-fr`. Das erzeugt die folgenden URLs `http://website/` `http://website/de/` `http://website/fr/` für Englisch, Deutsch und Französisch. Hier ist noch eine weitere Einstellung:
+Der erste Screenshot zeigt die Verzeichnisse `1-en`, `2-de` und `3-fr`. Das erzeugt die URLs `http://website/` `http://website/de/` `http://website/fr/` für Englisch, Deutsch und Französisch. Hier ist noch ein Beispiel:
 
 [image screenshot-language2.png Screenshot]
 
-Der Screenshot zeigt die Verzeichnisse `1-en`, `2-de`, `3-fr` und `default`. Das erzeugt die folgenden URLs `http://website/en/` `http://website/de/` `http://website/fr/` und eine Startseite `http://website/` welche automatisch die Sprache des Besuchers ermittelt. 
+Der zweite Screenshot zeigt die Verzeichnisse `1-en`, `2-de`, `3-fr` und `default`. Das erzeugt die URLs `http://website/en/` `http://website/de/` `http://website/fr/` und die Startseite `http://website/` welche automatisch die Sprache des Besuchers ermittelt. 
 
-Wenn man die [Navigation anpassen](yellow-templates-de#navigation-anpassen) will, öffnet man die Datei `system/config/config.ini` und ändert `Navigation: navigation-multilanguage`. Du kannst auch eine Sprachauswahl irgendwo anders in deine Webseite einfügen, beispielsweise in der [Fußzeile](yellow-templates-de#fußzeile-anpassen).
+Um die [Navigation](yellow-templates-de#navigation-anpassen) anzupassen, öffne die Datei `system/config/config.ini` und ändere `Navigation: navigation-multilanguage`. Eine Sprachauswahl kann man auch irgendwo anders in die Webseite einbauen, beispielsweise in die [Fußzeile](yellow-templates-de#fußzeile-anpassen).
 
 [Weiter: Sicherheitseinstellungen →](security-configuration-de)

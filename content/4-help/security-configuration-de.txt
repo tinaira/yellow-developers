@@ -25,7 +25,7 @@ Du kannst [Benutzerbeschränkungen testen](/tests/user-restrictions), einloggen 
 
 ## Weniger ist mehr
 
-Falls niemanden eine Webseite im Webbrowser bearbeitet, kann man Yellow als reines Flat-File-CMS und Static-Site-Generator betreiben. Beispielsweise kann man das [Webinterface](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface) komplett entfernen. Danach ist es nicht mehr möglich sich einzuloggen und die Webseite zu ändern.
+Falls niemanden eine Webseite im Webbrowser bearbeitet, kann man Yellow als reines Flat-File-CMS und [Static-Site-Generator](web-server-configuration-de#statische-webseite) betreiben. Beispielsweise kann man das [Webinterface](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface) entfernen, danach ist es nicht mehr möglich sich einzuloggen und die Webseite zu ändern.
 
 Lösche die Datei `system/plugins/webinterface.php` um das Webinterface zu entfernen.
 

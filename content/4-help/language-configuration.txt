@@ -39,26 +39,18 @@ Language: fr
 Oiseaux du même plumage volent ensemble.
 ```
 
-## Single language mode
-
-If you speak only one language or want to translate only single pages, use the single language mode. This mode is automatically used by Yellow. The default language is defined in file `system/config/config.ini`, for example `Language: en`. 
-
-[image screenshot-content.png Screenshot]
-
-The screenshot shows the `content` folder after the installation.
-
 ## Multi language mode
 
-If you want to translate the whole website, it's best to use the multi language mode. Open file `system/config/config.ini` and change `MultiLanguageMode: 1`. Create a new folder `1-en` in your `content` folder and move all your content inside.
+If you want to translate an entire website, it's best to use the multi language mode. Open file `system/config/config.ini` and change `MultiLanguageMode: 1`. Go to your `content` folder and create a new folder for each language. Here's an example:
 
 [image screenshot-language1.png Screenshot]
 
-The screenshot shows the folders `1-en`, `2-de` and `3-fr`. This gives you the following URLs `http://website/` `http://website/de/` `http://website/fr/` for English, German and French. Here's another configuration:
+The first screenshot shows the folders `1-en`, `2-de` and `3-fr`. This gives you the URLs `http://website/` `http://website/de/` `http://website/fr/` for English, German and French. Here's another example:
 
 [image screenshot-language2.png Screenshot]
 
-The screenshot shows the folders `1-en`, `2-de`, `3-fr` and `default`. This gives you the following URLs `http://website/en/` `http://website/de/` `http://website/fr/` and a home page `http://website/` that automatically detects the visitor's language. 
+The second screenshot shows the folders `1-en`, `2-de`, `3-fr` and `default`. This gives you the URLs `http://website/en/` `http://website/de/` `http://website/fr/` and a home page `http://website/` that automatically detects the visitor's language. 
 
-If you want to use a [custom navigation](yellow-templates#custom-navigation), open file `system/config/config.ini` and change `Navigation: navigation-multilanguage`. You can also add a language selection somewhere else on your website, for example in the [footer](yellow-templates#custom-footer).
+To adjust the [navigation](yellow-templates#custom-navigation) open file `system/config/config.ini` and change `Navigation: navigation-multilanguage`. You can also show a language selection somewhere else on your website, for example in the [footer](yellow-templates#custom-footer).
 
 [Next: Security configuration →](security-configuration)

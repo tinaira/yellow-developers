@@ -3,7 +3,7 @@ Title: Wiki erstellen
 Sidebar: sidebar-de
 Language: de
 ---
-Lerne wie man ein Wiki mit Yellow erstellt.
+Lerne wie man ein Wiki mit Yellow erstellt. [Demo anschauen](/plugins/blog-plugin/).
 
 [image screenshot-wiki.png Screenshot - 55%]
 
@@ -105,10 +105,6 @@ Links
 * [Beispiel](/tag:beispiel/)  
 * [Kaffee](/tag:kaffee/)
 ```
-
-## Vorführung
-
-[Ein kleines Wiki in Aktion sehen](/plugins/wiki-plugin/).
 
 ## Weitere Funktionen
 

@@ -3,7 +3,7 @@ Title: Comment faire un site web
 Sidebar: sidebar-fr
 Language: fr
 ---
-Apprenez à faire un site web avec Yellow.
+Apprenez à faire un site web avec Yellow. [Voir la démo](/).
 
 [image screenshot-website.png Screenshot - 55%]
 
@@ -82,10 +82,6 @@ Liens
 * [GitHub](https://github.com/datenstrom)
 * [Instagram](https://instagram.com/datenstromse)
 ```
-
-## Démonstration
-
-[Voir un petit site web en action](/).
 
 ## Plus de fonctionnalités
 

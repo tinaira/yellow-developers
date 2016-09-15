@@ -3,7 +3,7 @@ Title: Blog erstellen
 Sidebar: sidebar-de
 Language: de
 ---
-Lerne wie man ein Blog mit Yellow erstellt.
+Lerne wie man ein Blog mit Yellow erstellt. [Demo anschauen](/plugins/blog-plugin/).
 
 [image screenshot-blog.png Screenshot - 55%]
 
@@ -134,10 +134,6 @@ Archiv
 
 [blogarchive /]
 ```
-
-## Vorführung
-
-[Ein kleines Blog in Aktion sehen](/plugins/blog-plugin/).
 
 ## Weitere Funktionen
 

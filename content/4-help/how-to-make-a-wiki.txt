@@ -3,7 +3,7 @@ Title: How to make a wiki
 Sidebar: sidebar
 Language: en
 ---
-Learn how to make a wiki with Yellow.
+Learn how to make a wiki with Yellow. [See demo](/plugins/wiki-plugin/).
 
 [image screenshot-wiki.png Screenshot - 55%]
 
@@ -106,10 +106,6 @@ Links
 * [Example](/tag:example/)  
 * [Coffee](/tag:coffee/)
 ```
-
-## Demo
-
-[See a small wiki in action](/plugins/wiki-plugin/).
 
 ## More features
 

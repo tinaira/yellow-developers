@@ -11,7 +11,7 @@ Themes bestimmen das Aussehen deiner Webseite. Beginne mit einem [Theme](/themes
 
 ## Themes anpassen
 
-Um ein Theme zu benutzen, legst du das `Theme` ganz oben auf einer Seite fest. Du kannst auch ein Theme mit dem Namen eines `content`-Verzeichnisses erstellen und es wird automatisch benutzt. Ein Theme besteht aus einem [Stylesheet](https://de.wikipedia.org/wiki/Cascading_Style_Sheets) und weiteren Dateien.
+Um ein anderes Theme zu benutzen, legst du das `Theme` ganz oben auf einer Seite fest. Du kannst auch ein Theme mit dem Namen eines `content`-Verzeichnisses erstellen und es wird automatisch benutzt. Themes bestehen aus einem Stylesheet und werden mit [CSS](https://de.wikipedia.org/wiki/Cascading_Style_Sheets) erstellt.
 
 Hier ist eine Beispiel-Themedatei `system/themes/home.css`:
 
@@ -31,7 +31,7 @@ a:hover { color:#07d; text-decoration:underline; }
 .navigation li { display:inline; }
 ```
 
-Hier ist das selbe Theme mit dunkler Hintergrundfarbe:
+Hier ist die selbe Themedatei mit dunkler Hintergrundfarbe:
 
 ``` css
 /* Theme: Home theme */
@@ -49,11 +49,11 @@ a:hover { color:#29f; text-decoration:underline; }
 .navigation li { display:inline; }
 ```
 
-Alle Themes sollten einen eindeutigen Namen und Version haben.
+Alle Themes sollten einen eindeutigen Namen und Version besitzen.
 
 ## JavaScript
 
-Um ein Theme zu erweitern gibt es die Möglichkeit [JavaScript](http://de.wikipedia.org/wiki/JavaScript) einzubinden. Du kannst ein Script mit dem Namen eines Themes erstellen und es wird gemeinsam mit dem Stylesheet eingebunden. Das ermöglicht es beliebige dynamische Funktionen mit Yellow zu erstellen.
+Um ein Theme zu erweitern gibt es viele verschiedene Möglichkeit, beispielsweise  [JavaScript](http://de.wikipedia.org/wiki/JavaScript). Du kannst ein Script mit dem Namen eines Themes erstellen und es wird automatisch benutzt. Das ermöglicht es beliebige dynamische Funktionen mit Yellow zu erstellen.
 
 Hier ist ein Beispiel-JavaScript `system/themes/assets/home.js`:
 
@@ -72,7 +72,7 @@ if(window.addEventListener) {
 
 ## Siteicon
 
-Das Siteicon, auch Favicon genannt, ist ein kleines Bild das stellvertretend für eine Webseite ist. Das Standardicon wird in der Datei `system/config/config.ini` festgelegt. Eine anderes Icon lässt sich in den [Einstellungen](markdown-cheat-sheet-de#einstellungen) auf jeder Seite festlegen, zum Beispiel `Siteicon: icon`.
+Das Siteicon, auch Favicon genannt, ist ein kleines Bild das stellvertretend für deine Webseite ist. Das Standardicon wird in der Datei `system/config/config.ini` festgelegt. Eine anderes Icon lässt sich in den [Einstellungen](markdown-cheat-sheet-de#einstellungen) auf jeder Seite festlegen, zum Beispiel `Siteicon: icon`.
 
 Um das Siteicon zu ändern überschreibe die Datei `system/themes/assets/icon.png`.
 

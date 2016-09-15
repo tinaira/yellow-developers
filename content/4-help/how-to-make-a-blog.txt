@@ -3,7 +3,7 @@ Title: How to make a blog
 Sidebar: sidebar
 Language: en
 ---
-Learn how to make a blog with Yellow.
+Learn how to make a blog with Yellow. [See demo](/plugins/blog-plugin/).
 
 [image screenshot-blog.png Screenshot - 55%]
 
@@ -135,10 +135,6 @@ Archive
 
 [blogarchive /]
 ```
-
-## Demo
-
-[See a small blog in action](/plugins/blog-plugin/).
 
 ## More features
 

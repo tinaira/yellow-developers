@@ -9,10 +9,6 @@ All settings are located in the `system` folder. You can adjust your website her
 
 The `config` folder contains configuration files. The `plugins` folder contains the Yellow software. The `themes` folder is for the visual design of your website. Changes in these folders affect the entire website.
 
-## Plugins and themes
-
-Yellow concentrates on the essential aspects. You get the most important things to create a website and can add more features. How about a blog or an image gallery? There are [plugins](/plugins/) and [themes](/themes/) you can download.
-
 ## System settings
 
 The main configuration file is `system/config/config.ini`. Here's an example:
@@ -36,5 +32,9 @@ All user accounts are stored in file `system/config/user.ini`. Here's an example
 You can use the [web interface](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface) to create new user accounts and change passwords. A user account consists of email, encrypted password, user settings and at the end of the line is the user's home page. 
 
 To restrict a user account define a home page for the user. Users are not allowed to change pages outside their own home page. The `Guest` user account for example is only allowed to change `/tests/` pages.
+
+## Plugins and themes
+
+Yellow concentrates on the essential aspects. You get the most important things to create a small website and can add more features. How about a blog or an image gallery? There are [plugins](/plugins/) and [themes](/themes/) you can download.
 
 [Next: Web server configuration →](web-server-configuration)
