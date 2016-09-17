@@ -9,7 +9,7 @@ function GoogleCalender(element, options)
 		["mode", "timeZone", "dateMonths", "dateWeekdays", "dateFormatShort", "dateFormatMedium", "dateFormatLong",
 		 "dateFormatTime", "timeMin", "entriesMax", "calendar", "apiKey"]);
 	return (this instanceof GoogleCalender ? this : new GoogleCalender());
-};
+}
 
 GoogleCalender.prototype =
 {
@@ -19,7 +19,7 @@ GoogleCalender.prototype =
 		var events = JSON.parse(responseText);
 		if(events.items.length>0)
 		{
-			var ul = document.createElement('ul');
+			var ul = document.createElement("ul");
 			ul.className = this.options.mode;
 			for(var i=0; i<events.items.length; i++)
 			{
@@ -29,7 +29,7 @@ GoogleCalender.prototype =
 				var format = item.start.date ? this.options.dateFormatMedium : this.options.dateFormatLong;
 				var date = item.start.date ? item.start.date : item.start.dateTime;
 				var location = item.location ? item.location : "";
-				var li = document.createElement('li');
+				var li = document.createElement("li");
 				li.innerHTML =
 				"<span class=\"summary\">"+this.encodeHtml(summary)+"</span>"+
 				(location ? ", <span class=\"location\">"+this.encodeHtml(location)+"</span>" : "")+
@@ -48,7 +48,7 @@ GoogleCalender.prototype =
 		if(events.items.length>0)
 		{
 			var section;
-			var ul = document.createElement('ul');
+			var ul = document.createElement("ul");
 			ul.className = this.options.mode;
 			for(var i=0; i<events.items.length; i++)
 			{
@@ -62,15 +62,15 @@ GoogleCalender.prototype =
 				if(section!=sectionNew)
 				{
 					section = sectionNew;
-					var header = document.createElement('h2');
+					var header = document.createElement("h2");
 					header.className = this.options.mode;
 					header.innerHTML = this.encodeHtml(section);
 					this.element.appendChild(ul);
 					this.element.appendChild(header);
-					ul = document.createElement('ul');
+					ul = document.createElement("ul");
 					ul.className = this.options.mode;
 				}
-				var li = document.createElement('li');
+				var li = document.createElement("li");
 				li.innerHTML =
 				"<span class=\"time\">"+this.encodeHtml(time ? this.formatDate(this.options.dateFormatTime, new Date(time)) : "")+"</span>"+
 				" <span class=\"summary\">"+this.encodeHtml(summary)+"</span>"+
@@ -146,26 +146,26 @@ GoogleCalender.prototype =
 		var dateWeekdays = this.options.dateWeekdays.split(/,\s*/);
 		var dateReplace =
 		{
-			d: function() { return (date.getDate()<10 ? '0' : '')+date.getDate(); },
+			d: function() { return (date.getDate()<10 ? "0" : "")+date.getDate(); },
 			D: function() { return dateWeekdays[(date.getDay()+6)%7].substr(0, 3); },
 			j: function() { return date.getDate(); },
 			l: function() { return dateWeekdays[(date.getDay()+6)%7]; },
 			N: function() { return (date.getDay()==0 ? 7 : date.getDay()); },
 			w: function() { return date.getDay(); },
 			F: function() { return dateMonths[date.getMonth()]; },
-			m: function() { return (date.getMonth()<9 ? '0' : '')+(date.getMonth()+1); },
+			m: function() { return (date.getMonth()<9 ? "0" : "")+(date.getMonth()+1); },
 			M: function() { return dateMonths[date.getMonth()].substr(0, 3); },
 			n: function() { return date.getMonth()+1; },
 			Y: function() { return date.getFullYear(); },
-			y: function() { return (''+date.getFullYear()).substr(2); },
+			y: function() { return (""+date.getFullYear()).substr(2); },
 			a: function() { return date.getHours()<12 ? "am" : "pm"; },
 			A: function() { return date.getHours()<12 ? "AM" : "PM"; },
 			g: function() { return date.getHours()%12 || 12; },
 			G: function() { return date.getHours(); },
-			h: function() { return ((date.getHours()%12 || 12)<10 ? '0' : '')+(date.getHours()%12 || 12); },
-			H: function() { return (date.getHours()<10 ? '0' : '')+date.getHours(); },
-			i: function() { return (date.getMinutes()<10 ? '0' : '')+date.getMinutes(); },
-			s: function() { return (date.getSeconds()<10 ? '0' : '')+date.getSeconds(); },
+			h: function() { return ((date.getHours()%12 || 12)<10 ? "0" : "")+(date.getHours()%12 || 12); },
+			H: function() { return (date.getHours()<10 ? "0" : "")+date.getHours(); },
+			i: function() { return (date.getMinutes()<10 ? "0" : "")+date.getMinutes(); },
+			s: function() { return (date.getSeconds()<10 ? "0" : "")+date.getSeconds(); },
 		};
 		return format.replace(/(.)/g, function(match) { return dateReplace[match] ? dateReplace[match].call() : match; });
 	},
@@ -180,7 +180,7 @@ GoogleCalender.prototype =
 			.replace(/"/g, "&quot;");
 	}
 };
-					 
+
 var initGoogleCalendarFromDOM = function()
 {
 	var calendars = {};
