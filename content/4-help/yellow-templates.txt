@@ -58,11 +58,11 @@ To adjust the navigation open file `system/config/config.ini` and change the `Na
 
 The following navigations are available:
 
-`Navigation: navigation` shows navigation with top level pages  
-`Navigation: navigation-tree` shows navigation with dropdown menu   
-`Navigation: navigation-sidebar` shows sub level pages in the [sidebar](#sidebar)  
-`Navigation: navigation-multilanguage`  shows navigation with [language selection](language-configuration#multi-language-mode)   
-`Navigation: navigation-search`  shows search bar from the [search plugin](https://github.com/datenstrom/yellow-plugins/tree/master/search)  
+`Navigation: navigation` shows top level pages  
+`Navigation: navigation-tree` shows dropdown menu  
+`Navigation: navigation-sidebar` shows sub level pages in [sidebar](#sidebar)  
+`Navigation: navigation-multilanguage`  shows a [language selection](language-configuration#multi-language-mode)  
+`Navigation: navigation-search`  shows a [search bar](https://github.com/datenstrom/yellow-plugins/tree/master/search)  
 
 Here's an example snippet file `system/themes/snippets/navigation.php`:
 

@@ -5,7 +5,7 @@
 // Wiki plugin
 class YellowWiki
 {
-	const VERSION = "0.6.8";
+	const VERSION = "0.6.9";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -13,6 +13,7 @@ class YellowWiki
 	{
 		$this->yellow = $yellow;
 		$this->yellow->config->setDefault("wikiLocation", "");
+		$this->yellow->config->setDefault("wikiPagesMax", "10");		
 		$this->yellow->config->setDefault("wikiPaginationLimit", "30");
 	}
 
@@ -37,7 +38,7 @@ class YellowWiki
 		{
 			list($location, $pagesMax) = $this->yellow->toolbox->getTextArgs($text);
 			if(empty($location)) $location = $this->yellow->config->get("wikiLocation");
-			if(empty($pagesMax)) $pagesMax = 10;
+			if(empty($pagesMax)) $pagesMax = $this->yellow->config->get("wikiPagesMax");
 			$wiki = $this->yellow->pages->find($location);
 			$pages = $wiki ? $wiki->getChildren(!$wiki->isVisible())->append($wiki) : $this->yellow->pages->clean();
 			$pages->sort("title")->limit($pagesMax);
@@ -60,7 +61,7 @@ class YellowWiki
 		{
 			list($location, $pagesMax) = $this->yellow->toolbox->getTextArgs($text);
 			if(empty($location)) $location = $this->yellow->config->get("wikiLocation");
-			if(empty($pagesMax)) $pagesMax = 10;			
+			if(empty($pagesMax)) $pagesMax = $this->yellow->config->get("wikiPagesMax");
 			$wiki = $this->yellow->pages->find($location);
 			$pages = $wiki ? $wiki->getChildren(!$wiki->isVisible())->append($wiki) : $this->yellow->pages->clean();
 			$pages->sort("modified", false)->limit($pagesMax);
@@ -83,7 +84,7 @@ class YellowWiki
 		{
 			list($location, $pagesMax) = $this->yellow->toolbox->getTextArgs($text);
 			if(empty($location)) $location = $this->yellow->config->get("wikiLocation");
-			if(empty($pagesMax)) $pagesMax = 10;
+			if(empty($pagesMax)) $pagesMax = $this->yellow->config->get("wikiPagesMax");
 			$wiki = $this->yellow->pages->find($location);
 			$pages = $wiki ? $wiki->getChildren(!$wiki->isVisible())->append($wiki) : $this->yellow->pages->clean();
 			$pages->similar($page->getPage("main"))->limit($pagesMax);

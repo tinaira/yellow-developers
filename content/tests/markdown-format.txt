@@ -30,3 +30,7 @@ Making quotes:
 > Here's a quote
 >> Here's a quote of a quote
 >>> Here's a quote of a quote of a quote
+
+[Link to page](/help/how-to-make-a-website)  
+[Link to website](https://datenstrom.se)  
+https://en.wikipedia.org/wiki/Markdown

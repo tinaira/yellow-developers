@@ -5,7 +5,7 @@
 // Blog plugin
 class YellowBlog
 {
-	const VERSION = "0.6.8";
+	const VERSION = "0.6.9";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -13,6 +13,7 @@ class YellowBlog
 	{
 		$this->yellow = $yellow;
 		$this->yellow->config->setDefault("blogLocation", "");
+		$this->yellow->config->setDefault("blogPagesMax", "10");
 		$this->yellow->config->setDefault("blogPaginationLimit", "5");
 		$this->yellow->config->setDefault("blogPageLength", "1024");
 	}
@@ -91,7 +92,7 @@ class YellowBlog
 		{
 			list($location, $pagesMax) = $this->yellow->toolbox->getTextArgs($text);
 			if(empty($location)) $location = $this->yellow->config->get("blogLocation");
-			if(empty($pagesMax)) $pagesMax = 10;
+			if(empty($pagesMax)) $pagesMax = $this->yellow->config->get("blogPagesMax");
 			$blog = $this->yellow->pages->find($location);
 			$pages = $blog ? $blog->getChildren(!$blog->isVisible()) : $this->yellow->pages->clean();
 			$pages->filter("template", "blog")->sort("published", false)->limit($pagesMax);
@@ -114,7 +115,7 @@ class YellowBlog
 		{
 			list($location, $pagesMax) = $this->yellow->toolbox->getTextArgs($text);
 			if(empty($location)) $location = $this->yellow->config->get("blogLocation");
-			if(empty($pagesMax)) $pagesMax = 10;
+			if(empty($pagesMax)) $pagesMax = $this->yellow->config->get("blogPagesMax");
 			$blog = $this->yellow->pages->find($location);
 			$pages = $blog ? $blog->getChildren(!$blog->isVisible()) : $this->yellow->pages->clean();
 			$pages->filter("template", "blog")->similar($page->getPage("main"))->limit($pagesMax);
