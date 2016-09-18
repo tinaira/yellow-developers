@@ -5,7 +5,7 @@
 // Emojiawesome plugin
 class YellowEmojiawesome
 {
-	const VERSION = "0.6.3";
+	const VERSION = "0.6.4";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -29,7 +29,8 @@ class YellowEmojiawesome
 			{
 				$class = $this->normaliseClass(trim("ea ea-$shortname $style"));
 				$output = "<i class=\"".htmlspecialchars($class)."\"";
-				$output .= " title=\"".htmlspecialchars(":$shortname:")."\"";
+				$output .= " alt=\"".htmlspecialchars("$shortname")."\"";
+				$output .= " title=\"".htmlspecialchars("$shortname")."\"";
 				$output .= "></i>";
 			}
 		}

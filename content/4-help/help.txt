@@ -8,7 +8,7 @@ Language: en
 
 Yellow is for people who make websites. [Get support](support).
 
-## Tutorials
+## Tutorials
 
 * [How to make a website](how-to-make-a-website)
 * [How to make a blog](how-to-make-a-blog)

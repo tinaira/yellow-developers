@@ -61,8 +61,8 @@ The following navigations are available:
 `Navigation: navigation` shows top level pages  
 `Navigation: navigation-tree` shows dropdown menu  
 `Navigation: navigation-sidebar` shows sub level pages in [sidebar](#sidebar)  
-`Navigation: navigation-multilanguage`  shows a [language selection](language-configuration#multi-language-mode)  
-`Navigation: navigation-search`  shows a [search bar](https://github.com/datenstrom/yellow-plugins/tree/master/search)  
+`Navigation: navigation-multilanguage` shows a [language selection](language-configuration#multi-language-mode)  
+`Navigation: navigation-search` shows a [search bar](https://github.com/datenstrom/yellow-plugins/tree/master/search)  
 
 Here's an example snippet file `system/themes/snippets/navigation.php`:
 

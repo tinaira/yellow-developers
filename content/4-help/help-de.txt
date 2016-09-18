@@ -7,7 +7,7 @@ Language: de
 
 Yellow ist für Menschen die Webseiten machen. [Support finden](support-de).
 
-## Anleitungen
+## Anleitungen
 
 * [Webseite erstellen](how-to-make-a-website-de)
 * [Blog erstellen](how-to-make-a-blog-de)

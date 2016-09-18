@@ -53,7 +53,7 @@ Alle Themes sollten einen eindeutigen Namen und Version besitzen.
 
 ## JavaScript
 
-Um ein Theme zu erweitern gibt es viele verschiedene Möglichkeit, beispielsweise  [JavaScript](http://de.wikipedia.org/wiki/JavaScript). Du kannst ein Script mit dem Namen eines Themes erstellen und es wird automatisch benutzt. Das ermöglicht es beliebige dynamische Funktionen mit Yellow zu erstellen.
+Um ein Theme zu erweitern gibt es viele verschiedene Möglichkeit, beispielsweise [JavaScript](http://de.wikipedia.org/wiki/JavaScript). Du kannst ein Script mit dem Namen eines Themes erstellen und es wird automatisch benutzt. Das ermöglicht es beliebige dynamische Funktionen mit Yellow zu erstellen.
 
 Hier ist ein Beispiel-JavaScript `system/themes/assets/home.js`:
 

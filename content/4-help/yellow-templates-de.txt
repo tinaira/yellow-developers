@@ -61,8 +61,8 @@ Die folgenden Navigationen sind vorhanden:
 `Navigation: navigation` zeigt Hauptseiten  
 `Navigation: navigation-tree` zeigt Dropdown-Menü   
 `Navigation: navigation-sidebar` zeigt Unterseiten in der [Sidebar](#sidebar)  
-`Navigation: navigation-multilanguage`  zeigt eine [Sprachauswahl](language-configuration-de#mehrsprachen-modus)   
-`Navigation: navigation-search`  zeigt eine [Suchzeile](https://github.com/datenstrom/yellow-plugins/tree/master/search)  
+`Navigation: navigation-multilanguage` zeigt eine [Sprachauswahl](language-configuration-de#mehrsprachen-modus)   
+`Navigation: navigation-search` zeigt eine [Suchzeile](https://github.com/datenstrom/yellow-plugins/tree/master/search)  
 
 Hier ist eine Beispiel-Snippetdatei `system/themes/snippets/navigation.php`:
 
