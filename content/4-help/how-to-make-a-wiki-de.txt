@@ -3,7 +3,7 @@ Title: Wiki erstellen
 Sidebar: sidebar-de
 Language: de
 ---
-Lerne wie man ein Wiki mit Yellow erstellt. [Demo anschauen](/plugins/blog-plugin/).
+Lerne wie man ein Wiki mit Yellow erstellt. [Demo anschauen](/plugins/wiki-plugin/).
 
 [image screenshot-wiki.png Screenshot - 55%]
 
@@ -52,7 +52,7 @@ Kaffee ist ein Getränk aus gerösteten Bohnen der Kaffeepflanze.
 3. Genieße.
 ```
 
-Du kannst Wikiseiten in [Markdown](markdown-cheat-sheet-de) erstellen.
+Du kannst Wikiseiten mit [Markdown](markdown-cheat-sheet-de) erstellen.
 
 ## Sidebar erstellen
 
@@ -65,9 +65,9 @@ Status: hidden
 ---
 Links
 
-* [Twitter](https://twitter.com/datenstromse)
-* [GitHub](https://github.com/datenstrom)
-* [Instagram](https://instagram.com/datenstromse)
+* [Alle Seiten anschauen](/special:pages/)
+* [Letzte Änderungen anschauen](/special:changes/)
+* [Hilfe anzeigen](https://developers.datenstrom.se/help/help-de)
 ```
 
 Verwende [Abkürzungen](https://github.com/datenstrom/yellow-plugins/tree/master/wiki#how-to-configure-a-wiki), um Informationen über das Wiki anzuzeigen:
@@ -79,13 +79,13 @@ Status: hidden
 ---
 Neu
 
-[wikirecent /wiki/]
+[wikirecent /wiki/ 3]
 
 Links
 
-* [Letzte Änderungen](/wiki/special:changes/)
-* [Beispiel](/tag:beispiel/)  
-* [Kaffee](/tag:kaffee/)
+* [Alle Seiten anschauen](/wiki/special:pages/)
+* [Letzte Änderungen anschauen](/wiki/special:changes/)
+* [Hilfe anzeigen](https://developers.datenstrom.se/help/help-de)
 ```
 
 Hier sind die selben Abkürzungen, falls sich das Wiki auf der Startseite befindet:
@@ -97,21 +97,21 @@ Status: hidden
 ---
 Neu
 
-[wikirecent /]
+[wikirecent / 3]
 
 Links
 
-* [Letzte Änderungen](/special:changes/)
-* [Beispiel](/tag:beispiel/)  
-* [Kaffee](/tag:kaffee/)
+* [Alle Seiten anschauen](/special:pages/)
+* [Letzte Änderungen anschauen](/special:changes/)
+* [Hilfe anzeigen](https://developers.datenstrom.se/help/help-de)
 ```
 
 ## Weitere Funktionen
 
 * [Ein Inhaltsverzeichnis zum Wiki hinzufügen](https://github.com/datenstrom/yellow-plugins/tree/master/toc)
 * [Eine Suchfunktion zum Wiki hinzufügen](https://github.com/datenstrom/yellow-plugins/tree/master/search)
-* [Eine Sitemap zum Wiki hinzufügen](https://github.com/datenstrom/yellow-plugins/tree/master/sitemap)
 * [Eine Kontaktseite zum Wiki hinzufügen](https://github.com/datenstrom/yellow-plugins/tree/master/contact)
+* [Eine Entwurfseite erstellen](https://github.com/datenstrom/yellow-plugins/tree/master/draft)
 * [Ein statisches Wiki erstellen](web-server-configuration-de#statische-webseite)
 
 [Weiter: Inhalt hinzufügen →](adding-content-de)

@@ -67,9 +67,10 @@ Status: hidden
 ---
 Links
 
-* [Twitter](https://twitter.com/datenstromse)
-* [GitHub](https://github.com/datenstrom)
-* [Instagram](https://instagram.com/datenstromse)```
+* [See all pages](/wiki/special:pages/)
+* [See recent changes](/wiki/special:changes/)
+* [View help](https://developers.datenstrom.se/help/)
+```
 
 Vous pouvez utiliser des [raccourcis](https://github.com/datenstrom/yellow-plugins/tree/master/wiki#how-to-configure-a-wiki) afin d'afficher des informations à propos du wiki:
 
@@ -80,13 +81,13 @@ Status: hidden
 ---
 Recent
 
-[wikirecent /wiki/]
+[wikirecent /wiki/ 3]
 
 Links
 
-* [Recent changes](/wiki/special:changes/)
-* [Example](/wiki/tag:example/)  
-* [Coffee](/wiki/tag:coffee/)
+* [See all pages](/wiki/special:pages/)
+* [See recent changes](/wiki/special:changes/)
+* [View help](https://developers.datenstrom.se/help/)
 ```
 
 Voici les mêmes raccourcis, si le wiki est situé sur la page d'accueil:
@@ -98,21 +99,21 @@ Status: hidden
 ---
 Recent
 
-[wikirecent /]
+[wikirecent / 3]
 
 Links
 
-* [Recent changes](/special:changes/)
-* [Example](/tag:example/)  
-* [Coffee](/tag:coffee/)
+* [See all pages](/special:pages/)
+* [See recent changes](/special:changes/)
+* [View help](https://developers.datenstrom.se/help/)
 ```
 
 ## Plus de fonctionnalités
 
 * [Comment ajouter une table des matières à votre wiki](https://github.com/datenstrom/yellow-plugins/tree/master/toc)
 * [Comment ajouter un moteur de recherche à votre wiki](https://github.com/datenstrom/yellow-plugins/tree/master/search)
-* [Comment ajouter un sitemap à votre wiki](https://github.com/datenstrom/yellow-plugins/tree/master/sitemap)
 * [Comment ajouter une page de contact à votre wiki](https://github.com/datenstrom/yellow-plugins/tree/master/contact)
+* [Comment créer une page de brouillon](https://github.com/datenstrom/yellow-plugins/tree/master/draft)
 * [Comment créer un wiki statique](web-server-configuration-fr#static-website)
 
 [Suivant: Ajouter des pages →](adding-content-fr)

@@ -8,6 +8,6 @@ Recent
 
 Links
 
-* [Recent changes](/plugins/wiki-plugin/special:changes/)  
-* [Example](/plugins/wiki-plugin/tag:example/)  
-* [Coffee](/plugins/wiki-plugin/tag:coffee/)
+* [See all pages](/plugins/wiki-plugin/special:pages/)
+* [See recent changes](/plugins/wiki-plugin/special:changes/)
+* [View help](https://developers.datenstrom.se/help/)

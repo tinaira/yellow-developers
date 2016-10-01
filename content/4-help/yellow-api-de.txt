@@ -3,117 +3,115 @@ Title: Yellow-Programmierung (API)
 Sidebar: sidebar-de
 Language: de
 ---
->>> [Du kannst uns helfen, diese Seite zu übersetzen.](https://github.com/datenstrom/yellow-developers/blob/master/content/4-help/yellow-api-de.txt)
-
 Yellow hat eine API für Entwickler. Wir :heart: Entwickler.
 
 [toc]
 
-## Objects
+## Objekte
 
-The following objects are available:
+Die folgenden Objekte sind vorhanden:
 
-[$yellow->page](#yellow-page) gives access to current page  
-[$yellow->pages](#yellow-pages) gives access to pages from file system  
-[$yellow->files](#yellow-files) gives access to files from file system  
-[$yellow->plugins](#yellow-plugins) gives access to plugins  
-[$yellow->themes](#yellow-themes) gives access to themes  
-[$yellow->config](#yellow-config) gives access to configuration  
-[$yellow->text](#yellow-text) gives access to text strings  
-[$yellow->toolbox](#yellow-toolbox) gives access to toolbox with helpers  
+[$yellow->page](#yellow-page) gibt Zugang zur aktuellen Seite  
+[$yellow->pages](#yellow-pages) gibt Zugang zu Seiten vom Dateisystem  
+[$yellow->files](#yellow-files) gibt Zugang zu Dateien vom Dateisystem  
+[$yellow->plugins](#yellow-plugins) gibt Zugang zu Plugins  
+[$yellow->themes](#yellow-themes) gibt Zugang zu Themes  
+[$yellow->config](#yellow-config) gibt Zugang zu Einstellungen  
+[$yellow->text](#yellow-text) gibt Zugang zu Textstrings  
+[$yellow->toolbox](#yellow-toolbox) gibt Zugang zu einer Werkzeugkiste mit Helfern  
 
-### Yellow page
+### Yellow-Page
 
-Yellow page gives access to current page:
+Yellow-Page gibt Zugang zur aktuellen Seite:
 
 **$yellow->page->get($key)**  
-Return page [meta data](markdown-cheat-sheet#settings) 
+Hole die [Metadaten](markdown-cheat-sheet-de#einstellungen) der Seite
 
 **$yellow->page->getHtml($key)**  
-Return page [meta data](markdown-cheat-sheet#settings), HTML encoded  
+Hole die [Metadaten](markdown-cheat-sheet-de#einstellungen) der Seite, HTML-kodiert  
 
 **$yellow->page->getDate($key, $dateFormat = "")**  
-Return page [meta data](markdown-cheat-sheet#settings) as [language specific date](#formats)  
+Hole die [Metadaten](markdown-cheat-sheet-de#einstellungen) der Seite im [sprachspezifischem Format](#formate)
 
 **$yellow->page->getDateHtml($key, $dateFormat = "")**  
-Return page [meta data](markdown-cheat-sheet#settings) as [language specific date](#formats), HTML encoded  
+Hole die [Metadaten](markdown-cheat-sheet-de#einstellungen) der Seite im [sprachspezifischem Format](#formate), HTML-kodiert
 
-**$yellow->page->getContent($rawFormat = false)**  
-Return page content, HTML encoded or raw format
+**$yellow->page->getContent($rawFormat = false, $sizeMax = 0)**  
+Hole den Seitenhalt, HTML-kodiert oder Rohformat
 
 **$yellow->page->getParent()**  
-Return parent page relative to current page, null if none
+Hole die Elternseite der aktuellen Seite, null falls nicht vorhanden
 
 **$yellow->page->getParentTop($homeFailback = true)**  
-Return top-level page for current page, null if none
+Hole die Hauptseite der aktuellen Seite, null falls nicht vorhanden
 
 **$yellow->page->getSiblings($showInvisible = false)**  
-Return [page collection](#yellow-page-collection) with pages on the same level as current page
+Hole eine [Page-Collection](#yellow-page-collection) mit Seiten auf dem selben Level wie die aktuelle Seite 
 
 **$yellow->page->getChildren($showInvisible = false)**  
-Return [page collection](#yellow-page-collection) with child pages relative to current page
+Hole eine [Page-Collection](#yellow-page-collection) mit Kinderseiten der aktuellen Seite 
 
 **$yellow->page->getFiles($showInvisible = false)**  
-Return [page collection](#yellow-page-collection) with media files for current page
+Hole eine [Page-Collection](#yellow-page-collection) mit Mediendateien der aktuellen Seite
 
 **$yellow->page->getPages()**  
-Return [page collection](#yellow-page-collection) with additional pages for current page
+Hole eine [Page-Collection](#yellow-page-collection) mit zusätzlichen Seiten für die aktuellen Seite
 
 **$yellow->page->getPage($key)**  
-Return related page
+Hole eine zugehörige Seite
 
 **$yellow->page->getLocation($absoluteLocation = false)**  
-Return page location
+Hole die Adresse der Seite
 
 **$yellow->page->getUrl()**  
-Return page URL with server scheme and server name
+Hole die URL der Seite mit Serverscheme und Servername 
 
 **$yellow->page->getExtra($name)**  
-Return page extra HTML data
+Hole extra HTML-Daten der Seite
 
 **$yellow->page->getHeader($key)**  
-Return page response header
+Hole einen Responseheader der Seite
 
 **$yellow->page->getModified($httpFormat = false)**  
-Return page modification date, Unix time or HTTP format
+Hole das Änderungsdatum der Seite, Unix-Zeit oder HTTP-Format
 
 **$yellow->page->getLastModified($httpFormat = false)**  
-Return last modification date, Unix time or HTTP format
+Hole das letzte Änderungsdatum der Seite, Unix-Zeit oder HTTP-Format
 
 **$yellow->page->getStatusCode($httpFormat = false)**  
-Return page status code, number or HTTP format
+Hole den Statuscode der Seite, Zahl oder HTTP-Format
 
 **$yellow->page->error($statusCode, $pageError = "")**  
-Respond with error page
+Antworte mit Fehlerseite
 
 **$yellow->page->clean($statusCode, location = "")**  
-Respond with status code, no page content
+Antworte mit Statuscode, ohne Seiteninhalt
 
 **$yellow->page->isAvailable()**  
-Check if page is available
+Teste ob die Seite vorhanden ist
 
 **$yellow->page->isVisible()**  
-Check if page is visible
+Teste ob die Seite sichtbar ist
 
 **$yellow->page->isActive()**  
-Check if page is within current request
+Teste ob die Seite innerhalb der aktuellen Anfrage ist
 
 **$yellow->page->isCacheable()**  
-Check if page is cacheable
+Teste ob die Seite cachebar ist
 
 **$yellow->page->isError()**  
-Check if page with error
+Teste ob die Seite einen Fehler hat
 
 **$yellow->page->isHeader($key)**  
-Check if response header exists
+Teste ob der Responseheader existiert
 
 **$yellow->page->isExisting($key)**  
-Check if page [meta data](markdown-cheat-sheet#settings) exists  
+Teste ob die [Metadaten](markdown-cheat-sheet-de#einstellungen) der Seite existiert  
 
 **$yellow->page->isPage($key)**  
-Check if related page exists  
+Teste ob die zugehörige Seite existiert
 
-Here's an example snippet for showing page content:
+Hier ist ein Beispiel-Snippet um den Seiteninhalt anzuzeigen:
 
 ``` php
 <div class="content main">
@@ -121,7 +119,8 @@ Here's an example snippet for showing page content:
 <?php echo $yellow->page->getContent() ?>
 </div>
 ```
-Here's an example snippet for showing page content with additional meta data:
+
+Hier ist ein Beispiel-Snippet um den Seiteninhalt und zusätzliche Metadaten anzuzeigen:
 
 ``` php
 <div class="content main">
@@ -129,207 +128,206 @@ Here's an example snippet for showing page content with additional meta data:
 <?php echo $yellow->page->getContent() ?>
 <p>
 <?php echo $yellow->page->getHtml("author") ?>,
-<?php echo $yellow->page->getHtml("sitename") ?>,
 <?php echo $yellow->page->getDateHtml("modified") ?>
 </p>
 </div>
 ```
 
-### Yellow page collection
+### Yellow-Page-Collection
 
-Yellow page collection gives access to these functions:
+Yellow-Page-Collection gibt Zugang zu diesen Funktionen:
 
 **$pages->filter($key, $value, $exactMatch = true)**  
-Filter page collection by meta data  
+Filtere eine Page-Collection nach Metadaten
 
 **$pages->sort($key, $ascendingOrder = true)**  
-Sort page collection by meta data  
+Sortiere eine Page-Collection nach Metadaten
 
 **$pages->similar($page, $ascendingOrder = false)**  
-Sort page collection by meta data similarity
+Sortiere eine Page-Collection nach Metadatenähnlichkeit
 
 **$pages->merge($input)**  
-Merge page collection
+Vereinige eine Page-Collection
 
 **$pages->append($page)**  
-Append to end of page collection
+Hänge an das Ende der Page-Collection
 
 **$pages->prepend($page)**  
-Prepend to start of page collection
+Stelle an den Anfang der Page-Collection
 
 **$pages->limit($pagesMax)**  
-Limit the number of pages in page collection
+Begrenze die Anzahl der Seiten in der Page-Collection
 
 **$pages->reverse()**  
-Reverse page collection
+Drehe die Page-Collection um
 
 **$pages->shuffle()**  
-Randomize page collection
+Mach die Page-Collection zufällig
 
 **$pages->pagination($limit, $reverse = true)**  
-Paginate page collection
+Erstelle eine Pagination für die Page-Collection
 
 **$pages->getPaginationNumber()**  
-Return current page number in pagination
+Hole die aktuelle Seitennummer in der Pagination
 
 **$pages->getPaginationCount()**  
-Return highest page number in pagination
+Hole die höchste Seitennummer in der Pagination
 
 **$pages->getPaginationLocation($pageNumber)**  
-Return absolute location for a page in pagination
+Hole die Adresse einer Seite in der Pagination
 
 **$pages->getPaginationPrevious()**  
-Return absolute location for previous page in pagination
+Hole die Adresse der vorherigen Seite in der Pagination
 
 **$pages->getPaginationNext()**  
-Return absolute location for next page in pagination
+Hole die Adresse der nächsten Seite in der Pagination
 
 **$pages->getFilter()**  
-Return current page filter
+Hole den aktuellen Seitenfilter
 
 **$pages->getModified($httpFormat = false)**  
-Return page collection modification date, Unix time or HTTP format
+Hole das Änderungsdatum der Page-Collection, Unix-Zeit oder HTTP-Format
 
 **$pages->isPagination()**  
-Check if there is a pagination
+Teste ob eine Pagination vorhanden ist
 
-Here's an example snippet for showing three random pages:
+Hier ist ein Beispiel-Snippet um drei zufällige Seiten anzuzeigen:
 
 ``` php
 <?php list($name, $pages) = $yellow->getSnippetArgs() ?>
 <?php if(!$pages) $pages = $yellow->pages->index() ?>
-<lu>
+<ul>
 <?php foreach($pages->shuffle()->limit(3) as $page): ?>
 <li><?php echo $page->getHtml("title") ?></li>
 <?php endforeach ?>
-</lu>
+</ul>
 ```
 
-Here's an example snippet for showing pages with draft status:
+Hier ist ein Beispiel-Snippet um Entwurfseiten anzuzeigen:
 
 ``` php
 <?php list($name, $pages) = $yellow->getSnippetArgs() ?>
 <?php if(!$pages) $pages = $yellow->pages->index(true, true) ?>
-<lu>
+<ul>
 <?php foreach($pages->filter("status", "draft") as $page): ?>
 <li><?php echo $page->getHtml("title") ?></li>
 <?php endforeach ?>
-</lu>
+</ul>
 ```
 
-### Yellow pages
+### Yellow-Pages
 
-Yellow pages gives access to pages from file system:
+Yellow-Pages gibt Zugang zu Seiten vom Dateisystem:
 
 **$yellow->pages->find($location, $absoluteLocation = false)**  
-Return [page](#yellow-page) from file system, null if not found
+Hole eine [Page](#yellow-page) vom Dateisystem, null falls nicht vorhanden
 
 **$yellow->pages->index($showInvisible = false, $multiLang = false, $levelMax = 0)**  
-Return [page collection](#yellow-page-collection) with all pages
+Hole eine [Page-Collection](#yellow-page-collection) mit allen Seiten
 
 **$yellow->pages->top($showInvisible = false)**  
-Return [page collection](#yellow-page-collection) with top-level navigation
+Hole eine [Page-Collection](#yellow-page-collection) mit Hauptseiten der Navigation
 
 **$yellow->pages->path($location, $absoluteLocation = false)**  
-Return [page collection](#yellow-page-collection) with path ancestry
+Hole eine [Page-Collection](#yellow-page-collection) mit Pfad in der Navigation
 
 **$yellow->pages->multi($location, $absoluteLocation = false, $showInvisible = false)**  
-Return [page collection](#yellow-page-collection) with multiple languages
+Hole eine [Page-Collection](#yellow-page-collection) mit mehreren Sprachen
 
 **$yellow->pages->clean()**  
-Return [page collection](#yellow-page-collection) that is empty
+Hole eine [Page-Collection](#yellow-page-collection) die leer ist
 
-Here's an example snippet for showing all pages:
+Hier ist ein Beispiel-Snippet um alle Seiten anzuzeigen:
 
 ``` php
 <?php $pages = $yellow->pages->index(true, true) ?>
 <?php $yellow->page->setLastModified($pages->getModified()) ?>
-<lu>
+<ul>
 <?php foreach($pages as $page): ?>
 <li><?php echo $page->getHtml("title") ?></li>
 <?php endforeach ?>
-</lu>
+</ul>
 ```
 
-Here's an example snippet for showing pages below a specific location:
+Hier ist ein Beispiel-Snippet um Seiten unterhalb einer bestimmten Adresse anzuzeigen:
 
 ``` php
 <?php $pages = $yellow->pages->find("/help/")->getChildren(true) ?>
 <?php $yellow->page->setLastModified($pages->getModified()) ?>
-<lu>
+<ul>
 <?php foreach($pages as $page): ?>
 <li><?php echo $page->getHtml("title") ?></li>
 <?php endforeach ?>
-</lu>
+</ul>
 ```
 
-### Yellow files
+### Yellow-Files
 
-Yellow files gives access to files from file system:
+Yellow-Files gibt Zugang zu Dateien vom Dateisystem:
 
 **$yellow->files->find($location, $absoluteLocation = false)**  
-Return [page](#yellow-page) with media file information, null if not found
+Hole eine [Page](#yellow-page) mit Informationen über Mediendatei, null falls nicht vorhanden
 
 **$yellow->files->index($showInvisible = false, $multiPass = false, $levelMax = 0)**  
-Return [page collection](#yellow-page-collection) with all media files
+Hole eine [Page-Collection](#yellow-page-collection) mit allen Mediendateien
 
 **$yellow->files->clean()**  
-Return [page collection](#yellow-page-collection) that is empty
+Hole eine [Page-Collection](#yellow-page-collection) die leer ist
 
-Here's an example snippet for showing all media files:
+Hier ist ein Beispiel-Snippet um alle Mediendateien anzuzeigen:
 
 ``` php
 <?php $files = $yellow->files->index(true, true) ?>
 <?php $yellow->page->setLastModified($files->getModified()) ?>
-<lu>
+<ul>
 <?php foreach($files as $file): ?>
 <li><?php echo $file->getLocation(true) ?></li>
 <?php endforeach ?>
-</lu>
+</ul>
 ```
 
-Here's an example snippet for showing media files of a specific type:
+Hier ist ein Beispiel-Snippet um Mediendateien eines bestimmten Types anzuzeigen:
 
 ``` php
 <?php $files = $yellow->files->index(true, true)->filter("type", "pdf") ?>
 <?php $yellow->page->setLastModified($files->getModified()) ?>
-<lu>
+<ul>
 <?php foreach($files as $file): ?>
 <li><?php echo $file->getLocation(true) ?></li>
 <?php endforeach ?>
-</lu>
+</ul>
 ```
 
-### Yellow plugins
+### Yellow-Plugins
 
-Yellow plugins gives access to [plugins](#yellow-plugins-example):
+Yellow-Plugins gibt Zugang zu [Plugins](#yellow-plugins-beispiel):
 
 **$yellow->plugins->get($name)**  
-Return plugin
+Hole ein Plugin
 
 **$yellow->plugins->getData()**  
-Return plugin version
+Hole die Versionsinformationen von Plugins
 
 **$yellow->plugins->getModified($httpFormat = false)**  
-Return plugin modification date, Unix time or HTTP format
+Hole das Änderungsdatum von Plugins, Unix-Zeit oder HTTP-Format
 
 **$yellow->plugins->register($name, $plugin, $version, $priority = 0)**  
-Register plugin to [events](#events)
+Registriere ein Plugin für [Ereignisse](#ereignisse)
 
 **$yellow->plugins->isExisting($name)**  
-Check if plugin exists
+Teste ob ein Plugin existiert
 
-Here's an example snippet for showing information about plugins:
+Hier ist ein Beispiel-Snippet um Informationen über Plugins anzuzeigen:
 
 ``` php
-<lu>
+<ul>
 <?php foreach($yellow->plugins->getData() as $key=>$value): ?>
 <li><?php echo htmlspecialchars("$key $value") ?></li>
 <?php endforeach ?>
-</lu>
+</ul>
 ```
 
-Here's an example snippet for checking if plugin exists:
+Hier ist ein Beispiel-Snippet um zu testen ob ein Plugin existiert:
 
 ``` php
 <?php if($yellow->plugins->isExisting("fontawesome")): ?>
@@ -339,30 +337,30 @@ Here's an example snippet for checking if plugin exists:
 <?php endif ?>
 ```
 
-### Yellow themes
+### Yellow-Themes
 
-Yellow themes gives access to [themes](yellow-themes#themes):
+Yellow-Themes gibt Zugang zu [Themes](yellow-themes-de#themes):
 
 **$yellow->themes->getData()**  
-Return theme version
+Hole die Versionsinformationen von Themes
 
 **$yellow->themes->getModified($httpFormat = false)**  
-Return theme modification date, Unix time or HTTP format
+Hole das Änderungsdatum von Themes, Unix-Zeit oder HTTP-Format
 
 **$yellow->themes->isExisting($name)**  
-Check if theme exists
+Teste ob ein Theme existiert
 
-Here's an example snippet for showing information about themes:
+Hier ist ein Beispiel-Snippet um Informationen über Themes anzuzeigen:
 
 ``` php
-<lu>
+<ul>
 <?php foreach($yellow->themes->getData() as $key=>$value): ?>
 <li><?php echo htmlspecialchars("$key $value") ?></li>
 <?php endforeach ?>
-</lu>
+</ul>
 ```
 
-Here's an example snippet for checking if theme exists:
+Hier ist ein Beispiel-Snippet um zu testen ob ein Theme existiert:
 
 ``` php
 <?php if($yellow->themes->isExisting("blogsite")): ?>
@@ -372,26 +370,26 @@ Here's an example snippet for checking if theme exists:
 <?php endif ?>
 ```
 
-### Yellow config
+### Yellow-Config
 
-Yellow config gives access to [configuration](adjusting-system#system-settings):
+Yellow-Config gibt Zugang zu [Einstellungen ](adjusting-system-de#systemeinstellungen):
 
 **$yellow->config->get($key)**  
-Return configuration
+Hole eine Einstellung
 
 **$yellow->config->getHtml($key)**  
-Return configuration, HTML encoded
+Hole eine Einstellung, HTML-kodiert
 
 **$yellow->config->getData($filterStart = "", $filterEnd = "")**  
-Return configuration strings
+Hole Einstellungen
 
 **$yellow->config->getModified($httpFormat = false)**  
-Return configuration modification date, Unix time or HTTP format
+Hole das Änderungsdatum von Einstellungen, Unix-Zeit oder HTTP-Format
 
 **$yellow->config->isExisting($key)**  
-Check if configuration exists
+Teste ob eine Einstellung existiert
 
-Here's an example snippet for showing server settings:
+Hier ist ein Beispiel-Snippet um Server-Einstellungen anzuzeigen:
 
 ``` php
 <div class="yellow config">
@@ -401,7 +399,7 @@ Here's an example snippet for showing server settings:
 </div>
 ```
 
-Here's an example snippet for showing webmaster settings:
+Hier ist ein Beispiel-Snippet um Webmaster-Einstellungen anzuzeigen:
 
 ``` php
 <?php if($yellow->config->isExisting("author")): ?>
@@ -411,41 +409,41 @@ Here's an example snippet for showing webmaster settings:
 <?php endif ?>
 ```
 
-### Yellow text
+### Yellow-Text
 
-Yellow text gives access to [text strings](language-configuration#languages):
+Yellow-Text gibt Zugang zu [Textstrings](language-configuration-de#sprachen):
 
 **$yellow->text->get($key)**  
-Return text string
+Hole ein Textstring
 
 **$yellow->text->getHtml($key)**  
-Return text string, HTML encoded
+Hole ein Textstring, HTML-kodiert
 
 **$yellow->text->getText($key, $language )**  
-Return text string for specific language
+Hole ein Textstring für eine bestimmte Sprache
 
 **$yellow->text->getTextHtml($key, $language )**  
-Return text string for specific language, HTML encoded
+Hole ein Textstring für eine bestimmte Sprache, HTML-kodiert
 
 **$yellow->text->getData($filterStart = "", $language = "")**  
-Return text strings
+Hole Textstrings
 
 **$yellow->text->getDateFormatted($timestamp, $format)**  
-Return text string with human readable date, [custom date format](http://php.net/manual/en/function.date.php)  
+Hole ein menschenlesbares Datum, [maßgeschneidertes Format](http://php.net/manual/de/function.date.php)  
 
 **$yellow->text->getLanguages()**  
-Return languages
+Hole Sprachen
 
 **$yellow->text->getModified($httpFormat = false)**  
-Return text modification date, Unix time or HTTP format
+Hole das Änderungsdatum von Text, Unix-Zeit oder HTTP-Format
 
 **$yellow->text->isLanguage($language)**  
-Check if language exists
+Teste ob eine Sprache existiert
 
 **$yellow->text->isExisting($key, $language = "")**  
-Check if text string exists
+Teste ob ein Textstring existiert
 
-Here's an example snippet for showing contact text strings:
+Hier ist ein Beispiel-Snippet um Kontakt-Textstrings anzuzeigen:
 
 ``` php
 <div class="yellow text">
@@ -455,70 +453,69 @@ Here's an example snippet for showing contact text strings:
 </div>
 ```
 
-Here's an example snippet for showing languages:
+Hier ist ein Beispiel-Snippet um Sprachen anzuzeigen:
 
 ``` php
-<lu>
+<ul>
 <?php foreach($yellow->text->getLanguages() as $language): ?>
 <li>
 <?php echo $yellow->text->getTextHtml("languageDescription", $language) ?> - 
 <?php echo $yellow->text->getTextHtml("languageTranslator", $language) ?>
 </li>
 <?php endforeach ?>
-</lu>
+</ul>
 ```
 
-### Yellow toolbox
+### Yellow-Toolbox
 
-Yellow toolbox gives access to toolbox with helpers:
+Yellow-Toolbox gibt Zugang zu einer Werkzeugkiste mit Helfern:
 
 **$yellow->toolbox->getLocation($filterStrict = true)**  
-Return location from current HTTP request
+Hole die Adresse der aktuellen HTTP-Anfrage
 
 **$yellow->toolbox->getLocationArgs()**  
-Return location arguments from current HTTP request
+Hole die Adressenargumente der aktuellen HTTP-Anfrage
 
 **$yellow->toolbox->isLocationArgs($location = "")**  
-Check if location contains location arguments
+Teste ob es Adressenargumente gibt in der Adresse
 
 **$yellow->toolbox->normaliseArgs($text, $appendSlash = true, $filterStrict = true)**  
-Normalise location arguments
+Normalisiere Adressenargumente
 
 **$yellow->toolbox->readFile($fileName, $sizeMax = 0)**  
-Read file, empty string if not found  
+Lese eine Datei, leerer String falls nicht vorhanden
 
 **$yellow->toolbox->createFile($fileName, $fileData, $mkdir = false)**  
-Create file  
+Erstelle eine Datei
 
 **$yellow->toolbox->copyFile($fileNameSource, $fileNameDest, $mkdir = false)**  
-Copy file  
+Kopiere eine Datei  
 
 **$yellow->toolbox->renameFile($fileNameSource, $fileNameDest, $mkdir = false)**  
-Rename file  
+Benenne eine Datei um
 
 **$yellow->toolbox->deleteFile($fileName, $pathTrash = "")**  
-Delete file  
+Lösche eine Datei
 
 **$yellow->toolbox->deleteDirectory($path, $pathTrash = "")**  
-Delete directory  
+Lösche ein Verzeichnis  
 
 **$yellow->toolbox->modifyFile($fileName, $modified)**  
-Set file modification date, Unix time  
+Setze das Änderungsdatum der Datei, Unix-Zeit
 
 **$yellow->toolbox->getFileModified($fileName)**  
-Return file modification date, Unix time  
+Hole das Änderungsdatum der Datei, Unix-Zeit
 
 **$yellow->toolbox->getFileExtension($fileName)**  
-Return file extension  
+Hole die Dateiendung
 
 **$yellow->toolbox->getTextLines($text)**  
-Return lines from text string  
+Hole die Zeilen des Textstrings
 
 **$yellow->toolbox->getTextArgs($text, $optional = "-")**  
-Return arguments from text string  
+Hole die Argumente des Textstrings
 
-
-Here's an example snippet for reading text lines from file:
+Hier ist ein Beispiel-Snippet um Textzeilen von Datei zu lesen:
 
 ``` php
 <div class="yellow file">
@@ -530,52 +527,52 @@ Here's an example snippet for reading text lines from file:
 </div>
 ```
 
-## Events
+## Ereignisse
 
-The following events are available for plugins:
+Die folgenden Ereignisse sind für Plugins verfügbar:
 
 **function onLoad($yellow)**  
-Handle initialisation
+Behandle die Initialisierung
 
 **function onUpdate($name)**  
-Handle update
+Behandle die Aktualisierung
 
 **function onRequest($serverScheme, $serverName, $base, $location, $fileName)**  
-Handle request
+Behandle eine Anfrage
 
 **function onParseMeta($page)**  
-Handle page meta data parsing
+Behandle das Parsen von Metadaten einer Seite
 
 **function onParseContentRaw($page, $text)**  
-Handle page content parsing of raw format
+Behandle das Parsen des Seiteninhaltes im Rohformat
 
 **function onParseContentBlock($page, $name, $text, $shortcut)**  
-Handle page content parsing of custom block
+Behandle das Parsen des Seiteninhaltes eines Teilblockes
 
 **function onParseContentText($page, $text)**  
-Handle page content parsing
+Behandle das Parsen des Seiteninhaltes
 
 **function onParsePage()**  
-Handle page parsing
+Behandle das Parsen einer Seite
 
 **function onExtra($name)**  
-Handle page extra HTML data
+Behandle das Parsen von extra HTML-Daten einer Seite
 
 **function onUserAccount($email, $password, $action, $users)**  
-Handle user account changes
+Behandle Benutzerkontoänderungen
 
 **function onUserRestrictions($email, $location, $fileName, $users)**  
-Handle user restrictions to change page
+Behandle Benutzerbeschränkungen um eine Seite zu ändern
 
 **function onCommand($args)**  
-Handle command
+Behandle Befehle
 
 **function onCommandHelp()**  
-Handle command help
+Behandle Hilfe für Befehle
 
-Here's an example plugin, a very basic one: 
+Hier ist ein Beispiel-Plugin, ein ganz einfaches: 
 
-``` php {#yellow-plugins-example}
+``` php {#yellow-plugins-beispiel}
 <?php
 class YellowExample
 {
@@ -593,7 +590,7 @@ $yellow->plugins->register("example", "YellowExample", YellowExample::VERSION);
 ?>
 ```
 
-Here's an example plugin for adding HTML code with `[example]` shortcut:
+Hier ist ein Beispiel-Plugin um die Abkürzung `[example]` einzubinden:
 
 ``` php
 <?php
@@ -626,7 +623,7 @@ $yellow->plugins->register("example", "YellowExample", YellowExample::VERSION);
 ?>
 ```
 
-Here's an example plugin for including files `example.css` and `example.js`:
+Hier ist ein Beispiel-Plugin um die Dateien `example.css` und `example.js` einzubinden:
 
 ``` php
 <?php
@@ -661,28 +658,28 @@ $yellow->plugins->register("example", "YellowExample", YellowExample::VERSION);
 
 ```
 
-## Formats
+## Formate
 
-The following date formats are available: 
+Die folgenden Datumsformate sind vorhanden:
 
-`YYYY-MM-DD` = date starting with the year, e.g. `2013-04-07`  
-`YYYY-MM-DD HH:MM:SS` = date and time, e.g. `2013-04-07 11:30:00`  
+`YYYY-MM-DD` = Datum beginnend mit dem Jahr, z.B. `2013-04-07`  
+`YYYY-MM-DD HH:MM:SS` = Datum und Uhrzeit z.B. `2013-04-07 11:30:00`  
 
-When dates are displayed on a page they are converted to a language specific date:
+Wird ein Datum auf einer Seite angezeigt wird es in das sprachspezifisches Format konvertiert: 
 
-`dateFormatShort` = short date, e.g. `April 2013`  
-`dateFormatMedium` = medium date, e.g. `2013-04-07`   
-`dateFormatLong` = long date, e.g. `2013-04-07 11:30`   
+`dateFormatShort` = kurzes Datum, z.B. `April 2013`  
+`dateFormatMedium` = mittleres Datum, z.B. `07.04.2013`   
+`dateFormatLong` = langes Datum, z.B. `07.04.2013 11:30`   
 
-When text is displayed on a page you can use one of these encoding functions:
+Wird Text auf einer Seite ausgegeben kann man diese Kodierungs-Funktionen benutzen:
 
-`htmlspecialchars($string)` = make text string HTML encoded  
-`rawurlencode($string)` = encode URL, e.g. hyperlink arguments  
-`strencode($string)` = encode string, e.g. JavaScript arguments  
+`htmlspecialchars($string)` = kodiere Textstring ins HTML-Format  
+`rawurlencode($string)` = kodiere URL, z.B. Hyperlink-Argumente  
+`strencode($string)` = kodiere String, z.B. JavaScript-Argumente  
 
-## Debugging
+## Fehlersuche
 
-Open the file `system/plugins/core.php`, change first line to `<?php define("DEBUG", 1);`  
+Öffne `system/plugins/core.php`, ändere die erste Zeile zu `<?php define("DEBUG", 1);`  
 
 ```
 YellowCore::sendPage Content-Type: text/html; charset=UTF-8
@@ -694,7 +691,7 @@ YellowCore::request status:200 location:/plugins/blog-plugin/ handler:core
 YellowCore::request time:19 ms
 ```
 
-Get file system information by increasing debug level to `<?php define("DEBUG", 2);`
+Dateisysteminformationen durch Erhöhen des Debuglevels zu `<?php define("DEBUG", 2);`
 ```
 YellowConfig::load file:system/config/config.ini
 YellowText::load file:system/plugins/language-de.txt
@@ -705,7 +702,7 @@ YellowLookup::findFileFromLocation /plugins/blog-plugin/ -> content/2-plugins/1-
 YellowPages::scanLocation location:/plugins/blog-plugin/
 ```
 
-Get maximum information by increasing debug level to `<?php define("DEBUG", 3);`
+Maximum Informationen durch Erhöhen des Debuglevels zu `<?php define("DEBUG", 3);`
 ```
 Yellow 0.6.5, PHP 5.5.36, Apache/2.4.18 Darwin
 YellowConfig::load file:system/config/config.ini
@@ -716,12 +713,12 @@ YellowConfig::load Language:en
 YellowConfig::load Theme:flatsite
 ```
 
-## Tips and tricks
+## Tipps und Tricks
 
-Some tips for developers: 
+Einige Tipps für Entwickler:
 
-1. [Install the developers kit](https://github.com/datenstrom/yellow-developers). The developers kit includes plugins, themes, examples and documentation. You can try out how to make small web pages, blogs and wikis. It's a great place to get started with the Yellow API.
+1. [Installiere das Entwickler-Kit](https://github.com/datenstrom/yellow-developers). Das Entwickler-Kit bietet Plugins, Themes, Beispiele und Dokumentation. Du kannst ausprobieren wie man kleine Webseite, Blogs und Wikis macht. Es ist eine grossartige Art sich mit der Yellow-API vertraut zu machen. 
 
-2. [Put your code on GitHub](https://github.com/datenstrom/yellow/issues?q=label%3Anews%20). Create a new repository for each new plugin/theme. The name of your repository should be `yellow-plugin-something` or `yellow-theme-something`. When your code becomes stable, you can add it to the Yellow main repository.
+2. [Lege deinen Code auf GitHub](https://github.com/datenstrom/yellow/issues?q=label%3Anews%20). Erstelle ein Repository für jedes neue Plugin/Theme. Der Name deines Repository sollte `yellow-plugin-xyz` or `yellow-theme-xyz` sein. Wenn dein Code stabil wird, kannst du ihn zum zentralen Yellow-Repository hinzufügen.
 
-3. [Show what you have made](https://twitter.com/search?q=%23madewithyellow). We hope Yellow is useful for you. We hope you'll use it to make many websites. Have a question? Something not working as expected? Want to get in touch with other developers? [Contact us](support).
+3. [Zeige was du gemacht hast](https://twitter.com/search?q=%23madewithyellow). Wir hoffen dass Yellow nützlich für dich ist. Wir hoffen dass du es benutzt um viele Webseiten zu erstellen. Hast du Fragen? Funktioniert etwas nicht wie erwartet? Suchst du Kontakt mit anderen Entwicklern? [Frage uns](support-de).

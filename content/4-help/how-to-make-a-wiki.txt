@@ -66,9 +66,9 @@ Status: hidden
 ---
 Links
 
-* [Twitter](https://twitter.com/datenstromse)
-* [GitHub](https://github.com/datenstrom)
-* [Instagram](https://instagram.com/datenstromse)
+* [See all pages](/wiki/special:pages/)
+* [See recent changes](/wiki/special:changes/)
+* [View help](https://developers.datenstrom.se/help/)
 ```
 
 You can use [shortcuts](https://github.com/datenstrom/yellow-plugins/tree/master/wiki#how-to-configure-a-wiki) to show information about the wiki:
@@ -80,13 +80,13 @@ Status: hidden
 ---
 Recent
 
-[wikirecent /wiki/]
+[wikirecent /wiki/ 3]
 
 Links
 
-* [Recent changes](/wiki/special:changes/)
-* [Example](/wiki/tag:example/)  
-* [Coffee](/wiki/tag:coffee/)
+* [See all pages](/wiki/special:pages/)
+* [See recent changes](/wiki/special:changes/)
+* [View help](https://developers.datenstrom.se/help/)
 ```
 
 Here are the same shortcuts, if the wiki is located on the home page:
@@ -98,21 +98,21 @@ Status: hidden
 ---
 Recent
 
-[wikirecent /]
+[wikirecent / 3]
 
 Links
 
-* [Recent changes](/special:changes/)
-* [Example](/tag:example/)  
-* [Coffee](/tag:coffee/)
+* [See all pages](/special:pages/)
+* [See recent changes](/special:changes/)
+* [View help](https://developers.datenstrom.se/help/)
 ```
 
 ## More features
 
 * [How to add a table of contents to your wiki](https://github.com/datenstrom/yellow-plugins/tree/master/toc)
 * [How to add a search to your wiki](https://github.com/datenstrom/yellow-plugins/tree/master/search)
-* [How to add a sitemap to your wiki](https://github.com/datenstrom/yellow-plugins/tree/master/sitemap)
 * [How to add a contact page to your wiki](https://github.com/datenstrom/yellow-plugins/tree/master/contact)
+* [How to make a draft page](https://github.com/datenstrom/yellow-plugins/tree/master/draft)
 * [How to make a static wiki](web-server-configuration#static-website)
 
 [Next: Adding content →](adding-content)

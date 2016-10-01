@@ -3,8 +3,6 @@ Title: Test Markdown format
 ---
 This page tests Markdown format.
 
-Formatting text:
-
 Normal *italic* **bold** `code`
 
 Making a list:
@@ -30,6 +28,8 @@ Making quotes:
 > Here's a quote
 >> Here's a quote of a quote
 >>> Here's a quote of a quote of a quote
+
+Making links:
 
 [Link to page](/help/how-to-make-a-website)  
 [Link to website](https://datenstrom.se)  

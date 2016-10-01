@@ -36,11 +36,11 @@ Return page [meta data](markdown-cheat-sheet#settings) as [language specific dat
 **$yellow->page->getDateHtml($key, $dateFormat = "")**  
 Return page [meta data](markdown-cheat-sheet#settings) as [language specific date](#formats), HTML encoded  
 
-**$yellow->page->getContent($rawFormat = false)**  
+**$yellow->page->getContent($rawFormat = false, $sizeMax = 0)**  
 Return page content, HTML encoded or raw format
 
 **$yellow->page->getParent()**  
-Return parent page relative to current page, null if none
+Return parent page of current page, null if none
 
 **$yellow->page->getParentTop($homeFailback = true)**  
 Return top-level page for current page, null if none
@@ -49,7 +49,7 @@ Return top-level page for current page, null if none
 Return [page collection](#yellow-page-collection) with pages on the same level as current page
 
 **$yellow->page->getChildren($showInvisible = false)**  
-Return [page collection](#yellow-page-collection) with child pages relative to current page
+Return [page collection](#yellow-page-collection) with child pages of current page
 
 **$yellow->page->getFiles($showInvisible = false)**  
 Return [page collection](#yellow-page-collection) with media files for current page
@@ -119,6 +119,7 @@ Here's an example snippet for showing page content:
 <?php echo $yellow->page->getContent() ?>
 </div>
 ```
+
 Here's an example snippet for showing page content with additional meta data:
 
 ``` php
@@ -127,7 +128,6 @@ Here's an example snippet for showing page content with additional meta data:
 <?php echo $yellow->page->getContent() ?>
 <p>
 <?php echo $yellow->page->getHtml("author") ?>,
-<?php echo $yellow->page->getHtml("sitename") ?>,
 <?php echo $yellow->page->getDateHtml("modified") ?>
 </p>
 </div>
@@ -196,11 +196,11 @@ Here's an example snippet for showing three random pages:
 ``` php
 <?php list($name, $pages) = $yellow->getSnippetArgs() ?>
 <?php if(!$pages) $pages = $yellow->pages->index() ?>
-<lu>
+<ul>
 <?php foreach($pages->shuffle()->limit(3) as $page): ?>
 <li><?php echo $page->getHtml("title") ?></li>
 <?php endforeach ?>
-</lu>
+</ul>
 ```
 
 Here's an example snippet for showing pages with draft status:
@@ -208,11 +208,11 @@ Here's an example snippet for showing pages with draft status:
 ``` php
 <?php list($name, $pages) = $yellow->getSnippetArgs() ?>
 <?php if(!$pages) $pages = $yellow->pages->index(true, true) ?>
-<lu>
+<ul>
 <?php foreach($pages->filter("status", "draft") as $page): ?>
 <li><?php echo $page->getHtml("title") ?></li>
 <?php endforeach ?>
-</lu>
+</ul>
 ```
 
 ### Yellow pages
@@ -242,11 +242,11 @@ Here's an example snippet for showing all pages:
 ``` php
 <?php $pages = $yellow->pages->index(true, true) ?>
 <?php $yellow->page->setLastModified($pages->getModified()) ?>
-<lu>
+<ul>
 <?php foreach($pages as $page): ?>
 <li><?php echo $page->getHtml("title") ?></li>
 <?php endforeach ?>
-</lu>
+</ul>
 ```
 
 Here's an example snippet for showing pages below a specific location:
@@ -254,11 +254,11 @@ Here's an example snippet for showing pages below a specific location:
 ``` php
 <?php $pages = $yellow->pages->find("/help/")->getChildren(true) ?>
 <?php $yellow->page->setLastModified($pages->getModified()) ?>
-<lu>
+<ul>
 <?php foreach($pages as $page): ?>
 <li><?php echo $page->getHtml("title") ?></li>
 <?php endforeach ?>
-</lu>
+</ul>
 ```
 
 ### Yellow files
@@ -279,11 +279,11 @@ Here's an example snippet for showing all media files:
 ``` php
 <?php $files = $yellow->files->index(true, true) ?>
 <?php $yellow->page->setLastModified($files->getModified()) ?>
-<lu>
+<ul>
 <?php foreach($files as $file): ?>
 <li><?php echo $file->getLocation(true) ?></li>
 <?php endforeach ?>
-</lu>
+</ul>
 ```
 
 Here's an example snippet for showing media files of a specific type:
@@ -291,11 +291,11 @@ Here's an example snippet for showing media files of a specific type:
 ``` php
 <?php $files = $yellow->files->index(true, true)->filter("type", "pdf") ?>
 <?php $yellow->page->setLastModified($files->getModified()) ?>
-<lu>
+<ul>
 <?php foreach($files as $file): ?>
 <li><?php echo $file->getLocation(true) ?></li>
 <?php endforeach ?>
-</lu>
+</ul>
 ```
 
 ### Yellow plugins
@@ -320,11 +320,11 @@ Check if plugin exists
 Here's an example snippet for showing information about plugins:
 
 ``` php
-<lu>
+<ul>
 <?php foreach($yellow->plugins->getData() as $key=>$value): ?>
 <li><?php echo htmlspecialchars("$key $value") ?></li>
 <?php endforeach ?>
-</lu>
+</ul>
 ```
 
 Here's an example snippet for checking if plugin exists:
@@ -353,11 +353,11 @@ Check if theme exists
 Here's an example snippet for showing information about themes:
 
 ``` php
-<lu>
+<ul>
 <?php foreach($yellow->themes->getData() as $key=>$value): ?>
 <li><?php echo htmlspecialchars("$key $value") ?></li>
 <?php endforeach ?>
-</lu>
+</ul>
 ```
 
 Here's an example snippet for checking if theme exists:
@@ -429,7 +429,7 @@ Return text string for specific language, HTML encoded
 Return text strings
 
 **$yellow->text->getDateFormatted($timestamp, $format)**  
-Return text string with human readable date, [custom date format](http://php.net/manual/en/function.date.php)  
+Return human readable date, [custom date format](http://php.net/manual/en/function.date.php)  
 
 **$yellow->text->getLanguages()**  
 Return languages
@@ -456,14 +456,14 @@ Here's an example snippet for showing contact text strings:
 Here's an example snippet for showing languages:
 
 ``` php
-<lu>
+<ul>
 <?php foreach($yellow->text->getLanguages() as $language): ?>
 <li>
 <?php echo $yellow->text->getTextHtml("languageDescription", $language) ?> - 
 <?php echo $yellow->text->getTextHtml("languageTranslator", $language) ?>
 </li>
 <?php endforeach ?>
-</lu>
+</ul>
 ```
 
 ### Yellow toolbox
@@ -514,7 +514,6 @@ Return lines from text string
 
 **$yellow->toolbox->getTextArgs($text, $optional = "-")**  
 Return arguments from text string  
-
 
 Here's an example snippet for reading text lines from file:
 
@@ -591,7 +590,7 @@ $yellow->plugins->register("example", "YellowExample", YellowExample::VERSION);
 ?>
 ```
 
-Here's an example plugin for adding HTML code with `[example]` shortcut:
+Here's an example plugin for including an `[example]` shortcut:
 
 ``` php
 <?php
@@ -666,7 +665,7 @@ The following date formats are available:
 `YYYY-MM-DD` = date starting with the year, e.g. `2013-04-07`  
 `YYYY-MM-DD HH:MM:SS` = date and time, e.g. `2013-04-07 11:30:00`  
 
-When dates are displayed on a page they are converted to a language specific date:
+When dates are displayed on a page they are converted to a language specific date format:
 
 `dateFormatShort` = short date, e.g. `April 2013`  
 `dateFormatMedium` = medium date, e.g. `2013-04-07`   
@@ -674,13 +673,13 @@ When dates are displayed on a page they are converted to a language specific dat
 
 When text is displayed on a page you can use one of these encoding functions:
 
-`htmlspecialchars($string)` = make text string HTML encoded  
+`htmlspecialchars($string)` = encode text string into HTML format  
 `rawurlencode($string)` = encode URL, e.g. hyperlink arguments  
 `strencode($string)` = encode string, e.g. JavaScript arguments  
 
 ## Debugging
 
-Open the file `system/plugins/core.php`, change first line to `<?php define("DEBUG", 1);`  
+Open the file `system/plugins/core.php`, change first line to `<?php define("DEBUG", 1);`
 
 ```
 YellowCore::sendPage Content-Type: text/html; charset=UTF-8
@@ -720,6 +719,6 @@ Some tips for developers:
 
 1. [Install the developers kit](https://github.com/datenstrom/yellow-developers). The developers kit includes plugins, themes, examples and documentation. You can try out how to make small web pages, blogs and wikis. It's a great place to get started with the Yellow API.
 
-2. [Put your code on GitHub](https://github.com/datenstrom/yellow/issues?q=label%3Anews%20). Create a new repository for each new plugin/theme. The name of your repository should be `yellow-plugin-something` or `yellow-theme-something`. When your code becomes stable, you can add it to the Yellow main repository.
+2. [Put your code on GitHub](https://github.com/datenstrom/yellow/issues?q=label%3Anews%20). Create a repository for each new plugin/theme. The name of your repository should be `yellow-plugin-something` or `yellow-theme-something`. When your code becomes stable, you can add it to the Yellow main repository.
 
 3. [Show what you have made](https://twitter.com/search?q=%23madewithyellow). We hope Yellow is useful for you. We hope you'll use it to make many websites. Have a question? Something not working as expected? Want to get in touch with other developers? [Contact us](support).

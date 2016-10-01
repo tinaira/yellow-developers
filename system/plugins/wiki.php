@@ -5,7 +5,7 @@
 // Wiki plugin
 class YellowWiki
 {
-	const VERSION = "0.6.9";
+	const VERSION = "0.6.10";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -144,6 +144,10 @@ class YellowWiki
 		{
 			$pages = $this->yellow->page->getChildren(!$this->yellow->page->isVisible())->append($this->yellow->page);
 			$pagesFilter = array();
+			if($_REQUEST["special"]=="pages")
+			{
+				array_push($pagesFilter, $this->yellow->text->get("wikiSpecialPages"));
+			}
 			if($_REQUEST["special"]=="changes")
 			{
 				$chronologicalOrder = true;
