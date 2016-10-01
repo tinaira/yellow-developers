@@ -40,7 +40,7 @@ You can [edit this page]. The help gives you more information
 about how to create small web pages, blogs and wikis.
 ```
 
-Now let's add an image with the [image plugin](https://github.com/datenstrom/yellow-plugins/tree/master/image):
+Now let's add an image:
 
 ```
 ---

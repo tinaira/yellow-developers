@@ -7,17 +7,17 @@ All media is located in the `media` folder. You can store your images and other 
 
 [image screenshot-media.png Screenshot]
 
-The `media` folders are available on your website. The `downloads` folder contains files to download. The `images` folder is the place to store your images. For a small website put all images inside this folder. You can also create additional folders and organise files as you like.
+The `downloads` folder contains files to download. The `images` folder is the place to store your images. For a small website put all images inside this folder. You can also create additional folders and organise files as you like. The `thumbnails` folder contains image thumbnails.
 
 ## Images
 
-Here's how to use images on a page. Open the file `content/1-home/page.txt` in your favorite text editor and add `![image](picture.jpg)` to the text of the page. The home page shows now a beautiful image. 
+Let's try out how to use images. Open the file `content/1-home/page.txt` in your favorite text editor and add `[image picture.jpg]` to the text of the page. The page will now show the file `media/images/picture.jpg`. 
 
-`![image](picture.jpg)` shows  `http://website/media/images/picture.jpg`  
+You can use the [image plugin](https://github.com/datenstrom/yellow-plugins/tree/master/image) to embed images:
 
-You can also use the [image plugin](https://github.com/datenstrom/yellow-plugins/tree/master/image) to resize images and create thumbnails.
-
-`[image picture.jpg]` shows `http://website/media/images/picture.jpg`  
+    [image picture.jpg]
+    [image picture.jpg Picture]
+    [image picture.jpg "This is an example image"]
 
 Images in different styles:
 
@@ -33,12 +33,7 @@ Images in different sizes:
 
 ## Videos
 
-You can use the [Youtube plugin](https://github.com/datenstrom/yellow-plugins/tree/master/youtube) and [Vimeo plugin](https://github.com/datenstrom/yellow-plugins/tree/master/vimeo) to embed videos.
-
-`[youtube fhs55HEl-Gc]` shows `https://www.youtube.com/watch?v=fhs55HEl-Gc`  
-`[vimeo 13387502]` shows `https://vimeo.com/13387502`  
-
-Embedding a Youtube video:
+You can use the [Youtube plugin](https://github.com/datenstrom/yellow-plugins/tree/master/youtube) and [Vimeo plugin](https://github.com/datenstrom/yellow-plugins/tree/master/vimeo) to embed videos:
 
     [youtube fhs55HEl-Gc]
     [youtube fhs55HEl-Gc left 200 112]

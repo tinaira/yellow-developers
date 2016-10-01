@@ -7,9 +7,15 @@ Wie man eine Webseite mit besserer Sicherheit konfiguriert.
 
 ## Sicherer Server
 
-Überprüfe ob dein Webserver [HTTPS](https://de.wikipedia.org/wiki/Hypertext_Transfer_Protocol_Secure) unterstützt und ob die Internetverbindung verschlüsselt ist. Am Besten ist es wenn deine Webseite nur über HTTPS erreichbar ist. Das dient dem Datenschutz, jedoch wird es nicht von allen Webhostern unterstützt.
+Überprüfe ob dein Webserver HTTPS unterstützt und ob die Internetverbindung verschlüsselt ist. Am Besten ist es wenn deine Webseite nur über HTTPS erreichbar ist. Das dient dem Datenschutz, jedoch wird es nicht von allen Webhostern unterstützt.
 
 Du brauchst einen Webserver mit TLS und gültigem Zertifikat.
+
+## Benutzerbeschränkungen
+
+Falls mehrere Person eine Webseite bearbeiten, beschränke [Benutzerkonten](adjusting-system-de#benutzerkonten) und nur Teile der Webseite können verändert werden. Benutzer dürfen nur Seiten innerhalb ihrer Startseite bearbeiten. Damit wird deine Webseite vor Veränderungen im Webbrowser geschützt, jedoch sind Änderungen via FTP und SSH weiterhin möglich.
+
+Du kannst [Benutzerbeschränkungen testen](/tests/user-restrictions) mit dem Gast-Benutzerkonto.
 
 ## Abgesicherter Modus
 
@@ -17,15 +23,9 @@ Falls mehrere Person eine Webseite bearbeiten, aktiviere den abgesicherten Modus
 
 Öffne die Datei `system/config/config.ini` und ändere `ParserSafeMode: 1`.
 
-## Benutzerbeschränkungen
-
-Falls mehrere Person eine Webseite bearbeiten, beschränke [Benutzerkonten](adjusting-system-de#benutzerkonten) und nur Teile der Webseite können verändert werden. Damit wird deine Webseite vor Veränderungen im Webbrowser geschützt, jedoch sind Änderungen via FTP und SSH weiterhin möglich.
-
-Du kannst [Benutzerbeschränkungen testen](/tests/user-restrictions), einloggen mit `guest@guest.com` + `guest`.
-
 ## Weniger ist mehr
 
-Falls niemanden eine Webseite im Webbrowser bearbeitet, kann man Yellow als reines Flat-File-CMS und [Static-Site-Generator](web-server-configuration-de#statische-webseite) betreiben. Beispielsweise kann man das [Webinterface](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface) entfernen, danach ist es nicht mehr möglich sich einzuloggen und die Webseite zu ändern.
+Falls niemanden eine Webseite im Webbrowser bearbeiten will, kann man Yellow als reines Flat-File-CMS und [Static-Site-Generator](web-server-configuration-de#statische-webseite) betreiben. Beispielsweise kann man das [Webinterface](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface) entfernen, danach ist es nicht mehr möglich sich einzuloggen und die Webseite zu ändern.
 
 Lösche die Datei `system/plugins/webinterface.php` um das Webinterface zu entfernen.
 

@@ -20,11 +20,10 @@ Tausche dich mit anderen Yellow-Benutzern aus und finde professionelle Hilfe.
 
 ## Mach mit
 
-* [Zeige was du gemacht hast](https://twitter.com/search?q=%23madewithyellow)
-* [Beantworte Fragen](https://gitter.im/datenstrom/yellow)
 * [Bewerte Vorschläge](https://github.com/datenstrom/yellow/issues?q=is%3Aopen+is%3Aissue+label%3Asuggestion)
 * [Erstelle Übersetzungen](https://github.com/datenstrom/yellow-plugins/tree/master/language)
 * [Erstelle Plugins und Themes](https://github.com/datenstrom)
+* [Zeige was du gemacht hast](https://twitter.com/search?q=%23madewithyellow)
 
 ## Danke
 

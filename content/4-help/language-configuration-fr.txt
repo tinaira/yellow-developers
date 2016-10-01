@@ -5,11 +5,11 @@ Language: fr
 ---
 >>> [Vous pouvez nous aider à traduire cette page.](https://github.com/datenstrom/yellow-developers/blob/master/content/4-help/language-configuration-fr.txt)
 
-Here's how to set up a website with different languages.
+Comment faire configurer un site web avec des langues différentes.
 
 ## Languages
 
-Yellow is multilingual and there are [language files](https://github.com/datenstrom/yellow-plugins/tree/master/language) you can download. The default language is defined in file `system/config/config.ini`. A different language can be defined in the [settings](markdown-cheat-sheet#settings) at the top of each page, for example `Language: en`.
+Yellow is multilingual and there are more [languages](https://github.com/datenstrom/yellow-plugins/tree/master/language) you can download. The default language is defined in file `system/config/config.ini`. A different language can be defined in the [settings](markdown-cheat-sheet#settings) at the top of each page, for example `Language: en`.
 
 Here's an English page:
 

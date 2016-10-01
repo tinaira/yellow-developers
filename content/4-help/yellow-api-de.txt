@@ -402,11 +402,11 @@ Hier ist ein Beispiel-Snippet um Server-Einstellungen anzuzeigen:
 Hier ist ein Beispiel-Snippet um Webmaster-Einstellungen anzuzeigen:
 
 ``` php
-<?php if($yellow->config->isExisting("author")): ?>
+<div class="yellow config">
 <?php $author = $yellow->config->get("author") ?>
 <?php $email = $yellow->config->get("email") ?>
-<p><?php echo htmlspecialchars("$author - $email") ?></p>
-<?php endif ?>
+<?php echo htmlspecialchars("$author - $email") ?>
+</div>
 ```
 
 ### Yellow-Text

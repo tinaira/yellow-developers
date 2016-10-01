@@ -1,0 +1,7 @@
+---
+Title: Test custom template
+Template: custom
+---
+[image yellow-photo.jpg Picture]
+
+This page tests custom template with custom footer.

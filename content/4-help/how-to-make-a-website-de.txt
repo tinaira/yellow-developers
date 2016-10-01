@@ -40,7 +40,7 @@ Du kannst [edit - diese Seite bearbeiten]. Die Hilfe gibt dir weitere
 Informationen wie man kleine Webseiten, Blogs und Wikis erstellt.
 ```
 
-Ein Bild hinzufügen mit dem [Image-Plugin](https://github.com/datenstrom/yellow-plugins/tree/master/image):
+Ein Bild hinzufügen:
 
 ```
 ---
@@ -65,7 +65,7 @@ Du kannst [edit - diese Seite bearbeiten]. Die Hilfe gibt dir weitere
 Informationen wie man kleine Webseiten, Blogs und Wikis erstellt.
 ```
 
-Du kannst Seiten in [Markdown](markdown-cheat-sheet-de) erstellen. 
+Du kannst Seiten mit [Markdown](markdown-cheat-sheet-de) erstellen. 
 
 ## Sidebar erstellen
 

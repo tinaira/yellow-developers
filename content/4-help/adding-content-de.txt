@@ -21,7 +21,7 @@ Präfixe und Suffixe werden aus der Adresse entfernt, damit es besser aussieht. 
 
 ## Textdateien
 
-Lass uns einen Blick auf Textdateien werfen. Öffne die Datei `content/1-home/page.txt` in deinem Lieblingseditor. Es werden Einstellungen und Text der Seite angezeigt. Ganz oben auf der Seite kannst du `Title` und weitere [Einstellungen](markdown-cheat-sheet-de#einstellungen) ändern. Hier ist ein Beispiel:
+Lass uns einen Blick auf Textdateien werfen. Öffne die Datei `content/1-home/page.txt` in deinem Lieblings-Texteditor. Es werden Einstellungen und Text der Seite angezeigt. Ganz oben auf der Seite kannst du `Title` und weitere [Einstellungen](markdown-cheat-sheet-de#einstellungen) ändern. Hier ist ein Beispiel:
 
     ---
     Title: Home

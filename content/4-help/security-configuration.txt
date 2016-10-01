@@ -7,9 +7,15 @@ Here's how to set up a website with better security.
 
 ## Secure server
 
-Check if your web server supports [HTTPS](https://en.wikipedia.org/wiki/HTTPS) and if the Internet connection is encrypted. It's best if your website is only available via HTTPS. This protects the privacy of your users, but it's not supported by every web hosting provider.
+Check if your web server supports HTTPS and if the Internet connection is encrypted. It's best if your website is only available via HTTPS. This protects the privacy of your users, but it's not supported by every web hosting provider.
 
 You need a web server with TLS and valid certificate.
+
+## User restrictions
+
+If you have more than one person editing a website, restrict [user accounts](adjusting-system#user-accounts) and only parts of the website can be changed. Users can only edit pages within their home page. This protects your website from being changed in a web browser, but changes via FTP and SSH are still possible.
+
+You can [test user restrictions](/tests/user-restrictions) with the guest user account.
 
 ## Safe mode
 
@@ -17,15 +23,9 @@ If you have more than one person editing a website, enable safe mode and only [M
 
 Open file `system/config/config.ini` and change `ParserSafeMode: 1`.
 
-## User restrictions
-
-If you have more than one person editing a website, restrict [user accounts](adjusting-system#user-accounts) and only parts of the website can be changed. This protects your website from being changed in a web browser, but changes via FTP and SSH are still possible.
-
-You can [test user restrictions](/tests/user-restrictions), log in with `guest@guest.com` + `guest`.
-
 ## Less is more
 
-If there's nobody editing a website in a web browser, you can run Yellow as pure flat-file CMS and [static site generator](web-server-configuration#static-website). For example remove the [web interface](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface), then it's no longer possible to log in and change the website.
+If nobody wants to edit a website in a web browser, you can run Yellow as pure flat-file CMS and [static site generator](web-server-configuration#static-website). For example remove the [web interface](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface), then it's no longer possible to log in and change the website.
 
 Delete file `system/plugins/webinterface.php` to remove the web interface.
 

@@ -5,7 +5,7 @@ Language: fr
 ---
 >>> [Vous pouvez nous aider à traduire cette page.](https://github.com/datenstrom/yellow-developers/blob/master/content/4-help/markdown-cheat-sheet-fr.txt)
 
-Markdown est un moyen pratique pour éditer des pages web.
+Markdown est un moyen pratique pour éditer des pages web. [Voir la démo](/tests/markdown-format).
 
 ## Basics
 
@@ -46,20 +46,18 @@ Créer des liens:
 Ajout d'image:
 
     ![image](picture.jpg)
+    ![image](picture.jpg "Picture")
+    ![image](picture.jpg "Ceci est un exemple d'image")
 
-Ajout d'image avec le [plugin image](https://github.com/datenstrom/yellow-plugins/tree/master/image):
+Ajout d'image, voici un autre format:
 
-    [image picture.jpg)
-
-Ajout d'emoji avec le [plugin emoji](https://github.com/datenstrom/yellow-plugins/tree/master/emojiawesome):
-
-    :smile: :grinning: :angry: :heart: :coffee: :+1:
-
-[Voir Markdown en action](/tests/markdown-format).
+    [image picture.jpg]
+    [image picture.jpg Picture]
+    [image picture.jpg "Ceci est un exemple d'image"]
 
 ## Raccourcis
 
-`[image picture.jpg - 50%]` = add [image thumbnail](https://github.com/datenstrom/yellow-plugins/tree/master/image)  
+`[image picture.jpg Picture - 50%]` = add [image thumbnail](https://github.com/datenstrom/yellow-plugins/tree/master/image)  
 `[gallery photo.*jpg - 20%]` = add [image gallery](https://github.com/datenstrom/yellow-plugins/tree/master/gallery)  
 `[slider photo.*jpg]` = add [image gallery with slider](https://github.com/datenstrom/yellow-plugins/tree/master/slider)  
 `[youtube fhs55HEl-Gc]` = embed [Youtube video](https://github.com/datenstrom/yellow-plugins/tree/master/youtube)  
@@ -71,6 +69,7 @@ Ajout d'emoji avec le [plugin emoji](https://github.com/datenstrom/yellow-plugin
 `[blogrecent /blog/]` = show [recent blog pages](https://github.com/datenstrom/yellow-plugins/tree/master/blog#how-to-configure-a-blog)  
 `[wikirecent /wiki/]` = show [recent wiki pages](https://github.com/datenstrom/yellow-plugins/tree/master/wiki#how-to-configure-a-wiki)  
 `[fa fa-envelope-o]` = show [icons and symbols](https://github.com/datenstrom/yellow-plugins/tree/master/fontawesome)  
+`[ea ea-smile]` = show [emoji and colorful images](https://github.com/datenstrom/yellow-plugins/tree/master/emojiawesome)  
 `[toc]` = show [table of contents](https://github.com/datenstrom/yellow-plugins/tree/master/toc)  
 
 ## Paramètres
@@ -82,18 +81,19 @@ Ajout d'emoji avec le [plugin emoji](https://github.com/datenstrom/yellow-plugin
 `Description` = page description  
 `Keywords` = page keyword(s), comma separated  
 `Author` = page author(s), comma separated  
+`Robots` = robots meta data, comma separated  
 `Language` = page language  
 `Theme` = page theme  
 `Template` = page template  
+`Parser` = page parser  
 `Modified` = page modification date, YYYY-MM-DD format  
 `Published` = page publication date, YYYY-MM-DD format  
 `Tag` = page tag(s) for categorisation, comma separated  
 `Status` = page status for workflow  
+`Redirect` = redirect to a new page or URL  
 `Navigation` = page navigation  
 `Sidebar` = page sidebar  
-`Siteicon` = icon of the website  
 `Sitename` = name of the website  
+`Siteicon` = icon of the website  
+`Tagline` = slogan of the website  
 `Email` = email of the webmaster  
-`Redirect` = new location or URL  
-`Robots` = robots meta data used in header  
-`Parser` = parser for text files  

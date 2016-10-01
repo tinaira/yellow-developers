@@ -4,8 +4,8 @@ Title: Test link parsing
 This page tests link parsing.
 
 Link on same website: [Home](/), [Wiki](/plugins/wiki-plugin/).  
-Link to another website: [Dropbox](https://dropbox.com), [Datenstrom](https://datenstrom.se).  
-Relative links to current page: [Image](image-parsing1), [Location](location-api).  
+Link to another website: [Datenstrom](https://datenstrom.se), [W3Schools](http://www.w3schools.com).  
+Relative links to current page: [Image](image-parsing), [Location](location-api).  
 Special links for this page: [Read](@pageread), [Edit](@pageedit).
 
 URL autolinking: 

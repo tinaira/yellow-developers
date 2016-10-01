@@ -7,13 +7,13 @@ You can customise the visual design of your website.
 
 ## Themes
 
-Themes define the visual design of your website. Start with a [theme](/themes/) that you like. There's a default theme defined in file `system/config/config.ini`. A different theme can be defined in the [settings](markdown-cheat-sheet#settings) at the top of each page, for example `Theme: default`.
+Themes define the visual design of your website. There's a default theme defined in file `system/config/config.ini`. A different theme can be defined in the [settings](markdown-cheat-sheet#settings) at the top of each page, for example `Theme: flatsite`.
 
-## Custom theme
+## CSS
 
-To use a different theme set the `Theme` setting at the top of a page. You can also create a theme with the name of a `content` folder and it will be automatically used. Themes consist of a style sheet and are made with [CSS](https://en.wikipedia.org/wiki/Cascading_Style_Sheets).
+To adjust a theme you can use [CSS](http://www.w3schools.com/css/). You can create a CSS file with the name of a `content` folder and it will be automatically used. All CSS files should have a unique name and version.
  
-Here's an example theme file `system/themes/home.css`:
+Here's an example CSS file `system/themes/home.css`:
 
 ``` css
 /* Theme: Home theme */
@@ -31,7 +31,7 @@ a:hover { color:#07d; text-decoration:underline; }
 .navigation li { display:inline; }
 ```
 
-Here's the same theme file with dark background color:
+Here's the same CSS file with dark background color:
 
 ``` css
 /* Theme: Home theme */
@@ -49,13 +49,11 @@ a:hover { color:#29f; text-decoration:underline; }
 .navigation li { display:inline; }
 ```
 
-All themes should have a unique name and version.
-
 ## JavaScript
 
-To extend a theme you have many different possibility, for example [JavaScript](http://en.wikipedia.org/wiki/JavaScript). You can create a script with the name of a theme and it will be automatically used. This allows you to create any dynamic feature with Yellow.
+To extend a theme you can use [JavaScript](http://www.w3schools.com/js/). You can create a JS file with the name of a theme and it will be automatically used. This allows you to create any dynamic feature with Yellow.
 
-Here's an example JavaScript file `system/themes/assets/home.js`:
+Here's an example JS file `system/themes/assets/home.js`:
 
 ``` javascript
 var ready = function() 
@@ -70,10 +68,10 @@ if(window.addEventListener) {
 }
 ```
 
-## Site icon
+## Icon
 
-The site icon, also called favicon, is a small image that is associated with your website. There's a default icon defined in file `system/config/config.ini`. A different icon can be defined in the [settings](markdown-cheat-sheet#settings) at the top of each page, for example `Siteicon: icon`.
+Every website has a small image that is associated with it. There's a default icon defined in file `system/config/config.ini`. A different icon can be defined in the [settings](markdown-cheat-sheet#settings) at the top of each page, for example `Siteicon: icon`.
 
-To change the site icon overwrite file `system/themes/assets/icon.png`.
+To change the default icon overwrite file `system/themes/assets/icon.png`.
 
 [Next: Yellow templates →](yellow-templates)

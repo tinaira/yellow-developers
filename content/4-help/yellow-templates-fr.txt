@@ -20,7 +20,7 @@ Here's an example template file `system/themes/templates/default.html`:
 <?php $yellow->snippet("footer") ?>
 ```
 
-Snippets are the building blocks of your website. They are small pieces of [PHP](https://en.wikipedia.org/wiki/PHP) code, written with some help of the [Yellow API](yellow-api). You can put everything into one template, but it's often more practical to split code up into multiple snippets and reuse them. 
+Snippets are the building blocks of your website. They are small pieces of [PHP](http://www.w3schools.com/php/) to create [HTML](http://www.w3schools.com/html/). You can put everything into one template, but it's often more practical to split a template up into multiple snippets and reuse them. 
 
 Here's an example snippet file `system/themes/snippets/content-main.php`:
 
@@ -33,7 +33,7 @@ Here's an example snippet file `system/themes/snippets/content-main.php`:
 
 ## Custom template
 
-To use a different template set the `Template` setting at the top of a page. You can also create a template with the name of a `content` folder and it will be automatically used. This allows you to generate any [HTML](http://en.wikipedia.org/wiki/HTML) code with Yellow.
+To use a different template set the `Template` setting at the top of a page. You can also create a template with the name of a `content` folder and it will be automatically used. This allows you to generate any layout with Yellow.
 
 Here's an example template file `system/themes/templates/home.html`:
 
@@ -54,6 +54,22 @@ Here's an example snippet file `system/themes/snippets/content-home.php`:
 </div>
 ```
 
+Here's the same snippet file with blog pages:
+
+``` php
+<div class="content main">
+<h1><?php echo $yellow->page->getHtml("titleContent") ?></h1>
+<?php echo $yellow->page->getContent() ?>
+<?php $pages = $yellow->pages->index()->filter("template", "blog")->sort("published", false)->limit(3) ?>
+<?php foreach($pages as $page): ?>
+<h2><a href="<?php echo $page->getLocation(true) ?>"><?php echo $page->getHtml("title") ?></a></h1>
+<p><?php echo $yellow->toolbox->createTextDescription($page->getContent(), 250) ?></p>
+<?php endforeach ?>
+<?php $yellow->page->setLastModified($pages->getModified()) ?>
+<?php $yellow->page->setHeader("Cache-Control", "max-age=60") ?>
+</div>
+```
+
 ## Custom navigation
 
 To adjust the navigation open file `system/config/config.ini` and change the `Navigation` setting. A different navigation can be defined in the [settings](markdown-cheat-sheet#settings) at the top of each page, for example `Navigation: navigation`.
@@ -61,10 +77,10 @@ To adjust the navigation open file `system/config/config.ini` and change the `Na
 The following navigations are available:
 
 `Navigation: navigation` shows top level pages  
+`Navigation: navigation-sidebar` shows sub level pages  
 `Navigation: navigation-tree` shows dropdown menu  
-`Navigation: navigation-sidebar` shows sub level pages in [sidebar](#sidebar)  
-`Navigation: navigation-multilanguage` shows a [language selection](language-configuration#multi-language-mode)  
-`Navigation: navigation-search` shows a [search bar](https://github.com/datenstrom/yellow-plugins/tree/master/search)  
+`Navigation: navigation-search` shows [search bar](https://github.com/datenstrom/yellow-plugins/tree/master/search)  
+`Navigation: navigation-multilanguage` shows [language selection](language-configuration#multi-language-mode)  
 
 Here's an example snippet file `system/themes/snippets/navigation.php`:
 
@@ -101,15 +117,17 @@ Here's the same snippet file with [social media icons](https://github.com/datens
 
 ## Custom footer
 
-To adjust the footer change the corresponding snippet. The footer will be shown on all pages. You can for example show information about your website and more links.
+To adjust the footer change the corresponding snippet. The footer will be shown on the bottom of all pages. You can for example show information about your website and links.
 
 Here's an example snippet file `system/themes/snippets/footer.php`:
 
 ``` php
 <div class="footer">
+<div class="siteinfo">
 <a href="<?php echo $yellow->page->base."/" ?>">&copy; 2016 <?php echo $yellow->page->getHtml("sitename") ?></a>.
 <a href="<?php echo $yellow->page->get("pageEdit") ?>">Edit</a>.
 <a href="<?php echo $yellow->text->get("yellowUrl") ?>">Made with Yellow</a>.
+</div>
 </div>
 </div>
 <?php echo $yellow->page->getExtra("footer") ?>
@@ -121,11 +139,13 @@ Here's the same snippet file with social media links:
 
 ``` php
 <div class="footer">
+<div class="siteinfo">
 <a href="https://twitter.com/datenstromse">Twitter</a>.
 <a href="https://github.com/datenstrom">GitHub</a>.
 <a href="https://instagram.com/datenstromse">Instagram</a>.
 <a href="<?php echo $yellow->page->get("pageEdit") ?>">Edit</a>.
 <a href="<?php echo $yellow->text->get("yellowUrl") ?>">Made with Yellow</a>.
+</div>
 </div>
 </div>
 <?php echo $yellow->page->getExtra("footer") ?>

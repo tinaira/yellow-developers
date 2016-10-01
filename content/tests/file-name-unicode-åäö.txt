@@ -1,5 +1,5 @@
 ---
-Title: Test file name
+Title: Test file name Unicode
 ---
 This page tests file name with Unicode. 
 

@@ -7,17 +7,17 @@ Alle Medien befinden sich im `media`-Verzeichnis. Hier speicherst du Bilder und 
 
 [image screenshot-media.png Screenshot]
 
-Die `media`-Verzeichnisse stehen auf deiner Webseite zur Verfügung. Das `downloads`-Verzeichnis enthält Dateien zum Herunterladen. Das `images`-Verzeichnis ist zum Speichern deiner Bilder gedacht. Bei einer kleinen Webseite kannst du alle Bilder in diesem Verzeichnis ablegen. Du kannst auch weitere Verzeichnisse erstellen und Dateien organisieren wie du willst.
+Das `downloads`-Verzeichnis enthält Dateien zum Herunterladen. Das `images`-Verzeichnis ist zum Speichern deiner Bilder gedacht. Bei einer kleinen Webseite kannst du alle Bilder in diesem Verzeichnis ablegen. Du kannst auch weitere Verzeichnisse erstellen und Dateien organisieren so wie du willst. Das `thumbnails`-Verzeichnis enthält Miniaturbilder.  
 
 ## Bilder
 
-Hier ist beschreiben wie man Bilder auf einer Seite verwendet. Öffne die Datei `content/1-home/page.txt` in deinem Lieblingseditor und füge `![image](picture.jpg)` zum Text der Seite hinzu. Die Startseite zeigt jetzt ein schönes Bild an. 
+Lass uns ausprobieren wie man Bilder verwendet. Öffne die Datei `content/1-home/page.txt` in deinem Lieblings-Texteditor und füge `[image picture.jpg]` zum Text der Seite hinzu. Die Seite zeigt jetzt die Datei `media/images/picture.jpg` an.
 
-`![image](picture.jpg)` zeigt `http://website/media/images/picture.jpg`  
+Du kannst das [Image-Plugin](https://github.com/datenstrom/yellow-plugins/tree/master/image) benutzen um Bilder einzubinden:
 
-Es gibt auch das [Image-Plugin](https://github.com/datenstrom/yellow-plugins/tree/master/image) um Bildgrößen zu ändern und Miniaturbilder zu erzeugen.
-
-`[image picture.jpg]` zeigt `http://website/media/images/picture.jpg`  
+    [image picture.jpg]
+    [image picture.jpg Picture]
+    [image picture.jpg "Dies ist ein Beispielbild"]
 
 Bilder in unterschiedliche Stilen:
 
@@ -34,11 +34,6 @@ Bilder in unterschiedliche Größen:
 ## Videos
 
 Du kannst das [Youtube-Plugin](https://github.com/datenstrom/yellow-plugins/tree/master/youtube) und [Vimeo-Plugin](https://github.com/datenstrom/yellow-plugins/tree/master/vimeo) benutzen um Videos einzubinden.
-
-`[youtube fhs55HEl-Gc]` zeigt `https://www.youtube.com/watch?v=fhs55HEl-Gc`  
-`[vimeo 13387502]` zeigt `https://vimeo.com/13387502`  
-
-Ein Youtube-Video einbinden:
 
     [youtube fhs55HEl-Gc]
     [youtube fhs55HEl-Gc left 200 112]

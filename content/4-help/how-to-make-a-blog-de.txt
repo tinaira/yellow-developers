@@ -56,7 +56,7 @@ Ein Video hinzufügen mit dem [Youtube-Plugin](https://github.com/datenstrom/yel
 Title: Fika ist gut für dich
 Published: 2013-06-01
 Author: Yellow
-Tag: Beispiel, Kaffee
+Tag: Beispiel, Kaffee, Video
 ---
 Fika ist ein schwedischer Brauch. Es ist eine Kaffeepause, bei der Menschen  
 bei einer Tasse Kaffee oder Tee zusammenkommen. Das kann mit Arbeitskollegen  
@@ -74,7 +74,7 @@ Das Video erst anzeigen wenn ein Besucher auf die Blogseite klickt. Du kannst `[
 Title: Fika ist gut für dich
 Published: 2013-06-01
 Author: Yellow
-Tag: Beispiel, Kaffee
+Tag: Beispiel, Kaffee, Video
 ---
 Fika ist ein schwedischer Brauch. Es ist eine Kaffeepause, bei der Menschen  
 bei einer Tasse Kaffee oder Tee zusammenkommen. Das kann mit Arbeitskollegen  
@@ -85,7 +85,7 @@ wird. [--more--]
 [youtube aS52d3hcHfs]
 ```
 
-Du kannst Blogseiten in [Markdown](markdown-cheat-sheet-de) erstellen.
+Du kannst Blogseiten mit [Markdown](markdown-cheat-sheet-de) erstellen.
 
 ## Sidebar erstellen
 
@@ -112,7 +112,7 @@ Status: hidden
 ---
 Neu
 
-[blogrecent /blog/]
+[blogrecent /blog/ 3]
 
 Archiv
 
@@ -128,7 +128,7 @@ Status: hidden
 ---
 Neu
 
-[blogrecent /]
+[blogrecent / 3]
 
 Archiv
 

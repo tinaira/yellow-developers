@@ -56,7 +56,7 @@ Now let's add a video with the [Youtube plugin](https://github.com/datenstrom/ye
 Title: Fika is good for you
 Published: 2013-06-01
 Author: Yellow
-Tag: Example, Coffee
+Tag: Example, Coffee, Video
 ---
 Fika is a Swedish custom. It's a social coffee break where people 
 gather to have a cup of coffee or tea together. You can have fika with 
@@ -74,7 +74,7 @@ Let's show the video when a visitor clicks on the blog page. You can add `[--mor
 Title: Fika is good for you
 Published: 2013-06-01
 Author: Yellow
-Tag: Example, Coffee
+Tag: Example, Coffee, Video
 ---
 Fika is a Swedish custom. It's a social coffee break where people 
 gather to have a cup of coffee or tea together. You can have fika with 
@@ -113,7 +113,7 @@ Status: hidden
 ---
 Recent
 
-[blogrecent /blog/]
+[blogrecent /blog/ 3]
 
 Archive
 
@@ -129,7 +129,7 @@ Status: hidden
 ---
 Recent
 
-[blogrecent /]
+[blogrecent / 3]
 
 Archive
 

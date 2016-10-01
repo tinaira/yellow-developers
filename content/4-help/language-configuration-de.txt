@@ -7,7 +7,7 @@ Wie man eine Webseite mit verschiedenen Sprachen konfiguriert.
 
 ## Sprachen
 
-Yellow ist mehrsprachig und es gibt [Sprachdateien](https://github.com/datenstrom/yellow-plugins/tree/master/language) zum Herunterladen. Die Standardsprache wird in der Datei `system/config/config.ini` festgelegt. Eine andere Sprache lässt sich in den [Einstellungen](markdown-cheat-sheet-de#einstellungen) ganz oben auf jeder Seite festlegen, zum Beispiel `Language: en`. 
+Yellow ist mehrsprachig und es gibt weitere [Sprachen](https://github.com/datenstrom/yellow-plugins/tree/master/language) zum Herunterladen. Die Standardsprache wird in der Datei `system/config/config.ini` festgelegt. Eine andere Sprache lässt sich in den [Einstellungen](markdown-cheat-sheet-de#einstellungen) ganz oben auf jeder Seite festlegen, zum Beispiel `Language: en`. 
 
 Hier ist eine Englische Seite:
 

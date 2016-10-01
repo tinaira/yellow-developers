@@ -18,7 +18,7 @@ Hier ist eine Beispiel-Templatedatei `system/themes/templates/default.html`:
 <?php $yellow->snippet("footer") ?>
 ```
 
-Snippets sind die Bausteine deiner Webseite. Es sind kleine Stücke [PHP-Code](https://de.wikipedia.org/wiki/PHP), die mit Hilfe der [Yellow-API](yellow-api-de) erstellt werden. Du kannst alles in ein Template schreiben, aber es ist häufig praktischer den Code in mehrere Snippets aufzuteilen und wiederzubenutzten.
+Snippets sind die Bausteine deiner Webseite. Es sind kleine Stücke [PHP](http://www.w3schools.com/php/) um [HTML](http://www.w3schools.com/html/) zu erstellen. Du kannst alles in ein Template schreiben, aber es ist häufig praktischer ein Template in mehrere Snippets aufzuteilen und diese wiederzubenutzen.
 
 Hier ist eine Beispiel-Snippetdatei `system/themes/snippets/content-main.php`:
 
@@ -31,7 +31,7 @@ Hier ist eine Beispiel-Snippetdatei `system/themes/snippets/content-main.php`:
 
 ## Template anpassen
 
-Um ein anderes Template zu benutzen, legst du das `Template` ganz oben auf einer Seite fest. Du kannst auch ein Template mit dem Namen eines `content`-Verzeichnisses erstellen und es wird automatisch benutzt. Das ermöglicht es beliebigen [HTML-Code](https://de.wikipedia.org/wiki/Hypertext_Markup_Language) mit Yellow zu erzeugen.
+Um ein anderes Template zu benutzen, legst du das `Template` ganz oben auf einer Seite fest. Du kannst auch ein Template mit dem Namen eines `content`-Verzeichnisses erstellen und es wird automatisch benutzt. Das ermöglicht es beliebige Layouts mit Yellow zu erzeugen.
 
 Hier ist eine Beispiel-Templatedatei `system/themes/templates/home.html`:
 
@@ -52,6 +52,22 @@ Hier ist eine Beispiel-Snippetdatei `system/themes/snippets/content-home.php`:
 </div>
 ```
 
+Hier ist die selbe Snippetdatei mit Blogeinträgen:
+
+``` php
+<div class="content main">
+<h1><?php echo $yellow->page->getHtml("titleContent") ?></h1>
+<?php echo $yellow->page->getContent() ?>
+<?php $pages = $yellow->pages->index()->filter("template", "blog")->sort("published", false)->limit(3) ?>
+<?php foreach($pages as $page): ?>
+<h2><a href="<?php echo $page->getLocation(true) ?>"><?php echo $page->getHtml("title") ?></a></h1>
+<p><?php echo $yellow->toolbox->createTextDescription($page->getContent(), 250) ?></p>
+<?php endforeach ?>
+<?php $yellow->page->setLastModified($pages->getModified()) ?>
+<?php $yellow->page->setHeader("Cache-Control", "max-age=60") ?>
+</div>
+```
+
 ## Navigation anpassen
 
 Um die Navigation anzupassen, öffne die Datei `system/config/config.ini` und ändere `Navigation`. Eine andere Navigation lässt sich in den [Einstellungen](markdown-cheat-sheet-de#einstellungen) ganz oben auf jeder Seite festlegen, zum Beispiel `Navigation: navigation`. 
@@ -59,10 +75,10 @@ Um die Navigation anzupassen, öffne die Datei `system/config/config.ini` und ä
 Die folgenden Navigationen sind vorhanden:
 
 `Navigation: navigation` zeigt Hauptseiten  
+`Navigation: navigation-sidebar` zeigt Unterseiten  
 `Navigation: navigation-tree` zeigt Dropdown-Menü   
-`Navigation: navigation-sidebar` zeigt Unterseiten in der [Sidebar](#sidebar)  
-`Navigation: navigation-multilanguage` zeigt eine [Sprachauswahl](language-configuration-de#mehrsprachen-modus)   
-`Navigation: navigation-search` zeigt eine [Suchzeile](https://github.com/datenstrom/yellow-plugins/tree/master/search)  
+`Navigation: navigation-search` zeigt [Suchzeile](https://github.com/datenstrom/yellow-plugins/tree/master/search)  
+`Navigation: navigation-multilanguage` zeigt [Sprachauswahl](language-configuration-de#mehrsprachen-modus)   
 
 Hier ist eine Beispiel-Snippetdatei `system/themes/snippets/navigation.php`:
 
@@ -99,15 +115,17 @@ Hier ist die selbe Snippetdatei mit [Icons für soziale Medien](https://github.c
 
 ## Fußzeile anpassen
 
-Um die Fußzeile anzupassen, ändere das entsprechende Snippet. Die Fußzeile wird auf allen Seiten angezeigt. Du kannst beispielsweise Informationen über deine Webseite und weitere Links anzeigen.
+Um die Fußzeile anzupassen, ändere das entsprechende Snippet. Die Fußzeile wird ganz unten auf allen Seiten angezeigt. Du kannst beispielsweise Informationen über deine Webseite und Links anzeigen.
 
 Hier ist eine Beispiel-Snippetdatei `system/themes/snippets/footer.php`:
 
 ``` php
 <div class="footer">
+<div class="siteinfo">
 <a href="<?php echo $yellow->page->base."/" ?>">&copy; 2016 <?php echo $yellow->page->getHtml("sitename") ?></a>.
 <a href="<?php echo $yellow->page->get("pageEdit") ?>">Edit</a>.
 <a href="<?php echo $yellow->text->get("yellowUrl") ?>">Made with Yellow</a>.
+</div>
 </div>
 </div>
 <?php echo $yellow->page->getExtra("footer") ?>
@@ -119,11 +137,13 @@ Hier ist die selbe Snippetdatei mit Links zu soziale Medien:
 
 ``` php
 <div class="footer">
+<div class="siteinfo">
 <a href="https://twitter.com/datenstromse">Twitter</a>.
 <a href="https://github.com/datenstrom">GitHub</a>.
 <a href="https://instagram.com/datenstromse">Instagram</a>.
 <a href="<?php echo $yellow->page->get("pageEdit") ?>">Edit</a>.
 <a href="<?php echo $yellow->text->get("yellowUrl") ?>">Made with Yellow</a>.
+</div>
 </div>
 </div>
 <?php echo $yellow->page->getExtra("footer") ?>
