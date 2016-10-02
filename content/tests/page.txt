@@ -5,11 +5,12 @@ TitleNavigation: Tests
 Here's a collection of tests.
 
 * [Test custom template](custom-template)
+* [Test file content API](file-content-api)
+* [Test file media API](file-media-api)
 * [Test file name Unicode](file-name-unicode-åäö)
 * [Test file name whitespace](file-name-whitespace)* [Test image gallery parsing](image-gallery-parsing)
 * [Test image parsing](image-parsing)
 * [Test link parsing](link-parsing)
-* [Test location API](location-api)
 * [Test Markdown format](markdown-format)
 * [Test draft status](page-draft-status)
 * [Test language error](page-language-error)

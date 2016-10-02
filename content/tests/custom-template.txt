@@ -4,4 +4,4 @@ Template: custom
 ---
 [image yellow-photo.jpg Picture]
 
-This page tests custom template with custom footer.
+This page tests custom template for content and footer.

@@ -713,6 +713,8 @@ YellowConfig::load Language:en
 YellowConfig::load Theme:flatsite
 ```
 
+We run [automatic builds and code analysis](status), have a look at [Yellow tests](/tests/).
+
 ## Tips and tricks
 
 Some tips for developers: 

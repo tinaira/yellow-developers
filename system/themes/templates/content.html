@@ -6,13 +6,12 @@
 <h1><?php echo $yellow->page->getHtml("titleContent") ?></h1>
 <?php echo $yellow->page->getContent() ?>
 <table>
-<tr><th>Location</th><th>Parent</th><th>Children</th><th>Visible</th><th>Siblings</th><th>Information</th><th>Modified</th></tr>
+<tr><th>Location</th><th>Children</th><th>Visible</th><th>Siblings</th><th>Information</th><th>Modified</th></tr>
 <?php foreach($pages as $page): ?>
 <tr>
-<td><a href="<?php echo $page->getLocation(true) ?>"><?php echo $page->getLocation(true) ?></a></td>
-<td><?php echo $page->getParent()!=null				? "yes" : "<span style=\"color:red\">no</span>" ?></td>
-<td><?php echo count($page->getChildren(true))!=0	? "yes" : "<span style=\"color:red\">no</span>" ?></td>
-<td><?php echo $page->isVisible()					? "yes" : "<span style=\"color:red\">no</span>" ?></td>
+<td><a href="<?php echo $page->getLocation(true) ?>"><i class="fa fa-file-o"></i> <?php echo $page->getLocation(true) ?></a></td>
+<td><?php echo count($page->getChildren(true))!=0 ? "yes" : "no" ?></td>
+<td><?php echo $page->isVisible() ? "yes" : "no" ?></td>
 <td><?php echo count($page->getSiblings(true)) ?></td>
 <td><?php echo $page->getParent()!=null ? $page->getParent()->getHtml("titleNavigation") : $page->getHtml("titleNavigation") ?></td>
 <td><?php echo date("Y-m-d", $page->getModified())!=date("Y-m-d") ? $page->getDateHtml("modified") : "Today" ?></td>
