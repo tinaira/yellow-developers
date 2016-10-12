@@ -75,11 +75,10 @@ Ein Bild hinzufügen, hier ist ein alternatives Format:
 `Title` = Seitentitel  
 `TitleContent` = Seitentitel der im Inhalt angezeigt wird  
 `TitleNavigation` = Seitentitel der in der Navigation angezeigt wird  
-`TitleHeader` = Seitentitel der im Header benutzt wird  
+`TitleHeader` = Seitentitel der im Webbrowser angezeigt wird  
 `Description` = Beschreibung der Seite  
 `Keywords` = Stichwörter der Seite, durch Komma getrennt  
 `Author` = Autoren der Seite, durch Komma getrennt  
-`Robots` = Robots-Metadaten der Seite, durch Komma getrennt  
 `Language` = Sprache der Seite  
 `Theme` = Theme der Seite  
 `Template` = Template der Seite  
@@ -87,6 +86,7 @@ Ein Bild hinzufügen, hier ist ein alternatives Format:
 `Modified` = Änderungsdatum der Seite, JJJJ-MM-TT Format  
 `Published` = Veröffentlichungsdatum der Seite, JJJJ-MM-TT Format  
 `Tag` = Tags zur Kategorisierung der Seite, durch Komma getrennt  
+`Robots` = Informationen für Suchmaschinen, durch Komma getrennt  
 `Status` = Status für Arbeitsablauf  
 `Redirect` = Umleitung zu einer neuen Seite oder URL  
 `Navigation` = Navigation der Seite  

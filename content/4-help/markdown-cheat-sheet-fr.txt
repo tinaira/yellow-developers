@@ -77,11 +77,10 @@ Ajout d'image, voici un autre format:
 `Title` = page title  
 `TitleContent` = page title shown in content  
 `TitleNavigation` = page title shown in navigation  
-`TitleHeader` = page title used in header  
+`TitleHeader` = page title shown in web browser  
 `Description` = page description  
 `Keywords` = page keyword(s), comma separated  
 `Author` = page author(s), comma separated  
-`Robots` = robots meta data, comma separated  
 `Language` = page language  
 `Theme` = page theme  
 `Template` = page template  
@@ -89,6 +88,7 @@ Ajout d'image, voici un autre format:
 `Modified` = page modification date, YYYY-MM-DD format  
 `Published` = page publication date, YYYY-MM-DD format  
 `Tag` = page tag(s) for categorisation, comma separated  
+`Robots` = information for search engines, comma separated  
 `Status` = page status for workflow  
 `Redirect` = redirect to a new page or URL  
 `Navigation` = page navigation  

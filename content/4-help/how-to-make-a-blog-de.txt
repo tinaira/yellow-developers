@@ -5,7 +5,7 @@ Language: de
 ---
 Lerne wie man ein Blog mit Yellow erstellt. [Demo anschauen](/plugins/blog-plugin/).
 
-[image screenshot-blog.png Screenshot - 55%]
+[[image screenshot-blog.png Screenshot - 55%]](/plugins/blog-plugin/fika-is-good-for-you)
 
 ## Blog installieren
 
@@ -89,7 +89,7 @@ Du kannst Blogseiten mit [Markdown](markdown-cheat-sheet-de) erstellen.
 
 ## Sidebar erstellen
 
-Erstelle die Datei `sidebar.txt` in deinem Blogverzeichnis. Die Sidebar wird automatisch auf allen Blogseiten angezeigt. Hier ist eine Beispiel-Sidebar:
+Erstelle die Datei `sidebar.txt` in deinem Blogverzeichnis. Die Sidebar wird auf allen Blogseiten angezeigt. Hier ist eine Beispiel-Sidebar:
 
 ```
 ---

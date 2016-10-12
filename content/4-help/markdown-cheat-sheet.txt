@@ -23,11 +23,11 @@ Making an ordered list:
     2. item two
     3. item three
 
-Making a header:
+Making a heading:
 
-    # Header 1
-    ## Header 2
-    ### Header 3
+    # Heading 1
+    ## Heading 2
+    ### Heading 3
 
 Making quotes:
 
@@ -75,11 +75,10 @@ Adding an image, here's an alternative format:
 `Title` = page title  
 `TitleContent` = page title shown in content  
 `TitleNavigation` = page title shown in navigation  
-`TitleHeader` = page title used in header  
+`TitleHeader` = page title shown in web browser  
 `Description` = page description  
 `Keywords` = page keyword(s), comma separated  
 `Author` = page author(s), comma separated  
-`Robots` = robots meta data, comma separated  
 `Language` = page language  
 `Theme` = page theme  
 `Template` = page template  
@@ -87,6 +86,7 @@ Adding an image, here's an alternative format:
 `Modified` = page modification date, YYYY-MM-DD format  
 `Published` = page publication date, YYYY-MM-DD format  
 `Tag` = page tag(s) for categorisation, comma separated  
+`Robots` = information for search engines, comma separated  
 `Status` = page status for workflow  
 `Redirect` = redirect to a new page or URL  
 `Navigation` = page navigation  

@@ -7,7 +7,7 @@ Language: fr
 
 Apprenez à faire un wiki avec Yellow. [Voir la démo](/plugins/wiki-plugin/).
 
-[image screenshot-wiki.png Screenshot - 55%]
+[[image screenshot-wiki.png Screenshot - 55%]](/plugins/wiki-plugin/how-to-make-coffee)
 
 ## Installer un wiki
 
@@ -58,7 +58,7 @@ Vous pouvez écrire vos pages de wiki en [Markdown](markdown-cheat-sheet-fr).
 
 ## Créer une sidebar
 
-Pour créer une sidebar (menu latéral), ajoutez le fichier `sidebar.txt` dans le dossier de votre wiki. La sidebar est automatiquement visible sur toutes les pages de votre wiki. Voici un exemple de sidebar:
+Pour créer une sidebar (menu latéral), ajoutez le fichier `sidebar.txt` dans le dossier de votre wiki. La sidebar est visible sur toutes les pages de votre wiki. Voici un exemple de sidebar:
 
 ```
 ---

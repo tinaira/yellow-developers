@@ -5,7 +5,7 @@ Language: de
 ---
 Lerne wie man eine Webseite mit Yellow erstellt. [Demo anschauen](/).
 
-[image screenshot-website.png Screenshot - 55%]
+[[image screenshot-website.png Screenshot - 55%]](/)
 
 ## Webseite installieren
 
@@ -69,7 +69,7 @@ Du kannst Seiten mit [Markdown](markdown-cheat-sheet-de) erstellen.
 
 ## Sidebar erstellen
 
-Erstelle die Datei `sidebar.txt` in einem `content`-Verzeichnis. Die Sidebar wird automatisch auf allen Seiten im gleichen Verzeichnis angezeigt. Hier ist eine Beispiel-Sidebar:
+Erstelle die Datei `sidebar.txt` in einem `content`-Verzeichnis. Die Sidebar wird auf allen Seiten im gleichen Verzeichnis angezeigt. Hier ist eine Beispiel-Sidebar:
 
 ```
 ---

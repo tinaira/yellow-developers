@@ -5,7 +5,7 @@ Language: fr
 ---
 Apprenez à faire un site web avec Yellow. [Voir la démo](/).
 
-[image screenshot-website.png Screenshot - 55%]
+[[image screenshot-website.png Screenshot - 55%]](/)
 
 ## Installer votre site
 
@@ -69,7 +69,7 @@ Vous pouvez écrire vos pages en [Markdown](markdown-cheat-sheet-fr)
 
 ## Créer une sidebar
 
-Pour créer une sidebar (menu latéral), ajoutez le fichier `sidebar.txt` dans un dossier de `content`. La sidebar est automatiquement visible sur toutes les pages présentes dans le même dossier. Voici un exemple de sidebar:
+Pour créer une sidebar (menu latéral), ajoutez le fichier `sidebar.txt` dans un dossier de `content`. La sidebar est visible sur toutes les pages présentes dans le même dossier. Voici un exemple de sidebar:
 
 ```
 ---

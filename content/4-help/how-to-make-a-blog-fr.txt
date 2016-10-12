@@ -7,7 +7,7 @@ Language: fr
 
 Apprenez à faire un blog avec Yellow. [Voir la démo](/plugins/blog-plugin/).
 
-[image screenshot-blog.png Screenshot - 55%]
+[[image screenshot-blog.png Screenshot - 55%]](/plugins/blog-plugin/fika-is-good-for-you)
 
 ## Installer un blog
 
@@ -91,7 +91,7 @@ Vous pouvez écrire les pages du blog en [Markdown](markdown-cheat-sheet-fr).
 
 ## Créer une sidebar
 
-Pour créer une sidebar (menu latéral), ajoutez le fichier `sidebar.txt` dans un dossier de `content`. La sidebar est automatiquement visible sur toutes les pages de votre blog. Voici un exemple de sidebar:
+Pour créer une sidebar (menu latéral), ajoutez le fichier `sidebar.txt` dans un dossier de `content`. La sidebar est visible sur toutes les pages de votre blog. Voici un exemple de sidebar:
 
 ```
 ---

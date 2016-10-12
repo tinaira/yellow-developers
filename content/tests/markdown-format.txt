@@ -17,11 +17,11 @@ Making an ordered list:
 2. item two
 3. item three
 
-Making a header:
+Making a heading:
 
-# Header 1
-## Header 2
-### Header 3
+# Heading 1
+## Heading 2
+### Heading 3
 
 Making quotes:
 

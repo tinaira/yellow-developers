@@ -5,7 +5,7 @@ Language: de
 ---
 Lerne wie man ein Wiki mit Yellow erstellt. [Demo anschauen](/plugins/wiki-plugin/).
 
-[image screenshot-wiki.png Screenshot - 55%]
+[[image screenshot-wiki.png Screenshot - 55%]](/plugins/wiki-plugin/how-to-make-coffee)
 
 ## Wiki installieren
 
@@ -56,7 +56,7 @@ Du kannst Wikiseiten mit [Markdown](markdown-cheat-sheet-de) erstellen.
 
 ## Sidebar erstellen
 
-Öffne die Datei `sidebar.txt` in deinem Wikiverzeichnis. Die Sidebar wird automatisch auf allen Wikiseiten angezeigt. Hier ist eine Beispiel-Sidebar:
+Öffne die Datei `sidebar.txt` in deinem Wikiverzeichnis. Die Sidebar wird auf allen Wikiseiten angezeigt. Hier ist eine Beispiel-Sidebar:
 
 ```
 ---
