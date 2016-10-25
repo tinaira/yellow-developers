@@ -7,7 +7,7 @@ All content is located in the `content` folder. You can update your website here
 
 [image screenshot-content.png Screenshot]
 
-The `content` folders are available on your website. Every folder has a file called `page.txt` or with the name of the folder. You can also add more files. Basically, what you see in the file manager is the website you get.
+The `content` folders are available on your website. Every folder has a file called `page.txt` or with the name of the folder. You can also add more files and folders. Basically, what you see in the file manager is the website you get.
 
 ## Files and folders
 
@@ -18,6 +18,8 @@ The navigation is automatically created from your `content` folders. Only folder
 3. No prefix means there is no special order, e.g. `wiki-page.txt`
 
 Prefix and suffix are removed from the location, so that it looks better. For example the folder `content/9-about/` is available on your website as `http://website/about/`. The file `content/9-about/contact.txt` becomes `http://website/about/contact`. 
+
+Folders may contain files and folders. There is one exception. The folder `content/1-home/` may not contain subfolders, because it's responsible for the home page and available on your website as `http://website/`.
 
 ## Text files
 

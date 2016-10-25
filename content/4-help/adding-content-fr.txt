@@ -7,7 +7,7 @@ Les pages de votre site se trouvent dans le dossier `content`. Vous pouvez mettr
 
 [image screenshot-content.png Screenshot]
 
-Le contenu de tout les dossiers présents dans `content` est accessible sur votre site. Chaque dossier dispose d'un fichier appelé `page.txt` ou avec le nom du dossier. Vous pouvez y ajouter d'autres fichiers. Par principe, ce que vous voyez dans votre gestionnaire de fichiers représente le site web que vous aurez.
+Le contenu de tout les dossiers présents dans `content` est accessible sur votre site. Chaque dossier dispose d'un fichier appelé `page.txt` ou avec le nom du dossier. Vous pouvez y ajouter d'autres fichiers et dossiers. Par principe, ce que vous voyez dans votre gestionnaire de fichiers représente le site web que vous aurez.
 
 ## Fichiers et dossiers
 
@@ -18,6 +18,8 @@ La navigation est automatiquement créée à partir de vos dossiers présents da
 3. L'absence de préfixe pour ne pas trier, p. ex. `wiki-page.txt`
 
 Préfixe et suffixe sont retirés de l'url afin de rendre la navigation meilleure. Par exemple le dossier `content/9-about/` est accessible à l'adresse `http://website/about/`. Le fichier `content/9-about/contact.txt` devient quand à lui `http://website/about/contact`. 
+
+Les dossiers peuvent contenir des fichiers et des dossiers. Il y a une exception. Le dossier `content/1-home/` ne peut pas contenir des sous-dossiers, car il est responsable de la page d'accueil et disponible sur votre site web `http://website/`.
 
 ## Fichiers texte
 

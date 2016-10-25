@@ -7,7 +7,7 @@ Alle Inhalte befinden sich im `content`-Verzeichnis. Hier aktualisierst du deine
 
 [image screenshot-content.png Screenshot]
 
-Die `content`-Verzeichnisse stehen auf deiner Webseite zur Verfügung. In jedem Verzeichnis gibt es eine Datei mit Namen `page.txt` oder dem Namen des Verzeichnisses. Man kann auch weitere Dateien hinzufügen. Im Prinzip ist das, was du im Dateimanager siehst, die Webseite die du bekommst.
+Die `content`-Verzeichnisse stehen auf deiner Webseite zur Verfügung. In jedem Verzeichnis gibt es eine Datei mit Namen `page.txt` oder dem Namen des Verzeichnisses. Man kann auch weitere Dateien und Verzeichnisse hinzufügen. Im Prinzip ist das, was du im Dateimanager siehst, die Webseite die du bekommst.
 
 ## Dateien und Verzeichnisse
 
@@ -18,6 +18,8 @@ Die Navigation wird automatisch aus deinen `content`-Verzeichnissen erstellt. Es
 3. Ohne Präfix gibt es keine besondere Reihenfolge, z.B. `wiki-page.txt`
 
 Präfixe und Suffixe werden aus der Adresse entfernt, damit es besser aussieht. Zum Beispiel ist das Verzeichnis `content/9-about/` vorhanden als `http://website/about/`. Die Datei `content/9-about/contact.txt` wird zu `http://website/about/contact`.
+
+Verzeichnisse können weitere Dateien und Verzeichnisse enthalten. Es gibt eine Ausnahme. Das Verzeichnis `content/1-home/` darf keine Unterverzeichnisse besitzen, da es für die Startseite verantwortlich ist und auf deiner Webseite vorhanden ist als `http://website/`.
 
 ## Textdateien
 
