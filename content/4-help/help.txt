@@ -22,9 +22,9 @@ Yellow is for people who make websites. [Get support](support).
 
 ## Configurations
 
-* [Web server configuration](web-server-configuration)
 * [Language configuration](language-configuration)
 * [Security configuration](security-configuration)
+* [Web server configuration](web-server-configuration)
 
 ## Developers
 

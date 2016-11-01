@@ -19,5 +19,5 @@ Here's a collection of tests.
 * [Test theme error](page-theme-error)
 * [Test page new](page-new)
 * [Test redirect to home](redirect-to-home)
+* [Test safe mode](safe-mode)
 * [Test user restrictions](user-restrictions)
-* [Test XSS filter](xss-filter)

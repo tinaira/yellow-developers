@@ -5,28 +5,22 @@ Language: de
 ---
 Wie man eine Webseite mit besserer Sicherheit konfiguriert.
 
+## Benutzerbeschränkungen
+
+Falls mehrere Person eine Webseite bearbeiten, beschränke [Benutzerkonten](adjusting-system-de#benutzerkonten) und nur Teile der Webseite können verändert werden. Benutzer dürfen nur Seiten innerhalb ihrer Startseite bearbeiten. Damit wird deine Webseite vor Veränderungen im Webbrowser geschützt.
+
+Du kannst [Benutzerbeschränkungen testen](/tests/user-restrictions).
+
+## Sicherer Modus
+
+Falls mehrere Person eine Webseite bearbeiten, aktiviere den sicheren Modus und nur [Markdown](markdown-cheat-sheet-de) kann im Text benutzt werden. Öffne die Datei `system/config/config.ini` und ändere `ParserSafeMode: 1`. Damit wird deine Webseite vor Unfug geschützt.
+
+Du kannst den [sicheren Modus testen](/tests/safe-mode).
+
 ## Sicherer Server
 
 Überprüfe ob dein Webserver HTTPS unterstützt und ob die Internetverbindung verschlüsselt ist. Am Besten ist es wenn deine Webseite nur über HTTPS erreichbar ist. Das dient dem Datenschutz, jedoch wird es nicht von allen Webhostern unterstützt.
 
 Du brauchst einen Webserver mit TLS und gültigem Zertifikat.
 
-## Benutzerbeschränkungen
-
-Falls mehrere Person eine Webseite bearbeiten, beschränke [Benutzerkonten](adjusting-system-de#benutzerkonten) und nur Teile der Webseite können verändert werden. Benutzer dürfen nur Seiten innerhalb ihrer Startseite bearbeiten. Damit wird deine Webseite vor Veränderungen im Webbrowser geschützt, jedoch sind Änderungen via FTP und SSH weiterhin möglich.
-
-Du kannst [Benutzerbeschränkungen testen](/tests/user-restrictions) mit dem Gast-Benutzerkonto.
-
-## Abgesicherter Modus
-
-Falls mehrere Person eine Webseite bearbeiten, aktiviere den abgesicherten Modus und nur [Markdown](markdown-cheat-sheet-de) ist möglich. Damit wird deine Webseite vor unerwünschten Inhalten und Unfug geschützt, jedoch wird gleichzeitig auch HTML und JavaScript im Seiteninhalt deaktiviert.
-
-Öffne die Datei `system/config/config.ini` und ändere `ParserSafeMode: 1`.
-
-## Weniger ist mehr
-
-Falls niemanden eine Webseite im Webbrowser bearbeiten will, kann man Yellow als reines Flat-File-CMS und [Static-Site-Generator](web-server-configuration-de#statische-webseite) betreiben. Beispielsweise kann man das [Webinterface](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface) entfernen, danach ist es nicht mehr möglich sich einzuloggen und die Webseite zu ändern.
-
-Lösche die Datei `system/plugins/webinterface.php` um das Webinterface zu entfernen.
-
-[Weiter: Yellow-Themes →](yellow-themes-de)
+[Weiter: Webservereinstellungen →](web-server-configuration-de)

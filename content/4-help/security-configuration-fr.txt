@@ -7,28 +7,22 @@ Language: fr
 
 Comment faire configurer un site web avec meilleure sécurité.
 
+## User restrictions
+
+If you have more than one person editing a website, restrict [user accounts](adjusting-system#user-accounts) and only parts of the website can be changed. Users can only edit pages within their home page. This protects your website from being changed in a web browser.
+
+You can [test user restrictions](/tests/user-restrictions).
+
+## Safe mode
+
+If you have more than one person editing a website, enable safe mode and only [Markdown](markdown-cheat-sheet) can be used for text formatting. Open file `system/config/config.ini` and change `ParserSafeMode: 1`. This protects your website from nuisance.
+
+You can [test safe mode](/tests/safe-mode).
+
 ## Secure server
 
 Check if your web server supports HTTPS and if the Internet connection is encrypted. It's best if your website is only available via HTTPS. This protects the privacy of your users, but it's not supported by every web hosting provider.
 
 You need a web server with TLS and valid certificate.
 
-## User restrictions
-
-If you have more than one person editing a website, restrict [user accounts](adjusting-system#user-accounts) and only parts of the website can be changed. Users can only edit pages within their home page. This protects your website from being changed in a web browser, but changes via FTP and SSH are still possible.
-
-You can [test user restrictions](/tests/user-restrictions) with the guest user account.
-
-## Safe mode
-
-If you have more than one person editing a website, enable safe mode and only [Markdown](markdown-cheat-sheet) is possible for text formatting. This protects your website from unwanted content and nuisance, but it also disables HTML and JavaScript in page content.
-
-Open file `system/config/config.ini` and change `ParserSafeMode: 1`.
-
-## Less is more
-
-If nobody wants to edit a website in a web browser, you can run Yellow as pure flat-file CMS and [static site generator](web-server-configuration#static-website). For example remove the [web interface](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface), then it's no longer possible to log in and change the website.
-
-Delete file `system/plugins/webinterface.php` to remove the web interface.
-
-[Next: Yellow themes →](yellow-themes-fr)
+[Next: Web server configuration →](web-server-configuration-fr)

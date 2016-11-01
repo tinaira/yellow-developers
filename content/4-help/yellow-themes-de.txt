@@ -9,9 +9,11 @@ Du kannst das Aussehen deiner Webseite anpassen.
 
 Themes bestimmen das Aussehen deiner Webseite. Das Standardtheme wird in der Datei `system/config/config.ini` festgelegt. Eine anderes Theme lässt sich in den [Einstellungen](markdown-cheat-sheet-de#einstellungen) ganz oben auf jeder Seite festlegen, zum Beispiel `Theme: flatsite`. 
 
+Jede Webseite hat ein kleines Icon das zu ihr gehört, auch Favicon genannt. Der Webbrowser zeigt dieses Icon beispielsweise in der Adresszeile, in Lesezeichen oder auf der Arbeitsfläche an. Um das Standardicon zu ändern überschreibe die Datei `system/themes/assets/icon.png`.
+
 ## CSS
 
-Um ein Theme anzupassen, kann man [CSS](http://www.w3schools.com/css/) benutzen. Du kannst eine CSS-Datei mit dem Namen eines `content`-Verzeichnisses erstellen und sie wird automatisch benutzt. Alle CSS-Dateien sollten einen einmaligen Namen und Versionsnummer besitzen.
+Um ein Theme anzupassen, kann man [CSS](http://www.w3schools.com/css/) benutzen. Damit kannst du Farben und Stil deiner Webseite ändern. Du kannst entweder die vorhandene CSS-Datei ändern oder eine neue Datei anlegen. Alle CSS-Dateien müssen einen einmaligen Namen und Versionsnummer besitzen.
 
 Hier ist eine Beispiel-CSS-Datei `system/themes/home.css`:
 
@@ -20,12 +22,12 @@ Hier ist eine Beispiel-CSS-Datei `system/themes/home.css`:
 /* Version: 0.1.1 */
 /* Designer: Mark Mayberg */
 
-html, body, div, form, pre, span, tr, th, td { margin:0; padding:0; border:0; vertical-align:baseline; }
+html, body, div, form, pre, span, tr, th, td, img { margin:0; padding:0; border:0; vertical-align:baseline; }
 body { background-color:#fff; color:#717171; margin:1em; }
 h1, h2, h3, h4, h5, h6 { color:#07d; font-weight:normal; }
 a { color:#07d; text-decoration:none; }
 a:hover { color:#07d; text-decoration:underline; }
-.sitename a { color:#000; text-decoration:none; }
+.header .sitename a { color:#000; text-decoration:none; }
 .navigation a { color:#07d; padding-right:0.3em; }
 .navigation ul { padding:0; list-style:none; }
 .navigation li { display:inline; }
@@ -38,12 +40,12 @@ Hier ist die selbe CSS-Datei mit dunkler Hintergrundfarbe:
 /* Version: 0.1.2 */
 /* Designer: Mark Mayberg */
 
-html, body, div, form, pre, span, tr, th, td { margin:0; padding:0; border:0; vertical-align:baseline; }
+html, body, div, form, pre, span, tr, th, td, img { margin:0; padding:0; border:0; vertical-align:baseline; }
 body { background-color:#000; color:#ddd; margin:1em; }
 h1, h2, h3, h4, h5, h6 { color:#fff; font-weight:normal; }
 a { color:#29f; text-decoration:none; }
 a:hover { color:#29f; text-decoration:underline; }
-.sitename a { color:#fff; text-decoration:none; }
+.header .sitename a { color:#fff; text-decoration:none; }
 .navigation a { color:#29f; padding-right:0.3em; }
 .navigation ul { padding:0; list-style:none; }
 .navigation li { display:inline; }
@@ -51,7 +53,7 @@ a:hover { color:#29f; text-decoration:underline; }
 
 ## JavaScript
 
-Um ein Theme zu erweitern, kann man [JavaScript](http://www.w3schools.com/js/) benutzen. Du kannst eine JS-Datei mit dem Namen eines Themes erstellen und sie wird automatisch benutzt. Das ermöglicht es beliebige dynamische Funktionen mit Yellow zu erstellen.
+Um ein Theme zu erweitern, kann man [JavaScript](http://www.w3schools.com/js/) benutzen. Damit kannst du Webseiten mit dynamischen Funktionen erstellen. Du kannst JavaScript in eine Datei speichern die einen ähnlichen Namen hat wie die CSS-Datei und sie wird automatisch in das Theme eingebunden.
 
 Hier ist eine Beispiel-JS-Datei `system/themes/assets/home.js`:
 
@@ -68,10 +70,26 @@ if(window.addEventListener) {
 }
 ```
 
-## Icon
+## HTML
 
-Jede Webseite hat ein kleines Icon das stellvertretend für sie ist. Das Standardicon wird in der Datei `system/config/config.ini` festgelegt. Eine anderes Icon lässt sich in den [Einstellungen](markdown-cheat-sheet-de#einstellungen) auf jeder Seite festlegen, zum Beispiel `Siteicon: icon`.
+Um eigene Themes zu erstellen, ist es gut die [HTML](http://www.w3schools.com/html/)-Struktur einer Seite zu kennen. Yellow kommt mit einer Standard-HTML-Struktur die auf den meisten Webseiten, Blogs und Wiki benutzt wird. Das ist nur ein Vorschlag, du kannst jede Struktur verwenden die du willst.
 
-Um das Standardicon zu ändern überschreibe die Datei `system/themes/assets/icon.png`.
+Hier ist die Standard-HTML-Struktur:
+
+``` php
+<!DOCTYPE html>
+<html>
+  <head>…</head>
+  <body>
+    <div class="page template-default">
+      <div class="header">…</div>
+      <div class="content">…</div>
+      <div class="footer">…</div>
+    </div>
+  </body>
+</html>
+```
+
+Das erste `<div>`-Element hat nützliche Klassen-Information, zum Beispiel `template-default`. Eine Blog-Seite benutzt `template-blog`, eine Wiki-Seite `template-wiki` und eine Sidebar `with-sidebar`. Damit kannst du Themes an unterschiedliche Funktionen anpassen.
 
 [Weiter: Yellow-Templates →](yellow-templates-de)

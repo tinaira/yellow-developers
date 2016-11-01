@@ -2,7 +2,8 @@
 <?php $files = $yellow->files->index(true, true) ?>
 <?php $yellow->page->setLastModified($files->getModified()) ?>
 <?php $yellow->page->setHeader("Cache-Control", "max-age=60") ?>
-<div class="content main">
+<div class="content">
+<div class="main">
 <h1><?php echo $yellow->page->getHtml("titleContent") ?></h1>
 <?php echo $yellow->page->getContent() ?>
 <table>
@@ -16,5 +17,6 @@
 </tr>
 <?php endforeach ?>
 </table>
+</div>
 </div>
 <?php $yellow->snippet("footer") ?>

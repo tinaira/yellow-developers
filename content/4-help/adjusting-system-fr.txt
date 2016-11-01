@@ -35,4 +35,4 @@ L'[interface web](https://github.com/datenstrom/yellow-plugins/tree/master/webin
 
 Yellow s'installe avec un minimum de fonctionnalité. Vous avez de quoi créer un site web et quelques pages, mais vous souhaitez peut-être intégrer un blog ou une galerie d'images ? Il existe une liste de [plugins](/plugins/) et de [thèmes](/themes/) spécifiques à télécharger.
 
-[Suivant: Configuration du serveur web →](web-server-configuration-fr)
+[Suivant: Configuration de la langue →](language-configuration-fr)

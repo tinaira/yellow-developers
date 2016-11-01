@@ -1,4 +1,6 @@
-<div class="content main">
+<div class="content">
+<?php $yellow->snippet("sidebar") ?>
+<div class="main">
 <?php if($yellow->page->isExisting("titleBlog")): ?>
 <h1><?php echo $yellow->page->getHtml("titleBlog") ?></h1>
 <?php endif ?>
@@ -14,4 +16,5 @@
 </div>
 <?php endforeach ?>
 <?php $yellow->snippet("pagination", $yellow->page->getPages()) ?>
+</div>
 </div>

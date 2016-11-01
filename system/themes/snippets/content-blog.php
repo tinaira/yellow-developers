@@ -1,4 +1,6 @@
-<div class="content main">
+<div class="content">
+<?php $yellow->snippet("sidebar") ?>
+<div class="main">
 <?php $yellow->page->set("entryClass", "entry") ?>
 <?php if($yellow->page->isExisting("tag")): ?>
 <?php foreach(preg_split("/,\s*/", $yellow->page->get("tag")) as $tag) { $yellow->page->set("entryClass", $yellow->page->get("entryClass")." ".$yellow->toolbox->normaliseArgs($tag, false)); } ?>
@@ -14,4 +16,5 @@
 </div>
 </div>
 <?php echo $yellow->page->getExtra("comments") ?>
+</div>
 </div>

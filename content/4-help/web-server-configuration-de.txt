@@ -114,4 +114,4 @@ Bei [Nginx](http://nginx.org/) fügt man das Folgende zur Konfigurationsdatei hi
 
     error_page 404 /404.html;
 
-[Weiter: Spracheinstellungen →](language-configuration-de)
+[Weiter: Yellow-Themes →](yellow-themes-de)

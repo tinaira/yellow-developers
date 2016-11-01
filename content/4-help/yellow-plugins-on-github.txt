@@ -110,6 +110,8 @@ Experimental plugins:
   Stream your favorite radios in a playlist with HTML5 audio.
 * [Sublime](https://github.com/nashv/YellowBlogExtensions):
   Sublime Text 3 Extensions for blogs based on Yellow.
+* [Video](https://github.com/nibreh/yellow-plugin-video): 
+  HTML5 video player.
 * [WebCLI](https://github.com/richi/yellow-plugin-cli):
   Use the command line interface without shell access.
 * [YCSSG](https://github.com/dieli/yellow-extension-ycssg):

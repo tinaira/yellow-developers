@@ -86,7 +86,6 @@ Adding an image, here's an alternative format:
 `Modified` = page modification date, YYYY-MM-DD format  
 `Published` = page publication date, YYYY-MM-DD format  
 `Tag` = page tag(s) for categorisation, comma separated  
-`Robots` = information for search engines, comma separated  
 `Status` = page status for workflow  
 `Redirect` = redirect to a new page or URL  
 `Navigation` = page navigation  

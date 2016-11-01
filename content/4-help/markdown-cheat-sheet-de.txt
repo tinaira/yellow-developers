@@ -86,7 +86,6 @@ Ein Bild hinzufügen, hier ist ein alternatives Format:
 `Modified` = Änderungsdatum der Seite, JJJJ-MM-TT Format  
 `Published` = Veröffentlichungsdatum der Seite, JJJJ-MM-TT Format  
 `Tag` = Tags zur Kategorisierung der Seite, durch Komma getrennt  
-`Robots` = Informationen für Suchmaschinen, durch Komma getrennt  
 `Status` = Status für Arbeitsablauf  
 `Redirect` = Umleitung zu einer neuen Seite oder URL  
 `Navigation` = Navigation der Seite  

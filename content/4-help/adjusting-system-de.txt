@@ -35,4 +35,4 @@ Du kannst das [Webinterface](https://github.com/datenstrom/yellow-plugins/tree/m
 
 Yellow konzentriert sich auf's Wesentliche. Du bekommst die wichtigsten Sachen um eine kleine Webseite zu erstellen und kannst weitere Funktionen hinzufügen. Wie wäre es beispielsweise mit einem Blog oder einer Bildergalerie? Es gibt [Plugins](/plugins/) und [Themes](/themes/) zum Herunterladen.
 
-[Weiter: Webservereinstellungen →](web-server-configuration-de)
+[Weiter: Spracheinstellungen →](language-configuration-de)

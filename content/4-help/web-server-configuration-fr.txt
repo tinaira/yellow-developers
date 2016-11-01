@@ -115,4 +115,4 @@ For [Nginx](http://nginx.org/) add the following to your configuration file:
 
     error_page 404 /404.html;
 
-[Next: Language configuration →](language-configuration-fr)
+[Next: Yellow themes →](yellow-themes-fr)

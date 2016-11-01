@@ -7,11 +7,13 @@ You can customise the visual design of your website.
 
 ## Themes
 
-Themes define the visual design of your website. There's a default theme defined in file `system/config/config.ini`. A different theme can be defined in the [settings](markdown-cheat-sheet#settings) at the top of each page, for example `Theme: flatsite`.
+Themes define the visual design of your website. Start with a theme that you like and adjust it. There's a default theme defined in file `system/config/config.ini`. A different theme can be defined in the [settings](markdown-cheat-sheet#settings) at the top of each page, for example `Theme: flatsite`.
+
+Every website has a small icon that is associated with it, sometimes called favicon. The web browser displays this icon for example in address bar, in bookmarks or on the desktop. To change the default icon overwrite file `system/themes/assets/icon.png`.
 
 ## CSS
 
-To adjust a theme you can use [CSS](http://www.w3schools.com/css/). You can create a CSS file with the name of a `content` folder and it will be automatically used. All CSS files should have a unique name and version.
+To adjust a theme you can use [CSS](http://www.w3schools.com/css/). This allows you to change colors and style of your website. You can either change the available CSS file or create a new file. All CSS files must have a unique name and version.
  
 Here's an example CSS file `system/themes/home.css`:
 
@@ -20,12 +22,12 @@ Here's an example CSS file `system/themes/home.css`:
 /* Version: 0.1.1 */
 /* Designer: Mark Mayberg */
 
-html, body, div, form, pre, span, tr, th, td { margin:0; padding:0; border:0; vertical-align:baseline; }
+html, body, div, form, pre, span, tr, th, td, img { margin:0; padding:0; border:0; vertical-align:baseline; }
 body { background-color:#fff; color:#717171; margin:1em; }
 h1, h2, h3, h4, h5, h6 { color:#07d; font-weight:normal; }
 a { color:#07d; text-decoration:none; }
 a:hover { color:#07d; text-decoration:underline; }
-.sitename a { color:#000; text-decoration:none; }
+.header .sitename a { color:#000; text-decoration:none; }
 .navigation a { color:#07d; padding-right:0.3em; }
 .navigation ul { padding:0; list-style:none; }
 .navigation li { display:inline; }
@@ -38,12 +40,12 @@ Here's the same CSS file with dark background color:
 /* Version: 0.1.2 */
 /* Designer: Mark Mayberg */
 
-html, body, div, form, pre, span, tr, th, td { margin:0; padding:0; border:0; vertical-align:baseline; }
+html, body, div, form, pre, span, tr, th, td, img { margin:0; padding:0; border:0; vertical-align:baseline; }
 body { background-color:#000; color:#ddd; margin:1em; }
 h1, h2, h3, h4, h5, h6 { color:#fff; font-weight:normal; }
 a { color:#29f; text-decoration:none; }
 a:hover { color:#29f; text-decoration:underline; }
-.sitename a { color:#fff; text-decoration:none; }
+.header .sitename a { color:#fff; text-decoration:none; }
 .navigation a { color:#29f; padding-right:0.3em; }
 .navigation ul { padding:0; list-style:none; }
 .navigation li { display:inline; }
@@ -51,7 +53,7 @@ a:hover { color:#29f; text-decoration:underline; }
 
 ## JavaScript
 
-To extend a theme you can use [JavaScript](http://www.w3schools.com/js/). You can create a JS file with the name of a theme and it will be automatically used. This allows you to create any dynamic feature with Yellow.
+To extend a theme you can use [JavaScript](http://www.w3schools.com/js/). This allows you to create websites with dynamic features. You can put JavaScript into a file which has a similar name as the CSS file and it will be automatically included in the theme.
 
 Here's an example JS file `system/themes/assets/home.js`:
 
@@ -68,10 +70,26 @@ if(window.addEventListener) {
 }
 ```
 
-## Icon
+## HTML
 
-Every website has a small image that is associated with it. There's a default icon defined in file `system/config/config.ini`. A different icon can be defined in the [settings](markdown-cheat-sheet#settings) at the top of each page, for example `Siteicon: icon`.
+To create own themes it's good to know the [HTML](http://www.w3schools.com/html/) layout of a page. Yellow comes with a default HTML layout that's used on most web pages, blogs and wikis. This is just a suggestion, you can use any layout you like.
 
-To change the default icon overwrite file `system/themes/assets/icon.png`.
+Here's the default HTML layout:
+
+``` php
+<!DOCTYPE html>
+<html>
+  <head>…</head>
+  <body>
+    <div class="page template-default">
+      <div class="header">…</div>
+      <div class="content">…</div>
+      <div class="footer">…</div>
+    </div>
+  </body>
+</html>
+```
+
+The first `<div>` element contains useful class information, for example `template-default`. A blog page uses `template-blog`, a wiki page `template-wiki` and a sidebar `with-sidebar`. This allows you to adjust themes to different features.
 
 [Next: Yellow templates →](yellow-templates)

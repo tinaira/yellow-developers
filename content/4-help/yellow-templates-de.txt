@@ -3,80 +3,56 @@ Title: Yellow-Templates
 Sidebar: sidebar-de
 Language: de
 ---
-Du kannst die Funktionalität deiner Webseite anpassen.
+Du kannst den Quellcode deiner Webseite anpassen.
 
 ## Templates
 
-Templates bestimmen die Funktionalität deiner Webseite. Das Standardtemplate wird in der Datei `system/config/config.ini` festgelegt. Eine anderes Template lässt sich in den [Einstellungen](markdown-cheat-sheet-de#einstellungen) ganz oben auf jeder Seite festlegen, zum Beispiel `Template: default`. 
+Templates erzeugen den Quellcode deiner Webseite. Das Standardtemplate wird in der Datei `system/config/config.ini` festgelegt. Eine anderes Template lässt sich in den [Einstellungen](markdown-cheat-sheet-de#einstellungen) ganz oben auf jeder Seite festlegen, zum Beispiel `Template: default`.
 
 Hier ist eine Beispiel-Templatedatei `system/themes/templates/default.html`:
 
 ``` php
 <?php $yellow->snippet("header") ?>
-<?php $yellow->snippet("content-sidebar") ?>
-<?php $yellow->snippet("content-main") ?>
+<?php $yellow->snippet("content-default") ?>
 <?php $yellow->snippet("footer") ?>
 ```
 
-Snippets sind die Bausteine deiner Webseite. Es sind kleine Stücke [PHP](http://www.w3schools.com/php/) um [HTML](http://www.w3schools.com/html/) zu erstellen. Du kannst alles in ein Template schreiben, aber es ist häufig praktischer ein Template in mehrere Snippets aufzuteilen und diese wiederzubenutzen.
+Snippets sind die Bausteine deiner Webseite. Es sind kleine Stücke [HTML](http://www.w3schools.com/html/) und [PHP](http://www.w3schools.com/php/). Du kannst alles in ein Template schreiben, aber es ist häufig praktischer ein Template in mehrere Snippets aufzuteilen und wiederzubenutzen. Mache was am Besten für dich funktioniert.
 
-Hier ist eine Beispiel-Snippetdatei `system/themes/snippets/content-main.php`:
+## Webseite anpassen
 
-``` php
-<div class="content main">
-<h1><?php echo $yellow->page->getHtml("titleContent") ?></h1>
-<?php echo $yellow->page->getContent() ?>
-</div>
-```
+Um den Quellcode deiner Webseite anzupassen, ändere das entsprechende Template. Das Template legt fest welche Snippets benutzt werden. Du kannst entweder die vorhandenen Snippets ändern oder ein neues Template anlegen, zum Beispiel `Template: custom`.
 
-## Template anpassen
-
-Um ein anderes Template zu benutzen, legst du das `Template` ganz oben auf einer Seite fest. Du kannst auch ein Template mit dem Namen eines `content`-Verzeichnisses erstellen und es wird automatisch benutzt. Das ermöglicht es beliebige Layouts mit Yellow zu erzeugen.
-
-Hier ist eine Beispiel-Templatedatei `system/themes/templates/home.html`:
+Hier ist eine Beispiel-Templatedatei `system/themes/templates/custom.html`:
 
 ``` php
 <?php $yellow->snippet("header") ?>
-<?php $yellow->snippet("content-sidebar") ?>
-<?php $yellow->snippet("content-home") ?>
+<?php $yellow->snippet("content-custom") ?>
 <?php $yellow->snippet("footer") ?>
 ```
 
-Hier ist eine Beispiel-Snippetdatei `system/themes/snippets/content-home.php`:
+Hier ist eine Beispiel-Snippetdatei `system/themes/snippets/content-custom.php`:
 
 ``` php
-<div class="content main">
+<div class="content">
+<?php $yellow->snippet("sidebar") ?>
+<div class="main">
 <h1><?php echo $yellow->page->getHtml("titleContent") ?></h1>
 <?php echo $yellow->page->getContent() ?>
-<?php /* Add more PHP code here */ ?>
+<!-- Add more HTML and PHP code here -->
 </div>
-```
-
-Hier ist die selbe Snippetdatei mit Blogeinträgen:
-
-``` php
-<div class="content main">
-<h1><?php echo $yellow->page->getHtml("titleContent") ?></h1>
-<?php echo $yellow->page->getContent() ?>
-<?php $pages = $yellow->pages->index()->filter("template", "blog")->sort("published", false)->limit(3) ?>
-<?php foreach($pages as $page): ?>
-<h2><a href="<?php echo $page->getLocation(true) ?>"><?php echo $page->getHtml("title") ?></a></h1>
-<p><?php echo $yellow->toolbox->createTextDescription($page->getContent(), 250) ?></p>
-<?php endforeach ?>
-<?php $yellow->page->setLastModified($pages->getModified()) ?>
-<?php $yellow->page->setHeader("Cache-Control", "max-age=60") ?>
 </div>
 ```
 
 ## Navigation anpassen
 
-Um die Navigation anzupassen, öffne die Datei `system/config/config.ini` und ändere `Navigation`. Eine andere Navigation lässt sich in den [Einstellungen](markdown-cheat-sheet-de#einstellungen) ganz oben auf jeder Seite festlegen, zum Beispiel `Navigation: navigation`. 
+Um die Navigation anzupassen, ändere das entsprechende Snippet. Die Standardnavigation wird in der Datei `system/config/config.ini` festgelegt. Eine andere Navigation lässt sich in den [Einstellungen](markdown-cheat-sheet-de#einstellungen) ganz oben auf jeder Seite festlegen, zum Beispiel `Navigation: navigation`. 
 
 Die folgenden Navigationen sind vorhanden:
 
 `Navigation: navigation` zeigt Hauptseiten  
 `Navigation: navigation-sidebar` zeigt Unterseiten  
-`Navigation: navigation-tree` zeigt Dropdown-Menü   
+`Navigation: navigation-tree` zeigt alle Seiten  
 `Navigation: navigation-search` zeigt [Suchzeile](https://github.com/datenstrom/yellow-plugins/tree/master/search)  
 `Navigation: navigation-multilanguage` zeigt [Sprachauswahl](language-configuration-de#mehrsprachen-modus)   
 
@@ -105,9 +81,9 @@ Hier ist die selbe Snippetdatei mit [Icons für soziale Medien](https://github.c
 <?php foreach($pages as $page): ?>
 <li><a<?php echo $page->isActive() ? " class=\"active\"" : "" ?> href="<?php echo $page->getLocation(true) ?>"><?php echo $page->getHtml("titleNavigation") ?></a></li>
 <?php endforeach ?>
-<li><a href="https://twitter.com/datenstromse"><i class="fa fa-twitter"></i></a></li>
-<li><a href="https://github.com/datenstrom"><i class="fa fa-github"></i></a></li>
-<li><a href="https://instagram.com/datenstromse"><i class="fa fa-instagram"></i></a></li>
+<li><a href="https://twitter.com/datenstromse"><i class="fa fa-twitter fa-lg"></i></a></li>
+<li><a href="https://github.com/datenstrom"><i class="fa fa-github fa-lg"></i></a></li>
+<li><a href="https://instagram.com/datenstromse"><i class="fa fa-instagram fa-lg"></i></a></li>
 </ul>
 </div>
 <div class="navigation-banner"></div>
@@ -115,7 +91,7 @@ Hier ist die selbe Snippetdatei mit [Icons für soziale Medien](https://github.c
 
 ## Fußzeile anpassen
 
-Um die Fußzeile anzupassen, ändere das entsprechende Snippet. Die Fußzeile wird ganz unten auf allen Seiten angezeigt. Du kannst beispielsweise Informationen über deine Webseite und Links anzeigen.
+Um die Fußzeile anzupassen, ändere das entsprechende Snippet. Das Template legt fest welche Snippets benutzt werden, die Fußzeile befindet sich normalerweise ganz unten. Du kannst entweder das vorhandene Snippet ändern oder ein neues Snippet anlegen.
 
 Hier ist eine Beispiel-Snippetdatei `system/themes/snippets/footer.php`:
 
@@ -133,7 +109,7 @@ Hier ist eine Beispiel-Snippetdatei `system/themes/snippets/footer.php`:
 </html>
 ```
 
-Hier ist die selbe Snippetdatei mit Links zu soziale Medien:
+Hier ist die selbe Snippetdatei mit Links zu sozialen Medien:
 
 ``` php
 <div class="footer">
@@ -151,9 +127,9 @@ Hier ist die selbe Snippetdatei mit Links zu soziale Medien:
 </html>
 ```
 
-## Sidebar
+## Sidebar anpassen
 
-Um eine Sidebar zu erzeugen, erstelle die Datei `sidebar.txt` in einem beliebigem `content`-Verzeichnis. Die Sidebar wird automatisch auf allen Seiten im gleichen Verzeichnis angezeigt. Eine andere Sidebar lässt sich in den [Einstellungen](markdown-cheat-sheet-de#einstellungen) ganz oben auf jeder Seite festlegen.
+Um eine Sidebar anzuzeigen, erstelle die Datei `sidebar.txt` in einem `content`-Verzeichnis. Die Sidebar wird auf allen Seiten im gleichen Verzeichnis angezeigt. Eine andere Sidebar lässt sich in den [Einstellungen](markdown-cheat-sheet-de#einstellungen) ganz oben auf jeder Seite festlegen, zum Beispiel `Sidebar: sidebar`. 
 
 Hier ist eine Beispiel-Sidebar `content/1-home/sidebar.txt`:
 

@@ -114,22 +114,23 @@ Teste ob die zugehörige Seite existiert
 Hier ist ein Beispiel-Snippet um den Seiteninhalt anzuzeigen:
 
 ``` php
-<div class="content main">
+<div class="content">
+<div class="main">
 <h1><?php echo $yellow->page->getHtml("titleContent") ?></h1>
 <?php echo $yellow->page->getContent() ?>
+</div>
 </div>
 ```
 
 Hier ist ein Beispiel-Snippet um den Seiteninhalt und zusätzliche Metadaten anzuzeigen:
 
 ``` php
-<div class="content main">
+<div class="content">
+<div class="main">
 <h1><?php echo $yellow->page->getHtml("titleContent") ?></h1>
 <?php echo $yellow->page->getContent() ?>
-<p>
-<?php echo $yellow->page->getHtml("author") ?>,
-<?php echo $yellow->page->getDateHtml("modified") ?>
-</p>
+<p><?php echo $yellow->page->getDateHtml("modified") ?></p>
+</div>
 </div>
 ```
 
@@ -713,7 +714,7 @@ YellowConfig::load Language:en
 YellowConfig::load Theme:flatsite
 ```
 
-Wir machen [automatische Builds und Codeanalyse](status), schau dir die [Yellow-Tests](/tests/) an.
+Wir machen [automatische Builds und Codeanalyse](status), schau dir unsere [Tests](/tests/) an.
 
 ## Tipps und Tricks
 
@@ -721,6 +722,8 @@ Einige Tipps für Entwickler:
 
 1. [Installiere das Entwickler-Kit](https://github.com/datenstrom/yellow-developers). Das Entwickler-Kit bietet Plugins, Themes, Beispiele und Dokumentation. Du kannst ausprobieren wie man kleine Webseite, Blogs und Wikis macht. Es ist eine grossartige Art sich mit der Yellow-API vertraut zu machen. 
 
-2. [Lege deinen Code auf GitHub](https://github.com/datenstrom/yellow/issues?q=label%3Anews%20). Erstelle ein Repository für jedes neue Plugin/Theme. Der Name deines Repository sollte `yellow-plugin-xyz` or `yellow-theme-xyz` sein. Wenn dein Code stabil wird, kannst du ihn zum zentralen Yellow-Repository hinzufügen.
+2. [Lerne die Web-Grundlagen](http://www.w3schools.com). Mach dich vertraut mit HTML, CSS und JavaScript. Das sind die wichtigsten Dinge die man wissen muss um Webseiten zu erstellen. Yellow benötigt keine komplizierten Frameworks und keine grossen Bibliotheken.
 
-3. [Zeige was du gemacht hast](https://twitter.com/search?q=%23madewithyellow). Wir hoffen dass Yellow nützlich für dich ist. Wir hoffen dass du es benutzt um viele Webseiten zu erstellen. Hast du Fragen? Funktioniert etwas nicht wie erwartet? Suchst du Kontakt mit anderen Entwicklern? [Frage uns](support-de).
+3. [Stelle deinen Code auf GitHub](https://github.com/datenstrom/yellow/issues?q=label%3Anews%20). Erstelle ein Repository für jedes neue Plugin/Theme. Der Name deines Repository sollte `yellow-plugin-xyz` or `yellow-theme-xyz` sein. Wenn dein Code stabil wird, kannst du ihn zum zentralen Yellow-Repository hinzufügen.
+
+4. [Zeige was du gemacht hast](https://twitter.com/search?q=%23madewithyellow). Wir hoffen dass Yellow nützlich für dich ist. Wir hoffen dass du es benutzt um viele Webseiten zu erstellen. Hast du Fragen? Funktioniert etwas nicht wie erwartet? Suchst du Kontakt mit anderen Entwicklern? [Support finden](support-de).

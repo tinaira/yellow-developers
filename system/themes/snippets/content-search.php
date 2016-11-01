@@ -1,4 +1,6 @@
-<div class="content main">
+<div class="content">
+<?php $yellow->snippet("sidebar") ?>
+<div class="main">
 <h1><?php echo $yellow->page->getHtml("title") ?></h1>
 <?php if($yellow->page->get("navigation")!="navigation-search"): ?>
 <form class="search-form" action="<?php echo $yellow->page->getLocation(true) ?>" method="post">
@@ -19,4 +21,5 @@
 <p><?php echo $yellow->text->getHtml("searchResults".ucfirst($yellow->page->get("status"))) ?><p>
 <?php endif ?>
 <?php $yellow->snippet("pagination", $yellow->page->getPages()) ?>
+</div>
 </div>
