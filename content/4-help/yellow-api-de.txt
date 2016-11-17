@@ -720,10 +720,10 @@ Wir machen [automatische Builds und Codeanalyse](status), schau dir unsere [Test
 
 Einige Tipps für Entwickler:
 
-1. [Installiere das Entwickler-Kit](https://github.com/datenstrom/yellow-developers). Das Entwickler-Kit bietet Plugins, Themes, Beispiele und Dokumentation. Du kannst ausprobieren wie man kleine Webseite, Blogs und Wikis macht. Es ist eine grossartige Art sich mit der Yellow-API vertraut zu machen. 
+1. [Installiere das Entwickler-Kit](https://github.com/datenstrom/yellow-developers). Das Entwickler-Kit bietet Plugins, Themes, Beispiele und Dokumentation. Du kannst ausprobieren wie man kleine Webseite, Blogs und Wikis macht. Es ist eine grossartige Art um die Yellow-API zu erlernen. 
 
 2. [Lerne die Web-Grundlagen](http://www.w3schools.com). Mach dich vertraut mit HTML, CSS und JavaScript. Das sind die wichtigsten Dinge die man wissen muss um Webseiten zu erstellen. Yellow benötigt keine komplizierten Frameworks und keine grossen Bibliotheken.
 
-3. [Stelle deinen Code auf GitHub](https://github.com/datenstrom/yellow/issues?q=label%3Anews%20). Erstelle ein Repository für jedes neue Plugin/Theme. Der Name deines Repository sollte `yellow-plugin-xyz` or `yellow-theme-xyz` sein. Wenn dein Code stabil wird, kannst du ihn zum zentralen Yellow-Repository hinzufügen.
+3. [Stelle deinen Code auf GitHub](https://github.com/datenstrom/yellow/issues?q=label%3Anews%20). Erstelle ein Repository für jedes neue Plugin/Theme. Der Name deines Repository sollte `yellow-plugin-xyz` or `yellow-theme-xyz` sein. Dein Code muss nicht perfekt sein, aber er sollte im Entwickler-Kit funktionieren.
 
-4. [Zeige was du gemacht hast](https://twitter.com/search?q=%23madewithyellow). Wir hoffen dass Yellow nützlich für dich ist. Wir hoffen dass du es benutzt um viele Webseiten zu erstellen. Hast du Fragen? Funktioniert etwas nicht wie erwartet? Suchst du Kontakt mit anderen Entwicklern? [Support finden](support-de).
+[Weiter: Support →](support-de)
