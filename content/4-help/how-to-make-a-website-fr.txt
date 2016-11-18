@@ -87,7 +87,7 @@ Liens
 
 * [Comment ajouter une galerie d'images](https://github.com/datenstrom/yellow-plugins/tree/master/gallery)
 * [Comment ajouter un moteur de recherche à votre site](https://github.com/datenstrom/yellow-plugins/tree/master/search)
-* [Comment ajouter un feed à votre site](https://github.com/datenstrom/yellow-plugins/tree/master/feed)
+* [Comment ajouter un plan à votre site](https://github.com/datenstrom/yellow-plugins/tree/master/sitemap)
 * [Comment ajouter une page de contact à votre site](https://github.com/datenstrom/yellow-plugins/tree/master/contact)
 * [Comment créer un site web statique](web-server-configuration-fr#static-website)
 
