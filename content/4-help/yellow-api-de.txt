@@ -174,14 +174,20 @@ Hole die aktuelle Seitennummer in der Pagination
 **$pages->getPaginationCount()**  
 Hole die höchste Seitennummer in der Pagination
 
-**$pages->getPaginationLocation($pageNumber)**  
+**$pages->getPaginationLocation($absoluteLocation = true, $pageNumber = 1)**  
 Hole die Adresse einer Seite in der Pagination
 
-**$pages->getPaginationPrevious()**  
+**$pages->getPaginationPrevious($absoluteLocation = true)**  
 Hole die Adresse der vorherigen Seite in der Pagination
 
-**$pages->getPaginationNext()**  
+**$pages->getPaginationNext($absoluteLocation = true)**  
 Hole die Adresse der nächsten Seite in der Pagination
+
+**$pages->getPagePrevious($page)**  
+Hole die vorherige Seite in der Page-Collection, null falls nicht vorhanden
+
+**$pages->getPageNext($page)**  
+Hole die nächste Seite in der Page-Collection, null falls nicht vorhanden
 
 **$pages->getFilter()**  
 Hole den aktuellen Seitenfilter
