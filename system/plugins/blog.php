@@ -5,7 +5,7 @@
 // Blog plugin
 class YellowBlog
 {
-	const VERSION = "0.6.9";
+	const VERSION = "0.6.10";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -24,7 +24,7 @@ class YellowBlog
 		if(!$page->isError())
 		{
 			$location = $this->yellow->config->get("blogLocation");
-			if(!empty($location) && substru($page->location, 0, strlenu($location))==$location)
+			if(!empty($location) && $this->yellow->lookup->getDirectoryLocation($page->location)==$location)
 			{
 				if($page->get("template")==$this->yellow->config->get("template")) $page->set("template", "blog");
 			}

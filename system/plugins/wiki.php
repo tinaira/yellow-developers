@@ -5,7 +5,7 @@
 // Wiki plugin
 class YellowWiki
 {
-	const VERSION = "0.6.10";
+	const VERSION = "0.6.11";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -23,7 +23,7 @@ class YellowWiki
 		if(!$page->isError())
 		{
 			$location = $this->yellow->config->get("wikiLocation");
-			if(!empty($location) && substru($page->location, 0, strlenu($location))==$location)
+			if(!empty($location) && $this->yellow->lookup->getDirectoryLocation($page->location)==$location)
 			{
 				if($page->get("template")==$this->yellow->config->get("template")) $page->set("template", "wiki");
 			}
