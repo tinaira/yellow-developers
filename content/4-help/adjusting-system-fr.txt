@@ -3,7 +3,7 @@ Title: Ajuster le système
 Sidebar: sidebar-fr
 Language: fr
 ---
-Tout les paramètres se trouvent dans le dossier `system`. Ici vous pouvez faire des ajustements.
+Tout les paramètres se trouvent dans le dossier `system`. Vous pouvez y faire des ajustements.
 
 [image screenshot-system.png Screenshot]
 
@@ -19,17 +19,17 @@ Le fichier de configuration principal est `system/config/config.ini`. Voici un e
     Language: fr
     Theme: flatsite
 
-Vous pouvez y définir les paramètres par défaut, par exemple le nom du site web et l'email du webmaster. Les [paramètres](markdown-cheat-sheet-fr#paramètres) individuels peuvent être définis au haut de chaque page. Lors d'une nouvelle installation, il est conseillé de changer `Sitename`, `Author` et `Email`. Vous pouvez [configurer des langues](language-configuration-fr) et télécharger plus de langues.
+Vous pouvez y définir les paramètres par défaut, par exemple le nom du site web et l'email du webmaster. Des [paramètres](markdown-cheat-sheet-fr#paramètres) individuels peuvent être définis au haut de chaque page. Lors d'une nouvelle installation, il est conseillé de modifier `Sitename`, `Author` et `Email`. Vous pouvez y [définir le langage](language-configuration-fr) et installer d'autres traductions.
 
 ## Comptes d'utilisateurs
 
-Tous les utilisateurs sont stockés dans le `system/config/user.ini`. Voici un exemple:
+Tous les utilisateurs sont stockés dans le fichier `system/config/user.ini`. Voici un exemple:
 
     anna@svensson.fr: $2y$10$j26zDnt/xaWxC/eqGKb9p.d6e3pbVENDfRzauTawNCUHHl3CCOIzG,Anna,en,active,946684800,none,/
     demo@demo.com: $2y$10$8TKEuytrwiLSICJNlW5.yOE9CQPXJmqXL2Af6rPsSch1/9UiXEZjm,Yellow,en,active,946684800,none,/
     guest@guest.com: $2y$10$4VENNhK/hb3US8zJdimJduratVuQloACbdmbGhoFUyqHvU6mbpPm.,Guest,en,active,946684800,none,/tests/
 
-L'[interface web](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface) vous permet de créer de nouveaux comptes d'utilisateurs et de changer les mots de passe. Un compte d'utilisateur se compose d'email, mot de passe crypté, différents paramètres et à la fin de la ligne est la page d'accueil de l'utilisateur. Vous pouvez [restreindre les comptes d'utilisateurs](security-configuration-fr#user-restrictions) par la définition d'une page d'accueil pour l'utilisateur.
+L'[interface web](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface) vous permet de créer de nouveaux comptes d'utilisateurs et de changer les mots de passe. Un compte d'utilisateur se compose d'un email, d'un mot de passe crypté, de différents paramètres, tandis que le dernier paramètre concerne la page d'accueil de l'utilisateur. Vous pouvez en effet [restreindre l'accès de votre site web](security-configuration-fr#user-restrictions) en définissant une page d'accueil propre à chaque utilisateur.
 
 ## Plugins et thèmes
 
