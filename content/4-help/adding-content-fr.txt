@@ -7,23 +7,23 @@ Les pages de votre site se trouvent dans le dossier `content`. Vous pouvez mettr
 
 [image screenshot-content.png Screenshot]
 
-Le contenu de tout les dossiers présents dans `content` est accessible sur votre site. Chaque dossier dispose d'un fichier appelé `page.txt` ou avec le nom du dossier. Vous pouvez y ajouter d'autres fichiers et dossiers. Par principe, ce que vous voyez dans votre gestionnaire de fichiers représente le site web que vous aurez.
+Le contenu de tout les dossiers présents dans `content` est accessible depuis votre site. Chaque dossier dispose d'un fichier nommé `page.txt` ou d'un fichier possédant le même nom que le dossier. Vous pouvez y ajouter d'autres fichiers et dossiers. Pour faire simple, ce que vous voyez dans votre gestionnaire de fichiers représente la structure du site web que vous aurez.
 
 ## Fichiers et dossiers
 
-La navigation est automatiquement créée à partir de vos dossiers présents dans le dossier `content`. Seuls les dossiers avec un préfixe sont présentés dans la navigation. Les dossiers avec un préfixe sont pour les pages visibles, les dossiers sans préfixes sont pour les pages invisibles. Tous les fichiers et les dossiers peuvent avoir un préfixe:
+Le menu de navigation est automatiquement créée à partir de vos dossiers présents dans le dossier `content`. Seuls les dossiers possédant un préfixe sont présents dans le menu de navigation. Les dossiers possédant un préfixe concernent les pages visibles, les dossiers sans préfixes seront pour des pages invisibles. Tous les fichiers et les dossiers peuvent avoir un préfixe:
 
 1. Avec un préfixe numérique, p. ex. `1-home` `9-about`
 2. Avec un préfixe de la date, p. ex. `2013-04-07-blog-example.txt`
 3. L'absence de préfixe pour ne pas trier, p. ex. `wiki-page.txt`
 
-Préfixe et suffixe sont retirés de l'url afin de rendre la navigation meilleure. Par exemple le dossier `content/9-about/` est accessible à l'adresse `http://website/about/`. Le fichier `content/9-about/contact.txt` devient quand à lui `http://website/about/contact`. 
+Préfixe et suffixe sont retirés de l'url afin de proposer une navigation cohérente et propre. Par exemple le dossier `content/9-about/` est accessible à l'adresse `http://website/about/`. Le fichier `content/9-about/contact.txt` devient quand à lui `http://website/about/contact`. 
 
-Les dossiers peuvent contenir des fichiers et des dossiers. Il y a une exception. Le dossier `content/1-home/` ne peut pas contenir des sous-dossiers, car il est responsable de la page d'accueil et disponible sur votre site web `http://website/`.
+Chaque dossier peut contenir des fichiers et des sous-dossiers. Il y a une exception cependant: le dossier `content/1-home/` ne peut pas contenir de sous-dossiers, car il est responsable de la page d'accueil et est accessible en tant qu'url principale `http://website/`.
 
 ## Fichiers texte
 
-Regardons de plus près les fichiers texte. Ouvrez le fichier `content/1-home/page.txt` dans votre éditeur de texte préféré. Vous y verrez la configuration et le texte pour la page. Vous pouvez modifier le titre `Title` et ajouter d'autres [paramètres](markdown-cheat-sheet-fr#paramètres) en haut de la page. Voici un exemple:
+Regardons de plus près les fichiers texte. Ouvrez le fichier `content/1-home/page.txt` dans votre éditeur de texte préféré. Vous y verrez la configuration et le contenu de la page. Vous pouvez modifier le titre `Title` et ajouter d'autres [paramètres](markdown-cheat-sheet-fr#paramètres) en haut de la page. Voici un exemple:
 
     ---
     Title: Home
@@ -32,7 +32,7 @@ Regardons de plus près les fichiers texte. Ouvrez le fichier `content/1-home/pa
     
     Vous pouvez [edit - modifier cette page] ou utiliser un éditeur de texte.
 
-Vous pouvez écrire vos pages à l'aide de la syntaxe [Markdown](markdown-cheat-sheet-fr). Markdown est un moyen pratique pour éditer des pages web. En gros, il suffit d'écrire du texte comme si vous écriviez une adresse e-mail et il se transforme en une page web. Voici quelques exemples de syntaxe Markdown:
+Vous pouvez écrire vos pages à l'aide de la syntaxe [Markdown](markdown-cheat-sheet-fr). Markdown est un moyen pratique pour éditer des pages web. En gros, il suffit de rédiger votre page en utilisant des balises qui seront converties pour en faire une page web. Voici quelques exemples de la syntaxe Markdown:
 
     Normal *italique* **gras** `code`
 
