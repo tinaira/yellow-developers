@@ -5,13 +5,13 @@ Language: fr
 ---
 >>> [Vous pouvez nous aider à traduire cette page.](https://github.com/datenstrom/yellow-developers/blob/master/content/4-help/language-configuration-fr.txt)
 
-Comment faire configurer un site web avec des langues différentes.
+Comment configurer un site web avec des différents langages.
 
-## Languages
+## Langages
 
-Yellow is multilingual and there are more [languages](https://github.com/datenstrom/yellow-plugins/tree/master/language) you can download. The default language is defined in file `system/config/config.ini`. A different language can be defined in the [settings](markdown-cheat-sheet#settings) at the top of each page, for example `Language: en`.
+Yellow est multi-langage et il existe [différentes traductions](https://github.com/datenstrom/yellow-plugins/tree/master/language) que vous pouvez télécharger. La langue par défaut est définie dans le fichier `system/config/config.ini`. Une autre langue peut-être définie pour chacune de vos pages dans les paramètres en haut de celle-ci, par exemple `Language: en`.
 
-Here's an English page:
+Voici une page en anglais:
 
 ```
 ---
@@ -21,7 +21,7 @@ Language: en
 Birds of a feather flock together.
 ```
 
-A German page:
+Une page en allemand:
 
 ```
 ---
@@ -31,28 +31,28 @@ Language: de
 Wo zusammenwächst was zusammen gehört.
 ```
 
-A French page:
+Une page en français:
 
 ```
 ---
 Title: À propos de nous
 Language: fr
 ---
-Oiseaux du même plumage volent ensemble.
+Les oiseaux de même plumage volent toujours ensemble
 ```
 
-## Multi language mode
+## Le mode multi-langage
 
-If you want to translate an entire website, it's best to use the multi language mode. Open file `system/config/config.ini` and change `MultiLanguageMode: 1`. Go to your `content` folder and create a new folder for each language. Here's an example:
+Si vous souhaitez proposer différentes traductions pour votre site en entier, le meilleur moyen est d'utiliser la fonctionnalité multi-langage de Yellow. Ouvrez le fichier `system/config/config.ini` et modifiez `MultiLanguageMode: 1`. Puis rendez-vous dans votre dossier `content` et créez un dossier pour chaque langue que vous souhaitez rendre disponible. Voici un exemple:
 
 [image screenshot-language1.png Screenshot]
 
-The first screenshot shows the folders `1-en`, `2-de` and `3-fr`. This gives you the URLs `http://website/` `http://website/de/` `http://website/fr/` for English, German and French. Here's another example:
+Cette capture d'écran montre les dossiers `1-en`, `2-de` et `3-fr`. Celà donne accès aux URLs suivantes: `http://website/` `http://website/de/` `http://website/fr/` pour respectivement l'anglais, l'allemand et le français. Voici un autre exemple:
 
 [image screenshot-language2.png Screenshot]
 
-The second screenshot shows the folders `1-en`, `2-de`, `3-fr` and `default`. This gives you the URLs `http://website/en/` `http://website/de/` `http://website/fr/` and a home page `http://website/` that automatically detects the visitor's language. 
+Ici nous voyons les dossiers `1-en`, `2-de`, `3-fr` et `default`. Celà donne accès aux URLs suivantes `http://website/en/` `http://website/de/` `http://website/fr/` ainsi qu'une page d'accueil à `http://website/` qui détectera automatiquement la langue pour le visiteur.
 
-To adjust the [navigation](yellow-templates#custom-navigation) open file `system/config/config.ini` and change `Navigation: navigation-multilanguage`. You can also show a language selection somewhere else on your website, for example in the [footer](yellow-templates#custom-footer).
+Pour mofifier le menu de [navigation](yellow-templates#custom-navigation), ouvrez le fichier `system/config/config.ini` et changez `Navigation: navigation-multilanguage`. Vous pouvez également afficher un moyen pour le visiteur de sélectionner la langue du site ailleurs, par exemple dans le [pied de page](yellow-templates#custom-footer).
 
 [Next: Security configuration →](security-configuration-fr)
