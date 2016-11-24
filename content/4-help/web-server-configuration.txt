@@ -78,6 +78,10 @@ server {
 }
 ```
 
+When your website doesn't work, please check `server_name` and `root`. If the configuration file has been changed, you need to [restart/reload](http://stackoverflow.com/questions/21292533/reload-nginx-configuration) the Nginx web server.
+
+Make sure that the web server can read and write files. You can manually adjust [file permissions](http://superuser.com/questions/51838/recursive-chmod-rw-for-files-rwx-for-directories) so that the web server can overwrite files, for example with command `chmod -R a+rw *`. As an alternative you can assign the group `www-data` and `umask 002` to the web server and users.
+
 ## Static website
 
 Yellow is a flat-file CMS and a static site generator. As a static site generator, it offers a build command that you can run from within a folder containing the Yellow installation. It then generates a completely static website, that works on any web server.
