@@ -29,7 +29,7 @@ Tous les utilisateurs sont stockés dans le fichier `system/config/user.ini`. Vo
     demo@demo.com: $2y$10$8TKEuytrwiLSICJNlW5.yOE9CQPXJmqXL2Af6rPsSch1/9UiXEZjm,Yellow,en,active,946684800,none,/
     guest@guest.com: $2y$10$4VENNhK/hb3US8zJdimJduratVuQloACbdmbGhoFUyqHvU6mbpPm.,Guest,en,active,946684800,none,/tests/
 
-L'[interface web](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface) vous permet de créer de nouveaux comptes d'utilisateurs et de changer les mots de passe. Un compte d'utilisateur se compose d'un email, d'un mot de passe crypté, de différents paramètres, tandis que le dernier paramètre concerne la page d'accueil de l'utilisateur. Vous pouvez en effet [restreindre l'accès de votre site web](security-configuration-fr#user-restrictions) en définissant une page d'accueil propre à chaque utilisateur.
+L'[interface web](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface) vous permet de créer de nouveaux comptes d'utilisateurs et de changer les mots de passe. Un compte d'utilisateur se compose d'un email, d'un mot de passe crypté, de différents paramètres, tandis que le dernier paramètre concerne la page d'accueil de l'utilisateur. Vous pouvez en effet [restreindre l'accès de votre site web](security-configuration-fr#restriction-utilisateur) en définissant une page d'accueil propre à chaque utilisateur.
 
 ## Plugins et thèmes
 
