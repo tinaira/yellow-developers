@@ -24,4 +24,4 @@ Pensez à vérifier que votre serveur web supporte HTTPS et que la connexion Int
 
 Vous aurez besoin d'un serveur avec TLS et de certificats valides.
 
-[Next: Web server configuration →](web-server-configuration-fr)
+[Suivant: Configuration du serveur web →](web-server-configuration-fr)

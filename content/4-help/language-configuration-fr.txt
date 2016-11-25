@@ -55,4 +55,4 @@ Ici nous voyons les dossiers `1-en`, `2-de`, `3-fr` et `default`. Celà donne ac
 
 Pour mofifier le menu de [navigation](yellow-templates#custom-navigation), ouvrez le fichier `system/config/config.ini` et changez `Navigation: navigation-multilanguage`. Vous pouvez également afficher un moyen pour le visiteur de sélectionner la langue du site ailleurs, par exemple dans le [pied de page](yellow-templates#custom-footer).
 
-[Next: Security configuration →](security-configuration-fr)
+[Suivant: Configuration de la sécurité →](security-configuration-fr)
