@@ -3,26 +3,25 @@ Title: Configuration de la sécurité
 Sidebar: sidebar-fr
 Language: fr
 ---
->>> [Vous pouvez nous aider à traduire cette page.](https://github.com/datenstrom/yellow-developers/blob/master/content/4-help/security-configuration-fr.txt)
 
-Comment faire configurer un site web avec meilleure sécurité.
+Comment configurer la sécurité de votre site web.
 
-## User restrictions
+## Restriction utilisateur
 
-If you have more than one person editing a website, restrict [user accounts](adjusting-system#user-accounts) and only parts of the website can be changed. Users can only edit pages within their home page. This protects your website from being changed in a web browser.
+Si plusieurs personnes peuvent éditer votre site web, vous pouvez restreindre chaque [compte d'utilisateur](adjusting-system-fr#comptes-d-utilisateurs) de sorte que certaines parties du site seulement puissent être éditable. Ainsi, les utilisateurs ne peuvent éditer uniquement que leur page d'accueil. Ceci protège votre site web de toute modification à travers le navigateur web.
 
-You can [test user restrictions](/tests/user-restrictions).
+Vous pouvez [tester ce mode de restriction](/tests/user-restrictions).
 
-## Safe mode
+## Mode Safe
 
-If you have more than one person editing a website, enable safe mode and only [Markdown](markdown-cheat-sheet) can be used for text formatting. Open file `system/config/config.ini` and change `ParserSafeMode: 1`. This protects your website from nuisance.
+Si plusieurs personnes peuvent éditer votre site web, activez le mode "safe" afin que seule la syntaxe [Markdown](markdown-cheat-sheet-fr) puissent être utilisée. Ouvrez le fichier `system/config/config.ini` et changez `ParserSafeMode: 1`. Ceci protège votre site de tout dommage.
 
-You can [test safe mode](/tests/safe-mode).
+Vous pouvez [tester le mode safe](/tests/safe-mode).
 
-## Secure server
+## Sécurité du serveur
 
-Check if your web server supports HTTPS and if the Internet connection is encrypted. It's best if your website is only available via HTTPS. This protects the privacy of your users, but it's not supported by every web hosting provider.
+Pensez à vérifier que votre serveur web supporte HTTPS et que la connexion Internet soit cryptée. Il est préférable que votre site soit accessible uniquement via HTTPS. Ceci protège la confidentialité de vos utilisateurs, mais n'est pas supporté par tout les hébergeurs web.
 
-You need a web server with TLS and valid certificate.
+Vous aurez besoin d'un serveur avec TLS et de certificats valides.
 
 [Next: Web server configuration →](web-server-configuration-fr)
