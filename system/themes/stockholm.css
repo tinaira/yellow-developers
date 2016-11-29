@@ -52,7 +52,7 @@ a:hover { color:#07d; text-decoration:underline; }
 .header .sitename { display:block; float:left; margin-left:1em; }
 .header .sitename h1 { font-size:1.3em; font-weight:400; }
 .header .sitename h1 a { color:#333; text-decoration:none; }
-.header ..navigation-banner { position:relative; }
+.header .navigation-banner { position:relative; }
 .header .sitename h2 { position:absolute; top:135px; left:16px; }
 .header .sitename h2 { padding:1em; background:#f27272; color:#fff; font-size:1.2em; font-weight:400; }
 
