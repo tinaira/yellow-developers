@@ -5,11 +5,11 @@ Language: fr
 ---
 >>> [Vous pouvez nous aider à traduire cette page.](https://github.com/datenstrom/yellow-developers/blob/master/content/4-help/yellow-themes-fr.txt)
 
-Vous pouvez personnaliser la conception visuelle de votre site web.
+Vous pouvez personnaliser l'aspect visuel de votre site web.
 
 ## Themes
 
-Themes define the visual design of your website. Start with a theme that you like and adjust it. There's a default theme defined in file `system/config/config.ini`. A different theme can be defined in the [settings](markdown-cheat-sheet#settings) at the top of each page, for example `Theme: flatsite`.
+Les thèmes définissent l'aspect visuel de votre site web. Choisissez avec un thème qui vous plait et modifiez-le à votre convenance. Le thème utilisé par défaut est défini dans le fichier `system/config/config.ini`. Un thème différent peut être configuré pour chacune de vos pages dans les [paramètres](markdown-cheat-sheet-fr#paramètres) en haut de celle-ci, par exmple `Theme: flatsite`.
 
 Every website has a small icon that is associated with it, sometimes called favicon. The web browser displays this icon for example in address bar, in bookmarks or on the desktop. To change the default icon overwrite file `system/themes/assets/icon.png`.
 
