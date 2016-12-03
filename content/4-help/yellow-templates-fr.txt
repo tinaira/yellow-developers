@@ -147,4 +147,4 @@ Links
 * [Instagram](https://instagram.com/datenstromse)
 ```
 
-[Next: Yellow API →](yellow-api-fr)
+[Suivant: Interface de programmation →](yellow-api-fr)

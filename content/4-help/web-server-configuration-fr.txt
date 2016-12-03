@@ -82,7 +82,7 @@ server {
 
 Si votre site web ne fonctionne pas, vérifiez `server_name` et `root`. Lorsque vous modifiez le fichier de configuration, vous devez [redémarrer](http://stackoverflow.com/questions/21292533/reload-nginx-configuration) le serveur web Nginx.
 
-Assurez-vous que le serveur web est accès en écriture et en lecture aux fichiers. Vous pouvez ajuster manuellement les [droits de permissions](ttp://superuser.com/questions/51838/recursive-chmod-rw-for-files-rwx-for-directories) sur les fichiers avec la commande `chmod -R a+rw *`. Il est possible également d'assigner le groupe `www-data` et `umask 002` au serveur web et aux utilisateurs.
+Assurez-vous que le serveur web est accès en écriture et en lecture aux fichiers. Vous pouvez ajuster manuellement les [droits de permissions](http://superuser.com/questions/51838/recursive-chmod-rw-for-files-rwx-for-directories) sur les fichiers avec la commande `chmod -R a+rw *`. Il est possible également d'assigner le groupe `www-data` et `umask 002` au serveur web et aux utilisateurs.
 
 ## Static website
 
@@ -119,4 +119,4 @@ Pour [Nginx](http://nginx.org/) ajoutez ceci à votre fichier de configuration:
 
     error_page 404 /404.html;
 
-[Next: Yellow themes →](yellow-themes-fr)
+[Suivant: Thèmes de Yellow →](yellow-themes-fr)

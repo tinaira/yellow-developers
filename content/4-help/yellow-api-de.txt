@@ -396,11 +396,11 @@ Hole das Änderungsdatum von Einstellungen, Unix-Zeit oder HTTP-Format
 **$yellow->config->isExisting($key)**  
 Teste ob eine Einstellung existiert
 
-Hier ist ein Beispiel-Snippet um Server-Einstellungen anzuzeigen:
+Hier ist ein Beispiel-Snippet um statische Webseiten-Einstellungen anzuzeigen:
 
 ``` php
 <div class="yellow config">
-<?php foreach($yellow->config->getData("server") as $key=>$value): ?>
+<?php foreach($yellow->config->getData("static") as $key=>$value): ?>
 <?php echo htmlspecialchars("$key: $value") ?><br />
 <?php endforeach ?>
 </div>
@@ -517,10 +517,10 @@ Hole das Änderungsdatum der Datei, Unix-Zeit
 Hole die Dateiendung
 
 **$yellow->toolbox->getTextLines($text)**  
-Hole die Zeilen des Textstrings
+Hole die Zeilen eines Textstrings, durch Zeilenumbruch getrennt  
 
 **$yellow->toolbox->getTextArgs($text, $optional = "-")**  
-Hole die Argumente des Textstrings
+Hole die Argumente eines Textstrings, durch Leerzeichen getrennt  
 
 Hier ist ein Beispiel-Snippet um Textzeilen von Datei zu lesen:
 

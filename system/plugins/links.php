@@ -5,7 +5,7 @@
 // Links plugin
 class YellowLinks
 {
-	const VERSION = "0.6.2";
+	const VERSION = "0.6.3";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -24,8 +24,10 @@ class YellowLinks
 		if($name=="links" && $shortcut)
 		{
 			$style = $this->yellow->config->get("linksStyle");
+			$publicationOrder = ($page->get("template")=="blog");
 			$parent = $page->getParent();
 			$pages = $parent ? $page->getSiblings(!$parent->isVisible()) : $this->yellow->pages->clean();
+			$pages->sort($publicationOrder ? "published" : "title", true);
 			$page->setLastModified($pages->getModified());
 			if(count($pages))
 			{

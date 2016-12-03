@@ -398,11 +398,11 @@ Return configuration modification date, Unix time or HTTP format
 **$yellow->config->isExisting($key)**  
 Check if configuration exists
 
-Here's an example snippet for showing server settings:
+Here's an example snippet for showing static website settings:
 
 ``` php
 <div class="yellow config">
-<?php foreach($yellow->config->getData("server") as $key=>$value): ?>
+<?php foreach($yellow->config->getData("static") as $key=>$value): ?>
 <?php echo htmlspecialchars("$key: $value") ?><br />
 <?php endforeach ?>
 </div>
@@ -519,10 +519,10 @@ Return file modification date, Unix time
 Return file extension  
 
 **$yellow->toolbox->getTextLines($text)**  
-Return lines from text string  
+Return lines from text string, newline separated  
 
 **$yellow->toolbox->getTextArgs($text, $optional = "-")**  
-Return arguments from text string  
+Return arguments from text string, space separated  
 
 Here's an example snippet for reading text lines from file:
 
@@ -734,4 +734,4 @@ Some tips for developers:
 
 3. [Put your code on GitHub](https://github.com/datenstrom/yellow/issues?q=label%3Anews%20). Create a repository for each new plugin/theme. The name of your repository should be `yellow-plugin-xyz` or `yellow-theme-xyz`. Your code doesn't have to be perfect, but it should be working in the developers kit.
 
-[Next: Support →](support-fr)
+[Suivant: Support →](support-fr)
