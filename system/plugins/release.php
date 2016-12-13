@@ -5,7 +5,7 @@
 // Release plugin
 class YellowRelease
 {
-	const VERSION = "0.6.12";
+	const VERSION = "0.6.13";
 
 	// Handle plugin initialisation
 	function onLoad($yellow)
@@ -123,12 +123,18 @@ class YellowRelease
 			foreach($this->yellow->toolbox->getTextLines($fileData) as $line)
 			{
 				preg_match("/^\s*(.*?)\s*:\s*(.*?)\s*$/", $line, $matches);
-				if(lcfirst($matches[1])=="version")
+				if(!empty($matches[1]) && !empty($matches[2]))
 				{
-					$fileDataNew .= "Version: $version\n";
-				} else {
-					$fileDataNew .= $line;
+					list($entry, $flags) = explode(',', $matches[2], 2);
+					if(is_file($path.$entry)) { $published = filemtime($path.$entry); break; }
 				}
+			}
+			foreach($this->yellow->toolbox->getTextLines($fileData) as $line)
+			{
+				preg_match("/^\s*(.*?)\s*:\s*(.*?)\s*$/", $line, $matches);
+				if(lcfirst($matches[1])=="version") $line = "Version: $version\n";
+				if(lcfirst($matches[1])=="published") $line = "Published: ".date("Y-m-d H:i:s", $published)."\n";
+				$fileDataNew .= $line;
 			}
 			if($fileData!=$fileDataNew)
 			{
