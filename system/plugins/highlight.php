@@ -5,7 +5,7 @@
 // Highlight plugin
 class YellowHighlight
 {
-	const VERSION = "0.6.4";
+	const VERSION = "0.6.5";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -23,7 +23,7 @@ class YellowHighlight
 		$output = null;
 		if(!empty($name) && !$shortcut)
 		{
-			list($language, $fileName, $lineNumber, $class, $id) = $this->getHighlightInfo($name);
+			list($language, $fileName, $lineNumber, $class, $id) = $this->getHighlightInformation($name);
 			if(!empty($language) && is_readable($fileName))
 			{
 				$geshi = new GeSHi(trim($text));
@@ -72,8 +72,8 @@ class YellowHighlight
 		return $output;
 	}
 	
-	// Return highlight info, split up name
-	function getHighlightInfo($name)
+	// Return highlight information, split up name
+	function getHighlightInformation($name)
 	{
 		$class = $this->yellow->config->get("highlightClass");
 		foreach(explode(' ', $name) as $token)
