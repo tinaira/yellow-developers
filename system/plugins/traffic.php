@@ -1,11 +1,11 @@
 <?php
-// Copyright (c) 2013-2016 Datenstrom, http://datenstrom.se
+// Copyright (c) 2013-2017 Datenstrom, http://datenstrom.se
 // This file may be used and distributed under the terms of the public license.
 
 // Traffic plugin
 class YellowTraffic
 {
-	const VERSION = "0.6.9";
+	const VERSION = "0.6.10";
 	var $yellow;			//access to API
 	var $days;				//detected days
 	var $views;				//detected views
@@ -243,10 +243,12 @@ class YellowTraffic
 		{
 			$line = "";
 			$lineEndingSearch = false;
-			$endPos = $this->getFileLineBuffer($fileHandle, $filePos, $fileTop, $dataBuffer);
+			$this->getFileLineBuffer($fileHandle, $filePos, $fileTop, $dataBuffer);
+			$endPos = $filePos - $fileTop;
 			for(;$filePos>=0; --$filePos)
 			{
 				$currentPos = $filePos - $fileTop;
+				if($dataBuffer===false) { $line = false; break; }
 				if($dataBuffer[$currentPos]=="\n" && $lineEndingSearch)
 				{
 					$line = substru($dataBuffer, $currentPos+1, $endPos-$currentPos).$line;
@@ -255,7 +257,8 @@ class YellowTraffic
 				if($currentPos==0)
 				{
 					$line = substru($dataBuffer, $currentPos, $endPos-$currentPos+1).$line;
-					$endPos = $this->getFileLineBuffer($fileHandle, $filePos-1, $fileTop, $dataBuffer);
+					$this->getFileLineBuffer($fileHandle, $filePos-1, $fileTop, $dataBuffer);
+					$endPos =  $filePos-1 - $fileTop;
 				}
 				$lineEndingSearch = true;
 			}
@@ -278,7 +281,6 @@ class YellowTraffic
 				$dataBuffer = fread($fileHandle, 4096);
 			}
 		}
-		return $filePos - $fileTop;
 	}
 }
 

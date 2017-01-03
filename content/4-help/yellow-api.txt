@@ -700,18 +700,18 @@ YellowCore::request time:19 ms
 
 Get file system information by increasing debug level to `<?php define("DEBUG", 2);`
 ```
+Yellow 0.6.7, PHP 5.5.38, Apache/2.4.18 Darwin
 YellowConfig::load file:system/config/config.ini
 YellowText::load file:system/plugins/language-de.txt
 YellowText::load file:system/plugins/language-en.txt
 YellowText::load file:system/plugins/language-fr.txt
 YellowUsers::load file:system/config/user.ini
 YellowLookup::findFileFromLocation /plugins/blog-plugin/ -> content/2-plugins/1-blog-plugin/page.txt
-YellowPages::scanLocation location:/plugins/blog-plugin/
 ```
 
 Get maximum information by increasing debug level to `<?php define("DEBUG", 3);`
 ```
-Yellow 0.6.5, PHP 5.5.36, Apache/2.4.18 Darwin
+Yellow 0.6.7, PHP 5.5.38, Apache/2.4.18 Darwin
 YellowConfig::load file:system/config/config.ini
 YellowConfig::load Sitename:Yellow developers
 YellowConfig::load Author:Yellow
