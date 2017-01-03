@@ -2819,7 +2819,7 @@ class YellowToolbox
 			"xml" => "text/xml; charset=utf-8");
 		$contentType = "";
 		$extension = $this->getFileExtension($fileName);
-		if(empty(extension))
+		if(empty($extension))
 		{
 			$contentType = $mimeTypes["html"];
 		} else if(array_key_exists($extension, $mimeTypes)) {
