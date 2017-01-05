@@ -26,6 +26,6 @@ Tausche dich mit anderen Yellow-Benutzern aus und finde professionelle Hilfe.
 
 ## Danke
 
-Yellow ist kostenlos und Open-Source, erstellt von Menschen die Yellow benutzen. Im Herzen von Open-Source ist die Idee, dass wir gemeinsam bessere Software machen können. Lizensiert unter [GPLv2](https://opensource.org/licenses/GPL-2.0). Großen Dank an alle [Mitglieder](https://github.com/orgs/datenstrom/people) und [Mitwirkende](https://github.com/datenstrom/yellow-plugins/graphs/contributors). Lass es uns besser machen.
+Yellow ist kostenlos und Open-Source, erstellt von Menschen die Yellow benutzen. Im Herzen von Open-Source ist die Idee, dass wir gemeinsam bessere Software machen. Lizensiert unter [GPLv2](https://github.com/datenstrom/yellow/blob/master/LICENSE.md) sofern nichts anderes angegeben. Großen Dank an alle [Mitglieder](https://github.com/orgs/datenstrom/people) und [Mitwirkende](https://github.com/datenstrom/yellow-plugins/graphs/contributors).
 
 
