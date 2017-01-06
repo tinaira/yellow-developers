@@ -19,7 +19,7 @@ Hier ist eine Beispiel-Templatedatei `system/themes/templates/default.html`:
 
 Snippets sind die Bausteine deiner Webseite. Es sind kleine Stücke [HTML](http://www.w3schools.com/html/) und [PHP](http://www.w3schools.com/php/). Du kannst alles in ein Template schreiben, aber es ist häufig praktischer ein Template in mehrere Snippets aufzuteilen und wiederzubenutzen. Mache was am Besten für dich funktioniert.
 
-## Webseite anpassen
+## Template anpassen
 
 Um den Quellcode deiner Webseite anzupassen, ändere das entsprechende Template. Das Template legt fest welche Snippets benutzt werden. Du kannst entweder die vorhandenen Snippets ändern oder ein neues Template anlegen, zum Beispiel `Template: custom`.
 

@@ -21,7 +21,7 @@ Here's an example template file `system/themes/templates/default.html`:
 
 Snippets are the building blocks of your website. They are small pieces of [HTML](http://www.w3schools.com/html/) and [PHP](http://www.w3schools.com/php/). You can put everything into one template, but it's often more practical to split a template up into multiple snippets and to reuse them. Do what works best for you. 
 
-## Custom website
+## Custom template
 
 To adjust the source code of your website change the corresponding template. The template defines which snippets will be used. You can either change the available snippets or create a new template, for example `Template: custom`.
 
