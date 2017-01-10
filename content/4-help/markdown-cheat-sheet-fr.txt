@@ -3,8 +3,6 @@ Title: Markdown antisèche
 Sidebar: none
 Language: fr
 ---
->>> [Vous pouvez nous aider à traduire cette page.](https://github.com/datenstrom/yellow-developers/blob/master/content/4-help/markdown-cheat-sheet-fr.txt)
-
 Markdown est un moyen pratique pour éditer des pages web. [Testez Markdown](/tests/markdown-format).
 
 ## Les bases
