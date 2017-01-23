@@ -5,7 +5,7 @@
 // Contact plugin
 class YellowContact
 {
-	const VERSION = "0.6.6";
+	const VERSION = "0.6.7";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -72,18 +72,19 @@ class YellowContact
 		$message = trim($_REQUEST["message"]);
 		$referer = trim($_REQUEST["referer"]);
 		$spamFilter = $this->yellow->config->get("contactSpamFilter");
+		$author = $this->yellow->config->get("author");
+		$email = $this->yellow->config->get("email");
+		if($this->yellow->page->isExisting("author") && !$this->yellow->page->parserSafeMode) $author = $this->yellow->page->get("author");
+		if($this->yellow->page->isExisting("email") && !$this->yellow->page->parserSafeMode) $email = $this->yellow->page->get("email");
 		if(empty($name) || empty($from) || empty($message)) $status = "incomplete";
+		if(empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) $status = "error";
 		if(!empty($from) && !filter_var($from, FILTER_VALIDATE_EMAIL)) $status = "invalid";
 		if(!empty($message) && preg_match("/$spamFilter/i", $message)) $status = "error";
 		if($status=="send")
 		{
-			$author = $this->yellow->config->get("author");
-			$email = $this->yellow->config->get("email");
-			if($this->yellow->page->isExisting("author") && !$this->yellow->page->parserSafeMode) $author = $this->yellow->page->get("author");
-			if($this->yellow->page->isExisting("email") && !$this->yellow->page->parserSafeMode) $email = $this->yellow->page->get("email");
-			$mailTo = mb_encode_mimeheader("$author <$email>");
+			$mailTo = mb_encode_mimeheader("$author")." <$email>";
 			$mailSubject = mb_encode_mimeheader($this->yellow->page->get("title"));
-			$mailHeaders = mb_encode_mimeheader("From: $name <$from>")."\r\n";
+			$mailHeaders = mb_encode_mimeheader("From: $name")." <$from>\r\n";
 			$mailHeaders .= mb_encode_mimeheader("X-Referer-Url: ".$referer)."\r\n";
 			$mailHeaders .= mb_encode_mimeheader("X-Request-Url: ".$this->yellow->page->getUrl())."\r\n";
 			$mailHeaders .= mb_encode_mimeheader("X-Remote-Addr: $_SERVER[REMOTE_ADDR]")."\r\n";
