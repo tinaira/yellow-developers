@@ -1,11 +1,11 @@
 <?php
-// Copyright (c) 2013-2016 Datenstrom, http://datenstrom.se
+// Copyright (c) 2013-2017 Datenstrom, http://datenstrom.se
 // This file may be used and distributed under the terms of the public license.
 
 // Release plugin
 class YellowRelease
 {
-	const VERSION = "0.6.13";
+	const VERSION = "0.6.14";
 
 	// Handle plugin initialisation
 	function onLoad($yellow)
@@ -14,7 +14,6 @@ class YellowRelease
 		$this->yellow->config->setDefault("releasePluginsDir", "/Users/Shared/Github/yellow-plugins/");
 		$this->yellow->config->setDefault("releaseThemesDir", "/Users/Shared/Github/yellow-themes/");
 		$this->yellow->config->setDefault("releaseZipArchiveDir", "zip/");
-		$this->yellow->config->setDefault("releaseZipFileIgnore", "README.md|screenshot.jpg|screenshot.png");
 		$this->yellow->config->setDefault("releaseDocumentationFile", "README.md");
 	}
 
@@ -36,7 +35,7 @@ class YellowRelease
 		return $statusCode;
 	}
 
-	// Update files
+	// Update release files
 	function releaseCommand($args)
 	{
 		$statusCode = 0;
@@ -58,13 +57,15 @@ class YellowRelease
 		return $statusCode;
 	}
 	
-	// Update necessary software files
+	// Update software files
 	function updateSoftwareFiles($path)
 	{
 		$statusCode = 200;
 		if(is_dir($path))
 		{
-			$statusCode = $this->updateSoftwareVersion($path);
+			$data = $this->getSoftwareVersionFromRepository($path);
+			$statusCode = max($statusCode, $this->updateSoftwareVersion($path, $data));
+			$statusCode = max($statusCode, $this->updateSoftwareResource($path, $data));
 			foreach($this->yellow->toolbox->getDirectoryEntries($path, "/.*/", true, true, false) as $entry)
 			{
 				list($software, $version) = $this->getSoftwareVersionFromDirectory("$path$entry/");
@@ -78,19 +79,18 @@ class YellowRelease
 		return $statusCode;
 	}
 	
-	// Update software version
-	function updateSoftwareVersion($path)
+	// Update software version file
+	function updateSoftwareVersion($path, $data)
 	{
 		$statusCode = 200;
 		$fileName = $path.$this->yellow->config->get("updateVersionFile");
 		if(is_file($fileName))
 		{
-			$data = $this->getSoftwareVersionFromRepository($path);
 			$fileData = $this->yellow->toolbox->readFile($fileName);
 			foreach($this->yellow->toolbox->getTextLines($fileData) as $line)
 			{
 				preg_match("/^\s*(.*?)\s*:\s*(.*?)\s*$/", $line, $matches);
-				if(!empty($matches[1]) && !is_null($data[$matches[1]]))
+				if(!empty($matches[1]) && !empty($matches[2]) && !is_null($data[$matches[1]]))
 				{
 					list($version, $url) = explode(',', $matches[2]);
 					$version = $data[$matches[1]];
@@ -112,7 +112,49 @@ class YellowRelease
 		return $statusCode;
 	}
 
-	// Update software information
+	// Update software resource file
+	function updateSoftwareResource($path, $data)
+	{
+		$statusCode = 200;
+		$fileName = $path.$this->yellow->config->get("updateResourceFile");
+		if(is_file($fileName))
+		{
+			$resourceData = $this->getSoftwareResourceFromRepository($path);
+			$fileData = $this->yellow->toolbox->readFile($fileName);
+			foreach($this->yellow->toolbox->getTextLines($fileData) as $line)
+			{
+				preg_match("/^\s*(.*?)\s*:\s*(.*?)\s*$/", $line, $matches);
+				if(!empty($matches[1]) && !empty($matches[2]))
+				{
+					list($softwareNew) = explode('/', $matches[1]);
+					if(!is_null($data[$softwareNew]) && !is_null($resourceData[$softwareNew]))
+					{
+						if($software!=$softwareNew)
+						{
+							$software = $softwareNew;
+							$fileDataNew .= $resourceData[$softwareNew];
+						}
+					} else {
+						$fileDataNew .= $line;
+					}
+				} else {
+					$fileDataNew .= $line;
+				}
+			}
+			if($fileData!=$fileDataNew)
+			{
+				if(!$this->yellow->toolbox->createFile($fileName, $fileDataNew))
+				{
+					$statusCode = 500;
+					echo "ERROR updating files: Can't write file '$fileName'!\n";
+				}
+			}
+			if(defined("DEBUG") && DEBUG>=2) echo "YellowRelease::updateSoftwareResource file:$fileName<br/>\n";
+		}
+		return $statusCode;
+	}
+	
+	// Update software information file
 	function updateSoftwareInformation($path, $version)
 	{
 		$statusCode = 200;
@@ -123,9 +165,10 @@ class YellowRelease
 			foreach($this->yellow->toolbox->getTextLines($fileData) as $line)
 			{
 				preg_match("/^\s*(.*?)\s*:\s*(.*?)\s*$/", $line, $matches);
-				if(!empty($matches[1]) && !empty($matches[2]))
+				if(!empty($matches[1]) && !empty($matches[2]) && strposu($matches[1], '/'))
 				{
-					list($entry, $flags) = explode(',', $matches[2], 2);
+					list($dummy, $entry) = explode('/', $matches[1], 2);
+					if($dummy[0]!='Y') list($entry, $flags) = explode(',', $matches[2], 2); //TODO: remove later, converts old file format
 					if(is_file($path.$entry)) { $published = filemtime($path.$entry); break; }
 				}
 			}
@@ -149,7 +192,7 @@ class YellowRelease
 		return $statusCode;
 	}
 
-	// Update software documentation
+	// Update software documentation file
 	function updateSoftwareDocumentation($path, $version)
 	{
 		$statusCode = 200;
@@ -189,7 +232,6 @@ class YellowRelease
 		{
 			$pathZipArchive = $path.$this->yellow->config->get("releaseZipArchiveDir");
 			$fileNameInformation = $this->yellow->config->get("updateInformationFile");
-			$fileIgnore = $this->yellow->config->get("releaseZipFileIgnore");
 			foreach($this->yellow->toolbox->getDirectoryEntries($path, "/.*/", true, true, false) as $entry)
 			{
 				if("$path$entry/"==$pathZipArchive) continue;
@@ -199,12 +241,22 @@ class YellowRelease
 				if($zip->open($fileNameZipArchive, ZIPARCHIVE::OVERWRITE)===true)
 				{
 					$modified = 0;
-					$fileNames = $this->yellow->toolbox->getDirectoryEntries($path.$entry, "/.*/", true, false);
-					foreach($fileNames as $fileName)
+					$fileNamesRequired = $this->getSoftwareArchiveEntries("$path$entry/");
+					$fileNamesFound = $this->yellow->toolbox->getDirectoryEntries($path.$entry, "/.*/", true, false);
+					foreach($fileNamesFound as $fileName)
 					{
-						if(preg_match("#($fileIgnore)#", $fileName)) continue;
+						if(!in_array($fileName, $fileNamesRequired)) continue;
 						$zip->addFile($fileName, substru($fileName, strlenu($path)));
 						$modified = max($modified, $this->yellow->toolbox->getFileModified($fileName));
+						unset($fileNamesRequired[array_search($fileName, $fileNamesRequired)]);
+					}
+					if(count($fileNamesRequired))
+					{
+						$statusCode = 500;
+						foreach($fileNamesRequired as $fileName)
+						{
+							echo "ERROR updating files: Can't find file '$fileName'!\n";
+						}
 					}
 					if(!$zip->close() || !$this->yellow->toolbox->modifyFile($fileNameZipArchive, $modified))
 					{
@@ -219,6 +271,26 @@ class YellowRelease
 			}
 		}
 		return $statusCode;
+	}
+	
+	// Return software files for archive
+	function getSoftwareArchiveEntries($path)
+	{
+		$entries = array();
+		$fileName = $path.$this->yellow->config->get("updateInformationFile");
+		$fileData = $this->yellow->toolbox->readFile($fileName);
+		foreach($this->yellow->toolbox->getTextLines($fileData) as $line)
+		{
+				preg_match("/^\s*(.*?)\s*:\s*(.*?)\s*$/", $line, $matches);
+				if(!empty($matches[1]) && !empty($matches[2]) && strposu($matches[1], '/'))
+				{
+					list($dummy, $entry) = explode('/', $matches[1], 2);
+					if($dummy[0]!='Y') list($entry, $flags) = explode(',', $matches[2], 2); //TODO: remove later, converts old file format
+					array_push($entries, "$path$entry");
+				}
+		}
+		array_push($entries, $fileName);
+		return $entries;
 	}
 	
 	// Return software version from repository
@@ -237,27 +309,55 @@ class YellowRelease
 	function getSoftwareVersionFromDirectory($path)
 	{
 		$software = $version = "";
-		foreach($this->yellow->toolbox->getDirectoryEntries($path, "/\.(php|css)/", false, false) as $entry)
+		foreach($this->yellow->toolbox->getDirectoryEntries($path, "/^.*\.php$/", false, false) as $entry)
 		{
-			$fileType = $this->yellow->toolbox->getFileExtension($entry);
 			$fileData = $this->yellow->toolbox->readFile($entry, 4096);
 			foreach($this->yellow->toolbox->getTextLines($fileData) as $line)
 			{
-				if($fileType=="php")
-				{
-					preg_match("/^\s*(.*?)\s+(.*?)$/", $line, $matches);
-					if($matches[1]=="class" && !strempty($matches[2])) $software = $matches[2];
-					if($matches[1]=="const" && preg_match("/\"([0-9\.]+)\"/", $line, $matches)) $version = $matches[1];
-					if($matches[1]=="function") break;
-				} else {
-					preg_match("/^\/\*\s*(.*?)\s*:\s*(.*?)\s*\*\/$/", $line, $matches);
-					if(lcfirst($matches[1])=="theme" && !strempty($matches[2])) $software = $matches[2];
-					if(lcfirst($matches[1])=="version" && !strempty($matches[2])) $version = $matches[2];
-					if(!empty($line) && $line[0]!='/') break;
-				}
+				preg_match("/^\s*(.*?)\s+(.*?)$/", $line, $matches);
+				if($matches[1]=="class" && !strempty($matches[2])) $software = $matches[2];
+				if($matches[1]=="const" && preg_match("/\"([0-9\.]+)\"/", $line, $matches)) $version = $matches[1];
+				if($matches[1]=="function") break;
 			}
 		}
 		return array($software, $version);
+	}
+
+	// Return software resource from repository
+	function getSoftwareResourceFromRepository($path)
+	{
+		$data = array();
+		foreach($this->yellow->toolbox->getDirectoryEntries($path, "/.*/", true, true) as $entry)
+		{
+			list($software, $resource) = $this->getSoftwareResourceFromDirectory("$entry/");
+			if(!empty($software) && !empty($resource)) $data[$software] = $resource;
+		}
+		return $data;
+	}
+	
+	// Return software resource from directory
+	function getSoftwareResourceFromDirectory($path)
+	{
+		$software = $resource = "";
+		$fileName = $path.$this->yellow->config->get("updateInformationFile");
+		$fileData = $this->yellow->toolbox->readFile($fileName);
+		foreach($this->yellow->toolbox->getTextLines($fileData) as $line)
+		{
+			preg_match("/^\s*(.*?)\s*:\s*(.*?)\s*$/", $line, $matches);
+			if(lcfirst($matches[1])=="plugin" || lcfirst($matches[1])=="theme") $software = $matches[2];
+			if(!empty($matches[1]) && !empty($matches[2]) && strposu($matches[1], '/'))
+			{
+				list($dummy, $entry) = explode('/', $matches[1], 2);
+				list($fileName, $flags) = explode(',', $matches[2], 2);
+				if($dummy[0]!='Y') //TODO: remove later, converts old file format
+				{
+					$matches[1] = "$software/$fileName";
+					$matches[2] = "$dummy/$entry,$flags";
+				}
+				$resource .= "$matches[1]: $matches[2]\n";
+			}
+		}
+		return array($software, $resource);
 	}
 }
 
