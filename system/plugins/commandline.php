@@ -334,7 +334,8 @@ class YellowCommandline
 	// Check static configuration
 	function checkStaticConfig()
 	{
-		return !empty($this->yellow->config->get("staticUrl"));
+		$staticUrl = $this->yellow->config->get("staticUrl");
+		return !empty($staticUrl);
 	}
 	
 	// Check static directory
