@@ -3,7 +3,7 @@ Title: Yellow-Themes
 Sidebar: sidebar-de
 Language: de
 ---
-Du kannst das Aussehen deiner Webseite anpassen.
+Du kannst das Aussehen deiner Webseite anpassen. [Demo anschauen](/themes/).
 
 ## Themes
 
@@ -13,15 +13,11 @@ Jede Webseite hat ein kleines Icon das zu ihr gehört, auch Favicon genannt. Der
 
 ## CSS
 
-Um ein Theme anzupassen, kann man [CSS](http://www.w3schools.com/css/) benutzen. Damit kannst du Farben und Stil deiner Webseite ändern. Du kannst entweder die vorhandene CSS-Datei ändern oder eine neue Datei anlegen. Alle CSS-Dateien müssen einen einmaligen Namen und Versionsnummer besitzen.
+Um ein Theme anzupassen, kann man [CSS](http://www.w3schools.com/css/) benutzen. Damit kannst du Farben, Schriftart und das Aussehen deiner Webseite ändern. Du kannst entweder die vorhandene CSS-Datei ändern oder eine neues Theme anlegen, zum Beispiel `Theme: custom`.
 
-Hier ist eine Beispiel-CSS-Datei `system/themes/home.css`:
+Hier ist eine Beispiel-CSS-Datei `system/themes/assets/custom.css`:
 
 ``` css
-/* Theme: Home theme */
-/* Version: 0.1.1 */
-/* Designer: Mark Mayberg */
-
 html, body, div, form, pre, span, tr, th, td, img { margin:0; padding:0; border:0; vertical-align:baseline; }
 body { background-color:#fff; color:#717171; margin:1em; }
 h1, h2, h3, h4, h5, h6 { color:#07d; font-weight:normal; }
@@ -36,10 +32,6 @@ a:hover { color:#07d; text-decoration:underline; }
 Hier ist die selbe CSS-Datei mit dunkler Hintergrundfarbe:
 
 ``` css
-/* Theme: Home theme */
-/* Version: 0.1.2 */
-/* Designer: Mark Mayberg */
-
 html, body, div, form, pre, span, tr, th, td, img { margin:0; padding:0; border:0; vertical-align:baseline; }
 body { background-color:#000; color:#ddd; margin:1em; }
 h1, h2, h3, h4, h5, h6 { color:#fff; font-weight:normal; }
@@ -53,9 +45,9 @@ a:hover { color:#29f; text-decoration:underline; }
 
 ## JavaScript
 
-Um ein Theme zu erweitern, kann man [JavaScript](http://www.w3schools.com/js/) benutzen. Damit kannst du Webseiten mit dynamischen Funktionen erstellen. Du kannst JavaScript in eine Datei speichern die einen ähnlichen Namen hat wie die CSS-Datei und sie wird automatisch in das Theme eingebunden.
+Um ein Theme zu erweitern, kann man [JavaScript](http://www.w3schools.com/js/) benutzen. Damit kannst du Webseiten mit dynamischen Funktionen erstellen. Du kannst JavaScript in eine Datei speichern die einen ähnlichen Namen hat wie die CSS-Datei. Es wird dann automatisch eingebunden.
 
-Hier ist eine Beispiel-JS-Datei `system/themes/assets/home.js`:
+Hier ist eine Beispiel-JS-Datei `system/themes/assets/custom.js`:
 
 ``` javascript
 var ready = function() 

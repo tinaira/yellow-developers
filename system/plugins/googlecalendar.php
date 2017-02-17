@@ -1,11 +1,11 @@
 <?php
-// Copyright (c) 2013-2016 Datenstrom, http://datenstrom.se
+// Copyright (c) 2013-2017 Datenstrom, http://datenstrom.se
 // This file may be used and distributed under the terms of the public license.
 
 // Googlecalendar plugin
 class YellowGooglecalendar
 {
-	const VERSION = "0.6.1";
+	const VERSION = "0.6.2";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -30,7 +30,7 @@ class YellowGooglecalendar
 			if(empty($entriesMax)) $entriesMax = $this->yellow->config->get("googlecalendarEntriesMax");
 			if(empty($style)) $style = $this->yellow->config->get("googlecalendarStyle");
 			$language = $page->get("language");
-			$timeZone = $this->yellow->config->get("serverTime");
+			$timeZone = $this->yellow->config->get("timezone");
 			$dateMonths = $this->yellow->text->getText("dateMonths", $language);
 			$dateWeekdays = $this->yellow->text->getText("dateWeekdays", $language);
 			$dateWeekstart = $this->yellow->text->getText("dateWeekstart", $language);

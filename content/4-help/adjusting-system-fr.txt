@@ -17,6 +17,7 @@ Le fichier de configuration principal est `system/config/config.ini`. Voici un e
     Author: Anna Svensson
     Email: anna@svensson.fr
     Language: fr
+    Timezone: Europe/Paris
     Theme: flatsite
 
 Vous pouvez y définir les paramètres par défaut, par exemple le nom du site web et l'email du webmaster. Des [paramètres](markdown-cheat-sheet-fr#paramètres) individuels peuvent être définis au haut de chaque page. Lors d'une nouvelle installation, il est conseillé de modifier `Sitename`, `Author` et `Email`. Vous pouvez y [définir le langage](language-configuration-fr) et installer d'autres traductions.

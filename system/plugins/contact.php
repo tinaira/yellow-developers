@@ -1,11 +1,11 @@
 <?php
-// Copyright (c) 2013-2016 Datenstrom, http://datenstrom.se
+// Copyright (c) 2013-2017 Datenstrom, http://datenstrom.se
 // This file may be used and distributed under the terms of the public license.
 
 // Contact plugin
 class YellowContact
 {
-	const VERSION = "0.6.7";
+	const VERSION = "0.6.8";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -43,7 +43,7 @@ class YellowContact
 	{
 		if($this->yellow->page->get("template")=="contact")
 		{
-			if(PHP_SAPI=="cli") $this->yellow->page->error(500, "Static website not supported!");
+			if($this->yellow->isCommandLine()) $this->yellow->page->error(500, "Static website not supported!");
 			if(empty($_REQUEST["referer"]))
 			{
 				$_REQUEST["referer"] = $_SERVER["HTTP_REFERER"];

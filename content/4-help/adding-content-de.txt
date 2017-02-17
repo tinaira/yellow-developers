@@ -19,7 +19,7 @@ Die Navigation wird automatisch aus deinen `content`-Verzeichnissen erstellt. Es
 
 Präfixe und Suffixe werden aus der Adresse entfernt, damit es besser aussieht. Zum Beispiel ist das Verzeichnis `content/9-about/` vorhanden als `http://website/about/`. Die Datei `content/9-about/contact.txt` wird zu `http://website/about/contact`.
 
-Verzeichnisse können weitere Dateien und Verzeichnisse enthalten. Es gibt eine Ausnahme. Das Verzeichnis `content/1-home/` darf keine Unterverzeichnisse besitzen, da es für die Startseite verantwortlich ist und auf deiner Webseite vorhanden ist als `http://website/`.
+Verzeichnisse können weitere Dateien und Verzeichnisse enthalten. Es gibt eine Ausnahme. Das erste Verzeichnis darf keine Unterverzeichnisse besitzen, da es für die Startseite verantwortlich ist und auf deiner Webseite vorhanden ist als `http://website/`.
 
 ## Textdateien
 

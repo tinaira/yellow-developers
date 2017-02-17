@@ -17,6 +17,7 @@ Die zentrale Konfigurationsdatei ist `system/config/config.ini`. Hier ist ein Be
     Author: Anna Svensson
     Email: anna@svensson.de
     Language: de
+    Timezone: Europe/Berlin
     Theme: flatsite
 
 Dort kannst du die Standardeinstellungen festlegen, zum Beispiel den Namen der Webseite und E-Mail des Webmasters. Die individuellen [Einstellungen](markdown-cheat-sheet-de#einstellungen) lassen sich ganz oben auf jeder Seite festlegen. Bei einer neuen Installation sollte man `Sitename`, `Author` und `Email` anpassen. Du kannst [Sprachen konfigurieren](language-configuration-de) und weitere Sprachen herunterladen. 

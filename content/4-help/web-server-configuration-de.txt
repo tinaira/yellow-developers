@@ -93,7 +93,7 @@ Du kannst eine statische Webseite in der [Befehlszeile](https://github.com/daten
 2. Gehe zu deiner Yellow-Installation, dort wo sich die `yellow.php` befindet.
 3. Gib die folgende Zeile ein: `php yellow.php build /var/www/website`
 
-Das erstellt eine statische Webseite im Verzeichnis `/var/www/website`. Lade das Verzeichnis auf dein Webhosting hoch und erstelle bei Bedarf eine neue Version. Die Einstellungen deiner Webseite werden in der Datei `system/config/config.ini` festgelegt. 
+Das erstellt eine statische Webseite im Verzeichnis `/var/www/website`. Lade das Verzeichnis auf dein Webhosting hoch und erstelle bei Bedarf eine neue Version. Die URL kann man in den [Systemeinstellungen](adjusting-system-de#systemeinstellungen) festlegen, zum Beispiel `StaticUrl: http://website/`. 
 
 Als Alternative zu einer statischen Webseite kann man auch einzelne Seiten zum Cache hinzufügen. Hier ist ein Beispiel: `php yellow.php build cache /blog/blog-example`. Zum Löschen des Caches gibt man die folgende Zeile ein: `php yellow.php clean`.
 

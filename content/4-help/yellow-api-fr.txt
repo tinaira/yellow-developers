@@ -66,7 +66,7 @@ Return related page
 Return page location
 
 **$yellow->page->getUrl()**  
-Return page URL with server scheme and server name
+Return page URL
 
 **$yellow->page->getExtra($name)**  
 Return page extra HTML data
@@ -321,7 +321,7 @@ Return plugin version
 Return plugin modification date, Unix time or HTTP format
 
 **$yellow->plugins->register($name, $plugin, $version, $priority = 0)**  
-Register plugin to [events](#events)
+Register plugin
 
 **$yellow->plugins->isExisting($name)**  
 Check if plugin exists
@@ -348,13 +348,16 @@ Here's an example snippet for checking if plugin exists:
 
 ### Yellow themes
 
-Yellow themes gives access to [themes](yellow-themes#themes):
+Yellow themes gives access to [themes](yellow-themes):
 
 **$yellow->themes->getData()**  
 Return theme version
 
 **$yellow->themes->getModified($httpFormat = false)**  
 Return theme modification date, Unix time or HTTP format
+
+**$yellow->themes->register($name, $theme, $version, $priority = 0)**  
+Register theme
 
 **$yellow->themes->isExisting($name)**  
 Check if theme exists
@@ -524,6 +527,17 @@ Return lines from text string, newline separated
 **$yellow->toolbox->getTextArgs($text, $optional = "-")**  
 Return arguments from text string, space separated  
 
+Here's an example snippet for showing location arguments:
+
+``` php
+<div class="yellow location">
+<?php echo htmlspecialchars($yellow->toolbox->getLocation()) ?><br />
+<?php foreach($_REQUEST as $key=>$value): ?>
+<?php echo htmlspecialchars("$key: $value") ?><br />
+<?php endforeach ?>
+</div>
+```
+
 Here's an example snippet for reading text lines from file:
 
 ``` php
@@ -538,15 +552,15 @@ Here's an example snippet for reading text lines from file:
 
 ## Events
 
-The following events are available for plugins:
+The following events are available:
 
 **function onLoad($yellow)**  
 Handle initialisation
 
-**function onUpdate($name)**  
-Handle update
+**function onStartup($update)**  
+Handle startup
 
-**function onRequest($serverScheme, $serverName, $base, $location, $fileName)**  
+**function onRequest($scheme, $address, $base, $location, $fileName)**  
 Handle request
 
 **function onParseMeta($page)**  
@@ -579,6 +593,9 @@ Handle command
 **function onCommandHelp()**  
 Handle command help
 
+**function onShutdown()**  
+Handle shutdown
+
 Here's an example plugin, a very basic one: 
 
 ``` php {#yellow-plugins-example}
@@ -586,13 +603,6 @@ Here's an example plugin, a very basic one:
 class YellowExample
 {
 	const VERSION = "0.1.1";
-	var $yellow;
-	
-	// Handle initialisation
-	function onLoad($yellow)
-	{
-		$this->yellow = $yellow;
-	}
 }
 
 $yellow->plugins->register("example", "YellowExample", YellowExample::VERSION);
@@ -696,29 +706,29 @@ YellowCore::sendPage Page-Modified: Fri, 30 Jan 2015 09:30:12 GMT
 YellowCore::sendPage Last-Modified: Mon, 02 Feb 2015 13:19:03 GMT
 YellowCore::sendPage theme:flatsite template:blogpages parser:markdown
 YellowCore::processRequest file:content/2-plugins/1-blog-plugin/page.txt
-YellowCore::request status:200 location:/plugins/blog-plugin/ handler:core
-YellowCore::request time:19 ms
+YellowCore::request status:200 handler:core time:19 ms
 ```
 
 Get file system information by increasing debug level to `<?php define("DEBUG", 2);`
 ```
-Yellow 0.6.7, PHP 5.5.38, Apache/2.4.18 Darwin
+Yellow 0.6.8, PHP 5.5.38, Apache/2.4.18 Darwin
 YellowConfig::load file:system/config/config.ini
 YellowText::load file:system/plugins/language-de.txt
 YellowText::load file:system/plugins/language-en.txt
 YellowText::load file:system/plugins/language-fr.txt
 YellowUsers::load file:system/config/user.ini
-YellowLookup::findFileFromLocation /plugins/blog-plugin/ -> content/2-plugins/1-blog-plugin/page.txt
+YellowCore::startup
 ```
 
 Get maximum information by increasing debug level to `<?php define("DEBUG", 3);`
 ```
-Yellow 0.6.7, PHP 5.5.38, Apache/2.4.18 Darwin
+Yellow 0.6.8, PHP 5.5.38, Apache/2.4.18 Darwin
 YellowConfig::load file:system/config/config.ini
 YellowConfig::load Sitename:Yellow developers
 YellowConfig::load Author:Yellow
 YellowConfig::load Email:webmaster
 YellowConfig::load Language:en
+YellowConfig::load Timezone:Europe/Stockholm
 YellowConfig::load Theme:flatsite
 ```
 

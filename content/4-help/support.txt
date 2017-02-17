@@ -25,4 +25,4 @@ Connect with other Yellow users and find professional help.
 
 ## Thank you
 
-Yellow is free and open source, made by the people who use Yellow. At the heart of open source is the idea that we make better software together. Licensed under [GPLv2](https://github.com/datenstrom/yellow/blob/master/LICENSE.md) unless stated otherwise. Big thanks to all [members](https://github.com/orgs/datenstrom/people) and [contributors](https://github.com/datenstrom/yellow-plugins/graphs/contributors).
+Yellow is free and open source, made by the people who use Yellow. At the heart of open source is the idea that we make better software together. Licensed under [GPLv2](https://github.com/datenstrom/yellow/blob/master/LICENSE.md) unless stated otherwise. Big thanks to all Yellow users and [members](https://github.com/orgs/datenstrom/people).

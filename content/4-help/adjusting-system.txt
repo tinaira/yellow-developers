@@ -17,6 +17,7 @@ The main configuration file is `system/config/config.ini`. Here's an example:
     Author: Anna Svensson
     Email: anna@svensson.com
     Language: en
+    Timezone: Europe/Stockholm
     Theme: flatsite
 
 You can define the default settings here, for example the name of the website and the email of the webmaster. Individual [settings](markdown-cheat-sheet#settings) can be defined at the top of each page. For a new installation you should set `Sitename`, `Author` and `Email`. You can [configure languages](language-configuration) and download more languages.

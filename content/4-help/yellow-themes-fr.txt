@@ -5,7 +5,7 @@ Language: fr
 ---
 >>> [Vous pouvez nous aider à traduire cette page.](https://github.com/datenstrom/yellow-developers/blob/master/content/4-help/yellow-themes-fr.txt)
 
-Vous pouvez personnaliser l'aspect visuel de votre site web.
+Vous pouvez personnaliser l'aspect visuel de votre site web. [Voir la démo](/themes/).
 
 ## Themes
 
@@ -15,15 +15,11 @@ Every website has a small icon that is associated with it, sometimes called favi
 
 ## CSS
 
-To adjust a theme you can use [CSS](http://www.w3schools.com/css/). This allows you to change colors and style of your website. You can either change the available CSS file or create a new file. All CSS files must have a unique name and version.
+To adjust a theme you can use [CSS](http://www.w3schools.com/css/). This allows you to change colors, font and the visual design of your website. You can either change the available CSS file or create a new theme, for example `Theme: custom`.
  
-Here's an example CSS file `system/themes/home.css`:
+Here's an example CSS file `system/themes/assets/custom.css`:
 
 ``` css
-/* Theme: Home theme */
-/* Version: 0.1.1 */
-/* Designer: Mark Mayberg */
-
 html, body, div, form, pre, span, tr, th, td, img { margin:0; padding:0; border:0; vertical-align:baseline; }
 body { background-color:#fff; color:#717171; margin:1em; }
 h1, h2, h3, h4, h5, h6 { color:#07d; font-weight:normal; }
@@ -38,10 +34,6 @@ a:hover { color:#07d; text-decoration:underline; }
 Here's the same CSS file with dark background color:
 
 ``` css
-/* Theme: Home theme */
-/* Version: 0.1.2 */
-/* Designer: Mark Mayberg */
-
 html, body, div, form, pre, span, tr, th, td, img { margin:0; padding:0; border:0; vertical-align:baseline; }
 body { background-color:#000; color:#ddd; margin:1em; }
 h1, h2, h3, h4, h5, h6 { color:#fff; font-weight:normal; }
@@ -55,9 +47,9 @@ a:hover { color:#29f; text-decoration:underline; }
 
 ## JavaScript
 
-To extend a theme you can use [JavaScript](http://www.w3schools.com/js/). This allows you to create websites with dynamic features. You can put JavaScript into a file which has a similar name as the CSS file and it will be automatically included in the theme.
+To extend a theme you can use [JavaScript](http://www.w3schools.com/js/). This allows you to create websites with dynamic features. You can put JavaScript into a file which has a similar name as the CSS file. Then it will be automatically included.
 
-Here's an example JS file `system/themes/assets/home.js`:
+Here's an example JS file `system/themes/assets/custom.js`:
 
 ``` javascript
 var ready = function() 
@@ -74,7 +66,7 @@ if(window.addEventListener) {
 
 ## HTML
 
-To create own themes it's good to know the [HTML](http://www.w3schools.com/html/) layout of a page. Yellow comes with a default HTML layout that's used on most web pages, blogs and wikis. This is just a suggestion, you can use any layout you like.
+To create your own themes it's good to know the [HTML](http://www.w3schools.com/html/) layout of a page. Yellow comes with a default HTML layout that's used on most web pages, blogs and wikis. This is just a suggestion, you can use any layout you like.
 
 Here's the default HTML layout:
 

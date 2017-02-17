@@ -1,6 +1,6 @@
-/* Theme: Blogsite theme */
-/* Version: 0.6.11 */
-/* Designer: Mark Mayberg */
+/* Blogsite theme, https://github.com/datenstrom/yellow-themes/tree/master/blogsite */
+/* Copyright (c) 2013-2017 Datenstrom, http://datenstrom.se */
+/* This file may be used and distributed under the terms of the public license. */
 
 html, body, div, form, pre, span, tr, th, td, img { margin:0; padding:0; border:0; vertical-align:baseline; }
 body {
@@ -48,7 +48,7 @@ a:hover { color:#07d; text-decoration:underline; }
 .header .sitename h2 { margin-top:-2em; margin-bottom:2.5em; font-size:1.0em; font-weight:300; }
 .header .sitename-banner {
 	padding-top:23%;
-	background-image:url(assets/blogsite-banner.jpg);
+	background-image:url(blogsite-banner.jpg);
 	background-repeat:no-repeat;
 	background-size:cover;
 	background-position:center;

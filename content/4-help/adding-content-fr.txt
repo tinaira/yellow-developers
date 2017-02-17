@@ -19,7 +19,7 @@ Le menu de navigation est automatiquement créée à partir de vos dossiers pré
 
 Préfixe et suffixe sont retirés de l'url afin de proposer une navigation cohérente et propre. Par exemple le dossier `content/9-about/` est accessible à l'adresse `http://website/about/`. Le fichier `content/9-about/contact.txt` devient quand à lui `http://website/about/contact`. 
 
-Chaque dossier peut contenir des fichiers et des sous-dossiers. Il y a une exception cependant: le dossier `content/1-home/` ne peut pas contenir de sous-dossiers, car il est responsable de la page d'accueil et est accessible en tant qu'url principale `http://website/`.
+Chaque dossier peut contenir des fichiers et des sous-dossiers. Il y a une exception cependant: le premier dossier ne peut pas contenir de sous-dossiers, car il est responsable de la page d'accueil et est accessible en tant qu'url principale `http://website/`.
 
 ## Fichiers texte
 

@@ -19,7 +19,7 @@ The navigation is automatically created from your `content` folders. Only folder
 
 Prefix and suffix are removed from the location, so that it looks better. For example the folder `content/9-about/` is available on your website as `http://website/about/`. The file `content/9-about/contact.txt` becomes `http://website/about/contact`. 
 
-Folders may contain files and folders. There is one exception. The folder `content/1-home/` may not contain subfolders, because it's responsible for the home page and available on your website as `http://website/`.
+Folders may contain files and folders. There is one exception. The first folder may not contain subfolders, because it's responsible for the home page and available on your website as `http://website/`.
 
 ## Text files
 
