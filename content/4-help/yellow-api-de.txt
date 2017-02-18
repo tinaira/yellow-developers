@@ -548,6 +548,51 @@ Hier ist ein Beispiel-Snippet um Textzeilen von Datei zu lesen:
 </div>
 ```
 
+## Formate
+
+Die folgenden Datumsformate sind vorhanden:
+
+`YYYY-MM-DD` = Datum beginnend mit dem Jahr, z.B. `2013-04-07`  
+`YYYY-MM-DD HH:MM:SS` = Datum und Uhrzeit z.B. `2013-04-07 11:30:00`  
+
+Wird ein Datum auf einer Seite angezeigt wird es in das sprachspezifisches Format konvertiert: 
+
+`dateFormatShort` = kurzes Datum, z.B. `April 2013`  
+`dateFormatMedium` = mittleres Datum, z.B. `07.04.2013`   
+`dateFormatLong` = langes Datum, z.B. `07.04.2013 11:30`   
+
+Wird Text auf einer Seite ausgegeben kann man diese Kodierungs-Funktionen benutzen:
+
+`htmlspecialchars($string)` = kodiere Textstring ins HTML-Format  
+`rawurlencode($string)` = kodiere URL, z.B. Hyperlink-Argumente  
+`strencode($string)` = kodiere String, z.B. JavaScript-Argumente  
+
+Hier ist ein Beispiel-Snippet um HTML-Argumente zu kodieren:
+
+``` php
+<?php list($name, $class) = $yellow->getSnippetArgs() ?>
+<?php if(empty($class)) $class = "regular" ?>
+<img src="https://unsplash.it/210/140/?random" class="<?php echo htmlspecialchars($class) ?>" />
+```
+
+Hier ist ein Beispiel-Snippet um Hyperlink-Argumente zu kodieren:
+
+``` php
+<?php list($name, $id) = $yellow->getSnippetArgs() ?>
+<?php if(empty($id)) $id = "821" ?>
+<img src="https://unsplash.it/210/140/?image=<?php echo rawurlencode($id) ?>" />
+```
+
+Hier ist ein Beispiel-Snippet um JavaScript-Argumente zu kodieren:
+
+``` php
+<?php list($name, $message) = $yellow->getSnippetArgs() ?>
+<?php if(empty($message)) $message = "Hello world" ?>
+<script type="text/javascript">
+console.log("<?php echo strencode($message) ?>");
+</script>
+```
+
 ## Ereignisse
 
 Die folgenden Ereignisse sind verfügbar:
@@ -674,25 +719,6 @@ $yellow->plugins->register("example", "YellowExample", YellowExample::VERSION);
 ?>
 
 ```
-
-## Formate
-
-Die folgenden Datumsformate sind vorhanden:
-
-`YYYY-MM-DD` = Datum beginnend mit dem Jahr, z.B. `2013-04-07`  
-`YYYY-MM-DD HH:MM:SS` = Datum und Uhrzeit z.B. `2013-04-07 11:30:00`  
-
-Wird ein Datum auf einer Seite angezeigt wird es in das sprachspezifisches Format konvertiert: 
-
-`dateFormatShort` = kurzes Datum, z.B. `April 2013`  
-`dateFormatMedium` = mittleres Datum, z.B. `07.04.2013`   
-`dateFormatLong` = langes Datum, z.B. `07.04.2013 11:30`   
-
-Wird Text auf einer Seite ausgegeben kann man diese Kodierungs-Funktionen benutzen:
-
-`htmlspecialchars($string)` = kodiere Textstring ins HTML-Format  
-`rawurlencode($string)` = kodiere URL, z.B. Hyperlink-Argumente  
-`strencode($string)` = kodiere String, z.B. JavaScript-Argumente  
 
 ## Fehlersuche
 

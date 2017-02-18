@@ -1,8 +1,8 @@
 <?php
-// Copyright (c) 2013-2017 Datenstrom, http://datenstrom.se
+// Traffic plugin, https://github.com/datenstrom/yellow-plugins/tree/master/traffic
+// Copyright (c) 2013-2017 Datenstrom, https://datenstrom.se
 // This file may be used and distributed under the terms of the public license.
 
-// Traffic plugin
 class YellowTraffic
 {
 	const VERSION = "0.6.11";

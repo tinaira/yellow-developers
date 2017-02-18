@@ -550,6 +550,51 @@ Here's an example snippet for reading text lines from file:
 </div>
 ```
 
+## Formats
+
+The following date formats are available: 
+
+`YYYY-MM-DD` = date starting with the year, e.g. `2013-04-07`  
+`YYYY-MM-DD HH:MM:SS` = date and time, e.g. `2013-04-07 11:30:00`  
+
+When dates are displayed on a page they are converted to a language specific date format:
+
+`dateFormatShort` = short date, e.g. `April 2013`  
+`dateFormatMedium` = medium date, e.g. `2013-04-07`   
+`dateFormatLong` = long date, e.g. `2013-04-07 11:30`   
+
+When text is displayed on a page you can use one of these encoding functions:
+
+`htmlspecialchars($string)` = encode text string into HTML format  
+`rawurlencode($string)` = encode URL, e.g. hyperlink arguments  
+`strencode($string)` = encode string, e.g. JavaScript arguments  
+
+Here's an example snippet for encoding HTML arguments:
+
+``` php
+<?php list($name, $class) = $yellow->getSnippetArgs() ?>
+<?php if(empty($class)) $class = "regular" ?>
+<img src="https://unsplash.it/210/140/?random" class="<?php echo htmlspecialchars($class) ?>" />
+```
+
+Here's an example snippet for encoding hyperlink arguments:
+
+``` php
+<?php list($name, $id) = $yellow->getSnippetArgs() ?>
+<?php if(empty($id)) $id = "821" ?>
+<img src="https://unsplash.it/210/140/?image=<?php echo rawurlencode($id) ?>" />
+```
+
+Here's an example snippet for encoding JavaScript arguments:
+
+``` php
+<?php list($name, $message) = $yellow->getSnippetArgs() ?>
+<?php if(empty($message)) $message = "Hello world" ?>
+<script type="text/javascript">
+console.log("<?php echo strencode($message) ?>");
+</script>
+```
+
 ## Events
 
 The following events are available:
@@ -676,25 +721,6 @@ $yellow->plugins->register("example", "YellowExample", YellowExample::VERSION);
 ?>
 
 ```
-
-## Formats
-
-The following date formats are available: 
-
-`YYYY-MM-DD` = date starting with the year, e.g. `2013-04-07`  
-`YYYY-MM-DD HH:MM:SS` = date and time, e.g. `2013-04-07 11:30:00`  
-
-When dates are displayed on a page they are converted to a language specific date format:
-
-`dateFormatShort` = short date, e.g. `April 2013`  
-`dateFormatMedium` = medium date, e.g. `2013-04-07`   
-`dateFormatLong` = long date, e.g. `2013-04-07 11:30`   
-
-When text is displayed on a page you can use one of these encoding functions:
-
-`htmlspecialchars($string)` = encode text string into HTML format  
-`rawurlencode($string)` = encode URL, e.g. hyperlink arguments  
-`strencode($string)` = encode string, e.g. JavaScript arguments  
 
 ## Debugging
 

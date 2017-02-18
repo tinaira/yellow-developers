@@ -1,8 +1,8 @@
 <?php
-// Copyright (c) 2013-2016 Datenstrom, http://datenstrom.se
+// Blog plugin, https://github.com/datenstrom/yellow-plugins/tree/master/blog
+// Copyright (c) 2013-2017 Datenstrom, https://datenstrom.se
 // This file may be used and distributed under the terms of the public license.
 
-// Blog plugin
 class YellowBlog
 {
 	const VERSION = "0.6.10";

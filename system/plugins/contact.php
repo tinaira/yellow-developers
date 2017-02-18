@@ -1,8 +1,8 @@
 <?php
-// Copyright (c) 2013-2017 Datenstrom, http://datenstrom.se
+// Contact plugin, https://github.com/datenstrom/yellow-plugins/tree/master/contact
+// Copyright (c) 2013-2017 Datenstrom, https://datenstrom.se
 // This file may be used and distributed under the terms of the public license.
 
-// Contact plugin
 class YellowContact
 {
 	const VERSION = "0.6.8";

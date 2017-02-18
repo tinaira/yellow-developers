@@ -1,8 +1,8 @@
 <?php
-// Copyright (c) 2013-2016 Datenstrom, http://datenstrom.se
+// Wiki plugin, https://github.com/datenstrom/yellow-plugins/tree/master/wiki
+// Copyright (c) 2013-2017 Datenstrom, https://datenstrom.se
 // This file may be used and distributed under the terms of the public license.
 
-// Wiki plugin
 class YellowWiki
 {
 	const VERSION = "0.6.11";

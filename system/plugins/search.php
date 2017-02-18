@@ -1,8 +1,8 @@
 <?php
-// Copyright (c) 2013-2017 Datenstrom, http://datenstrom.se
+// Search plugin, https://github.com/datenstrom/yellow-plugins/tree/master/search
+// Copyright (c) 2013-2017 Datenstrom, https://datenstrom.se
 // This file may be used and distributed under the terms of the public license.
 
-// Search plugin
 class YellowSearch
 {
 	const VERSION = "0.6.8";
