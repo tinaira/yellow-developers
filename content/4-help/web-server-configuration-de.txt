@@ -85,7 +85,7 @@ Stelle sicher dass der Webserver Dateien lesen und schreiben kann. Du kannst [Sc
 
 ## Statische Webseite
 
-Yellow ist ein Flat-File-CMS und ein Static-Site-Generator. Um statische Seiten zu erstellen führt man einen Build-Befehl im Verzeichnis der Yellow-Installation aus. Daraufhin wird eine komplett statische Webseite erstellt, die auf jedem Webserver funktioniert.
+Yellow ist ein Flat-File-CMS und ein Static-Site-Generator. Um statische Seiten zu erstellen führt man einen Build-Befehl im Verzeichnis der Yellow-Installation aus. Daraufhin wird eine statische Webseite erstellt, die auf jedem Webserver funktioniert.
 
 Du kannst eine statische Webseite in der [Befehlszeile](https://github.com/datenstrom/yellow-plugins/tree/master/commandline) erstellen:
 
@@ -95,7 +95,7 @@ Du kannst eine statische Webseite in der [Befehlszeile](https://github.com/daten
 
 Das erstellt eine statische Webseite im Verzeichnis `/var/www/website`. Lade das Verzeichnis auf dein Webhosting hoch und erstelle bei Bedarf eine neue Version. Die URL kann man in den [Systemeinstellungen](adjusting-system-de#systemeinstellungen) festlegen, zum Beispiel `StaticUrl: http://website/`. 
 
-Als Alternative zu einer statischen Webseite kann man auch einzelne Seiten zum Cache hinzufügen. Hier ist ein Beispiel: `php yellow.php build cache /blog/blog-example`. Zum Löschen des Caches gibt man die folgende Zeile ein: `php yellow.php clean`.
+Als Alternative zu einer statischen Webseite kann man einen Cache erstellen. Das beschleunigt deine Webseite, jedoch muss man den Cache immer wieder aktualisieren. Hier ist ein Beispiel: `php yellow.php build`. Zum Löschen des Caches gibt man ein: `php yellow.php clean`.
 
 ## Fehlerseite
 

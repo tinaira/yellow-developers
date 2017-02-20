@@ -9,6 +9,7 @@ Entrez en contact avec d'autres utilisateurs de Yellow et trouvez de l'aide prof
 ## Comment obtenir de l'aide
 
 * [Discuter des problèmes et suggestions](https://github.com/datenstrom/yellow/issues)
+* [Markdown antisèche](markdown-cheat-sheet-fr)
 * [Interrogez un humain](https://datenstrom.se/fr/contact/)
 
 ## Suivez-nous

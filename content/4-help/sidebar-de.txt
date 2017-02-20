@@ -26,7 +26,7 @@ Einstellungen
 * [Sicherheitseinstellungen](security-configuration-de)
 * [Webservereinstellungen](web-server-configuration-de)
 
-Entwickler
+Anpassungen
 
 * [Yellow-Themes](yellow-themes-de)
 * [Yellow-Templates](yellow-templates-de)

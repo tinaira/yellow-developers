@@ -8,6 +8,7 @@ Connect with other Yellow users and find professional help.
 ## How to get support
 
 * [Discuss problems and suggestions](https://github.com/datenstrom/yellow/issues)
+* [Markdown cheat sheet](markdown-cheat-sheet)
 * [Contact a human](https://datenstrom.se/contact/)
 
 ## Where to find us

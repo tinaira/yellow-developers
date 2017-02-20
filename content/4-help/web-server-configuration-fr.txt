@@ -96,7 +96,7 @@ Vous pouvez créer un site statique depuis une interface en [ligne de commande](
 
 Ceci construira votre site statique dans le dossier `/var/www/website`. Placez ce dossier sur votre espace d'hébergement, et contruisez une nouvelle version lorsque c'est nécessaire. L'URL peut être défini dans les [paramètres du système](adjusting-system-fr#paramètres-du-système), par exemple `StaticUrl: http://website/`.
 
-Une alternative au site statique consiste à ajouter des pages individuellement au cache. Voici un exemple: `php yellow.php build cache /blog/blog-example`. Pour effacer le cache, tapez la commande suivante: `php yellow.php clean cache`.
+Comme alternative à un site statique, vous pouvez créer un cache. Cela accélère votre site web, mais vous devez mettre à jour le cache à plusieurs reprises. Voici un exemple: `php yellow.php build`. Pour effacer le cache, tapez la commande suivante: `php yellow.php clean`.
 
 ## Page d'erreurs
 

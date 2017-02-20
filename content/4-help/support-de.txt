@@ -9,6 +9,7 @@ Tausche dich mit anderen Yellow-Benutzern aus und finde professionelle Hilfe.
 ## Support finden
 
 * [Diskutiere Probleme und Vorschläge](https://github.com/datenstrom/yellow/issues)
+* [Markdown-Spickzettel](markdown-cheat-sheet-de)
 * [Frage einen Menschen](https://datenstrom.se/de/contact/)
 
 ## Folge uns

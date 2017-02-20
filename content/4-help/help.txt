@@ -26,7 +26,7 @@ Yellow is for people who make websites. [Get support](support).
 * [Security configuration](security-configuration)
 * [Web server configuration](web-server-configuration)
 
-## Developers
+## Customisations
 
 * [Yellow themes](yellow-themes)
 * [Yellow templates](yellow-templates)
