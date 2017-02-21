@@ -5,7 +5,7 @@
 
 class YellowLinks
 {
-	const VERSION = "0.6.3";
+	const VERSION = "0.6.4";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -14,7 +14,7 @@ class YellowLinks
 		$this->yellow = $yellow;
 		$this->yellow->config->setDefault("linksPagePrevious", "0");
 		$this->yellow->config->setDefault("linksPageNext", "1");
-		$this->yellow->config->setDefault("linksStyle", "links");
+		$this->yellow->config->setDefault("linksStyle", "entry-links");
 	}
 	
 	// Handle page content parsing of custom block

@@ -5,7 +5,7 @@
 
 class YellowGooglecalendar
 {
-	const VERSION = "0.6.2";
+	const VERSION = "0.6.3";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -43,7 +43,7 @@ class YellowGooglecalendar
 			{
 				$output = "<div class=\"".htmlspecialchars($style)."\">";
 				$output .= "<iframe src=\"https://calendar.google.com/calendar/embed?mode=".rawurlencode($mode)."&amp;dates=".rawurlencode($this->getCalendarDate($timestamp, false))."&amp;ctz=".rawurlencode($timeZone)."&amp;wkst=".rawurlencode($this->getCalendarStart($dateWeekdays, $dateWeekstart))."&amp;hl=".rawurlencode($language)."&amp;showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;showDate=1";
-				foreach(preg_split("/,\s*/", $id) as $src)
+				foreach(preg_split("/\s*,\s*/", $id) as $src)
 				{
 					list($src, $color) = $this->getCalendarInformation($src);
 					if(!empty($src)) $output .= "&amp;src=".rawurlencode($src);
@@ -154,7 +154,7 @@ class YellowGooglecalendar
 	// Return calendar start
 	function getCalendarStart($weekdays, $weekstart)
 	{
-		$index = array_search($weekstart, preg_split("/,\s*/", $weekdays));
+		$index = array_search($weekstart, preg_split("/\s*,\s*/", $weekdays));
 		return 1+(($index+1)%7);
 	}
 }
