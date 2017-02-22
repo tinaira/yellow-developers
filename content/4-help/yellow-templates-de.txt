@@ -3,7 +3,7 @@ Title: Yellow-Templates
 Sidebar: sidebar-de
 Language: de
 ---
-Du kannst den Quellcode deiner Webseite anpassen.
+Du kannst den Quellcode deiner Webseite anpassen. [Demo anschauen](/tests/custom-template).
 
 ## Templates
 
@@ -18,6 +18,10 @@ Hier ist eine Beispiel-Templatedatei `system/themes/templates/default.html`:
 ```
 
 Snippets sind die Bausteine deiner Webseite. Es sind kleine Stücke [HTML](http://www.w3schools.com/html/) und [PHP](http://www.w3schools.com/php/). Du kannst alles in ein Template schreiben, aber es ist häufig praktischer ein Template in mehrere Snippets aufzuteilen und wiederzubenutzen. Mache was am Besten für dich funktioniert.
+
+Hier sieht man wie das Template im Webbrowser aussieht:
+
+[image screenshot-template.png Screenshot rounded]
 
 ## Template anpassen
 
@@ -98,7 +102,7 @@ Hier ist eine Beispiel-Snippetdatei `system/themes/snippets/footer.php`:
 ``` php
 <div class="footer">
 <div class="siteinfo">
-<a href="<?php echo $yellow->page->base."/" ?>">&copy; 2016 <?php echo $yellow->page->getHtml("sitename") ?></a>.
+<a href="<?php echo $yellow->page->base."/" ?>">&copy; 2017 <?php echo $yellow->page->getHtml("sitename") ?></a>.
 <a href="<?php echo $yellow->page->get("pageEdit") ?>">Edit</a>.
 <a href="<?php echo $yellow->text->get("yellowUrl") ?>">Made with Yellow</a>.
 </div>
@@ -114,6 +118,7 @@ Hier ist die selbe Snippetdatei mit Links zu sozialen Medien:
 ``` php
 <div class="footer">
 <div class="siteinfo">
+<a href="<?php echo $yellow->page->base."/" ?>">&copy; 2017 <?php echo $yellow->page->getHtml("sitename") ?></a>.
 <a href="https://twitter.com/datenstromse">Twitter</a>.
 <a href="https://github.com/datenstrom">GitHub</a>.
 <a href="https://instagram.com/datenstromse">Instagram</a>.

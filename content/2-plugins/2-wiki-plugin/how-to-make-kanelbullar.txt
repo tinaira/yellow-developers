@@ -1,5 +1,6 @@
 ---
 Title: How to make kanelbullar
+Template: wiki
 Tag: Example, Coffee
 ---
 Kanelbullar are a Swedish bakery also known as cinnamon buns.

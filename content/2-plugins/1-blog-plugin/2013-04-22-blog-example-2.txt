@@ -1,6 +1,7 @@
 ---
 Title: Blog example two
 Published: 2013-04-22
+Template: blog
 Author: Yellow
 Tag: Example, Code
 ---

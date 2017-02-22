@@ -3,7 +3,7 @@ Title: Yellow templates
 Sidebar: sidebar
 Language: en
 ---
-You can customise the source code of your website.
+You can customise the source code of your website. [See demo](/tests/custom-template).
 
 ## Templates
 
@@ -18,6 +18,10 @@ Here's an example template file `system/themes/templates/default.html`:
 ```
 
 Snippets are the building blocks of your website. They are small pieces of [HTML](http://www.w3schools.com/html/) and [PHP](http://www.w3schools.com/php/). You can put everything into one template, but it's often more practical to split a template up into multiple snippets and to reuse them. Do what works best for you. 
+
+Here you see how the template looks in a web browser:
+
+[image screenshot-template.png Screenshot rounded]
 
 ## Custom template
 
@@ -98,7 +102,7 @@ Here's an example snippet file `system/themes/snippets/footer.php`:
 ``` php
 <div class="footer">
 <div class="siteinfo">
-<a href="<?php echo $yellow->page->base."/" ?>">&copy; 2016 <?php echo $yellow->page->getHtml("sitename") ?></a>.
+<a href="<?php echo $yellow->page->base."/" ?>">&copy; 2017 <?php echo $yellow->page->getHtml("sitename") ?></a>.
 <a href="<?php echo $yellow->page->get("pageEdit") ?>">Edit</a>.
 <a href="<?php echo $yellow->text->get("yellowUrl") ?>">Made with Yellow</a>.
 </div>
@@ -114,6 +118,7 @@ Here's the same snippet file with social media links:
 ``` php
 <div class="footer">
 <div class="siteinfo">
+<a href="<?php echo $yellow->page->base."/" ?>">&copy; 2017 <?php echo $yellow->page->getHtml("sitename") ?></a>.
 <a href="https://twitter.com/datenstromse">Twitter</a>.
 <a href="https://github.com/datenstrom">GitHub</a>.
 <a href="https://instagram.com/datenstromse">Instagram</a>.

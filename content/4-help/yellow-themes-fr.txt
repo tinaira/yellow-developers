@@ -84,6 +84,6 @@ Here's the default HTML layout:
 </html>
 ```
 
-The first `<div>` element contains useful class information, for example `template-default`. A blog page uses `template-blog`, a wiki page `template-wiki` and a sidebar `with-sidebar`. This allows you to adjust themes to different features.
+The first `<div>` element contains useful class information, for example `template-default`. A blog page uses `template-blog`, a wiki page `template-wiki` and a sidebar `with-sidebar`. This allows you to adjust themes to different templates.
 
 [Suivant: Templates de Yellow →](yellow-templates-fr)

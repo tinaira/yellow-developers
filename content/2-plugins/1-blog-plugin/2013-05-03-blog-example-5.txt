@@ -1,6 +1,7 @@
 ---
 Title: Blog example five
 Published: 2013-05-03
+Template: blog
 Author: Yellow
 Tag: Example, Photo
 ---

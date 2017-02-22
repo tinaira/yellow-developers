@@ -2,6 +2,6 @@
 Title: Test draft status
 Status: draft
 ---
-This page tests draft status plugin. 
+This page tests draft status plugin.
 
 A page with draft status is visible in web interface only.

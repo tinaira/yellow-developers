@@ -1,6 +1,7 @@
 ---
 Title: Made for people
 Published: 2015-10-11
+Template: blog
 Author: Yellow
 Tag: Example
 ---

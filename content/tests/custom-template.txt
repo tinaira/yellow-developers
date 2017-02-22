@@ -3,6 +3,4 @@ Title: Test custom template
 Template: custom
 Navigation: navigation-custom
 ---
-[image yellow-photo.jpg Picture]
-
-This page tests custom template and navigation.
+This page tests custom navigation, content and footer.

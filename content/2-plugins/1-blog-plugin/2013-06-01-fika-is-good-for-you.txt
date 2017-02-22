@@ -1,6 +1,7 @@
 ---
 Title: Fika is good for you
 Published: 2013-06-01
+Template: blog
 Author: Yellow
 Tag: Example, Coffee, Video
 ---
