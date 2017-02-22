@@ -33,14 +33,14 @@ class YellowLinks
 			{
 				$output = "<div class=\"".htmlspecialchars($style)."\">\n";
 				$output .= "<p>";
-				$pagePrevious = $pages->getPagePrevious($page);
-				if($pagePrevious && $this->yellow->config->get("linksPagePrevious"))
+				if($this->yellow->config->get("linksPagePrevious")) $pagePrevious = $pages->getPagePrevious($page);
+				if($pagePrevious)
 				{
 					$text = preg_replace("/@title/i", $pagePrevious->get("title"), $this->yellow->text->get("pagePrevious"));
 					$output .= "<a class=\"previous\" href=\"".$pagePrevious->getLocation(true)."\">".htmlspecialchars($text)."</a>";
 				}
-				$pageNext = $pages->getPageNext($page);
-				if($pageNext && $this->yellow->config->get("linksPageNext"))
+				if($this->yellow->config->get("linksPageNext")) $pageNext = $pages->getPageNext($page);
+				if($pageNext)
 				{
 					if($pagePrevious) $output .= " ";
 					$text = preg_replace("/@title/i", $pageNext->get("title"), $this->yellow->text->get("pageNext"));
