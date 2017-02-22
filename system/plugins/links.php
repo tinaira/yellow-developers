@@ -5,7 +5,7 @@
 
 class YellowLinks
 {
-	const VERSION = "0.6.4";
+	const VERSION = "0.6.5";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -32,20 +32,21 @@ class YellowLinks
 			if(count($pages))
 			{
 				$output = "<div class=\"".htmlspecialchars($style)."\">\n";
-				if($pages->getPagePrevious($page) && $this->yellow->config->get("linksPagePrevious"))
+				$output .= "<p>";
+				$pagePrevious = $pages->getPagePrevious($page);
+				if($pagePrevious && $this->yellow->config->get("linksPagePrevious"))
 				{
-					$pagePrevious = $pages->getPagePrevious($page);
-					$text = $this->yellow->text->get("pagePrevious");
-					$text = preg_replace("/@title/i", $pagePrevious->get("title"), $text);
-					$output .= "<a class=\"previous\" href=\"".$pagePrevious->getLocation(true)."\">".htmlspecialchars($text)."</a>\n";
+					$text = preg_replace("/@title/i", $pagePrevious->get("title"), $this->yellow->text->get("pagePrevious"));
+					$output .= "<a class=\"previous\" href=\"".$pagePrevious->getLocation(true)."\">".htmlspecialchars($text)."</a>";
 				}
-				if($pages->getPageNext($page) && $this->yellow->config->get("linksPageNext"))
+				$pageNext = $pages->getPageNext($page);
+				if($pageNext && $this->yellow->config->get("linksPageNext"))
 				{
-					$pageNext = $pages->getPageNext($page);
-					$text = $this->yellow->text->get("pageNext");
-					$text = preg_replace("/@title/i", $pageNext->get("title"), $text);
-					$output .= "<a class=\"next\" href=\"".$pageNext->getLocation(true)."\">".htmlspecialchars($text)."</a>\n";
+					if($pagePrevious) $output .= " ";
+					$text = preg_replace("/@title/i", $pageNext->get("title"), $this->yellow->text->get("pageNext"));
+					$output .= "<a class=\"next\" href=\"".$pageNext->getLocation(true)."\">".htmlspecialchars($text)."</a>";
 				}
+				$output .= "<p>\n";
 				$output .="</div>\n";
 			}
 		}
