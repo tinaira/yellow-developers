@@ -5,7 +5,7 @@
 
 class YellowContact
 {
-	const VERSION = "0.6.8";
+	const VERSION = "0.6.9";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -53,6 +53,7 @@ class YellowContact
 			if($_REQUEST["status"]=="send")
 			{
 				$status = $this->sendMail();
+				if($status=="config") $this->yellow->page->error(500, "Webmaster configuration not valid!");
 				if($status=="error") $this->yellow->page->error(500, $this->yellow->text->get("contactStatusError"));
 				$this->yellow->page->setHeader("Last-Modified", $this->yellow->toolbox->getHttpDateFormatted(time()));
 				$this->yellow->page->setHeader("Cache-Control", "no-cache, must-revalidate");
@@ -77,7 +78,7 @@ class YellowContact
 		if($this->yellow->page->isExisting("author") && !$this->yellow->page->parserSafeMode) $author = $this->yellow->page->get("author");
 		if($this->yellow->page->isExisting("email") && !$this->yellow->page->parserSafeMode) $email = $this->yellow->page->get("email");
 		if(empty($name) || empty($from) || empty($message)) $status = "incomplete";
-		if(empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) $status = "error";
+		if(empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) $status = "config";
 		if(!empty($from) && !filter_var($from, FILTER_VALIDATE_EMAIL)) $status = "invalid";
 		if(!empty($message) && preg_match("/$spamFilter/i", $message)) $status = "error";
 		if($status=="send")
