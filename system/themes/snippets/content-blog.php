@@ -10,11 +10,11 @@
 <div class="entry-meta"><p><?php echo $yellow->page->getDateHtml("published") ?> <?php echo $yellow->text->getHtml("blogBy") ?> <?php $authorCounter = 0; foreach(preg_split("/\s*,\s*/", $yellow->page->get("author")) as $author) { if(++$authorCounter>1) echo ", "; echo "<a href=\"".$yellow->page->getPage("blog")->getLocation(true).$yellow->toolbox->normaliseArgs("author:$author")."\">".htmlspecialchars($author)."</a>"; } ?></p></div>
 <div class="entry-content"><?php echo $yellow->page->getContent() ?></div>
 <?php echo $yellow->page->getExtra("links") ?>
-<div class="entry-tags">
 <?php if($yellow->page->isExisting("tag")): ?>
+<div class="entry-tags">
 <p><?php echo $yellow->text->getHtml("blogTag") ?> <?php $tagCounter = 0; foreach(preg_split("/\s*,\s*/", $yellow->page->get("tag")) as $tag) { if(++$tagCounter>1) echo ", "; echo "<a href=\"".$yellow->page->getPage("blog")->getLocation(true).$yellow->toolbox->normaliseArgs("tag:$tag")."\">".htmlspecialchars($tag)."</a>"; } ?></p>
-<?php endif ?>
 </div>
+<?php endif ?>
 <?php echo $yellow->page->getExtra("comments") ?>
 </div>
 </div>

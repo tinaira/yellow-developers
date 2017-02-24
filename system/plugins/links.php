@@ -5,7 +5,7 @@
 
 class YellowLinks
 {
-	const VERSION = "0.6.5";
+	const VERSION = "0.6.6";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -29,17 +29,17 @@ class YellowLinks
 			$pages = $parent ? $page->getSiblings(!$parent->isVisible()) : $this->yellow->pages->clean();
 			$pages->sort($publicationOrder ? "published" : "title", true);
 			$page->setLastModified($pages->getModified());
-			if(count($pages))
+			if($this->yellow->config->get("linksPagePrevious")) $pagePrevious = $pages->getPagePrevious($page);
+			if($this->yellow->config->get("linksPageNext")) $pageNext = $pages->getPageNext($page);
+			if($pagePrevious || $pageNext)
 			{
 				$output = "<div class=\"".htmlspecialchars($style)."\">\n";
 				$output .= "<p>";
-				if($this->yellow->config->get("linksPagePrevious")) $pagePrevious = $pages->getPagePrevious($page);
 				if($pagePrevious)
 				{
 					$text = preg_replace("/@title/i", $pagePrevious->get("title"), $this->yellow->text->get("pagePrevious"));
 					$output .= "<a class=\"previous\" href=\"".$pagePrevious->getLocation(true)."\">".htmlspecialchars($text)."</a>";
 				}
-				if($this->yellow->config->get("linksPageNext")) $pageNext = $pages->getPageNext($page);
 				if($pageNext)
 				{
 					if($pagePrevious) $output .= " ";
