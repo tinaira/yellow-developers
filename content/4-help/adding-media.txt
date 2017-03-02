@@ -31,18 +31,20 @@ Images in different sizes:
     [image picture.jpg Picture - 320 200]
     [image picture.jpg Picture - 50%]
 
-## Videos
+## Audio
 
-You can use the [Youtube plugin](https://github.com/datenstrom/yellow-plugins/tree/master/youtube) and [Vimeo plugin](https://github.com/datenstrom/yellow-plugins/tree/master/vimeo) to embed videos:
+You can use the [Soundcloud plugin](https://github.com/datenstrom/yellow-plugins/tree/master/soundcloud) to embed audio:
+
+    [soundcloud 101175715]
+    [soundcloud 101175715 left 200 166]
+    [soundcloud 101175715 right 200 166]
+
+## Video
+
+You can use the [Youtube plugin](https://github.com/datenstrom/yellow-plugins/tree/master/youtube) to embed videos:
 
     [youtube fhs55HEl-Gc]
     [youtube fhs55HEl-Gc left 200 112]
     [youtube fhs55HEl-Gc right 200 112]
-
-Embedding a Vimeo video:
-
-    [vimeo 13387502]
-    [vimeo 13387502 left 200 112]
-    [vimeo 13387502 right 200 112]
 
 [Next: Adjusting system →](adjusting-system)

@@ -31,18 +31,20 @@ Images de différentes tailles:
     [image picture.jpg Picture - 320 200]
     [image picture.jpg Picture - 50%]
 
-## Vidéos
+## Audio
 
-Vous pouvez utiliser le [plugin Youtube](https://github.com/datenstrom/yellow-plugins/tree/master/youtube) et le [plugin Vimeo](https://github.com/datenstrom/yellow-plugins/tree/master/vimeo) pour intégrer des vidéos: 
+Vous pouvez utiliser le [plugin Soundcloud](https://github.com/datenstrom/yellow-plugins/tree/master/soundcloud) pour intégrer audio: 
+
+    [soundcloud 101175715]
+    [soundcloud 101175715 left 200 166]
+    [soundcloud 101175715 right 200 166]
+
+## Vidéo
+
+Vous pouvez utiliser le [plugin Youtube](https://github.com/datenstrom/yellow-plugins/tree/master/youtube) pour intégrer des vidéos: 
 
     [youtube fhs55HEl-Gc]
     [youtube fhs55HEl-Gc left 200 112]
     [youtube fhs55HEl-Gc right 200 112]
-
-Insérer une vidéo Vimeo:
-
-    [vimeo 13387502]
-    [vimeo 13387502 left 200 112]
-    [vimeo 13387502 right 200 112]
 
 [Suivant: Ajuster le système →](adjusting-system-fr)

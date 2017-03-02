@@ -20,7 +20,7 @@ Le fichier de configuration principal est `system/config/config.ini`. Voici un e
     Timezone: Europe/Paris
     Theme: flatsite
 
-Vous pouvez y définir les paramètres par défaut, par exemple le nom du site web et l'email du webmaster. Des [paramètres](markdown-cheat-sheet-fr#paramètres) individuels peuvent être définis au haut de chaque page. Lors d'une nouvelle installation, il est conseillé de modifier `Sitename`, `Author` et `Email`. Vous pouvez y [définir le langage](language-configuration-fr) et installer d'autres traductions.
+Vous pouvez y définir les paramètres par défaut, par exemple le nom du site web et l'email du webmaster. Des [paramètres](markdown-cheat-sheet-fr#paramètres) individuels peuvent être définis au haut de chaque page. Lors d'une nouvelle installation, il est conseillé de modifier `Sitename`, `Author` et `Email`.
 
 ## Comptes d'utilisateurs
 
@@ -30,10 +30,16 @@ Tous les utilisateurs sont stockés dans le fichier `system/config/user.ini`. Vo
     demo@demo.com: $2y$10$8TKEuytrwiLSICJNlW5.yOE9CQPXJmqXL2Af6rPsSch1/9UiXEZjm,Yellow,en,active,946684800,none,/
     guest@guest.com: $2y$10$4VENNhK/hb3US8zJdimJduratVuQloACbdmbGhoFUyqHvU6mbpPm.,Guest,en,active,946684800,none,/tests/
 
-L'[interface web](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface) vous permet de créer de nouveaux comptes d'utilisateurs et de changer les mots de passe. Un compte d'utilisateur se compose d'un email, d'un mot de passe crypté, de différents paramètres, tandis que le dernier paramètre concerne la page d'accueil de l'utilisateur. Vous pouvez en effet [restreindre l'accès de votre site web](security-configuration-fr#restriction-utilisateur) en définissant une page d'accueil propre à chaque utilisateur.
+L'[interface web](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface) vous permet de créer de nouveaux comptes d'utilisateurs et de changer les mots de passe. Un compte d'utilisateur se compose d'un email, d'un mot de passe crypté, de différents paramètres, tandis que le dernier paramètre concerne la page d'accueil de l'utilisateur.
 
 ## Plugins et thèmes
 
-Yellow s'installe avec un minimum de fonctionnalité. Vous avez de quoi créer un site web et quelques pages, mais vous souhaitez peut-être intégrer un blog ou une galerie d'images ? Il existe une liste de [plugins](/plugins/) et de [thèmes](/themes/) spécifiques à télécharger.
+Yellow s'installe avec un minimum de fonctionnalité. Vous obtenez les choses les plus importantes pour créer un petit site web et pouvez ajouter d'autres fonctionnalités. Il existe une liste de [plugins](/plugins/) et de [thèmes](/themes/) spécifiques à télécharger. Les plugins suivants sont inclus:
+
+* [Commandline](https://github.com/datenstrom/yellow-plugins/tree/master/commandline): Exécuter des commandes dans une fenêtre de terminal
+* [Webinterface](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface): Modifiez votre site web dans un navigateur web
+* [Image](https://github.com/datenstrom/yellow-plugins/tree/master/image): Intégrer des images et des miniatures redimensionnables
+* [Markdown](https://github.com/datenstrom/yellow-plugins/tree/master/markdown): Formatage de texte pour les humains
+* [Update](https://github.com/datenstrom/yellow-plugins/tree/master/update): Gardez votre site à jour
 
 [Suivant: Configuration de la langue →](language-configuration-fr)

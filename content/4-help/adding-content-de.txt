@@ -3,7 +3,7 @@ Title: Inhalt hinzufügen
 Sidebar: sidebar-de
 Language: de
 ---
-Alle Inhalte befinden sich im `content`-Verzeichnis. Hier aktualisierst du deine Webseite. 
+Alle Inhalte befinden sich im `content`-Verzeichnis. Hier bearbeitest du deine Webseite. 
 
 [image screenshot-content.png Screenshot]
 
@@ -35,11 +35,5 @@ Lass uns einen Blick auf Textdateien werfen. Öffne die Datei `content/1-home/pa
 Du kannst Seiten mit [Markdown](markdown-cheat-sheet-de) schreiben. Markdown ist eine praktische Art um Webseiten zu bearbeiten. Zum größten Teil schreibt man Text wie eine E-Mail und es wird zur Webseite. Hier ist ein Beispiel wie man Text formatiert:
 
     Normal *Kursiv* **Fettschrift** `Code`
-
-Eine Liste erstellen:
-
-    * Punkt eins
-    * Punkt zwei
-    * Punkt drei
 
 [Weiter: Medien hinzufügen →](adding-media-de)

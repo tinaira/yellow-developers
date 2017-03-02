@@ -3,7 +3,7 @@ Title: Ajouter des pages
 Sidebar: sidebar-fr
 Language: fr
 ---
-Les pages de votre site se trouvent dans le dossier `content`. Vous pouvez mettre à jour votre site web à partir de ce dossier.
+Les pages de votre site se trouvent dans le dossier `content`. Vous pouvez modifier votre site web à partir de ce dossier.
 
 [image screenshot-content.png Screenshot]
 
@@ -35,11 +35,5 @@ Regardons de plus près les fichiers texte. Ouvrez le fichier `content/1-home/pa
 Vous pouvez écrire vos pages à l'aide de la syntaxe [Markdown](markdown-cheat-sheet-fr). Markdown est un moyen pratique pour éditer des pages web. En gros, il suffit de rédiger votre page en utilisant des balises qui seront converties pour en faire une page web. Voici quelques exemples de la syntaxe Markdown:
 
     Normal *italique* **gras** `code`
-
-Créer une liste:
-
-    * point une
-    * point deux
-    * point trois
 
 [Suivant: Ajouter des fichiers →](adding-media-fr)

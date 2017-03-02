@@ -3,7 +3,7 @@ Title: Adding content
 Sidebar: sidebar
 Language: en
 ---
-All content is located in the `content` folder. You can update your website here.
+All content is located in the `content` folder. You can edit your website here.
 
 [image screenshot-content.png Screenshot]
 
@@ -35,11 +35,5 @@ Let's have a closer look at text files. Open the file `content/1-home/page.txt` 
 You can write pages in [Markdown](markdown-cheat-sheet). Markdown is a practical way to edit web pages. For the most part, write text like an email and it becomes a web page. Here's an example how to format text:
 
     Normal *italic* **bold** `code`
-
-Making a list:
-
-    * item one
-    * item two
-    * item three
 
 [Next: Adding media →](adding-media)

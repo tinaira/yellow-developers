@@ -20,7 +20,7 @@ The main configuration file is `system/config/config.ini`. Here's an example:
     Timezone: Europe/Stockholm
     Theme: flatsite
 
-You can define the default settings here, for example the name of the website and the email of the webmaster. Individual [settings](markdown-cheat-sheet#settings) can be defined at the top of each page. For a new installation you should set `Sitename`, `Author` and `Email`. You can [configure languages](language-configuration) and download more languages.
+You can define the default settings here, for example the name of the website and the email of the webmaster. Individual [settings](markdown-cheat-sheet#settings) can be defined at the top of each page. For a new installation you should set `Sitename`, `Author` and `Email`.
 
 ## User accounts
 
@@ -30,10 +30,16 @@ All user accounts are stored in file `system/config/user.ini`. Here's an example
     demo@demo.com: $2y$10$8TKEuytrwiLSICJNlW5.yOE9CQPXJmqXL2Af6rPsSch1/9UiXEZjm,Yellow,en,active,946684800,none,/
     guest@guest.com: $2y$10$4VENNhK/hb3US8zJdimJduratVuQloACbdmbGhoFUyqHvU6mbpPm.,Guest,en,active,946684800,none,/tests/
 
-You can use the [web interface](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface) to create new user accounts and change passwords. A user account consists of email, encrypted password, different settings and at the end of the line is the user's home page. You can [restrict user accounts](security-configuration#user-restrictions) by defining a home page for the user.
+You can use the [web interface](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface) to create new user accounts and change passwords. A user account consists of email, encrypted password, different settings and at the end of the line is the user's home page.
 
 ## Plugins and themes
 
-Yellow concentrates on the essential aspects. You get the most important things to create a small website and can add more features. How about a blog or an image gallery? There are [plugins](/plugins/) and [themes](/themes/) you can download.
+Yellow concentrates on the essential aspects. You get the most important things to create a small website and can add more features. There are [plugins](/plugins/) and [themes](/themes/) you can download. The following plugins are included:
+
+* [Commandline](https://github.com/datenstrom/yellow-plugins/tree/master/commandline): Run commands in a terminal window 
+* [Webinterface](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface): Edit your website in a web browser
+* [Image](https://github.com/datenstrom/yellow-plugins/tree/master/image): Embed resizable images and thumbnails
+* [Markdown](https://github.com/datenstrom/yellow-plugins/tree/master/markdown): Text formatting for humans
+* [Update](https://github.com/datenstrom/yellow-plugins/tree/master/update): Keep your website up to date
 
 [Next: Language configuration →](language-configuration)
