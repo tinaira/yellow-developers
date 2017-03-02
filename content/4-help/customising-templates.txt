@@ -1,15 +1,13 @@
 ---
-Title: Templates de Yellow
-Sidebar: sidebar-fr
-Language: fr
+Title: Customising templates
+Sidebar: sidebar
+Language: en
 ---
->>> [Vous pouvez nous aider à traduire cette page.](https://github.com/datenstrom/yellow-developers/blob/master/content/4-help/yellow-templates-fr.txt)
-
-Vous pouvez personnaliser les fonctionnalités de votre site web. [Voir la démo](/tests/custom-template).
+You can customise the source code of your website. [See demo](/tests/custom-template).
 
 ## Templates
 
-Templates generate the source code of your website. Let's see how templates are made. There's a default template defined in file `system/config/config.ini`. A different template can be defined in the [settings](markdown-cheat-sheet#settings) at the top of each page, for example `Template: default`. 
+Templates generate the source code of your website. Let's see how templates are made. The default template is defined in the [system settings](adjusting-system#system-settings). A different template can be defined in the [settings](markdown-cheat-sheet#settings) at the top of each page, for example `Template: default`. 
 
 Here's an example template file `system/themes/templates/default.html`:
 
@@ -20,10 +18,6 @@ Here's an example template file `system/themes/templates/default.html`:
 ```
 
 Snippets are the building blocks of your website. They are small pieces of [HTML](http://www.w3schools.com/html/) and [PHP](http://www.w3schools.com/php/). You can put everything into one template, but it's often more practical to split a template up into multiple snippets and to reuse them. Do what works best for you. 
-
-Here you see how the template looks in a web browser:
-
-[image screenshot-template.png Screenshot rounded]
 
 ## Custom template
 
@@ -52,7 +46,9 @@ Here's an example snippet file `system/themes/snippets/content-custom.php`:
 
 ## Custom navigation
 
-To adjust the navigation change the corresponding snippet. There's a default navigation defined in file `system/config/config.ini`. A different navigation can be defined in the [settings](markdown-cheat-sheet#settings) at the top of each page, for example `Navigation: navigation`.
+To adjust the navigation change the corresponding snippet. There's a default navigation defined in the [system settings](adjusting-system#system-settings). A different navigation can be defined in the [settings](markdown-cheat-sheet#settings) at the top of each page, for example `Navigation: navigation`.
+
+[image screenshot-template1.png Screenshot]
 
 The following navigations are available:
 
@@ -99,6 +95,8 @@ Here's the same snippet file with [social media icons](https://github.com/datens
 
 To adjust the footer change the corresponding snippet. The template defines which snippets will be used, the footer is usually on the bottom. You can either change the available snippet or create a new snippet.
 
+[image screenshot-template2.png Screenshot]
+
 Here's an example snippet file `system/themes/snippets/footer.php`:
 
 ``` php
@@ -138,6 +136,8 @@ Here's the same snippet file with social media links:
 
 To show a sidebar add the file `sidebar.txt` to any `content` folder. The sidebar will be shown on all pages in the same folder. A different sidebar can be defined in the [settings](markdown-cheat-sheet#settings) at the top of each page, for example `Sidebar: sidebar`.
 
+[image screenshot-template3.png Screenshot]
+
 Here's an example sidebar file `content/1-home/sidebar.txt`:
 
 ```
@@ -152,4 +152,4 @@ Links
 * [Instagram](https://instagram.com/datenstromse)
 ```
 
-[Suivant: Interface de programmation →](yellow-api-fr)
+[Next: API for developers →](yellow-api)

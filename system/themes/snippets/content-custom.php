@@ -1,4 +1,4 @@
-<?php $pages = $yellow->pages->index()->filter("template", "blog")->sort("published", false)->limit(3) ?>
+<?php $pages = $yellow->pages->index()->filter("tag", "coffee")->sort("modified", false)->limit(3) ?>
 <?php $yellow->page->setLastModified($pages->getModified()) ?>
 <?php $yellow->page->setHeader("Cache-Control", "max-age=60") ?>
 <div class="content">

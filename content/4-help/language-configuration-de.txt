@@ -7,7 +7,7 @@ Wie man eine Webseite mit verschiedenen Sprachen konfiguriert.
 
 ## Sprachen
 
-Yellow ist mehrsprachig und es gibt weitere [Sprachen](https://github.com/datenstrom/yellow-plugins/tree/master/language) zum Herunterladen. Die Standardsprache wird in der Datei `system/config/config.ini` festgelegt. Eine andere Sprache lässt sich in den [Einstellungen](markdown-cheat-sheet-de#einstellungen) ganz oben auf jeder Seite festlegen, zum Beispiel `Language: en`. 
+Yellow ist mehrsprachig und es gibt weitere [Sprachen](https://github.com/datenstrom/yellow-plugins/tree/master/language) zum Herunterladen. Die Standardsprache wird in den [Systemeinstellungen](adjusting-system-de#systemeinstellungen) festgelegt. Eine andere Sprache lässt sich in den [Einstellungen](markdown-cheat-sheet-de#einstellungen) ganz oben auf jeder Seite festlegen, zum Beispiel `Language: en`. 
 
 Hier ist eine Englische Seite:
 
@@ -51,6 +51,6 @@ Der erste Screenshot zeigt die Verzeichnisse `1-en`, `2-de` und `3-fr`. Das erze
 
 Der zweite Screenshot zeigt die Verzeichnisse `1-en`, `2-de`, `3-fr` und `default`. Das erzeugt die URLs `http://website/en/` `http://website/de/` `http://website/fr/` und die Startseite `http://website/` welche automatisch die Sprache des Besuchers ermittelt. 
 
-Um die [Navigation](yellow-templates-de#navigation-anpassen) anzupassen, öffne die Datei `system/config/config.ini` und ändere `Navigation: navigation-multilanguage`. Eine Sprachauswahl kann man auch irgendwo anders in die Webseite einbauen, beispielsweise in die [Fußzeile](yellow-templates-de#fußzeile-anpassen).
+Um die [Navigation](customising-templates-de#navigation-anpassen) anzupassen, öffne die Datei `system/config/config.ini` und ändere `Navigation: navigation-multilanguage`. Eine Sprachauswahl kann man auch irgendwo anders in die Webseite einbauen, beispielsweise in die [Fußzeile](customising-templates-de#fußzeile-anpassen).
 
 [Weiter: Sicherheitseinstellungen →](security-configuration-de)

@@ -1,5 +1,5 @@
 ---
-Title: Yellow-Templates
+Title: Templates anpassen
 Sidebar: sidebar-de
 Language: de
 ---
@@ -7,7 +7,7 @@ Du kannst den Quellcode deiner Webseite anpassen. [Demo anschauen](/tests/custom
 
 ## Templates
 
-Templates erzeugen den Quellcode deiner Webseite. Das Standardtemplate wird in der Datei `system/config/config.ini` festgelegt. Eine anderes Template lässt sich in den [Einstellungen](markdown-cheat-sheet-de#einstellungen) ganz oben auf jeder Seite festlegen, zum Beispiel `Template: default`.
+Templates erzeugen den Quellcode deiner Webseite. Das Standardtemplate wird in den [Systemeinstellungen](adjusting-system-de#systemeinstellungen) festgelegt. Eine anderes Template lässt sich in den [Einstellungen](markdown-cheat-sheet-de#einstellungen) ganz oben auf jeder Seite festlegen, zum Beispiel `Template: default`.
 
 Hier ist eine Beispiel-Templatedatei `system/themes/templates/default.html`:
 
@@ -18,10 +18,6 @@ Hier ist eine Beispiel-Templatedatei `system/themes/templates/default.html`:
 ```
 
 Snippets sind die Bausteine deiner Webseite. Es sind kleine Stücke [HTML](http://www.w3schools.com/html/) und [PHP](http://www.w3schools.com/php/). Du kannst alles in ein Template schreiben, aber es ist häufig praktischer ein Template in mehrere Snippets aufzuteilen und wiederzubenutzen. Mache was am Besten für dich funktioniert.
-
-Hier sieht man wie das Template im Webbrowser aussieht:
-
-[image screenshot-template.png Screenshot rounded]
 
 ## Template anpassen
 
@@ -50,7 +46,9 @@ Hier ist eine Beispiel-Snippetdatei `system/themes/snippets/content-custom.php`:
 
 ## Navigation anpassen
 
-Um die Navigation anzupassen, ändere das entsprechende Snippet. Die Standardnavigation wird in der Datei `system/config/config.ini` festgelegt. Eine andere Navigation lässt sich in den [Einstellungen](markdown-cheat-sheet-de#einstellungen) ganz oben auf jeder Seite festlegen, zum Beispiel `Navigation: navigation`. 
+Um die Navigation anzupassen, ändere das entsprechende Snippet. Die Standardnavigation wird in den [Systemeinstellungen](adjusting-system-de#systemeinstellungen) festgelegt. Eine andere Navigation lässt sich in den [Einstellungen](markdown-cheat-sheet-de#einstellungen) ganz oben auf jeder Seite festlegen, zum Beispiel `Navigation: navigation`. 
+
+[image screenshot-template1.png Screenshot]
 
 Die folgenden Navigationen sind vorhanden:
 
@@ -97,6 +95,8 @@ Hier ist die selbe Snippetdatei mit [Icons für soziale Medien](https://github.c
 
 Um die Fußzeile anzupassen, ändere das entsprechende Snippet. Das Template legt fest welche Snippets benutzt werden, die Fußzeile befindet sich normalerweise ganz unten. Du kannst entweder das vorhandene Snippet ändern oder ein neues Snippet anlegen.
 
+[image screenshot-template2.png Screenshot]
+
 Hier ist eine Beispiel-Snippetdatei `system/themes/snippets/footer.php`:
 
 ``` php
@@ -136,6 +136,8 @@ Hier ist die selbe Snippetdatei mit Links zu sozialen Medien:
 
 Um eine Sidebar anzuzeigen, erstelle die Datei `sidebar.txt` in einem `content`-Verzeichnis. Die Sidebar wird auf allen Seiten im gleichen Verzeichnis angezeigt. Eine andere Sidebar lässt sich in den [Einstellungen](markdown-cheat-sheet-de#einstellungen) ganz oben auf jeder Seite festlegen, zum Beispiel `Sidebar: sidebar`. 
 
+[image screenshot-template3.png Screenshot]
+
 Hier ist eine Beispiel-Sidebar `content/1-home/sidebar.txt`:
 
 ```
@@ -150,4 +152,4 @@ Links
 * [Instagram](https://instagram.com/datenstromse)
 ```
 
-[Weiter: Yellow-Programmierung →](yellow-api-de)
+[Weiter: API für Entwickler →](yellow-api-de)

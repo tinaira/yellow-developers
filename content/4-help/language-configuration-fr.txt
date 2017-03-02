@@ -9,7 +9,7 @@ Comment configurer un site web avec des différents langages.
 
 ## Langages
 
-Yellow est multi-langage et il existe [différentes traductions](https://github.com/datenstrom/yellow-plugins/tree/master/language) que vous pouvez télécharger. La langue par défaut est définie dans le fichier `system/config/config.ini`. Une autre langue peut-être définie pour chacune de vos pages dans les [paramètres](markdown-cheat-sheet-fr#paramètres) en haut de celle-ci, par exemple `Language: en`.
+Yellow est multi-langage et il existe [différentes traductions](https://github.com/datenstrom/yellow-plugins/tree/master/language) que vous pouvez télécharger. La langue par défaut est définie dans les [paramètres du système](adjusting-system-fr#paramètres-du-système). Une autre langue peut-être définie pour chacune de vos pages dans les [paramètres](markdown-cheat-sheet-fr#paramètres) en haut de celle-ci, par exemple `Language: en`.
 
 Voici une page en anglais:
 
@@ -53,6 +53,6 @@ Cette capture d'écran montre les dossiers `1-en`, `2-de` et `3-fr`. Celà donne
 
 Ici nous voyons les dossiers `1-en`, `2-de`, `3-fr` et `default`. Celà donne accès aux URLs suivantes `http://website/en/` `http://website/de/` `http://website/fr/` ainsi qu'une page d'accueil à `http://website/` qui détectera automatiquement la langue pour le visiteur.
 
-Pour mofifier le menu de [navigation](yellow-templates#custom-navigation), ouvrez le fichier `system/config/config.ini` et changez `Navigation: navigation-multilanguage`. Vous pouvez également afficher un moyen pour le visiteur de sélectionner la langue du site ailleurs, par exemple dans le [pied de page](yellow-templates#custom-footer).
+Pour mofifier le menu de [navigation](customising-templates#custom-navigation), ouvrez le fichier `system/config/config.ini` et changez `Navigation: navigation-multilanguage`. Vous pouvez également afficher un moyen pour le visiteur de sélectionner la langue du site ailleurs, par exemple dans le [pied de page](customising-templates#custom-footer).
 
 [Suivant: Configuration de la sécurité →](security-configuration-fr)

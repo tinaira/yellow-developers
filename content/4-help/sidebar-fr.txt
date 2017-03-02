@@ -28,6 +28,6 @@ Configurations
 
 Personnalisations
 
-* [Thèmes de Yellow](yellow-themes-fr)
-* [Templates de Yellow](yellow-templates-fr)
-* [Interface de programmation](yellow-api-fr)
+* [Personnaliser des thèmes](customising-themes-fr)
+* [Personnaliser des templates](customising-templates-fr)
+* [API pour les développeurs](yellow-api-fr)

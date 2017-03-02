@@ -1,15 +1,15 @@
 ---
-Title: Yellow-Themes
+Title: Themes anpassen
 Sidebar: sidebar-de
 Language: de
 ---
-Du kannst das Aussehen deiner Webseite anpassen. [Demo anschauen](/themes/).
+Du kannst das Aussehen deiner Webseite anpassen. [Demo anschauen](/themes/berlin-theme).
 
 ## Themes
 
-Themes bestimmen das Aussehen deiner Webseite. Das Standardtheme wird in der Datei `system/config/config.ini` festgelegt. Eine anderes Theme lässt sich in den [Einstellungen](markdown-cheat-sheet-de#einstellungen) ganz oben auf jeder Seite festlegen, zum Beispiel `Theme: flatsite`. 
+Themes bestimmen das Aussehen deiner Webseite. Das Standardtheme wird in den [Systemeinstellungen](adjusting-system-de#systemeinstellungen) festgelegt. Eine anderes Theme lässt sich in den [Einstellungen](markdown-cheat-sheet-de#einstellungen) ganz oben auf jeder Seite festlegen, zum Beispiel `Theme: flatsite`. 
 
-Jede Webseite hat ein kleines Icon das zu ihr gehört, auch Favicon genannt. Der Webbrowser zeigt dieses Icon beispielsweise in der Adresszeile, in Lesezeichen oder auf der Arbeitsfläche an. Um das Standardicon zu ändern überschreibe die Datei `system/themes/assets/icon.png`.
+Jede Webseite hat ein kleines Icon, auch Favicon genannt. Der Webbrowser zeigt dieses Icon beispielsweise in der Adresszeile, in Lesezeichen oder auf der Arbeitsfläche an. Um das Standardicon zu ändern überschreibe die Datei `system/themes/assets/icon.png`.
 
 ## CSS
 
@@ -84,4 +84,8 @@ Hier ist die Standard-HTML-Struktur:
 
 Das erste `<div>`-Element hat nützliche Klassen-Information, zum Beispiel `template-default`. Eine Blog-Seite benutzt `template-blog`, eine Wiki-Seite `template-wiki` und eine Sidebar `with-sidebar`. Damit kannst du Themes an unterschiedliche Templates anpassen.
 
-[Weiter: Yellow-Templates →](yellow-templates-de)
+So sieht die Standard-HTML-Struktur im Webbrowser aus:
+
+[image screenshot-theme.png Screenshot]
+
+[Weiter: Templates anpassen →](customising-templates-de)

@@ -1,5 +1,6 @@
 ---
-Title: Interface de programmation (API)
+Title: Yellow API Français
+TitleContent: Yellow API
 Sidebar: sidebar-fr
 Language: fr
 ---
@@ -348,7 +349,7 @@ Here's an example snippet for checking if plugin exists:
 
 ### Yellow themes
 
-Yellow themes gives access to [themes](yellow-themes):
+Yellow themes gives access to [themes](customising-themes):
 
 **$yellow->themes->getData()**  
 Return theme version
@@ -489,7 +490,7 @@ Return location from current HTTP request
 Return location arguments from current HTTP request
 
 **$yellow->toolbox->isLocationArgs($location = "")**  
-Check if location contains location arguments
+Check if there are location arguments in current HTTP request
 
 **$yellow->toolbox->normaliseArgs($text, $appendSlash = true, $filterStrict = true)**  
 Normalise location arguments
@@ -527,7 +528,7 @@ Return lines from text string, newline separated
 **$yellow->toolbox->getTextArgs($text, $optional = "-")**  
 Return arguments from text string, space separated  
 
-Here's an example snippet for showing location arguments:
+Here's an example snippet for showing location and arguments of HTTP request:
 
 ``` php
 <div class="yellow location">

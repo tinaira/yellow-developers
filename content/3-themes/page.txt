@@ -4,4 +4,4 @@ TitleNavigation: Themes
 ---
 [preview /themes/ - 40.5%]
 
-Want to create your own themes? [See developer documentation](/help/yellow-themes).
+Want to create your own themes? [See developer documentation](/help/customising-themes).

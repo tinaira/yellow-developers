@@ -5,9 +5,9 @@ Language: en
 ---
 Here's how to set up a website with better security.
 
-## User restrictions
+## Restrictions
 
-If you have more than one person editing a website, restrict [user accounts](adjusting-system#user-accounts) and only parts of the website can be changed. Users can only edit pages within their home page. This protects your website from being changed in a web browser.
+If you have more than one person editing a website, restrict [user accounts](adjusting-system#user-accounts) and only parts of the website can be changed. Open file `system/config/user.ini` and at the end of the line change the home page of the user. Users can only edit pages within their home page. This protects your website from being changed.
 
 You can [test user restrictions](/tests/user-restrictions).
 

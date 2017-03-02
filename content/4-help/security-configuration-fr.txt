@@ -3,18 +3,17 @@ Title: Configuration de la sécurité
 Sidebar: sidebar-fr
 Language: fr
 ---
-
 Comment configurer la sécurité de votre site web.
 
-## Restriction utilisateur
+## Restriction
 
-Si plusieurs personnes peuvent éditer votre site web, vous pouvez restreindre chaque [compte d'utilisateur](adjusting-system-fr#comptes-d-utilisateurs) de sorte que certaines parties du site seulement puissent être éditable. Ainsi, les utilisateurs ne peuvent éditer uniquement que leur page d'accueil. Ceci protège votre site web de toute modification à travers le navigateur web.
+Si plusieurs personnes peuvent éditer votre site web, vous pouvez restreindre chaque [compte d'utilisateur](adjusting-system-fr#comptes-d-utilisateurs) de sorte que certaines parties du site seulement puissent être éditable. Ouvrez le fichier `system/config/user.ini` et à la fin de la ligne de changer la page d'accueil de l'utilisateur. Ainsi, les utilisateurs ne peuvent éditer uniquement que leur page d'accueil. Ceci protège votre site web de toute modification.
 
 Vous pouvez [tester ce mode de restriction](/tests/user-restrictions).
 
-## Mode Safe
+## Mode safe
 
-Si plusieurs personnes peuvent éditer votre site web, activez le mode "safe" afin que seule la syntaxe [Markdown](markdown-cheat-sheet-fr) puissent être utilisée. Ouvrez le fichier `system/config/config.ini` et changez `ParserSafeMode: 1`. Ceci protège votre site de tout dommage.
+Si plusieurs personnes peuvent éditer votre site web, activez le mode safe afin que seule la syntaxe [Markdown](markdown-cheat-sheet-fr) puissent être utilisée. Ouvrez le fichier `system/config/config.ini` et changez `ParserSafeMode: 1`. Ceci protège votre site de tout dommage.
 
 Vous pouvez [tester le mode safe](/tests/safe-mode).
 

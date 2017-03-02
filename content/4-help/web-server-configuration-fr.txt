@@ -119,4 +119,4 @@ Pour [Nginx](http://nginx.org/) ajoutez ceci à votre fichier de configuration:
 
     error_page 404 /404.html;
 
-[Suivant: Thèmes de Yellow →](yellow-themes-fr)
+[Suivant: Personnaliser des thèmes →](customising-themes-fr)

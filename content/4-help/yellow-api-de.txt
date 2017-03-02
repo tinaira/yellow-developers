@@ -1,5 +1,6 @@
 ---
-Title: Yellow-Programmierung (API)
+Title: Yellow API Deutsch
+TitleContent: Yellow API
 Sidebar: sidebar-de
 Language: de
 ---
@@ -61,7 +62,7 @@ Hole eine [Page-Collection](#yellow-page-collection) mit zusätzlichen Seiten f�
 Hole eine zugehörige Seite
 
 **$yellow->page->getLocation($absoluteLocation = false)**  
-Hole die Adresse der Seite
+Hole den Ort der Seite
 
 **$yellow->page->getUrl()**  
 Hole die URL der Seite 
@@ -175,13 +176,13 @@ Hole die aktuelle Seitennummer in der Pagination
 Hole die höchste Seitennummer in der Pagination
 
 **$pages->getPaginationLocation($absoluteLocation = true, $pageNumber = 1)**  
-Hole die Adresse einer Seite in der Pagination
+Hole den Ort einer Seite in der Pagination
 
 **$pages->getPaginationPrevious($absoluteLocation = true)**  
-Hole die Adresse der vorherigen Seite in der Pagination
+Hole den Ort der vorherigen Seite in der Pagination
 
 **$pages->getPaginationNext($absoluteLocation = true)**  
-Hole die Adresse der nächsten Seite in der Pagination
+Hole den Ort der nächsten Seite in der Pagination
 
 **$pages->getPagePrevious($page)**  
 Hole die vorherige Seite in der Page-Collection, null falls nicht vorhanden
@@ -256,7 +257,7 @@ Hier ist ein Beispiel-Snippet um alle Seiten anzuzeigen:
 </ul>
 ```
 
-Hier ist ein Beispiel-Snippet um Seiten unterhalb einer bestimmten Adresse anzuzeigen:
+Hier ist ein Beispiel-Snippet um Seiten unterhalb einer bestimmten Orts anzuzeigen:
 
 ``` php
 <?php $pages = $yellow->pages->find("/help/")->getChildren(true) ?>
@@ -346,7 +347,7 @@ Hier ist ein Beispiel-Snippet um zu testen ob ein Plugin existiert:
 
 ### Yellow-Themes
 
-Yellow-Themes gibt Zugang zu [Themes](yellow-themes-de):
+Yellow-Themes gibt Zugang zu [Themes](customising-themes-de):
 
 **$yellow->themes->getData()**  
 Hole die Versionsinformationen von Themes
@@ -481,16 +482,16 @@ Hier ist ein Beispiel-Snippet um Sprachen anzuzeigen:
 Yellow-Toolbox gibt Zugang zu einer Werkzeugkiste mit Helfern:
 
 **$yellow->toolbox->getLocation($filterStrict = true)**  
-Hole die Adresse der aktuellen HTTP-Anfrage
+Hole den Ort aktuellen HTTP-Anfrage
 
 **$yellow->toolbox->getLocationArgs()**  
-Hole die Adressenargumente der aktuellen HTTP-Anfrage
+Hole die Ortargumente der aktuellen HTTP-Anfrage
 
 **$yellow->toolbox->isLocationArgs($location = "")**  
-Teste ob es Adressenargumente gibt in der Adresse
+Teste ob es Ortargumente gibt in der aktuellen HTTP-Anfrage
 
 **$yellow->toolbox->normaliseArgs($text, $appendSlash = true, $filterStrict = true)**  
-Normalisiere Adressenargumente
+Normalisiere Ortargumente
 
 **$yellow->toolbox->readFile($fileName, $sizeMax = 0)**  
 Lese eine Datei, leerer String falls nicht vorhanden
@@ -525,7 +526,7 @@ Hole die Zeilen eines Textstrings, durch Zeilenumbruch getrennt
 **$yellow->toolbox->getTextArgs($text, $optional = "-")**  
 Hole die Argumente eines Textstrings, durch Leerzeichen getrennt  
 
-Hier ist ein Beispiel-Snippet um Adressenargumente anzuzeigen:
+Hier ist ein Beispiel-Snippet um Ort und Argumente der HTTP-Anfrage anzuzeigen:
 
 ``` php
 <div class="yellow location">

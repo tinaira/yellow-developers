@@ -1,15 +1,17 @@
 ---
-Title: Yellow themes
-Sidebar: sidebar
-Language: en
+Title: Personnaliser des thèmes
+Sidebar: sidebar-fr
+Language: fr
 ---
-You can customise the visual design of your website. [See demo](/themes/).
+>>> [Vous pouvez nous aider à traduire cette page.](https://github.com/datenstrom/yellow-developers/blob/master/content/4-help/customising-themes-fr.txt)
+
+Vous pouvez personnaliser l'aspect visuel de votre site web. [Voir la démo](/themes/paris-theme).
 
 ## Themes
 
-Themes define the visual design of your website. Start with a theme that you like and adjust it. There's a default theme defined in file `system/config/config.ini`. A different theme can be defined in the [settings](markdown-cheat-sheet#settings) at the top of each page, for example `Theme: flatsite`.
+Les thèmes définissent l'aspect visuel de votre site web. Le thème utilisé par défaut est défini dans les [paramètres du système](adjusting-system-fr#paramètres-du-système). Un thème différent peut être configuré pour chacune de vos pages dans les [paramètres](markdown-cheat-sheet-fr#paramètres) en haut de celle-ci, par exmple `Theme: flatsite`.
 
-Every website has a small icon that is associated with it, sometimes called favicon. The web browser displays this icon for example in address bar, in bookmarks or on the desktop. To change the default icon overwrite file `system/themes/assets/icon.png`.
+Every website has a small icon, sometimes called favicon. The web browser displays this icon for example in address bar, in bookmarks or on the desktop. To change the default icon overwrite file `system/themes/assets/icon.png`.
 
 ## CSS
 
@@ -84,4 +86,8 @@ Here's the default HTML layout:
 
 The first `<div>` element contains useful class information, for example `template-default`. A blog page uses `template-blog`, a wiki page `template-wiki` and a sidebar `with-sidebar`. This allows you to adjust themes to different templates.
 
-[Next: Yellow templates →](yellow-templates)
+This is how the default HTML layout looks in a web browser:
+
+[image screenshot-theme.png Screenshot]
+
+[Suivant: Personnaliser des templates →](customising-templates-fr)

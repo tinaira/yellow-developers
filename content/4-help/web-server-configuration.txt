@@ -117,4 +117,4 @@ For [Nginx](http://nginx.org/) add the following to your configuration file:
 
     error_page 404 /404.html;
 
-[Next: Yellow themes →](yellow-themes)
+[Next: Customising themes →](customising-themes)

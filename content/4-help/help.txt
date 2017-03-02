@@ -28,6 +28,6 @@ Yellow is for people who make websites. [Get support](support).
 
 ## Customisations
 
-* [Yellow themes](yellow-themes)
-* [Yellow templates](yellow-templates)
-* [Yellow API](yellow-api)
+* [Customising themes](customising-themes)
+* [Customising templates](customising-templates)
+* [API for developers](yellow-api)

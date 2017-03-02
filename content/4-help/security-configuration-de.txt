@@ -5,9 +5,9 @@ Language: de
 ---
 Wie man eine Webseite mit besserer Sicherheit konfiguriert.
 
-## Benutzerbeschränkungen
+## Beschränkungen
 
-Falls mehrere Person eine Webseite bearbeiten, beschränke [Benutzerkonten](adjusting-system-de#benutzerkonten) und nur Teile der Webseite können verändert werden. Benutzer dürfen nur Seiten innerhalb ihrer Startseite bearbeiten. Damit wird deine Webseite vor Veränderungen im Webbrowser geschützt.
+Falls mehrere Person eine Webseite bearbeiten, beschränke [Benutzerkonten](adjusting-system-de#benutzerkonten) und nur Teile der Webseite können verändert werden. Öffne die Datei `system/config/user.ini` und ändere am Ende der Zeile die Startseite des Benutzers. Benutzer dürfen nur Seiten innerhalb ihrer Startseite bearbeiten. Damit wird deine Webseite vor Veränderungen geschützt.
 
 Du kannst [Benutzerbeschränkungen testen](/tests/user-restrictions).
 

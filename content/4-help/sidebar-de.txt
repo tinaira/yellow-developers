@@ -28,6 +28,6 @@ Einstellungen
 
 Anpassungen
 
-* [Yellow-Themes](yellow-themes-de)
-* [Yellow-Templates](yellow-templates-de)
-* [Yellow-Programmierung](yellow-api-de)
+* [Themes anpassen](customising-themes-de)
+* [Templates anpassen](customising-templates-de)
+* [API für Entwickler](yellow-api-de)

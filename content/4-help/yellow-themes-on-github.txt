@@ -28,5 +28,3 @@ Experimental themes:
   Envisioned is a minimalistic theme inspired by Edward Tufte.
 * [Lateral](https://github.com/nibreh/yellow-theme-lateral):
   Lateral is a clean theme with fixed sidebar, inspired by Indexhibit.
-
-Licensed under [GPLv2](https://github.com/datenstrom/yellow-themes/blob/master/LICENSE.md) unless stated otherwise.
