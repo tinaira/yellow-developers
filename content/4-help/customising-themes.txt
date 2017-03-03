@@ -13,7 +13,7 @@ Every website has a small icon, sometimes called favicon. The web browser displa
 
 ## CSS
 
-To adjust a theme you can use [CSS](http://www.w3schools.com/css/). This allows you to change colors, font and the visual design of your website. You can either change the available CSS file or create a new theme, for example `Theme: custom`.
+To adjust a theme you can use [CSS](https://www.w3schools.com/css/). This allows you to change colors, font and the visual design of your website. You can either change the available CSS file or create a new theme, for example `Theme: custom`.
  
 Here's an example CSS file `system/themes/assets/custom.css`:
 
@@ -45,7 +45,7 @@ a:hover { color:#29f; text-decoration:underline; }
 
 ## JavaScript
 
-To extend a theme you can use [JavaScript](http://www.w3schools.com/js/). This allows you to create websites with dynamic features. You can put JavaScript into a file which has a similar name as the CSS file. Then it will be automatically included.
+To extend a theme you can use [JavaScript](https://www.w3schools.com/js/). This allows you to create websites with dynamic features. You can put JavaScript into a file which has a similar name as the CSS file. Then it will be automatically included.
 
 Here's an example JS file `system/themes/assets/custom.js`:
 
@@ -64,7 +64,7 @@ if(window.addEventListener) {
 
 ## HTML
 
-To create your own themes it's good to know the [HTML](http://www.w3schools.com/html/) layout of a page. Yellow comes with a default HTML layout that's used on most web pages, blogs and wikis. This is just a suggestion, you can use any layout you like.
+To create your own themes it's good to know the [HTML](https://www.w3schools.com/html/) layout of a page. Yellow comes with a default HTML layout that's used on most web pages, blogs and wikis. This is just a suggestion, you can use any layout you like.
 
 Here's the default HTML layout:
 

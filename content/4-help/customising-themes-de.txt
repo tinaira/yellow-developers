@@ -3,7 +3,7 @@ Title: Themes anpassen
 Sidebar: sidebar-de
 Language: de
 ---
-Du kannst das Aussehen deiner Webseite anpassen. [Demo anschauen](/themes/berlin-theme).
+Du kannst das Aussehen deiner Webseite anpassen. [Demo anschauen](/themes/stockholm-theme).
 
 ## Themes
 
@@ -13,7 +13,7 @@ Jede Webseite hat ein kleines Icon, auch Favicon genannt. Der Webbrowser zeigt d
 
 ## CSS
 
-Um ein Theme anzupassen, kann man [CSS](http://www.w3schools.com/css/) benutzen. Damit kannst du Farben, Schriftart und das Aussehen deiner Webseite ändern. Du kannst entweder die vorhandene CSS-Datei ändern oder eine neues Theme anlegen, zum Beispiel `Theme: custom`.
+Um ein Theme anzupassen, kann man [CSS](https://www.w3schools.com/css/) benutzen. Damit kannst du Farben, Schriftart und das Aussehen deiner Webseite ändern. Du kannst entweder die vorhandene CSS-Datei ändern oder eine neues Theme anlegen, zum Beispiel `Theme: custom`.
 
 Hier ist eine Beispiel-CSS-Datei `system/themes/assets/custom.css`:
 
@@ -45,7 +45,7 @@ a:hover { color:#29f; text-decoration:underline; }
 
 ## JavaScript
 
-Um ein Theme zu erweitern, kann man [JavaScript](http://www.w3schools.com/js/) benutzen. Damit kannst du Webseiten mit dynamischen Funktionen erstellen. Du kannst JavaScript in eine Datei speichern die einen ähnlichen Namen hat wie die CSS-Datei. Es wird dann automatisch eingebunden.
+Um ein Theme zu erweitern, kann man [JavaScript](https://www.w3schools.com/js/) benutzen. Damit kannst du Webseiten mit dynamischen Funktionen erstellen. Du kannst JavaScript in eine Datei speichern die einen ähnlichen Namen hat wie die CSS-Datei. Es wird dann automatisch eingebunden.
 
 Hier ist eine Beispiel-JS-Datei `system/themes/assets/custom.js`:
 
@@ -64,7 +64,7 @@ if(window.addEventListener) {
 
 ## HTML
 
-Um eigene Themes zu erstellen, ist es gut die [HTML](http://www.w3schools.com/html/)-Struktur einer Seite zu kennen. Yellow kommt mit einer Standard-HTML-Struktur die auf den meisten Webseiten, Blogs und Wiki benutzt wird. Das ist nur ein Vorschlag, du kannst jede Struktur verwenden die du willst.
+Um eigene Themes zu erstellen, ist es gut die [HTML](https://www.w3schools.com/html/)-Struktur einer Seite zu kennen. Yellow kommt mit einer Standard-HTML-Struktur die auf den meisten Webseiten, Blogs und Wikis benutzt wird. Das ist nur ein Vorschlag, du kannst jede Struktur verwenden die du willst.
 
 Hier ist die Standard-HTML-Struktur:
 

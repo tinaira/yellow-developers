@@ -3,7 +3,7 @@ Title: Web server configuration
 Sidebar: sidebar
 Language: en
 ---
-Here's how to set up different [web servers](http://news.netcraft.com/archives/category/web-server-survey/).
+Here's how to set up different [web servers](https://news.netcraft.com/archives/category/web-server-survey/).
 
 ## Apache
 
@@ -41,7 +41,7 @@ Make sure that the web server can read and write files. You can manually adjust 
 
 ## Nginx
 
-The `nginx.conf` configuration file for the [Nginx](http://nginx.org/) web server:
+The `nginx.conf` configuration file for the [Nginx](https://nginx.org/) web server:
 
 ```nginx
 server {
@@ -113,7 +113,7 @@ For [Apache](http://httpd.apache.org) add the following to your configuration fi
 
     ErrorDocument 404 /404.html
 
-For [Nginx](http://nginx.org/) add the following to your configuration file:
+For [Nginx](https://nginx.org/) add the following to your configuration file:
 
     error_page 404 /404.html;
 

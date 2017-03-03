@@ -17,11 +17,11 @@ Hier ist eine Beispiel-Templatedatei `system/themes/templates/default.html`:
 <?php $yellow->snippet("footer") ?>
 ```
 
-Snippets sind die Bausteine deiner Webseite. Es sind kleine Stücke [HTML](http://www.w3schools.com/html/) und [PHP](http://www.w3schools.com/php/). Du kannst alles in ein Template schreiben, aber es ist häufig praktischer ein Template in mehrere Snippets aufzuteilen und wiederzubenutzen. Mache was am Besten für dich funktioniert.
+Snippets sind die Bausteine deiner Webseite. Es sind kleine Stücke [HTML](https://www.w3schools.com/html/) und [PHP](https://www.w3schools.com/php/). Du kannst alles in ein Template schreiben, aber es ist häufig praktischer ein Template in mehrere Snippets aufzuteilen und wiederzubenutzen. Mache was am Besten für dich funktioniert.
 
 ## Template anpassen
 
-Um den Quellcode deiner Webseite anzupassen, ändere das entsprechende Template. Das Template legt fest welche Snippets benutzt werden. Du kannst entweder die vorhandenen Snippets ändern oder ein neues Template anlegen, zum Beispiel `Template: custom`.
+Das Template legt fest welche Snippets benutzt werden. Um den Quellcode deiner Webseite anzupassen, ändere das Template oder die entsprechenden Snippets. Du kannst auch ein neues Template anlegen, zum Beispiel `Template: custom`.
 
 Hier ist eine Beispiel-Templatedatei `system/themes/templates/custom.html`:
 
@@ -46,9 +46,7 @@ Hier ist eine Beispiel-Snippetdatei `system/themes/snippets/content-custom.php`:
 
 ## Navigation anpassen
 
-Um die Navigation anzupassen, ändere das entsprechende Snippet. Die Standardnavigation wird in den [Systemeinstellungen](adjusting-system-de#systemeinstellungen) festgelegt. Eine andere Navigation lässt sich in den [Einstellungen](markdown-cheat-sheet-de#einstellungen) ganz oben auf jeder Seite festlegen, zum Beispiel `Navigation: navigation`. 
-
-[image screenshot-template1.png Screenshot]
+Oben befindet sich der Header mit der Navigation. Die Standardnavigation wird in den [Systemeinstellungen](adjusting-system-de#systemeinstellungen) festgelegt. Eine andere Navigation lässt sich in den [Einstellungen](markdown-cheat-sheet-de#einstellungen) ganz oben auf jeder Seite festlegen, zum Beispiel `Navigation: navigation`. 
 
 Die folgenden Navigationen sind vorhanden:
 
@@ -93,9 +91,7 @@ Hier ist die selbe Snippetdatei mit [Icons für soziale Medien](https://github.c
 
 ## Fußzeile anpassen
 
-Um die Fußzeile anzupassen, ändere das entsprechende Snippet. Das Template legt fest welche Snippets benutzt werden, die Fußzeile befindet sich normalerweise ganz unten. Du kannst entweder das vorhandene Snippet ändern oder ein neues Snippet anlegen.
-
-[image screenshot-template2.png Screenshot]
+Unten befindet sich die Fußzeile. Um die Fußzeile anzupassen, ändere das entsprechende Snippet. Das Template legt fest welche Snippets benutzt werden. Du kannst entweder das vorhandene Snippet ändern oder ein neues Snippet anlegen.
 
 Hier ist eine Beispiel-Snippetdatei `system/themes/snippets/footer.php`:
 
@@ -136,9 +132,7 @@ Hier ist die selbe Snippetdatei mit Links zu sozialen Medien:
 
 Um eine Sidebar anzuzeigen, erstelle die Datei `sidebar.txt` in einem `content`-Verzeichnis. Die Sidebar wird auf allen Seiten im gleichen Verzeichnis angezeigt. Eine andere Sidebar lässt sich in den [Einstellungen](markdown-cheat-sheet-de#einstellungen) ganz oben auf jeder Seite festlegen, zum Beispiel `Sidebar: sidebar`. 
 
-[image screenshot-template3.png Screenshot]
-
-Hier ist eine Beispiel-Sidebar `content/1-home/sidebar.txt`:
+Hier ist eine Beispiel-Sidebar-Datei `content/1-home/sidebar.txt`:
 
 ```
 ---
@@ -150,6 +144,20 @@ Links
 * [Twitter](https://twitter.com/datenstromse)
 * [GitHub](https://github.com/datenstrom)
 * [Instagram](https://instagram.com/datenstromse)
+```
+
+Hier ist die selbe Sidebar-Datei mit [Suchfeld](https://github.com/datenstrom/yellow-plugins/tree/master/search) und [Icons für soziale Medien](https://github.com/datenstrom/yellow-plugins/tree/master/fontawesome):
+
+```
+---
+Title: Sidebar
+Status: hidden
+---
+[search]
+
+* [[fa fa-twitter] Twitter](https://twitter.com/datenstromse)
+* [[fa fa-github] GitHub](https://github.com/datenstrom)
+* [[fa fa-instagram] Instagram](https://instagram.com/datenstromse)
 ```
 
 [Weiter: API für Entwickler →](yellow-api-de)

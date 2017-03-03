@@ -19,11 +19,11 @@ Here's an example template file `system/themes/templates/default.html`:
 <?php $yellow->snippet("footer") ?>
 ```
 
-Snippets are the building blocks of your website. They are small pieces of [HTML](http://www.w3schools.com/html/) and [PHP](http://www.w3schools.com/php/). You can put everything into one template, but it's often more practical to split a template up into multiple snippets and to reuse them. Do what works best for you. 
+Snippets are the building blocks of your website. They are small pieces of [HTML](https://www.w3schools.com/html/) and [PHP](https://www.w3schools.com/php/). You can put everything into one template, but it's often more practical to split a template up into multiple snippets and to reuse them. Do what works best for you. 
 
 ## Custom template
 
-To adjust the source code of your website change the corresponding template. The template defines which snippets will be used. You can either change the available snippets or create a new template, for example `Template: custom`.
+The template defines which snippets will be used. To adjust the source code of your website change the template or the corresponding snippets. You can also create a new template, for example `Template: custom`.
 
 Here's an example template file `system/themes/templates/custom.html`:
 
@@ -48,9 +48,7 @@ Here's an example snippet file `system/themes/snippets/content-custom.php`:
 
 ## Custom navigation
 
-To adjust the navigation change the corresponding snippet. There's a default navigation defined in the [system settings](adjusting-system#system-settings). A different navigation can be defined in the [settings](markdown-cheat-sheet#settings) at the top of each page, for example `Navigation: navigation`.
-
-[image screenshot-template1.png Screenshot]
+At the top is the header with the navigation. There's a default navigation defined in the [system settings](adjusting-system#system-settings). A different navigation can be defined in the [settings](markdown-cheat-sheet#settings) at the top of each page, for example `Navigation: navigation`.
 
 The following navigations are available:
 
@@ -95,9 +93,7 @@ Here's the same snippet file with [social media icons](https://github.com/datens
 
 ## Custom footer
 
-To adjust the footer change the corresponding snippet. The template defines which snippets will be used, the footer is usually on the bottom. You can either change the available snippet or create a new snippet.
-
-[image screenshot-template2.png Screenshot]
+At the bottom is the footer. To adjust the footer change the corresponding snippet. The template defines which snippets will be used. You can either change the available snippet or create a new snippet.
 
 Here's an example snippet file `system/themes/snippets/footer.php`:
 
@@ -138,8 +134,6 @@ Here's the same snippet file with social media links:
 
 To show a sidebar add the file `sidebar.txt` to any `content` folder. The sidebar will be shown on all pages in the same folder. A different sidebar can be defined in the [settings](markdown-cheat-sheet#settings) at the top of each page, for example `Sidebar: sidebar`.
 
-[image screenshot-template3.png Screenshot]
-
 Here's an example sidebar file `content/1-home/sidebar.txt`:
 
 ```
@@ -152,6 +146,20 @@ Links
 * [Twitter](https://twitter.com/datenstromse)
 * [GitHub](https://github.com/datenstrom)
 * [Instagram](https://instagram.com/datenstromse)
+```
+
+Here's the same sidebar file with [search field](https://github.com/datenstrom/yellow-plugins/tree/master/search) and [social media icons](https://github.com/datenstrom/yellow-plugins/tree/master/fontawesome):
+
+```
+---
+Title: Sidebar
+Status: hidden
+---
+[search]
+
+* [[fa fa-twitter] Twitter](https://twitter.com/datenstromse)
+* [[fa fa-github] GitHub](https://github.com/datenstrom)
+* [[fa fa-instagram] Instagram](https://instagram.com/datenstromse)
 ```
 
 [Suivant: API pour les développeurs →](yellow-api-fr)

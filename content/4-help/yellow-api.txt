@@ -764,7 +764,7 @@ Some tips for developers:
 
 1. [Install the developers kit](https://github.com/datenstrom/yellow-developers). The developers kit includes plugins, themes, examples and documentation. You can try out how to make small web pages, blogs and wikis. It's a great place to get started with the Yellow API.
 
-2. [Learn the web basics](http://www.w3schools.com). Make yourself familiar with HTML, CSS and JavaScript. These are the most important things you need to know to make websites. Yellow requires no complex frameworks and no big libraries.
+2. [Learn the web basics](https://www.w3schools.com). Make yourself familiar with HTML, CSS and JavaScript. These are the most important things you need to know to make websites. Yellow requires no complex frameworks and no big libraries.
 
 3. [Put your code on GitHub](https://github.com/datenstrom/yellow/issues?q=label%3Anews%20). Create a repository for each new plugin/theme. The name of your repository should be `yellow-plugin-xyz` or `yellow-theme-xyz`. Your code doesn't have to be perfect, but it should be working in the developers kit.
 

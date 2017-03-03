@@ -5,7 +5,7 @@ Language: fr
 ---
 >>> [Vous pouvez nous aider à traduire cette page.](https://github.com/datenstrom/yellow-developers/blob/master/content/4-help/web-server-configuration-fr.txt)
 
-Comment configurer différents [serveurs web](http://news.netcraft.com/archives/category/web-server-survey/).
+Comment configurer différents [serveurs web](https://news.netcraft.com/archives/category/web-server-survey/).
 
 ## Apache
 
@@ -43,7 +43,7 @@ Assurez-vous que le serveur web est accès en écriture et en lecture aux fichie
 
 ## Nginx
 
-Le fichier de configuration `nginx.conf` pour le serveur web [Nginx](http://nginx.org/):
+Le fichier de configuration `nginx.conf` pour le serveur web [Nginx](https://nginx.org/):
 
 ```nginx
 server {
@@ -115,7 +115,7 @@ Pour [Apache](http://httpd.apache.org) ajoutez ceci à votre fichier de configur
 
     ErrorDocument 404 /404.html
 
-Pour [Nginx](http://nginx.org/) ajoutez ceci à votre fichier de configuration:
+Pour [Nginx](https://nginx.org/) ajoutez ceci à votre fichier de configuration:
 
     error_page 404 /404.html;
 

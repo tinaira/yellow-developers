@@ -4,12 +4,12 @@ Title: Test link parsing
 This page tests link parsing.
 
 Link on same website: [Home](/), [Wiki](/plugins/wiki-plugin/).  
-Link to another website: [Datenstrom](https://datenstrom.se), [W3Schools](http://www.w3schools.com).  
+Link to another website: [Datenstrom](https://datenstrom.se), [W3Schools](https://www.w3schools.com).  
 Relative links to current page: [File](file-content-api), [Image](image-parsing).  
 Special links for this page: [Read](@pageread), [Edit](@pageedit).
 
 URL autolinking: 
 
-http://link.se, https://link.se, ftp://link.se, bla@fa.sel, pe.ter@example.com.  
-"http://link.se" 'http://link.se' http://link.se: http://link.se;  
+https://link.se, http://link.se, ftp://link.se, bla@fa.sel, pe.ter@example.com.  
+"https://link.se" 'https://link.se' https://link.se: https://link.se;  
 https://en.wikipedia.org/wiki/C_(programming_language)
