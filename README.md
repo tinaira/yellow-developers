@@ -4,7 +4,7 @@ Yellow developers
 
 Yellow is for people who make websites.
 
-1. [Download developers kit and unzip it](https://github.com/datenstrom/yellow-developers/archive/master.zip).
+1. [Download developer kit and unzip it](https://github.com/datenstrom/yellow-developers/archive/master.zip).
 2. Copy all files to your web hosting.
 3. Open your website in a web browser.
 
