@@ -69,6 +69,7 @@ Ein Bild hinzufügen, hier ist ein alternatives Format:
 `[fa fa-envelope-o]` = [Icons und Symbole](https://github.com/datenstrom/yellow-plugins/tree/master/fontawesome) anzeigen  
 `[ea ea-smile]` = [Emoji und bunte Bilder](https://github.com/datenstrom/yellow-plugins/tree/master/emojiawesome) anzeigen  
 `[toc]` = [Inhaltsübersicht](https://github.com/datenstrom/yellow-plugins/tree/master/toc) anzeigen  
+`[--more--]` = [Seitenumbruch](https://github.com/datenstrom/yellow-plugins/tree/master/blog#how-to-configure-a-blog) hinzufügen  
 
 ## Einstellungen
 

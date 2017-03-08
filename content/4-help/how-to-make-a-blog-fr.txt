@@ -69,7 +69,7 @@ Do you fika?
 [youtube aS52d3hcHfs]
 ```
 
-Faisons en sorte que la vidéo soit visible quand le visiteur clique sur la page de blog. Vous pouvez ajouter `[--more--]` à l'endroit désiré de votre rupture:
+Faisons en sorte que la vidéo soit visible quand le visiteur clique sur la page de blog. Vous pouvez ajouter `[--more--]` à l'endroit désiré le saut de page:
 
 ```
 ---

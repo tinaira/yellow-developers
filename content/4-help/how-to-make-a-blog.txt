@@ -67,7 +67,7 @@ Do you fika?
 [youtube aS52d3hcHfs]
 ```
 
-Let's show the video when a visitor clicks on the blog page. You can add `[--more--]` where your want the break:
+Let's show the video when a visitor clicks on the blog page. You can add `[--more--]` where your want the page break:
 
 ```
 ---

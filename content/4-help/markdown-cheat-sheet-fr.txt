@@ -69,6 +69,7 @@ Ajouter des images, autre moyen:
 `[fa fa-envelope-o]` = afficher des [icones et symboles](https://github.com/datenstrom/yellow-plugins/tree/master/fontawesome)  
 `[ea ea-smile]` = afficher des [émoticônes colorées](https://github.com/datenstrom/yellow-plugins/tree/master/emojiawesome)  
 `[toc]` = afficher une [table des matières](https://github.com/datenstrom/yellow-plugins/tree/master/toc)  
+`[--more--]` = ajouter un [saut de page](https://github.com/datenstrom/yellow-plugins/tree/master/blog#how-to-configure-a-blog) 
 
 ## Paramètres
 

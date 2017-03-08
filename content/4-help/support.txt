@@ -3,7 +3,7 @@ Title: Support
 Sidebar: sidebar
 Language: en
 ---
-Connect with other Yellow users and find professional help.
+Connect with other users and find professional help.
 
 ## How to get support
 
@@ -20,10 +20,10 @@ Connect with other Yellow users and find professional help.
 ## How to contribute
 
 * [Answer questions](https://github.com/datenstrom/yellow/issues)
-* [Create translations](https://github.com/datenstrom/yellow-plugins/tree/master/language)
+* [Improve translations](https://github.com/datenstrom/yellow-plugins/tree/master/language)
 * [Create plugins and themes](https://github.com/datenstrom)
 * [Show what you have made](https://twitter.com/search?q=%23madewithyellow)
 
 ## Thank you
 
-Yellow is free and open source, made by the people who use Yellow. At the heart of open source is the idea that we make better software together. Licensed under [GPLv2](https://github.com/datenstrom/yellow/blob/master/LICENSE.md) unless stated otherwise. Big thanks to all Yellow users and [members](https://github.com/orgs/datenstrom/people).
+Datenstrom Yellow is free and open source. Made by people like you and me. At the heart of open source is the idea that we make better software together. Licensed under [GPLv2](https://github.com/datenstrom/yellow/blob/master/LICENSE.md) unless stated otherwise. Big thanks to all users and [members](https://github.com/orgs/datenstrom/people).

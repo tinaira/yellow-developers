@@ -67,7 +67,7 @@ wird.
 [youtube aS52d3hcHfs]
 ```
 
-Das Video erst anzeigen wenn ein Besucher auf die Blogseite klickt. Du kannst `[--more--]` benutzen, um an der gewünschten Stelle einen Umbruch zu erzeugen:
+Das Video erst anzeigen wenn ein Besucher auf die Blogseite klickt. Du kannst `[--more--]` benutzen, um an der gewünschten Stelle einen Seitenumbruch zu erzeugen:
 
 ```
 ---

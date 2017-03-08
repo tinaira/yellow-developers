@@ -4,7 +4,7 @@ TitleContent: Support
 Sidebar: sidebar-fr
 Language: fr
 ---
-Entrez en contact avec d'autres utilisateurs de Yellow et trouvez de l'aide professionnelle.
+Entrez en contact avec d'autres utilisateurs et trouvez de l'aide professionnelle.
 
 ## Comment obtenir de l'aide
 
@@ -21,10 +21,10 @@ Entrez en contact avec d'autres utilisateurs de Yellow et trouvez de l'aide prof
 ## Comment contribuer
 
 * [Répondez aux questions](https://github.com/datenstrom/yellow/issues)
-* [Créer des traductions](https://github.com/datenstrom/yellow-plugins/tree/master/language)
+* [Améliorer des traductions](https://github.com/datenstrom/yellow-plugins/tree/master/language)
 * [Créer des plugins et des thèmes](https://github.com/datenstrom)
 * [Montrez ce que vous avez fait](https://twitter.com/search?q=%23madewithyellow)
 
 ## Remerciements
 
-Yellow est libre et open source, créé par les gens qui utilisent Yellow. Au cœur de l'open source se trouve l'idée que nous faisons de meilleurs logiciels ensemble. Sous licence [GPLv2](https://github.com/datenstrom/yellow/blob/master/LICENSE.md) sauf indication contraire. Grand merci à tous les utilisateurs de Yellow et les [membres](https://github.com/orgs/datenstrom/people).
+Datenstrom Yellow est libre et open source. Créé par des gens comme vous et moi. Au cœur de l'open source se trouve l'idée que nous faisons de meilleurs logiciels ensemble. Sous licence [GPLv2](https://github.com/datenstrom/yellow/blob/master/LICENSE.md) sauf indication contraire. Grand merci à tous les utilisateurs et les [membres](https://github.com/orgs/datenstrom/people).

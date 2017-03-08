@@ -1,6 +1,5 @@
 ---
-Title: Yellow tests
-TitleNavigation: Tests
+Title: Tests
 ---
 Here's a collection of tests.
 
