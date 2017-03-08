@@ -13,6 +13,7 @@
 <div class="siteinfo-banner"></div>
 </div>
 </div>
+</div>
 <?php echo $yellow->page->getExtra("footer") ?>
 </body>
 </html>
