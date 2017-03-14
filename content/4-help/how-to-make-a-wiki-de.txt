@@ -3,19 +3,19 @@ Title: Wiki erstellen
 Sidebar: sidebar-de
 Language: de
 ---
-Lerne wie man ein Wiki mit Yellow erstellt. [Demo anschauen](/plugins/wiki-plugin/).
+Lerne wie man ein eigenes Wiki erstellt. [Demo anschauen](/plugins/wiki-plugin/).
 
 [[image screenshot-wiki.png Screenshot - 55%]](/plugins/wiki-plugin/how-to-make-coffee)
 
 ## Wiki installieren
 
-1. [Yellow herunterladen und entpacken](https://github.com/datenstrom/yellow/archive/master.zip).
+1. [Datenstrom Yellow herunterladen und entpacken](https://github.com/datenstrom/yellow/archive/master.zip).
 2. Kopiere alle Dateien auf dein Webhosting.
 3. Öffne deine Webseite in einem Webbrowser und wähle "Wiki" aus.
 
-Dein Wiki ist sofort erreichbar. Die Installation von Yellow kommt mit mehreren Seiten, "Home", "Wiki" und "About". Das ist nur ein Beispiel um loszulegen, verändere alles so wie du willst. Du kannst "Home" löschen, wenn du das Wiki auf der Startseite anzeigen willst.
+Dein Wiki ist sofort erreichbar. Die Installation kommt mit mehreren Seiten, "Home", "Wiki" und "About". Das ist nur ein Beispiel um loszulegen, verändere alles so wie du willst. Du kannst "Home" löschen, wenn du das Wiki auf der Startseite anzeigen willst.
 
-Falls Probleme auftreten, überprüfe bitte [Webservereinstellungen](web-server-configuration-de) und [Systemeinstellungen](adjusting-system-de#systemeinstellungen).
+Falls Probleme auftreten, überprüfe bitte die [Webservereinstellungen](web-server-configuration-de).
 
 ## Wikiseiten schreiben
 

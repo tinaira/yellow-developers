@@ -64,7 +64,7 @@ if(window.addEventListener) {
 
 ## HTML
 
-To create your own themes it's good to know the [HTML](https://www.w3schools.com/html/) layout of a page. Yellow comes with a default HTML layout that's used on most web pages, blogs and wikis. This is just a suggestion, you can use any layout you like.
+To create your own themes it's good to know the [HTML](https://www.w3schools.com/html/) layout of a page. There's a default HTML layout that's used on most web pages, blogs and wikis. This is just a suggestion, you can use any layout you like.
 
 Here's the default HTML layout:
 

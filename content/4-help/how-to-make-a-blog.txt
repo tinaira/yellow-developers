@@ -3,19 +3,19 @@ Title: How to make a blog
 Sidebar: sidebar
 Language: en
 ---
-Learn how to make a blog with Yellow. [See demo](/plugins/blog-plugin/).
+Learn how to make your own blog. [See demo](/plugins/blog-plugin/).
 
 [[image screenshot-blog.png Screenshot - 55%]](/plugins/blog-plugin/fika-is-good-for-you)
 
 ## Install blog
 
-1. [Download and unzip Yellow](https://github.com/datenstrom/yellow/archive/master.zip).
+1. [Download and unzip Datenstrom Yellow](https://github.com/datenstrom/yellow/archive/master.zip).
 2. Copy all files to your web hosting.
 3. Open your website in a web browser and select 'Blog'.
 
-Your blog is immediately available. The installation of Yellow comes with several pages, 'Home', 'Blog' and 'About'. This is just an example to get you started, change everything as you like. You can delete 'Home', if you want to show the blog on the home page.
+Your blog is immediately available. The installation comes with several pages, 'Home', 'Blog' and 'About'. This is just an example to get you started, change everything as you like. You can delete 'Home', if you want to show the blog on the home page.
 
-When there are problems, please check [web server configuration](web-server-configuration) and [system settings](adjusting-system#system-settings).
+When there are problems, please check the [web server configuration](web-server-configuration).
  
 ## Writing blog pages
 
@@ -25,7 +25,7 @@ Have a look inside your `content` folder, there's the blog folder with all your 
 ---
 Title: Blog example
 Published: 2013-04-07
-Author: Yellow
+Author: Datenstrom
 Tag: Example
 ---
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
@@ -39,7 +39,7 @@ To create a new blog page, add a new file to the blog folder. Set `Published` an
 ---
 Title: Fika is good for you
 Published: 2013-06-01
-Author: Yellow
+Author: Datenstrom
 Tag: Example, Coffee
 ---
 Fika is a Swedish custom. It's a social coffee break where people 
@@ -55,7 +55,7 @@ Now let's add a video with the [Youtube plugin](https://github.com/datenstrom/ye
 ---
 Title: Fika is good for you
 Published: 2013-06-01
-Author: Yellow
+Author: Datenstrom
 Tag: Example, Coffee, Video
 ---
 Fika is a Swedish custom. It's a social coffee break where people 
@@ -73,7 +73,7 @@ Let's show the video when a visitor clicks on the blog page. You can add `[--mor
 ---
 Title: Fika is good for you
 Published: 2013-06-01
-Author: Yellow
+Author: Datenstrom
 Tag: Example, Coffee, Video
 ---
 Fika is a Swedish custom. It's a social coffee break where people 

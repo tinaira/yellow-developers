@@ -3,11 +3,11 @@ Title: System anpassen
 Sidebar: sidebar-de
 Language: de
 ---
-Alle Einstellungen befinden sich im `system`-Verzeichnis. Hier machst du Anpassungen.
+Alle Einstellungen befinden sich im `system`-Verzeichnis. Hier macht man Anpassungen.
 
 [image screenshot-system.png Screenshot]
 
-Das `config`-Verzeichnis enthält Konfigurationsdateien. Das `plugins`-Verzeichnis enthält die Yellow-Software. Das `themes`-Verzeichnis ist für das Aussehen der Webseite zuständig. Änderungen in diesen Verzeichnissen wirkt sich auf die gesamte Webseite aus.
+Das `config`-Verzeichnis enthält Konfigurationsdateien. Das `plugins`-Verzeichnis enthält die aktuelle Software. Das `themes`-Verzeichnis ist für das Aussehen der Webseite zuständig. Änderungen in diesen Verzeichnissen wirkt sich auf die gesamte Webseite aus.
 
 ## Systemeinstellungen
 
@@ -27,18 +27,18 @@ Dort kannst du die Standardeinstellungen festlegen, zum Beispiel den Namen der W
 Alle Benutzerkonten sind in `system/config/user.ini` gespeichert. Hier ist ein Beispiel:
 
     anna@svensson.de: $2y$10$j26zDnt/xaWxC/eqGKb9p.d6e3pbVENDfRzauTawNCUHHl3CCOIzG,Anna,de,active,946684800,none,/
-    demo@demo.com: $2y$10$8TKEuytrwiLSICJNlW5.yOE9CQPXJmqXL2Af6rPsSch1/9UiXEZjm,Yellow,en,active,946684800,none,/
+    demo@demo.com: $2y$10$8TKEuytrwiLSICJNlW5.yOE9CQPXJmqXL2Af6rPsSch1/9UiXEZjm,Demo,en,active,946684800,none,/
     guest@guest.com: $2y$10$4VENNhK/hb3US8zJdimJduratVuQloACbdmbGhoFUyqHvU6mbpPm.,Guest,en,active,946684800,none,/tests/
 
-Du kannst das [Webinterface](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface) benutzen um neue Benutzerkonten anzulegen und Kennwörter zu ändern. Ein Benutzerkonto besteht aus E-Mail, verschlüsseltem Kennwort, verschiedenen Einstellungen und am Ende der Zeile befindet sich die Startseite des Benutzers.
+Im [Webbrowser](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface) kannst du neue Benutzerkonten anzulegen und Kennwörter ändern. Ein Benutzerkonto besteht aus E-Mail, verschlüsseltem Kennwort, verschiedenen Einstellungen und am Ende der Zeile befindet sich die Startseite des Benutzers.
 
 ## Plugins und Themes
 
-Yellow konzentriert sich auf's Wesentliche. Du bekommst die wichtigsten Sachen um eine kleine Webseite zu erstellen und kannst weitere Funktionen hinzufügen. Es gibt [Plugins](/plugins/) und [Themes](/themes/) zum Herunterladen. Die folgenden Plugins sind gleich dabei:
+Datenstrom Yellow konzentriert sich auf's Wesentliche. Du bekommst die wichtigsten Sachen um eine kleine Webseite zu erstellen und kannst weitere Funktionen hinzufügen. Es gibt [Plugins](/plugins/) und [Themes](/themes/) zum Herunterladen. Die folgenden Plugins sind standardmäßig dabei:
 
 * [Commandline](https://github.com/datenstrom/yellow-plugins/tree/master/commandline): Befehle im Terminalfenster ausführen
 * [Webinterface](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface): Webseite im Webbrowser bearbeiten
-* [Image](https://github.com/datenstrom/yellow-plugins/tree/master/image): Bilder in unterschiedlichen Größen einbinden
+* [Image](https://github.com/datenstrom/yellow-plugins/tree/master/image): Bilder in unterschiedlichen Größen
 * [Markdown](https://github.com/datenstrom/yellow-plugins/tree/master/markdown): Textformatierung für Menschen
 * [Update](https://github.com/datenstrom/yellow-plugins/tree/master/update): Webseite auf dem neusten Stand halten
 

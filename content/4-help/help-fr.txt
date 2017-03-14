@@ -1,5 +1,6 @@
 ---
-Title: Yellow aide
+Title: Aide
+TitleContent: Datenstrom Yellow
 Sidebar: sidebar-fr
 Language: fr
 ---
@@ -29,4 +30,4 @@ Yellow est fait pour les gens qui font des sites web. [Obtenir de l'aide](suppor
 
 * [Personnaliser des thèmes](customising-themes-fr)
 * [Personnaliser des templates](customising-templates-fr)
-* [API pour les développeurs](yellow-api-fr)
+* [API pour les développeurs](api-fr)

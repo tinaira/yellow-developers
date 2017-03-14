@@ -1,5 +1,6 @@
 ---
-Title: Yellow-Hilfe
+Title: Hilfe
+TitleContent: Datenstrom Yellow
 Sidebar: sidebar-de
 Language: de
 ---
@@ -29,4 +30,4 @@ Yellow ist für Menschen die Webseiten machen. [Support finden](support-de).
 
 * [Themes anpassen](customising-themes-de)
 * [Templates anpassen](customising-templates-de)
-* [API für Entwickler](yellow-api-de)
+* [API für Entwickler](api-de)

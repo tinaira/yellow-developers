@@ -9,7 +9,7 @@ Vous pouvez personnaliser l'aspect visuel de votre site web. [Voir la démo](/th
 
 ## Themes
 
-Les thèmes définissent l'aspect visuel de votre site web. Le thème utilisé par défaut est défini dans les [paramètres du système](adjusting-system-fr#paramètres-du-système). Un thème différent peut être configuré pour chacune de vos pages dans les [paramètres](markdown-cheat-sheet-fr#paramètres) en haut de celle-ci, par exmple `Theme: flatsite`.
+Les thèmes définissent l'aspect visuel de votre site web. Le thème utilisé par défaut est défini dans les [paramètres du système](adjusting-system-fr#paramètres-du-système). Un thème différent peut être configuré pour chacune de vos pages dans les [paramètres](markdown-cheat-sheet-fr#paramètres) en haut de celle-ci, par exemple `Theme: flatsite`.
 
 Every website has a small icon, sometimes called favicon. The web browser displays this icon for example in address bar, in bookmarks or on the desktop. To change the default icon overwrite file `system/themes/assets/icon.png`.
 
@@ -66,7 +66,7 @@ if(window.addEventListener) {
 
 ## HTML
 
-To create your own themes it's good to know the [HTML](https://www.w3schools.com/html/) layout of a page. Yellow comes with a default HTML layout that's used on most web pages, blogs and wikis. This is just a suggestion, you can use any layout you like.
+To create your own themes it's good to know the [HTML](https://www.w3schools.com/html/) layout of a page. There's a default HTML layout that's used on most web pages, blogs and wikis. This is just a suggestion, you can use any layout you like.
 
 Here's the default HTML layout:
 

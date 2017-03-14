@@ -12,7 +12,7 @@ Entrez en contact avec d'autres utilisateurs et trouvez de l'aide professionnell
 * [Markdown antisèche](markdown-cheat-sheet-fr)
 * [Interrogez un humain](https://datenstrom.se/fr/contact/)
 
-## Suivez-nous
+## Comment obtenir de l'information
 
 * [Twitter @datenstromse](https://twitter.com/datenstromse)
 * [GitHub @datenstrom](https://github.com/datenstrom)

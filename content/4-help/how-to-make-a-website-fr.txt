@@ -3,19 +3,19 @@ Title: Comment faire un site web
 Sidebar: sidebar-fr
 Language: fr
 ---
-Apprenez à faire un site web avec Yellow. [Voir la démo](/page-fr).
+Apprenez à faire un propre site web. [Voir la démo](/page-fr).
 
 [[image screenshot-website.png Screenshot - 55%]](/page-fr)
 
 ## Installer votre site
 
-1. [Téléchargez et dézippez Yellow](https://github.com/datenstrom/yellow/archive/master.zip).
+1. [Téléchargez et dézippez Datenstrom Yellow](https://github.com/datenstrom/yellow/archive/master.zip).
 2. Copiez tout les fichiers chez votre hébergeur.
 3. Accédez à votre site depuis un navigateur web.
 
 Votre site web est immédiatement accessible. L'installation est fournie avec deux pages, 'Home' et 'About'. Elles sont juste un exemple pour commencer, vous pouvez les modifier comme il vous convient. Vous pouvez créer votre site web en ajoutant des fichiers et des dossiers.
 
-S'il y a des problèmes, vérifiez la [configuration du serveur web](web-server-configuration-fr) et les [paramètres du système](adjusting-system-fr#paramètres-du-système).
+S'il y a des problèmes, vérifiez la [configuration du serveur web](web-server-configuration-fr).
 
 ## Écrire une page web
 

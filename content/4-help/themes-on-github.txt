@@ -1,5 +1,5 @@
 ---
-Title: Yellow themes on GitHub
+Title: Themes on GitHub
 Redirect: https://github.com/datenstrom/yellow-themes
 Sidebar: none
 Language: en

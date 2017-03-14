@@ -1,7 +1,6 @@
 ---
-Title: Yellow plugins
-TitleNavigation: Plugins
+Title: Plugins
 ---
 [preview /plugins/ - 40.5%]
 
-Want to add more features? [See all plugins](/help/yellow-plugins-on-github).
+Want to add more features? [See all plugins](/help/plugins-on-github).

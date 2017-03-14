@@ -5,20 +5,19 @@ Language: fr
 ---
 >>> [Vous pouvez nous aider à traduire cette page.](https://github.com/datenstrom/yellow-developers/blob/master/content/4-help/how-to-make-a-blog-fr.txt)
 
-Apprenez à faire un blog avec Yellow. [Voir la démo](/plugins/blog-plugin/).
+Apprenez à faire un propre blog. [Voir la démo](/plugins/blog-plugin/).
 
 [[image screenshot-blog.png Screenshot - 55%]](/plugins/blog-plugin/fika-is-good-for-you)
 
 ## Installer un blog
 
-1. [Téléchargez et dézippez Yellow](https://github.com/datenstrom/yellow/archive/master.zip).
+1. [Téléchargez et dézippez Datenstrom Yellow](https://github.com/datenstrom/yellow/archive/master.zip).
 2. Copiez tout les fichiers chez votre hébergeur.
 3. Accédez à votre site depuis un navigateur web et choisissez 'Blog'.
 
 Votre blog est immédiatement accessible. L'installation est fournie avec plusieurs pages, 'Home', 'Blog' et 'About'. Elles sont juste un exemple pour commencer, vous pouvez les modifier comme il vous convient. Vous pouvez supprimer 'Home', si vous souhaitez faire de votre blog la page d'accueil.
 
-S'il y a des problèmes, vérifiez la [configuration du serveur web](web-server-configuration-fr) et les [paramètres du système](adjusting-system-fr#paramètres-du-système).
-
+S'il y a des problèmes, vérifiez la [configuration du serveur web](web-server-configuration-fr).
 ## Écrire une page de blog
 
 Jetons un oeil dans le dossier `content`, où se trouve le dossier de votre blog avec toutes vos pages de blog. Ouvrez le fichier `2013-04-07-blog-example.txt`. Vous y verrez les paramètres et le texte de la page. Vous pouvez changer le titre de la page `Title` ainsi que d'autres [paramètres](markdown-cheat-sheet-fr#paramètres) en haut de la page. Voici un exemple:
@@ -27,7 +26,7 @@ Jetons un oeil dans le dossier `content`, où se trouve le dossier de votre blog
 ---
 Title: Blog example
 Published: 2013-04-07
-Author: Yellow
+Author: Datenstrom
 Tag: Example
 ---
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
@@ -41,7 +40,7 @@ Pour créer une nouvelle page de blog, ajoutez un nouveau fichier dans le dossie
 ---
 Title: Fika is good for you
 Published: 2013-06-01
-Author: Yellow
+Author: Datenstrom
 Tag: Example, Coffee
 ---
 Fika is a Swedish custom. It's a social coffee break where people 
@@ -57,7 +56,7 @@ Maintenant ajoutons une vidéo avec le [plugin Youtube](https://github.com/daten
 ---
 Title: Fika is good for you
 Published: 2013-06-01
-Author: Yellow
+Author: Datenstrom
 Tag: Example, Coffee, Video
 ---
 Fika is a Swedish custom. It's a social coffee break where people 
@@ -75,7 +74,7 @@ Faisons en sorte que la vidéo soit visible quand le visiteur clique sur la page
 ---
 Title: Fika is good for you
 Published: 2013-06-01
-Author: Yellow
+Author: Datenstrom
 Tag: Example, Coffee, Video
 ---
 Fika is a Swedish custom. It's a social coffee break where people 

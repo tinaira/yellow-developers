@@ -3,7 +3,7 @@ Title: Inhalt hinzufügen
 Sidebar: sidebar-de
 Language: de
 ---
-Alle Inhalte befinden sich im `content`-Verzeichnis. Hier bearbeitest du deine Webseite. 
+Alle Inhalte befinden sich im `content`-Verzeichnis. Hier bearbeitet man seine Webseite. 
 
 [image screenshot-content.png Screenshot]
 

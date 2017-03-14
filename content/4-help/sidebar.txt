@@ -30,4 +30,4 @@ Customisations
 
 * [Customising themes](customising-themes)
 * [Customising templates](customising-templates)
-* [API for developers](yellow-api)
+* [API for developers](api)

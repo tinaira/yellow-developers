@@ -1,6 +1,6 @@
 ---
-Title: Yellow help
-TitleNavigation: Help
+Title: Help
+TitleContent: Datenstrom Yellow
 Sidebar: sidebar
 Language: en
 ---
@@ -30,4 +30,4 @@ Yellow is for people who make websites. [Get support](support).
 
 * [Customising themes](customising-themes)
 * [Customising templates](customising-templates)
-* [API for developers](yellow-api)
+* [API for developers](api)

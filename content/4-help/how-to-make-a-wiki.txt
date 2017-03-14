@@ -3,19 +3,19 @@ Title: How to make a wiki
 Sidebar: sidebar
 Language: en
 ---
-Learn how to make a wiki with Yellow. [See demo](/plugins/wiki-plugin/).
+Learn how to make your own wiki. [See demo](/plugins/wiki-plugin/).
 
 [[image screenshot-wiki.png Screenshot - 55%]](/plugins/wiki-plugin/how-to-make-coffee)
 
 ## Install wiki
 
-1. [Download and unzip Yellow](https://github.com/datenstrom/yellow/archive/master.zip).
+1. [Download and unzip Datenstrom Yellow](https://github.com/datenstrom/yellow/archive/master.zip).
 2. Copy all files to your web hosting.
 3. Open your website in a web browser and select 'Wiki'.
 
-Your wiki is immediately available. The installation of Yellow comes with several pages, 'Home', 'Wiki' and 'About'. This is just an example to get you started, change everything as you like. You can delete 'Home', if you want to show the wiki on the home page.
+Your wiki is immediately available. The installation comes with several pages, 'Home', 'Wiki' and 'About'. This is just an example to get you started, change everything as you like. You can delete 'Home', if you want to show the wiki on the home page.
 
-When there are problems, please check [web server configuration](web-server-configuration) and [system settings](adjusting-system#system-settings).
+When there are problems, please check the [web server configuration](web-server-configuration).
 
 ## Writing wiki pages
 

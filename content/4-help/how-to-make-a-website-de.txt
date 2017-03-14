@@ -3,19 +3,19 @@ Title: Webseite erstellen
 Sidebar: sidebar-de
 Language: de
 ---
-Lerne wie man eine Webseite mit Yellow erstellt. [Demo anschauen](/page-de).
+Lerne wie man eine eigene Webseite erstellt. [Demo anschauen](/page-de).
 
 [[image screenshot-website.png Screenshot - 55%]](/page-de)
 
 ## Webseite installieren
 
-1. [Yellow herunterladen und entpacken](https://github.com/datenstrom/yellow/archive/master.zip).
+1. [Datenstrom Yellow herunterladen und entpacken](https://github.com/datenstrom/yellow/archive/master.zip).
 2. Kopiere alle Dateien auf dein Webhosting.
 3. Öffne deine Webseite in einem Webbrowser.
 
-Deine Webseite ist sofort erreichbar. Die Installation von Yellow kommt mit zwei Seiten, "Home" und "About". Das ist nur ein Beispiel um loszulegen, verändere alles so wie du willst. Man kann eine Webseite erstellen, indem man weitere Dateien und Verzeichnisse hinzufügt.
+Deine Webseite ist sofort erreichbar. Die Installation kommt mit zwei Seiten, "Home" und "About". Das ist nur ein Beispiel um loszulegen, verändere alles so wie du willst. Man kann eine Webseite erstellen, indem man weitere Dateien und Verzeichnisse hinzufügt.
 
-Falls Probleme auftreten, überprüfe bitte [Webservereinstellungen](web-server-configuration-de) und [Systemeinstellungen](adjusting-system-de#systemeinstellungen).
+Falls Probleme auftreten, überprüfe bitte die [Webservereinstellungen](web-server-configuration-de).
 
 ## Webseiten schreiben
 

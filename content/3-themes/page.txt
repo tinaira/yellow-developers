@@ -1,7 +1,6 @@
 ---
-Title: Yellow themes
-TitleNavigation: Themes
+Title: Themes
 ---
 [preview /themes/ - 40.5%]
 
-Want to create your own themes? [See developer documentation](/help/customising-themes).
+Want to add more themes? [See all themes](/help/themes-on-github).

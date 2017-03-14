@@ -1,16 +1,16 @@
 ---
-Title: Yellow API Deutsch
-TitleContent: Yellow API
+Title: API Deutsch
+TitleContent: API
 Sidebar: sidebar-de
 Language: de
 ---
-Yellow hat eine API für Entwickler. Wir :heart: Entwickler.
+API für Entwickler. Wir :heart: Entwickler.
 
 [toc]
 
 ## Objekte
 
-Die folgenden Objekte sind vorhanden:
+Die folgenden Objekte sind vorhanden in Datenstrom Yellow:
 
 [$yellow->page](#yellow-page) gibt Zugang zur aktuellen Seite  
 [$yellow->pages](#yellow-pages) gibt Zugang zu Seiten vom Dateisystem  
@@ -403,7 +403,7 @@ Teste ob eine Einstellung existiert
 Hier ist ein Beispiel-Snippet um statische Webseiten-Einstellungen anzuzeigen:
 
 ``` php
-<div class="yellow config">
+<div class="config">
 <?php foreach($yellow->config->getData("static") as $key=>$value): ?>
 <?php echo htmlspecialchars("$key: $value") ?><br />
 <?php endforeach ?>
@@ -413,7 +413,7 @@ Hier ist ein Beispiel-Snippet um statische Webseiten-Einstellungen anzuzeigen:
 Hier ist ein Beispiel-Snippet um Webmaster-Einstellungen anzuzeigen:
 
 ``` php
-<div class="yellow config">
+<div class="config">
 <?php $author = $yellow->config->get("author") ?>
 <?php $email = $yellow->config->get("email") ?>
 <?php echo htmlspecialchars("$author - $email") ?>
@@ -457,7 +457,7 @@ Teste ob ein Textstring existiert
 Hier ist ein Beispiel-Snippet um Kontakt-Textstrings anzuzeigen:
 
 ``` php
-<div class="yellow text">
+<div class="text">
 <?php foreach($yellow->text->getData("contact") as $key=>$value): ?>
 <?php echo htmlspecialchars("$key: $value") ?><br />
 <?php endforeach ?>
@@ -529,7 +529,7 @@ Hole die Argumente eines Textstrings, durch Leerzeichen getrennt
 Hier ist ein Beispiel-Snippet um Ort und Argumente der HTTP-Anfrage anzuzeigen:
 
 ``` php
-<div class="yellow location">
+<div class="toolbox">
 <?php echo htmlspecialchars($yellow->toolbox->getLocation()) ?><br />
 <?php foreach($_REQUEST as $key=>$value): ?>
 <?php echo htmlspecialchars("$key: $value") ?><br />
@@ -540,7 +540,7 @@ Hier ist ein Beispiel-Snippet um Ort und Argumente der HTTP-Anfrage anzuzeigen:
 Hier ist ein Beispiel-Snippet um Textzeilen von Datei zu lesen:
 
 ``` php
-<div class="yellow file">
+<div class="toolbox">
 <?php $fileName = $yellow->config->get("configDir").$yellow->config->get("robotsFile") ?>
 <?php $fileData = $this->yellow->toolbox->readFile($fileName) ?>
 <?php foreach($this->yellow->toolbox->getTextLines($fileData) as $line): ?>
@@ -736,7 +736,7 @@ YellowCore::request status:200 handler:core time:19 ms
 
 Dateisysteminformationen durch Erhöhen des Debuglevels zu `<?php define("DEBUG", 2);`
 ```
-Yellow 0.6.8, PHP 5.5.38, Apache/2.4.18 Darwin
+Datenstrom Yellow 0.7.1, PHP 5.6.28, Apache/2.4.23 Darwin
 YellowConfig::load file:system/config/config.ini
 YellowText::load file:system/plugins/language-de.txt
 YellowText::load file:system/plugins/language-en.txt
@@ -747,25 +747,25 @@ YellowCore::startup
 
 Maximum Informationen durch Erhöhen des Debuglevels zu `<?php define("DEBUG", 3);`
 ```
-Yellow 0.6.8, PHP 5.5.38, Apache/2.4.18 Darwin
+Datenstrom Yellow 0.7.1, PHP 5.6.28, Apache/2.4.23 Darwin
 YellowConfig::load file:system/config/config.ini
-YellowConfig::load Sitename:Yellow developers
-YellowConfig::load Author:Yellow
+YellowConfig::load Sitename:Datenstrom developers
+YellowConfig::load Author:Datenstrom
 YellowConfig::load Email:webmaster
 YellowConfig::load Language:en
 YellowConfig::load Timezone:Europe/Stockholm
 YellowConfig::load Theme:flatsite
 ```
 
-Wir machen [automatische Builds und Codeanalyse](status), schau dir unsere [Tests](/tests/) an.
+Wir machen [automatische Builds und Codeanalyse](status). Schau dir unsere [Tests](/tests/) an.
 
 ## Tipps und Tricks
 
 Einige Tipps für Entwickler:
 
-1. [Installiere das Entwickler-Kit](https://github.com/datenstrom/yellow-developers). Das Entwickler-Kit bietet Plugins, Themes, Beispiele und Dokumentation. Du kannst ausprobieren wie man kleine Webseite, Blogs und Wikis macht. Es ist eine grossartige Art um die Yellow-API zu erlernen. 
+1. [Installiere das Entwickler-Kit](https://github.com/datenstrom/yellow-developers). Das Entwickler-Kit für Datenstrom Yellow bietet Plugins, Themes und Beispiele. Du kannst ausprobieren wie man kleine Webseite, Blogs und Wikis macht. Es ist eine grossartige Art um loszulegen. 
 
-2. [Lerne die Web-Grundlagen](https://www.w3schools.com). Mach dich vertraut mit HTML, CSS und JavaScript. Das sind die wichtigsten Dinge die man wissen muss um Webseiten zu erstellen. Yellow benötigt keine komplizierten Frameworks und keine grossen Bibliotheken.
+2. [Lerne die Web-Grundlagen](https://www.w3schools.com). Mach dich vertraut mit HTML, CSS und JavaScript. Das sind die wichtigsten Dinge die man wissen muss um Webseiten zu erstellen. Du brauchst keine Frameworks oder Bibliotheken erlernen.
 
 3. [Stelle deinen Code auf GitHub](https://github.com/datenstrom/yellow/issues?q=label%3Anews%20). Erstelle ein Repository für jedes neue Plugin/Theme. Der Name deines Repository sollte `yellow-plugin-xyz` or `yellow-theme-xyz` sein. Dein Code muss nicht perfekt sein, aber er sollte im Entwickler-Kit funktionieren.
 

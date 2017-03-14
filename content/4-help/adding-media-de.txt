@@ -3,7 +3,7 @@ Title: Medien hinzufügen
 Sidebar: sidebar-de
 Language: de
 ---
-Alle Medien befinden sich im `media`-Verzeichnis. Hier speicherst du Bilder und Dateien.
+Alle Medien befinden sich im `media`-Verzeichnis. Hier speichert man Bilder und Dateien.
 
 [image screenshot-media.png Screenshot]
 

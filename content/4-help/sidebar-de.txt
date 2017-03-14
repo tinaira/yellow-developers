@@ -30,4 +30,4 @@ Anpassungen
 
 * [Themes anpassen](customising-themes-de)
 * [Templates anpassen](customising-templates-de)
-* [API für Entwickler](yellow-api-de)
+* [API für Entwickler](api-de)

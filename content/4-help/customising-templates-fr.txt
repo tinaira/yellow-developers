@@ -162,4 +162,4 @@ Status: hidden
 * [[fa fa-instagram] Instagram](https://instagram.com/datenstromse)
 ```
 
-[Suivant: API pour les développeurs →](yellow-api-fr)
+[Suivant: API pour les développeurs →](api-fr)

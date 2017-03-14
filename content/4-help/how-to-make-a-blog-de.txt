@@ -3,19 +3,19 @@ Title: Blog erstellen
 Sidebar: sidebar-de
 Language: de
 ---
-Lerne wie man ein Blog mit Yellow erstellt. [Demo anschauen](/plugins/blog-plugin/).
+Lerne wie man ein eigenes Blog erstellt. [Demo anschauen](/plugins/blog-plugin/).
 
 [[image screenshot-blog.png Screenshot - 55%]](/plugins/blog-plugin/fika-is-good-for-you)
 
 ## Blog installieren
 
-1. [Yellow herunterladen und entpacken](https://github.com/datenstrom/yellow/archive/master.zip).
+1. [Datenstrom Yellow herunterladen und entpacken](https://github.com/datenstrom/yellow/archive/master.zip).
 2. Kopiere alle Dateien auf dein Webhosting.
 3. Öffne deine Webseite in einem Webbrowser und wähle "Blog" aus.
 
-Dein Blog ist sofort erreichbar. Die Installation von Yellow kommt mit mehreren Seiten, "Home", "Blog" und "About". Das ist nur ein Beispiel um loszulegen, verändere alles so wie du willst. Du kannst "Home" löschen, wenn du das Blog auf der Startseite anzeigen willst.
+Dein Blog ist sofort erreichbar. Die Installation kommt mit mehreren Seiten, "Home", "Blog" und "About". Das ist nur ein Beispiel um loszulegen, verändere alles so wie du willst. Du kannst "Home" löschen, wenn du das Blog auf der Startseite anzeigen willst.
 
-Falls Probleme auftreten, überprüfe bitte [Webservereinstellungen](web-server-configuration-de) und [Systemeinstellungen](adjusting-system-de#systemeinstellungen).
+Falls Probleme auftreten, überprüfe bitte die [Webservereinstellungen](web-server-configuration-de).
  
 ## Blogeinträge schreiben
 
@@ -25,7 +25,7 @@ Lass uns einen Blick ins `content`-Verzeichnis werfen, dort befindet sich das Bl
 ---
 Title: Blog-Beispiel
 Published: 2013-04-07
-Author: Yellow
+Author: Datenstrom
 Tag: Beispiel
 ---
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
@@ -39,7 +39,7 @@ Um eine neue Blogseite hinzuzufügen, erstellst du eine neue Datei im Blogverzei
 ---
 Title: Fika ist gut für dich
 Published: 2013-06-01
-Author: Yellow
+Author: Datenstrom
 Tag: Beispiel, Kaffee
 ---
 Fika ist ein schwedischer Brauch. Es ist eine Kaffeepause, bei der Menschen  
@@ -55,7 +55,7 @@ Ein Video hinzufügen mit dem [Youtube-Plugin](https://github.com/datenstrom/yel
 ---
 Title: Fika ist gut für dich
 Published: 2013-06-01
-Author: Yellow
+Author: Datenstrom
 Tag: Beispiel, Kaffee, Video
 ---
 Fika ist ein schwedischer Brauch. Es ist eine Kaffeepause, bei der Menschen  
@@ -73,7 +73,7 @@ Das Video erst anzeigen wenn ein Besucher auf die Blogseite klickt. Du kannst `[
 ---
 Title: Fika ist gut für dich
 Published: 2013-06-01
-Author: Yellow
+Author: Datenstrom
 Tag: Beispiel, Kaffee, Video
 ---
 Fika ist ein schwedischer Brauch. Es ist eine Kaffeepause, bei der Menschen  

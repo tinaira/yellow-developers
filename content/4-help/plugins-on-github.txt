@@ -1,5 +1,5 @@
 ---
-Title: Yellow plugins on GitHub
+Title: Plugins on GitHub
 Redirect: https://github.com/datenstrom/yellow-plugins
 Sidebar: none
 Language: en
@@ -38,7 +38,7 @@ Available plugins:
 * [Highlight](https://github.com/datenstrom/yellow-plugins/tree/master/highlight): 
   Highlighting for source code.
 * [Image](https://github.com/datenstrom/yellow-plugins/tree/master/image): 
-  Resizable images and thumbnails.
+  Images and thumbnails.
 * [Language](https://github.com/datenstrom/yellow-plugins/tree/master/language): 
   Internationalisation for your website.
 * [Links](https://github.com/datenstrom/yellow-plugins/tree/master/links): 
@@ -78,6 +78,8 @@ Experimental plugins:
 
 * [Audio](https://github.com/schulle4u/yellow-plugin-audio):
   HTML5 audio player.
+* [Burger Menu](https://github.com/richi/yellow-plugin-burger-menu): 
+  A hamburger menu button.
 * [CheetJS](https://github.com/nogginfuel/yellow-plugin-cheetjs): 
   Add easter eggs via key binds.
 * [Comments](https://github.com/nasendackel/yellow-comments):

@@ -7,7 +7,7 @@ Tout les paramètres se trouvent dans le dossier `system`. Vous pouvez y faire d
 
 [image screenshot-system.png Screenshot]
 
-Le dossier `config` contient les fichiers de configurations. Le dossier `plugins` contient l'application Yellow. Le dossier `themes` concerne l'aspect visuel de votre site web. Apporter des changements dans ces dossiers affectera entièrement votre site web.
+Le dossier `config` contient les fichiers de configurations. Le dossier `plugins` contient le logiciel actuel. Le dossier `themes` concerne l'aspect visuel de votre site web. Apporter des changements dans ces dossiers affectera entièrement votre site web.
 
 ## Paramètres du système
 
@@ -27,18 +27,19 @@ Vous pouvez y définir les paramètres par défaut, par exemple le nom du site w
 Tous les utilisateurs sont stockés dans le fichier `system/config/user.ini`. Voici un exemple:
 
     anna@svensson.fr: $2y$10$j26zDnt/xaWxC/eqGKb9p.d6e3pbVENDfRzauTawNCUHHl3CCOIzG,Anna,en,active,946684800,none,/
-    demo@demo.com: $2y$10$8TKEuytrwiLSICJNlW5.yOE9CQPXJmqXL2Af6rPsSch1/9UiXEZjm,Yellow,en,active,946684800,none,/
+    demo@demo.com: $2y$10$8TKEuytrwiLSICJNlW5.yOE9CQPXJmqXL2Af6rPsSch1/9UiXEZjm,Demo,en,active,946684800,none,/
     guest@guest.com: $2y$10$4VENNhK/hb3US8zJdimJduratVuQloACbdmbGhoFUyqHvU6mbpPm.,Guest,en,active,946684800,none,/tests/
 
-L'[interface web](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface) vous permet de créer de nouveaux comptes d'utilisateurs et de changer les mots de passe. Un compte d'utilisateur se compose d'un email, d'un mot de passe crypté, de différents paramètres, tandis que le dernier paramètre concerne la page d'accueil de l'utilisateur.
+Le [navigateur web](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface) vous permet de créer de nouveaux comptes d'utilisateurs et de changer les mots de passe. Un compte d'utilisateur se compose d'un email, d'un mot de passe crypté, de différents paramètres, tandis que le dernier paramètre concerne la page d'accueil de l'utilisateur.
 
 ## Plugins et thèmes
 
-Yellow s'installe avec un minimum de fonctionnalité. Vous obtenez les choses les plus importantes pour créer un petit site web et pouvez ajouter d'autres fonctionnalités. Il existe une liste de [plugins](/plugins/) et de [thèmes](/themes/) spécifiques à télécharger. Les plugins suivants sont inclus:
+Datenstrom Yellow s'installe avec un minimum de fonctionnalité. Vous obtenez les choses les plus importantes pour créer un petit site web et pouvez ajouter d'autres fonctionnalités. 
+Il existe des [plugins](/plugins/) et des [thèmes](/themes/) à télécharger. Les plugins suivants sont inclus par défaut:
 
 * [Commandline](https://github.com/datenstrom/yellow-plugins/tree/master/commandline): Exécuter des commandes dans une fenêtre de terminal
 * [Webinterface](https://github.com/datenstrom/yellow-plugins/tree/master/webinterface): Modifiez votre site web dans un navigateur web
-* [Image](https://github.com/datenstrom/yellow-plugins/tree/master/image): Intégrer des images et des miniatures redimensionnables
+* [Image](https://github.com/datenstrom/yellow-plugins/tree/master/image): Intégrer des images et des vignettes
 * [Markdown](https://github.com/datenstrom/yellow-plugins/tree/master/markdown): Formatage de texte pour les humains
 * [Update](https://github.com/datenstrom/yellow-plugins/tree/master/update): Gardez votre site à jour
 

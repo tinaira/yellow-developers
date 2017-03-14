@@ -64,7 +64,7 @@ if(window.addEventListener) {
 
 ## HTML
 
-Um eigene Themes zu erstellen, ist es gut die [HTML](https://www.w3schools.com/html/)-Struktur einer Seite zu kennen. Yellow kommt mit einer Standard-HTML-Struktur die auf den meisten Webseiten, Blogs und Wikis benutzt wird. Das ist nur ein Vorschlag, du kannst jede Struktur verwenden die du willst.
+Um eigene Themes zu erstellen, ist es gut die [HTML](https://www.w3schools.com/html/)-Struktur einer Seite zu kennen. Es gibt eine Standard-HTML-Struktur die auf den meisten Webseiten, Blogs und Wikis benutzt wird. Das ist nur ein Vorschlag, du kannst jede Struktur verwenden die du willst.
 
 Hier ist die Standard-HTML-Struktur:
 
