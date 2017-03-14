@@ -3,7 +3,7 @@ Title: Markdown-Spickzettel
 Sidebar: none
 Language: de
 ---
-Markdown ist eine praktische Art um Webseiten zu bearbeiten. [Markdown testen](/tests/markdown-format).
+Markdown ist eine praktische Art um Webseiten zu bearbeiten.
 
 ## Grundlagen
 
@@ -39,7 +39,7 @@ Links erstellen:
 
     [Link zu Seite](/help/how-to-make-a-website)  
     [Link zu Webseite](https://datenstrom.se)  
-    https://de.wikipedia.org/wiki/Markdown
+    http://commonmark.org
 
 Ein Bild hinzufügen:
 

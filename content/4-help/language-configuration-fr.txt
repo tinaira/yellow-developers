@@ -9,7 +9,7 @@ Comment configurer un site web avec des différents langages.
 
 ## Langages
 
-Yellow est multi-langage et il existe [différentes traductions](https://github.com/datenstrom/yellow-plugins/tree/master/language) que vous pouvez télécharger. La langue par défaut est définie dans les [paramètres du système](adjusting-system-fr#paramètres-du-système). Une autre langue peut-être définie pour chacune de vos pages dans les [paramètres](markdown-cheat-sheet-fr#paramètres) en haut de celle-ci, par exemple `Language: en`.
+L'installation est fournie avec trois langues et il existe [différentes traductions](https://github.com/datenstrom/yellow-plugins/tree/master/language) à télécharger. La langue par défaut est définie dans les [paramètres du système](adjusting-system-fr#paramètres-du-système). Une autre langue peut-être définie pour chacune de vos pages dans les [paramètres](markdown-cheat-sheet-fr#paramètres) en haut de celle-ci, par exemple `Language: en`.
 
 Voici une page en anglais:
 
@@ -38,7 +38,7 @@ Une page en français:
 Title: À propos de nous
 Language: fr
 ---
-Les oiseaux de même plumage volent toujours ensemble
+Les oiseaux de même plumage volent toujours ensemble.
 ```
 
 ## Le mode multi-langage

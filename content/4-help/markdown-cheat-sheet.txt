@@ -3,7 +3,7 @@ Title: Markdown cheat sheet
 Sidebar: none
 Language: en
 ---
-Markdown is a practical way to edit web pages. [Test Markdown](/tests/markdown-format).
+Markdown is a practical way to edit web pages.
 
 ## Basics
 
@@ -39,7 +39,7 @@ Making links:
 
     [Link to page](/help/how-to-make-a-website)  
     [Link to website](https://datenstrom.se)  
-    https://en.wikipedia.org/wiki/Markdown
+    http://commonmark.org
 
 Adding an image:
 

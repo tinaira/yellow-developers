@@ -3,7 +3,7 @@ Title: Markdown antisèche
 Sidebar: none
 Language: fr
 ---
-Markdown est un moyen pratique pour éditer des pages web. [Testez Markdown](/tests/markdown-format).
+Markdown est un moyen pratique pour éditer des pages web.
 
 ## Les bases
 
@@ -39,7 +39,7 @@ Créer des liens:
 
     [Lien vers une page](/help/how-to-make-a-website)  
     [Lien vers un site](https://datenstrom.se)  
-    https://fr.wikipedia.org/wiki/Markdown
+    http://commonmark.org
 
 Ajouter des images:
 

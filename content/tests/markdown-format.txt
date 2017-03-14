@@ -33,4 +33,4 @@ Making links:
 
 [Link to page](/help/how-to-make-a-website)  
 [Link to website](https://datenstrom.se)  
-https://en.wikipedia.org/wiki/Markdown
+http://commonmark.org

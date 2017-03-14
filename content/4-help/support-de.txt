@@ -12,13 +12,14 @@ Tausche dich mit anderen Benutzern aus und finde professionelle Hilfe.
 * [Markdown-Spickzettel](markdown-cheat-sheet-de)
 * [Frage einen Menschen](https://datenstrom.se/de/contact/)
 
-## Folge uns
+## Informationen finden
 
 * [Twitter @datenstromse](https://twitter.com/datenstromse)
 * [GitHub @datenstrom](https://github.com/datenstrom)
 * [Instagram @datenstromse](https://instagram.com/datenstromse)
+* [Webseite datenstrom.se](https://datenstrom.se)
 
-## Mach mit
+## Mitmachen
 
 * [Beantworte Fragen](https://github.com/datenstrom/yellow/issues)
 * [Verbessere Übersetzungen](https://github.com/datenstrom/yellow-plugins/tree/master/language)
