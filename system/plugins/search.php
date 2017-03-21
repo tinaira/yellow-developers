@@ -5,7 +5,7 @@
 
 class YellowSearch
 {
-	const VERSION = "0.6.9";
+	const VERSION = "0.6.10";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -73,7 +73,7 @@ class YellowSearch
 					if($filters["language"]) $pages->filter("language", $filters["language"]);
 					if($filters["status"]) $pages->filter("status", $filters["status"]);
 				}
-				$pages->sort("modified", false)->sort("searchscore");
+				$pages->sort("modified")->sort("searchscore");
 				$pages->pagination($this->yellow->config->get("searchPaginationLimit"));
 				if($_REQUEST["page"] && !$pages->getPaginationNumber()) $this->yellow->page->error(404);
 				$this->yellow->page->set("titleHeader", $query." - ".$this->yellow->page->get("sitename"));
