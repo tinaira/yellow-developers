@@ -5,7 +5,7 @@
 
 class YellowSearch
 {
-	const VERSION = "0.6.10";
+	const VERSION = "0.6.11";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -46,8 +46,8 @@ class YellowSearch
 			if(!empty($tokens) || !empty($filters))
 			{
 				$pages = $this->yellow->pages->clean();
-				$showSpecialPages = $filters["status"]=="draft" && $this->yellow->getRequestHandler()!="core";
-				foreach($this->yellow->pages->index($showSpecialPages, false) as $page)
+				$showInvisible = $filters["status"]=="draft" && $this->yellow->getRequestHandler()!="core";
+				foreach($this->yellow->pages->index($showInvisible, false) as $page)
 				{
 					$searchScore = 0;
 					$searchTokens = array();
@@ -76,16 +76,27 @@ class YellowSearch
 				$pages->sort("modified")->sort("searchscore");
 				$pages->pagination($this->yellow->config->get("searchPaginationLimit"));
 				if($_REQUEST["page"] && !$pages->getPaginationNumber()) $this->yellow->page->error(404);
-				$this->yellow->page->set("titleHeader", $query." - ".$this->yellow->page->get("sitename"));
-				$this->yellow->page->set("titleSearch", $this->yellow->text->get("searchQuery")." ".$query);
+				$title = empty($query) ? $this->yellow->text->get("searchSpecialChanges") : $query;
+				$this->yellow->page->set("titleHeader", $title." - ".$this->yellow->page->get("sitename"));
+				$this->yellow->page->set("titleSearch", $this->yellow->text->get("searchQuery")." ".$title);
 				$this->yellow->page->setPages($pages);
 				$this->yellow->page->setLastModified($pages->getModified());
 				$this->yellow->page->setHeader("Cache-Control", "max-age=60");
 				$this->yellow->page->set("status", count($pages) ? "done" : "empty");
 			} else {
+				$this->yellow->page->set("titleSearch", $this->yellow->page->get("title"));
 				$this->yellow->page->set("status", "none");
 			}
 		}
+	}
+	
+	
+	// Handle user help
+	function onUserHelp($email, $language, $users) //TODO: document later, experimental feature for developer kit
+	{
+		$location = $this->yellow->page->base.$this->yellow->config->get("searchLocation");
+		$location .= $locationSearch.$this->yellow->toolbox->normaliseArgs("special:changes");
+		return $this->yellow->text->getText("searchSpecialChanges", $language).": $location\n";
 	}
 	
 	// Return search information
@@ -104,7 +115,7 @@ class YellowSearch
 			}
 		}
 		if($tokensMax) $tokens = array_slice($tokens, 0, $tokensMax);
-		if(empty($tokens) && !$filtersInQuery) $filters = array();
+		if(empty($tokens) && !$filtersInQuery && !$filters["special"]) $filters = array();
 		return array($tokens, $filters);
 	}
 }
