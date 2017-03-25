@@ -5,7 +5,7 @@
 
 class YellowWiki
 {
-	const VERSION = "0.6.12";
+	const VERSION = "0.6.13";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -21,6 +21,38 @@ class YellowWiki
 	function onParseContentBlock($page, $name, $text, $shortcut)
 	{
 		$output = null;
+		if($name=="wikiauthors" && $shortcut)
+		{
+			list($location, $pagesMax) = $this->yellow->toolbox->getTextArgs($text);
+			if(empty($location)) $location = $this->yellow->config->get("wikiLocation");
+			if(empty($pagesMax)) $pagesMax = $this->yellow->config->get("wikiPagesMax");
+			$wiki = $this->yellow->pages->find($location);
+			$pages = $wiki ? $wiki->getChildren(!$wiki->isVisible()) : $this->yellow->pages->clean();
+			$page->setLastModified($pages->getModified());
+			$authors = array();
+			foreach($pages as $page) if($page->isExisting("author")) foreach(preg_split("/\s*,\s*/", $page->get("author")) as $author) ++$authors[$author];
+			if(count($authors))
+			{
+				$authors = $this->yellow->lookup->normaliseUpperLower($authors);
+				if($pagesMax!=0 && count($authors)>$pagesMax)
+				{
+					uasort($authors, strnatcasecmp);
+					$authors = array_slice($authors, -$pagesMax);
+				}
+				uksort($authors, strnatcasecmp);
+				$output = "<div class=\"".htmlspecialchars($name)."\">\n";
+				$output .= "<ul>\n";
+				foreach($authors as $key=>$value)
+				{
+					$output .= "<li><a href=\"".$wiki->getLocation(true).$this->yellow->toolbox->normaliseArgs("author:$key")."\">";
+					$output .= htmlspecialchars($key)."</a></li>\n";
+				}
+				$output .= "</ul>\n";
+				$output .= "</div>\n";
+			} else {
+				$page->error(500, "Wikiauthors '$location' does not exist!");
+			}
+		}
 		if($name=="wikipages" && $shortcut)
 		{
 			list($location, $pagesMax) = $this->yellow->toolbox->getTextArgs($text);
@@ -94,7 +126,7 @@ class YellowWiki
 		{
 			list($location, $pagesMax) = $this->yellow->toolbox->getTextArgs($text);
 			if(empty($location)) $location = $this->yellow->config->get("wikiLocation");
-			if(empty($pagesMax)) $pagesMax = 0;
+			if(empty($pagesMax)) $pagesMax = $this->yellow->config->get("wikiPagesMax");
 			$wiki = $this->yellow->pages->find($location);
 			$pages = $wiki ? $wiki->getChildren(!$wiki->isVisible())->append($wiki) : $this->yellow->pages->clean();
 			$page->setLastModified($pages->getModified());
@@ -146,9 +178,9 @@ class YellowWiki
 				$pages->filter("tag", $_REQUEST["tag"]);
 				array_push($pagesFilter, $pages->getFilter());
 			}
-			if($_REQUEST["title"])
+			if($_REQUEST["author"])
 			{
-				$pages->filter("title", $_REQUEST["title"], false);
+				$pages->filter("author", $_REQUEST["author"], false);
 				array_push($pagesFilter, $pages->getFilter());
 			}
 			if($_REQUEST["modified"])

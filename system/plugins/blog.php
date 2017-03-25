@@ -5,7 +5,7 @@
 
 class YellowBlog
 {
-	const VERSION = "0.6.12";
+	const VERSION = "0.6.13";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -50,8 +50,9 @@ class YellowBlog
 		}
 		if($name=="blogauthors" && $shortcut)
 		{
-			list($location) = $this->yellow->toolbox->getTextArgs($text);
+			list($location, $pagesMax) = $this->yellow->toolbox->getTextArgs($text);
 			if(empty($location)) $location = $this->yellow->config->get("blogLocation");
+			if(empty($pagesMax)) $pagesMax = $this->yellow->config->get("blogPagesMax");
 			$blog = $this->yellow->pages->find($location);
 			$pages = $blog ? $blog->getChildren(!$blog->isVisible()) : $this->yellow->pages->clean();
 			$pages->filter("template", "blog");
@@ -61,6 +62,11 @@ class YellowBlog
 			if(count($authors))
 			{
 				$authors = $this->yellow->lookup->normaliseUpperLower($authors);
+				if($pagesMax!=0 && count($authors)>$pagesMax)
+				{
+					uasort($authors, strnatcasecmp);
+					$authors = array_slice($authors, -$pagesMax);
+				}
 				uksort($authors, strnatcasecmp);
 				$output = "<div class=\"".htmlspecialchars($name)."\">\n";
 				$output .= "<ul>\n";
@@ -125,7 +131,7 @@ class YellowBlog
 		{
 			list($location, $pagesMax) = $this->yellow->toolbox->getTextArgs($text);
 			if(empty($location)) $location = $this->yellow->config->get("blogLocation");
-			if(empty($pagesMax)) $pagesMax = 0;
+			if(empty($pagesMax)) $pagesMax = $this->yellow->config->get("blogPagesMax");
 			$blog = $this->yellow->pages->find($location);
 			$pages = $blog ? $blog->getChildren(!$blog->isVisible()) : $this->yellow->pages->clean();
 			$pages->filter("template", "blog");
