@@ -11,7 +11,6 @@ Here's a collection of tests.
 * [Test image parsing](image-parsing)
 * [Test link parsing](link-parsing)
 * [Test Markdown format](markdown-format)
-* [Test draft status](page-draft-status)
 * [Test language error](page-language-error)
 * [Test parser error](page-parser-error)
 * [Test template error](page-template-error)
