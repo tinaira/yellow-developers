@@ -15,6 +15,7 @@ var yellow =
 yellow.webinterface =
 {
 	paneId: 0,			//visible pane ID
+	paneActionOld: 0,	//previous pane action
 	paneAction: 0,		//current pane action
 	paneStatus: 0,		//current pane status
 	intervalId: 0,		//timer interval ID
@@ -374,7 +375,7 @@ yellow.webinterface =
 				this.paneAction = paneAction;
 				this.paneStatus = paneStatus;
 				this.resizePane(paneId, paneAction, paneStatus);
-				this.updatePane(paneId, paneAction, paneStatus, true);
+				this.updatePane(paneId, paneAction, paneStatus, this.paneActionOld!=this.paneAction);
 			}
 		} else {
 			this.hidePane(this.paneId);
@@ -392,6 +393,7 @@ yellow.webinterface =
 			yellow.toolbox.removeValue("meta[name=viewport]", "content", ", maximum-scale=1, user-scalable=0");
 			yellow.toolbox.setVisible(element, false);
 			this.paneId = 0;
+			this.paneActionOld = this.paneAction;			
 			this.paneAction = 0;
 			this.paneStatus = 0;
 		}
