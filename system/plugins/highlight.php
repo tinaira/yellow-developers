@@ -5,7 +5,7 @@
 
 class YellowHighlight
 {
-	const VERSION = "0.6.5";
+	const VERSION = "0.6.6";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -134,7 +134,7 @@ class YellowHighlight
 //
 
 /** The version of this GeSHi file */
-define('GESHI_VERSION', '1.0.8.12');
+define('GESHI_VERSION', '1.0.8.13');
 
 // Define the root directory for the GeSHi code tree
 if (!defined('GESHI_ROOT')) {
@@ -767,6 +767,9 @@ class GeSHi {
      * @since 1.0.0
      */
     function set_language($language, $force_reset = false) {
+        $this->error = false;
+        $this->strict_mode = GESHI_NEVER;
+
         if ($force_reset) {
             $this->loaded_language = false;
         }
@@ -784,9 +787,6 @@ class GeSHi {
         }
 
         $this->language = $language;
-
-        $this->error = false;
-        $this->strict_mode = GESHI_NEVER;
 
         //Check if we can read the desired file
         if (!is_readable($file_name)) {
@@ -3394,11 +3394,13 @@ class GeSHi {
                             '{FNAME}',
                             '{FNAMEL}',
                             '{FNAMEU}',
+                            '{FNAMEUF}',
                             '.'),
                         array(
                             str_replace('+', '%20', urlencode($this->hsc($word))),
                             str_replace('+', '%20', urlencode($this->hsc(strtolower($word)))),
                             str_replace('+', '%20', urlencode($this->hsc(strtoupper($word)))),
+                            str_replace('+', '%20', urlencode($this->hsc(ucfirst($word)))),
                             '<DOT>'),
                         $this->language_data['URLS'][$k]
                     ) . '">';
