@@ -7,7 +7,7 @@ Connect with other users and find professional help.
 
 ## How to get support
 
-* [Discuss problems and suggestions](https://github.com/datenstrom/yellow/issues)
+* [Discuss problems and ask questions](https://github.com/datenstrom/yellow/issues)
 * [Markdown cheat sheet](markdown-cheat-sheet)
 * [Contact a human](https://datenstrom.se/contact/)
 

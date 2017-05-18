@@ -1,8 +1,8 @@
 ---
 Title: Made for people
 Published: 2015-10-11
-Template: blog
 Author: Datenstrom
+Template: blog
 Tag: Example
 ---
 Blog for your website. 

@@ -1,6 +1,7 @@
 ---
 Title: Yellow est fait pour les gens qui font des sites web
 TitleNavigation: Demo
+Template: demo
 Language: fr
 ---
 [image picture.jpg Picture rounded]

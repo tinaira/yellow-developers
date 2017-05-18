@@ -1,6 +1,7 @@
 ---
 Title: Yellow is for people who make websites
 TitleNavigation: Demo
+Template: demo
 ---
 [image picture.jpg Picture rounded]
 
