@@ -1,6 +1,6 @@
 ---
 Title: Help
-TitleContent: Datenstrom Yellow
+TitleContent: Datenstrom Yellow help
 Sidebar: sidebar
 Language: en
 ---

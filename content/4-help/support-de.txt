@@ -10,7 +10,7 @@ Tausche dich mit anderen Benutzern aus und finde professionelle Hilfe.
 
 * [Diskutiere Probleme und stelle Fragen](https://github.com/datenstrom/yellow/issues)
 * [Markdown-Spickzettel](markdown-cheat-sheet-de)
-* [Frage einen Menschen](https://datenstrom.se/de/contact/)
+* [Kontaktiere einen Menschen](https://datenstrom.se/de/contact/)
 
 ## Informationen finden
 

@@ -10,7 +10,7 @@ Entrez en contact avec d'autres utilisateurs et trouvez de l'aide professionnell
 
 * [Discuter des problèmes et poser des questions](https://github.com/datenstrom/yellow/issues)
 * [Markdown antisèche](markdown-cheat-sheet-fr)
-* [Interrogez un humain](https://datenstrom.se/fr/contact/)
+* [Contactez un humain](https://datenstrom.se/fr/contact/)
 
 ## Comment obtenir de l'information
 
