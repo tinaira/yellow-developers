@@ -15,7 +15,7 @@ Learn how to make your own wiki. [See demo](/plugins/wiki-plugin/).
 
 Your wiki is immediately available. The installation comes with several pages, 'Home', 'Wiki' and 'About'. This is just an example to get you started, change everything as you like. You can delete 'Home', if you want to show the wiki on the home page.
 
-When there are problems, please check the [web server configuration](web-server-configuration).
+When there are problems, please check the [web server configuration](web-server-configuration) or ask the [support](support).
 
 ## Writing wiki pages
 

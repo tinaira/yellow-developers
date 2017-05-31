@@ -17,7 +17,8 @@ Apprenez à faire un propre blog. [Voir la démo](/plugins/blog-plugin/).
 
 Votre blog est immédiatement accessible. L'installation est fournie avec plusieurs pages, 'Home', 'Blog' et 'About'. Elles sont juste un exemple pour commencer, vous pouvez les modifier comme il vous convient. Vous pouvez supprimer 'Home', si vous souhaitez faire de votre blog la page d'accueil.
 
-S'il y a des problèmes, vérifiez la [configuration du serveur web](web-server-configuration-fr).
+S'il y a des problèmes, vérifiez la [configuration du serveur web](web-server-configuration-fr) ou demandez le [support](support-fr).
+
 ## Écrire une page de blog
 
 Jetons un oeil dans le dossier `content`, où se trouve le dossier de votre blog avec toutes vos pages de blog. Ouvrez le fichier `2013-04-07-blog-example.txt`. Vous y verrez les paramètres et le texte de la page. Vous pouvez changer le titre de la page `Title` ainsi que d'autres [paramètres](markdown-cheat-sheet-fr#paramètres) en haut de la page. Voici un exemple:

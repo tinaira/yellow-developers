@@ -15,7 +15,7 @@ Lerne wie man ein eigenes Wiki erstellt. [Demo anschauen](/plugins/wiki-plugin/)
 
 Dein Wiki ist sofort erreichbar. Die Installation kommt mit mehreren Seiten, "Home", "Wiki" und "About". Das ist nur ein Beispiel um loszulegen, verändere alles so wie du willst. Du kannst "Home" löschen, wenn du das Wiki auf der Startseite anzeigen willst.
 
-Falls Probleme auftreten, überprüfe bitte die [Webservereinstellungen](web-server-configuration-de).
+Falls Probleme auftreten, überprüfe bitte die [Webservereinstellungen](web-server-configuration-de) oder frage den [Support](support-de).
 
 ## Wikiseiten schreiben
 

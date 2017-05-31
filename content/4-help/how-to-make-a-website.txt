@@ -15,7 +15,7 @@ Learn how to make your own website. [See demo](/).
 
 Your website is immediately available. The installation comes with two pages, 'Home' and 'About'. This is just an example to get you started, change everything as you like. You can make a website by adding more files and folders.
 
-When there are problems, please check the [web server configuration](web-server-configuration).
+When there are problems, please check the [web server configuration](web-server-configuration) or ask the [support](support).
 
 ## Writing web pages
 

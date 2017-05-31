@@ -28,6 +28,6 @@ Tausche dich mit anderen Benutzern aus und finde professionelle Hilfe.
 
 ## Danke
 
-Datenstrom Yellow ist Open-Source. Erstellt von Menschen wie du und ich. Im Herzen von Open-Source ist die Idee, dass wir gemeinsam bessere Software machen. Lizensiert unter [GPLv2](https://github.com/datenstrom/yellow/blob/master/LICENSE.md) sofern nichts anderes angegeben. Großen Dank an alle Benutzer und [Mitglieder](https://github.com/orgs/datenstrom/people).
+Datenstrom Yellow ist Open-Source. Erstellt von Menschen wie du und ich. Im Herzen von Open-Source ist die Idee, dass wir gemeinsam bessere Software machen. Lizensiert unter [GPLv2](https://github.com/datenstrom/yellow/blob/master/LICENSE.md) sofern nichts anderes angegeben. Großen Dank an alle Benutzer und Mitwirkende.
 
 
