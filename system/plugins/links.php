@@ -5,7 +5,7 @@
 
 class YellowLinks
 {
-	const VERSION = "0.6.6";
+	const VERSION = "0.6.7";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -25,8 +25,8 @@ class YellowLinks
 		{
 			$style = $this->yellow->config->get("linksStyle");
 			$publicationOrder = ($page->get("template")=="blog");
-			$parent = $page->getParent();
-			$pages = $parent ? $page->getSiblings(!$parent->isVisible()) : $this->yellow->pages->clean();
+			$linksPossible = ($page->get("template")!="wikipages");
+			$pages = $linksPossible ? $page->getSiblings(!$page->isVisible()) : $this->yellow->pages->clean();
 			$pages->sort($publicationOrder ? "published" : "title", true);
 			$page->setLastModified($pages->getModified());
 			if($this->yellow->config->get("linksPagePrevious")) $pagePrevious = $pages->getPagePrevious($page);

@@ -5,7 +5,7 @@
 
 class YellowWiki
 {
-	const VERSION = "0.6.13";
+	const VERSION = "0.6.14";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
