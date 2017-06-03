@@ -5,7 +5,7 @@
 
 class YellowSearch
 {
-	const VERSION = "0.6.11";
+	const VERSION = "0.6.12";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -89,16 +89,7 @@ class YellowSearch
 			}
 		}
 	}
-	
-	
-	// Handle user help
-	function onUserHelp($email, $language, $users) //TODO: document later, experimental feature for developer kit
-	{
-		$location = $this->yellow->page->base.$this->yellow->config->get("searchLocation");
-		$location .= $locationSearch.$this->yellow->toolbox->normaliseArgs("special:changes");
-		return $this->yellow->text->getText("searchSpecialChanges", $language).": $location\n";
-	}
-	
+		
 	// Return search information
 	function getSearchInformation($query, $tokensMax)
 	{
