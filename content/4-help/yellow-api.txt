@@ -1,8 +1,0 @@
----
-Title: Yellow API - File has moved
-Sidebar: none
-Language: en
----
-This requested file has moved. [Please update your link](/help/api).
-
-Yellow is for people who make websites. [Get support](/help/support).
