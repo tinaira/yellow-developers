@@ -1,9 +1,9 @@
 <?php
-// Commandline plugin, https://github.com/datenstrom/yellow-plugins/tree/master/commandline
+// Command plugin (beta), https://github.com/datenstrom/yellow-plugins/tree/master/commandline
 // Copyright (c) 2013-2017 Datenstrom, https://datenstrom.se
 // This file may be used and distributed under the terms of the public license.
 
-class YellowCommandline
+class YellowCommand
 {
 	const VERSION = "0.6.19";
 	var $yellow;					//access to API
@@ -175,7 +175,7 @@ class YellowCommandline
 			++$this->errors;
 			echo "ERROR building location '$location', ".$this->yellow->page->getStatusCode(true)."\n";
 		}
-		if(defined("DEBUG") && DEBUG>=1) echo "YellowCommandline::buildStaticFile status:$statusCode location:$location<br/>\n";
+		if(defined("DEBUG") && DEBUG>=1) echo "YellowCommand::buildStaticFile status:$statusCode location:$location<br/>\n";
 		return $statusCode;
 	}
 	
@@ -219,14 +219,14 @@ class YellowCommandline
 				if(is_null($this->locationsArgs[$location]))
 				{
 					$this->locationsArgs[$location] = $location;
-					if(defined("DEBUG") && DEBUG>=2) echo "YellowCommandline::analyseStaticFile detected location:$location<br/>\n";
+					if(defined("DEBUG") && DEBUG>=2) echo "YellowCommand::analyseStaticFile detected location:$location<br/>\n";
 				}
 			} else {
 				$location = rtrim($location, "0..9");
 				if(is_null($this->locationsArgsPagination[$location]))
 				{
 					$this->locationsArgsPagination[$location] = $location;
-					if(defined("DEBUG") && DEBUG>=2) echo "YellowCommandline::analyseStaticFile detected location:$location<br/>\n";
+					if(defined("DEBUG") && DEBUG>=2) echo "YellowCommand::analyseStaticFile detected location:$location<br/>\n";
 				}
 			}
 		}
@@ -300,7 +300,7 @@ class YellowCommandline
 		$statusCode = 0;
 		foreach($this->yellow->plugins->plugins as $key=>$value)
 		{
-			if($key=="commandline") continue;
+			if($key=="command") continue;
 			if(method_exists($value["obj"], "onCommand"))
 			{
 				$statusCode = $value["obj"]->onCommand(func_get_args());
@@ -460,5 +460,5 @@ class YellowCommandline
 	}
 }
 	
-$yellow->plugins->register("commandline", "YellowCommandline", YellowCommandline::VERSION);
+$yellow->plugins->register("command", "YellowCommand", YellowCommand::VERSION);
 ?>
