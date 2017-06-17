@@ -61,7 +61,8 @@ class YellowLinks
 	{
 		switch($page->get("template"))
 		{
-			case "blog":		if(!empty($this->yellow->config->get("blogLocation")))
+			case "blog":		$blogLocation = $this->yellow->config->get("blogLocation");
+								if(!empty($blogLocation))
 								{
 									$pages = $this->yellow->pages->index(!$page->isVisible());
 								} else {
@@ -70,7 +71,8 @@ class YellowLinks
 								$pages->filter("template", "blog")->sort("published", true);
 								break;
 			case "blogpages":	$pages = $this->yellow->pages->clean(); break;
-			case "wiki":		if(!empty($this->yellow->config->get("wikiLocation")))
+			case "wiki":		$wikiLocation = $this->yellow->config->get("wikiLocation");
+								if(!empty($wikiLocation))
 								{
 									$pages = $this->yellow->pages->index(!$page->isVisible());
 								} else {
