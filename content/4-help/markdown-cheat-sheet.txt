@@ -47,7 +47,7 @@ Adding an image:
     ![image](picture.jpg "Picture")
     ![image](picture.jpg "This is an example image")
 
-Adding an image, here's an alternative format:
+Adding an image, alternative format:
 
     [image picture.jpg]
     [image picture.jpg Picture]
@@ -83,12 +83,13 @@ Adding an image, here's an alternative format:
 `Language` = page language  
 `Theme` = page theme  
 `Template` = page template  
+`TemplateNew` = page template for creating a new page  
 `Parser` = page parser  
 `Modified` = page modification date, YYYY-MM-DD format  
 `Published` = page publication date, YYYY-MM-DD format  
 `Tag` = page tag(s) for categorisation, comma separated  
-`Status` = page status for workflow  
 `Redirect` = redirect to a new page or URL  
+`Status` = status for workflow  
 `Navigation` = page navigation  
 `Sidebar` = page sidebar  
 `Sitename` = name of the website  

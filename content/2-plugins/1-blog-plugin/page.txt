@@ -2,5 +2,6 @@
 Title: Blog plugin
 Description: Blog for your website
 Template: blogpages
+TemplateNew: blog
 ---
 This page is automatically generated.

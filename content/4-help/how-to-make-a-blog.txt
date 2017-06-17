@@ -26,6 +26,7 @@ Have a look inside your `content` folder, there's the blog folder with all your 
 Title: Blog example
 Published: 2013-04-07
 Author: Datenstrom
+Template: blog
 Tag: Example
 ---
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
@@ -40,6 +41,7 @@ To create a new blog page, add a new file to the blog folder. Set `Published` an
 Title: Fika is good for you
 Published: 2013-06-01
 Author: Datenstrom
+Template: blog
 Tag: Example, Coffee
 ---
 Fika is a Swedish custom. It's a social coffee break where people 
@@ -56,6 +58,7 @@ Now let's add a video with the [Youtube plugin](https://github.com/datenstrom/ye
 Title: Fika is good for you
 Published: 2013-06-01
 Author: Datenstrom
+Template: blog
 Tag: Example, Coffee, Video
 ---
 Fika is a Swedish custom. It's a social coffee break where people 
@@ -74,6 +77,7 @@ Let's show the video when a visitor clicks on the blog page. You can add `[--mor
 Title: Fika is good for you
 Published: 2013-06-01
 Author: Datenstrom
+Template: blog
 Tag: Example, Coffee, Video
 ---
 Fika is a Swedish custom. It's a social coffee break where people 

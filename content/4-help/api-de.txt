@@ -50,7 +50,7 @@ Hole die Hauptseite der aktuellen Seite, null falls nicht vorhanden
 Hole eine [Page-Collection](#yellow-page-collection) mit Seiten auf dem selben Level wie die aktuelle Seite 
 
 **$yellow->page->getChildren($showInvisible = false)**  
-Hole eine [Page-Collection](#yellow-page-collection) mit Kinderseiten der aktuellen Seite 
+Hole eine [Page-Collection](#yellow-page-collection) mit Kinderseiten der aktuellen Seite
 
 **$yellow->page->getFiles($showInvisible = false)**  
 Hole eine [Page-Collection](#yellow-page-collection) mit Mediendateien der aktuellen Seite
@@ -349,6 +349,9 @@ Hier ist ein Beispiel-Snippet um zu testen ob ein Plugin existiert:
 
 Yellow-Themes gibt Zugang zu [Themes](customising-themes-de):
 
+**$yellow->themes->get($name)**  
+Hole ein Theme
+
 **$yellow->themes->getData()**  
 Hole die Versionsinformationen von Themes
 
@@ -521,7 +524,7 @@ Hole das Änderungsdatum der Datei, Unix-Zeit
 Hole die Dateiendung
 
 **$yellow->toolbox->getTextLines($text)**  
-Hole die Zeilen eines Textstrings, durch Zeilenumbruch getrennt  
+Hole die Zeilen eines Textstrings, einschließlich Zeilenumbruch  
 
 **$yellow->toolbox->getTextArgs($text, $optional = "-")**  
 Hole die Argumente eines Textstrings, durch Leerzeichen getrennt  
@@ -577,14 +580,17 @@ Behandle das Parsen des Seiteninhaltes
 **function onParsePage()**  
 Behandle das Parsen einer Seite
 
-**function onExtra($name)**  
-Behandle das Parsen von extra HTML-Daten einer Seite
-
-**function onUserAccount($email, $password, $action, $users)**  
+**function onEditUserAccount($email, $password, $action, $users)**  
 Behandle Benutzerkontoänderungen
 
-**function onUserRestrictions($email, $location, $fileName, $users)**  
-Behandle Benutzerbeschränkungen um eine Seite zu ändern
+**function onEditUserRestrictions($email, $location, $fileName, $users)**  
+Behandle Benutzerbeschränkungen
+
+**function onEditContentFile($page, $text)**  
+Behandle das Bearbeiten der Textdatei 
+
+**function onExtra($name)**  
+Behandle das Parsen von extra HTML-Daten einer Seite
 
 **function onCommand($args)**  
 Behandle Befehle
@@ -608,7 +614,7 @@ $yellow->plugins->register("example", "YellowExample", YellowExample::VERSION);
 ?>
 ```
 
-Hier ist ein Beispiel-Plugin um die Abkürzung `[example]` einzubinden:
+Hier ist ein Beispiel-Plugin um HTML mit der Abkürzung `[example]` einzubinden:
 
 ``` php
 <?php

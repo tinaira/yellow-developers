@@ -348,6 +348,9 @@ Here's an example snippet for checking if plugin exists:
 
 Yellow themes gives access to [themes](customising-themes):
 
+**$yellow->themes->get($name)**  
+Return theme
+
 **$yellow->themes->getData()**  
 Return theme version
 
@@ -520,7 +523,7 @@ Return file modification date, Unix time
 Return file extension  
 
 **$yellow->toolbox->getTextLines($text)**  
-Return lines from text string, newline separated  
+Return lines from text string, including newline  
 
 **$yellow->toolbox->getTextArgs($text, $optional = "-")**  
 Return arguments from text string, space separated  
@@ -576,14 +579,17 @@ Handle page content parsing
 **function onParsePage()**  
 Handle page parsing
 
-**function onExtra($name)**  
-Handle page extra HTML data
-
-**function onUserAccount($email, $password, $action, $users)**  
+**function onEditUserAccount($email, $password, $action, $users)**  
 Handle user account changes
 
-**function onUserRestrictions($email, $location, $fileName, $users)**  
-Handle user restrictions to change page
+**function onEditUserRestrictions($email, $location, $fileName, $users)**  
+Handle user restrictions
+
+**function onEditContentFile($page, $action)**  
+Handle content file editing
+
+**function onExtra($name)**  
+Handle page extra HTML data
 
 **function onCommand($args)**  
 Handle command
@@ -607,7 +613,7 @@ $yellow->plugins->register("example", "YellowExample", YellowExample::VERSION);
 ?>
 ```
 
-Here's an example plugin for including an `[example]` shortcut:
+Here's an example plugin for including HTML with an `[example]` shortcut:
 
 ``` php
 <?php

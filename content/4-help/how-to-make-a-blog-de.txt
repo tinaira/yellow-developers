@@ -26,6 +26,7 @@ Lass uns einen Blick ins `content`-Verzeichnis werfen, dort befindet sich das Bl
 Title: Blog-Beispiel
 Published: 2013-04-07
 Author: Datenstrom
+Template: blog
 Tag: Beispiel
 ---
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
@@ -40,6 +41,7 @@ Um eine neue Blogseite hinzuzufügen, erstellst du eine neue Datei im Blogverzei
 Title: Fika ist gut für dich
 Published: 2013-06-01
 Author: Datenstrom
+Template: blog
 Tag: Beispiel, Kaffee
 ---
 Fika ist ein schwedischer Brauch. Es ist eine Kaffeepause, bei der Menschen  
@@ -56,6 +58,7 @@ Ein Video hinzufügen mit dem [Youtube-Plugin](https://github.com/datenstrom/yel
 Title: Fika ist gut für dich
 Published: 2013-06-01
 Author: Datenstrom
+Template: blog
 Tag: Beispiel, Kaffee, Video
 ---
 Fika ist ein schwedischer Brauch. Es ist eine Kaffeepause, bei der Menschen  
@@ -74,6 +77,7 @@ Das Video erst anzeigen wenn ein Besucher auf die Blogseite klickt. Du kannst `[
 Title: Fika ist gut für dich
 Published: 2013-06-01
 Author: Datenstrom
+Template: blog
 Tag: Beispiel, Kaffee, Video
 ---
 Fika ist ein schwedischer Brauch. Es ist eine Kaffeepause, bei der Menschen  

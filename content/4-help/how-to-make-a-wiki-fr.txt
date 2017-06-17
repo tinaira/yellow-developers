@@ -26,6 +26,7 @@ Jetons un oeil dans le dossier `content`, où se trouve le dossier de votre wiki
 ```
 ---
 Title: Wiki page
+Template: wiki
 Tag: Example
 ---
 An example wiki page. 
@@ -40,6 +41,7 @@ Pour créer une nouvelle page de wiki, ajoutez un nouveau fichier dans le dossie
 ```
 ---
 Title: How to make coffee
+Template: wiki
 Tag: Example, Coffee
 ---
 Coffee is a beverage made from the roasted beans of the coffee plant.

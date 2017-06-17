@@ -5,7 +5,7 @@
 
 class YellowRelease
 {
-	const VERSION = "0.6.14";
+	const VERSION = "0.7.1";
 
 	// Handle plugin initialisation
 	function onLoad($yellow)
@@ -238,7 +238,7 @@ class YellowRelease
 				if(!is_file("$path$entry/$fileNameInformation")) continue;
 				$zip = new ZipArchive();
 				$fileNameZipArchive = "$pathZipArchive$entry.zip";
-				if($zip->open($fileNameZipArchive, ZIPARCHIVE::OVERWRITE)===true)
+				if($zip->open($fileNameZipArchive, ZIPARCHIVE::CREATE|ZIPARCHIVE::OVERWRITE)===true)
 				{
 					$modified = 0;
 					$fileNamesRequired = $this->getSoftwareArchiveEntries("$path$entry/");
@@ -286,7 +286,7 @@ class YellowRelease
 				{
 					list($dummy, $entry) = explode('/', $matches[1], 2);
 					if($dummy[0]!='Y') list($entry, $flags) = explode(',', $matches[2], 2); //TODO: remove later, converts old file format
-					array_push($entries, "$path$entry");
+					if(!preg_match("/delete/i", $flags)) array_push($entries, "$path$entry");
 				}
 		}
 		array_push($entries, $fileName);

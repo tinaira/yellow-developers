@@ -24,6 +24,7 @@ Lass uns einen Blick ins `content`-Verzeichnis werfen, dort befindet sich das Wi
 ```
 ---
 Title: Wikiseite
+Template: wiki
 Tag: Beispiel
 ---
 Eine Beispiel-Wikiseite
@@ -38,6 +39,7 @@ Um eine neue Wikiseite hinzuzufügen, erstellst du eine neue Datei im Wikiverzei
 ```
 ---
 Title: Wie man Kaffee zubereitet
+Template: wiki
 Tag: Beispiel, Kaffee
 ---
 Kaffee ist ein Getränk aus gerösteten Bohnen der Kaffeepflanze.

@@ -1,8 +1,8 @@
 ---
 Title: Blog page
 Published: @datetime
-Template: blog
 Author: @username
+Template: blog
 Tag: Example
 ---
 This is a new blog page.

@@ -86,7 +86,7 @@ Make sure that the web server can read and write files. You can manually adjust 
 
 Datenstrom Yellow is a flat-file CMS and a static site generator. To create a static website you run a build command from within the installation folder. It then generates a static website, that works on any web server.
 
-You can create a static website from the [command line](https://github.com/datenstrom/yellow-plugins/tree/master/commandline):
+You can create a static website from the [command line](https://github.com/datenstrom/yellow-plugins/tree/master/command):
 
 1. Open a terminal window.
 2. Go to your installation folder, where the `yellow.php` is.

@@ -47,7 +47,7 @@ Ein Bild hinzufügen:
     ![image](picture.jpg "Picture")
     ![image](picture.jpg "Dies ist ein Beispielbild")
 
-Ein Bild hinzufügen, hier ist ein alternatives Format:
+Ein Bild hinzufügen, alternatives Format:
 
     [image picture.jpg]
     [image picture.jpg Picture]
@@ -83,12 +83,13 @@ Ein Bild hinzufügen, hier ist ein alternatives Format:
 `Language` = Sprache der Seite  
 `Theme` = Theme der Seite  
 `Template` = Template der Seite  
+`TemplateNew` = Template um eine neue Seite zu erzeugen  
 `Parser` = Parser der Seite  
 `Modified` = Änderungsdatum der Seite, JJJJ-MM-TT Format  
 `Published` = Veröffentlichungsdatum der Seite, JJJJ-MM-TT Format  
 `Tag` = Tags zur Kategorisierung der Seite, durch Komma getrennt  
-`Status` = Status für Arbeitsablauf  
 `Redirect` = Umleitung zu einer neuen Seite oder URL  
+`Status` = Status für Arbeitsablauf  
 `Navigation` = Navigation der Seite  
 `Sidebar` = Sidebar der Seite  
 `Sitename` = Name der Webseite  

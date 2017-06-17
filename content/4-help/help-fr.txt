@@ -1,6 +1,5 @@
 ---
 Title: Aide
-TitleContent: Datenstrom Yellow aide
 Sidebar: sidebar-fr
 Language: fr
 ---

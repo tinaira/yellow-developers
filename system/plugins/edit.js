@@ -1,4 +1,4 @@
-// Edit plugin (beta), https://github.com/datenstrom/yellow-plugins/tree/master/webinterface
+// Edit plugin, https://github.com/datenstrom/yellow-plugins/tree/master/edit
 // Copyright (c) 2013-2017 Datenstrom, https://datenstrom.se
 // This file may be used and distributed under the terms of the public license.
 
@@ -126,8 +126,8 @@ yellow.edit =
 				"<p><input class=\"yellow-btn\" type=\"submit\" value=\""+this.getText("LoginButton")+"\" /></p>"+
 				"</div>"+
 				"<div id=\"yellow-pane-login-buttons\">"+
-				"<p><a href=\"#\" onclick=\"yellow.action('recover'); return false;\">"+this.getText("LoginRecover")+"</a><p>"+
-				"<p><a href=\"#\" onclick=\"yellow.action('signup'); return false;\">"+this.getText("LoginSignup")+"</a><p>"+
+				"<p><a href=\"#\" onclick=\"yellow.action('recover'); return false;\" id=\"yellow-pane-login-recover\">"+this.getText("LoginRecover")+"</a><p>"+
+				"<p><a href=\"#\" onclick=\"yellow.action('signup'); return false;\" id=\"yellow-pane-login-signup\">"+this.getText("LoginSignup")+"</a><p>"+
 				"</div>"+
 				"</form>";
 				break;
@@ -234,7 +234,7 @@ yellow.edit =
 			case "yellow-pane-login":
 				if(yellow.config.editLoginRestrictions)
 				{
-					yellow.toolbox.setVisible(document.getElementById("yellow-pane-login-buttons"), false);
+					yellow.toolbox.setVisible(document.getElementById("yellow-pane-login-signup"), false);
 				}
 				break;
 			case "yellow-pane-signup":
@@ -281,11 +281,12 @@ yellow.edit =
 			case "yellow-pane-edit":
 				if(init)
 				{
-					var title = yellow.page.title;
+					var title;
 					var string = yellow.page.rawDataEdit;
 					switch(paneAction)
 					{
 						case "create":	title = this.getText("CreateTitle"); string = yellow.page.rawDataNew; break;
+						case "edit":	title = yellow.page.title ? yellow.page.title : this.getText("Edit"); break;
 						case "delete":	title = this.getText("DeleteTitle"); break;
 					}
 					document.getElementById("yellow-pane-edit-title").innerHTML = yellow.toolbox.encodeHtml(title);
@@ -393,7 +394,7 @@ yellow.edit =
 			yellow.toolbox.removeValue("meta[name=viewport]", "content", ", maximum-scale=1, user-scalable=0");
 			yellow.toolbox.setVisible(element, false);
 			this.paneId = 0;
-			this.paneActionOld = this.paneAction;			
+			this.paneActionOld = this.paneAction;
 			this.paneAction = 0;
 			this.paneStatus = 0;
 		}
@@ -492,7 +493,7 @@ yellow.edit =
 			for(var language in yellow.config.serverLanguages)
 			{
 				var checked = language==this.getRequest("language") ? " checked=\"checked\"" : "";
-				languages += "<label for=\""+paneId+"-"+language+"\"><input type=\"radio\" name=\"language\" id=\""+paneId+"-"+language+"\" value=\""+language+"\""+checked+"> "+yellow.config.serverLanguages[language]+"</label><br />";
+				languages += "<label for=\""+paneId+"-"+language+"\"><input type=\"radio\" name=\"language\" id=\""+paneId+"-"+language+"\" value=\""+language+"\""+checked+"> "+yellow.toolbox.encodeHtml(yellow.config.serverLanguages[language])+"</label><br />";
 			}
 			languages += "</p>";
 		}

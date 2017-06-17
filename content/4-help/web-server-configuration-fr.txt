@@ -88,7 +88,7 @@ Assurez-vous que le serveur web est accès en écriture et en lecture aux fichie
 
 Datenstrom Yellow est un CMS à base de fichiers, mais aussi un générateur de site statique. Ainsi, Datenstrom Yellow propose une commande pour créer un site statique depuis le dossier d'installation. Votre site statique fonctionnera sur n'importe quel serveur web.
 
-Vous pouvez créer un site statique depuis une interface en [ligne de commande](https://github.com/datenstrom/yellow-plugins/tree/master/commandline).
+Vous pouvez créer un site statique depuis une interface en [ligne de commande](https://github.com/datenstrom/yellow-plugins/tree/master/command).
 
 1. Lancez un terminal.
 2. Rendez-vous dans le dossier d'installation, où se trouve `yellow.php`.

@@ -1,11 +1,11 @@
 <?php
-// Command plugin (beta), https://github.com/datenstrom/yellow-plugins/tree/master/commandline
+// Command plugin, https://github.com/datenstrom/yellow-plugins/tree/master/command
 // Copyright (c) 2013-2017 Datenstrom, https://datenstrom.se
 // This file may be used and distributed under the terms of the public license.
 
 class YellowCommand
 {
-	const VERSION = "0.6.19";
+	const VERSION = "0.7.1";
 	var $yellow;					//access to API
 	var $files;						//number of files
 	var $errors;					//number of errors
@@ -45,7 +45,7 @@ class YellowCommand
 	// Show available commands
 	function helpCommand()
 	{
-		echo "Yellow ".YellowCore::VERSION."\n";
+		echo "Datenstrom Yellow ".YellowCore::VERSION."\n";
 		$lineCounter = 0;
 		foreach($this->getCommandHelp() as $line) echo (++$lineCounter>1 ? "        " : "Syntax: ")."yellow.php $line\n";
 		return 200;
@@ -188,6 +188,7 @@ class YellowCommand
 		$_SERVER["SERVER_PROTOCOL"] = "HTTP/1.1";
 		$_SERVER["SERVER_NAME"] = $serverName;
 		$_SERVER["SERVER_PORT"] = $serverPort;
+		$_SERVER["REQUEST_METHOD"] = "GET";
 		$_SERVER["REQUEST_URI"] = $base.$location;
 		$_SERVER["SCRIPT_NAME"] = $base."/yellow.php";
 		$_SERVER["REMOTE_ADDR"] = "127.0.0.1";
@@ -314,7 +315,7 @@ class YellowCommand
 	function versionCommand($args)
 	{
 		$serverVersion = $this->yellow->toolbox->getServerVersion();
-		echo "Yellow ".YellowCore::VERSION.", PHP ".PHP_VERSION.", $serverVersion\n";
+		echo "Datenstrom Yellow ".YellowCore::VERSION.", PHP ".PHP_VERSION.", $serverVersion\n";
 		list($command) = $args;
 		list($statusCode, $dataCurrent) = $this->getSoftwareVersion();
 		list($statusCode, $dataLatest) = $this->getSoftwareVersion(true);

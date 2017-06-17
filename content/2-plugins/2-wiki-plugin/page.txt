@@ -2,6 +2,7 @@
 Title: Wiki plugin
 Description: Wiki for your website
 Template: wikipages
+TemplateNew: wiki
 ---
 Wiki for your website. 
 [Install plugin](https://github.com/datenstrom/yellow-plugins/tree/master/wiki).

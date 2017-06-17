@@ -86,7 +86,7 @@ Stelle sicher dass der Webserver Dateien lesen und schreiben kann. Du kannst [Sc
 
 Datenstrom Yellow ist ein Flat-File-CMS und ein Static-Site-Generator. Um statische Seiten zu erstellen führt man einen Build-Befehl im Installations-Verzeichnis aus. Daraufhin wird eine statische Webseite erstellt, die auf jedem Webserver funktioniert.
 
-Du kannst eine statische Webseite in der [Befehlszeile](https://github.com/datenstrom/yellow-plugins/tree/master/commandline) erstellen:
+Du kannst eine statische Webseite in der [Befehlszeile](https://github.com/datenstrom/yellow-plugins/tree/master/command) erstellen:
 
 1. Öffne ein Terminal-Fenster.
 2. Gehe ins Installations-Verzeichnis, dort wo sich die `yellow.php` befindet.

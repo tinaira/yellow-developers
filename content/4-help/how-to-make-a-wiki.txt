@@ -24,6 +24,7 @@ Have a look inside your `content` folder, there's the wiki folder with all your 
 ```
 ---
 Title: Wiki page
+Template: wiki
 Tag: Example
 ---
 An example wiki page. 
@@ -38,6 +39,7 @@ To create a new wiki page, add a new file to the wiki folder. Set `Title` and mo
 ```
 ---
 Title: How to make coffee
+Template: wiki
 Tag: Example, Coffee
 ---
 Coffee is a beverage made from the roasted beans of the coffee plant.

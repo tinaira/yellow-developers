@@ -28,6 +28,7 @@ Jetons un oeil dans le dossier `content`, où se trouve le dossier de votre blog
 Title: Blog example
 Published: 2013-04-07
 Author: Datenstrom
+Template: blog
 Tag: Example
 ---
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 
@@ -42,6 +43,7 @@ Pour créer une nouvelle page de blog, ajoutez un nouveau fichier dans le dossie
 Title: Fika is good for you
 Published: 2013-06-01
 Author: Datenstrom
+Template: blog
 Tag: Example, Coffee
 ---
 Fika is a Swedish custom. It's a social coffee break where people 
@@ -58,6 +60,7 @@ Maintenant ajoutons une vidéo avec le [plugin Youtube](https://github.com/daten
 Title: Fika is good for you
 Published: 2013-06-01
 Author: Datenstrom
+Template: blog
 Tag: Example, Coffee, Video
 ---
 Fika is a Swedish custom. It's a social coffee break where people 
@@ -76,6 +79,7 @@ Faisons en sorte que la vidéo soit visible quand le visiteur clique sur la page
 Title: Fika is good for you
 Published: 2013-06-01
 Author: Datenstrom
+Template: blog
 Tag: Example, Coffee, Video
 ---
 Fika is a Swedish custom. It's a social coffee break where people 
