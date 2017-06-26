@@ -5,7 +5,7 @@
 
 class YellowPreview
 {
-	const VERSION = "0.6.9";
+	const VERSION = "0.7.1";
 	var $yellow;			//access to API
 
 	// Handle initialisation
@@ -38,7 +38,7 @@ class YellowPreview
 					$output .= "<ul>\n";
 					foreach($pages as $page)
 					{
-						foreach(array("jpg", "png", "svg") as $fileExtension)
+						foreach(array("gif", "jpg", "png", "svg") as $fileExtension)
 						{
 							$fileName = $this->yellow->config->get("imageDir").basename($page->location).".".$fileExtension;
 							list($src, $width, $height) = $this->yellow->plugins->get("image")->getImageInfo($fileName, $size, $size);
