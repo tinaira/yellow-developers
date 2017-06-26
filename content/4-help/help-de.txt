@@ -22,8 +22,8 @@ Yellow ist für Menschen die Webseiten machen. [Support finden](support-de).
 ## Einstellungen
 
 * [Spracheinstellungen](language-configuration-de)
+* [Servereinstellungen](server-configuration-de)
 * [Sicherheitseinstellungen](security-configuration-de)
-* [Webservereinstellungen](web-server-configuration-de)
 
 ## Anpassungen
 

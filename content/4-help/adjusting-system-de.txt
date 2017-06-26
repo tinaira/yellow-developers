@@ -34,12 +34,6 @@ Im [Webbrowser](https://github.com/datenstrom/yellow-plugins/tree/master/edit) k
 
 ## Plugins und Themes
 
-Datenstrom Yellow konzentriert sich auf's Wesentliche. Du bekommst die wichtigsten Sachen um eine kleine Webseite zu erstellen und kannst weitere Funktionen hinzufügen. Es gibt [Plugins](/plugins/) und [Themes](/themes/) zum Herunterladen. Die folgenden Plugins sind standardmäßig dabei:
-
-* [Command](https://github.com/datenstrom/yellow-plugins/tree/master/command): Befehle im Terminalfenster ausführen
-* [Edit](https://github.com/datenstrom/yellow-plugins/tree/master/edit): Webseite im Webbrowser bearbeiten
-* [Image](https://github.com/datenstrom/yellow-plugins/tree/master/image): Bilder in unterschiedlichen Größen
-* [Markdown](https://github.com/datenstrom/yellow-plugins/tree/master/markdown): Textformatierung für Menschen
-* [Update](https://github.com/datenstrom/yellow-plugins/tree/master/update): Webseite auf dem neusten Stand halten
+Datenstrom Yellow konzentriert sich auf's Wesentliche. Du bekommst die wichtigsten Sachen um eine kleine Webseite zu erstellen und kannst weitere Funktionen hinzufügen. Es gibt [Plugins](/plugins/), [Themes](/themes/) und [Sprachen](https://github.com/datenstrom/yellow-plugins/tree/master/language) zum Herunterladen. 
 
 [Weiter: Spracheinstellungen →](language-configuration-de)

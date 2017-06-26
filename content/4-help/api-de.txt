@@ -130,7 +130,25 @@ Hier ist ein Beispiel-Snippet um den Seiteninhalt und zusätzliche Metadaten anz
 <div class="main">
 <h1><?php echo $yellow->page->getHtml("titleContent") ?></h1>
 <?php echo $yellow->page->getContent() ?>
-<p><?php echo $yellow->page->getDateHtml("modified") ?></p>
+<p><?php echo $yellow->page->getHtml("author") ?></p>
+</div>
+</div>
+```
+
+Hier ist ein Beispiel-Snippet um den Seiteninhalt und zusätzliche Tags anzuzeigen:
+
+``` php
+<div class="content">
+<div class="main">
+<h1><?php echo $yellow->page->getHtml("titleContent") ?></h1>
+<?php echo $yellow->page->getContent() ?>
+<?php if($yellow->page->isExisting("tag")): ?>
+<p>
+<?php foreach(preg_split("/\s*,\s*/", $yellow->page->get("tag")) as $tag): ?>
+<?php if(++$tagCounter>1) echo ", "; echo htmlspecialchars($tag) ?>
+<?php endforeach ?>
+</p>
+<?php endif ?>
 </div>
 </div>
 ```
@@ -202,10 +220,20 @@ Teste ob eine Pagination vorhanden ist
 Hier ist ein Beispiel-Snippet um drei zufällige Seiten anzuzeigen:
 
 ``` php
-<?php list($name, $pages) = $yellow->getSnippetArgs() ?>
-<?php if(!$pages) $pages = $yellow->pages->index() ?>
+<?php $pages = $yellow->pages->index() ?>
 <ul>
 <?php foreach($pages->shuffle()->limit(3) as $page): ?>
+<li><?php echo $page->getHtml("title") ?></li>
+<?php endforeach ?>
+</ul>
+```
+
+Hier ist ein Beispiel-Snippet um die neusten Seiten anzuzeigen:
+
+``` php
+<?php $pages = $yellow->pages->index() ?>
+<ul>
+<?php foreach($pages->sort("modified", false) as $page): ?>
 <li><?php echo $page->getHtml("title") ?></li>
 <?php endforeach ?>
 </ul>
@@ -214,8 +242,7 @@ Hier ist ein Beispiel-Snippet um drei zufällige Seiten anzuzeigen:
 Hier ist ein Beispiel-Snippet um Entwurfseiten anzuzeigen:
 
 ``` php
-<?php list($name, $pages) = $yellow->getSnippetArgs() ?>
-<?php if(!$pages) $pages = $yellow->pages->index(true, true) ?>
+<?php $pages = $yellow->pages->index(true, true) ?>
 <ul>
 <?php foreach($pages->filter("status", "draft") as $page): ?>
 <li><?php echo $page->getHtml("title") ?></li>
@@ -269,6 +296,18 @@ Hier ist ein Beispiel-Snippet um Seiten unterhalb einer bestimmten Orts anzuzeig
 </ul>
 ```
 
+Hier ist ein Beispiel-Snippet um die Hauptseiten der Navigation anzuzeigen:
+
+``` php
+<?php $pages = $yellow->pages->top() ?>
+<?php $yellow->page->setLastModified($pages->getModified()) ?>
+<ul>
+<?php foreach($pages as $page): ?>
+<li><?php echo $page->getHtml("titleNavigation") ?></li>
+<?php endforeach ?>
+</ul>
+```
+
 ### Yellow-Files
 
 Yellow-Files gibt Zugang zu Dateien vom Dateisystem:
@@ -285,7 +324,19 @@ Hole eine [Page-Collection](#yellow-page-collection) die leer ist
 Hier ist ein Beispiel-Snippet um alle Mediendateien anzuzeigen:
 
 ``` php
-<?php $files = $yellow->files->index(true, true) ?>
+<?php $files = $yellow->files->index(true) ?>
+<?php $yellow->page->setLastModified($files->getModified()) ?>
+<ul>
+<?php foreach($files as $file): ?>
+<li><?php echo $file->getLocation(true) ?></li>
+<?php endforeach ?>
+</ul>
+```
+
+Hier ist ein Beispiel-Snippet um die neusten Mediendateien anzuzeigen:
+
+``` php
+<?php $files = $yellow->files->index(true)->sort("modified", false) ?>
 <?php $yellow->page->setLastModified($files->getModified()) ?>
 <ul>
 <?php foreach($files as $file): ?>
@@ -297,7 +348,7 @@ Hier ist ein Beispiel-Snippet um alle Mediendateien anzuzeigen:
 Hier ist ein Beispiel-Snippet um Mediendateien eines bestimmten Types anzuzeigen:
 
 ``` php
-<?php $files = $yellow->files->index(true, true)->filter("type", "pdf") ?>
+<?php $files = $yellow->files->index(true)->filter("type", "pdf") ?>
 <?php $yellow->page->setLastModified($files->getModified()) ?>
 <ul>
 <?php foreach($files as $file): ?>
@@ -308,7 +359,7 @@ Hier ist ein Beispiel-Snippet um Mediendateien eines bestimmten Types anzuzeigen
 
 ### Yellow-Plugins
 
-Yellow-Plugins gibt Zugang zu [Plugins](#yellow-plugins-beispiel):
+Yellow-Plugins gibt Zugang zu [Plugins](/plugins/):
 
 **$yellow->plugins->get($name)**  
 Hole ein Plugin
@@ -345,9 +396,21 @@ Hier ist ein Beispiel-Snippet um zu testen ob ein Plugin existiert:
 <?php endif ?>
 ```
 
+Hier ist ein Beispiel um ein Plugin zu registrieren, [weitere Beispiel-Plugins](#yellow-plugins-example): 
+
+``` php
+<?php
+class YellowExample
+{
+	const VERSION = "0.1.0";
+}
+$yellow->plugins->register("example", "YellowExample", YellowExample::VERSION);
+?>
+```
+
 ### Yellow-Themes
 
-Yellow-Themes gibt Zugang zu [Themes](customising-themes-de):
+Yellow-Themes gibt Zugang zu [Themes](/themes/):
 
 **$yellow->themes->get($name)**  
 Hole ein Theme
@@ -377,11 +440,22 @@ Hier ist ein Beispiel-Snippet um Informationen über Themes anzuzeigen:
 Hier ist ein Beispiel-Snippet um zu testen ob ein Theme existiert:
 
 ``` php
-<?php if($yellow->themes->isExisting("blogsite")): ?>
-<p>Blogsite theme installed.</p>
+<?php if($yellow->themes->isExisting("flatsite")): ?>
+<p>Flatsite theme installed.</p>
 <?php else: ?>
-<?php $yellow->page->error(500, "Snippet requires 'blogsite' theme!") ?>
+<?php $yellow->page->error(500, "Snippet requires 'flatsite' theme!") ?>
 <?php endif ?>
+```
+
+Hier ist ein Beispiel um ein Theme zu registrieren
+
+``` php
+class YellowThemeExample
+{
+	const VERSION = "0.1.0";	
+}
+$yellow->themes->register("example", "YellowThemeExample", YellowThemeExample::VERSION);
+?>
 ```
 
 ### Yellow-Config
@@ -420,6 +494,15 @@ Hier ist ein Beispiel-Snippet um Webmaster-Einstellungen anzuzeigen:
 <?php $author = $yellow->config->get("author") ?>
 <?php $email = $yellow->config->get("email") ?>
 <?php echo htmlspecialchars("$author - $email") ?>
+</div>
+```
+
+Hier ist ein Beispiel-Snippet um zu testen ob der sichere Modus aktiviert ist:
+
+``` php
+<div class="config">
+<?php $parserSafeMode = $yellow->config->get("parserSafeMode") ?>
+Safe mode is <?php echo htmlspecialchars($parserSafeMode ? "on" : "off") ?>.
 </div>
 ```
 
@@ -467,17 +550,24 @@ Hier ist ein Beispiel-Snippet um Kontakt-Textstrings anzuzeigen:
 </div>
 ```
 
-Hier ist ein Beispiel-Snippet um Sprachen anzuzeigen:
+Hier ist ein Beispiel-Snippet um zu testen ob eine Sprache existiert:
 
 ``` php
-<ul>
+<div class="text">
+<?php $swedish = $yellow->text->isLanguage("sv") ?>
+Swedish language <?php echo htmlspecialchars($swedish ? "" : "not") ?> found.
+</div>
+```
+
+Hier ist ein Beispiel-Snippet um Sprachen und Übersetzer anzuzeigen:
+
+``` php
+<div class="text">
 <?php foreach($yellow->text->getLanguages() as $language): ?>
-<li>
 <?php echo $yellow->text->getTextHtml("languageDescription", $language) ?> - 
-<?php echo $yellow->text->getTextHtml("languageTranslator", $language) ?>
-</li>
+<?php echo $yellow->text->getTextHtml("languageTranslator", $language) ?><br />
 <?php endforeach ?>
-</ul>
+</div>
 ```
 
 ### Yellow-Toolbox
@@ -495,6 +585,9 @@ Teste ob es Ortargumente gibt in der aktuellen HTTP-Anfrage
 
 **$yellow->toolbox->normaliseArgs($text, $appendSlash = true, $filterStrict = true)**  
 Normalisiere Ortargumente
+
+**$yellow->toolbox->getDirectoryEntries($path, $regex = "/.*/", $sort = true, $directories = true, $includePath = true)**  
+Hole Dateien und Verzeichnisse
 
 **$yellow->toolbox->readFile($fileName, $sizeMax = 0)**  
 Lese eine Datei, leerer String falls nicht vorhanden
@@ -536,6 +629,17 @@ Hier ist ein Beispiel-Snippet um Ort und Argumente der HTTP-Anfrage anzuzeigen:
 <?php echo htmlspecialchars($yellow->toolbox->getLocation()) ?><br />
 <?php foreach($_REQUEST as $key=>$value): ?>
 <?php echo htmlspecialchars("$key: $value") ?><br />
+<?php endforeach ?>
+</div>
+```
+
+Hier ist ein Beispiel-Snippet um Dateien in einem Verzeichnis anzuzeigen:
+
+``` php
+<div class="toolbox">
+<?php $path = $yellow->config->get("configDir") ?>
+<?php foreach($yellow->toolbox->getDirectoryEntries($path, "/.*/", true, false) as $entry): ?>
+<?php echo htmlspecialchars($entry) ?><br />
 <?php endforeach ?>
 </div>
 ```
@@ -601,26 +705,13 @@ Behandle Hilfe für Befehle
 **function onShutdown()**  
 Behandle das Runterfahren
 
-Hier ist ein Beispiel-Plugin, ein ganz einfaches: 
+Hier ist ein Beispiel-Plugin um HTML mit der Abkürzung `[example]` zu erzeugen:
 
 ``` php {#yellow-plugins-beispiel}
 <?php
 class YellowExample
 {
 	const VERSION = "0.1.1";
-}
-
-$yellow->plugins->register("example", "YellowExample", YellowExample::VERSION);
-?>
-```
-
-Hier ist ein Beispiel-Plugin um HTML mit der Abkürzung `[example]` einzubinden:
-
-``` php
-<?php
-class YellowExample
-{
-	const VERSION = "0.1.2";
 	var $yellow;
 	
 	// Handle initialisation
@@ -653,7 +744,7 @@ Hier ist ein Beispiel-Plugin um die Dateien `example.css` und `example.js` einzu
 <?php
 class YellowExample
 {
-	const VERSION = "0.1.3";
+	const VERSION = "0.1.2";
 	var $yellow;
 	
 	// Handle initialisation
@@ -679,7 +770,44 @@ class YellowExample
 
 $yellow->plugins->register("example", "YellowExample", YellowExample::VERSION);
 ?>
+```
 
+Hier ist ein Beispiel-Plugin um den Befehl `example` zu behandeln:
+
+``` php
+<?php
+class YellowExample
+{
+	const VERSION = "0.1.3";
+	var $yellow;
+	
+	// Handle initialisation
+	function onLoad($yellow)
+	{
+		$this->yellow = $yellow;
+	}
+
+	// Handle command help
+	function onCommandHelp()
+	{
+		return "example\n";
+	}
+	
+	// Handle command
+	function onCommand($args)
+	{
+		$statusCode = 0;
+		list($command) = $args;
+		if($command=="example")
+		{
+			echo "Yellow $command: Add more text here\n";
+			$statusCode = 200;
+		}
+		return $statusCode;
+	}
+}
+$yellow->plugins->register("example", "YellowExample", YellowExample::VERSION);
+?>
 ```
 
 ## Formate

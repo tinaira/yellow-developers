@@ -5,22 +5,34 @@ Language: de
 ---
 Wie man eine Webseite mit besserer Sicherheit konfiguriert.
 
-## Beschränkungen
-
-Falls mehrere Person eine Webseite bearbeiten, beschränke [Benutzerkonten](adjusting-system-de#benutzerkonten) und nur Teile der Webseite können verändert werden. Öffne die Datei `system/config/user.ini` und ändere am Ende der Zeile die Startseite des Benutzers. Benutzer dürfen nur Seiten innerhalb ihrer Startseite bearbeiten. Damit wird deine Webseite vor Veränderungen geschützt.
-
-Du kannst [Benutzerbeschränkungen testen](/tests/user-restrictions).
-
-## Sicherer Modus
-
-Falls mehrere Person eine Webseite bearbeiten, aktiviere den sicheren Modus und nur [Markdown](markdown-cheat-sheet-de) kann im Text benutzt werden. Öffne die Datei `system/config/config.ini` und ändere `ParserSafeMode: 1`. Damit wird deine Webseite vor Unfug geschützt.
-
-Du kannst den [sicheren Modus testen](/tests/safe-mode).
-
 ## Sicherer Server
 
-Überprüfe ob dein Webserver HTTPS unterstützt und ob die Internetverbindung verschlüsselt ist. Am Besten ist es wenn deine Webseite nur über HTTPS erreichbar ist. Das dient dem Datenschutz, jedoch wird es nicht von allen Webhostern unterstützt.
+Überprüfe ob dein Webserver HTTPS unterstützt. Am Besten ist es wenn deine Webseite nur über HTTPS erreichbar ist und die Internetverbindung immer verschlüsselt ist. Das dient dem Datenschutz, leider wird es noch nicht von allen Webhoster unterstützt.
 
 Du brauchst einen Webserver mit TLS und gültigem Zertifikat.
 
-[Weiter: Webservereinstellungen →](web-server-configuration-de)
+## Sicherer Modus
+
+Falls viele Person deine Webseite bearbeiten, aktiviere den sicheren Modus. Öffne die Datei `system/config/config.ini` und ändere `ParserSafeMode: 1`. Benutzer dürfen dann nur [Markdown](markdown-cheat-sheet-de) im Text verwenden und die Webseite wird vor Unfug geschützt.
+
+Du kannst den [sicheren Modus testen](/tests/safe-mode).
+
+## Benutzerbeschränkungen
+
+Falls viele Person deine Webseite bearbeiten, beschränke [Benutzerkonten](adjusting-system-de#benutzerkonten). Öffne die Datei `system/config/user.ini` und ändere am Ende der Zeile die Startseite des Benutzers. Benutzer dürfen dann nur Seiten innerhalb ihrer Startseite bearbeiten.
+
+Du kannst [Benutzerbeschränkungen testen](/tests/user-restrictions).
+
+## Weniger ist mehr
+
+Überprüfe welche Funktionen auf deinem Webserver benutzt werden. Lösche [Plugins](/plugins/) die nicht mehr benötigt werden. Als Faustregel gilt, je weniger Software installiert ist, desto weniger Software wird ausgeführt und desto weniger ist eine Webseite anfällig für Angriffe.
+
+Die folgenden Plugins sind standardmäßig installiert:
+
+* [Command](https://github.com/datenstrom/yellow-plugins/tree/master/command): Befehle im Terminalfenster ausführen
+* [Edit](https://github.com/datenstrom/yellow-plugins/tree/master/edit): Webseite im Webbrowser bearbeiten
+* [Image](https://github.com/datenstrom/yellow-plugins/tree/master/image): Bilder in unterschiedlichen Größen
+* [Markdown](https://github.com/datenstrom/yellow-plugins/tree/master/markdown): Textformatierung für Menschen
+* [Update](https://github.com/datenstrom/yellow-plugins/tree/master/update): Webseite auf dem neusten Stand halten
+
+[Weiter: Themes anpassen →](customising-themes-de)

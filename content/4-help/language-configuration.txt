@@ -3,7 +3,7 @@ Title: Language configuration
 Sidebar: sidebar
 Language: en
 ---
-Here's how to set up a website with different languages.
+Here's how to set up different languages.
 
 ## Languages
 
@@ -53,4 +53,4 @@ The second screenshot shows the folders `1-en`, `2-de`, `3-fr` and `default`. Th
 
 To adjust the [navigation](customising-templates#custom-navigation) open file `system/config/config.ini` and change `Navigation: navigation-multilanguage`. You can also show a language selection somewhere else on your website, for example in the [footer](customising-templates#custom-footer).
 
-[Next: Security configuration →](security-configuration)
+[Next: Server configuration →](server-configuration)

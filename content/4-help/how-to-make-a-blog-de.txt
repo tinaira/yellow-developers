@@ -15,7 +15,7 @@ Lerne wie man ein eigenes Blog erstellt. [Demo anschauen](/plugins/blog-plugin/)
 
 Dein Blog ist sofort erreichbar. Die Installation kommt mit mehreren Seiten, "Home", "Blog" und "About". Das ist nur ein Beispiel um loszulegen, verändere alles so wie du willst. Du kannst "Home" löschen, wenn du das Blog auf der Startseite anzeigen willst.
 
-Falls Probleme auftreten, überprüfe bitte die [Webservereinstellungen](web-server-configuration-de) oder frage den [Support](support-de).
+Falls Probleme auftreten, überprüfe bitte die [Servereinstellungen](server-configuration-de) oder frage den [Support](support-de).
  
 ## Blogeinträge schreiben
 
@@ -145,6 +145,6 @@ Archiv
 * [Eine Suche zum Blog hinzufügen](https://github.com/datenstrom/yellow-plugins/tree/master/search)
 * [Einen Feed zum Blog hinzufügen](https://github.com/datenstrom/yellow-plugins/tree/master/feed)
 * [Eine Entwurfseite erstellen](https://github.com/datenstrom/yellow-plugins/tree/master/draft)
-* [Ein statisches Blog erstellen](web-server-configuration-de#statische-webseite)
+* [Ein statisches Blog erstellen](server-configuration-de#statische-webseite)
 
 [Weiter: Wiki erstellen →](how-to-make-a-wiki-de)

@@ -17,7 +17,7 @@ Apprenez à faire un propre wiki. [Voir la démo](/plugins/wiki-plugin/).
 
 Votre wiki est immédiatement accessible. L'installation est fournie avec plusieurs pages, 'Home', 'Wiki' et 'About'. Elles sont juste un exemple pour commencer, vous pouvez les modifier comme il vous convient. Vous pouvez supprimer 'Home', si vous souhaitez faire de votre wiki la page d'accueil.
 
-S'il y a des problèmes, vérifiez la [configuration du serveur web](web-server-configuration-fr) ou demandez le [support](support-fr).
+S'il y a des problèmes, vérifiez la [configuration du serveur](server-configuration-fr) ou demandez le [support](support-fr).
 
 ## Écrire une page de wiki
 
@@ -116,6 +116,6 @@ Links
 * [Comment ajouter un moteur de recherche à votre wiki](https://github.com/datenstrom/yellow-plugins/tree/master/search)
 * [Comment ajouter une page de contact à votre wiki](https://github.com/datenstrom/yellow-plugins/tree/master/contact)
 * [Comment créer une page de brouillon](https://github.com/datenstrom/yellow-plugins/tree/master/draft)
-* [Comment créer un wiki statique](web-server-configuration-fr#static-website)
+* [Comment créer un wiki statique](server-configuration-fr#static-website)
 
 [Suivant: Ajouter des pages →](adding-content-fr)

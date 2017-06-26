@@ -3,7 +3,7 @@ Title: Spracheinstellungen
 Sidebar: sidebar-de
 Language: de
 ---
-Wie man eine Webseite mit verschiedenen Sprachen konfiguriert.
+Wie man verschiedene Sprachen konfiguriert.
 
 ## Sprachen
 
@@ -53,4 +53,4 @@ Der zweite Screenshot zeigt die Verzeichnisse `1-en`, `2-de`, `3-fr` und `defaul
 
 Um die [Navigation](customising-templates-de#navigation-anpassen) anzupassen, öffne die Datei `system/config/config.ini` und ändere `Navigation: navigation-multilanguage`. Eine Sprachauswahl kann man auch irgendwo anders in die Webseite einbauen, beispielsweise in die [Fußzeile](customising-templates-de#fußzeile-anpassen).
 
-[Weiter: Sicherheitseinstellungen →](security-configuration-de)
+[Weiter: Servereinstellungen →](server-configuration-de)

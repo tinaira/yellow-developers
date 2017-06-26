@@ -34,12 +34,6 @@ You can use the [web browser](https://github.com/datenstrom/yellow-plugins/tree/
 
 ## Plugins and themes
 
-Datenstrom Yellow concentrates on the essential aspects. You get the most important things to create a small website and can add more features. There are [plugins](/plugins/) and [themes](/themes/) you can download. The following plugins are included by default:
-
-* [Command](https://github.com/datenstrom/yellow-plugins/tree/master/command): Run commands in a terminal window 
-* [Edit](https://github.com/datenstrom/yellow-plugins/tree/master/edit): Edit your website in a web browser
-* [Image](https://github.com/datenstrom/yellow-plugins/tree/master/image): Images and thumbnails
-* [Markdown](https://github.com/datenstrom/yellow-plugins/tree/master/markdown): Text formatting for humans
-* [Update](https://github.com/datenstrom/yellow-plugins/tree/master/update): Keep your website up to date
+Datenstrom Yellow concentrates on the essential aspects. You get the most important things to create a small website and can add more features. There are [plugins](/plugins/), [themes](/themes/) and [languages](https://github.com/datenstrom/yellow-plugins/tree/master/language) you can download.
 
 [Next: Language configuration →](language-configuration)

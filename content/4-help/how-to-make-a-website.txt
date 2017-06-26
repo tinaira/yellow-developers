@@ -15,7 +15,7 @@ Learn how to make your own website. [See demo](/).
 
 Your website is immediately available. The installation comes with two pages, 'Home' and 'About'. This is just an example to get you started, change everything as you like. You can make a website by adding more files and folders.
 
-When there are problems, please check the [web server configuration](web-server-configuration) or ask the [support](support).
+When there are problems, please check the [server configuration](server-configuration) or ask the [support](support).
 
 ## Writing web pages
 
@@ -90,6 +90,6 @@ Links
 * [How to add a search to your website](https://github.com/datenstrom/yellow-plugins/tree/master/search)
 * [How to add a sitemap to your website](https://github.com/datenstrom/yellow-plugins/tree/master/sitemap)
 * [How to add a contact page to your website](https://github.com/datenstrom/yellow-plugins/tree/master/contact)
-* [How to make a static website](web-server-configuration#static-website)
+* [How to make a static website](server-configuration#static-website)
 
 [Next: How to make a blog →](how-to-make-a-blog)

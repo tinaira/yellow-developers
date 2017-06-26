@@ -34,13 +34,6 @@ Le [navigateur web](https://github.com/datenstrom/yellow-plugins/tree/master/edi
 
 ## Plugins et thèmes
 
-Datenstrom Yellow s'installe avec un minimum de fonctionnalité. Vous obtenez les choses les plus importantes pour créer un petit site web et pouvez ajouter d'autres fonctionnalités. 
-Il existe des [plugins](/plugins/) et des [thèmes](/themes/) à télécharger. Les plugins suivants sont inclus par défaut:
-
-* [Command](https://github.com/datenstrom/yellow-plugins/tree/master/command): Exécuter des commandes dans une fenêtre de terminal
-* [Edit](https://github.com/datenstrom/yellow-plugins/tree/master/edit): Modifiez votre site web dans un navigateur web
-* [Image](https://github.com/datenstrom/yellow-plugins/tree/master/image): Intégrer des images et des vignettes
-* [Markdown](https://github.com/datenstrom/yellow-plugins/tree/master/markdown): Formatage de texte pour les humains
-* [Update](https://github.com/datenstrom/yellow-plugins/tree/master/update): Gardez votre site à jour
+Datenstrom Yellow s'installe avec un minimum de fonctionnalité. Vous obtenez les choses les plus importantes pour créer un petit site web et pouvez ajouter d'autres fonctionnalités. Il existe des [plugins](/plugins/), des [thèmes](/themes/) et des [langages](https://github.com/datenstrom/yellow-plugins/tree/master/language) à télécharger. 
 
 [Suivant: Configuration de la langue →](language-configuration-fr)

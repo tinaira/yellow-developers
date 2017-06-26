@@ -17,7 +17,7 @@ Apprenez à faire un propre blog. [Voir la démo](/plugins/blog-plugin/).
 
 Votre blog est immédiatement accessible. L'installation est fournie avec plusieurs pages, 'Home', 'Blog' et 'About'. Elles sont juste un exemple pour commencer, vous pouvez les modifier comme il vous convient. Vous pouvez supprimer 'Home', si vous souhaitez faire de votre blog la page d'accueil.
 
-S'il y a des problèmes, vérifiez la [configuration du serveur web](web-server-configuration-fr) ou demandez le [support](support-fr).
+S'il y a des problèmes, vérifiez la [configuration du serveur](server-configuration-fr) ou demandez le [support](support-fr).
 
 ## Écrire une page de blog
 
@@ -147,6 +147,6 @@ Archive
 * [Comment ajouter un moteur de recherche à votre blog](https://github.com/datenstrom/yellow-plugins/tree/master/search)
 * [Comment ajouter un feed à votre blog](https://github.com/datenstrom/yellow-plugins/tree/master/feed)
 * [Comment créer une page de brouillon](https://github.com/datenstrom/yellow-plugins/tree/master/draft)
-* [Comment créer un blog statique](web-server-configuration-fr#static-website)
+* [Comment créer un blog statique](server-configuration-fr#static-website)
 
 [Suivant: Comment faire un wiki →](how-to-make-a-wiki-fr)

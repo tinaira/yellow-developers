@@ -132,7 +132,25 @@ Here's an example snippet for showing page content with additional meta data:
 <div class="main">
 <h1><?php echo $yellow->page->getHtml("titleContent") ?></h1>
 <?php echo $yellow->page->getContent() ?>
-<p><?php echo $yellow->page->getDateHtml("modified") ?></p>
+<p><?php echo $yellow->page->getHtml("author") ?></p>
+</div>
+</div>
+```
+
+Here's an example snippet for showing page content with additional tags:
+
+``` php
+<div class="content">
+<div class="main">
+<h1><?php echo $yellow->page->getHtml("titleContent") ?></h1>
+<?php echo $yellow->page->getContent() ?>
+<?php if($yellow->page->isExisting("tag")): ?>
+<p>
+<?php foreach(preg_split("/\s*,\s*/", $yellow->page->get("tag")) as $tag): ?>
+<?php if(++$tagCounter>1) echo ", "; echo htmlspecialchars($tag) ?>
+<?php endforeach ?>
+</p>
+<?php endif ?>
 </div>
 </div>
 ```
@@ -204,8 +222,7 @@ Check if there is a pagination
 Here's an example snippet for showing three random pages:
 
 ``` php
-<?php list($name, $pages) = $yellow->getSnippetArgs() ?>
-<?php if(!$pages) $pages = $yellow->pages->index() ?>
+<?php $pages = $yellow->pages->index() ?>
 <ul>
 <?php foreach($pages->shuffle()->limit(3) as $page): ?>
 <li><?php echo $page->getHtml("title") ?></li>
@@ -213,11 +230,21 @@ Here's an example snippet for showing three random pages:
 </ul>
 ```
 
-Here's an example snippet for showing pages with draft status:
+Here's an example snippet for showing latest pages:
 
 ``` php
-<?php list($name, $pages) = $yellow->getSnippetArgs() ?>
-<?php if(!$pages) $pages = $yellow->pages->index(true, true) ?>
+<?php $pages = $yellow->pages->index() ?>
+<ul>
+<?php foreach($pages->sort("modified", false) as $page): ?>
+<li><?php echo $page->getHtml("title") ?></li>
+<?php endforeach ?>
+</ul>
+```
+
+Here's an example snippet for showing all pages with draft status:
+
+``` php
+<?php $pages = $yellow->pages->index(true, true) ?>
 <ul>
 <?php foreach($pages->filter("status", "draft") as $page): ?>
 <li><?php echo $page->getHtml("title") ?></li>
@@ -271,6 +298,18 @@ Here's an example snippet for showing pages below a specific location:
 </ul>
 ```
 
+Here's an example snippet for showing top-level navigation pages:
+
+``` php
+<?php $pages = $yellow->pages->top() ?>
+<?php $yellow->page->setLastModified($pages->getModified()) ?>
+<ul>
+<?php foreach($pages as $page): ?>
+<li><?php echo $page->getHtml("titleNavigation") ?></li>
+<?php endforeach ?>
+</ul>
+```
+
 ### Yellow files
 
 Yellow files gives access to files from file system:
@@ -287,7 +326,19 @@ Return [page collection](#yellow-page-collection) that is empty
 Here's an example snippet for showing all media files:
 
 ``` php
-<?php $files = $yellow->files->index(true, true) ?>
+<?php $files = $yellow->files->index(true) ?>
+<?php $yellow->page->setLastModified($files->getModified()) ?>
+<ul>
+<?php foreach($files as $file): ?>
+<li><?php echo $file->getLocation(true) ?></li>
+<?php endforeach ?>
+</ul>
+```
+
+Here's an example snippet for showing latest media files:
+
+``` php
+<?php $files = $yellow->files->index(true)->sort("modified", false) ?>
 <?php $yellow->page->setLastModified($files->getModified()) ?>
 <ul>
 <?php foreach($files as $file): ?>
@@ -299,7 +350,7 @@ Here's an example snippet for showing all media files:
 Here's an example snippet for showing media files of a specific type:
 
 ``` php
-<?php $files = $yellow->files->index(true, true)->filter("type", "pdf") ?>
+<?php $files = $yellow->files->index(true)->filter("type", "pdf") ?>
 <?php $yellow->page->setLastModified($files->getModified()) ?>
 <ul>
 <?php foreach($files as $file): ?>
@@ -310,7 +361,7 @@ Here's an example snippet for showing media files of a specific type:
 
 ### Yellow plugins
 
-Yellow plugins gives access to [plugins](#yellow-plugins-example):
+Yellow plugins gives access to [plugins](/plugins/):
 
 **$yellow->plugins->get($name)**  
 Return plugin
@@ -347,9 +398,21 @@ Here's an example snippet for checking if plugin exists:
 <?php endif ?>
 ```
 
+Here's an example for registering a plugin, [more plugins examples](#yellow-plugins-example): 
+
+``` php
+<?php
+class YellowExample
+{
+	const VERSION = "0.1.0";
+}
+$yellow->plugins->register("example", "YellowExample", YellowExample::VERSION);
+?>
+```
+
 ### Yellow themes
 
-Yellow themes gives access to [themes](customising-themes):
+Yellow themes gives access to [themes](/themes/):
 
 **$yellow->themes->get($name)**  
 Return theme
@@ -379,11 +442,22 @@ Here's an example snippet for showing information about themes:
 Here's an example snippet for checking if theme exists:
 
 ``` php
-<?php if($yellow->themes->isExisting("blogsite")): ?>
-<p>Blogsite theme installed.</p>
+<?php if($yellow->themes->isExisting("flatsite")): ?>
+<p>Flatsite theme installed.</p>
 <?php else: ?>
-<?php $yellow->page->error(500, "Snippet requires 'blogsite' theme!") ?>
+<?php $yellow->page->error(500, "Snippet requires 'flatsite' theme!") ?>
 <?php endif ?>
+```
+
+Here's an example for registering a theme:
+
+``` php
+class YellowThemeExample
+{
+	const VERSION = "0.1.0";	
+}
+$yellow->themes->register("example", "YellowThemeExample", YellowThemeExample::VERSION);
+?>
 ```
 
 ### Yellow config
@@ -422,6 +496,15 @@ Here's an example snippet for showing webmaster settings:
 <?php $author = $yellow->config->get("author") ?>
 <?php $email = $yellow->config->get("email") ?>
 <?php echo htmlspecialchars("$author - $email") ?>
+</div>
+```
+
+Here's an example snippet for checking safe mode:
+
+``` php
+<div class="config">
+<?php $parserSafeMode = $yellow->config->get("parserSafeMode") ?>
+Safe mode is <?php echo htmlspecialchars($parserSafeMode ? "on" : "off") ?>.
 </div>
 ```
 
@@ -469,17 +552,24 @@ Here's an example snippet for showing contact text strings:
 </div>
 ```
 
-Here's an example snippet for showing languages:
+Here's an example snippet for checking if language exists:
 
 ``` php
-<ul>
+<div class="text">
+<?php $swedish = $yellow->text->isLanguage("sv") ?>
+Swedish language <?php echo htmlspecialchars($swedish ? "" : "not") ?> found.
+</div>
+```
+
+Here's an example snippet for showing languages and translators:
+
+``` php
+<div class="text">
 <?php foreach($yellow->text->getLanguages() as $language): ?>
-<li>
 <?php echo $yellow->text->getTextHtml("languageDescription", $language) ?> - 
-<?php echo $yellow->text->getTextHtml("languageTranslator", $language) ?>
-</li>
+<?php echo $yellow->text->getTextHtml("languageTranslator", $language) ?><br />
 <?php endforeach ?>
-</ul>
+</div>
 ```
 
 ### Yellow toolbox
@@ -497,6 +587,9 @@ Check if there are location arguments in current HTTP request
 
 **$yellow->toolbox->normaliseArgs($text, $appendSlash = true, $filterStrict = true)**  
 Normalise location arguments
+
+**$yellow->toolbox->getDirectoryEntries($path, $regex = "/.*/", $sort = true, $directories = true, $includePath = true)**  
+Return files and directories
 
 **$yellow->toolbox->readFile($fileName, $sizeMax = 0)**  
 Read file, empty string if not found  
@@ -538,6 +631,17 @@ Here's an example snippet for showing location and arguments of HTTP request:
 <?php echo htmlspecialchars($yellow->toolbox->getLocation()) ?><br />
 <?php foreach($_REQUEST as $key=>$value): ?>
 <?php echo htmlspecialchars("$key: $value") ?><br />
+<?php endforeach ?>
+</div>
+```
+
+Here's an example snippet for showing files in a directory:
+
+``` php
+<div class="toolbox">
+<?php $path = $yellow->config->get("configDir") ?>
+<?php foreach($yellow->toolbox->getDirectoryEntries($path, "/.*/", true, false) as $entry): ?>
+<?php echo htmlspecialchars($entry) ?><br />
 <?php endforeach ?>
 </div>
 ```
@@ -603,26 +707,13 @@ Handle command help
 **function onShutdown()**  
 Handle shutdown
 
-Here's an example plugin, a very basic one: 
+Here's an example plugin for generating HTML with an `[example]` shortcut:
 
 ``` php {#yellow-plugins-example}
 <?php
 class YellowExample
 {
 	const VERSION = "0.1.1";
-}
-
-$yellow->plugins->register("example", "YellowExample", YellowExample::VERSION);
-?>
-```
-
-Here's an example plugin for including HTML with an `[example]` shortcut:
-
-``` php
-<?php
-class YellowExample
-{
-	const VERSION = "0.1.2";
 	var $yellow;
 	
 	// Handle initialisation
@@ -644,7 +735,6 @@ class YellowExample
 		return $output;
 	}
 }
-
 $yellow->plugins->register("example", "YellowExample", YellowExample::VERSION);
 ?>
 ```
@@ -655,7 +745,7 @@ Here's an example plugin for including files `example.css` and `example.js`:
 <?php
 class YellowExample
 {
-	const VERSION = "0.1.3";
+	const VERSION = "0.1.2";
 	var $yellow;
 	
 	// Handle initialisation
@@ -678,10 +768,46 @@ class YellowExample
 		return $output;
 	}
 }
-
 $yellow->plugins->register("example", "YellowExample", YellowExample::VERSION);
 ?>
+```
 
+Here's an example plugin for handling an `example` command:
+
+``` php
+<?php
+class YellowExample
+{
+	const VERSION = "0.1.3";
+	var $yellow;
+	
+	// Handle initialisation
+	function onLoad($yellow)
+	{
+		$this->yellow = $yellow;
+	}
+
+	// Handle command help
+	function onCommandHelp()
+	{
+		return "example\n";
+	}
+	
+	// Handle command
+	function onCommand($args)
+	{
+		$statusCode = 0;
+		list($command) = $args;
+		if($command=="example")
+		{
+			echo "Yellow $command: Add more text here\n";
+			$statusCode = 200;
+		}
+		return $statusCode;
+	}
+}
+$yellow->plugins->register("example", "YellowExample", YellowExample::VERSION);
+?>
 ```
 
 ## Formats

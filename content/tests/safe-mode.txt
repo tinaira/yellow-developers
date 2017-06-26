@@ -3,7 +3,7 @@ Title: Test safe mode
 ---
 This page tests safe mode.
 
-You can not use HTML and JavaScript if the safe mode is enabled.
+You can use Markdown, but you can not use HTML and JavaScript.
 
 <strong>Text with HTML</strong> <script>alert('XSS')</script>
 

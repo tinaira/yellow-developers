@@ -15,7 +15,7 @@ Apprenez à faire un propre site web. [Voir la démo](/page-fr).
 
 Votre site web est immédiatement accessible. L'installation est fournie avec deux pages, 'Home' et 'About'. Elles sont juste un exemple pour commencer, vous pouvez les modifier comme il vous convient. Vous pouvez créer votre site web en ajoutant des fichiers et des dossiers.
 
-S'il y a des problèmes, vérifiez la [configuration du serveur web](web-server-configuration-fr) ou demandez le [support](support-fr).
+S'il y a des problèmes, vérifiez la [configuration du serveur](server-configuration-fr) ou demandez le [support](support-fr).
 
 ## Écrire une page web
 
@@ -89,6 +89,6 @@ Liens
 * [Comment ajouter un moteur de recherche à votre site](https://github.com/datenstrom/yellow-plugins/tree/master/search)
 * [Comment ajouter un plan à votre site](https://github.com/datenstrom/yellow-plugins/tree/master/sitemap)
 * [Comment ajouter une page de contact à votre site](https://github.com/datenstrom/yellow-plugins/tree/master/contact)
-* [Comment créer un site web statique](web-server-configuration-fr#static-website)
+* [Comment créer un site web statique](server-configuration-fr#static-website)
 
 [Suivant: Comment faire un blog →](how-to-make-a-blog-fr)

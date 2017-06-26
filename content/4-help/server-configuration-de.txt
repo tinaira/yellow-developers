@@ -1,0 +1,134 @@
+---
+Title: Servereinstellungen
+Sidebar: sidebar-de
+Language: de
+---
+Wie man unterschiedliche [Webserver](https://news.netcraft.com/archives/category/web-server-survey/) konfiguriert.
+
+## Apache
+
+Die `.htaccess` Konfigurationsdatei für den [Apache](http://httpd.apache.org)-Webserver:
+
+```apache
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+DirectoryIndex index.html yellow.php
+RewriteRule ^(cache|content|system)/ error [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ yellow.php [L]
+</IfModule>
+```
+
+Wenn deine Webseite nicht funktioniert, überprüfe bitte die folgenden Schritte. Füge `RewriteBase` zur Konfigurationsdatei hinzu, das behebt die meisten Webserver-Probleme. Hier ist ein Beispiel für ein Unterverzeichnis:
+
+```apache
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteBase /yellow/
+DirectoryIndex index.html yellow.php
+RewriteRule ^(cache|content|system)/ error [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ yellow.php [L]
+</IfModule>
+```
+
+Hier ist ein Beispiel für eine Subdomain:
+
+```apache
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteBase /
+DirectoryIndex index.html yellow.php
+RewriteRule ^(cache|content|system)/ error [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ yellow.php [L]
+</IfModule>
+```
+
+Wenn deine Webseite immer noch nicht funktioniert, überprüfe bitte den Apache-Webserver. Falls du einen selbst-gehosteten Webserver benutzt, musst du vermutlich das [Rewrite-Modul](http://stackoverflow.com/questions/869092/how-to-enable-mod-rewrite-for-apache-2-2) aktivieren und `AllowOverride All` in den [Webserver-Einstellungen](http://stackoverflow.com/questions/18740419/how-to-set-allowoverride-all) konfigurieren.
+
+Stelle sicher dass der Webserver Dateien lesen und schreiben kann. Du kannst [Schreibrechte](http://superuser.com/questions/51838/recursive-chmod-rw-for-files-rwx-for-directories) für Dateien manuell angleichen, zum Beispiel mit `chmod -R a+rw *`. Als Alternative kannst du Webserver und Benutzern die Gruppe `www-data` und `umask 002` zuweisen.
+
+## Nginx
+
+Die `nginx.conf` Konfigurationsdatei für den [Nginx](https://nginx.org/)-Webserver:
+
+```nginx
+server {
+    listen 80;
+    server_name website.com;
+    root /var/www/website/;
+    index index.html yellow.php;
+
+    location /cache {
+        rewrite ^(.*)$ /error break;
+    }
+
+    location /content {
+        rewrite ^(.*)$ /error break;
+    }
+
+    location /system {
+        rewrite ^(.*)$ /error break;
+    }
+
+    location / {
+        if (!-e $request_filename) {
+            rewrite ^/(.*)$ /yellow.php last;
+            break;
+        }
+    }
+
+    location ~ \.php$ {
+        fastcgi_split_path_info ^(.+\.php)(/.+)$;
+        fastcgi_pass 127.0.0.1:9000;
+        fastcgi_index yellow.php;
+        include fastcgi_params;
+    }
+}
+```
+
+Wenn deine Webseite nicht funktioniert, überprüfe bitte `server_name` und `root`. Falls die Konfigurationsdatei verändert wurde, muss man den Nginx-Webserver [neustarten/neuladen](http://stackoverflow.com/questions/21292533/reload-nginx-configuration).
+
+Stelle sicher dass der Webserver Dateien lesen und schreiben kann. Du kannst [Schreibrechte](http://superuser.com/questions/51838/recursive-chmod-rw-for-files-rwx-for-directories) für Dateien manuell angleichen, zum Beispiel mit `chmod -R a+rw *`. Als Alternative kannst du Webserver und Benutzern die Gruppe `www-data` und `umask 002` zuweisen.
+
+## Statische Webseite
+
+Datenstrom Yellow ist ein Flat-File-CMS und ein Static-Site-Generator. Um statische Seiten zu erstellen führt man einen Build-Befehl im Installations-Verzeichnis aus. Daraufhin wird eine statische Webseite erstellt, die auf jedem Webserver funktioniert.
+
+Du kannst eine statische Webseite in der [Befehlszeile](https://github.com/datenstrom/yellow-plugins/tree/master/command) erstellen:
+
+1. Öffne ein Terminal-Fenster.
+2. Gehe ins Installations-Verzeichnis, dort wo sich die `yellow.php` befindet.
+3. Gib die folgende Zeile ein: `php yellow.php build /var/www/website`
+
+Das erstellt eine statische Webseite im Verzeichnis `/var/www/website`. Lade das Verzeichnis auf dein Webhosting hoch und erstelle bei Bedarf eine neue Version. Die URL kann man in den [Systemeinstellungen](adjusting-system-de#systemeinstellungen) festlegen, zum Beispiel `StaticUrl: http://website/`. 
+
+Als Alternative zu einer statischen Webseite kannst du einen Cache erstellen. Das beschleunigt deine Webseite, jedoch muss der Cache immer wieder aktualisiert werden. Hier ist ein Beispiel: `php yellow.php build`. Zum Löschen des Caches gibt man ein: `php yellow.php clean`.
+
+## Fehlerseite
+
+Falls Probleme auftreten wird eine Fehlerseite angezeigt. Wenn der Webbrowser eine Datei anfragt die der Webserver nicht finden kann wird "File not found" ausgegeben. Die Datei `system/config/page-error-404.txt` legt fest wie eine fehlende Datei aussieht:
+
+~~~~
+---
+Title: File not found
+---
+The requested file was not found. Oh no...
+~~~~
+
+Falls du Datenstrom Yellow als Flat-File-CMS benutzt, gibt es nichts weiteres zu tun. Falls du eine statische Webseite erstellst, gibt es einen zusätzlichen Schritt. Konfiguriere deinen Webserver so, dass er deine angepasste Fehlerseite anzeigt anstatt der eingebauten 404-Seite.
+
+Bei [Apache](http://httpd.apache.org) fügt man die folgende Zeile zur Konfigurationsdatei hinzu:
+
+    ErrorDocument 404 /404.html
+
+Bei [Nginx](https://nginx.org/) fügt man die folgende Zeile zur Konfigurationsdatei hinzu:
+
+    error_page 404 /404.html;
+
+[Weiter: Sicherheitseinstellungen →](security-configuration-de)

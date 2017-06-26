@@ -22,8 +22,8 @@ Yellow is for people who make websites. [Get support](support).
 ## Configurations
 
 * [Language configuration](language-configuration)
+* [Server configuration](server-configuration)
 * [Security configuration](security-configuration)
-* [Web server configuration](web-server-configuration)
 
 ## Customisations
 

@@ -5,7 +5,7 @@ Language: fr
 ---
 >>> [Vous pouvez nous aider à traduire cette page.](https://github.com/datenstrom/yellow-developers/blob/master/content/4-help/language-configuration-fr.txt)
 
-Comment configurer un site web avec des différents langages.
+Comment configurer différents langages.
 
 ## Langages
 
@@ -55,4 +55,4 @@ Ici nous voyons les dossiers `1-en`, `2-de`, `3-fr` et `default`. Celà donne ac
 
 Pour mofifier le menu de [navigation](customising-templates#custom-navigation), ouvrez le fichier `system/config/config.ini` et changez `Navigation: navigation-multilanguage`. Vous pouvez également afficher un moyen pour le visiteur de sélectionner la langue du site ailleurs, par exemple dans le [pied de page](customising-templates#custom-footer).
 
-[Suivant: Configuration de la sécurité →](security-configuration-fr)
+[Suivant: Configuration du serveur →](server-configuration-fr)

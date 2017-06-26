@@ -5,22 +5,36 @@ Language: fr
 ---
 Comment configurer la sécurité de votre site web.
 
-## Restriction
-
-Si plusieurs personnes peuvent éditer votre site web, vous pouvez restreindre chaque [compte d'utilisateur](adjusting-system-fr#comptes-d-utilisateurs) de sorte que certaines parties du site seulement puissent être éditable. Ouvrez le fichier `system/config/user.ini` et à la fin de la ligne de changer la page d'accueil de l'utilisateur. Ainsi, les utilisateurs ne peuvent éditer uniquement que leur page d'accueil. Ceci protège votre site web de toute modification.
-
-Vous pouvez [tester ce mode de restriction](/tests/user-restrictions).
-
-## Mode safe
-
-Si plusieurs personnes peuvent éditer votre site web, activez le mode safe afin que seule la syntaxe [Markdown](markdown-cheat-sheet-fr) puissent être utilisée. Ouvrez le fichier `system/config/config.ini` et changez `ParserSafeMode: 1`. Ceci protège votre site de tout dommage.
-
-Vous pouvez [tester le mode safe](/tests/safe-mode).
+>>> [Vous pouvez nous aider à traduire cette page.](https://github.com/datenstrom/yellow-developers/blob/master/content/4-help/security-configuration-fr.txt)
 
 ## Sécurité du serveur
 
-Pensez à vérifier que votre serveur web supporte HTTPS et que la connexion Internet soit cryptée. Il est préférable que votre site soit accessible uniquement via HTTPS. Ceci protège la confidentialité de vos utilisateurs, mais n'est pas supporté par tout les hébergeurs web.
+Pensez à vérifier que votre serveur web supporte HTTPS. Il est préférable que votre site soit accessible uniquement via HTTPS et que la connexion Internet soit cryptée. Ceci protège la confidentialité de vos utilisateurs, mais n'est pas encore supporté par tous les hébergeurs web.
 
 Vous aurez besoin d'un serveur avec TLS et de certificats valides.
 
-[Suivant: Configuration du serveur web →](web-server-configuration-fr)
+## Mode safe
+
+Si plusieurs personnes peuvent éditer votre site web, activez le mode safe. Ouvrez le fichier `system/config/config.ini` et changez `ParserSafeMode: 1`. Les utilisateurs ne peuvent utiliser que seule la syntaxe [Markdown](markdown-cheat-sheet-fr) et le site web sera protégé contre les nuisances.
+
+Vous pouvez [tester le mode safe](/tests/safe-mode).
+
+## Restrictions d'utilisateur
+
+Si plusieurs personnes peuvent éditer votre site web, restreignez les [compte d'utilisateurs](adjusting-system-fr#comptes-d-utilisateurs).  Ouvrez le fichier `system/config/user.ini` et à la fin de la ligne de changer la page d'accueil de l'utilisateur. Ainsi, les utilisateurs ne peuvent éditer uniquement que leur page d'accueil.
+
+Vous pouvez [tester ce mode de restriction](/tests/user-restrictions).
+
+## Moins est plus
+
+Vérifiez quelles fonctionnalités sont utilisées sur votre serveur web. Supprimez les [plugins](/plugins/) qui ne sont plus nécessaires. En règle générale, moins le logiciel est installé, moins le logiciel doit être exécuté et le site web moins vulnérable est pour les attaques.
+
+Les plugins suivants installés par défaut:
+
+* [Command](https://github.com/datenstrom/yellow-plugins/tree/master/command): Exécuter des commandes dans une fenêtre de terminal
+* [Edit](https://github.com/datenstrom/yellow-plugins/tree/master/edit): Modifiez votre site web dans un navigateur web
+* [Image](https://github.com/datenstrom/yellow-plugins/tree/master/image): Intégrer des images et des vignettes
+* [Markdown](https://github.com/datenstrom/yellow-plugins/tree/master/markdown): Formatage de texte pour les humains
+* [Update](https://github.com/datenstrom/yellow-plugins/tree/master/update): Gardez votre site à jour
+
+[Suivant: Personnaliser des thèmes →](customising-themes-fr)
