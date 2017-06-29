@@ -27,4 +27,4 @@ Connect with other users and find professional help.
 
 ## Thank you
 
-Datenstrom Yellow is open source. Made by people like you and me. At the heart of open source is the idea that we make better software together. Licensed under [GPLv2](https://github.com/datenstrom/yellow/blob/master/LICENSE.md) unless stated otherwise. Big thanks to all users and contributors.
+Datenstrom Yellow is open source. Made by people just like you and me. At the heart of open source is the idea that we make better software together. Licensed under [GPLv2](https://github.com/datenstrom/yellow/blob/master/LICENSE.md) unless stated otherwise. Big thanks to all users and contributors.

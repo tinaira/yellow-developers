@@ -32,7 +32,7 @@ Tous les utilisateurs sont stockés dans le fichier `system/config/user.ini`. Vo
 
 Le [navigateur web](https://github.com/datenstrom/yellow-plugins/tree/master/edit) vous permet de créer de nouveaux comptes d'utilisateurs et de changer les mots de passe. Un compte d'utilisateur se compose d'un email, d'un mot de passe crypté, de différents paramètres, tandis que le dernier paramètre concerne la page d'accueil de l'utilisateur.
 
-## Plugins et thèmes
+## Fonctionnalités
 
 Datenstrom Yellow s'installe avec un minimum de fonctionnalité. Vous obtenez les choses les plus importantes pour créer un petit site web et pouvez ajouter d'autres fonctionnalités. Il existe des [plugins](/plugins/), des [thèmes](/themes/) et des [langages](https://github.com/datenstrom/yellow-plugins/tree/master/language) à télécharger. 
 

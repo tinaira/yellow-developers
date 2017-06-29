@@ -32,7 +32,7 @@ All user accounts are stored in file `system/config/user.ini`. Here's an example
 
 You can use the [web browser](https://github.com/datenstrom/yellow-plugins/tree/master/edit) to create new user accounts and change passwords. A user account consists of email, encrypted password, different settings and at the end of the line is the user's home page.
 
-## Plugins and themes
+## Features
 
 Datenstrom Yellow concentrates on the essential aspects. You get the most important things to create a small website and can add more features. There are [plugins](/plugins/), [themes](/themes/) and [languages](https://github.com/datenstrom/yellow-plugins/tree/master/language) you can download.
 

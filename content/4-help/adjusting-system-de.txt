@@ -32,8 +32,8 @@ Alle Benutzerkonten sind in `system/config/user.ini` gespeichert. Hier ist ein B
 
 Im [Webbrowser](https://github.com/datenstrom/yellow-plugins/tree/master/edit) kannst du neue Benutzerkonten anzulegen und Kennwörter ändern. Ein Benutzerkonto besteht aus E-Mail, verschlüsseltem Kennwort, verschiedenen Einstellungen und am Ende der Zeile befindet sich die Startseite des Benutzers.
 
-## Plugins und Themes
+## Funktionen
 
-Datenstrom Yellow konzentriert sich auf's Wesentliche. Du bekommst die wichtigsten Sachen um eine kleine Webseite zu erstellen und kannst weitere Funktionen hinzufügen. Es gibt [Plugins](/plugins/), [Themes](/themes/) und [Sprachen](https://github.com/datenstrom/yellow-plugins/tree/master/language) zum Herunterladen. 
+Datenstrom Yellow konzentriert sich auf's Wesentliche. Du bekommst die wichtigsten Sachen um eine kleine Webseite zu erstellen und kannst weitere Funktionen selbst hinzufügen. Es gibt [Plugins](/plugins/), [Themes](/themes/) und [Sprachen](https://github.com/datenstrom/yellow-plugins/tree/master/language) zum Herunterladen. 
 
 [Weiter: Spracheinstellungen →](language-configuration-de)
