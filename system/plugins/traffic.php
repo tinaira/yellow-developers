@@ -221,7 +221,7 @@ class YellowTraffic
 	{
 		$locationSearch = $base.$locationSearch."query".$this->yellow->toolbox->getLocationArgsSeparator();
 		$searchUrl = preg_match("#^$locationSearch([^/]+)/$#", $location) ? ("$scheme://$address".strtoloweru($location)) : "-";
-		return strreplaceu(array("\x1c", "\x1d", "\x1e"), array('%1C','%1D','%1E'), $searchUrl);
+		return strreplaceu(array("%", "\x1c", "\x1d", "\x1e", "\x20"), array("%25", "%1C", "%1D", "%1E", "%20"), $searchUrl);
 	}
 	
 	// Return human readable status
