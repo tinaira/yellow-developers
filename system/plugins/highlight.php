@@ -5,7 +5,7 @@
 
 class YellowHighlight
 {
-	const VERSION = "0.6.6";
+	const VERSION = "0.7.1";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -13,7 +13,6 @@ class YellowHighlight
 	{
 		$this->yellow = $yellow;
 		$this->yellow->config->setDefault("highlightClass", "highlight");
-		$this->yellow->config->setDefault("highlightStylesheetGenerate", "0");
 		$this->yellow->config->setDefault("highlightLineNumber", "0");
 	}
 	
@@ -53,7 +52,7 @@ class YellowHighlight
 			$locationStylesheet = $this->yellow->config->get("serverBase").$this->yellow->config->get("pluginLocation")."highlight.css";
 			$fileNameStylesheet = $this->yellow->config->get("pluginDir")."highlight.css";
 			if(is_file($fileNameStylesheet)) $output = "<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"$locationStylesheet\" />\n";
-			if($this->yellow->config->get("highlightStylesheetGenerate"))
+			if(defined("DEBUG") && DEBUG>=3)
 			{
 				$geshi = new GeSHi();
 				$path = $this->yellow->config->get("pluginDir");

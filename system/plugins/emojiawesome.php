@@ -13,7 +13,6 @@ class YellowEmojiawesome
 	{
 		$this->yellow = $yellow;
 		$this->yellow->config->setDefault("emojiawesomeCdn", "https://cdnjs.cloudflare.com/ajax/libs/twemoji/2.0.0/");
-		$this->yellow->config->setDefault("emojiawesomeStylesheetGenerate", "0");
 	}
 	
 	// Handle page content parsing of custom block
@@ -51,7 +50,7 @@ class YellowEmojiawesome
 			$locationStylesheet = $this->yellow->config->get("serverBase").$this->yellow->config->get("pluginLocation")."emojiawesome.css";
 			$fileNameStylesheet = $this->yellow->config->get("pluginDir")."emojiawesome.css";
 			if(is_file($fileNameStylesheet)) $output = "<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"$locationStylesheet\" />\n";
-			if($this->yellow->config->get("emojiawesomeStylesheetGenerate"))
+			if(defined("DEBUG") && DEBUG>=3)
 			{
 				$cdn = $this->yellow->config->get("emojiawesomeCdn");
 				foreach($this->getLookupData() as $entry)
