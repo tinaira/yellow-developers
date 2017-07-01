@@ -5,14 +5,14 @@
 
 class YellowDisqus
 {
-	const VERSION = "0.6.3";
+	const VERSION = "0.7.1";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
 	function onLoad($yellow)
 	{
 		$this->yellow = $yellow;
-		$this->yellow->config->setDefault("disqusShortname", "Yellow");
+		$this->yellow->config->setDefault("disqusShortname", "yellow");
 	}
 	
 	// Handle page content parsing of custom block
