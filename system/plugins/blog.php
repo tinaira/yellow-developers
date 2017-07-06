@@ -26,7 +26,7 @@ class YellowBlog
 		{
 			list($location, $pagesMax) = $this->yellow->toolbox->getTextArgs($text);
 			if(empty($location)) $location = $this->yellow->config->get("blogLocation");
-			if(empty($pagesMax)) $pagesMax = $this->yellow->config->get("blogPagesMax");			
+			if(strempty($pagesMax)) $pagesMax = $this->yellow->config->get("blogPagesMax");			
 			$blog = $this->yellow->pages->find($location);
 			$pages = $this->getBlogPages($location);
 			$page->setLastModified($pages->getModified());
@@ -54,7 +54,7 @@ class YellowBlog
 		{
 			list($location, $pagesMax) = $this->yellow->toolbox->getTextArgs($text);
 			if(empty($location)) $location = $this->yellow->config->get("blogLocation");
-			if(empty($pagesMax)) $pagesMax = $this->yellow->config->get("blogPagesMax");
+			if(strempty($pagesMax)) $pagesMax = $this->yellow->config->get("blogPagesMax");
 			$blog = $this->yellow->pages->find($location);
 			$pages = $this->getBlogPages($location);
 			$page->setLastModified($pages->getModified());
@@ -86,7 +86,7 @@ class YellowBlog
 		{
 			list($location, $pagesMax) = $this->yellow->toolbox->getTextArgs($text);
 			if(empty($location)) $location = $this->yellow->config->get("blogLocation");
-			if(empty($pagesMax)) $pagesMax = $this->yellow->config->get("blogPagesMax");
+			if(strempty($pagesMax)) $pagesMax = $this->yellow->config->get("blogPagesMax");
 			$blog = $this->yellow->pages->find($location);
 			$pages = $this->getBlogPages($location);
 			$pages->sort("published", false);
@@ -110,7 +110,7 @@ class YellowBlog
 		{
 			list($location, $pagesMax) = $this->yellow->toolbox->getTextArgs($text);
 			if(empty($location)) $location = $this->yellow->config->get("blogLocation");
-			if(empty($pagesMax)) $pagesMax = $this->yellow->config->get("blogPagesMax");
+			if(strempty($pagesMax)) $pagesMax = $this->yellow->config->get("blogPagesMax");
 			$blog = $this->yellow->pages->find($location);
 			$pages = $this->getBlogPages($location);
 			$pages->similar($page->getPage("main"));
@@ -134,7 +134,7 @@ class YellowBlog
 		{
 			list($location, $pagesMax) = $this->yellow->toolbox->getTextArgs($text);
 			if(empty($location)) $location = $this->yellow->config->get("blogLocation");
-			if(empty($pagesMax)) $pagesMax = $this->yellow->config->get("blogPagesMax");
+			if(strempty($pagesMax)) $pagesMax = $this->yellow->config->get("blogPagesMax");
 			$blog = $this->yellow->pages->find($location);
 			$pages = $this->getBlogPages($location);
 			$page->setLastModified($pages->getModified());

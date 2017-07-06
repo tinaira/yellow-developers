@@ -26,7 +26,7 @@ class YellowWiki
 		{
 			list($location, $pagesMax) = $this->yellow->toolbox->getTextArgs($text);
 			if(empty($location)) $location = $this->yellow->config->get("wikiLocation");
-			if(empty($pagesMax)) $pagesMax = $this->yellow->config->get("wikiPagesMax");
+			if(strempty($pagesMax)) $pagesMax = $this->yellow->config->get("wikiPagesMax");
 			$wiki = $this->yellow->pages->find($location);
 			$pages = $this->getWikiPages($location);
 			$page->setLastModified($pages->getModified());
@@ -58,7 +58,7 @@ class YellowWiki
 		{
 			list($location, $pagesMax) = $this->yellow->toolbox->getTextArgs($text);
 			if(empty($location)) $location = $this->yellow->config->get("wikiLocation");
-			if(empty($pagesMax)) $pagesMax = $this->yellow->config->get("wikiPagesMax");
+			if(strempty($pagesMax)) $pagesMax = $this->yellow->config->get("wikiPagesMax");
 			$wiki = $this->yellow->pages->find($location);
 			$pages = $this->getWikiPages($location);
 			$pages->sort("title");
@@ -82,7 +82,7 @@ class YellowWiki
 		{
 			list($location, $pagesMax) = $this->yellow->toolbox->getTextArgs($text);
 			if(empty($location)) $location = $this->yellow->config->get("wikiLocation");
-			if(empty($pagesMax)) $pagesMax = $this->yellow->config->get("wikiPagesMax");
+			if(strempty($pagesMax)) $pagesMax = $this->yellow->config->get("wikiPagesMax");
 			$wiki = $this->yellow->pages->find($location);
 			$pages = $this->getWikiPages($location);
 			$pages->sort("modified", false);
@@ -106,7 +106,7 @@ class YellowWiki
 		{
 			list($location, $pagesMax) = $this->yellow->toolbox->getTextArgs($text);
 			if(empty($location)) $location = $this->yellow->config->get("wikiLocation");
-			if(empty($pagesMax)) $pagesMax = $this->yellow->config->get("wikiPagesMax");
+			if(strempty($pagesMax)) $pagesMax = $this->yellow->config->get("wikiPagesMax");
 			$wiki = $this->yellow->pages->find($location);
 			$pages = $this->getWikiPages($location);
 			$pages->similar($page->getPage("main"));
@@ -130,7 +130,7 @@ class YellowWiki
 		{
 			list($location, $pagesMax) = $this->yellow->toolbox->getTextArgs($text);
 			if(empty($location)) $location = $this->yellow->config->get("wikiLocation");
-			if(empty($pagesMax)) $pagesMax = $this->yellow->config->get("wikiPagesMax");
+			if(strempty($pagesMax)) $pagesMax = $this->yellow->config->get("wikiPagesMax");
 			$wiki = $this->yellow->pages->find($location);
 			$pages = $this->getWikiPages($location);
 			$page->setLastModified($pages->getModified());
