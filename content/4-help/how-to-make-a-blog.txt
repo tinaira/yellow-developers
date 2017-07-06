@@ -117,11 +117,11 @@ Status: hidden
 ---
 Recent
 
-[blogrecent /blog/ 3]
+[blogrecent /blog/ 5]
 
-Archive
+Tags
 
-[blogarchive /blog/]
+[blogtags /blog/ 5]
 ```
 
 Here are the same shortcuts, if the blog is located on the home page:
@@ -133,11 +133,11 @@ Status: hidden
 ---
 Recent
 
-[blogrecent / 3]
+[blogrecent / 5]
 
-Archive
+Tags
 
-[blogarchive /]
+[blogtags / 5]
 ```
 
 ## More features

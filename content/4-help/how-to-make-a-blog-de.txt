@@ -116,11 +116,11 @@ Status: hidden
 ---
 Neu
 
-[blogrecent /blog/ 3]
+[blogrecent /blog/ 5]
 
-Archiv
+Tags
 
-[blogarchive /blog/]
+[blogtags /blog/ 5]
 ```
 
 Hier sind die selben Abkürzungen, falls sich das Blog auf der Startseite befindet:
@@ -132,11 +132,11 @@ Status: hidden
 ---
 Neu
 
-[blogrecent / 3]
+[blogrecent / 5]
 
-Archiv
+Tags
 
-[blogarchive /]
+[blogtags / 5]
 ```
 
 ## Weitere Funktionen

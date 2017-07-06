@@ -5,7 +5,7 @@
 
 class YellowBlog
 {
-	const VERSION = "0.7.1";
+	const VERSION = "0.7.2";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -24,8 +24,9 @@ class YellowBlog
 		$output = null;
 		if($name=="blogarchive" && $shortcut)
 		{
-			list($location) = $this->yellow->toolbox->getTextArgs($text);
+			list($location, $pagesMax) = $this->yellow->toolbox->getTextArgs($text);
 			if(empty($location)) $location = $this->yellow->config->get("blogLocation");
+			if(empty($pagesMax)) $pagesMax = $this->yellow->config->get("blogPagesMax");			
 			$blog = $this->yellow->pages->find($location);
 			$pages = $this->getBlogPages($location);
 			$page->setLastModified($pages->getModified());
@@ -33,6 +34,7 @@ class YellowBlog
 			foreach($pages as $page) if(preg_match("/^(\d+\-\d+)\-/", $page->get("published"), $matches)) ++$months[$matches[1]];
 			if(count($months))
 			{
+				if($pagesMax!=0) $months = array_slice($months, -$pagesMax);
 				uksort($months, strnatcasecmp);
 				$months = array_reverse($months);
 				$output = "<div class=\"".htmlspecialchars($name)."\">\n";
@@ -87,10 +89,11 @@ class YellowBlog
 			if(empty($pagesMax)) $pagesMax = $this->yellow->config->get("blogPagesMax");
 			$blog = $this->yellow->pages->find($location);
 			$pages = $this->getBlogPages($location);
-			$pages->sort("published", false)->limit($pagesMax);
+			$pages->sort("published", false);
 			$page->setLastModified($pages->getModified());
 			if(count($pages))
 			{
+				if($pagesMax!=0) $pages->limit($pagesMax);
 				$output = "<div class=\"".htmlspecialchars($name)."\">\n";
 				$output .= "<ul>\n";
 				foreach($pages as $page)
@@ -110,10 +113,11 @@ class YellowBlog
 			if(empty($pagesMax)) $pagesMax = $this->yellow->config->get("blogPagesMax");
 			$blog = $this->yellow->pages->find($location);
 			$pages = $this->getBlogPages($location);
-			$pages->similar($page->getPage("main"))->limit($pagesMax);
+			$pages->similar($page->getPage("main"));
 			$page->setLastModified($pages->getModified());
 			if(count($pages))
 			{
+				if($pagesMax!=0) $pages->limit($pagesMax);
 				$output = "<div class=\"".htmlspecialchars($name)."\">\n";
 				$output .= "<ul>\n";
 				foreach($pages as $page)

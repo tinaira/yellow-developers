@@ -118,11 +118,11 @@ Status: hidden
 ---
 Recent
 
-[blogrecent /blog/ 3]
+[blogrecent /blog/ 5]
 
-Archive
+Tags
 
-[blogarchive /blog/]
+[blogtags /blog/ 5]
 ```
 
 Voici les mêmes raccourcis, si le blog est situé sur la page d'accueil:
@@ -134,11 +134,11 @@ Status: hidden
 ---
 Recent
 
-[blogrecent / 3]
+[blogrecent / 5]
 
-Archive
+Tags
 
-[blogarchive /]
+[blogtags / 5]
 ```
 
 ## Plus de fonctionnalités

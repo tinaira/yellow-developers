@@ -5,7 +5,7 @@
 
 class YellowWiki
 {
-	const VERSION = "0.7.1";
+	const VERSION = "0.7.2";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -61,10 +61,11 @@ class YellowWiki
 			if(empty($pagesMax)) $pagesMax = $this->yellow->config->get("wikiPagesMax");
 			$wiki = $this->yellow->pages->find($location);
 			$pages = $this->getWikiPages($location);
-			$pages->sort("title")->limit($pagesMax);
+			$pages->sort("title");
 			$page->setLastModified($pages->getModified());
 			if(count($pages))
 			{
+				if($pagesMax!=0) $pages->limit($pagesMax);
 				$output = "<div class=\"".htmlspecialchars($name)."\">\n";
 				$output .= "<ul>\n";
 				foreach($pages as $page)
@@ -84,10 +85,11 @@ class YellowWiki
 			if(empty($pagesMax)) $pagesMax = $this->yellow->config->get("wikiPagesMax");
 			$wiki = $this->yellow->pages->find($location);
 			$pages = $this->getWikiPages($location);
-			$pages->sort("modified", false)->limit($pagesMax);
+			$pages->sort("modified", false);
 			$page->setLastModified($pages->getModified());
 			if(count($pages))
 			{
+				if($pagesMax!=0) $pages->limit($pagesMax);
 				$output = "<div class=\"".htmlspecialchars($name)."\">\n";
 				$output .= "<ul>\n";
 				foreach($pages as $page)
@@ -107,10 +109,11 @@ class YellowWiki
 			if(empty($pagesMax)) $pagesMax = $this->yellow->config->get("wikiPagesMax");
 			$wiki = $this->yellow->pages->find($location);
 			$pages = $this->getWikiPages($location);
-			$pages->similar($page->getPage("main"))->limit($pagesMax);
+			$pages->similar($page->getPage("main"));
 			$page->setLastModified($pages->getModified());
 			if(count($pages))
 			{
+				if($pagesMax!=0) $pages->limit($pagesMax);
 				$output = "<div class=\"".htmlspecialchars($name)."\">\n";
 				$output .= "<ul>\n";
 				foreach($pages as $page)
