@@ -28,7 +28,6 @@ class YellowPreview
 			if(empty($size)) $size = "100%";
 			$content = $this->yellow->pages->find($location);
 			$pages = $content ? $content->getChildren() : $this->yellow->pages->clean();
-			$pages->sort("title");
 			if($this->yellow->plugins->isExisting("image"))
 			{
 				if(count($pages))
