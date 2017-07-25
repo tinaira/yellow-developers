@@ -1,0 +1,15 @@
+---
+Title: Linkparsing testen
+---
+Diese Seite testet das Parsing von Links.
+
+Link zur selben Webseite: [Demo](/de/), [Wiki](/de/plugins/wiki/).  
+Link zu einer anderen Webseite: [Datenstrom](https://datenstrom.se), [W3Schools](https://www.w3schools.com).  
+Relativer Link zur aktuellen Seite: [Inhalt](api-content), [Bilder](image-parsing).  
+Spezielle Links für diese Seite: [Anzeigen](@pageread), [Bearbeiten](@pageedit).
+
+URL-Autolinking: 
+
+https://link.se, http://link.se, ftp://link.se, bla@fa.sel, pe.ter@example.com.  
+"https://link.se" 'https://link.se' https://link.se: https://link.se;  
+http://www.faqs.org/docs/artu/ch01s06.html

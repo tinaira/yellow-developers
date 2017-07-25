@@ -1,0 +1,98 @@
+---
+Title: Markdown-Spickzettel
+Sidebar: none
+---
+Markdown ist eine praktische Art um Webseiten zu bearbeiten.
+
+## Grundlagen
+
+Text formatieren:
+
+    Normal *Kursiv* **Fettschrift** `Code`
+
+Eine Liste erstellen:
+
+    * Punkt eins
+    * Punkt zwei
+    * Punkt drei
+
+Eine sortierte Liste erstellen:
+
+    1. Punkt eins
+    2. Punkt zwei
+    3. Punkt drei
+
+Eine Überschrift erstellen:
+
+    # Überschrift 1
+    ## Überschrift 2
+    ### Überschrift 3
+
+Zitate erstellen:
+
+    > Hier ist ein Zitat
+    >> Hier ist ein Zitat im Zitat
+    >>> Hier ist ein Zitat im Zitat im Zitat
+
+Links erstellen:
+
+    [Link zu Seite](/de/help/how-to-make-a-website)  
+    [Link zu Webseite](https://datenstrom.se)  
+    http://commonmark.org
+
+Ein Bild hinzufügen:
+
+    ![image](picture.jpg)
+    ![image](picture.jpg "Picture")
+    ![image](picture.jpg "Dies ist ein Beispielbild")
+
+Ein Bild hinzufügen, alternatives Format:
+
+    [image picture.jpg]
+    [image picture.jpg Picture]
+    [image picture.jpg "Dies ist ein Beispielbild"]
+
+## Abkürzungen
+
+`[image picture.jpg Picture - 50%]` = [Miniaturbild](https://github.com/datenstrom/yellow-plugins/tree/master/image) hinzufügen  
+`[gallery photo.*jpg - 20%]` = [Bildergalerie](https://github.com/datenstrom/yellow-plugins/tree/master/gallery) hinzufügen  
+`[slider photo.*jpg]` = [Bildergalerie mit Schieber](https://github.com/datenstrom/yellow-plugins/tree/master/slider) hinzufügen  
+`[youtube fhs55HEl-Gc]` = [Youtube-Video](https://github.com/datenstrom/yellow-plugins/tree/master/youtube) einbinden  
+`[vimeo 13387502]` = [Vimeo-Video](https://github.com/datenstrom/yellow-plugins/tree/master/vimeo) einbinden  
+`[soundcloud 101175715]` = [Soundcloud-Audio](https://github.com/datenstrom/yellow-plugins/tree/master/soundcloud) einbinden  
+`[slideshare 37321279]` = [Slideshare-Präsentation](https://github.com/datenstrom/yellow-plugins/tree/master/slideshare) einbinden  
+`[googlecalendar de.german#holiday]` = [Google-Kalender](https://github.com/datenstrom/yellow-plugins/tree/master/googlecalendar) einbinden  
+`[googlemaps Stockholm]` = [Google-Maps](https://github.com/datenstrom/yellow-plugins/tree/master/googlemaps) einbinden  
+`[blogrecent /blog/]` = [neuste Blogseiten](https://github.com/datenstrom/yellow-plugins/tree/master/blog#how-to-configure-a-blog) anzeigen  
+`[wikirecent /wiki/]` = [neuste Wikiseiten](https://github.com/datenstrom/yellow-plugins/tree/master/wiki#how-to-configure-a-wiki) anzeigen  
+`[fa fa-envelope-o]` = [Icons und Symbole](https://github.com/datenstrom/yellow-plugins/tree/master/fontawesome) anzeigen  
+`[ea ea-smile]` = [Emoji und bunte Bilder](https://github.com/datenstrom/yellow-plugins/tree/master/emojiawesome) anzeigen  
+`[yellow]` = [Informationen über Webseite](https://github.com/datenstrom/yellow-plugins/tree/master/core) anzeigen  
+`[toc]` = [Inhaltsverzeichnis](https://github.com/datenstrom/yellow-plugins/tree/master/toc) anzeigen  
+`[--more--]` = [Seitenumbruch](https://github.com/datenstrom/yellow-plugins/tree/master/blog#how-to-configure-a-blog) hinzufügen  
+
+## Einstellungen
+
+`Title` = Seitentitel  
+`TitleContent` = Seitentitel der im Inhalt angezeigt wird  
+`TitleNavigation` = Seitentitel der in der Navigation angezeigt wird  
+`TitleHeader` = Seitentitel der im Webbrowser angezeigt wird  
+`Description` = Beschreibung der Seite  
+`Keywords` = Stichwörter der Seite, durch Komma getrennt  
+`Author` = Autoren der Seite, durch Komma getrennt  
+`Language` = Sprache der Seite  
+`Theme` = Theme der Seite  
+`Template` = Template der Seite  
+`TemplateNew` = Template um eine neue Seite zu erzeugen  
+`Parser` = Parser der Seite  
+`Modified` = Änderungsdatum der Seite, JJJJ-MM-TT Format  
+`Published` = Veröffentlichungsdatum der Seite, JJJJ-MM-TT Format  
+`Tag` = Tags zur Kategorisierung der Seite, durch Komma getrennt  
+`Redirect` = Umleitung zu einer neuen Seite oder URL  
+`Status` = Status für Arbeitsablauf  
+`Navigation` = Navigation der Seite  
+`Sidebar` = Sidebar der Seite  
+`Sitename` = Name der Webseite  
+`Siteicon` = Icon der Webseite  
+`Tagline` = Slogan der Webseite  
+`Email` = E-Mail des Webmasters  

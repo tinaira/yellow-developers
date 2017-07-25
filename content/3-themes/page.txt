@@ -1,6 +1,0 @@
----
-Title: Themes
----
-[preview /themes/ - 40.5%]
-
-Want to add more themes? [See all themes](/help/themes-on-github).

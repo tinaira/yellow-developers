@@ -1,0 +1,32 @@
+---
+Title: Configuration de la sécurité
+---
+Comment configurer la sécurité de votre site web.
+
+>>> [Vous pouvez nous aider à traduire cette page.](https://github.com/datenstrom/yellow-developers/blob/master/content/3-fr/4-help/security-configuration.txt)
+
+## Sécurité du serveur
+
+Pensez à vérifier que votre serveur web supporte HTTPS. Il est préférable que votre site soit accessible uniquement via HTTPS et que la connexion Internet soit cryptée. Ceci protège la confidentialité de vos utilisateurs, mais n'est pas encore supporté par tous les hébergeurs web.
+
+Vous aurez besoin d'un serveur avec TLS et de certificats valides.
+
+## Mode de sécurité
+
+Si plusieurs personnes peuvent éditer votre site web, activez le mode safe. Ouvrez le fichier `system/config/config.ini` et changez `ParserSafeMode: 1`. Les utilisateurs ne peuvent utiliser que seule la syntaxe [Markdown](markdown-cheat-sheet) et le site web sera protégé contre les nuisances.
+
+Vous pouvez [tester le mode de sécurité](/fr/tests/safe-mode).
+
+## Restrictions d'utilisateur
+
+Si plusieurs personnes peuvent éditer votre site web, restreignez les [compte d'utilisateurs](adjusting-system#comptes-d-utilisateurs).  Ouvrez le fichier `system/config/user.ini` et à la fin de la ligne de changer la page d'accueil de l'utilisateur. Ainsi, les utilisateurs ne peuvent éditer uniquement que leur page d'accueil.
+
+Vous pouvez [tester des restrictions d'utilisateur](/fr/tests/user-restrictions).
+
+## Moins est plus
+
+Vérifiez quelles fonctionnalités sont utilisées sur votre serveur web. Supprimez les [plugins](/fr/plugins/) qui ne sont plus nécessaires du dossier `system/plugins`. En règle générale, moins le logiciel est installé, moins le site web est vulnérable pour les attaques.
+
+Le [plugin core](https://github.com/datenstrom/yellow-plugins/tree/master/core) et [plugin update](https://github.com/datenstrom/yellow-plugins/tree/master/update) ne doivent jamais être supprimés.
+
+[Suivant: Personnaliser des thèmes →](customising-themes)

@@ -1,0 +1,6 @@
+---
+Title: Status
+Status: hidden
+Redirect: /tests/
+---
+This page tests redirects to [/tests/](/tests/).

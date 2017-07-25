@@ -1,0 +1,30 @@
+---
+Title: Security configuration
+---
+Here's how to set up a website with better security.
+
+## Secure server
+
+Check if your web server supports HTTPS. It's best if your website is only available via HTTPS and the Internet connection is always encrypted. This protects the privacy of your users, unfortunately it's not yet supported by all web hosting provider.
+
+You need a web server with TLS and valid certificate.
+
+## Safe mode
+
+If many people edit your website, enable the safe mode. Open file `system/config/config.ini` and change `ParserSafeMode: 1`. Users can only use [Markdown](markdown-cheat-sheet) for text formatting and the website will be protected from nuisance.
+
+You can [test safe mode](/tests/safe-mode).
+
+## User restrictions
+
+If many people edit your website, restrict [user accounts](adjusting-system#user-accounts). Open file `system/config/user.ini` and at the end of the line change the user's home page. Users can only edit pages within their home page.
+
+You can [test user restrictions](/tests/user-restrictions).
+
+## Less is more
+
+Check which features are used on your web server. Delete [plugins](/plugins/) that are no longer needed from the `system/plugins` folder. As a rule of thumb, the fewer software is installed, the less vulnerable the website is for attacks.
+
+The [core plugin](https://github.com/datenstrom/yellow-plugins/tree/master/core) und [update plugin](https://github.com/datenstrom/yellow-plugins/tree/master/update) should never be deleted.
+
+[Next: Customising themes →](customising-themes)

@@ -1,0 +1,9 @@
+---
+Title: Googlecalendar
+Description: Embed Google calendar
+Image: googlecalendar-en.png
+---
+Embed Google calendar.
+[Install plugin](https://github.com/datenstrom/yellow-plugins/tree/master/googlecalendar).
+
+[googlecalendar en.swedish#holiday month 2017-06-01]

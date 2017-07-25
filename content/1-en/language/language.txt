@@ -1,0 +1,6 @@
+---
+Title: Chose your language
+TitleNavigation: Language
+Template: language
+---
+This page is automatically generated.

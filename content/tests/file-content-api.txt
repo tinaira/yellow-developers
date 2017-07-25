@@ -1,5 +1,0 @@
----
-Title: Test file content API
-Template: content
----
-This page tests file content API.

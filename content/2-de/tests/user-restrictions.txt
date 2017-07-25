@@ -1,0 +1,8 @@
+---
+Title: Benutzerbeschränkungen testen
+---
+Diese Seite testet Benutzerbeschränkungen.
+
+Gäste können [edit - diese Seite bearbeiten], aber nicht [die Startseite bearbeiten](/de/). 
+
+Bitte anmelden mit `gast@demo.com` + `demo`.

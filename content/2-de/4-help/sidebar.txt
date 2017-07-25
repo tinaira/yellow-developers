@@ -1,0 +1,27 @@
+---
+Title: Sidebar
+Status: hidden
+---
+Anleitungen
+
+* [Webseite erstellen](how-to-make-a-website)
+* [Blog erstellen](how-to-make-a-blog)
+* [Wiki erstellen](how-to-make-a-wiki)
+
+Grundlagen
+
+* [Inhalt hinzufügen](adding-content)
+* [Medien hinzufügen](adding-media)
+* [System anpassen](adjusting-system)
+
+Einstellungen
+
+* [Spracheinstellungen](language-configuration)
+* [Servereinstellungen](server-configuration)
+* [Sicherheitseinstellungen](security-configuration)
+
+Anpassungen
+
+* [Themes anpassen](customising-themes)
+* [Templates anpassen](customising-templates)
+* [API für Entwickler](api)

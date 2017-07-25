@@ -1,0 +1,5 @@
+---
+Title: API Medien testen
+Template: media
+---
+Diese Seite testet API für Medien-Dateien.

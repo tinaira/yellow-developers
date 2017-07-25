@@ -1,8 +1,0 @@
----
-Title: Gallery plugin
-Description: Image gallery with popup 
----
-Image gallery with popup. 
-[Install plugin](https://github.com/datenstrom/yellow-plugins/tree/master/gallery).
-
-[gallery photo.*jpg - 20%]

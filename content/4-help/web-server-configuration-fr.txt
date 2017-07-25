@@ -1,6 +1,0 @@
----
-Title: File moved
-Sidebar: none
-Language: fr
----
-This requested file has moved. [Please update your link](/help/server-configuration-fr).

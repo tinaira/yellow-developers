@@ -1,5 +1,0 @@
----
-Title: Test file media API
-Template: media
----
-This page tests file media API.

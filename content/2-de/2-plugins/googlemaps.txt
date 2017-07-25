@@ -1,0 +1,9 @@
+---
+Title: Googlemaps
+Description: Google-Maps einbinden
+Image: googlemaps-de.png
+---
+Google-Maps einbinden.
+[Plugin installieren](https://github.com/datenstrom/yellow-plugins/tree/master/googlemaps).
+
+[googlemaps Stockholm]

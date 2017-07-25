@@ -1,0 +1,5 @@
+---
+Title: Tester l'API des pages
+Template: content
+---
+Cette page teste l'API pour le contenu.

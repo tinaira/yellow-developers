@@ -1,0 +1,58 @@
+---
+Title: Language configuration
+---
+Here's how to set up different languages.
+
+## Languages
+
+The installation comes with three languages and there are more [languages](https://github.com/datenstrom/yellow-plugins/tree/master/language) you can download. The default language is defined the [system settings](adjusting-system#system-settings). A different language can be defined in the [settings](markdown-cheat-sheet#settings) at the top of each page, for example `Language: en`.
+
+## Single language mode
+
+If you want to translate individual web pages, it's okay to use the single language mode. To translate a page, copy and save it under a new name. Define the language at the top of each page, so that the standard language will not be used.
+
+Here's an English page:
+
+```
+---
+Title: About us
+Language: en
+---
+Birds of a feather flock together.
+```
+
+A German page:
+
+```
+---
+Title: Über uns
+Language: de
+---
+Wo zusammenwächst was zusammen gehört.
+```
+
+A French page:
+
+```
+---
+Title: À propos de nous
+Language: fr
+---
+Les oiseaux de même plumage volent toujours ensemble.
+```
+
+## Multi language mode
+
+If you want to translate an entire website, it's best to use the multi language mode. Open file `system/config/config.ini` and change `MultiLanguageMode: 1`. Go to your `content` folder and create a new folder for each language. Here's an example:
+
+[image screenshot-language1.png Screenshot]
+
+The first screenshot shows the folders `1-en`, `2-de` and `3-fr`. This gives you the URLs `http://website/` `http://website/de/` `http://website/fr/` for English, German and French. Here's another example:
+
+[image screenshot-language2.png Screenshot]
+
+The second screenshot shows the folders `1-en`, `2-de`, `3-fr` and `default`. This gives you the URLs `http://website/en/` `http://website/de/` `http://website/fr/` and a home page `http://website/` that automatically detects the visitor's language. 
+
+To show a language selection, you can create a page that lists available languages. This provides visitors the possibility to select any language. You can add a link somewhere on your website, for example in the [footer](customising-templates#custom-footer).
+
+[Next: Server configuration →](server-configuration)

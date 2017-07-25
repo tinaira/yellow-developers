@@ -1,0 +1,32 @@
+---
+Title: Support Deutsch
+TitleContent: Support
+---
+Tausche dich mit anderen Benutzern aus und finde professionelle Hilfe. 
+
+## Support finden
+
+* [Diskutiere Probleme und stelle Fragen](https://github.com/datenstrom/yellow/issues)
+* [Informiere dich über neueste Version](https://github.com/datenstrom/yellow/releases)
+* [Markdown-Spickzettel](markdown-cheat-sheet)
+* [Kontaktiere einen Menschen](https://datenstrom.se/de/contact/)
+
+## Informationen finden
+
+* [Twitter @datenstromse](https://twitter.com/datenstromse)
+* [GitHub @datenstrom](https://github.com/datenstrom)
+* [Instagram @datenstromse](https://instagram.com/datenstromse)
+* [Webseite datenstrom.se](https://datenstrom.se)
+
+## Mitmachen
+
+* [Beantworte Fragen](https://github.com/datenstrom/yellow/issues)
+* [Zeige was du gemacht hast](https://twitter.com/search?q=%23madewithyellow)
+* [Erstelle Plugins und Themes](https://github.com/datenstrom)
+* [Übersetze Sprachdateien](https://github.com/datenstrom/yellow-plugins/tree/master/language)
+
+## Danke
+
+Datenstrom Yellow ist Open-Source. Erstellt von Menschen wie du und ich. Im Herzen von Open-Source ist die Idee, dass wir gemeinsam bessere Software machen. Lizensiert unter [GPLv2](https://github.com/datenstrom/yellow/blob/master/LICENSE.md) sofern nichts anderes angegeben. Großen Dank an alle Benutzer und Mitwirkende.
+
+

@@ -1,0 +1,30 @@
+---
+Title: Sicherheitseinstellungen
+---
+Wie man eine Webseite mit besserer Sicherheit konfiguriert.
+
+## Sicherer Server
+
+Überprüfe ob dein Webserver HTTPS unterstützt. Am Besten ist es wenn deine Webseite nur über HTTPS erreichbar ist und die Internetverbindung immer verschlüsselt ist. Das dient dem Datenschutz, leider wird es noch nicht von allen Webhoster unterstützt.
+
+Du brauchst einen Webserver mit TLS und gültigem Zertifikat.
+
+## Sicherer Modus
+
+Falls viele Person deine Webseite bearbeiten, aktiviere den sicheren Modus. Öffne die Datei `system/config/config.ini` und ändere `ParserSafeMode: 1`. Benutzer dürfen dann nur noch [Markdown](markdown-cheat-sheet) im Text verwenden und die Webseite wird vor Unfug geschützt.
+
+Du kannst den [sicheren Modus testen](/de/tests/safe-mode).
+
+## Benutzerbeschränkungen
+
+Falls viele Person deine Webseite bearbeiten, beschränke [Benutzerkonten](adjusting-system#benutzerkonten). Öffne die Datei `system/config/user.ini` und ändere am Ende der Zeile die Startseite des Benutzers. Benutzer dürfen dann nur Seiten innerhalb ihrer Startseite bearbeiten.
+
+Du kannst [Benutzerbeschränkungen testen](/de/tests/user-restrictions).
+
+## Weniger ist mehr
+
+Überprüfe welche Funktionen auf deinem Webserver benutzt werden. Lösche [Plugins](/de/plugins/) die nicht mehr benötigt werden aus dem `system/plugins` Verzeichnis. Als Faustregel gilt, je weniger Software installiert ist, desto weniger ist die Webseite anfällig für Angriffe.
+
+Das [Core-Plugin](https://github.com/datenstrom/yellow-plugins/tree/master/core) und [Update-Plugin](https://github.com/datenstrom/yellow-plugins/tree/master/update) sollten niemals gelöscht werden.
+
+[Weiter: Themes anpassen →](customising-themes)

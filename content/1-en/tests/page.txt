@@ -1,0 +1,27 @@
+---
+Title: Tests
+---
+This website is made with [yellow].
+
+||||
+|---|---|---|
+|**datenstrom.se**|[![Site status](https://datenstrom.se/media/images/online.svg)](https://datenstrom.se)
+|**datenstrom/yellow**|[![Build status](https://travis-ci.org/datenstrom/yellow.svg?branch=master)](https://travis-ci.org/datenstrom/yellow)|[![Code quality](https://img.shields.io/codacy/grade/f565b048bdff4b0e90391d3d93384b2f/master.svg)](https://www.codacy.com/app/markseu/yellow)
+|**datenstrom/yellow-developers**|[![Build status](https://travis-ci.org/datenstrom/yellow-developers.svg?branch=master)](https://travis-ci.org/datenstrom/yellow-developers)|[![Code quality](https://img.shields.io/codacy/grade/238ea263acd94e36a8dc105a9c0c80fa/master.svg)](https://www.codacy.com/app/markseu/yellow-developers)
+
+Here's a collection of our tests:
+
+* [Test API content](api-content)
+* [Test API media](api-media)
+* [Test custom template](custom-template)
+* [Test custom theme](custom-theme)
+* [Test file name Unicode](file-name-unicode-åäö)
+* [Test file name whitespace](file-name-whitespace)* [Test image parsing](image-parsing)
+* [Test link parsing](link-parsing)
+* [Test language error](page-language-error)
+* [Test parser error](page-parser-error)
+* [Test template error](page-template-error)
+* [Test theme error](page-theme-error)
+* [Test redirect to home](redirect-to-home)
+* [Test safe mode](safe-mode)
+* [Test user restrictions](user-restrictions)

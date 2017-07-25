@@ -1,6 +1,0 @@
----
-Title: Test custom template
-Template: custom
-Navigation: navigation-custom
----
-This page tests custom navigation, content and footer.

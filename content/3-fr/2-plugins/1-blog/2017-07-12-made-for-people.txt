@@ -1,0 +1,11 @@
+---
+Title: Fabriqué pour les gens
+Published: 2017-07-12
+Author: Datenstrom
+Template: blog
+Tag: Exemple
+---
+Blog pour votre site web. 
+[Installer le plugin](https://github.com/datenstrom/yellow-plugins/tree/master/blog).
+
+Yellow est fait pour les gens qui font des sites web. Créez de simples pages web, un blog ou un wiki. L'accent est mis sur les gens et c'est utile pour vous. Pas de base de données, pas de documentation longue. La plupart des gens n'ont pas besoin de cela. Créez des sites web qui ressemblent et fonctionnent comme vous le souhaitez.

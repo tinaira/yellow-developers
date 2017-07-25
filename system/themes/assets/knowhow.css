@@ -87,19 +87,7 @@ a:hover { color:#4183c4; text-decoration:underline; }
 .footer { margin-top:1em; padding-top:1em; border-top:1px solid #eee; }
 .footer .siteinfo a { color:#4183c4; }
 .footer .siteinfo a:hover { color:#4183c4; text-decoration:underline; }
-.footer .siteinfo a.socialmedia {
-	display:inline-block;
-	box-sizing:border-box;
-	border-radius:13px;
-	width:26px;
-	height:26px;
-	margin:-20px 0;
-	padding:1px 0;
-	text-align:center;
-	background-color:#4183c4;
-	color:#fff;
-}
-.footer .siteinfo a.socialmedia:hover { background-color:#048; color:#fff; }
+.footer .siteinfo a.language img { vertical-align:middle; margin-top:-5px; margin-right:0.75em; }
 .footer .siteinfo-left { float:left; }
 .footer .siteinfo-right { float:right; }
 .footer .siteinfo-banner { clear:both; }
@@ -168,8 +156,6 @@ a:hover { color:#4183c4; text-decoration:underline; }
 	.header .sitename-logo { width:24px; height:24px; }
 	.navigation { margin-top:0.5em; margin-bottom:0.5em; }
 	.navigation-search { padding-bottom:1em; }
-	.footer .siteinfo-right { display:none; }
-	.footer .siteinfo a.socialmedia { width:24px; height:24px; padding:1px 0; }
 	.with-sidebar .main { margin-right:0; }
 	.with-sidebar .sidebar { display:none; }
 }

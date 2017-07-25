@@ -1,0 +1,5 @@
+---
+Title: Test API content
+Template: content
+---
+This page tests API for content.

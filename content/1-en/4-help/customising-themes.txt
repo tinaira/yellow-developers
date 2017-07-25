@@ -1,0 +1,108 @@
+---
+Title: Customising themes
+---
+You can customise the visual design of your website. [See demo](/tests/custom-theme).
+
+## Themes
+
+Themes define the visual design of your website. Start with a theme that you like. The default theme is defined in the [system settings](adjusting-system#system-settings). A different theme can be defined in the [settings](markdown-cheat-sheet#settings) at the top of each page, for example `Theme: flatsite`.
+
+Every website has a small icon, sometimes called favicon. The web browser displays this icon for example in address bar, in bookmarks or on the desktop. To change the default icon overwrite file `system/themes/assets/icon.png`.
+
+## HTML
+
+To understand themes it's good to know the [HTML](https://www.w3schools.com/html/) layout of a page. There's a default HTML layout that's used by most web pages, blogs and wikis. This is just a suggestion so that everything fits together, you can use any layout you like.
+
+Here's the default HTML layout:
+
+``` php
+<!DOCTYPE html>
+<html>
+  <head>…</head>
+  <body>
+    <div class="page template-default">
+      <div class="header">…</div>
+      <div class="content">…</div>
+      <div class="footer">…</div>
+    </div>
+  </body>
+</html>
+```
+
+The first `<div>` element contains useful class information, for example `template-default`. A blog page uses `template-blog`, a wiki page `template-wiki` and a sidebar `with-sidebar`. This allows you to adjust themes to different [templates](customising-templates).
+
+## CSS
+
+To adjust themes you can use [CSS](https://www.w3schools.com/css/). This allows you to change colors, font and the visual design of your website. The easiest way is to change the available CSS files. You can also create a new file, for example `Theme: custom`.
+ 
+Here's an example CSS file `system/themes/assets/custom.css`:
+
+``` css
+html, body, div, form, pre, span, tr, th, td, img { margin:0; padding:0; border:0; vertical-align:baseline; }
+body { background-color:#f8cc44; color:#fff; margin:1em; }
+body { font-family:Helvetica,sans-serif; font-size:1.5em; font-weight:normal; }
+h1, h2, h3, h4, h5, h6 { color:#fff; font-weight:bold; }
+h1 { font-size:2.5em; }
+a { color:#fff; text-decoration:none; }
+a:hover { color:#fff; text-decoration:underline; }
+.header .sitename a { color:#fff; font-size:0.4em; font-weight:normal; }
+.navigation, .footer { display:none; }
+```
+
+Here's an example CSS with centred text:
+
+``` css
+html, body, div, form, pre, span, tr, th, td, img { margin:0; padding:0; border:0; vertical-align:baseline; }
+body { background-color:#f8cc44; color:#fff; margin:1em; }
+body { font-family:Helvetica,sans-serif; font-size:1.5em; font-weight:normal; }
+h1, h2, h3, h4, h5, h6 { color:#fff; font-weight:bold; }
+h1 { font-size:2.5em; }
+a { color:#fff; text-decoration:none; }
+a:hover { color:#fff; text-decoration:underline; }
+.header .sitename a { color:#fff; font-size:0.4em; font-weight:normal; }
+.navigation, .footer { display:none; }
+.page { text-align:center; margin:0 auto; max-width:27em; }
+```
+
+Here's an example CSS with background image:
+
+``` css
+html, body, div, form, pre, span, tr, th, td, img { margin:0; padding:0; border:0; vertical-align:baseline; }
+body { background-color:#f8cc44; color:#fff; margin:1em; }
+body { font-family:Helvetica,sans-serif; font-size:1.5em; font-weight:normal; }
+body {
+	background-image:url(custom-background.jpg);
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:center;
+	background-attachment:fixed;
+}
+h1, h2, h3, h4, h5, h6 { color:#fff; font-weight:bold; }
+h1 { font-size:2.5em; }
+a { color:#fff; text-decoration:none; }
+a:hover { color:#fff; text-decoration:underline; }
+.header .sitename a { color:#fff; font-size:0.4em; font-weight:normal; }
+.navigation, .footer { display:none; }
+.page { text-align:center; margin:0 auto; max-width:27em; }
+```
+
+## JavaScript
+
+To adjust themes even more you can use [JavaScript](https://www.w3schools.com/js/). This allows you to create websites with dynamic features. You can save JavaScript into a file which has a similar name as the CSS file. Then it will be automatically included.
+
+Here's an example JS file `system/themes/assets/custom.js`:
+
+``` javascript
+var ready = function() 
+{
+	console.log("Hello world");
+	// Add more JavaScript code here
+}
+if(window.addEventListener) {
+	window.addEventListener("load", ready, false);
+} else {
+	window.attachEvent("onload", ready);
+}
+```
+
+[Next: Customising templates →](customising-templates)

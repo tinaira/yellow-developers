@@ -1,0 +1,11 @@
+---
+Title: Für Menschen gemacht
+Published: 2017-07-12
+Author: Datenstrom
+Template: blog
+Tag: Beispiel
+---
+Blog für deine Webseite. 
+[Plugin installieren](https://github.com/datenstrom/yellow-plugins/tree/master/blog).
+
+Yellow ist für Menschen die Webseiten machen. Erstelle kleine Webseiten, Blogs und Wikis. Der Fokus liegt auf Menschen und dass es nützlich für dich ist. Keine Datenbank, kein Admin-Panel, keine lange Dokumentation. Die meisten Leute brauchen das nicht. Erstelle Webseiten die so aussehen und funktionieren, wie du willst.

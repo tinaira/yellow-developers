@@ -1,0 +1,11 @@
+---
+Title: Datenstrom Yellow aide
+TitleNavigation: Aide
+---
+[[image datenstrom-yellow-fr.jpg "Datenstrom Yellow"]](https://datenstrom.se/fr/yellow/)
+
+Yellow est fait pour les gens qui font des sites web. [Obtenir de l'aide](support).
+
+Créez de simples pages web, un blog ou un wiki. L'accent est mis sur les gens et c'est utile pour vous. Pas de base de données, pas de documentation longue. La plupart des gens n'ont pas besoin de cela. Créez des sites web qui ressemblent et fonctionnent comme vous le souhaitez.
+
+[Suivant: Comment faire un site web →](how-to-make-a-website)

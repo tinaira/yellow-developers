@@ -1,0 +1,9 @@
+---
+Title: Slideshare
+Description: Intégrez les présentations Slideshare
+Image: slideshare-fr.png
+---
+Intégrez les présentations Slideshare.
+[Installer le plugin](https://github.com/datenstrom/yellow-plugins/tree/master/slideshare).
+
+[slideshare 37321279]

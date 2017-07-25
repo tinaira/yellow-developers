@@ -1,0 +1,11 @@
+---
+Title: Datenstrom Yellow Hilfe
+TitleNavigation: Hilfe
+---
+[[image datenstrom-yellow-de.jpg "Datenstrom Yellow"]](https://datenstrom.se/de/yellow/)
+
+Yellow ist für Menschen die Webseiten machen. [Support finden](support).
+
+Erstelle kleine Webseiten, Blogs und Wikis. Der Fokus liegt auf Menschen und dass es nützlich für dich ist. Keine Datenbank, kein Admin-Panel, keine lange Dokumentation. Die meisten Leute brauchen das nicht. Erstelle Webseiten die so aussehen und funktionieren, wie du willst.
+
+[Weiter: Webseite erstellen →](how-to-make-a-website)

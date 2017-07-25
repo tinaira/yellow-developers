@@ -1,0 +1,9 @@
+---
+Title: Search
+Description: Full-text search
+Image: search-en.png
+---
+Full-text search.
+[Install plugin](https://github.com/datenstrom/yellow-plugins/tree/master/search).
+
+Enter a search term.

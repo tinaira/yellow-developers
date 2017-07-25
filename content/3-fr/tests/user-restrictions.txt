@@ -1,0 +1,8 @@
+---
+Title: Tester des restrictions d'utilisateur
+---
+Cette page teste les restrictions des utilisateurs.
+
+Les clients peuvent [edit - modifier cette page], mais ne peuvent pas [modifier la page d'accueil](/fr/).
+
+Connectez-vous avec  `client@demo.com` + `demo`.

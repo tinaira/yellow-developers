@@ -1,0 +1,27 @@
+---
+Title: Sidebar
+Status: hidden
+---
+Tutoriels
+
+* [Comment faire un site web](how-to-make-a-website)
+* [Comment faire un blog](how-to-make-a-blog)
+* [Comment faire un wiki](how-to-make-a-wiki)
+
+Changements
+
+* [Ajouter des pages](adding-content)
+* [Ajouter des fichiers](adding-media)
+* [Ajuster le système](adjusting-system)
+
+Configurations
+
+* [Configuration de la langue](language-configuration)
+* [Configuration du serveur](server-configuration)
+* [Configuration de la sécurité](security-configuration)
+
+Personnalisations
+
+* [Personnaliser des thèmes](customising-themes)
+* [Personnaliser des templates](customising-templates)
+* [API pour les développeurs](api)

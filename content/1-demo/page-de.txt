@@ -1,9 +1,0 @@
----
-Title: Yellow ist für Menschen die Webseiten machen
-TitleNavigation: Demo
-Template: demo
-Language: de
----
-[image picture.jpg Picture rounded]
-
-Du kannst [edit - diese Seite bearbeiten]. Die Hilfe gibt dir weitere Informationen wie man kleine Webseiten, Blogs und Wikis erstellt.

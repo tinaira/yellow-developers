@@ -1,0 +1,48 @@
+---
+Title: Medien hinzufügen 
+---
+Alle Medien befinden sich im `media`-Verzeichnis. Hier speichert man Bilder und Dateien.
+
+[image screenshot-media.png Screenshot]
+
+Das `downloads`-Verzeichnis enthält Dateien zum Herunterladen. Das `images`-Verzeichnis ist zum Speichern deiner Bilder gedacht. Bei einer kleinen Webseite kannst du alle Bilder in diesem Verzeichnis ablegen. Du kannst auch weitere Verzeichnisse erstellen und Dateien organisieren so wie du willst. Das `thumbnails`-Verzeichnis enthält Miniaturbilder.  
+
+## Bilder
+
+Lass uns ausprobieren wie man Bilder verwendet. Öffne die Datei `content/1-home/page.txt` in deinem Lieblings-Texteditor und füge `[image picture.jpg]` zum Text der Seite hinzu. Die Seite zeigt jetzt die Datei `media/images/picture.jpg` an.
+
+Du kannst das [Image-Plugin](https://github.com/datenstrom/yellow-plugins/tree/master/image) benutzen um Bilder einzubinden:
+
+    [image picture.jpg]
+    [image picture.jpg Picture]
+    [image picture.jpg "Dies ist ein Beispielbild"]
+
+Bilder in unterschiedliche Stilen:
+
+    [image picture.jpg Beispiel left]
+    [image picture.jpg Beispiel centre]
+    [image picture.jpg Beispiel right]
+
+Bilder in unterschiedliche Größen:
+
+    [image picture.jpg Beispiel - 64 64]
+    [image picture.jpg Beispiel - 320 200]
+    [image picture.jpg Beispiel - 50%]
+
+## Audio
+
+Du kannst das [Soundcloud-Plugin](https://github.com/datenstrom/yellow-plugins/tree/master/soundcloud) benutzen um Audio einzubinden.
+
+    [soundcloud 101175715]
+    [soundcloud 101175715 left 200 166]
+    [soundcloud 101175715 right 200 166]
+
+## Video
+
+Du kannst das [Youtube-Plugin](https://github.com/datenstrom/yellow-plugins/tree/master/youtube) benutzen um Videos einzubinden.
+
+    [youtube fhs55HEl-Gc]
+    [youtube fhs55HEl-Gc left 200 112]
+    [youtube fhs55HEl-Gc right 200 112]
+
+[Weiter: System anpassen →](adjusting-system)

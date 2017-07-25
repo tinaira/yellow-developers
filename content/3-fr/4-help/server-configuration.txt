@@ -1,0 +1,134 @@
+---
+Title: Configuration du serveur
+---
+Comment configurer différents [serveurs web](https://news.netcraft.com/archives/category/web-server-survey/).
+
+>>> [Vous pouvez nous aider à traduire cette page.](https://github.com/datenstrom/yellow-developers/blob/master/content/3-fr/4-help/server-configuration.txt)
+
+## Apache
+
+Le fichier de configuration `.htaccess` pour le serveur web [Apache](http://httpd.apache.org):
+
+```apache
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+DirectoryIndex index.html yellow.php
+RewriteRule ^(cache|content|system)/ error [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ yellow.php [L]
+</IfModule>
+```
+
+Si votre site web ne fonctionne pas, vérifiez les étapes suivantes. Ajoutez `RewriteBase` au fichier de configuration, ceci résoudra la plupart des problèmes de serveur web. Voici un exemple pour un sous-dossier:
+
+```apache
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteBase /yellow/
+DirectoryIndex index.html yellow.php
+RewriteRule ^(cache|content|system)/ error [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ yellow.php [L]
+</IfModule>
+```
+
+Voici un exemple pour un sous-domaine:
+
+```apache
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteBase /
+DirectoryIndex index.html yellow.php
+RewriteRule ^(cache|content|system)/ error [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ yellow.php [L]
+</IfModule>
+```
+
+Si votre site web ne fonctionne toujours pas, vérifiez du côté du serveur web Apache. Si vous utilisez un serveur web maison, vous devez probablement activer le [module rewrite](http://stackoverflow.com/questions/18740419/how-to-set-allowoverride-all) et configurer `AllowOverride All` sur le serveur web. 
+
+Assurez-vous que le serveur web est accès en écriture et en lecture aux fichiers. Vous pouvez ajuster manuellement les [droits de permissions](ttp://superuser.com/questions/51838/recursive-chmod-rw-for-files-rwx-for-directories) sur les fichiers avec la commande `chmod -R a+rw *`. Il est possible également d'assigner le groupe `www-data` et `umask 002` au serveur web et aux utilisateurs.
+
+## Nginx
+
+Le fichier de configuration `nginx.conf` pour le serveur web [Nginx](https://nginx.org/):
+
+```nginx
+server {
+    listen 80;
+    server_name website.com;
+    root /var/www/website/;
+    index index.html yellow.php;
+
+    location /cache {
+        rewrite ^(.*)$ /error break;
+    }
+
+    location /content {
+        rewrite ^(.*)$ /error break;
+    }
+
+    location /system {
+        rewrite ^(.*)$ /error break;
+    }
+
+    location / {
+        if (!-e $request_filename) {
+            rewrite ^/(.*)$ /yellow.php last;
+            break;
+        }
+    }
+
+    location ~ \.php$ {
+        fastcgi_split_path_info ^(.+\.php)(/.+)$;
+        fastcgi_pass 127.0.0.1:9000;
+        fastcgi_index yellow.php;
+        include fastcgi_params;
+    }
+}
+```
+
+Si votre site web ne fonctionne pas, vérifiez `server_name` et `root`. Lorsque vous modifiez le fichier de configuration, vous devez [redémarrer](http://stackoverflow.com/questions/21292533/reload-nginx-configuration) le serveur web Nginx.
+
+Assurez-vous que le serveur web est accès en écriture et en lecture aux fichiers. Vous pouvez ajuster manuellement les [droits de permissions](http://superuser.com/questions/51838/recursive-chmod-rw-for-files-rwx-for-directories) sur les fichiers avec la commande `chmod -R a+rw *`. Il est possible également d'assigner le groupe `www-data` et `umask 002` au serveur web et aux utilisateurs.
+
+## Site web statique
+
+Datenstrom Yellow est un CMS à base de fichiers, mais aussi un générateur de site statique. Ainsi, Datenstrom Yellow propose une commande pour créer un site statique depuis le dossier d'installation. Votre site statique fonctionnera sur n'importe quel serveur web.
+
+Vous pouvez créer un site statique depuis une interface en [ligne de commande](https://github.com/datenstrom/yellow-plugins/tree/master/command).
+
+1. Lancez un terminal.
+2. Rendez-vous dans le dossier d'installation, où se trouve `yellow.php`.
+3. Tapez la commande suivante: `php yellow.php build /var/www/website`
+
+Ceci construira votre site statique dans le dossier `/var/www/website`. Placez ce dossier sur votre espace d'hébergement, et contruisez une nouvelle version lorsque c'est nécessaire. L'URL peut être défini dans les [paramètres du système](adjusting-system#paramètres-du-système), par exemple `StaticUrl: http://website/`.
+
+Comme alternative à un site statique, vous pouvez créer un cache. Cela accélère votre site web, mais vous devez mettre à jour le cache à plusieurs reprises. Voici un exemple: `php yellow.php build`. Pour effacer le cache, tapez la commande suivante: `php yellow.php clean`.
+
+## Page d'erreurs
+
+Quand un problème existe, une page d'erreur s'affiche. Quand le navigateur web accède à un fichier qui n'est pas disponible sur le serveur web, le site web affiche une page avec “File not found”. Le fichier `system/config/page-error-404.txt` permet de définir à quoi ressemblera cette page:
+
+~~~~
+---
+Title: File not found
+---
+The requested file was not found. Oh no...
+~~~~
+
+Si vous utilisez Datenstrom Yellow de façon classique, vous n'avez rien à configurer. Mais si vous créez un site site statique, il y a une étape supplémentaire. Configurez votre serveur web de sorte qu'il affiche votre page d'erreur personnalisée au lieu de la page 404 par défaut.
+
+Pour [Apache](http://httpd.apache.org) ajoutez la ligne suivante à votre fichier de configuration:
+
+    ErrorDocument 404 /404.html
+
+Pour [Nginx](https://nginx.org/) ajoutez la ligne suivante à votre fichier de configuration:
+
+    error_page 404 /404.html;
+
+[Suivant: Configuration de la sécurité →](security-configuration)

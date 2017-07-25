@@ -1,0 +1,918 @@
+---
+Title: API Deutsch
+TitleContent: API
+---
+API für Entwickler. Wir :heart: Entwickler.
+
+[toc]
+
+## Objekte
+
+Die folgenden Objekte sind vorhanden in Datenstrom Yellow:
+
+[$yellow->page](#yellow-page) gibt Zugang zur aktuellen Seite  
+[$yellow->pages](#yellow-pages) gibt Zugang zu Seiten vom Dateisystem  
+[$yellow->files](#yellow-files) gibt Zugang zu Dateien vom Dateisystem  
+[$yellow->plugins](#yellow-plugins) gibt Zugang zu Plugins  
+[$yellow->themes](#yellow-themes) gibt Zugang zu Themes  
+[$yellow->config](#yellow-config) gibt Zugang zu Einstellungen  
+[$yellow->text](#yellow-text) gibt Zugang zu Text  
+[$yellow->toolbox](#yellow-toolbox) gibt Zugang zu einer Werkzeugkiste mit Helfern  
+
+### Yellow-Page
+
+Yellow-Page gibt Zugang zur aktuellen Seite:
+
+**$yellow->page->get($key)**  
+Hole die [Metadaten](markdown-cheat-sheet#einstellungen) der Seite
+
+**$yellow->page->getHtml($key)**  
+Hole die [Metadaten](markdown-cheat-sheet#einstellungen) der Seite, HTML-kodiert  
+
+**$yellow->page->getDate($key, $dateFormat = "")**  
+Hole die [Metadaten](markdown-cheat-sheet#einstellungen) der Seite im [sprachspezifischem Format](#formate)
+
+**$yellow->page->getDateHtml($key, $dateFormat = "")**  
+Hole die [Metadaten](markdown-cheat-sheet#einstellungen) der Seite im [sprachspezifischem Format](#formate), HTML-kodiert
+
+**$yellow->page->getContent($rawFormat = false, $sizeMax = 0)**  
+Hole den Seitenhalt, HTML-kodiert oder Rohformat
+
+**$yellow->page->getParent()**  
+Hole die Elternseite der aktuellen Seite, null falls nicht vorhanden
+
+**$yellow->page->getParentTop($homeFailback = true)**  
+Hole die Hauptseite der aktuellen Seite, null falls nicht vorhanden
+
+**$yellow->page->getSiblings($showInvisible = false)**  
+Hole eine [Page-Collection](#yellow-page-collection) mit Seiten auf dem selben Level wie die aktuelle Seite 
+
+**$yellow->page->getChildren($showInvisible = false)**  
+Hole eine [Page-Collection](#yellow-page-collection) mit Kinderseiten der aktuellen Seite
+
+**$yellow->page->getFiles($showInvisible = false)**  
+Hole eine [Page-Collection](#yellow-page-collection) mit Mediendateien der aktuellen Seite
+
+**$yellow->page->getPages()**  
+Hole eine [Page-Collection](#yellow-page-collection) mit zusätzlichen Seiten für die aktuellen Seite
+
+**$yellow->page->getPage($key)**  
+Hole eine zugehörige Seite
+
+**$yellow->page->getBase($multiLanguage = false)**  
+Hole die Basis der Seite
+
+**$yellow->page->getLocation($absoluteLocation = false)**  
+Hole den Ort der Seite
+
+**$yellow->page->getUrl()**  
+Hole die URL der Seite 
+
+**$yellow->page->getExtra($name)**  
+Hole extra HTML-Daten der Seite
+
+**$yellow->page->getHeader($key)**  
+Hole den Responseheader der Seite
+
+**$yellow->page->getModified($httpFormat = false)**  
+Hole das Änderungsdatum der Seite, Unix-Zeit oder HTTP-Format
+
+**$yellow->page->getLastModified($httpFormat = false)**  
+Hole das letzte Änderungsdatum der Seite, Unix-Zeit oder HTTP-Format
+
+**$yellow->page->getStatusCode($httpFormat = false)**  
+Hole den Statuscode der Seite, Zahl oder HTTP-Format
+
+**$yellow->page->error($statusCode, $pageError = "")**  
+Antworte mit Fehlerseite
+
+**$yellow->page->clean($statusCode, location = "")**  
+Antworte mit Statuscode, ohne Seiteninhalt
+
+**$yellow->page->isAvailable()**  
+Teste ob die Seite vorhanden ist
+
+**$yellow->page->isVisible()**  
+Teste ob die Seite sichtbar ist
+
+**$yellow->page->isActive()**  
+Teste ob die Seite innerhalb der aktuellen Anfrage ist
+
+**$yellow->page->isCacheable()**  
+Teste ob die Seite cachebar ist
+
+**$yellow->page->isError()**  
+Teste ob die Seite einen Fehler hat
+
+**$yellow->page->isHeader($key)**  
+Teste ob der Responseheader existiert
+
+**$yellow->page->isExisting($key)**  
+Teste ob die [Metadaten](markdown-cheat-sheet#einstellungen) der Seite existiert  
+
+**$yellow->page->isPage($key)**  
+Teste ob die zugehörige Seite existiert
+
+Hier ist ein Beispiel-Snippet um den Seiteninhalt anzuzeigen:
+
+``` php
+<div class="content">
+<div class="main">
+<h1><?php echo $yellow->page->getHtml("titleContent") ?></h1>
+<?php echo $yellow->page->getContent() ?>
+</div>
+</div>
+```
+
+Hier ist ein Beispiel-Snippet um den Seiteninhalt und zusätzliche Metadaten anzuzeigen:
+
+``` php
+<div class="content">
+<div class="main">
+<h1><?php echo $yellow->page->getHtml("titleContent") ?></h1>
+<?php echo $yellow->page->getContent() ?>
+<p><?php echo $yellow->page->getHtml("author") ?></p>
+</div>
+</div>
+```
+
+Hier ist ein Beispiel-Snippet um den Seiteninhalt und zusätzliche Tags anzuzeigen:
+
+``` php
+<div class="content">
+<div class="main">
+<h1><?php echo $yellow->page->getHtml("titleContent") ?></h1>
+<?php echo $yellow->page->getContent() ?>
+<?php if($yellow->page->isExisting("tag")): ?>
+<p>
+<?php foreach(preg_split("/\s*,\s*/", $yellow->page->get("tag")) as $tag): ?>
+<?php if(++$tagCounter>1) echo ", "; echo htmlspecialchars($tag) ?>
+<?php endforeach ?>
+</p>
+<?php endif ?>
+</div>
+</div>
+```
+
+### Yellow-Page-Collection
+
+Yellow-Page-Collection gibt Zugang zu diesen Funktionen:
+
+**$pages->filter($key, $value, $exactMatch = true)**  
+Filtere eine Page-Collection nach Metadaten
+
+**$pages->sort($key, $ascendingOrder = true)**  
+Sortiere eine Page-Collection nach Metadaten
+
+**$pages->similar($page, $ascendingOrder = false)**  
+Sortiere eine Page-Collection nach Metadatenähnlichkeit
+
+**$pages->merge($input)**  
+Vereinige eine Page-Collection
+
+**$pages->append($page)**  
+Hänge an das Ende der Page-Collection
+
+**$pages->prepend($page)**  
+Stelle an den Anfang der Page-Collection
+
+**$pages->limit($pagesMax)**  
+Begrenze die Anzahl der Seiten in der Page-Collection
+
+**$pages->reverse()**  
+Drehe die Page-Collection um
+
+**$pages->shuffle()**  
+Mach die Page-Collection zufällig
+
+**$pages->pagination($limit, $reverse = true)**  
+Erstelle eine Pagination für die Page-Collection
+
+**$pages->getPaginationNumber()**  
+Hole die aktuelle Seitennummer in der Pagination
+
+**$pages->getPaginationCount()**  
+Hole die höchste Seitennummer in der Pagination
+
+**$pages->getPaginationLocation($absoluteLocation = true, $pageNumber = 1)**  
+Hole den Ort einer Seite in der Pagination
+
+**$pages->getPaginationPrevious($absoluteLocation = true)**  
+Hole den Ort der vorherigen Seite in der Pagination
+
+**$pages->getPaginationNext($absoluteLocation = true)**  
+Hole den Ort der nächsten Seite in der Pagination
+
+**$pages->getPagePrevious($page)**  
+Hole die vorherige Seite in der Page-Collection, null falls nicht vorhanden
+
+**$pages->getPageNext($page)**  
+Hole die nächste Seite in der Page-Collection, null falls nicht vorhanden
+
+**$pages->getFilter()**  
+Hole den aktuellen Seitenfilter
+
+**$pages->getModified($httpFormat = false)**  
+Hole das Änderungsdatum der Page-Collection, Unix-Zeit oder HTTP-Format
+
+**$pages->isPagination()**  
+Teste ob eine Pagination vorhanden ist
+
+Hier ist ein Beispiel-Snippet um drei zufällige Seiten anzuzeigen:
+
+``` php
+<?php $pages = $yellow->pages->index() ?>
+<ul>
+<?php foreach($pages->shuffle()->limit(3) as $page): ?>
+<li><?php echo $page->getHtml("title") ?></li>
+<?php endforeach ?>
+</ul>
+```
+
+Hier ist ein Beispiel-Snippet um die neusten Seiten anzuzeigen:
+
+``` php
+<?php $pages = $yellow->pages->index() ?>
+<ul>
+<?php foreach($pages->sort("modified", false) as $page): ?>
+<li><?php echo $page->getHtml("title") ?></li>
+<?php endforeach ?>
+</ul>
+```
+
+Hier ist ein Beispiel-Snippet um Entwurfseiten anzuzeigen:
+
+``` php
+<?php $pages = $yellow->pages->index(true, true) ?>
+<ul>
+<?php foreach($pages->filter("status", "draft") as $page): ?>
+<li><?php echo $page->getHtml("title") ?></li>
+<?php endforeach ?>
+</ul>
+```
+
+### Yellow-Pages
+
+Yellow-Pages gibt Zugang zu Seiten vom Dateisystem:
+
+**$yellow->pages->find($location, $absoluteLocation = false)**  
+Hole eine [Page](#yellow-page) vom Dateisystem, null falls nicht vorhanden
+
+**$yellow->pages->index($showInvisible = false, $multiLanguage = false, $levelMax = 0)**  
+Hole eine [Page-Collection](#yellow-page-collection) mit allen Seiten
+
+**$yellow->pages->top($showInvisible = false)**  
+Hole eine [Page-Collection](#yellow-page-collection) mit Hauptseiten der Navigation
+
+**$yellow->pages->path($location, $absoluteLocation = false)**  
+Hole eine [Page-Collection](#yellow-page-collection) mit Pfad in der Navigation
+
+**$yellow->pages->multi($location, $absoluteLocation = false, $showInvisible = false)**  
+Hole eine [Page-Collection](#yellow-page-collection) mit mehreren Sprachen
+
+**$yellow->pages->clean()**  
+Hole eine [Page-Collection](#yellow-page-collection) die leer ist
+
+Hier ist ein Beispiel-Snippet um alle Seiten anzuzeigen:
+
+``` php
+<?php $pages = $yellow->pages->index(true, true) ?>
+<?php $yellow->page->setLastModified($pages->getModified()) ?>
+<ul>
+<?php foreach($pages as $page): ?>
+<li><?php echo $page->getHtml("title") ?></li>
+<?php endforeach ?>
+</ul>
+```
+
+Hier ist ein Beispiel-Snippet um Seiten unterhalb einer bestimmten Orts anzuzeigen:
+
+``` php
+<?php $pages = $yellow->pages->find("/help/")->getChildren(true) ?>
+<?php $yellow->page->setLastModified($pages->getModified()) ?>
+<ul>
+<?php foreach($pages as $page): ?>
+<li><?php echo $page->getHtml("title") ?></li>
+<?php endforeach ?>
+</ul>
+```
+
+Hier ist ein Beispiel-Snippet um die Hauptseiten der Navigation anzuzeigen:
+
+``` php
+<?php $pages = $yellow->pages->top() ?>
+<?php $yellow->page->setLastModified($pages->getModified()) ?>
+<ul>
+<?php foreach($pages as $page): ?>
+<li><?php echo $page->getHtml("titleNavigation") ?></li>
+<?php endforeach ?>
+</ul>
+```
+
+### Yellow-Files
+
+Yellow-Files gibt Zugang zu Dateien vom Dateisystem:
+
+**$yellow->files->find($location, $absoluteLocation = false)**  
+Hole eine [Page](#yellow-page) mit Informationen über Mediendatei, null falls nicht vorhanden
+
+**$yellow->files->index($showInvisible = false, $multiPass = false, $levelMax = 0)**  
+Hole eine [Page-Collection](#yellow-page-collection) mit allen Mediendateien
+
+**$yellow->files->clean()**  
+Hole eine [Page-Collection](#yellow-page-collection) die leer ist
+
+Hier ist ein Beispiel-Snippet um alle Mediendateien anzuzeigen:
+
+``` php
+<?php $files = $yellow->files->index(true) ?>
+<?php $yellow->page->setLastModified($files->getModified()) ?>
+<ul>
+<?php foreach($files as $file): ?>
+<li><?php echo $file->getLocation(true) ?></li>
+<?php endforeach ?>
+</ul>
+```
+
+Hier ist ein Beispiel-Snippet um die neusten Mediendateien anzuzeigen:
+
+``` php
+<?php $files = $yellow->files->index(true)->sort("modified", false) ?>
+<?php $yellow->page->setLastModified($files->getModified()) ?>
+<ul>
+<?php foreach($files as $file): ?>
+<li><?php echo $file->getLocation(true) ?></li>
+<?php endforeach ?>
+</ul>
+```
+
+Hier ist ein Beispiel-Snippet um Mediendateien eines bestimmten Types anzuzeigen:
+
+``` php
+<?php $files = $yellow->files->index(true)->filter("type", "pdf") ?>
+<?php $yellow->page->setLastModified($files->getModified()) ?>
+<ul>
+<?php foreach($files as $file): ?>
+<li><?php echo $file->getLocation(true) ?></li>
+<?php endforeach ?>
+</ul>
+```
+
+### Yellow-Plugins
+
+Yellow-Plugins gibt Zugang zu [Plugins](/plugins/):
+
+**$yellow->plugins->get($name)**  
+Hole ein Plugin
+
+**$yellow->plugins->getData()**  
+Hole die Versionsinformationen von Plugins
+
+**$yellow->plugins->getModified($httpFormat = false)**  
+Hole das Änderungsdatum von Plugins, Unix-Zeit oder HTTP-Format
+
+**$yellow->plugins->register($name, $plugin, $version, $priority = 0)**  
+Registriere ein Plugin
+
+**$yellow->plugins->isExisting($name)**  
+Teste ob ein Plugin existiert
+
+Hier ist ein Beispiel-Snippet um Informationen über Plugins anzuzeigen:
+
+``` php
+<ul>
+<?php foreach($yellow->plugins->getData() as $key=>$value): ?>
+<li><?php echo htmlspecialchars("$key $value") ?></li>
+<?php endforeach ?>
+</ul>
+```
+
+Hier ist ein Beispiel-Snippet um zu testen ob ein Plugin existiert:
+
+``` php
+<?php if($yellow->plugins->isExisting("fontawesome")): ?>
+<a href="https://twitter.com/username"><i class="fa fa-twitter"></i></a>
+<?php else: ?>
+<?php $yellow->page->error(500, "Snippet requires 'fontawesome' plugin!") ?>
+<?php endif ?>
+```
+
+Hier ist ein Beispiel um ein Plugin zu registrieren, siehe auch [weitere Beispiel-Plugins](#yellow-beispiel-plugins): 
+
+``` php
+<?php
+class YellowExample
+{
+	const VERSION = "0.1.0";
+}
+$yellow->plugins->register("example", "YellowExample", YellowExample::VERSION);
+?>
+```
+
+### Yellow-Themes
+
+Yellow-Themes gibt Zugang zu [Themes](/themes/):
+
+**$yellow->themes->get($name)**  
+Hole ein Theme
+
+**$yellow->themes->getData()**  
+Hole die Versionsinformationen von Themes
+
+**$yellow->themes->getModified($httpFormat = false)**  
+Hole das Änderungsdatum von Themes, Unix-Zeit oder HTTP-Format
+
+**$yellow->themes->register($name, $theme, $version, $priority = 0)**  
+Registriere ein Theme
+
+**$yellow->themes->isExisting($name)**  
+Teste ob ein Theme existiert
+
+Hier ist ein Beispiel-Snippet um Informationen über Themes anzuzeigen:
+
+``` php
+<ul>
+<?php foreach($yellow->themes->getData() as $key=>$value): ?>
+<li><?php echo htmlspecialchars("$key $value") ?></li>
+<?php endforeach ?>
+</ul>
+```
+
+Hier ist ein Beispiel-Snippet um zu testen ob ein Theme existiert:
+
+``` php
+<?php if($yellow->themes->isExisting("flatsite")): ?>
+<p>Flatsite theme installed.</p>
+<?php else: ?>
+<?php $yellow->page->error(500, "Snippet requires 'flatsite' theme!") ?>
+<?php endif ?>
+```
+
+Hier ist ein Beispiel um ein Theme zu registrieren
+
+``` php
+class YellowThemeExample
+{
+	const VERSION = "0.1.0";	
+}
+$yellow->themes->register("example", "YellowThemeExample", YellowThemeExample::VERSION);
+?>
+```
+
+### Yellow-Config
+
+Yellow-Config gibt Zugang zu [Einstellungen ](adjusting-system#systemeinstellungen):
+
+**$yellow->config->get($key)**  
+Hole eine Einstellung
+
+**$yellow->config->getHtml($key)**  
+Hole eine Einstellung, HTML-kodiert
+
+**$yellow->config->getData($filterStart = "", $filterEnd = "")**  
+Hole Einstellungen
+
+**$yellow->config->getModified($httpFormat = false)**  
+Hole das Änderungsdatum von Einstellungen, Unix-Zeit oder HTTP-Format
+
+**$yellow->config->isExisting($key)**  
+Teste ob eine Einstellung existiert
+
+Hier ist ein Beispiel-Snippet um statische Webseiten-Einstellungen anzuzeigen:
+
+``` php
+<div class="config">
+<?php foreach($yellow->config->getData("static") as $key=>$value): ?>
+<?php echo htmlspecialchars("$key: $value") ?><br />
+<?php endforeach ?>
+</div>
+```
+
+Hier ist ein Beispiel-Snippet um Webmaster-Einstellungen anzuzeigen:
+
+``` php
+<div class="config">
+<?php $author = $yellow->config->get("author") ?>
+<?php $email = $yellow->config->get("email") ?>
+<?php echo htmlspecialchars("$author - $email") ?>
+</div>
+```
+
+Hier ist ein Beispiel-Snippet um zu testen ob der sichere Modus aktiviert ist:
+
+``` php
+<div class="config">
+<?php $parserSafeMode = $yellow->config->get("parserSafeMode") ?>
+Safe mode is <?php echo htmlspecialchars($parserSafeMode ? "on" : "off") ?>.
+</div>
+```
+
+### Yellow-Text
+
+Yellow-Text gibt Zugang zu [Text](language-configuration#sprachen):
+
+**$yellow->text->get($key)**  
+Hole ein Textstring
+
+**$yellow->text->getHtml($key)**  
+Hole ein Textstring, HTML-kodiert
+
+**$yellow->text->getText($key, $language )**  
+Hole ein Textstring für eine bestimmte Sprache
+
+**$yellow->text->getTextHtml($key, $language )**  
+Hole ein Textstring für eine bestimmte Sprache, HTML-kodiert
+
+**$yellow->text->getData($filterStart = "", $language = "")**  
+Hole Textstrings
+
+**$yellow->text->getDateFormatted($timestamp, $format)**  
+Hole ein menschenlesbares Datum, [maßgeschneidertes Format](http://php.net/manual/de/function.date.php)  
+
+**$yellow->text->getLanguages()**  
+Hole Sprachen
+
+**$yellow->text->getModified($httpFormat = false)**  
+Hole das Änderungsdatum von Text, Unix-Zeit oder HTTP-Format
+
+**$yellow->text->isLanguage($language)**  
+Teste ob eine Sprache existiert
+
+**$yellow->text->isExisting($key, $language = "")**  
+Teste ob ein Textstring existiert
+
+Hier ist ein Beispiel-Snippet um Kontakt-Textstrings anzuzeigen:
+
+``` php
+<div class="text">
+<?php foreach($yellow->text->getData("contact") as $key=>$value): ?>
+<?php echo htmlspecialchars("$key: $value") ?><br />
+<?php endforeach ?>
+</div>
+```
+
+Hier ist ein Beispiel-Snippet um zu testen ob eine Sprache existiert:
+
+``` php
+<div class="text">
+<?php $swedish = $yellow->text->isLanguage("sv") ?>
+Swedish language <?php echo htmlspecialchars($swedish ? "" : "not") ?> found.
+</div>
+```
+
+Hier ist ein Beispiel-Snippet um Sprachen und Übersetzer anzuzeigen:
+
+``` php
+<div class="text">
+<?php foreach($yellow->text->getLanguages() as $language): ?>
+<?php echo $yellow->text->getTextHtml("languageDescription", $language) ?> - 
+<?php echo $yellow->text->getTextHtml("languageTranslator", $language) ?><br />
+<?php endforeach ?>
+</div>
+```
+
+### Yellow-Toolbox
+
+Yellow-Toolbox gibt Zugang zu einer Werkzeugkiste mit Helfern:
+
+**$yellow->toolbox->getLocation($filterStrict = true)**  
+Hole den Ort aktuellen HTTP-Anfrage
+
+**$yellow->toolbox->getLocationArgs()**  
+Hole die Ortargumente der aktuellen HTTP-Anfrage
+
+**$yellow->toolbox->isLocationArgs($location = "")**  
+Teste ob es Ortargumente gibt in der aktuellen HTTP-Anfrage
+
+**$yellow->toolbox->normaliseArgs($text, $appendSlash = true, $filterStrict = true)**  
+Normalisiere Ortargumente
+
+**$yellow->toolbox->getDirectoryEntries($path, $regex = "/.*/", $sort = true, $directories = true, $includePath = true)**  
+Hole Dateien und Verzeichnisse
+
+**$yellow->toolbox->readFile($fileName, $sizeMax = 0)**  
+Lese eine Datei, leerer String falls nicht vorhanden
+
+**$yellow->toolbox->createFile($fileName, $fileData, $mkdir = false)**  
+Erstelle eine Datei
+
+**$yellow->toolbox->copyFile($fileNameSource, $fileNameDest, $mkdir = false)**  
+Kopiere eine Datei  
+
+**$yellow->toolbox->renameFile($fileNameSource, $fileNameDest, $mkdir = false)**  
+Benenne eine Datei um
+
+**$yellow->toolbox->deleteFile($fileName, $pathTrash = "")**  
+Lösche eine Datei
+
+**$yellow->toolbox->deleteDirectory($path, $pathTrash = "")**  
+Lösche ein Verzeichnis  
+
+**$yellow->toolbox->modifyFile($fileName, $modified)**  
+Setze das Änderungsdatum der Datei, Unix-Zeit
+
+**$yellow->toolbox->getFileModified($fileName)**  
+Hole das Änderungsdatum der Datei, Unix-Zeit
+
+**$yellow->toolbox->getFileExtension($fileName)**  
+Hole die Dateiendung
+
+**$yellow->toolbox->getTextLines($text)**  
+Hole die Zeilen eines Textstrings, einschließlich Zeilenumbruch  
+
+**$yellow->toolbox->getTextArgs($text, $optional = "-")**  
+Hole die Argumente eines Textstrings, durch Leerzeichen getrennt  
+
+Hier ist ein Beispiel-Snippet um Ort und Argumente der HTTP-Anfrage anzuzeigen:
+
+``` php
+<div class="toolbox">
+<?php echo htmlspecialchars($yellow->toolbox->getLocation()) ?><br />
+<?php foreach($_REQUEST as $key=>$value): ?>
+<?php echo htmlspecialchars("$key: $value") ?><br />
+<?php endforeach ?>
+</div>
+```
+
+Hier ist ein Beispiel-Snippet um Dateien in einem Verzeichnis anzuzeigen:
+
+``` php
+<div class="toolbox">
+<?php $path = $yellow->config->get("configDir") ?>
+<?php foreach($yellow->toolbox->getDirectoryEntries($path, "/.*/", true, false) as $entry): ?>
+<?php echo htmlspecialchars($entry) ?><br />
+<?php endforeach ?>
+</div>
+```
+
+Hier ist ein Beispiel-Snippet um Textzeilen von Datei zu lesen:
+
+``` php
+<div class="toolbox">
+<?php $fileName = $yellow->config->get("configDir").$yellow->config->get("robotsFile") ?>
+<?php $fileData = $this->yellow->toolbox->readFile($fileName) ?>
+<?php foreach($this->yellow->toolbox->getTextLines($fileData) as $line): ?>
+<?php echo htmlspecialchars($line) ?><br />
+<?php endforeach ?>
+</div>
+```
+
+## Ereignisse
+
+Die folgenden Ereignisse sind verfügbar:
+
+**function onLoad($yellow)**  
+Behandle die Initialisierung
+
+**function onStartup($update)**  
+Behandle das Hochfahren
+
+**function onRequest($scheme, $address, $base, $location, $fileName)**  
+Behandle eine Anfrage
+
+**function onParseMeta($page)**  
+Behandle das Parsen von Metadaten einer Seite
+
+**function onParseContentRaw($page, $text)**  
+Behandle das Parsen des Seiteninhaltes im Rohformat
+
+**function onParseContentBlock($page, $name, $text, $shortcut)**  
+Behandle das Parsen des Seiteninhaltes eines Teilblockes
+
+**function onParseContentText($page, $text)**  
+Behandle das Parsen des Seiteninhaltes
+
+**function onParsePage()**  
+Behandle das Parsen einer Seite
+
+**function onExtra($name)**  
+Behandle das Parsen von extra HTML-Daten einer Seite
+
+**function onEditUserRestrictions($email, $location, $fileName, $users)**  
+Behandle Benutzerbeschränkungen
+
+**function onEditUserAccount($email, $password, $action, $users)**  
+Behandle Benutzerkontoänderungen
+
+**function onEditContentFile($page, $text)**  
+Behandle das Bearbeiten der Textdatei 
+
+**function onCommand($args)**  
+Behandle Befehle
+
+**function onCommandHelp()**  
+Behandle Hilfe für Befehle
+
+**function onShutdown()**  
+Behandle das Runterfahren
+
+Hier ist der normale Ereignisablauf:
+
+```  {#yellow-ereignisablauf}
+onLoad -----▶ onStartup -----▶ onRequest
+                  |                |
+                  |                |---------------------
+                  |                |                    |
+                  ▼                ▼                    ▼
+              onCommand        onParseMeta          onEditUserRestrictions
+              onCommandHelp    onParseContentRaw    onEditUserAccount
+                  |            onParseContentBlock  onEditContentFile
+                  |            onParseContentText       |
+                  |            onParsePage              |
+                  |            onExtra                  |
+                  ▼                |                    |
+exit ◀------- onShutDown ◀-------------------------------
+```
+
+Wird eine Seite angezeigt, dann werden die Plugins geladen und es wird `onLoad` aufgerufen. Sobald alle Plugins geladen sind wird `onStartup` aufgerufen. Danach informiert der Core mit `onRequest` dass es eine Anfrage gibt. Dann können Seiten mit verschiedenen `onParse`-Events analysiert werden. Sollte ein Fehler auftreten, wird eine Fehlerseite erzeugt. Zum Schluss wird die Seite ausgegeben und es wird `onShutdown` aufgerufen.
+
+Hier ist ein Beispiel-Plugin um HTML mit der Abkürzung `[example]` zu erzeugen:
+
+``` php {#yellow-beispiel-plugins}
+<?php
+class YellowExample
+{
+	const VERSION = "0.1.1";
+	var $yellow;
+	
+	// Handle initialisation
+	function onLoad($yellow)
+	{
+		$this->yellow = $yellow;
+	}
+
+	// Handle page content parsing of custom block
+	function onParseContentBlock($page, $name, $text, $shortcut)
+	{
+		$output = null;
+		if($name=="example" && $shortcut)
+		{
+			$output = "<div class=\"".htmlspecialchars($name)."\">";
+			$output .= "Add more HTML code here";
+			$output .= "</div>";
+		}
+		return $output;
+	}
+}
+
+$yellow->plugins->register("example", "YellowExample", YellowExample::VERSION);
+?>
+```
+
+Hier ist ein Beispiel-Plugin um die Dateien `example.css` und `example.js` einzubinden:
+
+``` php
+<?php
+class YellowExample
+{
+	const VERSION = "0.1.2";
+	var $yellow;
+	
+	// Handle initialisation
+	function onLoad($yellow)
+	{
+		$this->yellow = $yellow;
+	}
+
+	// Handle page extra HTML data
+	function onExtra($name)
+	{
+		$output = null;
+		if($name=="header")
+		{
+			$pluginLocation = $this->yellow->config->get("serverBase").
+			$pluginLocation .= $this->yellow->config->get("pluginLocation");
+			$output = "<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"{$pluginLocation}example.css\" />\n";
+			$output .= "<script type=\"text/javascript\" src=\"{$pluginLocation}example.js\"></script>\n";
+		}
+		return $output;
+	}
+}
+
+$yellow->plugins->register("example", "YellowExample", YellowExample::VERSION);
+?>
+```
+
+Hier ist ein Beispiel-Plugin um das Schreibrecht für bestimmte Benutzer zu beschränken:
+
+``` php
+<?php
+class YellowExample
+{
+	const VERSION = "0.1.3";
+	var $yellow;
+	
+	// Handle initialisation
+	function onLoad($yellow)
+	{
+		$this->yellow = $yellow;
+	}
+
+	// Handle user restrictions
+	function onEditUserRestrictions($email, $location, $fileName, $users)
+	{
+		return $users->getHome($email)=="/guests/";
+	}
+}
+$yellow->plugins->register("example", "YellowExample", YellowExample::VERSION);
+?>
+```
+
+## Formate
+
+Die folgenden Datumsformate sind vorhanden:
+
+`YYYY-MM-DD` = Datum beginnend mit dem Jahr, z.B. `2013-04-07`  
+`YYYY-MM-DD HH:MM:SS` = Datum und Uhrzeit z.B. `2013-04-07 11:30:00`  
+
+Wird ein Datum auf einer Seite angezeigt wird es in das sprachspezifisches Format konvertiert: 
+
+`dateFormatShort` = kurzes Datum, z.B. `April 2013`  
+`dateFormatMedium` = mittleres Datum, z.B. `07.04.2013`   
+`dateFormatLong` = langes Datum, z.B. `07.04.2013 11:30`   
+
+Wird eine Zeit auf einer Seite angezeigt wird sie in das sprachspezifisches Format konvertiert: 
+
+`timeFormatShort` = kurze Zeit, z.B. `11:30`  
+`timeFormatMedium` = mittlere Zeit, z.B. `11:30:01`   
+`timeFormatLong` = lange Zeit, z.B. `11:30:01 GMT+1`  
+
+Wird Text auf einer Seite ausgegeben kann man diese Kodierungs-Funktionen benutzen:
+
+`htmlspecialchars($string)` = kodiere Textstring ins HTML-Format  
+`rawurlencode($string)` = kodiere URL, z.B. Hyperlink-Argumente  
+`strencode($string)` = kodiere String, z.B. JavaScript-Argumente  
+
+Hier ist ein Beispiel-Snippet um HTML-Argumente zu kodieren:
+
+``` php
+<?php list($name, $class) = $yellow->getSnippetArgs() ?>
+<?php if(empty($class)) $class = "regular" ?>
+<img src="https://unsplash.it/210/140/?random" class="<?php echo htmlspecialchars($class) ?>" />
+```
+
+Hier ist ein Beispiel-Snippet um Hyperlink-Argumente zu kodieren:
+
+``` php
+<?php list($name, $id) = $yellow->getSnippetArgs() ?>
+<?php if(empty($id)) $id = "821" ?>
+<img src="https://unsplash.it/210/140/?image=<?php echo rawurlencode($id) ?>" />
+```
+
+Hier ist ein Beispiel-Snippet um JavaScript-Argumente zu kodieren:
+
+``` php
+<?php list($name, $message) = $yellow->getSnippetArgs() ?>
+<?php if(empty($message)) $message = "Hello world" ?>
+<script type="text/javascript">
+console.log("<?php echo strencode($message) ?>");
+</script>
+```
+
+## Fehlersuche
+
+Öffne `system/plugins/core.php`, ändere die erste Zeile zu `<?php define("DEBUG", 1);`  
+
+```
+YellowCore::sendPage Content-Type: text/html; charset=UTF-8
+YellowCore::sendPage Page-Modified: Fri, 30 Jan 2015 09:30:12 GMT
+YellowCore::sendPage Last-Modified: Mon, 02 Feb 2015 13:19:03 GMT
+YellowCore::sendPage theme:flatsite template:blogpages parser:markdown
+YellowCore::processRequest file:content/2-plugins/1-blog-plugin/page.txt
+YellowCore::request status:200 handler:core time:19 ms
+```
+
+Dateisysteminformationen durch Erhöhen des Debuglevels zu `<?php define("DEBUG", 2);`
+```
+Datenstrom Yellow 0.7.1, PHP 5.6.30, Apache/2.4.25 Darwin
+YellowConfig::load file:system/config/config.ini
+YellowText::load file:system/plugins/language-de.txt
+YellowText::load file:system/plugins/language-en.txt
+YellowText::load file:system/plugins/language-fr.txt
+YellowUsers::load file:system/config/user.ini
+YellowText::load file:system/config/text.ini
+```
+
+Maximum Informationen durch Erhöhen des Debuglevels zu `<?php define("DEBUG", 3);`
+```
+Datenstrom Yellow 0.7.1, PHP 5.6.30, Apache/2.4.25 Darwin
+YellowConfig::load file:system/config/config.ini
+YellowConfig::load Sitename:Datenstrom developers
+YellowConfig::load Author:Datenstrom
+YellowConfig::load Email:webmaster
+YellowConfig::load Language:en
+YellowConfig::load Timezone:Europe/Stockholm
+YellowConfig::load Theme:flatsite
+```
+
+Wir machen [automatische Tests und Codeanalyse](/de/tests/).
+
+## Tipps und Tricks
+
+Einige Tipps für Entwickler:
+
+1. [Installiere das Entwickler-Kit](https://github.com/datenstrom/yellow-developers). Das Entwickler-Kit für Datenstrom Yellow bietet Plugins, Themes und Beispiele. Du kannst ausprobieren wie man kleine Webseite, Blogs und Wikis macht. Es ist eine grossartige Art um loszulegen. 
+
+2. [Lerne die Web-Grundlagen](https://www.w3schools.com). Mach dich vertraut mit HTML, CSS und JavaScript. Das sind die wichtigsten Dinge die man wissen muss um Webseiten zu erstellen. Du brauchst keine aufwendigen Frameworks oder Bibliotheken erlernen.
+
+3. [Stelle deinen Code auf GitHub](https://github.com/datenstrom/yellow/issues?q=label%3Anews%20). Erstelle ein Repository für jedes neue Plugin/Theme. Der Name deines Repository sollte `yellow-plugin-xyz` or `yellow-theme-xyz` sein. Dein Code muss nicht perfekt sein, aber er sollte im Entwickler-Kit funktionieren.

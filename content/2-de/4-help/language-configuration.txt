@@ -1,0 +1,58 @@
+---
+Title: Spracheinstellungen
+---
+Wie man verschiedene Sprachen konfiguriert.
+
+## Sprachen
+
+Die Installation kommt mit drei Sprachen und es gibt weitere [Sprachen](https://github.com/datenstrom/yellow-plugins/tree/master/language) zum Herunterladen. Die Standardsprache wird in den [Systemeinstellungen](adjusting-system#systemeinstellungen) festgelegt. Eine andere Sprache lässt sich in den [Einstellungen](markdown-cheat-sheet#einstellungen) ganz oben auf jeder Seite festlegen, zum Beispiel `Language: en`. 
+
+## Einsprachen-Modus
+
+Falls man einzelne Webseiten übersetzen will, benutzt man den Einsprachen-Modus. Um eine Seite zu übersetzen, kopierst und speicherst du sie unter einem neuen Namen. Lege die Sprache ganz oben auf jeder Seite fest, damit nicht die Standardsprache verwendet wird.
+
+Hier ist eine Englische Seite:
+
+```
+---
+Title: About us
+Language: en
+---
+Birds of a feather flock together.
+```
+
+Eine Deutsche Seite:
+
+```
+---
+Title: Über uns
+Language: de
+---
+Wo zusammenwächst, was zusammen gehört.
+```
+
+Eine Französische Seite:
+
+```
+---
+Title: À propos de nous
+Language: fr
+---
+Les oiseaux de même plumage volent toujours ensemble.
+```
+
+## Mehrsprachen-Modus
+
+Falls man eine komplette Webseite übersetzen will, benutzt man den Mehrsprachen-Modus. Öffne die Datei `system/config/config.ini` und ändere `MultiLanguageMode: 1`. Gehe ins `content`-Verzeichnis und erstelle für jede Sprache ein eigenes Verzeichnis. Hier ist ein Beispiel:
+
+[image screenshot-language1.png Screenshot]
+
+Der erste Screenshot zeigt die Verzeichnisse `1-en`, `2-de` und `3-fr`. Das erzeugt die URLs `http://website/` `http://website/de/` `http://website/fr/` für Englisch, Deutsch und Französisch. Hier ist noch ein Beispiel:
+
+[image screenshot-language2.png Screenshot]
+
+Der zweite Screenshot zeigt die Verzeichnisse `1-en`, `2-de`, `3-fr` und `default`. Das erzeugt die URLs `http://website/en/` `http://website/de/` `http://website/fr/` und die Startseite `http://website/` welche automatisch die Sprache der Besucher ermittelt. 
+
+Um eine Sprachauswahl anzuzeigen, kannst du eine Seite erstellen welche die vorhandenen Sprachen auflistet. Das gibt den Besuchern die Möglichkeit jede Sprache auszuwählen. Einen Link kann man irgendwo in die Webseite einbauen, beispielsweise in die [Fußzeile](customising-templates#fußzeile-anpassen).
+
+[Weiter: Servereinstellungen →](server-configuration)

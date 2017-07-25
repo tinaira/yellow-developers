@@ -1,0 +1,8 @@
+---
+Title: Yellow is for people who make websites
+TitleNavigation: Demo
+Template: demo
+---
+[image picture.jpg Example rounded]
+
+You can [edit this page]. The help gives you more information about how to create small web pages, blogs and wikis.

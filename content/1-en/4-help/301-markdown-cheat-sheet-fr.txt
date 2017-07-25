@@ -1,0 +1,6 @@
+---
+Title: Markdown
+Status: hidden
+Redirect: /fr/markdown-cheat-sheet
+---
+This page tests redirects to [/fr/markdown-cheat-sheet](/fr/markdown-cheat-sheet).
