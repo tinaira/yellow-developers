@@ -5,7 +5,7 @@
 
 class YellowTraffic
 {
-	const VERSION = "0.7.1";
+	const VERSION = "0.7.2";
 	var $yellow;			//access to API
 	var $days;				//detected days
 	var $views;				//detected views
@@ -219,7 +219,7 @@ class YellowTraffic
 	// Return search URL, if available
 	function getSearchUrl($scheme, $address, $base, $location, $locationSearch)
 	{
-		$locationSearch = $base.$locationSearch."query".$this->yellow->toolbox->getLocationArgsSeparator();
+		$locationSearch = $base."(.*)".$locationSearch."query".$this->yellow->toolbox->getLocationArgsSeparator();
 		$searchUrl = preg_match("#^$locationSearch([^/]+)/$#", $location) ? ("$scheme://$address".strtoloweru($location)) : "-";
 		return strreplaceu(array("%", "\x1c", "\x1d", "\x1e", "\x20"), array("%25", "%1C", "%1D", "%1E", "%20"), $searchUrl);
 	}
