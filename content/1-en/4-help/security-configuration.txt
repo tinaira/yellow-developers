@@ -25,6 +25,6 @@ You can [test user restrictions](/tests/user-restrictions).
 
 Check which features are used on your web server. Delete [plugins](/plugins/) that are no longer needed from the `system/plugins` folder. As a rule of thumb, the fewer software is installed, the less vulnerable the website is for attacks.
 
-The [core plugin](https://github.com/datenstrom/yellow-plugins/tree/master/core) und [update plugin](https://github.com/datenstrom/yellow-plugins/tree/master/update) should never be deleted.
+The [core plugin](https://github.com/datenstrom/yellow-plugins/tree/master/core) and [update plugin](https://github.com/datenstrom/yellow-plugins/tree/master/update) should never be deleted.
 
 [Next: Customising themes →](customising-themes)

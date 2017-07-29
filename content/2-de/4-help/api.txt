@@ -29,11 +29,17 @@ Hole die [Metadaten](markdown-cheat-sheet#einstellungen) der Seite
 **$yellow->page->getHtml($key)**  
 Hole die [Metadaten](markdown-cheat-sheet#einstellungen) der Seite, HTML-kodiert  
 
-**$yellow->page->getDate($key, $dateFormat = "")**  
-Hole die [Metadaten](markdown-cheat-sheet#einstellungen) der Seite im [sprachspezifischem Format](#formate)
+**$yellow->page->getDate($key, $format = "")**  
+Hole die [Metadaten](markdown-cheat-sheet#einstellungen) der Seite als [sprachspezifisches Datum](#formate)
 
-**$yellow->page->getDateHtml($key, $dateFormat = "")**  
-Hole die [Metadaten](markdown-cheat-sheet#einstellungen) der Seite im [sprachspezifischem Format](#formate), HTML-kodiert
+**$yellow->page->getDateHtml($key, $format = "")**  
+Hole die [Metadaten](markdown-cheat-sheet#einstellungen) der Seite als [sprachspezifisches Datum](#formate), HTML-kodiert
+
+**$yellow->page->getDateFormatted($key, $format)**  
+Hole die [Metadaten](markdown-cheat-sheet#einstellungen) der Seite als [maßgeschneidertes Datum](http://php.net/manual/de/function.date.php)
+
+**$yellow->page->getDateFormattedHtml($key, $format)**  
+Hole die [Metadaten](markdown-cheat-sheet#einstellungen) der Seite als [maßgeschneidertes Datum](http://php.net/manual/de/function.date.php), HTML-kodiert
 
 **$yellow->page->getContent($rawFormat = false, $sizeMax = 0)**  
 Hole den Seitenhalt, HTML-kodiert oder Rohformat
@@ -526,9 +532,6 @@ Hole ein Textstring für eine bestimmte Sprache, HTML-kodiert
 **$yellow->text->getData($filterStart = "", $language = "")**  
 Hole Textstrings
 
-**$yellow->text->getDateFormatted($timestamp, $format)**  
-Hole ein menschenlesbares Datum, [maßgeschneidertes Format](http://php.net/manual/de/function.date.php)  
-
 **$yellow->text->getLanguages()**  
 Hole Sprachen
 
@@ -825,19 +828,19 @@ Die folgenden Datumsformate sind vorhanden:
 `YYYY-MM-DD` = Datum beginnend mit dem Jahr, z.B. `2013-04-07`  
 `YYYY-MM-DD HH:MM:SS` = Datum und Uhrzeit z.B. `2013-04-07 11:30:00`  
 
-Wird ein Datum auf einer Seite angezeigt wird es in das sprachspezifisches Format konvertiert: 
+Wird ein Datum auf einer [Page](#yellow-page) angezeigt wird es in das sprachspezifisches Datum konvertiert: 
 
 `dateFormatShort` = kurzes Datum, z.B. `April 2013`  
 `dateFormatMedium` = mittleres Datum, z.B. `07.04.2013`   
 `dateFormatLong` = langes Datum, z.B. `07.04.2013 11:30`   
 
-Wird eine Zeit auf einer Seite angezeigt wird sie in das sprachspezifisches Format konvertiert: 
+Wird eine Zeit auf einer [Page](#yellow-page) angezeigt wird sie in die sprachspezifische Zeit konvertiert: 
 
 `timeFormatShort` = kurze Zeit, z.B. `11:30`  
 `timeFormatMedium` = mittlere Zeit, z.B. `11:30:01`   
 `timeFormatLong` = lange Zeit, z.B. `11:30:01 GMT+1`  
 
-Wird Text auf einer Seite ausgegeben kann man diese Kodierungs-Funktionen benutzen:
+Wird Text ausgegeben kann man diese Kodierungs-Funktionen benutzen:
 
 `htmlspecialchars($string)` = kodiere Textstring ins HTML-Format  
 `rawurlencode($string)` = kodiere URL, z.B. Hyperlink-Argumente  
@@ -878,7 +881,7 @@ YellowCore::sendPage Content-Type: text/html; charset=UTF-8
 YellowCore::sendPage Page-Modified: Fri, 30 Jan 2015 09:30:12 GMT
 YellowCore::sendPage Last-Modified: Mon, 02 Feb 2015 13:19:03 GMT
 YellowCore::sendPage theme:flatsite template:blogpages parser:markdown
-YellowCore::processRequest file:content/2-plugins/1-blog-plugin/page.txt
+YellowCore::processRequest file:content/2-plugins/1-blog/page.txt
 YellowCore::request status:200 handler:core time:19 ms
 ```
 
