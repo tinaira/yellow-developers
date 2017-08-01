@@ -60,7 +60,7 @@ Ein Bild hinzufügen, alternatives Format:
 `[youtube fhs55HEl-Gc]` = [Youtube-Video](https://github.com/datenstrom/yellow-plugins/tree/master/youtube) einbinden  
 `[vimeo 13387502]` = [Vimeo-Video](https://github.com/datenstrom/yellow-plugins/tree/master/vimeo) einbinden  
 `[soundcloud 101175715]` = [Soundcloud-Audio](https://github.com/datenstrom/yellow-plugins/tree/master/soundcloud) einbinden  
-`[slideshare 37321279]` = [Slideshare-Präsentation](https://github.com/datenstrom/yellow-plugins/tree/master/slideshare) einbinden  
+`[twitter datenstromse]` = [Twitter-Nachrichten](https://github.com/datenstrom/yellow-plugins/tree/master/twitter) einbinden  
 `[googlecalendar de.german#holiday]` = [Google-Kalender](https://github.com/datenstrom/yellow-plugins/tree/master/googlecalendar) einbinden  
 `[googlemaps Stockholm]` = [Google-Maps](https://github.com/datenstrom/yellow-plugins/tree/master/googlemaps) einbinden  
 `[blogrecent /blog/]` = [neuste Blogseiten](https://github.com/datenstrom/yellow-plugins/tree/master/blog#how-to-configure-a-blog) anzeigen  

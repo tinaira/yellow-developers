@@ -60,7 +60,7 @@ Adding an image, alternative format:
 `[youtube fhs55HEl-Gc]` = embed [Youtube video](https://github.com/datenstrom/yellow-plugins/tree/master/youtube)  
 `[vimeo 13387502]` = embed [Vimeo video](https://github.com/datenstrom/yellow-plugins/tree/master/vimeo)  
 `[soundcloud 101175715]` = embed [Soundcloud audio](https://github.com/datenstrom/yellow-plugins/tree/master/soundcloud)  
-`[slideshare 37321279]` = embed [Slideshare presentation](https://github.com/datenstrom/yellow-plugins/tree/master/slideshare)  
+`[twitter datenstromse]` = embed [Twitter messages](https://github.com/datenstrom/yellow-plugins/tree/master/twitter)  
 `[googlecalendar en.swedish#holiday]` = embed [Google calendar](https://github.com/datenstrom/yellow-plugins/tree/master/googlecalendar)  
 `[googlemaps Stockholm]` = embed [Google maps](https://github.com/datenstrom/yellow-plugins/tree/master/googlemaps)  
 `[blogrecent /blog/]` = show [recent blog pages](https://github.com/datenstrom/yellow-plugins/tree/master/blog#how-to-configure-a-blog)  

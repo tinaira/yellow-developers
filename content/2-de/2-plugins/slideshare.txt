@@ -1,9 +1,0 @@
----
-Title: Slideshare
-Description: Slideshare-Präsentation einbinden
-Image: slideshare-de.png
----
-Slideshare-Präsentation einbinden.
-[Plugin installieren](https://github.com/datenstrom/yellow-plugins/tree/master/slideshare).
-
-[slideshare 37321279]
