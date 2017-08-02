@@ -37,7 +37,7 @@ Créer des citations:
 Créer des liens:
 
     [Lien vers une page](/fr/help/how-to-make-a-website)  
-    [Lien vers un site](https://datenstrom.se)  
+    [Lien vers un site](https://datenstrom.se/fr/)  
     http://commonmark.org
 
 Ajouter des images:
@@ -51,6 +51,55 @@ Ajouter des images, autre moyen:
     [image picture.jpg]
     [image picture.jpg Picture]
     [image picture.jpg "Ceci est un exemple d'image"]
+
+Ajouter d'un paragraphe:
+
+    Voici le premier paragraphe. Le texte peut s'étendre sur plusieurs lignes
+    et peut être séparé par une ligne vierge du paragraphe suivant.
+    
+    Voici le deuxième paragraphe.
+
+Ajout d'une saut de ligne:
+
+    Première ligne⋅⋅
+    Deuxième ligne⋅⋅
+    Les espaces à la fin de la ligne sont affichés avec des points (⋅)
+
+## Extras
+
+Créer des tables:
+
+    | Café       | Lait | Force  |
+    |------------|------|--------|
+    | Espresso   | non  | forte  |
+    | Macchiato  | oui  | moyen  |
+    | Cappuccino | oui  | faible |
+
+Créer des notes de bas de page:
+
+    Texte avec une note de bas de page[^1] et quelques autres notes de bas de page.[^2][^3]
+    
+    [^1]: Voici la première note de bas de page
+    [^2]: Voici la deuxième note de bas de page
+    [^3]: Voici la troisième note de bas de page
+
+Formatage du code source, [avec ou sans highlight](https://github.com/datenstrom/yellow-plugins/tree/master/highlight):
+
+    ```
+    var ready = function() 
+    {
+        console.log("Hello world");
+        // Add more JavaScript code here
+    }
+    ```
+
+En utilisant HTML, [voir configuration de la sécurité](security-configuration#mode-de-sécurité):
+
+    <div class="custom">
+    <strong>Texte avec HTML</strong> peut être utilisé en option.
+    <a href="https://datenstrom.se/fr/">Lien vers un site</a>.
+    <a href="https://developers.datenstrom.se/fr/help/markdown-cheat-sheet" target="_blank">Markdown</a>.
+    </div>
 
 ## Raccourcis
 

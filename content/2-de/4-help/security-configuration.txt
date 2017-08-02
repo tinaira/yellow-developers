@@ -11,7 +11,7 @@ Du brauchst einen Webserver mit TLS und gültigem Zertifikat.
 
 ## Sicherer Modus
 
-Falls viele Person deine Webseite bearbeiten, aktiviere den sicheren Modus. Öffne die Datei `system/config/config.ini` und ändere `ParserSafeMode: 1`. Benutzer dürfen dann nur noch [Markdown](markdown-cheat-sheet) im Text verwenden und die Webseite wird vor Unfug geschützt.
+Falls viele Person deine Webseite bearbeiten, aktiviere den sicheren Modus. Öffne die Datei `system/config/config.ini` und ändere `ParserSafeMode: 1`. Benutzer dürfen dann nur [Markdown](markdown-cheat-sheet) benutzen, aber kein HTML und JavaScript. Die Webseite wird vor Unfug geschützt.
 
 Du kannst den [sicheren Modus testen](/de/tests/safe-mode).
 

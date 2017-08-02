@@ -37,7 +37,7 @@ Zitate erstellen:
 Links erstellen:
 
     [Link zu Seite](/de/help/how-to-make-a-website)  
-    [Link zu Webseite](https://datenstrom.se)  
+    [Link zu Webseite](https://datenstrom.se/de/)  
     http://commonmark.org
 
 Ein Bild hinzufügen:
@@ -51,6 +51,56 @@ Ein Bild hinzufügen, alternatives Format:
     [image picture.jpg]
     [image picture.jpg Picture]
     [image picture.jpg "Dies ist ein Beispielbild"]
+
+Einen Absatz hinzufügen:
+
+    Hier ist der erste Absatz. Der Text kann über mehrere Zeilen gehen
+    und kann durch eine Leerzeile vom nächsten Absatz getrennt werden.
+
+    Hier ist der zweite Absatz.
+
+
+Einen Zeilenumbruch hinzufügen:
+
+    Erste Zeile⋅⋅
+    Zweite Zeile⋅⋅
+    Leerzeichen am Zeilenende sind dargestellt durch Punkte (⋅)
+
+## Extras
+
+Tabellen erstellen:
+
+    | Kaffee     | Milch | Stärke  |
+    |------------|-------|---------|
+    | Espresso   | nein  | stark   |
+    | Macchiato  | ja    | mittel  |
+    | Cappuccino | ja    | schwach |
+
+Fußnoten erstellen:
+
+    Text mit einer Fußnote[^1] und noch weiteren Fußnoten.[^2][^3]
+    
+    [^1]: Hier ist die erste Fußnote
+    [^2]: Hier ist die zweite Fußnote
+    [^3]: Hier ist die dritte Fußnote
+
+Sourcecode formatieren, [mit oder ohne Highlight](https://github.com/datenstrom/yellow-plugins/tree/master/highlight):
+
+    ```
+    var ready = function() 
+    {
+        console.log("Hello world");
+        // Add more JavaScript code here
+    }
+    ```
+
+HTML benutzen, [siehe sicherer Modus](security-configuration#sicherer-modus):
+
+    <div class="custom">
+    <strong>Text mit HTML</strong> kann wahlweise benutzt werden.
+    <a href="https://datenstrom.se/de/">Link zu Webseite</a>.
+    <a href="https://developers.datenstrom.se/de/help/markdown-cheat-sheet" target="_blank">Markdown</a>.
+    </div>
 
 ## Abkürzungen
 

@@ -11,7 +11,7 @@ You need a web server with TLS and valid certificate.
 
 ## Safe mode
 
-If many people edit your website, enable the safe mode. Open file `system/config/config.ini` and change `ParserSafeMode: 1`. Users can only use [Markdown](markdown-cheat-sheet) for text formatting and the website will be protected from nuisance.
+If many people edit your website, enable the safe mode. Open file `system/config/config.ini` and change `ParserSafeMode: 1`. Users can only use [Markdown](markdown-cheat-sheet) for text formatting, but no HTML and JavaScript. The website will be protected from nuisance.
 
 You can [test safe mode](/tests/safe-mode).
 

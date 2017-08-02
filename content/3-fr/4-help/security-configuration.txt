@@ -13,7 +13,7 @@ Vous aurez besoin d'un serveur avec TLS et de certificats valides.
 
 ## Mode de sécurité
 
-Si plusieurs personnes peuvent éditer votre site web, activez le mode safe. Ouvrez le fichier `system/config/config.ini` et changez `ParserSafeMode: 1`. Les utilisateurs ne peuvent utiliser que seule la syntaxe [Markdown](markdown-cheat-sheet) et le site web sera protégé contre les nuisances.
+Si plusieurs personnes peuvent éditer votre site web, activez le mode safe. Ouvrez le fichier `system/config/config.ini` et changez `ParserSafeMode: 1`. Les utilisateurs ne peuvent utiliser [Markdown](markdown-cheat-sheet), mais pas HTML et JavaScript. Le site web sera protégé contre les nuisances.
 
 Vous pouvez [tester le mode de sécurité](/fr/tests/safe-mode).
 
