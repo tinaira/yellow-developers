@@ -52,19 +52,6 @@ Adding an image, alternative format:
     [image picture.jpg Picture]
     [image picture.jpg "This is an example image"]
 
-Adding a paragraph:
-
-    Here's the first paragraph. Text can span over several lines
-    and can be separated by a blank line from the next paragraph.
-
-    Here's the second paragraph.
-
-Adding a line break:
-
-    First line⋅⋅
-    Second line⋅⋅
-    Spaces at the end of the line are shown with dots (⋅)
-
 ## Extras
 
 Making tables:
@@ -83,7 +70,20 @@ Making footnotes:
     [^2]: Here's the second footnote
     [^3]: Here's the third footnote
 
-Formatting source code, [with or without highlight](https://github.com/datenstrom/yellow-plugins/tree/master/highlight):
+Making paragraphs:
+
+    Here's the first paragraph. Text can span over several lines
+    and can be separated by a blank line from the next paragraph.
+
+    Here's the second paragraph.
+
+Making line breaks:
+
+    First line⋅⋅
+    Second line⋅⋅
+    Spaces at the end of the line are shown with dots (⋅)
+
+Formatting source code, [see highlighting source code](https://github.com/datenstrom/yellow-plugins/tree/master/highlight):
 
     ```
     var ready = function() 
@@ -98,8 +98,13 @@ Using HTML, [see safe mode](security-configuration#safe-mode):
     <div class="custom">
     <strong>Text with HTML</strong> can be used optionally.
     <a href="https://datenstrom.se">Link to website</a>.
-    <a href="https://developers.datenstrom.se/help/markdown-cheat-sheet" target="_blank">Markdown</a>.
     </div>
+
+And of course emoji, [see emoji cheat sheet](http://www.emoji-cheat-sheet.com):
+
+    :smile: 
+    :heart: 
+    :coffee:
 
 ## Shortcuts
 
@@ -138,7 +143,7 @@ Using HTML, [see safe mode](security-configuration#safe-mode):
 `Published` = page publication date, YYYY-MM-DD format  
 `Tag` = page tag(s) for categorisation, comma separated  
 `Redirect` = redirect to a new page or URL  
-`Status` = status for workflow  
+`Status` = status for workflow, for example `draft`, `hidden`  
 `Navigation` = page navigation  
 `Sidebar` = page sidebar  
 `Sitename` = name of the website  

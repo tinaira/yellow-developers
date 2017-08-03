@@ -52,19 +52,6 @@ Ajouter des images, autre moyen:
     [image picture.jpg Picture]
     [image picture.jpg "Ceci est un exemple d'image"]
 
-Ajouter d'un paragraphe:
-
-    Voici le premier paragraphe. Le texte peut s'étendre sur plusieurs lignes
-    et peut être séparé par une ligne vierge du paragraphe suivant.
-    
-    Voici le deuxième paragraphe.
-
-Ajout d'une saut de ligne:
-
-    Première ligne⋅⋅
-    Deuxième ligne⋅⋅
-    Les espaces à la fin de la ligne sont affichés avec des points (⋅)
-
 ## Extras
 
 Créer des tables:
@@ -83,7 +70,20 @@ Créer des notes de bas de page:
     [^2]: Voici la deuxième note de bas de page
     [^3]: Voici la troisième note de bas de page
 
-Formatage du code source, [avec ou sans highlight](https://github.com/datenstrom/yellow-plugins/tree/master/highlight):
+Créer des paragraphes:
+
+    Voici le premier paragraphe. Le texte peut s'étendre sur plusieurs lignes
+    et peut être séparé par une ligne vierge du paragraphe suivant.
+    
+    Voici le deuxième paragraphe.
+
+Créer des sauts de ligne:
+
+    Première ligne⋅⋅
+    Deuxième ligne⋅⋅
+    Les espaces à la fin de la ligne sont affichés avec des points (⋅)
+
+Formatage du code source, [coloration du code source](https://github.com/datenstrom/yellow-plugins/tree/master/highlight):
 
     ```
     var ready = function() 
@@ -93,13 +93,18 @@ Formatage du code source, [avec ou sans highlight](https://github.com/datenstrom
     }
     ```
 
-En utilisant HTML, [voir configuration de la sécurité](security-configuration#mode-de-sécurité):
+En utilisant HTML, [voir mode de sécurité](security-configuration#mode-de-sécurité):
 
     <div class="custom">
     <strong>Texte avec HTML</strong> peut être utilisé en option.
     <a href="https://datenstrom.se/fr/">Lien vers un site</a>.
-    <a href="https://developers.datenstrom.se/fr/help/markdown-cheat-sheet" target="_blank">Markdown</a>.
     </div>
+
+Et bien sur emoji, [voir emoji antisèche](http://www.emoji-cheat-sheet.com):
+
+    :smile: 
+    :heart: 
+    :coffee:
 
 ## Raccourcis
 
@@ -115,7 +120,7 @@ En utilisant HTML, [voir configuration de la sécurité](security-configuration#
 `[blogrecent /blog/]` = afficher les [billets récents du blog](https://github.com/datenstrom/yellow-plugins/tree/master/blog#how-to-configure-a-blog)  
 `[wikirecent /wiki/]` = afficher les [pages récentes du wiki](https://github.com/datenstrom/yellow-plugins/tree/master/wiki#how-to-configure-a-wiki)  
 `[fa fa-envelope-o]` = afficher des [icones et symboles](https://github.com/datenstrom/yellow-plugins/tree/master/fontawesome)  
-`[ea ea-smile]` = afficher des [émoticônes colorées](https://github.com/datenstrom/yellow-plugins/tree/master/emojiawesome)  
+`[ea ea-smile]` = afficher des [emoji et images coloréess](https://github.com/datenstrom/yellow-plugins/tree/master/emojiawesome)  
 `[yellow]` = afficher les [informations sur le site](https://github.com/datenstrom/yellow-plugins/tree/master/core)  
 `[toc]` = afficher une [table des matières](https://github.com/datenstrom/yellow-plugins/tree/master/toc)  
 `[--more--]` = ajouter un [saut de page](https://github.com/datenstrom/yellow-plugins/tree/master/blog#how-to-configure-a-blog) 
@@ -138,7 +143,7 @@ En utilisant HTML, [voir configuration de la sécurité](security-configuration#
 `Published` = date de publication de la page, format YYYY-MM-DD  
 `Tag` = mots-clés pour la catégorisation, séparés par des virgules  
 `Redirect` = redirection vers une page ou une URL  
-`Status` = état de la page  
+`Status` = état de la page, par exemple `draft`, `hidden`  
 `Navigation` = menu de navigation pour la page  
 `Sidebar` = sidebar pour la page  
 `Sitename` = nom su site web  

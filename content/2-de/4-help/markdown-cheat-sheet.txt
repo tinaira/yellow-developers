@@ -52,20 +52,6 @@ Ein Bild hinzufügen, alternatives Format:
     [image picture.jpg Picture]
     [image picture.jpg "Dies ist ein Beispielbild"]
 
-Einen Absatz hinzufügen:
-
-    Hier ist der erste Absatz. Der Text kann über mehrere Zeilen gehen
-    und kann durch eine Leerzeile vom nächsten Absatz getrennt werden.
-
-    Hier ist der zweite Absatz.
-
-
-Einen Zeilenumbruch hinzufügen:
-
-    Erste Zeile⋅⋅
-    Zweite Zeile⋅⋅
-    Leerzeichen am Zeilenende sind dargestellt durch Punkte (⋅)
-
 ## Extras
 
 Tabellen erstellen:
@@ -84,7 +70,20 @@ Fußnoten erstellen:
     [^2]: Hier ist die zweite Fußnote
     [^3]: Hier ist die dritte Fußnote
 
-Sourcecode formatieren, [mit oder ohne Highlight](https://github.com/datenstrom/yellow-plugins/tree/master/highlight):
+Absätze erstellen:
+
+    Hier ist der erste Absatz. Der Text kann über mehrere Zeilen gehen
+    und kann durch eine Leerzeile vom nächsten Absatz getrennt werden.
+
+    Hier ist der zweite Absatz.
+
+Zeilenumbrüche erstellen:
+
+    Erste Zeile⋅⋅
+    Zweite Zeile⋅⋅
+    Leerzeichen am Zeilenende sind dargestellt durch Punkte (⋅)
+
+Sourcecode formatieren, [siehe Sourcecode hervorheben](https://github.com/datenstrom/yellow-plugins/tree/master/highlight):
 
     ```
     var ready = function() 
@@ -99,8 +98,13 @@ HTML benutzen, [siehe sicherer Modus](security-configuration#sicherer-modus):
     <div class="custom">
     <strong>Text mit HTML</strong> kann wahlweise benutzt werden.
     <a href="https://datenstrom.se/de/">Link zu Webseite</a>.
-    <a href="https://developers.datenstrom.se/de/help/markdown-cheat-sheet" target="_blank">Markdown</a>.
     </div>
+
+Und natürlich Emoji, [siehe Emoji-Spickzettel](http://www.emoji-cheat-sheet.com):
+
+    :smile: 
+    :heart: 
+    :coffee:
 
 ## Abkürzungen
 
@@ -139,7 +143,7 @@ HTML benutzen, [siehe sicherer Modus](security-configuration#sicherer-modus):
 `Published` = Veröffentlichungsdatum der Seite, JJJJ-MM-TT Format  
 `Tag` = Tags zur Kategorisierung der Seite, durch Komma getrennt  
 `Redirect` = Umleitung zu einer neuen Seite oder URL  
-`Status` = Status für Arbeitsablauf  
+`Status` = Status für Arbeitsablauf, beispielsweise `draft`, `hidden`  
 `Navigation` = Navigation der Seite  
 `Sidebar` = Sidebar der Seite  
 `Sitename` = Name der Webseite  
