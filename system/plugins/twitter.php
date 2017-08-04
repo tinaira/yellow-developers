@@ -45,7 +45,7 @@ class YellowTwitter
 			$language = $page->get("language");
 			if(!empty($style)) $output .= "<div class=\"".htmlspecialchars($style)."\">";
 			$output .= "<a class=\"twitter-follow-button\" data-size=\"large\"";
-			$output .= " data-show-count=\"false\" data-lang=\"$language\" data-dnt=\"true\" href=\"https://twitter.com/".rawurlencode($id)."\">@".htmlspecialchars($id)."</a>";
+			$output .= " data-lang=\"$language\" data-dnt=\"true\" href=\"https://twitter.com/".rawurlencode($id)."\">@".htmlspecialchars($id)."</a>";
 			if(!empty($style)) $output .= "</div>";
 		}
 		return $output;
