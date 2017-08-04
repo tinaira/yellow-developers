@@ -27,15 +27,15 @@ class YellowTwitter
 			if(is_numeric($id))
 			{
 				$output = "<div class=\"twitter-tweet\" data-id=\"".htmlspecialchars($id)."\"";
-				if($width) $output .=" data-width=\"".htmlspecialchars($width)."\"";
-				if($height) $output .=" data-height=\"".htmlspecialchars($height)."\"";
-				if($style) $output .=" data-align=\"".htmlspecialchars($style)."\"";
+				if(!empty($width)) $output .=" data-width=\"".htmlspecialchars($width)."\"";
+				if(!empty($height)) $output .=" data-height=\"".htmlspecialchars($height)."\"";
+				if(!empty($style)) $output .=" data-align=\"".htmlspecialchars($style)."\"";
 				$output .= " data-theme=\"".htmlspecialchars($theme)."\" data-lang=\"$language\" data-dnt=\"true\"></div>";
 			} else {
 				$output = "<div class=\"twitter-timeline\" data-url=\"".htmlspecialchars("https://twitter.com/".$id)."\" data-chrome=\"noheader nofooter\"";
-				if($width) $output .=" data-width=\"".htmlspecialchars($width)."\"";
-				if($height) $output .=" data-height=\"".htmlspecialchars($height)."\"";
-				if($style) $output .=" data-align=\"".htmlspecialchars($style)."\"";
+				if(!empty($width)) $output .=" data-width=\"".htmlspecialchars($width)."\"";
+				if(!empty($height)) $output .=" data-height=\"".htmlspecialchars($height)."\"";
+				if(!empty($style)) $output .=" data-align=\"".htmlspecialchars($style)."\"";
 				$output .= " data-theme=\"".htmlspecialchars($theme)."\" data-lang=\"$language\" data-dnt=\"true\"></div>";
 			}
 		}
