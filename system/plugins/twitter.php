@@ -5,13 +5,14 @@
 
 class YellowTwitter
 {
-	const VERSION = "0.7.1";
+	const VERSION = "0.7.2";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
 	function onLoad($yellow)
 	{
 		$this->yellow = $yellow;
+		$this->yellow->config->setDefault("twitterTheme", "light");
 	}
 	
 	// Handle page content parsing of custom block
@@ -20,22 +21,44 @@ class YellowTwitter
 		$output = null;
 		if($name=="twitter" && $shortcut)
 		{
-			list($id, $width, $height, $theme) = $this->yellow->toolbox->getTextArgs($text);
-			$output = "<div class=\"twitter\">\n";
-			$output .= "<a class=\"twitter-timeline\"";
-			if($width && $height) $output .=" data-width=\"".htmlspecialchars($width)."\" data-height=\"".htmlspecialchars($height)."\"";
-			if($theme) $output .=" data-theme=\"".htmlspecialchars($theme)."\"";
-			$output .= " data-dnt=\"true\" href=\"https://twitter.com/".rawurlencode($id)."\">Tweets by @".htmlspecialchars($id)."</a>\n";
-			$output .= "<script async src=\"https://platform.twitter.com/widgets.js\"></script>\n";
-			$output .= "</div>";
+			list($id, $theme, $style, $width, $height) = $this->yellow->toolbox->getTextArgs($text);
+			if(empty($theme)) $theme = $this->yellow->config->get("twitterTheme");
+			$language = $page->get("language");
+			if(is_numeric($id))
+			{
+				$output = "<div class=\"twitter-tweet\" data-id=\"".htmlspecialchars($id)."\"";
+				if($width) $output .=" data-width=\"".htmlspecialchars($width)."\"";
+				if($height) $output .=" data-height=\"".htmlspecialchars($height)."\"";
+				if($style) $output .=" data-align=\"".htmlspecialchars($style)."\"";
+				$output .= " data-theme=\"".htmlspecialchars($theme)."\" data-lang=\"$language\" data-dnt=\"true\"></div>";
+			} else {
+				$output = "<div class=\"twitter-timeline\" data-url=\"".htmlspecialchars("https://twitter.com/".$id)."\" data-chrome=\"noheader nofooter\"";
+				if($width) $output .=" data-width=\"".htmlspecialchars($width)."\"";
+				if($height) $output .=" data-height=\"".htmlspecialchars($height)."\"";
+				if($style) $output .=" data-align=\"".htmlspecialchars($style)."\"";
+				$output .= " data-theme=\"".htmlspecialchars($theme)."\" data-lang=\"$language\" data-dnt=\"true\"></div>";
+			}
 		}
 		if($name=="twitterfollow" && $shortcut)
 		{
-			list($id) = $this->yellow->toolbox->getTextArgs($text);
-			$output = "<div class=\"twitterfollow\">\n";
-			$output .= "<a href=\"https://twitter.com/".rawurlencode($id)."\" class=\"twitter-follow-button\" data-size=\"large\" data-dnt=\"true\">Follow @".htmlspecialchars($id)."</a>\n";
-			$output .= "<script async src=\"https://platform.twitter.com/widgets.js\"></script>\n";
-			$output .= "</div>";
+			list($id, $dummy, $style) = $this->yellow->toolbox->getTextArgs($text);
+			$language = $page->get("language");
+			if(!empty($style)) $output .= "<div class=\"".htmlspecialchars($style)."\">";
+			$output .= "<a class=\"twitter-follow-button\" data-size=\"large\"";
+			$output .= " data-show-count=\"false\" data-lang=\"$language\" data-dnt=\"true\" href=\"https://twitter.com/".rawurlencode($id)."\">@".htmlspecialchars($id)."</a>";
+			if(!empty($style)) $output .= "</div>";
+		}
+		return $output;
+	}
+
+	// Handle page extra HTML data
+	function onExtra($name)
+	{
+		$output = null;
+		if($name=="header")
+		{
+			$pluginLocation = $this->yellow->config->get("serverBase").$this->yellow->config->get("pluginLocation");
+			$output = "<script type=\"text/javascript\" src=\"{$pluginLocation}twitter.js\"></script>\n";
 		}
 		return $output;
 	}
