@@ -15,10 +15,17 @@ window.twttr = (function(d, s, id)
 	return t;
 }(document, "script", "twitter-wjs"));
 
-var initTwitterFromDOM = function()
+function TwitterMessage(element, options)
 {
-	// Parse Twitter options from DOM
-	var parseOptions = function(element, keyNames)
+	this.element = element;
+	this.options = options ? options : this.parseOptions(element, ["tweetLimit", "borderColor", "linkColor", "ariaPolite"]);
+	return (this instanceof TwitterMessage ? this : new TwitterMessage());
+}
+
+TwitterMessage.prototype =
+{
+	// Parse Twitter options
+	parseOptions: function(element, keyNames)
 	{
 		var options = {};
 		for(var i=0; i<element.attributes.length; i++)
@@ -45,26 +52,46 @@ var initTwitterFromDOM = function()
 			}
 		}
 		return options;
-	};
-
-	// Initialise twitter elements, show tweets and timelines
-	var twitterElements = document.querySelectorAll(".twitter-tweet");
-	for(var i=0, l=twitterElements.length; i<l; i++)
+	},
+	
+	// Show Twitter error
+	onShowError: function(result)
 	{
-		var id = twitterElements[i].getAttribute("data-id");
-		var options = parseOptions(twitterElements[i], ["linkColor"]);
-		twttr.widgets.createTweet(id, twitterElements[i], options);
-	}
-	twitterElements = document.querySelectorAll(".twitter-timeline");
-	for(var i=0, l=twitterElements.length; i<l; i++)
+		var node = document.createTextNode("Twitter '"+this.options.id+"' not available!");
+		this.element.appendChild(node);
+	},
+	
+	// Request Twitter data
+	request: function()
 	{
-		var source =
+		if(twttr.widgets)
 		{
-			sourceType: "url",
-			url: twitterElements[i].getAttribute("data-url")
-		};
-		var options = parseOptions(twitterElements[i], ["tweetLimit", "borderColor", "ariaPolite"]);
-		twttr.widgets.createTimeline(source, twitterElements[i], options);
+			var thisObject = this, promise;
+			switch(this.options.mode)
+			{
+				case "tweet":
+					promise = twttr.widgets.createTweet(this.options.id, this.element, this.options);
+					promise.then(function(result) { if(result==null) { thisObject.onShowError(result); }});
+					break;
+				case "timeline":
+					promise = twttr.widgets.createTimeline({ sourceType: "url", url: "https://twitter.com/"+this.options.id }, this.element, this.options);
+					promise.then(function(result) { if(result==null) { thisObject.onShowError(result); }});
+					break;
+			}
+		} else {
+			this.onShowError("offline");
+		}
+	}
+}
+
+var initTwitterFromDOM = function()
+{
+	var twitters = {};
+	var twitterElements = document.querySelectorAll(".twitter");
+	for(var i=0, l=twitterElements.length; i<l; i++)
+	{
+		twitters[i] = new TwitterMessage(twitterElements[i]);
+		twitters[i].request();
 	}
 };
 

@@ -5,7 +5,7 @@
 
 class YellowTwitter
 {
-	const VERSION = "0.7.2";
+	const VERSION = "0.7.3";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -26,13 +26,13 @@ class YellowTwitter
 			$language = $page->get("language");
 			if(is_numeric($id))
 			{
-				$output = "<div class=\"twitter-tweet\" data-id=\"".htmlspecialchars($id)."\"";
+				$output = "<div class=\"twitter\" data-mode=\"tweet\" data-id=\"".htmlspecialchars($id)."\"";
 				if(!empty($width)) $output .=" data-width=\"".htmlspecialchars($width)."\"";
 				if(!empty($height)) $output .=" data-height=\"".htmlspecialchars($height)."\"";
 				if(!empty($style)) $output .=" data-align=\"".htmlspecialchars($style)."\"";
 				$output .= " data-theme=\"".htmlspecialchars($theme)."\" data-lang=\"$language\" data-dnt=\"true\"></div>";
 			} else {
-				$output = "<div class=\"twitter-timeline\" data-url=\"".htmlspecialchars("https://twitter.com/".$id)."\" data-chrome=\"noheader nofooter\"";
+				$output = "<div class=\"twitter\" data-mode=\"timeline\" data-id=\"".htmlspecialchars($id)."\" data-chrome=\"noheader nofooter\"";
 				if(!empty($width)) $output .=" data-width=\"".htmlspecialchars($width)."\"";
 				if(!empty($height)) $output .=" data-height=\"".htmlspecialchars($height)."\"";
 				if(!empty($style)) $output .=" data-align=\"".htmlspecialchars($style)."\"";
