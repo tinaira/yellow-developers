@@ -89,7 +89,7 @@ GoogleCalender.prototype =
 		this.element.appendChild(node);
 	},
 	
-	// Request data
+	// Request calendar data
 	request: function()
 	{
 		var url = "https://www.googleapis.com/calendar/v3/calendars/"+encodeURIComponent(this.options.calendar)+"/events?timeZone="+encodeURIComponent(this.options.timeZone)+"&timeMin="+encodeURIComponent(this.options.timeMin)+"&maxResults="+encodeURIComponent(this.options.entriesMax)+"&singleEvents=true&orderBy=startTime&fields=items(description%2Csummary%2Clocation%2Cstart)&key="+encodeURIComponent(this.options.apiKey);
@@ -104,8 +104,8 @@ GoogleCalender.prototype =
 	requestUrl: function(url, callback, callbackError)
 	{
 		var thisObject = this;
-		var request = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
-		request.onreadystatechange = function() { if(this.readyState==4 && this.status==200) callback.call(thisObject, this.responseText, this.status); if(this.readyState==4 && this.status>=400) callbackError.call(thisObject, this.responseText,this.status); };
+		var request = new XMLHttpRequest();
+		request.onreadystatechange = function() { if(this.readyState==4 && this.status==200) callback.call(thisObject, this.responseText, this.status); if(this.readyState==4 && this.status>=400) callbackError.call(thisObject, this.responseText, this.status); };
 		request.open("GET", url, true);
 		request.send();
 	},
@@ -202,8 +202,4 @@ var initGoogleCalendarFromDOM = function()
 	}
 };
 
-if(window.addEventListener) {
-	window.addEventListener("load", initGoogleCalendarFromDOM, false);
-} else {
-	window.attachEvent("onload", initGoogleCalendarFromDOM);
-}
+window.addEventListener("load", initGoogleCalendarFromDOM, false);

@@ -5,7 +5,7 @@
 
 class YellowSlider
 {
-	const VERSION = "0.6.7";
+	const VERSION = "0.7.1";
 	var $yellow;			//access to API
 	
 	// Handle initialisation

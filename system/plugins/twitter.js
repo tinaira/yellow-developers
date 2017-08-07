@@ -95,8 +95,4 @@ var initTwitterFromDOM = function()
 	}
 };
 
-if(window.addEventListener) {
-	window.addEventListener("load", initTwitterFromDOM, false);
-} else {
-	window.attachEvent("onload", initTwitterFromDOM);
-}
+window.addEventListener("load", initTwitterFromDOM, false);
