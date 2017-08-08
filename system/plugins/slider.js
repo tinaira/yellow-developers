@@ -76,7 +76,8 @@ var initFlickityFromDOM = function()
 	{
 		var options = parseOptions(sliderElements[i],
 			["prevNextButtons", "pageDots", "arrowShape", "lazyLoad", "autoPlay", "initialIndex",
-			 "draggable", "clickable", "freeScroll", "wrapAround", "asNavFor", "cellSelector", "cellAlign"]);
+			 "freeScroll", "wrapAround", "asNavFor", "cellSelector", "cellAlign"]);
+		if(options.autoPlay) options.autoPlay = parseInt(options.autoPlay);
 		sliders[i] = new Flickity(sliderElements[i], options);
 		if(options.clickable) sliders[i].on("staticClick", function() { this.next(options.wrapAround); });
 	}
