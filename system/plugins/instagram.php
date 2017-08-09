@@ -5,7 +5,7 @@
 
 class YellowInstagram
 {
-	const VERSION = "0.7.1";
+	const VERSION = "0.7.2";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -21,7 +21,7 @@ class YellowInstagram
 		$output = null;
 		if($name=="instagram" && $shortcut)
 		{
-			list($id, $style, $width, $height) = $this->yellow->toolbox->getTextArgs($text);
+			list($id, $dummy, $style, $width, $height) = $this->yellow->toolbox->getTextArgs($text);
 			if(empty($style)) $style = $this->yellow->config->get("instagramStyle");
 			if(empty($width)) $width = "100%";
 			$css = $this->getInstagramStyle($width, $height);

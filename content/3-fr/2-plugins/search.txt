@@ -6,4 +6,4 @@ Image: search-fr.png
 Recherche de texte intégral.
 [Installer le plugin](https://github.com/datenstrom/yellow-plugins/tree/master/search).
 
-Entrez un mot dans le champ de recherche.
+Entrez un mot dans le champ de recherche. Voici un [exemple de recherche](/fr/search/query:comment%20faire/).
