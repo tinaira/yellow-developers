@@ -617,9 +617,6 @@ Setze das Änderungsdatum der Datei, Unix-Zeit
 **$yellow->toolbox->getFileModified($fileName)**  
 Hole das Änderungsdatum der Datei, Unix-Zeit
 
-**$yellow->toolbox->getFileExtension($fileName)**  
-Hole die Dateiendung
-
 **$yellow->toolbox->getTextLines($text)**  
 Hole die Zeilen eines Textstrings, einschließlich Zeilenumbruch  
 

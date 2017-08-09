@@ -91,6 +91,7 @@ Formatting source code, [see highlighting source code](https://github.com/datens
         console.log("Hello world");
         // Add more JavaScript code here
     }
+    window.addEventListener('load', ready, false);
     ```
 
 Using HTML, [see safe mode](security-configuration#safe-mode):
@@ -115,6 +116,7 @@ And of course emoji, [see emoji cheat sheet](http://www.emoji-cheat-sheet.com):
 `[vimeo 13387502]` = embed [Vimeo video](https://github.com/datenstrom/yellow-plugins/tree/master/vimeo)  
 `[soundcloud 101175715]` = embed [Soundcloud audio](https://github.com/datenstrom/yellow-plugins/tree/master/soundcloud)  
 `[twitter datenstromse]` = embed [Twitter messages](https://github.com/datenstrom/yellow-plugins/tree/master/twitter)  
+`[instagram BISN9ngjV2-]` = embed [Instagram photo](https://github.com/datenstrom/yellow-plugins/tree/master/instagram)  
 `[googlecalendar en.swedish#holiday]` = embed [Google calendar](https://github.com/datenstrom/yellow-plugins/tree/master/googlecalendar)  
 `[googlemaps Stockholm]` = embed [Google maps](https://github.com/datenstrom/yellow-plugins/tree/master/googlemaps)  
 `[blogrecent /blog/]` = show [recent blog pages](https://github.com/datenstrom/yellow-plugins/tree/master/blog#how-to-configure-a-blog)  

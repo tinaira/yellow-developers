@@ -230,21 +230,21 @@ var initPhotoSwipeFromDOM = function()
 		gallery.init();
 	};
 	
-	// Check gallery elements and bind events
-	var galleryElements = document.querySelectorAll(".photoswipe");
-	for(var i=0, l=galleryElements.length; i<l; i++)
+	// Initialise gallery and bind events
+	var elements = document.querySelectorAll(".photoswipe");
+	for(var i=0, l=elements.length; i<l; i++)
 	{
-		galleryElements[i].setAttribute("data-galleryuid", i+1);
-		galleryElements[i].onclick = onClickGallery;
+		elements[i].setAttribute("data-galleryuid", i+1);
+		elements[i].onclick = onClickGallery;
 	}
 	
 	// Check if URL contains gallery and picture index
-	if(galleryElements.length)
+	if(elements.length)
 	{
 		var params = parseHash();
-		if(params.gid>0 && params.gid<=galleryElements.length && params.pid>0)
+		if(params.gid>0 && params.gid<=elements.length && params.pid>0)
 		{
-			openPhotoSwipe(params.pid, galleryElements[params.gid-1], true, true);
+			openPhotoSwipe(params.pid, elements[params.gid-1], true, true);
 		}
 	}
 };

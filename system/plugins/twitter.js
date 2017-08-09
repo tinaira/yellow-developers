@@ -2,18 +2,10 @@
 // Copyright (c) 2013-2017 Datenstrom, https://datenstrom.se
 // This file may be used and distributed under the terms of the public license.
 
-window.twttr = (function(d, s, id)
-{
-	var js, fjs = d.getElementsByTagName(s)[0], t = window.twttr || {};
-	if (d.getElementById(id)) return t;
-	js = d.createElement(s);
-	js.id = id;
-	js.src = "https://platform.twitter.com/widgets.js";
-	fjs.parentNode.insertBefore(js, fjs);
-	t._e = [];
-	t.ready = function(f) { t._e.push(f); };
-	return t;
-}(document, "script", "twitter-wjs"));
+var fjs = document.getElementsByTagName("script")[0];
+var js = document.createElement("script");
+js.src = "https://platform.twitter.com/widgets.js";
+fjs.parentNode.insertBefore(js, fjs);
 
 function TwitterMessage(element, options)
 {
@@ -87,10 +79,10 @@ TwitterMessage.prototype =
 var initTwitterFromDOM = function()
 {
 	var twitters = {};
-	var twitterElements = document.querySelectorAll(".twitter");
-	for(var i=0, l=twitterElements.length; i<l; i++)
+	var elements = document.querySelectorAll(".twitter");
+	for(var i=0, l=elements.length; i<l; i++)
 	{
-		twitters[i] = new TwitterMessage(twitterElements[i]);
+		twitters[i] = new TwitterMessage(elements[i]);
 		twitters[i].request();
 	}
 };

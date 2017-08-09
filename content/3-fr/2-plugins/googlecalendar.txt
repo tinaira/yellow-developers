@@ -1,9 +1,0 @@
----
-Title: Googlecalendar
-Description: Intégrez Google calendar
-Image: googlecalendar-fr.png
----
-Intégrez Google calendar.
-[Installer le plugin](https://github.com/datenstrom/yellow-plugins/tree/master/googlecalendar).
-
-[googlecalendar fr.swedish#holiday month 2017-06-01]

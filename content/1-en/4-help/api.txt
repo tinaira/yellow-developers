@@ -616,9 +616,6 @@ Set file modification date, Unix time
 **$yellow->toolbox->getFileModified($fileName)**  
 Return file modification date, Unix time  
 
-**$yellow->toolbox->getFileExtension($fileName)**  
-Return file extension  
-
 **$yellow->toolbox->getTextLines($text)**  
 Return lines from text string, including newline  
 

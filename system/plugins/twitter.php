@@ -26,7 +26,7 @@ class YellowTwitter
 			$language = $page->get("language");
 			if(is_numeric($id))
 			{
-				$output = "<div class=\"twitter\" data-mode=\"tweet\" data-id=\"".htmlspecialchars($id)."\"";
+				$output = "<div class=\"twitter\" data-mode=\"tweet\" data-id=\"".htmlspecialchars($id)."\" data-conversation=\"none\"";
 				if(!empty($width)) $output .=" data-width=\"".htmlspecialchars($width)."\"";
 				if(!empty($height)) $output .=" data-height=\"".htmlspecialchars($height)."\"";
 				if(!empty($style)) $output .=" data-align=\"".htmlspecialchars($style)."\"";

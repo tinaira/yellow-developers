@@ -2,17 +2,17 @@
 // Copyright (c) 2013-2017 Datenstrom, https://datenstrom.se
 // This file may be used and distributed under the terms of the public license.
 
-function GoogleCalender(element, options)
+function GoogleCalendar(element, options)
 {
 	this.element = element;
 	this.options = options ? options : this.parseOptions(element,
 		["mode", "timeZone", "timeZoneOffset", "dateMonths", "dateWeekdays", "dateFormatShort",
 		 "dateFormatMedium", "dateFormatLong", "timeFormatShort", "timeFormatMedium", "timeFormatLong",
 		 "timeMin", "entriesMax", "calendar", "apiKey"]);
-	return (this instanceof GoogleCalender ? this : new GoogleCalender());
+	return (this instanceof GoogleCalendar ? this : new GoogleCalendar());
 }
 
-GoogleCalender.prototype =
+GoogleCalendar.prototype =
 {
 	// Show calendar events
 	onShowEvents: function(responseText, status)
@@ -194,10 +194,10 @@ GoogleCalender.prototype =
 var initGoogleCalendarFromDOM = function()
 {
 	var calendars = {};
-	var calendarElements = document.querySelectorAll(".googlecalendar");
-	for(var i=0, l=calendarElements.length; i<l; i++)
+	var elements = document.querySelectorAll(".googlecalendar");
+	for(var i=0, l=elements.length; i<l; i++)
 	{
-		calendars[i] = new GoogleCalender(calendarElements[i]);
+		calendars[i] = new GoogleCalendar(elements[i]);
 		calendars[i].request();
 	}
 };
