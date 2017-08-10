@@ -5,7 +5,7 @@
 
 class YellowSearch
 {
-	const VERSION = "0.6.12";
+	const VERSION = "0.7.1";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -40,7 +40,6 @@ class YellowSearch
 	{
 		if($this->yellow->page->get("template")=="search")
 		{
-			if($this->yellow->isCommandLine()) $this->yellow->page->error(500, "Static website not supported!");
 			$query = trim($_REQUEST["query"]);
 			list($tokens, $filters) = $this->getSearchInformation($query, 10);
 			if(!empty($tokens) || !empty($filters))
@@ -84,6 +83,7 @@ class YellowSearch
 				$this->yellow->page->setHeader("Cache-Control", "max-age=60");
 				$this->yellow->page->set("status", count($pages) ? "done" : "empty");
 			} else {
+				if($this->yellow->isCommandLine()) $this->yellow->page->error(500, "Static website not supported!");
 				$this->yellow->page->set("titleSearch", $this->yellow->page->get("title"));
 				$this->yellow->page->set("status", "none");
 			}
