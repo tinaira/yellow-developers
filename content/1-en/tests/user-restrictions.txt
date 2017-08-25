@@ -5,4 +5,4 @@ This page tests user restrictions.
 
 Guests can [edit this page], but can not [edit the home page](/). 
 
-Please log in with `guest@guest.com` + `demo`.
+Please log in with `guest@demo.com` + `demo`.

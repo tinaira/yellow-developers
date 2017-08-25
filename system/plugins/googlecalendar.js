@@ -101,11 +101,11 @@ GoogleCalendar.prototype =
 	},
 	
 	// Request URL with GET method
-	requestUrl: function(url, callback, callbackError)
+	requestUrl: function(url, callback, error)
 	{
 		var thisObject = this;
 		var request = new XMLHttpRequest();
-		request.onreadystatechange = function() { if(this.readyState==4 && this.status==200) callback.call(thisObject, this.responseText, this.status); if(this.readyState==4 && this.status>=400) callbackError.call(thisObject, this.responseText, this.status); };
+		request.onload = function() { if(this.status==200) { callback.call(thisObject, this.responseText, this.status) } else { error.call(thisObject, this.responseText, this.status); } };
 		request.open("GET", url, true);
 		request.send();
 	},
