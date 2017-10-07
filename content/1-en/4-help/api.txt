@@ -55,9 +55,6 @@ Return [page collection](#yellow-page-collection) with pages on the same level a
 **$yellow->page->getChildren($showInvisible = false)**  
 Return [page collection](#yellow-page-collection) with child pages of current page
 
-**$yellow->page->getFiles($showInvisible = false)**  
-Return [page collection](#yellow-page-collection) with media files for current page
-
 **$yellow->page->getPages()**  
 Return [page collection](#yellow-page-collection) with additional pages for current page
 
@@ -165,6 +162,9 @@ Yellow page collection gives access to these functions:
 
 **$pages->filter($key, $value, $exactMatch = true)**  
 Filter page collection by meta data  
+
+**$pages->match($regex = "/.*/")**  
+Filter page collection by file name
 
 **$pages->sort($key, $ascendingOrder = true)**  
 Sort page collection by meta data  
@@ -598,11 +598,14 @@ Read file, empty string if not found
 **$yellow->toolbox->createFile($fileName, $fileData, $mkdir = false)**  
 Create file  
 
-**$yellow->toolbox->copyFile($fileNameSource, $fileNameDest, $mkdir = false)**  
+**$yellow->toolbox->copyFile($fileNameSource, $fileNameDestination, $mkdir = false)**  
 Copy file  
 
-**$yellow->toolbox->renameFile($fileNameSource, $fileNameDest, $mkdir = false)**  
+**$yellow->toolbox->renameFile($fileNameSource, $fileNameDestination, $mkdir = false)**  
 Rename file  
+
+**$yellow->toolbox->mergeFile($fileNameSource, $fileNameDestination)**  
+Merge file
 
 **$yellow->toolbox->deleteFile($fileName, $pathTrash = "")**  
 Delete file  

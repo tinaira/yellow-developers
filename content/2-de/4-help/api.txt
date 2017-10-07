@@ -56,9 +56,6 @@ Hole eine [Page-Collection](#yellow-page-collection) mit Seiten auf dem selben L
 **$yellow->page->getChildren($showInvisible = false)**  
 Hole eine [Page-Collection](#yellow-page-collection) mit Kinderseiten der aktuellen Seite
 
-**$yellow->page->getFiles($showInvisible = false)**  
-Hole eine [Page-Collection](#yellow-page-collection) mit Mediendateien der aktuellen Seite
-
 **$yellow->page->getPages()**  
 Hole eine [Page-Collection](#yellow-page-collection) mit zusätzlichen Seiten für die aktuellen Seite
 
@@ -166,6 +163,9 @@ Yellow-Page-Collection gibt Zugang zu diesen Funktionen:
 
 **$pages->filter($key, $value, $exactMatch = true)**  
 Filtere eine Page-Collection nach Metadaten
+
+**$pages->match($regex = "/.*/")**  
+Filtere eine Page-Collection nach Dateinamen
 
 **$pages->sort($key, $ascendingOrder = true)**  
 Sortiere eine Page-Collection nach Metadaten
@@ -599,11 +599,14 @@ Lese eine Datei, leerer String falls nicht vorhanden
 **$yellow->toolbox->createFile($fileName, $fileData, $mkdir = false)**  
 Erstelle eine Datei
 
-**$yellow->toolbox->copyFile($fileNameSource, $fileNameDest, $mkdir = false)**  
+**$yellow->toolbox->copyFile($fileNameSource, $fileNameDestination, $mkdir = false)**  
 Kopiere eine Datei  
 
-**$yellow->toolbox->renameFile($fileNameSource, $fileNameDest, $mkdir = false)**  
+**$yellow->toolbox->renameFile($fileNameSource, $fileNameDestination, $mkdir = false)**  
 Benenne eine Datei um
+
+**$yellow->toolbox->mergeFile($fileNameSource, $fileNameDestination)**  
+Vereinige Datei
 
 **$yellow->toolbox->deleteFile($fileName, $pathTrash = "")**  
 Lösche eine Datei

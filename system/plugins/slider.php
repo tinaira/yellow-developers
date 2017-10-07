@@ -5,7 +5,7 @@
 
 class YellowSlider
 {
-	const VERSION = "0.7.2";
+	const VERSION = "0.7.4";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -28,7 +28,7 @@ class YellowSlider
 			if(empty($autoplay)) $autoplay = $this->yellow->config->get("sliderAutoplay");
 			if(empty($pattern))
 			{
-				$files = $page->getFiles(true);
+				$files = $this->yellow->files->clean();
 			} else {
 				$images = $this->yellow->config->get("imageDir");
 				$files = $this->yellow->files->index(true, true)->match("#$images$pattern#");

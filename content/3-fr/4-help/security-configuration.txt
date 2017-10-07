@@ -25,8 +25,7 @@ Vous pouvez [tester des restrictions d'utilisateur](/fr/tests/user-restrictions)
 
 ## Moins est plus
 
-Vérifiez quelles fonctionnalités sont utilisées sur votre serveur web. Supprimez les [plugins](/fr/plugins/) qui ne sont plus nécessaires du dossier `system/plugins`. En règle générale, moins le logiciel est installé, moins le site web est vulnérable pour les attaques.
+Vérifiez quelles fonctionnalités sont utilisées sur votre serveur web. Supprimez les [plugins](/fr/plugins/) qui ne sont plus nécessaires ou créer un [site web statique](server-configuration#site-web-statique). En règle générale, moins le logiciel est installé, moins le site web est vulnérable pour les attaques.
 
-Le [plugin core](https://github.com/datenstrom/yellow-plugins/tree/master/core) et [plugin update](https://github.com/datenstrom/yellow-plugins/tree/master/update) ne doivent jamais être supprimés.
 
 [Suivant: Personnaliser des thèmes →](customising-themes)

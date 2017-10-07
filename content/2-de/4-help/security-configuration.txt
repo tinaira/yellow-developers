@@ -23,8 +23,6 @@ Du kannst [Benutzerbeschränkungen testen](/de/tests/user-restrictions).
 
 ## Weniger ist mehr
 
-Überprüfe welche Funktionen auf deinem Webserver benutzt werden. Lösche [Plugins](/de/plugins/) die nicht mehr benötigt werden aus dem `system/plugins` Verzeichnis. Als Faustregel gilt, je weniger Software installiert ist, desto weniger ist die Webseite anfällig für Angriffe.
-
-Das [Core-Plugin](https://github.com/datenstrom/yellow-plugins/tree/master/core) und [Update-Plugin](https://github.com/datenstrom/yellow-plugins/tree/master/update) sollten niemals gelöscht werden.
+Überprüfe welche Funktionen auf deinem Webserver benutzt werden. Lösche [Plugins](/de/plugins/) die nicht mehr benötigt werden oder erstelle eine [statische Webseite](server-configuration#statische-webseite). Als Faustregel gilt, je weniger Software installiert ist, desto weniger ist die Webseite anfällig für Angriffe.
 
 [Weiter: Themes anpassen →](customising-themes)
