@@ -73,7 +73,7 @@ Kaffee ist ein Getränk aus gerösteten Bohnen der Kaffeepflanze.
 [youtube SUpY1BT9Xf4]
 ```
 
-Du kannst Wikiseiten mit [Markdown](markdown-cheat-sheet) erstellen.
+Du kannst [Markdown](markdown-cheat-sheet) benutzen um Wikiseiten zu bearbeiten.
 
 ## Sidebar anzeigen
 

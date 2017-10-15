@@ -73,7 +73,7 @@ Coffee is a beverage made from the roasted beans of the coffee plant.
 [youtube SUpY1BT9Xf4]
 ```
 
-You can write wiki pages in [Markdown](markdown-cheat-sheet).
+You can use [Markdown](markdown-cheat-sheet) to edit wiki pages.
 
 ## Showing a sidebar
 

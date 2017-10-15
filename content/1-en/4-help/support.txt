@@ -18,8 +18,8 @@ Connect with other users and find professional help.
 ## How to contribute
 
 * [Answer questions](https://github.com/datenstrom/yellow/issues)
-* [Show what you have made](https://twitter.com/search?q=%23madewithyellow)
-* [Translate language files](https://github.com/datenstrom/yellow-plugins/tree/master/language)
+* [Create useful plugins](https://github.com/datenstrom/yellow-plugins)
+* [Create beautiful themes](https://github.com/datenstrom/yellow-themes)
 
 ## Thank you
 

@@ -13,15 +13,15 @@ Die Navigation wird automatisch aus deinen `content`-Verzeichnissen erstellt. Es
 
 1. Verzeichnisse können ein numerisches Präfix haben, z.B. `1-home` oder `9-about`
 2. Dateien können ein Datumspräfix haben, z.B. `2013-04-07-blog-example.txt`
-3. Ohne Präfix gibt es keine besondere Reihenfolge, z.B. `wiki-page.txt`
+3. Ohne Präfix gibt es keine besondere Reihenfolge, z.B. `wiki-example.txt`
 
-Präfixe und Suffixe werden aus der Adresse entfernt, damit es besser aussieht. Zum Beispiel ist das Verzeichnis `content/9-about/` vorhanden als `http://website/about/`. Die Datei `content/9-about/contact.txt` wird zu `http://website/about/contact`.
+Präfixe und Suffixe werden aus der Adresse entfernt, damit es besser aussieht. Zum Beispiel ist das Verzeichnis `content/9-about/` vorhanden als `http://website/about/`. Die Datei `content/9-about/what-we-do.txt` wird zu `http://website/about/what-we-do`.
 
 Verzeichnisse können weitere Dateien und Verzeichnisse enthalten. Es gibt eine Ausnahme. Das erste Verzeichnis darf keine Unterverzeichnisse besitzen, da es für die Startseite verantwortlich ist und auf deiner Webseite vorhanden ist als `http://website/`.
 
-## Textdateien
+## Markdown
 
-Lass uns einen Blick auf Textdateien werfen. Öffne die Datei `content/1-home/page.txt` in deinem Lieblings-Texteditor. Es werden Einstellungen und Text der Seite angezeigt. Ganz oben auf der Seite kannst du `Title` und weitere [Einstellungen](markdown-cheat-sheet#einstellungen) ändern. Hier ist ein Beispiel:
+Du kannst [Markdown](markdown-cheat-sheet) benutzen um Webseiten zu bearbeiten. Probier es einfach aus. Öffne die Datei `content/1-home/page.txt`. Es werden Einstellungen und Text der Seite angezeigt. Ganz oben auf der Seite kannst du `Title` und weitere [Einstellungen](markdown-cheat-sheet#einstellungen) ändern. Hier ist ein Beispiel:
 
     ---
     Title: Home
@@ -30,8 +30,14 @@ Lass uns einen Blick auf Textdateien werfen. Öffne die Datei `content/1-home/pa
     
     Du kannst [edit - diese Seite bearbeiten] oder einen Texteditor benutzen.
 
-Du kannst Seiten mit [Markdown](markdown-cheat-sheet) schreiben. Markdown ist eine praktische Art um Webseiten zu bearbeiten. Zum größten Teil schreibt man Text wie eine E-Mail und es wird zur Webseite. Hier ist ein Beispiel wie man Text formatiert:
+Text formatieren:
 
     Normal *Kursiv* **Fettschrift** `Code`
+
+Eine Liste erstellen:
+
+    * Punkt eins
+    * Punkt zwei
+    * Punkt drei
 
 [Weiter: Medien hinzufügen →](adding-media)

@@ -88,7 +88,7 @@ How often do you fika? [--more--]
 [youtube aS52d3hcHfs]
 ```
 
-You can write blog pages in [Markdown](markdown-cheat-sheet).
+You can use [Markdown](markdown-cheat-sheet) to edit blog pages.
 
 ## Showing a sidebar
 

@@ -19,8 +19,8 @@ Tausche dich mit anderen Benutzern aus und finde professionelle Hilfe.
 ## Mitmachen
 
 * [Beantworte Fragen](https://github.com/datenstrom/yellow/issues)
-* [Zeige was du gemacht hast](https://twitter.com/search?q=%23madewithyellow)
-* [Übersetze Sprachdateien](https://github.com/datenstrom/yellow-plugins/tree/master/language)
+* [Erstelle nützliche Plugins](https://github.com/datenstrom/yellow-plugins/)
+* [Erstelle schöne Themes](https://github.com/datenstrom/yellow-themes/)
 
 ## Danke
 

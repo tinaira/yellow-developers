@@ -13,15 +13,15 @@ Le menu de navigation est automatiquement créée à partir de vos dossiers pré
 
 1. Avec un préfixe numérique, p. ex. `1-home` `9-about`
 2. Avec un préfixe de la date, p. ex. `2013-04-07-blog-example.txt`
-3. L'absence de préfixe pour ne pas trier, p. ex. `wiki-page.txt`
+3. L'absence de préfixe pour ne pas trier, p. ex. `wiki-example.txt`
 
-Préfixe et suffixe sont retirés de l'url afin de proposer une navigation cohérente et propre. Par exemple le dossier `content/9-about/` est accessible à l'adresse `http://website/about/`. Le fichier `content/9-about/contact.txt` devient quand à lui `http://website/about/contact`. 
+Préfixe et suffixe sont retirés de l'url afin de proposer une navigation cohérente et propre. Le dossier `content/9-about/` est accessible à l'adresse `http://website/about/`. Le fichier `content/9-about/what-we-do.txt` devient quand à lui `http://website/about/what-we-do`. 
 
 Chaque dossier peut contenir des fichiers et des sous-dossiers. Il y a une exception cependant: le premier dossier ne peut pas contenir de sous-dossiers, car il est responsable de la page d'accueil et est accessible en tant qu'url principale `http://website/`.
 
-## Fichiers texte
+## Markdown
 
-Regardons de plus près les fichiers texte. Ouvrez le fichier `content/1-home/page.txt` dans votre éditeur de texte préféré. Vous y verrez la configuration et le contenu de la page. Vous pouvez modifier le titre `Title` et ajouter d'autres [paramètres](markdown-cheat-sheet#paramètres) en haut de la page. Voici un exemple:
+Vous pouvez utiliser [Markdown](markdown-cheat-sheet) pour éditer des pages web. Essayez-le. Ouvrez le fichier `content/1-home/page.txt` dans votre éditeur de texte préféré. Vous y verrez la configuration et le contenu de la page. Vous pouvez modifier le titre `Title` et ajouter d'autres [paramètres](markdown-cheat-sheet#paramètres) en haut de la page. Voici un exemple:
 
     ---
     Title: Home
@@ -30,8 +30,14 @@ Regardons de plus près les fichiers texte. Ouvrez le fichier `content/1-home/pa
     
     Vous pouvez [edit - modifier cette page] ou utiliser un éditeur de texte.
 
-Vous pouvez écrire vos pages à l'aide de la syntaxe [Markdown](markdown-cheat-sheet). Markdown est un moyen pratique pour éditer des pages web. En gros, il suffit de rédiger votre page en utilisant des balises qui seront converties pour en faire une page web. Voici quelques exemples de la syntaxe Markdown:
+Formatage du texte:
 
     Normal *italique* **gras** `code`
+
+Créer une liste:
+
+    * point une
+    * point deux
+    * point trois
 
 [Suivant: Ajouter des fichiers →](adding-media)

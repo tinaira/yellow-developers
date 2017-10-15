@@ -13,15 +13,15 @@ The navigation is automatically created from your `content` folders. Only folder
 
 1. Folders can have a numerical prefix, e.g. `1-home` `9-about`
 2. Files can have a date prefix for sorting, e.g. `2013-04-07-blog-example.txt`
-3. No prefix means there is no special order, e.g. `wiki-page.txt`
+3. No prefix means there is no special order, e.g. `wiki-example.txt`
 
-Prefix and suffix are removed from the location, so that it looks better. For example the folder `content/9-about/` is available on your website as `http://website/about/`. The file `content/9-about/contact.txt` becomes `http://website/about/contact`. 
+Prefix and suffix are removed from the location, so that it looks better. For example the folder `content/9-about/` is available on your website as `http://website/about/`. The file `content/9-about/what-we-do.txt` becomes `http://website/about/what-we-do`. 
 
 Folders may contain files and folders. There is one exception. The first folder may not contain subfolders, because it's responsible for the home page and available on your website as `http://website/`.
 
-## Text files
+## Markdown
 
-Let's have a closer look at text files. Open the file `content/1-home/page.txt` in your favorite text editor. You'll see settings and text of the page. You can change `Title` and other [settings](markdown-cheat-sheet#settings) at the top of a page. Here's an example:
+You can use [Markdown](markdown-cheat-sheet) to edit web pages. Open the file `content/1-home/page.txt` in your favorite text editor. You'll see settings and text of the page. You can change `Title` and other [settings](markdown-cheat-sheet#settings) at the top of a page. Here's an example:
 
     ---
     Title: Home
@@ -30,8 +30,14 @@ Let's have a closer look at text files. Open the file `content/1-home/page.txt` 
     
     You can [edit this page] or use your text editor.
 
-You can write pages in [Markdown](markdown-cheat-sheet). Markdown is a practical way to edit web pages. For the most part, write text like an email and it becomes a web page. Here's an example how to format text:
+Formatting text:
 
     Normal *italic* **bold** `code`
+
+Making a list:
+
+    * item one
+    * item two
+    * item three
 
 [Next: Adding media →](adding-media)

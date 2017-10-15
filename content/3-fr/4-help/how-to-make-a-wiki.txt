@@ -73,7 +73,7 @@ Le café est une boisson fabriquée à partir des haricots rôtis de l'usine de 
 [youtube SUpY1BT9Xf4]
 ```
 
-Vous pouvez écrire vos pages de wiki en [Markdown](markdown-cheat-sheet).
+Vous pouvez utiliser [Markdown](markdown-cheat-sheet) pour éditer les pages du wiki.
 
 ## Afficher une sidebar
 

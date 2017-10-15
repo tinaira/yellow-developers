@@ -62,7 +62,7 @@ You can [edit this page]. The help gives you more information
 about how to create small web pages, blogs and wikis.
 ```
 
-You can write pages in [Markdown](markdown-cheat-sheet).
+You can use [Markdown](markdown-cheat-sheet) to edit web pages.
 
 ## Showing a sidebar
 

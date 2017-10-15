@@ -62,7 +62,7 @@ Du kannst [edit - diese Seite bearbeiten]. Die Hilfe gibt dir weitere
 Informationen wie man kleine Webseiten, Blogs und Wikis erstellt.
 ```
 
-Du kannst Seiten mit [Markdown](markdown-cheat-sheet) erstellen. 
+Du kannst [Markdown](markdown-cheat-sheet) benutzen um Webseiten zu bearbeiten.
 
 ## Sidebar anzeigen
 

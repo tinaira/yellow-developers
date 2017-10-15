@@ -88,7 +88,7 @@ verbe et un nom. À quelle fréquence faites-vous fika? [--more--]
 [youtube aS52d3hcHfs]
 ```
 
-Vous pouvez écrire les pages du blog en [Markdown](markdown-cheat-sheet).
+Vous pouvez utiliser [Markdown](markdown-cheat-sheet) pour éditer les pages du blog.
 
 ## Afficher une sidebar
 
