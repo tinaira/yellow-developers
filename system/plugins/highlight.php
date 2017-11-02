@@ -743,7 +743,7 @@ class GeSHi {
 
         //Retreive the full filename
         $file_name = $this->language_path . $language . '.php';
-		if ($force_file_name !== '') $file_name = $force_file_name;
+        if ($force_file_name !== '') $file_name = $force_file_name;
         if (dirname($file_name) != rtrim($this->language_path, DIRECTORY_SEPARATOR)) {
             // this file is not in the correct directory!
             return;
