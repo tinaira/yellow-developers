@@ -33,6 +33,7 @@ class YellowHighlight
 				$geshi->start_line_numbers_at($lineNumber);
 				$geshi->enable_classes(true);
 				$geshi->enable_keyword_links(false);
+				$geshi->set_language_path(dirname($fileName));
 				$geshi->set_language($language, $fileName);
 				$output = $geshi->parse_code();
 				$output = preg_replace("#<pre(.*?)>(.+?)</pre>#s", "<pre$1><code>$2</code></pre>", $output);
@@ -58,6 +59,7 @@ class YellowHighlight
 				{
 					preg_match("/^highlight-(.*)\.php$/", basename($entry), $matches);
 					$language = $matches[1];
+					$geshi->set_language_path($path);
 					$geshi->set_language($language, $entry);
 					$outputData .= $geshi->get_stylesheet(false);
 				}
@@ -86,7 +88,7 @@ class YellowHighlight
 		return array($language, $fileName, $lineNumber, $class, $id);
 	}
 }
-	
+
 /**
  * GeSHi - Generic Syntax Highlighter
  *
@@ -722,11 +724,11 @@ class GeSHi {
      *       if you need this set $force_reset = true
      *
      * @param string $language    The name of the language to use
-	 * @param string $file_name   The filename of the language file you want to load, note: patch for Datenstrom Yellow
+     * @param string $file_name   The filename of the language file you want to load, note: patch for Datenstrom Yellow
      * @param bool   $force_reset
      * @since 1.0.0
      */
-	public function set_language($language, $file_name = '', $force_reset = false) {
+    public function set_language($language, $file_name = '', $force_reset = false) {
         $this->error = false;
         $this->strict_mode = GESHI_NEVER;
 
@@ -740,7 +742,11 @@ class GeSHi {
         $language = strtolower($language);
 
         //Retreive the full filename
-		if ($file_name == '') $file_name = $this->language_path . $language . '.php';
+        if ($file_name == '') $file_name = $this->language_path . $language . '.php';
+        if (dirname($file_name) != rtrim($this->language_path, DIRECTORY_SEPARATOR)) {
+            // this file is not in the correct directory!
+            return;
+        }
         if ($file_name == $this->loaded_language) {
             // this language is already loaded!
             return;
