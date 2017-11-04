@@ -153,6 +153,7 @@ a:hover { color:#cf3621; text-decoration:underline; }
 	outline-offset:-2px;
 	font-size:0.9em; font-family:inherit; font-weight:normal; line-height:1;
 	text-align:center; text-decoration:none;
+	box-sizing:border-box;
 }
 .btn:hover, .btn:focus, .btn:active {
 	color:#333333;
@@ -165,7 +166,8 @@ a:hover { color:#cf3621; text-decoration:underline; }
 
 .page { margin-top:0.5em; }
 .header, .content, .siteinfo { margin:0 auto; padding:0 1em; max-width:1000px; }
-.yellow-bar { margin:1em auto; padding:0 1em; max-width:1000px; }
+.yellow-bar { margin:0 auto; padding:0.7em 1em; max-width:1000px; }
+.yellow-dropdown a:hover, .yellow-toolbar a:hover { background-color:#d44; }
 
 html, body { height:100%; }
 .page { min-height:100%; position:relative; }

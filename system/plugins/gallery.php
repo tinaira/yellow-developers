@@ -5,7 +5,7 @@
 
 class YellowGallery
 {
-	const VERSION = "0.7.2";
+	const VERSION = "0.7.3";
 	var $yellow;			//access to API
 
 	// Handle initialisation

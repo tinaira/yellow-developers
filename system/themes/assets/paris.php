@@ -5,7 +5,7 @@
 
 class YellowThemeParis
 {
-	const VERSION = "0.7.1";	
+	const VERSION = "0.7.2";	
 }
 
 $yellow->themes->register("paris", "YellowThemeParis", YellowThemeParis::VERSION);

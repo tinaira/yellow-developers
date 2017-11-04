@@ -148,32 +148,32 @@ var initPhotoSwipeFromDOM = function()
 	// Handle when user clicks on gallery
 	var onClickGallery = function(e)
 	{
+		e.stopPropagation();
 		e.preventDefault();
 		var clickedElement = e.target;
-		while(clickedElement)
+		for(; clickedElement; clickedElement=clickedElement.parentNode)
 		{
-			if(clickedElement.tagName == "A") break;
-			clickedElement = clickedElement.parentNode;
+			if(clickedElement.tagName=="A") break;
 		}
-		if(!clickedElement) return;
-		var clickedGallery = clickedElement.parentNode;
-		var childNodes = clickedElement.parentNode.childNodes,
-		numChildNodes = childNodes.length,
-		nodeIndex = 0,
-		index;
-		
-		for(var i=0; i<numChildNodes; i++)
+		if(clickedElement)
 		{
-			if(childNodes[i].nodeType!==1) continue;
-			if(childNodes[i] == clickedElement)
+			var clickedGallery = clickedElement.parentNode;
+			var childNodes = clickedElement.parentNode.childNodes,
+			numChildNodes = childNodes.length,
+			nodeIndex = 0,
+			index;
+			for(var i=0; i<numChildNodes; i++)
 			{
-				index = nodeIndex;
-				break;
+				if(childNodes[i].nodeType!==1) continue;
+				if(childNodes[i] == clickedElement)
+				{
+					index = nodeIndex;
+					break;
+				}
+				nodeIndex++;
 			}
-			nodeIndex++;
+			if(index>=0) openPhotoSwipe(index, clickedGallery);
 		}
-		if(index>=0) openPhotoSwipe(index, clickedGallery);
-		return false;
 	};
 	
 	// Open gallery
