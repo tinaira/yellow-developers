@@ -2,7 +2,7 @@
 Title: Wiki erstellen
 ---
 [[image screenshot-wiki.png Screenshot screenshot 75%]](/de/plugins/wiki/coffee)  
-Lerne wie man ein eigenes Wiki macht. [Demo anschauen](/de/plugins/wiki/).
+Lerne wie man ein eigenes Wiki erstellt. [Demo anschauen](/de/plugins/wiki/).
 
 ## Wiki installieren
 

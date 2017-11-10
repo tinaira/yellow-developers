@@ -6,18 +6,40 @@ API für Entwickler. Wir :heart: Entwickler.
 
 [toc]
 
+## Dateien
+
+Die folgenden Dateien sind vorhanden in Datenstrom Yellow:
+
+```
+|- content              = Inhalte
+|- media                = Mediendateien
+\- system               = Systemdateien
+   |- config            = Konfigurationsdateien
+   |- plugins           = Funktionen der Webseite
+   |- themes            = Aussehen der Webseite
+   |  |- assets         = CSS, Schriftarten und Dateien für Themes
+   |  |- snippets       = Bausteine für Templates
+   |  \- templates      = Template-Dateien
+   \- trash             = gelöschte Dateien
+```
+
+Die wichtigsten Konfigurationsdateien findest du hier:
+
+`system/config/config.ini` = [Systemeinstellungen](adjusting-system#systemeinstellungen)  
+`system/config/user.ini` = [Benutzerkonten](adjusting-system#benutzerkonten)  
+
 ## Objekte
 
-Die folgenden Objekte sind vorhanden in Datenstrom Yellow:
+Die folgenden Objekte sind vorhanden:
 
-[$yellow->page](#yellow-page) gibt Zugang zur aktuellen Seite  
-[$yellow->pages](#yellow-pages) gibt Zugang zu Seiten vom Dateisystem  
-[$yellow->files](#yellow-files) gibt Zugang zu Dateien vom Dateisystem  
-[$yellow->plugins](#yellow-plugins) gibt Zugang zu Plugins  
-[$yellow->themes](#yellow-themes) gibt Zugang zu Themes  
-[$yellow->config](#yellow-config) gibt Zugang zu Einstellungen  
-[$yellow->text](#yellow-text) gibt Zugang zu Text  
-[$yellow->toolbox](#yellow-toolbox) gibt Zugang zu einer Werkzeugkiste mit Helfern  
+`$yellow->page` = [Zugang zur aktuellen Seite](#yellow-page)  
+`$yellow->pages` = [Zugang zu Seiten vom Dateisystem](#yellow-pages)  
+`$yellow->files` = [Zugang zu Dateien vom Dateisystem](#yellow-files)  
+`$yellow->plugins` = [Zugang zu Plugins](#yellow-plugins)  
+`$yellow->themes` = [Zugang zu Themes](#yellow-themes)  
+`$yellow->config` = [Zugang zu Einstellungen](#yellow-config)  
+`$yellow->text` = [Zugang zu Text](#yellow-text)  
+`$yellow->toolbox` = [Zugang zur Werkzeugkiste mit Helfern](#yellow-toolbox)  
 
 ### Yellow-Page
 
@@ -403,7 +425,7 @@ Hier ist ein Beispiel-Snippet um zu testen ob ein Plugin existiert:
 <?php endif ?>
 ```
 
-Hier ist ein Beispiel um ein Plugin zu registrieren, siehe auch [weitere Beispiel-Plugins](#yellow-beispiel-plugins): 
+Hier ist ein Beispiel um ein Plugin zu registrieren: 
 
 ``` php
 <?php
@@ -454,7 +476,7 @@ Hier ist ein Beispiel-Snippet um zu testen ob ein Theme existiert:
 <?php endif ?>
 ```
 
-Hier ist ein Beispiel um ein Theme zu registrieren
+Hier ist ein Beispiel um ein Theme zu registrieren:
 
 ``` php
 class YellowThemeExample
@@ -576,7 +598,7 @@ Hier ist ein Beispiel-Snippet um Sprachen und Übersetzer anzuzeigen:
 
 ### Yellow-Toolbox
 
-Yellow-Toolbox gibt Zugang zu einer Werkzeugkiste mit Helfern:
+Yellow-Toolbox gibt Zugang zur Werkzeugkiste mit Helfern:
 
 **$yellow->toolbox->getLocation($filterStrict = true)**  
 Hole den Ort aktuellen HTTP-Anfrage
@@ -662,7 +684,33 @@ Hier ist ein Beispiel-Snippet um Textzeilen von Datei zu lesen:
 
 ## Ereignisse
 
-Die folgenden Ereignisse sind verfügbar:
+Die folgenden Ereignisse sind vorhanden:
+
+```
+onLoad -----▶ onStartup -----▶ onRequest
+                  |                |
+                  |                |---------------------
+                  |                |                    |
+                  ▼                ▼                    ▼
+              onCommand        onParseMeta          onEditUserRestrictions
+              onCommandHelp    onParseContentRaw    onEditUserAccount
+                  |            onParseContentBlock  onEditContentFile
+                  |            onParseContentText       |
+                  |            onParsePage              |
+                  |            onExtra                  |
+                  ▼                |                    |
+Exit ◀------- onShutDown ◀-------------------------------
+```
+
+Wird eine Seite angezeigt, dann werden die Plugins geladen und es wird `onLoad` aufgerufen. Sobald alle Plugins geladen sind wird `onStartup` aufgerufen. Danach informiert der Core mit `onRequest` dass es eine Anfrage gibt. Die Seite kann mit verschiedenen `onParse`-Ereignisse analysiert werden. Dann wird der Quellcode der Seite mit Hilfe von [Templates und Snippets](customising-templates) erzeugt. Sollte ein Fehler auftreten, wird eine Fehlerseite erzeugt. Zum Schluss wird die Seite ausgegeben und es wird `onShutdown` aufgerufen.
+
+Wird eine Seite bearbeitet, dann werden die Plugins geladen und es wird `onLoad` aufgerufen. Sobald alle Plugins geladen sind wird `onStartup` aufgerufen. Danach informiert der Core mit `onRequest` dass es eine Anfrage gibt, welche vom [Edit-Plugin](https://github.com/datenstrom/yellow-plugins/tree/master/edit) behandelt wird. Änderungen an der Seite können mit verschiedenen `onEdit`-Ereignisse überprüft werden. Dann wird die Seite im Dateisystem gespeichert. Zum Schluss wird ein Statuscode zum Neuladen der Seite ausgegeben und es wird `onShutdown` aufgerufen.
+
+Wird ein Befehl ausgeführt, dann werden die Plugins geladen und es wird `onLoad` aufgerufen. Sobald alle Plugins geladen sind wird `onStartup` aufgerufen. Danach informiert der Core mit `onCommand` dass es einen Befehl gibt, welcher vom entsprechenden Plugin behandelt wird. Sollte kein Befehl an der [Befehlszeile](https://github.com/datenstrom/yellow-plugins/tree/master/command) eingegeben worden sein, dann wird `onCommandHelp` aufgerufen und Plugins können eine Hilfe zur Verfügung stellen. Zum Schluss wird ein Rückgabecode ausgegeben und es wird `onShutdown` aufgerufen.
+
+### Yellow-Core-Ereignisse
+
+Yellow-Core-Ereignisse unterrichten wenn sich ein Zustand ändert:
 
 **function onLoad($yellow)**  
 Behandle die Initialisierung
@@ -674,7 +722,7 @@ Behandle das Hochfahren
 Behandle eine Anfrage
 
 **function onParseMeta($page)**  
-Behandle das Parsen von Metadaten einer Seite
+Behandle das Parsen von [Metadaten](markdown-cheat-sheet#einstellungen) einer Seite
 
 **function onParseContentRaw($page, $text)**  
 Behandle das Parsen des Seiteninhaltes im Rohformat
@@ -691,47 +739,12 @@ Behandle das Parsen einer Seite
 **function onExtra($name)**  
 Behandle das Parsen von extra HTML-Daten einer Seite
 
-**function onEditUserRestrictions($email, $location, $fileName, $users)**  
-Behandle Benutzerbeschränkungen
-
-**function onEditUserAccount($email, $password, $action, $users)**  
-Behandle Benutzerkontoänderungen
-
-**function onEditContentFile($page, $text)**  
-Behandle das Bearbeiten der Textdatei 
-
-**function onCommand($args)**  
-Behandle Befehle
-
-**function onCommandHelp()**  
-Behandle Hilfe für Befehle
-
 **function onShutdown()**  
 Behandle das Runterfahren
 
-Hier ist der normale Ereignisablauf:
+Hier ist ein Beispiel-Plugin um eine `[example]`-Abkürzung zu parsen:
 
-```  {#yellow-ereignisablauf}
-onLoad -----▶ onStartup -----▶ onRequest
-                  |                |
-                  |                |---------------------
-                  |                |                    |
-                  ▼                ▼                    ▼
-              onCommand        onParseMeta          onEditUserRestrictions
-              onCommandHelp    onParseContentRaw    onEditUserAccount
-                  |            onParseContentBlock  onEditContentFile
-                  |            onParseContentText       |
-                  |            onParsePage              |
-                  |            onExtra                  |
-                  ▼                |                    |
-exit ◀------- onShutDown ◀-------------------------------
-```
-
-Wird eine Seite angezeigt, dann werden die Plugins geladen und es wird `onLoad` aufgerufen. Sobald alle Plugins geladen sind wird `onStartup` aufgerufen. Danach informiert der Core mit `onRequest` dass es eine Anfrage gibt. Dann können Seiten mit verschiedenen `onParse`-Events analysiert werden. Sollte ein Fehler auftreten, wird eine Fehlerseite erzeugt. Zum Schluss wird die Seite ausgegeben und es wird `onShutdown` aufgerufen.
-
-Hier ist ein Beispiel-Plugin um HTML mit der Abkürzung `[example]` zu erzeugen:
-
-``` php {#yellow-beispiel-plugins}
+``` php
 <?php
 class YellowExample
 {
@@ -757,12 +770,24 @@ class YellowExample
 		return $output;
 	}
 }
-
 $yellow->plugins->register("example", "YellowExample", YellowExample::VERSION);
 ?>
 ```
 
-Hier ist ein Beispiel-Plugin um die Dateien `example.css` und `example.js` einzubinden:
+### Yellow-Edit-Ereignisse
+
+Yellow-Edit-Ereignisse unterrichten wenn eine Seite bearbeitet wird:
+
+**function onEditUserRestrictions($email, $location, $fileName, $users)**  
+Behandle Benutzerbeschränkungen
+
+**function onEditUserAccount($email, $password, $action, $users)**  
+Behandle Benutzerkontoänderungen
+
+**function onEditContentFile($page, $text)**  
+Behandle das Bearbeiten der Textdatei 
+
+Hier ist ein Beispiel-Plugin um Schreibrechte von bestimmten Benutzern zu beschränken:
 
 ``` php
 <?php
@@ -777,26 +802,28 @@ class YellowExample
 		$this->yellow = $yellow;
 	}
 
-	// Handle page extra HTML data
-	function onExtra($name)
+	// Handle user restrictions
+	function onEditUserRestrictions($email, $location, $fileName, $users)
 	{
-		$output = null;
-		if($name=="header")
-		{
-			$pluginLocation = $this->yellow->config->get("serverBase").
-			$pluginLocation .= $this->yellow->config->get("pluginLocation");
-			$output = "<link rel=\"stylesheet\" type=\"text/css\" media=\"all\" href=\"{$pluginLocation}example.css\" />\n";
-			$output .= "<script type=\"text/javascript\" src=\"{$pluginLocation}example.js\"></script>\n";
-		}
-		return $output;
+		return $users->getHome($email)=="/guests/";
 	}
 }
-
 $yellow->plugins->register("example", "YellowExample", YellowExample::VERSION);
 ?>
 ```
 
-Hier ist ein Beispiel-Plugin um das Schreibrecht für bestimmte Benutzer zu beschränken:
+### Yellow-Command-Ereignisse
+
+Yellow-Command-Ereignisse unterrichten wenn ein Befehl ausgeführt wird:
+
+**function onCommand($args)**  
+Behandle Befehle
+
+**function onCommandHelp()**  
+Behandle Hilfe für Befehle
+
+
+Hier ist ein Beispiel-Plugin um einen Befehl zu behandeln:
 
 ``` php
 <?php
@@ -811,10 +838,23 @@ class YellowExample
 		$this->yellow = $yellow;
 	}
 
-	// Handle user restrictions
-	function onEditUserRestrictions($email, $location, $fileName, $users)
+	// Handle command help
+	function onCommandHelp()
 	{
-		return $users->getHome($email)=="/guests/";
+		return "example\n";
+	}
+	
+	// Handle command
+	function onCommand($args)
+	{
+		$statusCode = 0;
+		list($command) = $args;
+		if($command=="example")
+		{
+			echo "Yellow $command: Add more text here\n";
+			$statusCode = 200;
+		}
+		return $statusCode;
 	}
 }
 $yellow->plugins->register("example", "YellowExample", YellowExample::VERSION);
@@ -916,6 +956,6 @@ Einige Tipps für Entwickler:
 
 1. [Installiere das Entwickler-Kit](https://github.com/datenstrom/yellow-developers). Das Entwickler-Kit für Datenstrom Yellow bietet Plugins, Themes und Beispiele. Du kannst ausprobieren wie man kleine Webseite, Blogs und Wikis macht. Es ist eine grossartige Art um loszulegen. 
 
-2. [Lerne die Web-Grundlagen](https://www.w3schools.com). Mach dich vertraut mit HTML, CSS und JavaScript. Das sind die wichtigsten Dinge die man wissen muss um Webseiten zu erstellen. Du brauchst keine aufwendigen Frameworks oder Bibliotheken erlernen.
+2. [Lerne die Web-Grundlagen](https://www.w3schools.com). Mach dich vertraut mit HTML, CSS und JavaScript. Das sind die wichtigsten Dinge die man wissen muss um Webseiten zu erstellen. Du brauchst keine anderen Frameworks oder Bibliotheken erlernen.
 
 3. [Stelle deinen Code auf GitHub](https://github.com/datenstrom/yellow/issues?q=label%3Anews%20). Erstelle ein Repository für jedes neue Plugin/Theme. Der Name deines Repository sollte `yellow-plugin-xyz` or `yellow-theme-xyz` sein. Dein Code muss nicht perfekt sein, aber er sollte im Entwickler-Kit funktionieren.

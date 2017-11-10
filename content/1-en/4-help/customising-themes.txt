@@ -1,11 +1,11 @@
 ---
 Title: Customising themes
 ---
-You can customise the visual design of your website. [See demo](/tests/custom-theme).
+You can customise the appearance of your website. [See demo](/tests/custom-theme).
 
 ## Themes
 
-Themes define the visual design of your website. Start with a theme that you like. The default theme is defined in the [system settings](adjusting-system#system-settings). A different theme can be defined in the [settings](markdown-cheat-sheet#settings) at the top of each page, for example `Theme: flatsite`.
+Themes define the appearance of your website. Start with a theme that you like. The default theme is defined in the [system settings](adjusting-system#system-settings). A different theme can be defined in the [settings](markdown-cheat-sheet#settings) at the top of each page, for example `Theme: flatsite`.
 
 Every website has a small icon, sometimes called favicon. The web browser displays this icon for example in address bar, in bookmarks or on the desktop. To change the default icon overwrite file `system/themes/assets/icon.png`.
 
@@ -33,7 +33,7 @@ The first `<div>` element contains useful class information, for example `templa
 
 ## CSS
 
-To adjust themes you can use [CSS](https://www.w3schools.com/css/). This allows you to change colors, font and the visual design of your website. The easiest way is to change the available CSS files. You can also create a new file, for example `Theme: custom`.
+To adjust themes you can use [CSS](https://www.w3schools.com/css/). This allows you to change colors, font and the appearance of your website. The easiest way is to change the available CSS files. You can also create a new file, for example `Theme: custom`.
  
 Here's an example CSS file `system/themes/assets/custom.css`:
 

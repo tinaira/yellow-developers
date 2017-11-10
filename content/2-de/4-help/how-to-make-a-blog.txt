@@ -2,7 +2,7 @@
 Title: Blog erstellen
 ---
 [[image screenshot-blog.png Screenshot screenshot 75%]](/de/plugins/blog/fika-is-good-for-you)  
-Lerne wie man ein eigenes Blog macht. [Demo anschauen](/de/plugins/blog/).
+Lerne wie man ein eigenes Blog erstellt. [Demo anschauen](/de/plugins/blog/).
 
 ## Blog installieren
 

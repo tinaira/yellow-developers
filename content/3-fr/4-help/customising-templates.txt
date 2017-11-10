@@ -1,7 +1,7 @@
 ---
 Title: Personnaliser des templates
 ---
-Vous pouvez personnaliser les fonctionnalités de votre site web. [Voir la démo](/fr/tests/custom-template).
+Vous pouvez personnaliser le code source de votre site web. [Voir la démo](/fr/tests/custom-template).
 
 >>> [Vous pouvez nous aider à traduire cette page.](https://github.com/datenstrom/yellow-developers/blob/master/content/3-fr/4-help/customising-templates.txt)
 

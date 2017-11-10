@@ -2,7 +2,7 @@
 Title: Webseite erstellen
 ---
 [[image screenshot-website-de.png Screenshot screenshot 75%]](/de/)  
-Lerne wie man eine eigene Webseite macht. [Demo anschauen](/de/).
+Lerne wie man eine eigene Webseite erstellt. [Demo anschauen](/de/).
 
 ## Webseite installieren
 

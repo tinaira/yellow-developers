@@ -1,13 +1,13 @@
 ---
 Title: Personnaliser des thèmes
 ---
-Vous pouvez personnaliser l'aspect visuel de votre site web. [Voir la démo](/fr/tests/custom-theme).
+Vous pouvez personnaliser l'apparence de votre site web. [Voir la démo](/fr/tests/custom-theme).
 
 >>> [Vous pouvez nous aider à traduire cette page.](https://github.com/datenstrom/yellow-developers/blob/master/content/3-fr/4-help/customising-themes.txt)
 
 ## Thèmes
 
-Les thèmes définissent l'aspect visuel de votre site web. Le thème utilisé par défaut est défini dans les [paramètres du système](adjusting-system#paramètres-du-système). Un thème différent peut être configuré pour chacune de vos pages dans les [paramètres](markdown-cheat-sheet#paramètres) en haut de celle-ci, par exemple `Theme: flatsite`.
+Les thèmes définissent l'apparence de votre site web. Le thème utilisé par défaut est défini dans les [paramètres du système](adjusting-system#paramètres-du-système). Un thème différent peut être configuré pour chacune de vos pages dans les [paramètres](markdown-cheat-sheet#paramètres) en haut de celle-ci, par exemple `Theme: flatsite`.
 
 Every website has a small icon, sometimes called favicon. The web browser displays this icon for example in address bar, in bookmarks or on the desktop. To change the default icon overwrite file `system/themes/assets/icon.png`.
 
@@ -35,7 +35,7 @@ The first `<div>` element contains useful class information, for example `templa
 
 ## CSS
 
-To adjust themes you can use [CSS](https://www.w3schools.com/css/). This allows you to change colors, font and the visual design of your website. The easiest way is to change the available CSS files. You can also create a new file, for example `Theme: custom`.
+To adjust themes you can use [CSS](https://www.w3schools.com/css/). This allows you to change colors, font and the appearance of your website. The easiest way is to change the available CSS files. You can also create a new file, for example `Theme: custom`.
  
 Here's an example CSS file `system/themes/assets/custom.css`:
 

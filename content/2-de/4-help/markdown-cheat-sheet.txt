@@ -109,23 +109,23 @@ Und natürlich Emoji, [siehe Emoji-Spickzettel](http://www.emoji-cheat-sheet.com
 
 ## Abkürzungen
 
-`[image picture.jpg Picture - 50%]` = [Miniaturbild](https://github.com/datenstrom/yellow-plugins/tree/master/image) hinzufügen  
-`[gallery photo.*jpg - 20%]` = [Bildergalerie](https://github.com/datenstrom/yellow-plugins/tree/master/gallery) hinzufügen  
-`[slider photo.*jpg]` = [Bildergalerie mit Schieber](https://github.com/datenstrom/yellow-plugins/tree/master/slider) hinzufügen  
-`[youtube fhs55HEl-Gc]` = [Youtube-Video](https://github.com/datenstrom/yellow-plugins/tree/master/youtube) einbinden  
-`[vimeo 13387502]` = [Vimeo-Video](https://github.com/datenstrom/yellow-plugins/tree/master/vimeo) einbinden  
-`[soundcloud 101175715]` = [Soundcloud-Audio](https://github.com/datenstrom/yellow-plugins/tree/master/soundcloud) einbinden  
-`[twitter datenstromse]` = [Twitter-Nachrichten](https://github.com/datenstrom/yellow-plugins/tree/master/twitter) einbinden  
-`[instagram BISN9ngjV2-]` = [Instagram-Foto](https://github.com/datenstrom/yellow-plugins/tree/master/instagram) einbinden  
-`[googlecalendar de.german#holiday]` = [Google-Kalender](https://github.com/datenstrom/yellow-plugins/tree/master/googlecalendar) einbinden  
-`[googlemaps Stockholm]` = [Google-Karte](https://github.com/datenstrom/yellow-plugins/tree/master/googlemaps) einbinden  
-`[blogrecent /blog/]` = [neuste Blogseiten](https://github.com/datenstrom/yellow-plugins/tree/master/blog#how-to-configure-a-blog) anzeigen  
-`[wikirecent /wiki/]` = [neuste Wikiseiten](https://github.com/datenstrom/yellow-plugins/tree/master/wiki#how-to-configure-a-wiki) anzeigen  
-`[fa fa-envelope-o]` = [Icons und Symbole](https://github.com/datenstrom/yellow-plugins/tree/master/fontawesome) anzeigen  
-`[ea ea-smile]` = [Emoji und bunte Bilder](https://github.com/datenstrom/yellow-plugins/tree/master/emojiawesome) anzeigen  
-`[yellow]` = [Informationen über Webseite](https://github.com/datenstrom/yellow-plugins/tree/master/core) anzeigen  
-`[toc]` = [Inhaltsverzeichnis](https://github.com/datenstrom/yellow-plugins/tree/master/toc) anzeigen  
-`[--more--]` = [Seitenumbruch](https://github.com/datenstrom/yellow-plugins/tree/master/blog#how-to-configure-a-blog) hinzufügen  
+`[image picture.jpg Picture - 50%]` = [Miniaturbild hinzufügen](https://github.com/datenstrom/yellow-plugins/tree/master/image)  
+`[gallery photo.*jpg - 20%]` = [Bildergalerie hinzufügen](https://github.com/datenstrom/yellow-plugins/tree/master/gallery)  
+`[slider photo.*jpg]` = [Bildergalerie mit Schieber hinzufügen](https://github.com/datenstrom/yellow-plugins/tree/master/slider)  
+`[youtube fhs55HEl-Gc]` = [Youtube-Video einbinden](https://github.com/datenstrom/yellow-plugins/tree/master/youtube)  
+`[vimeo 13387502]` = [Vimeo-Video einbinden](https://github.com/datenstrom/yellow-plugins/tree/master/vimeo)  
+`[soundcloud 101175715]` = [Soundcloud-Audio einbinden](https://github.com/datenstrom/yellow-plugins/tree/master/soundcloud)  
+`[twitter datenstromse]` = [Twitter-Nachrichten einbinden](https://github.com/datenstrom/yellow-plugins/tree/master/twitter)  
+`[instagram BISN9ngjV2-]` = [Instagram-Foto einbinden](https://github.com/datenstrom/yellow-plugins/tree/master/instagram)  
+`[googlecalendar de.german#holiday]` = [Google-Kalender einbinden](https://github.com/datenstrom/yellow-plugins/tree/master/googlecalendar)  
+`[googlemaps Stockholm]` = [Google-Karte einbinden](https://github.com/datenstrom/yellow-plugins/tree/master/googlemaps)  
+`[blogrecent /blog/]` = [neuste Blogseiten anzeigen](https://github.com/datenstrom/yellow-plugins/tree/master/blog#how-to-configure-a-blog)  
+`[wikirecent /wiki/]` = [neuste Wikiseiten anzeigen](https://github.com/datenstrom/yellow-plugins/tree/master/wiki#how-to-configure-a-wiki)  
+`[fa fa-envelope-o]` = [Icons und Symbole anzeigen](https://github.com/datenstrom/yellow-plugins/tree/master/fontawesome)  
+`[ea ea-smile]` = [Emoji und bunte Bilder](https://github.com/datenstrom/yellow-plugins/tree/master/emojiawesome)  
+`[yellow]` = [Informationen über Webseite anzeigen](https://github.com/datenstrom/yellow-plugins/tree/master/core)  
+`[toc]` = [Inhaltsverzeichnis anzeigen](https://github.com/datenstrom/yellow-plugins/tree/master/toc)  
+`[--more--]` = [Seitenumbruch hinzufügen](https://github.com/datenstrom/yellow-plugins/tree/master/blog#how-to-configure-a-blog)  
 
 ## Einstellungen
 
