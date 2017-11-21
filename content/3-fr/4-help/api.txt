@@ -13,21 +13,22 @@ API pour les développeurs. Nous :heart: les développeurs.
 The following files are available in Datenstrom Yellow:
 
 ```
-|- content              = content files
-|- media                = media files
-\- system               = system files
-   |- config            = configuration files
-   |- plugins           = features of your website
-   |- themes            = appearance of your website
-   |  |- assets         = CSS, fonts and files for themes
-   |  |- snippets       = building blocks for templates
-   |  \- templates      = template files
-   \- trash             = deleted files
+- content               = content files
+- media                 = media files
+- system                = system files
+  - config              = configuration files
+  - plugins             = features of your website
+  - themes              = appearance of your website
+    - assets            = CSS, fonts and files for themes
+    - snippets          = building blocks for templates
+    - templates         = template files
+  - trash               = deleted files
 ```
 
 You can find the most important configuration files here:
 
 `system/config/config.ini` = [system settings](adjusting-system#system-settings)  
+`system/config/text.ini` = [text settings](adjusting-system#text-settings)  
 `system/config/user.ini` = [user accounts](adjusting-system#user-accounts)  
 
 ## Objects
@@ -60,10 +61,10 @@ Return page [meta data](markdown-cheat-sheet#settings) as [language specific dat
 Return page [meta data](markdown-cheat-sheet#settings) as [language specific date](#formats), HTML encoded  
 
 **$yellow->page->getDateFormatted($key, $format)**  
-Return page [meta data](markdown-cheat-sheet#settings) as [custom date](http://php.net/manual/en/function.date.php)  
+Return page [meta data](markdown-cheat-sheet#settings) with [custom date format](http://php.net/manual/en/function.date.php)  
 
 **$yellow->page->getDateFormattedHtml($key, $format)**  
-Return page [meta data](markdown-cheat-sheet#settings) as [custom date](http://php.net/manual/en/function.date.php), HTML encoded  
+Return page [meta data](markdown-cheat-sheet#settings) with [custom date format](http://php.net/manual/en/function.date.php), HTML encoded  
 
 **$yellow->page->getContent($rawFormat = false, $sizeMax = 0)**  
 Return page content, HTML encoded or raw format
@@ -539,7 +540,7 @@ Safe mode is <?php echo htmlspecialchars($parserSafeMode ? "on" : "off") ?>.
 
 ### Yellow text
 
-Yellow text gives access to [text](language-configuration#languages):
+Yellow text gives access to [text](adjusting-system#text-settings):
 
 **$yellow->text->get($key)**  
 Return text string
@@ -864,24 +865,19 @@ $yellow->plugins->register("example", "YellowExample", YellowExample::VERSION);
 
 ## Formats
 
-The following date formats are available: 
-
-`YYYY-MM-DD` = date starting with the year, e.g. `2013-04-07`  
-`YYYY-MM-DD HH:MM:SS` = date and time, e.g. `2013-04-07 11:30:00`  
-
-When dates are displayed on a [page](#yellow-page) they are converted to a language specific date:
+When dates are displayed on a page they are converted to a language specific date:
 
 `dateFormatShort` = short date, e.g. `April 2013`  
 `dateFormatMedium` = medium date, e.g. `2013-04-07`   
 `dateFormatLong` = long date, e.g. `2013-04-07 11:30`   
 
-When times are displayed on a [page](#yellow-page) they are converted to a language specific time:
+When times are displayed on a page they are converted to a language specific time:
 
 `timeFormatShort` = short time, e.g. `11:30`  
 `timeFormatMedium` = medium time, e.g. `11:30:01`  
 `timeFormatLong` = long time, e.g. `11:30:01 GMT+1`  
 
-When text is displayed you can use one of these encoding functions:
+When text is displayed on a page you can use one of these encoding functions:
 
 `htmlspecialchars($string)` = encode text string into HTML format  
 `rawurlencode($string)` = encode URL, e.g. hyperlink arguments  

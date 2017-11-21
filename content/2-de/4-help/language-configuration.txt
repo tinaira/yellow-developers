@@ -5,7 +5,7 @@ Wie man verschiedene Sprachen konfiguriert.
 
 ## Sprachen
 
-Die Installation kommt mit drei Sprachen und es gibt weitere [Sprachen](https://github.com/datenstrom/yellow-plugins/tree/master/language) zum Herunterladen. Die Standardsprache wird in den [Systemeinstellungen](adjusting-system#systemeinstellungen) festgelegt. Eine andere Sprache lässt sich in den [Einstellungen](markdown-cheat-sheet#einstellungen) ganz oben auf jeder Seite festlegen, zum Beispiel `Language: en`. 
+Die Installation kommt mit drei Sprachen und es gibt weitere [Sprachen zum Herunterladen](https://github.com/datenstrom/yellow-plugins/tree/master/language). Die Standardsprache wird in den [Systemeinstellungen](adjusting-system#systemeinstellungen) festgelegt. Eine andere Sprache lässt sich in den [Einstellungen](markdown-cheat-sheet#einstellungen) ganz oben auf jeder Seite festlegen, zum Beispiel `Language: en`. 
 
 ## Einsprachen-Modus
 

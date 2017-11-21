@@ -5,7 +5,7 @@ All settings are located in the `system` folder. You can adjust your website her
 
 [image screenshot-system.png Screenshot]
 
-The `config` folder contains configuration files. The `plugins` folder contains the features of your website. The `themes` folder is for the appearance of your website. Changes in these folders affect the entire website.
+The `config` folder contains configuration files. The `plugins` folder contains the features of your website. The `themes` folder is for the appearance of your website. The `trash` folder stores deleted files. Changes in these folders affect the entire website.
 
 ## System settings
 
@@ -19,6 +19,16 @@ The main configuration file is `system/config/config.ini`. Here's an example:
     Theme: flatsite
 
 You can define the default settings here, for example the name of the website and the email of the webmaster. Individual [settings](markdown-cheat-sheet#settings) can be defined at the top of each page. For a new installation you should set `Sitename`, `Author` and `Email`.
+
+## Text settings
+
+An important configuration file is `system/config/text.ini`. Here's an example:
+
+    DateFormatShort: F Y
+    DateFormatMedium: Y-m-d
+    DateFormatLong: Y-m-d H:i
+
+You can define the text settings here, for example texts that are displayed on the website and the date format. It's possible to use a [custom date format](http://php.net/manual/en/function.date.php), if you don't like the default setting. There are different texts for different [languages](language-configuration#languages).
 
 ## User accounts
 

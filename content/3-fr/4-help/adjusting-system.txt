@@ -5,7 +5,7 @@ Tout les paramètres se trouvent dans le dossier `system`. Vous pouvez y faire d
 
 [image screenshot-system.png Screenshot]
 
-Le dossier `config` contient les fichiers de configurations. Le dossier `plugins` contient les fonctionnalités de votre site web. Le dossier `themes` concerne l'apparence de votre site web. Apporter des changements dans ces dossiers affectera entièrement votre site web.
+Le dossier `config` contient les fichiers de configurations. Le dossier `plugins` contient les fonctionnalités de votre site web. Le dossier `themes` concerne l'apparence de votre site web. Le dossier `trash` stocke les fichiers supprimés. Apporter des changements dans ces dossiers affectera entièrement votre site web.
 
 ## Paramètres du système
 
@@ -19,6 +19,16 @@ Le fichier de configuration principal est `system/config/config.ini`. Voici un e
     Theme: flatsite
 
 Vous pouvez y définir les paramètres par défaut, par exemple le nom du site web et l'email du webmaster. Des [paramètres](markdown-cheat-sheet#paramètres) individuels peuvent être définis au haut de chaque page. Lors d'une nouvelle installation, il est conseillé de modifier `Sitename`, `Author` et `Email`.
+
+## Paramètres de texte
+
+Un fichier de configuration important est `system/config/text.ini`. Voici un exemple:
+
+    DateFormatShort: F Y
+    DateFormatMedium: d/m/Y
+    DateFormatLong: d/m/Y H:i
+
+Vous pouvez définir ici les paramètres de texte, par exemple les textes affichés sur le site web et le format de la date. Il est possible d'utiliser un [format de date personnalisé](http://php.net/manual/fr/function.date.php). Il existe différents textes pour différentes [langues](language-configuration#langages).
 
 ## Comptes d'utilisateurs
 

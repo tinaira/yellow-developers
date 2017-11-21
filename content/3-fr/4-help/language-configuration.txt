@@ -7,7 +7,7 @@ Comment configurer différents langages.
 
 ## Langages
 
-L'installation est fournie avec trois langues et il existe [traductions](https://github.com/datenstrom/yellow-plugins/tree/master/language) à télécharger. La langue par défaut est définie dans les [paramètres du système](adjusting-system#paramètres-du-système). Une autre langue peut-être définie pour chacune de vos pages dans les [paramètres](markdown-cheat-sheet#paramètres) en haut de celle-ci, par exemple `Language: en`.
+L'installation est fournie avec trois langues et il existe [traductions à télécharger](https://github.com/datenstrom/yellow-plugins/tree/master/language). La langue par défaut est définie dans les [paramètres du système](adjusting-system#paramètres-du-système). Une autre langue peut-être définie pour chacune de vos pages dans les [paramètres](markdown-cheat-sheet#paramètres) en haut de celle-ci, par exemple `Language: en`.
 
 ## Le mode uni-langue
 

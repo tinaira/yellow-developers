@@ -11,21 +11,22 @@ API für Entwickler. Wir :heart: Entwickler.
 Die folgenden Dateien sind vorhanden in Datenstrom Yellow:
 
 ```
-|- content              = Inhalte
-|- media                = Mediendateien
-\- system               = Systemdateien
-   |- config            = Konfigurationsdateien
-   |- plugins           = Funktionen der Webseite
-   |- themes            = Aussehen der Webseite
-   |  |- assets         = CSS, Schriftarten und Dateien für Themes
-   |  |- snippets       = Bausteine für Templates
-   |  \- templates      = Template-Dateien
-   \- trash             = gelöschte Dateien
+- content               = Inhalte
+- media                 = Mediendateien
+- system                = Systemdateien
+  - config              = Konfigurationsdateien
+  - plugins             = Funktionen der Webseite
+  - themes              = Aussehen der Webseite
+    - assets            = CSS, Schriftarten und Dateien für Themes
+    - snippets          = Bausteine für Templates
+    - templates         = Template-Dateien
+  - trash               = gelöschte Dateien
 ```
 
 Die wichtigsten Konfigurationsdateien findest du hier:
 
 `system/config/config.ini` = [Systemeinstellungen](adjusting-system#systemeinstellungen)  
+`system/config/text.ini` = [Texteinstellungen](adjusting-system#texteinstellungen)  
 `system/config/user.ini` = [Benutzerkonten](adjusting-system#benutzerkonten)  
 
 ## Objekte
@@ -58,10 +59,10 @@ Hole die [Metadaten](markdown-cheat-sheet#einstellungen) der Seite als [sprachsp
 Hole die [Metadaten](markdown-cheat-sheet#einstellungen) der Seite als [sprachspezifisches Datum](#formate), HTML-kodiert
 
 **$yellow->page->getDateFormatted($key, $format)**  
-Hole die [Metadaten](markdown-cheat-sheet#einstellungen) der Seite als [maßgeschneidertes Datum](http://php.net/manual/de/function.date.php)
+Hole die [Metadaten](markdown-cheat-sheet#einstellungen) der Seite mit [maßgeschneidertem Datumsformat](http://php.net/manual/de/function.date.php)
 
 **$yellow->page->getDateFormattedHtml($key, $format)**  
-Hole die [Metadaten](markdown-cheat-sheet#einstellungen) der Seite als [maßgeschneidertes Datum](http://php.net/manual/de/function.date.php), HTML-kodiert
+Hole die [Metadaten](markdown-cheat-sheet#einstellungen) der Seite mit [maßgeschneidertem Datumsformat](http://php.net/manual/de/function.date.php), HTML-kodiert
 
 **$yellow->page->getContent($rawFormat = false, $sizeMax = 0)**  
 Hole den Seitenhalt, HTML-kodiert oder Rohformat
@@ -537,7 +538,7 @@ Safe mode is <?php echo htmlspecialchars($parserSafeMode ? "on" : "off") ?>.
 
 ### Yellow-Text
 
-Yellow-Text gibt Zugang zu [Text](language-configuration#sprachen):
+Yellow-Text gibt Zugang zu [Text](adjusting-system#texteinstellungen):
 
 **$yellow->text->get($key)**  
 Hole ein Textstring
@@ -863,24 +864,19 @@ $yellow->plugins->register("example", "YellowExample", YellowExample::VERSION);
 
 ## Formate
 
-Die folgenden Datumsformate sind vorhanden:
-
-`YYYY-MM-DD` = Datum beginnend mit dem Jahr, z.B. `2013-04-07`  
-`YYYY-MM-DD HH:MM:SS` = Datum und Uhrzeit z.B. `2013-04-07 11:30:00`  
-
-Wird ein Datum auf einer [Page](#yellow-page) angezeigt wird es in das sprachspezifisches Datum konvertiert: 
+Wird ein Datum auf einer Seite angezeigt wird es in das sprachspezifisches Datum konvertiert: 
 
 `dateFormatShort` = kurzes Datum, z.B. `April 2013`  
 `dateFormatMedium` = mittleres Datum, z.B. `07.04.2013`   
 `dateFormatLong` = langes Datum, z.B. `07.04.2013 11:30`   
 
-Wird eine Zeit auf einer [Page](#yellow-page) angezeigt wird sie in die sprachspezifische Zeit konvertiert: 
+Wird eine Zeit auf einer Seite angezeigt wird sie in die sprachspezifische Zeit konvertiert: 
 
 `timeFormatShort` = kurze Zeit, z.B. `11:30`  
 `timeFormatMedium` = mittlere Zeit, z.B. `11:30:01`   
 `timeFormatLong` = lange Zeit, z.B. `11:30:01 GMT+1`  
 
-Wird Text ausgegeben kann man diese Kodierungs-Funktionen benutzen:
+Wird Text auf einer Seite ausgegeben kann man diese Kodierungs-Funktionen benutzen:
 
 `htmlspecialchars($string)` = kodiere Textstring ins HTML-Format  
 `rawurlencode($string)` = kodiere URL, z.B. Hyperlink-Argumente  
