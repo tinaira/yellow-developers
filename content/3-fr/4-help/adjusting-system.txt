@@ -28,7 +28,7 @@ Un fichier de configuration important est `system/config/text.ini`. Voici un exe
     DateFormatMedium: d/m/Y
     DateFormatLong: d/m/Y H:i
 
-Vous pouvez définir ici les paramètres de texte, par exemple les textes affichés sur le site web et le [format de la date](http://php.net/manual/fr/function.date.php). Il existe différents textes pour différentes langues. La langue définit les [paramètres de texte]((https://github.com/datenstrom/yellow-plugins/tree/master/language)) qui seront utilisés.
+Vous pouvez définir ici les paramètres de texte, par exemple les textes affichés sur le site web et le [format de la date](http://php.net/manual/fr/function.date.php). Il existe différents textes pour différentes langues. La langue définit les [paramètres de texte](https://github.com/datenstrom/yellow-plugins/tree/master/language) qui seront utilisés.
 
 ## Comptes d'utilisateurs
 
