@@ -7,7 +7,7 @@ Vous pouvez personnaliser l'apparence de votre site web. [Voir la démo](/fr/tes
 
 ## Thèmes
 
-Les thèmes définissent l'apparence de votre site web. Le thème utilisé par défaut est défini dans les [paramètres du système](adjusting-system#paramètres-du-système). Un thème différent peut être configuré pour chacune de vos pages dans les [paramètres](markdown-cheat-sheet#paramètres) en haut de celle-ci, par exemple `Theme: flatsite`.
+Les thèmes définissent l'apparence de votre site web et il existe [thèmes à télécharger](/fr/themes/). Le thème par défaut est défini dans les [paramètres du système](adjusting-system#paramètres-du-système). Une autre thème peut-être définie pour chacune de vos pages dans les [paramètres](markdown-cheat-sheet#paramètres) en haut de celle-ci, par exemple `Theme: flatsite`.
 
 Every website has a small icon, sometimes called favicon. The web browser displays this icon for example in address bar, in bookmarks or on the desktop. To change the default icon overwrite file `system/themes/assets/icon.png`.
 

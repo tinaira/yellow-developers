@@ -28,7 +28,7 @@ An important configuration file is `system/config/text.ini`. Here's an example:
     DateFormatMedium: Y-m-d
     DateFormatLong: Y-m-d H:i
 
-You can define the text settings here, for example texts that are displayed on the website and the date format. It's possible to use a [custom date format](http://php.net/manual/en/function.date.php), if you don't like the default setting. There are different texts for different [languages](language-configuration#languages).
+You can define the text settings here, for example texts that are displayed on the website and the [date format](http://php.net/manual/en/function.date.php). There are different texts for different languages. The language defines which [text settings](https://github.com/datenstrom/yellow-plugins/tree/master/language) will be used.
 
 ## User accounts
 

@@ -5,7 +5,8 @@ Du kannst das Aussehen deiner Webseite anpassen. [Demo anschauen](/de/tests/cust
 
 ## Themes
 
-Themes bestimmen das Aussehen deiner Webseite. Das Standardtheme wird in den [Systemeinstellungen](adjusting-system#systemeinstellungen) festgelegt. Eine anderes Theme lässt sich in den [Einstellungen](markdown-cheat-sheet#einstellungen) ganz oben auf jeder Seite festlegen, zum Beispiel `Theme: flatsite`. 
+
+Themes bestimmen das Aussehen deiner Webseite und es gibt [Themes zum Herunterladen](/de/themes/). Das Standardtheme wird in den [Systemeinstellungen](adjusting-system#systemeinstellungen) festgelegt. Eine anderes Theme lässt sich in den [Einstellungen](markdown-cheat-sheet#einstellungen) ganz oben auf jeder Seite festlegen, zum Beispiel `Theme: flatsite`. 
 
 Jede Webseite hat ein kleines Icon, auch Favicon genannt. Der Webbrowser zeigt dieses Icon beispielsweise in der Adresszeile, in Lesezeichen oder auf der Arbeitsfläche an. Um das Standardicon zu ändern überschreibe die Datei `system/themes/assets/icon.png`.
 

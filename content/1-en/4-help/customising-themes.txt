@@ -5,7 +5,7 @@ You can customise the appearance of your website. [See demo](/tests/custom-theme
 
 ## Themes
 
-Themes define the appearance of your website. Start with a theme that you like. The default theme is defined in the [system settings](adjusting-system#system-settings). A different theme can be defined in the [settings](markdown-cheat-sheet#settings) at the top of each page, for example `Theme: flatsite`.
+Themes define the appearance of your website and there are [themes to download](/themes/). The default theme is defined in the [system settings](adjusting-system#system-settings). A different theme can be defined in the [settings](markdown-cheat-sheet#settings) at the top of each page, for example `Theme: flatsite`.
 
 Every website has a small icon, sometimes called favicon. The web browser displays this icon for example in address bar, in bookmarks or on the desktop. To change the default icon overwrite file `system/themes/assets/icon.png`.
 

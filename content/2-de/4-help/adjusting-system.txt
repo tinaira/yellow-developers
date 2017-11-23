@@ -28,7 +28,7 @@ Eine wichtige Konfigurationsdatei ist `system/config/text.ini`. Hier ist ein Bei
     DateFormatMedium: d.m.Y
     DateFormatLong: d.m.Y H:i
 
-Dort kannst du die Texteinstellungen festlegen, zum Beispiel Texte die auf der Webseite angezeigt werden und das Datumsformat. Es ist möglich ein [maßgeschneidertes Datumsformat](http://php.net/manual/de/function.date.php) zu verwenden. Es gibt unterschiedliche Texte für unterschiedliche [Sprachen](language-configuration#sprachen).
+Dort kannst du die Texteinstellungen festlegen, zum Beispiel Texte die auf der Webseite angezeigt werden und das [Datumsformat](http://php.net/manual/de/function.date.php). Es gibt unterschiedliche Texte für unterschiedliche Sprache. Die Sprache legt fest welche [Texteinstellungen](https://github.com/datenstrom/yellow-plugins/tree/master/language) benutzt werden.
 
 ## Benutzerkonten
 
