@@ -89,6 +89,8 @@ Experimental plugins:
   Yellow plugin for easy FAQ handling.
 * [Fotorama](https://github.com/nogginfuel/yellow-plugin-fotorama): 
   A jQuery image gallery with carousel.
+* [Global Content](https://github.com/schulle4u/yellow-plugin-global): 
+  Includes page content into another page.
 * [Inline Attachment](https://github.com/nibreh/yellow-plugin-inline-attachment): 
   Drag and Drop Image Upload
 * [jQuery](https://github.com/nogginfuel/yellow-plugin-jquery):
@@ -105,6 +107,8 @@ Experimental plugins:
   Embed Mixcloud audio tracks.
 * [PageTxt](https://github.com/richi/yellow-plugin-pagetxt):
   Overwrite language entries in a page.
+* [Random](https://github.com/schulle4u/yellow-plugin-random): 
+  Display random pages from specified location.
 * [Shariff](https://github.com/schulle4u/yellow-plugin-shariff):
   Privacy-friendly social sharing buttons for your Yellow website.
 * [Skipto](https://github.com/schulle4u/yellow-plugin-skipto):
@@ -123,3 +127,5 @@ Experimental plugins:
   Use the command line interface without shell access.
 * [YCSSG](https://github.com/dieli/yellow-extension-ycssg):
   Image gallery in CSS only.
+
+We have a developer kit and an [API for developers](https://developers.datenstrom.se/help/api).
