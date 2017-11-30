@@ -5,7 +5,7 @@
 
 class YellowTraffic
 {
-	const VERSION = "0.7.2";
+	const VERSION = "0.7.3";
 	var $yellow;			//access to API
 	var $days;				//detected days
 	var $views;				//detected views
@@ -170,7 +170,7 @@ class YellowTraffic
 	// Show top requests
 	function showRequests($array, $text)
 	{
-		uasort($array, strnatcasecmp);
+		uasort($array, "strnatcasecmp");
 		$array = array_reverse(array_filter($array, function($value) { return $value>0; }));
 		$array = array_slice($array, 0, $this->yellow->config->get("trafficLinesMax"));
 		if(!empty($array))

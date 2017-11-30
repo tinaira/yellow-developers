@@ -5,7 +5,7 @@
 
 class YellowWiki
 {
-	const VERSION = "0.7.2";
+	const VERSION = "0.7.3";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -37,10 +37,10 @@ class YellowWiki
 				$authors = $this->yellow->lookup->normaliseUpperLower($authors);
 				if($pagesMax!=0 && count($authors)>$pagesMax)
 				{
-					uasort($authors, strnatcasecmp);
+					uasort($authors, "strnatcasecmp");
 					$authors = array_slice($authors, -$pagesMax);
 				}
-				uksort($authors, strnatcasecmp);
+				uksort($authors, "strnatcasecmp");
 				$output = "<div class=\"".htmlspecialchars($name)."\">\n";
 				$output .= "<ul>\n";
 				foreach($authors as $key=>$value)
@@ -141,10 +141,10 @@ class YellowWiki
 				$tags = $this->yellow->lookup->normaliseUpperLower($tags);
 				if($pagesMax!=0 && count($tags)>$pagesMax)
 				{
-					uasort($tags, strnatcasecmp);
+					uasort($tags, "strnatcasecmp");
 					$tags = array_slice($tags, -$pagesMax);
 				}				
-				uksort($tags, strnatcasecmp);
+				uksort($tags, "strnatcasecmp");
 				$output = "<div class=\"".htmlspecialchars($name)."\">\n";
 				$output .= "<ul>\n";
 				foreach($tags as $key=>$value)
