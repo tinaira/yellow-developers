@@ -28,7 +28,7 @@ Eine wichtige Konfigurationsdatei ist `system/config/text.ini`. Hier ist ein Bei
     DateFormatMedium: d.m.Y
     DateFormatLong: d.m.Y H:i
 
-Dort kannst du die Texteinstellungen festlegen, zum Beispiel Texte die auf der Webseite angezeigt werden und das [Datumsformat](http://php.net/manual/de/function.date.php). Es gibt unterschiedliche Texte für unterschiedliche Sprache. Die Sprache legt fest welche [Texteinstellungen](https://github.com/datenstrom/yellow-plugins/tree/master/language) benutzt werden.
+Dort kannst du die Texteinstellungen festlegen, zum Beispiel Texte die auf der Webseite angezeigt werden und das [Datumsformat](http://php.net/manual/de/function.date.php). Es gibt unterschiedliche Texte für unterschiedliche Sprachen. Die Sprache legt fest welche [Texteinstellungen](https://github.com/datenstrom/yellow-plugins/tree/master/language) benutzt werden.
 
 ## Benutzerkonten
 
@@ -40,4 +40,4 @@ Alle Benutzerkonten sind in `system/config/user.ini` gespeichert. Hier ist ein B
 
 Im [Webbrowser](https://github.com/datenstrom/yellow-plugins/tree/master/edit) und der [Befehlszeile](https://github.com/datenstrom/yellow-plugins/tree/master/command) kannst du neue Benutzerkonten anlegen und Kennwörter ändern. Ein Benutzerkonto besteht aus E-Mail, verschlüsseltem Kennwort, verschiedenen Einstellungen und am Ende der Zeile befindet sich die Startseite des Benutzers.
 
-[Weiter: Spracheinstellungen →](language-configuration)
+[Weiter: Servereinstellungen →](server-configuration)

@@ -40,4 +40,4 @@ All user accounts are stored in file `system/config/user.ini`. Here's an example
 
 You can use the [web browser](https://github.com/datenstrom/yellow-plugins/tree/master/edit) and the [command line](https://github.com/datenstrom/yellow-plugins/tree/master/command) to create new user accounts and change passwords. A user account consists of email, encrypted password, different settings and at the end of the line is the user's home page.
 
-[Next: Language configuration →](language-configuration)
+[Next: Server configuration →](server-configuration)

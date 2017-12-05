@@ -1,28 +1,22 @@
 ---
 Title: Security configuration
 ---
-Here's how to set up a website with better security.
+Here's how to set up security and privacy.
 
-## Secure server
+## Login restrictions
 
-Check if your web server supports HTTPS. It's best if your website is only available via HTTPS and the Internet connection is always encrypted. This protects the privacy of your users, unfortunately it's not yet supported by all web hosting provider.
-
-You need a web server with TLS and valid certificate.
-
-## Safe mode
-
-If many people edit your website, enable the safe mode. Open file `system/config/config.ini` and change `ParserSafeMode: 1`. Users can only use [Markdown](markdown-cheat-sheet) for text formatting, but no HTML and JavaScript. The website will be protected from nuisance.
-
-You can [test safe mode](/tests/safe-mode).
+You can use the web browser to create new [user accounts](adjusting-system#user-accounts). If you don't need this feature on your website, then restrict the login. Open file `system/config/config.ini` and change `EditLoginRestrictions: 1`. Users are only allowed to log in.
 
 ## User restrictions
 
-If many people edit your website, restrict [user accounts](adjusting-system#user-accounts). Open file `system/config/user.ini` and at the end of the line change the user's home page. Users can only edit pages within their home page.
+You can use the web browser to edit pages. If you don't want pages to be changed, then restrict [user accounts](adjusting-system#user-accounts). Open file `system/config/user.ini` and at the end of the line change the user's home page. Users are only allowed to edit pages within their home page.
 
-You can [test user restrictions](/tests/user-restrictions).
+## Safe mode
 
-## Less is more
+If you want to protect your website from nuisance, then enable the safe mode. Open file `system/config/config.ini` and change `ParserSafeMode: 1`. Users are only allowed to use [Markdown](markdown-cheat-sheet) for text formatting, but no HTML and JavaScript. You can [test the safe mode](/tests/safe-mode).
 
-Check which features are used on your web server. Delete [plugins](/plugins/) that are no longer needed or make a [static website](server-configuration#static-website). As a rule of thumb, the fewer software is installed, the less vulnerable the website is for attacks.
+## Secure server
+
+Check if your web server supports HTTPS, if not contact your web hosting provider. It's best if your website is only available via HTTPS and the Internet connection is always encrypted. This protects the privacy of your users.
 
 [Next: Customising themes →](customising-themes)

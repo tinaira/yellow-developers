@@ -131,4 +131,4 @@ Pour [Nginx](https://nginx.org/) ajoutez la ligne suivante à votre fichier de c
 
     error_page 404 /404.html;
 
-[Suivant: Configuration de la sécurité →](security-configuration)
+[Suivant: Configuration de la langue →](language-configuration)

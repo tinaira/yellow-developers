@@ -57,4 +57,4 @@ Ici nous voyons les dossiers `1-en`, `2-de`, `3-fr` et `default`. Celà donne ac
 
 Pour afficher une sélection de langue, vous pouvez créer une page qui répertorie les langues disponibles. Cela permet aux visiteurs de choisir n'importe quelle langue. Vous pouvez ajouter un lien quelque part sur votre site web, par exemple dans le [pied de page](customising-templates#custom-footer).
 
-[Suivant: Configuration du serveur →](server-configuration)
+[Suivant: Configuration de la sécurité →](security-configuration)

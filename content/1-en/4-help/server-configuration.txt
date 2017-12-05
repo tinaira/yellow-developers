@@ -130,4 +130,4 @@ For [Nginx](https://nginx.org/) add the following line to your configuration fil
 
     error_page 404 /404.html;
 
-[Next: Security configuration →](security-configuration)
+[Next: Language configuration →](language-configuration)

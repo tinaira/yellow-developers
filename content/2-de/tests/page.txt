@@ -24,4 +24,3 @@ Hier ist eine Sammlung mit unseren Tests:
 * [Themefehler testen](page-theme-error)
 * [Umleitung zur Startseite testen](redirect-to-home)
 * [Sicheren Modus testen](safe-mode)
-* [Benutzerbeschränkungen testen](user-restrictions)

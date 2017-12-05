@@ -129,4 +129,4 @@ Bei [Nginx](https://nginx.org/) fügt man die folgende Zeile zur Konfigurationsd
 
     error_page 404 /404.html;
 
-[Weiter: Sicherheitseinstellungen →](security-configuration)
+[Weiter: Spracheinstellungen →](language-configuration)

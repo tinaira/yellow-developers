@@ -40,4 +40,4 @@ Tous les utilisateurs sont stockés dans le fichier `system/config/user.ini`. Vo
 
 Le [navigateur web](https://github.com/datenstrom/yellow-plugins/tree/master/edit) et le [ligne de commande](https://github.com/datenstrom/yellow-plugins/tree/master/command) vous permet de créer de nouveaux comptes d'utilisateurs et de changer les mots de passe. Un compte d'utilisateur se compose d'un email, d'un mot de passe crypté, de différents paramètres, tandis que le dernier paramètre concerne la page d'accueil de l'utilisateur.
 
-[Suivant: Configuration de la langue →](language-configuration)
+[Suivant: Configuration du serveur →](server-configuration)

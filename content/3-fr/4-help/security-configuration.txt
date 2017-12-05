@@ -1,31 +1,24 @@
 ---
 Title: Configuration de la sécurité
 ---
-Comment configurer la sécurité de votre site web.
+Comment configurer la sécurité et la confidentialité.
 
 >>> [Vous pouvez nous aider à traduire cette page.](https://github.com/datenstrom/yellow-developers/blob/master/content/3-fr/4-help/security-configuration.txt)
 
-## Sécurité du serveur
+## Restrictions de connexion
 
-Pensez à vérifier que votre serveur web supporte HTTPS. Il est préférable que votre site soit accessible uniquement via HTTPS et que la connexion Internet soit cryptée. Ceci protège la confidentialité de vos utilisateurs, mais n'est pas encore supporté par tous les hébergeurs web.
-
-Vous aurez besoin d'un serveur avec TLS et de certificats valides.
-
-## Mode de sécurité
-
-Si plusieurs personnes peuvent éditer votre site web, activez le mode safe. Ouvrez le fichier `system/config/config.ini` et changez `ParserSafeMode: 1`. Les utilisateurs ne peuvent utiliser [Markdown](markdown-cheat-sheet), mais pas HTML et JavaScript. Le site web sera protégé contre les nuisances.
-
-Vous pouvez [tester le mode de sécurité](/fr/tests/safe-mode).
+Le navigateur web vous permet de créer de nouveaux [compte d'utilisateurs](adjusting-system#comptes-d-utilisateurs). Si vous n'en avez pas besoin de cette fonctionnalité sur votre site web, restreignez le login. Ouvrez le fichier `system/config/config.ini` et modifiez `EditLoginRestrictions: 1`. Les utilisateurs sont uniquement autorisés à se connecter.
 
 ## Restrictions d'utilisateur
 
-Si plusieurs personnes peuvent éditer votre site web, restreignez les [compte d'utilisateurs](adjusting-system#comptes-d-utilisateurs).  Ouvrez le fichier `system/config/user.ini` et à la fin de la ligne de changer la page d'accueil de l'utilisateur. Ainsi, les utilisateurs ne peuvent éditer uniquement que leur page d'accueil.
+Le navigateur web vous permet d'éditer des pages.  Si vous ne voulez pas que les pages soient modifiées, restreignez les [compte d'utilisateurs](adjusting-system#comptes-d-utilisateurs). Ouvrez le fichier `system/config/user.ini` et à la fin de la ligne de changer la page d'accueil de l'utilisateur. Ainsi, les utilisateurs ne peuvent éditer uniquement que leur page d'accueil.
 
-Vous pouvez [tester des restrictions d'utilisateur](/fr/tests/user-restrictions).
+## Mode de sécurité
 
-## Moins est plus
+Si vous souhaitez protéger votre site web contre les nuisances, activez le mode safe. Ouvrez le fichier `system/config/config.ini` et changez `ParserSafeMode: 1`. Les utilisateurs ne peuvent utiliser [Markdown](markdown-cheat-sheet), mais pas HTML et JavaScript. [Testez le mode de sécurité](/fr/tests/safe-mode).
 
-Vérifiez quelles fonctionnalités sont utilisées sur votre serveur web. Supprimez les [plugins](/fr/plugins/) qui ne sont plus nécessaires ou créer un [site web statique](server-configuration#site-web-statique). En règle générale, moins le logiciel est installé, moins le site web est vulnérable pour les attaques.
+## Sécurité du serveur
 
+Pensez à vérifier que votre serveur web supporte HTTPS, sinon contactez votre fournisseur d'hébergement web. Il est préférable que votre site soit accessible uniquement via HTTPS et que la connexion Internet soit cryptée. Ceci protège la confidentialité de vos utilisateurs.
 
 [Suivant: Personnaliser des thèmes →](customising-themes)

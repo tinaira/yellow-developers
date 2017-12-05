@@ -5,7 +5,7 @@
 
 class YellowSearch
 {
-	const VERSION = "0.7.1";
+	const VERSION = "0.7.2";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -14,7 +14,7 @@ class YellowSearch
 		$this->yellow = $yellow;
 		$this->yellow->config->setDefault("searchLocation", "/search/");
 		$this->yellow->config->setDefault("searchPaginationLimit", "5");
-		$this->yellow->config->setDefault("searchPageLength", "250");
+		$this->yellow->config->setDefault("searchPageLength", "240");
 	}
 	
 	// Handle page content parsing of custom block

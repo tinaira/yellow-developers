@@ -8,4 +8,4 @@ Tag: Example
 Blog for your website. 
 [Install plugin](https://github.com/datenstrom/yellow-plugins/tree/master/blog).
 
-Yellow is for people who make websites. Create small web pages, blogs and wikis. The focus is on people and that it's useful for you. No database, no admin panel, no long documentation. Most people don't need this. Create websites that look and work the way you want.
+Yellow is for people who make websites. Create small web pages, blogs and wikis. The focus is on people and that it's useful for you. No database, no admin panel, no distraction that gets in your way. You make your website, we take care of the rest.

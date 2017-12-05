@@ -16,8 +16,8 @@ Basics
 
 Configurations
 
-* [Language configuration](language-configuration)
 * [Server configuration](server-configuration)
+* [Language configuration](language-configuration)
 * [Security configuration](security-configuration)
 
 Customisations

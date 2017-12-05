@@ -55,4 +55,4 @@ Der zweite Screenshot zeigt die Verzeichnisse `1-en`, `2-de`, `3-fr` und `defaul
 
 Um eine Sprachauswahl anzuzeigen, kannst du eine Seite erstellen welche die vorhandenen Sprachen auflistet. Das gibt den Besuchern die Möglichkeit jede Sprache auszuwählen. Einen Link kann man irgendwo in die Webseite einbauen, beispielsweise in die [Fußzeile](customising-templates#fußzeile-anpassen).
 
-[Weiter: Servereinstellungen →](server-configuration)
+[Weiter: Sicherheitseinstellungen →](security-configuration)

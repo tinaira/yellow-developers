@@ -1,8 +1,0 @@
----
-Title: Test user restrictions
----
-This page tests user restrictions. 
-
-Guests can [edit this page], but can not [edit the home page](/). 
-
-Please log in with `guest@demo.com` + `demo`.

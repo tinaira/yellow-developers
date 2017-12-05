@@ -55,4 +55,4 @@ The second screenshot shows the folders `1-en`, `2-de`, `3-fr` and `default`. Th
 
 To show a language selection, you can create a page that lists available languages. This provides visitors the possibility to select any language. You can add a link somewhere on your website, for example in the [footer](customising-templates#custom-footer).
 
-[Next: Server configuration →](server-configuration)
+[Next: Security configuration →](security-configuration)

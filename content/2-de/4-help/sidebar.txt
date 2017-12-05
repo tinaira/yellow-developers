@@ -16,8 +16,8 @@ Grundlagen
 
 Einstellungen
 
-* [Spracheinstellungen](language-configuration)
 * [Servereinstellungen](server-configuration)
+* [Spracheinstellungen](language-configuration)
 * [Sicherheitseinstellungen](security-configuration)
 
 Anpassungen

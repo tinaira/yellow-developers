@@ -24,4 +24,3 @@ Here's a collection of our tests:
 * [Test theme error](page-theme-error)
 * [Test redirect to home](redirect-to-home)
 * [Test safe mode](safe-mode)
-* [Test user restrictions](user-restrictions)

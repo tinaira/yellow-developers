@@ -1,28 +1,22 @@
 ---
 Title: Sicherheitseinstellungen
 ---
-Wie man eine Webseite mit besserer Sicherheit konfiguriert.
+Wie man Sicherheit und Datenschutz konfiguriert.
 
-## Sicherer Server
+## Loginbeschränkungen
 
-Überprüfe ob dein Webserver HTTPS unterstützt. Am Besten ist es wenn deine Webseite nur über HTTPS erreichbar ist und die Internetverbindung immer verschlüsselt ist. Das dient dem Datenschutz, leider wird es noch nicht von allen Webhoster unterstützt.
-
-Du brauchst einen Webserver mit TLS und gültigem Zertifikat.
-
-## Sicherer Modus
-
-Falls viele Person deine Webseite bearbeiten, aktiviere den sicheren Modus. Öffne die Datei `system/config/config.ini` und ändere `ParserSafeMode: 1`. Benutzer dürfen dann nur [Markdown](markdown-cheat-sheet) benutzen, aber kein HTML und JavaScript. Die Webseite wird vor Unfug geschützt.
-
-Du kannst den [sicheren Modus testen](/de/tests/safe-mode).
+Im Webbrowser kannst du neue [Benutzerkonten](adjusting-system#benutzerkonten) anlegen. Falls du diese Funktion auf deiner Webseite nicht brauchst, beschränke das Login. Öffne die Datei `system/config/config.ini` und ändere `EditLoginRestrictions: 1`. Benutzer dürfen sich dann nur einloggen.
 
 ## Benutzerbeschränkungen
 
-Falls viele Person deine Webseite bearbeiten, beschränke [Benutzerkonten](adjusting-system#benutzerkonten). Öffne die Datei `system/config/user.ini` und ändere am Ende der Zeile die Startseite des Benutzers. Benutzer dürfen dann nur Seiten innerhalb ihrer Startseite bearbeiten.
+Im Webbrowser kannst du Seiten bearbeiten. Falls du nicht willst daß Seiten verändert werden, beschränke [Benutzerkonten](adjusting-system#benutzerkonten). Öffne die Datei `system/config/user.ini` und ändere am Ende der Zeile die Startseite. Benutzer dürfen dann nur Seiten innerhalb ihrer Startseite bearbeiten.
 
-Du kannst [Benutzerbeschränkungen testen](/de/tests/user-restrictions).
+## Sicherer Modus
 
-## Weniger ist mehr
+Falls du deine Webseite vor Unfug schützen willst, aktiviere den sicheren Modus. Öffne die Datei `system/config/config.ini` und ändere `ParserSafeMode: 1`. Benutzer dürfen dann nur [Markdown](markdown-cheat-sheet) benutzen, aber kein HTML und JavaScript. Du kannst den [sicheren Modus testen](/de/tests/safe-mode).
 
-Überprüfe welche Funktionen auf deinem Webserver benutzt werden. Lösche [Plugins](/de/plugins/) die nicht mehr benötigt werden oder erstelle eine [statische Webseite](server-configuration#statische-webseite). Als Faustregel gilt, je weniger Software installiert ist, desto weniger ist die Webseite anfällig für Angriffe.
+## Sicherer Server
+
+Überprüfe ob dein Webserver HTTPS unterstützt, falls nicht kontaktiere deinen Webhoster. Am Besten ist es wenn deine Webseite nur über HTTPS erreichbar ist und die Internetverbindung immer verschlüsselt ist. Das dient dem Datenschutz.
 
 [Weiter: Themes anpassen →](customising-themes)

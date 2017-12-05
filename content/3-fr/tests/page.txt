@@ -24,4 +24,3 @@ Voici une collection de nos tests:
 * [Tester l'erreur de la thème](page-theme-error)
 * [Tester la redirection vers la page d'accueil](redirect-to-home)
 * [Tester le mode de sécurité](safe-mode)
-* [Tester des restrictions d'utilisateur](user-restrictions)
