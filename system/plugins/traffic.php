@@ -5,7 +5,7 @@
 
 class YellowTraffic
 {
-	const VERSION = "0.7.3";
+	const VERSION = "0.7.4";
 	var $yellow;			//access to API
 	var $days;				//detected days
 	var $views;				//detected views
@@ -145,6 +145,7 @@ class YellowTraffic
 								++$search[$this->getSearchUrl($scheme, $address, $base, $location, $locationSearch)];
 								++$this->views;
 							} else {
+								if($locationFilter!="/" && !preg_match("#^$base$locationFilter#", $location)) continue;
 								if(preg_match("#$spamFilter#i", $referer.$userAgent) && $status==404) continue;
 								++$errors[$this->getUrl($scheme, $address, $base, $location)." - ".$this->getStatusFormatted($status)];
 							}
