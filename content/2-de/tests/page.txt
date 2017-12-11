@@ -13,6 +13,7 @@ Hier ist eine Sammlung mit unseren Tests:
 
 * [API Inhalt testen](api-content)
 * [API Medien testen](api-media)
+* [Inhaltsbeschränkungen testen](content-restrictions)
 * [Benuzterdefiniertes Template testen](custom-template)
 * [Benuzterdefiniertes Theme testen](custom-theme)
 * [Dateiname Unicode testen](file-name-unicode-åäö)
@@ -23,4 +24,3 @@ Hier ist eine Sammlung mit unseren Tests:
 * [Templatefehler testen](page-template-error)
 * [Themefehler testen](page-theme-error)
 * [Umleitung zur Startseite testen](redirect-to-home)
-* [Sicheren Modus testen](safe-mode)

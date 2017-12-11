@@ -1,7 +1,7 @@
 ---
-Title: Tester le mode de sécurité
+Title: Tester les restrictions de contenu
 ---
-Cette page teste le mode de sécurité.
+Cette page teste les restrictions de contenu.
 
 Vous pouvez utiliser Markdown, mais vous ne pouvez pas utiliser HTML et JavaScript.
 

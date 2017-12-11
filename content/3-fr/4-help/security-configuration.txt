@@ -7,18 +7,18 @@ Comment configurer la sécurité et la confidentialité.
 
 ## Restrictions de connexion
 
-Le navigateur web vous permet de créer de nouveaux [compte d'utilisateurs](adjusting-system#comptes-d-utilisateurs). Si vous n'en avez pas besoin de cette fonctionnalité sur votre site web, restreignez le login. Ouvrez le fichier `system/config/config.ini` et modifiez `EditLoginRestrictions: 1`. Les utilisateurs sont uniquement autorisés à se connecter.
+Le navigateur web vous permet de créer des utilisateurs. Si vous ne souhaitez pas créer de [compte d'utilisateurs](adjusting-system#comptes-d-utilisateurs), restreignez le login. Ouvrez le fichier `system/config/config.ini` et modifiez `EditLoginRestrictions: 1`. Les utilisateurs sont uniquement autorisés à se connecter.
 
 ## Restrictions d'utilisateur
 
-Le navigateur web vous permet d'éditer des pages.  Si vous ne voulez pas que les pages soient modifiées, restreignez les [compte d'utilisateurs](adjusting-system#comptes-d-utilisateurs). Ouvrez le fichier `system/config/user.ini` et à la fin de la ligne de changer la page d'accueil de l'utilisateur. Ainsi, les utilisateurs ne peuvent éditer uniquement que leur page d'accueil.
+Le navigateur web vous permet d'éditer des pages. Si vous ne voulez pas que les pages soient modifiées, restreignez les [compte d'utilisateurs](adjusting-system#comptes-d-utilisateurs). Ouvrez le fichier `system/config/user.ini` et à la fin de la ligne de changer la page d'accueil de l'utilisateur. Ainsi, les utilisateurs ne peuvent éditer uniquement que leur page d'accueil.
 
-## Mode de sécurité
+## Restrictions de contenu
 
-Si vous souhaitez protéger votre site web contre les nuisances, activez le mode safe. Ouvrez le fichier `system/config/config.ini` et changez `ParserSafeMode: 1`. Les utilisateurs ne peuvent utiliser [Markdown](markdown-cheat-sheet), mais pas HTML et JavaScript. [Testez le mode de sécurité](/fr/tests/safe-mode).
+Si vous souhaitez protéger votre site web contre les nuisances, restreignez le contenu. Ouvrez le fichier `system/config/config.ini` et changez `ParserSafeMode: 1`. Les utilisateurs ne peuvent utiliser [Markdown](markdown-cheat-sheet), mais pas HTML et JavaScript. [Tester les restrictions de contenu](/fr/tests/content-restrictions).
 
-## Sécurité du serveur
+## Chiffrement des données
 
-Pensez à vérifier que votre serveur web supporte HTTPS, sinon contactez votre fournisseur d'hébergement web. Il est préférable que votre site soit accessible uniquement via HTTPS et que la connexion Internet soit cryptée. Ceci protège la confidentialité de vos utilisateurs.
+Pensez à vérifier que votre serveur web supporte HTTPS, sinon contactez votre fournisseur d'hébergement web. Il est préférable que votre site web redirige automatiquement HTTP vers HTTPS et que la connexion Internet soit toujours cryptée. Ceci protège la confidentialité de vos utilisateurs.
 
 [Suivant: Personnaliser des thèmes →](customising-themes)

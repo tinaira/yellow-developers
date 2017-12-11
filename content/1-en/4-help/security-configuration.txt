@@ -5,18 +5,18 @@ Here's how to set up security and privacy.
 
 ## Login restrictions
 
-You can use the web browser to create new [user accounts](adjusting-system#user-accounts). If you don't need this feature on your website, then restrict the login. Open file `system/config/config.ini` and change `EditLoginRestrictions: 1`. Users are only allowed to log in.
+You can use the web browser to create users. If you don't want new [user accounts](adjusting-system#user-accounts) to be created, then restrict the login. Open file `system/config/config.ini` and change `EditLoginRestrictions: 1`. Users are only allowed to log in.
 
 ## User restrictions
 
 You can use the web browser to edit pages. If you don't want pages to be changed, then restrict [user accounts](adjusting-system#user-accounts). Open file `system/config/user.ini` and at the end of the line change the user's home page. Users are only allowed to edit pages within their home page.
 
-## Safe mode
+## Content restrictions
 
-If you want to protect your website from nuisance, then enable the safe mode. Open file `system/config/config.ini` and change `ParserSafeMode: 1`. Users are only allowed to use [Markdown](markdown-cheat-sheet) for text formatting, but no HTML and JavaScript. You can [test the safe mode](/tests/safe-mode).
+If you want to protect your website from nuisance, then restrict the content. Open file `system/config/config.ini` and change `ParserSafeMode: 1`. Users are only allowed to use [Markdown](markdown-cheat-sheet) for text formatting, but no HTML and JavaScript. [Test content restrictions](/tests/content-restrictions).
 
-## Secure server
+## Data encryption
 
-Check if your web server supports HTTPS, if not contact your web hosting provider. It's best if your website is only available via HTTPS and the Internet connection is always encrypted. This protects the privacy of your users.
+Check if your web server supports HTTPS, if not contact your web hosting provider. It's best if your website automatically redirects from HTTP to HTTPS and the Internet connection is always encrypted. This protects the privacy of your users.
 
 [Next: Customising themes →](customising-themes)

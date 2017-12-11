@@ -1,7 +1,7 @@
 ---
-Title: Sicheren Modus testen
+Title: Inhaltsbeschränkungen testen
 ---
-Diese Seite testet den sicheren Modus.
+Diese Seite testet Inhaltsbeschränkungen.
 
 Du kannst Markdown benutzen, aber kein HTML und JavaScript.
 

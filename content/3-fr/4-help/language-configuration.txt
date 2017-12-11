@@ -55,6 +55,6 @@ Cette capture d'écran montre les dossiers `1-en`, `2-de` et `3-fr`. Celà donne
 
 Ici nous voyons les dossiers `1-en`, `2-de`, `3-fr` et `default`. Celà donne accès aux URLs suivantes `http://website/en/` `http://website/de/` `http://website/fr/` ainsi qu'une page d'accueil à `http://website/` qui détectera automatiquement la langue pour le visiteur.
 
-Pour afficher une sélection de langue, vous pouvez créer une page qui répertorie les langues disponibles. Cela permet aux visiteurs de choisir n'importe quelle langue. Vous pouvez ajouter un lien quelque part sur votre site web, par exemple dans le [pied de page](customising-templates#custom-footer).
+Pour afficher une [sélection de langue](/language/), vous pouvez créer une page qui répertorie les langues disponibles. Cela permet aux visiteurs de choisir n'importe quelle langue. Vous pouvez ajouter un lien quelque part sur votre site web, par exemple dans le [pied de page](customising-templates#custom-footer).
 
 [Suivant: Configuration de la sécurité →](security-configuration)

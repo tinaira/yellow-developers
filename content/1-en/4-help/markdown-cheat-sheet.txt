@@ -94,7 +94,7 @@ Formatting source code, [see highlighting source code](https://github.com/datens
     window.addEventListener('load', ready, false);
     ```
 
-Using HTML, [see safe mode](security-configuration#safe-mode):
+Using HTML, [see content restrictions](security-configuration#content-restrictions):
 
     <div class="custom">
     <strong>Text with HTML</strong> can be used optionally.

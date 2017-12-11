@@ -5,18 +5,18 @@ Wie man Sicherheit und Datenschutz konfiguriert.
 
 ## Loginbeschränkungen
 
-Im Webbrowser kannst du neue [Benutzerkonten](adjusting-system#benutzerkonten) anlegen. Falls du diese Funktion auf deiner Webseite nicht brauchst, beschränke das Login. Öffne die Datei `system/config/config.ini` und ändere `EditLoginRestrictions: 1`. Benutzer dürfen sich dann nur einloggen.
+Im Webbrowser kannst du Benutzer anlegen. Falls du nicht willst dass neue [Benutzerkonten](adjusting-system#benutzerkonten)  angelegt werden, beschränke das Login. Öffne die Datei `system/config/config.ini` und ändere `EditLoginRestrictions: 1`. Benutzer dürfen sich dann nur einloggen.
 
 ## Benutzerbeschränkungen
 
 Im Webbrowser kannst du Seiten bearbeiten. Falls du nicht willst daß Seiten verändert werden, beschränke [Benutzerkonten](adjusting-system#benutzerkonten). Öffne die Datei `system/config/user.ini` und ändere am Ende der Zeile die Startseite. Benutzer dürfen dann nur Seiten innerhalb ihrer Startseite bearbeiten.
 
-## Sicherer Modus
+## Inhaltsbeschränkungen
 
-Falls du deine Webseite vor Unfug schützen willst, aktiviere den sicheren Modus. Öffne die Datei `system/config/config.ini` und ändere `ParserSafeMode: 1`. Benutzer dürfen dann nur [Markdown](markdown-cheat-sheet) benutzen, aber kein HTML und JavaScript. Du kannst den [sicheren Modus testen](/de/tests/safe-mode).
+Falls du deine Webseite vor Unfug schützen willst, beschränke den Inhalt. Öffne die Datei `system/config/config.ini` und ändere `ParserSafeMode: 1`. Benutzer dürfen dann nur [Markdown](markdown-cheat-sheet) benutzen, aber kein HTML und JavaScript. [Inhaltsbeschränkungen testen](/de/tests/content-restrictions).
 
-## Sicherer Server
+## Datenverschlüsselung
 
-Überprüfe ob dein Webserver HTTPS unterstützt, falls nicht kontaktiere deinen Webhoster. Am Besten ist es wenn deine Webseite nur über HTTPS erreichbar ist und die Internetverbindung immer verschlüsselt ist. Das dient dem Datenschutz.
+Überprüfe ob dein Webserver HTTPS unterstützt, falls nicht kontaktiere deinen Webhoster. Am Besten ist es wenn deine Webseite automatisch von HTTP nach HTTPS weiterleitet und die Internetverbindung immer verschlüsselt wird. Das dient dem Datenschutz.
 
 [Weiter: Themes anpassen →](customising-themes)

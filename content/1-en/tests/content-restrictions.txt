@@ -1,7 +1,7 @@
 ---
-Title: Test safe mode
+Title: Test content restrictions
 ---
-This page tests safe mode.
+This page tests content restrictions.
 
 You can use Markdown, but you can not use HTML and JavaScript.
 

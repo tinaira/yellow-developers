@@ -13,6 +13,7 @@ Here's a collection of our tests:
 
 * [Test API content](api-content)
 * [Test API media](api-media)
+* [Test content restrictions](content-restrictions)
 * [Test custom template](custom-template)
 * [Test custom theme](custom-theme)
 * [Test file name Unicode](file-name-unicode-åäö)
@@ -23,4 +24,3 @@ Here's a collection of our tests:
 * [Test template error](page-template-error)
 * [Test theme error](page-theme-error)
 * [Test redirect to home](redirect-to-home)
-* [Test safe mode](safe-mode)

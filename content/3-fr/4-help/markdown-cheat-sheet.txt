@@ -94,7 +94,7 @@ Formatage du code source, [coloration du code source](https://github.com/datenst
     window.addEventListener('load', ready, false);
     ```
 
-En utilisant HTML, [voir mode de sécurité](security-configuration#mode-de-sécurité):
+En utilisant HTML, [voir restrictions de contenu](security-configuration#restrictions-de-contenu):
 
     <div class="custom">
     <strong>Texte avec HTML</strong> peut être utilisé en option.
