@@ -8,22 +8,18 @@ Tausche dich mit anderen Benutzern aus und finde professionelle Hilfe.
 
 * [Diskutiere Probleme und stelle Fragen](https://github.com/datenstrom/yellow/issues)
 * [Informiere dich über neueste Version](https://github.com/datenstrom/yellow/releases)
+* [Finde kommerziellen Support](https://mayberg.se/support/)
 * [Kontaktiere einen Menschen](https://datenstrom.se/de/contact/)
-
-## Informationen finden
-
-* [Twitter @datenstromse](https://twitter.com/datenstromse)
-* [GitHub @datenstrom](https://github.com/datenstrom)
-* [Webseite datenstrom.se](https://datenstrom.se/de/)
 
 ## Mitmachen
 
 * [Beantworte Fragen](https://github.com/datenstrom/yellow/issues)
 * [Erstelle nützliche Plugins](https://github.com/datenstrom/yellow-plugins/)
 * [Erstelle schöne Themes](https://github.com/datenstrom/yellow-themes/)
+* [Zeige was du gemacht hast](https://twitter.com/datenstromse)
 
 ## Danke
 
-Datenstrom Yellow ist Open-Source. Erstellt von Menschen wie du und ich. Im Herzen von Open-Source ist die Idee, dass wir gemeinsam bessere Software machen. Lizensiert unter [GPLv2](https://github.com/datenstrom/yellow/blob/master/LICENSE.md) sofern nichts anderes angegeben. Großen Dank an alle Benutzer und Mitwirkende.
+Datenstrom Yellow ist Open-Source. Lizensiert unter [GPLv2](https://github.com/datenstrom/yellow/blob/master/LICENSE.md) sofern nichts anderes angegeben. Erstellt von Menschen wie du und ich. Im Herzen von Open-Source ist die Idee, dass wir gemeinsam bessere Software machen. Großen Dank an alle Benutzer und Mitwirkende.
 
 
