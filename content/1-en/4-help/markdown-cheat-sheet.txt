@@ -145,7 +145,7 @@ And of course emoji, [see emoji cheat sheet](http://www.emoji-cheat-sheet.com):
 `Published` = page publication date, YYYY-MM-DD format  
 `Tag` = page tag(s) for categorisation, comma separated  
 `Redirect` = redirect to a new page or URL  
-`Status` = status for workflow, for example `draft`, `hidden`  
+`Status` = status for workflow  
 `Navigation` = page navigation  
 `Sidebar` = page sidebar  
 `Sitename` = name of the website  

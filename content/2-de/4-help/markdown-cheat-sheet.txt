@@ -145,7 +145,7 @@ Und natürlich Emoji, [siehe Emoji-Spickzettel](http://www.emoji-cheat-sheet.com
 `Published` = Veröffentlichungsdatum der Seite, JJJJ-MM-TT Format  
 `Tag` = Tags zur Kategorisierung der Seite, durch Komma getrennt  
 `Redirect` = Umleitung zu einer neuen Seite oder URL  
-`Status` = Status für Arbeitsablauf, beispielsweise `draft`, `hidden`  
+`Status` = Status für Arbeitsablauf  
 `Navigation` = Navigation der Seite  
 `Sidebar` = Sidebar der Seite  
 `Sitename` = Name der Webseite  

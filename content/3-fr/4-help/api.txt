@@ -10,7 +10,7 @@ API pour les développeurs. Nous :heart: les développeurs.
 
 ## Files
 
-The following files are available in Datenstrom Yellow:
+[Datenstrom Yellow is open source](https://github.com/datenstrom/yellow). The following files are available:
 
 ```
 - content               = content files

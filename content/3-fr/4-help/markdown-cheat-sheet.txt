@@ -145,7 +145,7 @@ Et bien sur emoji, [voir emoji antisèche](http://www.emoji-cheat-sheet.com):
 `Published` = date de publication de la page, format YYYY-MM-DD  
 `Tag` = mots-clés pour la catégorisation, séparés par des virgules  
 `Redirect` = redirection vers une page ou une URL  
-`Status` = état de la page, par exemple `draft`, `hidden`  
+`Status` = état de la page  
 `Navigation` = menu de navigation pour la page  
 `Sidebar` = sidebar pour la page  
 `Sitename` = nom su site web  
