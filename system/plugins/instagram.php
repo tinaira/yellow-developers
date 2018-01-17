@@ -1,11 +1,11 @@
 <?php
 // Instagram plugin, https://github.com/datenstrom/yellow-plugins/tree/master/instagram
-// Copyright (c) 2013-2017 Datenstrom, https://datenstrom.se
+// Copyright (c) 2013-2018 Datenstrom, https://datenstrom.se
 // This file may be used and distributed under the terms of the public license.
 
 class YellowInstagram
 {
-	const VERSION = "0.7.2";
+	const VERSION = "0.7.3";
 	var $yellow;			//access to API
 	
 	// Handle initialisation

@@ -1,11 +1,11 @@
 <?php
 // Twitter plugin, https://github.com/datenstrom/yellow-plugins/tree/master/twitter
-// Copyright (c) 2013-2017 Datenstrom, https://datenstrom.se
+// Copyright (c) 2013-2018 Datenstrom, https://datenstrom.se
 // This file may be used and distributed under the terms of the public license.
 
 class YellowTwitter
 {
-	const VERSION = "0.7.4";
+	const VERSION = "0.7.5";
 	var $yellow;			//access to API
 	
 	// Handle initialisation

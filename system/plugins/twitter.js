@@ -1,11 +1,6 @@
 // Twitter plugin, https://github.com/datenstrom/yellow-plugins/tree/master/twitter
-// Copyright (c) 2013-2017 Datenstrom, https://datenstrom.se
+// Copyright (c) 2013-2018 Datenstrom, https://datenstrom.se
 // This file may be used and distributed under the terms of the public license.
-
-var fjs = document.getElementsByTagName("script")[0];
-var js = document.createElement("script");
-js.src = "https://platform.twitter.com/widgets.js";
-fjs.parentNode.insertBefore(js, fjs);
 
 function TwitterMessage(element, options)
 {
@@ -78,12 +73,25 @@ TwitterMessage.prototype =
 
 var initTwitterFromDOM = function()
 {
-	var twitters = {};
 	var elements = document.querySelectorAll(".twitter");
-	for(var i=0, l=elements.length; i<l; i++)
+	if(elements.length)
 	{
-		twitters[i] = new TwitterMessage(elements[i]);
-		twitters[i].request();
+		// Load Twitter JavaScript widget on demand
+		if(typeof twttr==='undefined')
+		{
+			var fjs = document.getElementsByTagName("script")[0];
+			var js = document.createElement("script");
+			js.src = "https://platform.twitter.com/widgets.js";
+			js.onload = initTwitterFromDOM;
+			fjs.parentNode.insertBefore(js, fjs);
+		} else {
+			var messages = {};
+			for(var i=0, l=elements.length; i<l; i++)
+			{
+				messages[i] = new TwitterMessage(elements[i]);
+				messages[i].request();
+			}
+		}
 	}
 };
 
