@@ -74,10 +74,11 @@ TwitterMessage.prototype =
 var initTwitterFromDOM = function()
 {
 	var elements = document.querySelectorAll(".twitter");
-	if(elements.length)
+	var buttons = document.querySelectorAll(".twitter-follow-button");
+	if(elements.length || buttons.length)
 	{
 		// Load Twitter JavaScript widget on demand
-		if(typeof twttr==='undefined')
+		if(typeof twttr==="undefined")
 		{
 			var fjs = document.getElementsByTagName("script")[0];
 			var js = document.createElement("script");
