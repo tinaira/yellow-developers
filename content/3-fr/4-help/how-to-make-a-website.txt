@@ -31,7 +31,7 @@ Pour créer une nouvelle page, ajoutez un nouveau fichier dans le dossier `1-hom
 
 ```
 ---
-Title: Yellow est fait pour les gens qui font des sites web
+Title: Datenstrom Yellow est fait pour les gens qui font des sites web
 ---
 Vous pouvez [edit - modifier cette page]. L'aide vous donne plus 
 d'informations sur la façon de créer de petites pages web, blogs et wikis.
@@ -41,7 +41,7 @@ Maintenant ajoutons une image:
 
 ```
 ---
-Title: Yellow est fait pour les gens qui font des sites web
+Title: Datenstrom Yellow est fait pour les gens qui font des sites web
 ---
 [image picture.jpg Exemple rounded]
 
@@ -53,7 +53,7 @@ Voyons comment créer un titre différent dans le menu de navigation:
 
 ```
 ---
-Title: Yellow est fait pour les gens qui font des sites web
+Title: Datenstrom Yellow est fait pour les gens qui font des sites web
 TitleNavigation: Home
 ---
 [image picture.jpg Exemple rounded]

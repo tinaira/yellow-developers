@@ -5,7 +5,7 @@ Connect with other users and find professional help.
 
 ## How to get support
 
-* [Discuss problems and ask questions](https://github.com/datenstrom/yellow/issues)
+* [Ask questions and discuss problems](https://github.com/datenstrom/yellow/issues)
 * [Find out about latest release](https://github.com/datenstrom/yellow/releases)
 * [Get commercial support](https://mayberg.se/support/)
 * [Contact a human](https://datenstrom.se/contact/)

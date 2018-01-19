@@ -31,7 +31,7 @@ To create a new page, add a new file to the home folder or another `content` fol
 
 ```
 ---
-Title: Yellow is for people who make websites
+Title: Datenstrom Yellow is for people who make websites
 ---
 You can [edit this page]. The help gives you more information 
 about how to create small web pages, blogs and wikis.
@@ -41,7 +41,7 @@ Now let's add an image:
 
 ```
 ---
-Title: Yellow is for people who make websites
+Title: Datenstrom Yellow is for people who make websites
 ---
 [image picture.jpg Example rounded]
 
@@ -53,7 +53,7 @@ Let's show a different title in the navigation:
 
 ```
 ---
-Title: Yellow is for people who make websites
+Title: Datenstrom Yellow is for people who make websites
 TitleNavigation: Home
 ---
 [image picture.jpg Example rounded]

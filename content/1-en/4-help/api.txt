@@ -10,19 +10,17 @@ API for developers. We :heart: developers.
 [Datenstrom Yellow is open source](https://github.com/datenstrom/yellow). The following files are available:
 
 ```
-- content               = content files
-- media                 = media files
-- system                = system files
-  - config              = configuration files
-  - plugins             = features of your website
-  - themes              = appearance of your website
-    - assets            = CSS, fonts and files for themes
-    - snippets          = building blocks for templates
-    - templates         = template files
-  - trash               = deleted files
+- content                 = content files
+- media                   = media files
+- system                  = system files
+  - config                = configuration files
+  - plugins               = features of your website
+  - themes                = appearance of your website
+    - assets              = CSS, fonts and files for themes
+    - snippets            = building blocks for templates
+    - templates           = template files
+  - trash                 = deleted files
 ```
-
-You can find the most important configuration files here:
 
 `system/config/config.ini` = [system settings](adjusting-system#system-settings)  
 `system/config/text.ini` = [text settings](adjusting-system#text-settings)  
@@ -952,4 +950,8 @@ Some tips for developers:
 
 2. [Learn the web basics](https://www.w3schools.com). Make yourself familiar with HTML, CSS and JavaScript. These are the most important things you need to know to make websites. You don't need to learn other frameworks or libraries.
 
-3. [Put your code on GitHub](https://github.com/datenstrom/yellow/issues?q=label%3Anews%20). Create a repository for each new plugin/theme. The name of your repository should be `yellow-plugin-xyz` or `yellow-theme-xyz`. Your code doesn't have to be perfect, but it should be working in the developer kit.
+3. [Learn the Markdown basics](markdown-cheat-sheet). Make yourself familiar with text formatting and shortcuts. Markdown is a practical way to edit web pages. You can use plugins to extend Markdown with more features.
+
+4. [Put your code on GitHub](https://github.com/datenstrom/yellow/issues?q=label%3Anews%20). Create a repository for each new plugin/theme. The name of your repository should be `yellow-plugin-xyz` or `yellow-theme-xyz`. Your code doesn't have to be perfect, but it should be working in the developer kit.
+
+5. [Ask many questions](support). Let us know if something is not working or you need help. You can find free support for Datenstrom Yellow on GitHub, there you can discuss problems and ask questions.

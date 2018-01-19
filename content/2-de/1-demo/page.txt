@@ -1,5 +1,5 @@
 ---
-Title: Yellow ist für Menschen die Webseiten machen
+Title: Datenstrom Yellow ist für Menschen die Webseiten machen
 TitleNavigation: Demo
 Template: demo
 ---

@@ -1,5 +1,5 @@
 ---
-Title: Yellow is for people who make websites
+Title: Datenstrom Yellow is for people who make websites
 TitleNavigation: Demo
 Template: demo
 ---
