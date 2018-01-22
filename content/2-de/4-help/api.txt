@@ -11,16 +11,16 @@ API für Entwickler. Wir :heart: Entwickler.
 [Datenstrom Yellow ist Open-Source](https://github.com/datenstrom/yellow). Die folgenden Dateien sind vorhanden:
 
 ```
-- content                 = Inhalte
-- media                   = Mediendateien
-- system                  = Systemdateien
-  - config                = Konfigurationsdateien
-  - plugins               = Funktionen der Webseite
-  - themes                = Aussehen der Webseite
-    - assets              = CSS, Schriftarten und Dateien für Themes
-    - snippets            = Bausteine für Templates
-    - templates           = Template-Dateien
-  - trash                 = gelöschte Dateien
+├── content               = Inhalte
+├── media                 = Mediendateien
+└── system                = Systemdateien
+    ├── config            = Konfigurationsdateien
+    ├── plugins           = Funktionen der Webseite
+    ├── themes            = Aussehen der Webseite
+    │   ├── assets        = CSS, Schriftarten und Dateien für Themes
+    │   ├── snippets      = Bausteine für Templates
+    │   └── templates     = Template-Dateien
+    └─ trash              = gelöschte Dateien
 ```
 
 `system/config/config.ini` = [Systemeinstellungen](adjusting-system#systemeinstellungen)  
@@ -686,19 +686,19 @@ Hier ist ein Beispiel-Snippet um Textzeilen von Datei zu lesen:
 Die folgenden Ereignisse sind vorhanden:
 
 ```
-onLoad -----▶ onStartup -----▶ onRequest
-                  |                |
-                  |                |---------------------
-                  |                |                    |
+onLoad ─────▶ onStartup ─────▶ onRequest
+                  │                │
+                  │                ├────────────────────┐
+                  │                │                    │
                   ▼                ▼                    ▼
               onCommand        onParseMeta          onEditUserRestrictions
               onCommandHelp    onParseContentRaw    onEditUserAccount
-                  |            onParseContentBlock  onEditContentFile
-                  |            onParseContentText       |
-                  |            onParsePage              |
-                  |            onExtra                  |
-                  ▼                |                    |
-Exit ◀------- onShutDown ◀-------------------------------
+                  │            onParseContentBlock  onEditContentFile
+                  │            onParseContentText       │
+                  │            onParsePage              │
+                  │            onExtra                  │
+                  ▼                │                    │
+Exit ◀─────── onShutDown ◀─────────┴────────────────────┘
 ```
 
 Wird eine Seite angezeigt, dann werden die Plugins geladen und es wird `onLoad` aufgerufen. Sobald alle Plugins geladen sind wird `onStartup` aufgerufen. Danach informiert der [Core](https://github.com/datenstrom/yellow-plugins/tree/master/core) mit `onRequest` dass es eine Anfrage gibt. Die Seite kann mit verschiedenen `onParse`-Ereignisse analysiert werden. Dann wird der Quellcode der Seite mit Hilfe von [Templates und Snippets](customising-templates) erzeugt. Sollte ein Fehler auftreten, wird eine Fehlerseite erzeugt. Zum Schluss wird die Seite ausgegeben und es wird `onShutdown` aufgerufen.
@@ -950,9 +950,9 @@ Einige Tipps für Entwickler:
 
 1. [Installiere das Entwickler-Kit](https://github.com/datenstrom/yellow-developers). Das Entwickler-Kit für Datenstrom Yellow bietet Plugins, Themes und Beispiele. Du kannst ausprobieren wie man kleine Webseite, Blogs und Wikis macht. Es ist eine grossartige Art um loszulegen. 
 
-2. [Lerne die Web-Grundlagen](https://www.w3schools.com). Mach dich vertraut mit HTML, CSS und JavaScript. Das sind die wichtigsten Dinge die man wissen muss um Webseiten zu erstellen. Du brauchst keine anderen Frameworks oder Bibliotheken erlernen.
+2. [Lerne die Web-Grundlagen](https://www.w3schools.com). Mach dich vertraut mit HTML, CSS und JavaScript. Das sind die wichtigsten Dinge die man wissen muss um Webseiten zu erstellen. Du kannst Themes verwenden um das Aussehen deiner Webseite anpassen.
 
-3. [Lerne die Markdown-Grundlagen](markdown-cheat-sheet). Mach dich vertraut mit Textformatierung und Abkürzungen. Markdown ist eine praktische Art um Webseiten zu bearbeiten. Du kannst Plugins verwenden um Markdown mit weiteren Funktionen zu erweitern.
+3. [Lerne die Markdown-Grundlagen](markdown-cheat-sheet). Mach dich vertraut mit Textformatierung, Abkürzungen und Einstellungen. Markdown ist eine praktische Art um Webseiten zu bearbeiten. Du kannst Plugins verwenden um Markdown mit weiteren Funktionen zu erweitern.
 
 4. [Stelle deinen Code auf GitHub](https://github.com/datenstrom/yellow/issues?q=label%3Anews%20). Erstelle ein Repository für jedes neue Plugin/Theme. Der Name deines Repository sollte `yellow-plugin-xyz` or `yellow-theme-xyz` sein. Dein Code muss nicht perfekt sein, aber er sollte im Entwickler-Kit funktionieren.
 

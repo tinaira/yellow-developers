@@ -10,16 +10,16 @@ API for developers. We :heart: developers.
 [Datenstrom Yellow is open source](https://github.com/datenstrom/yellow). The following files are available:
 
 ```
-- content                 = content files
-- media                   = media files
-- system                  = system files
-  - config                = configuration files
-  - plugins               = features of your website
-  - themes                = appearance of your website
-    - assets              = CSS, fonts and files for themes
-    - snippets            = building blocks for templates
-    - templates           = template files
-  - trash                 = deleted files
+├── content               = content files
+├── media                 = media files
+└── system                = system files
+    ├── config            = configuration files
+    ├── plugins           = features of your website
+    ├── themes            = appearance of your website
+    │   ├── assets        = CSS, fonts and files for themes
+    │   ├── snippets      = building blocks for templates
+    │   └── templates     = template files
+    └─ trash              = deleted files
 ```
 
 `system/config/config.ini` = [system settings](adjusting-system#system-settings)  
@@ -685,19 +685,19 @@ Here's an example snippet for reading text lines from file:
 The following events are available:
 
 ```
-onLoad -----▶ onStartup -----▶ onRequest
-                  |                |
-                  |                |---------------------
-                  |                |                    |
+onLoad ─────▶ onStartup ─────▶ onRequest
+                  │                │
+                  │                ├────────────────────┐
+                  │                │                    │
                   ▼                ▼                    ▼
               onCommand        onParseMeta          onEditUserRestrictions
               onCommandHelp    onParseContentRaw    onEditUserAccount
-                  |            onParseContentBlock  onEditContentFile
-                  |            onParseContentText       |
-                  |            onParsePage              |
-                  |            onExtra                  |
-                  ▼                |                    |
-exit ◀------- onShutDown ◀-------------------------------
+                  │            onParseContentBlock  onEditContentFile
+                  │            onParseContentText       │
+                  │            onParsePage              │
+                  │            onExtra                  │
+                  ▼                │                    │
+exit ◀─────── onShutDown ◀─────────┴────────────────────┘
 ```
 
 When a page is displayed, the plugins are loaded and `onLoad` will be called. As soon as all plugins are loaded `onStartup` will be called. After that the [core](https://github.com/datenstrom/yellow-plugins/tree/master/core) informs with `onRequest` that there's a request. The page can be analysed with various `onParse` events. Then the source code of the page will be generated with the help of [templates and snippets](customising-templates). If an error occurs, an error page will be generated. Finally the page is output and `onShutdown` will be called.
@@ -948,9 +948,9 @@ Some tips for developers:
 
 1. [Install the developer kit](https://github.com/datenstrom/yellow-developers). The developer kit for Datenstrom Yellow includes plugins, themes and examples. You can try out how to make small web pages, blogs and wikis. It's a great place to get started.
 
-2. [Learn the web basics](https://www.w3schools.com). Make yourself familiar with HTML, CSS and JavaScript. These are the most important things you need to know to make websites. You don't need to learn other frameworks or libraries.
+2. [Learn the web basics](https://www.w3schools.com). Make yourself familiar with HTML, CSS and JavaScript. These are the most important things you need to know to make websites. You can use themes to customise the appearance of your website.
 
-3. [Learn the Markdown basics](markdown-cheat-sheet). Make yourself familiar with text formatting and shortcuts. Markdown is a practical way to edit web pages. You can use plugins to extend Markdown with more features.
+3. [Learn the Markdown basics](markdown-cheat-sheet). Make yourself familiar with text formatting, shortcuts and settings. Markdown is a practical way to edit web pages. You can use plugins to extend Markdown with more features.
 
 4. [Put your code on GitHub](https://github.com/datenstrom/yellow/issues?q=label%3Anews%20). Create a repository for each new plugin/theme. The name of your repository should be `yellow-plugin-xyz` or `yellow-theme-xyz`. Your code doesn't have to be perfect, but it should be working in the developer kit.
 
