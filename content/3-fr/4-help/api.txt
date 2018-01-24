@@ -22,7 +22,7 @@ API pour les développeurs. Nous :heart: les développeurs.
     │   ├── assets        = CSS, fonts and files for themes
     │   ├── snippets      = building blocks for templates
     │   └── templates     = template files
-    └─ trash              = deleted files
+    └── trash             = deleted files
 ```
 
 `system/config/config.ini` = [system settings](adjusting-system#system-settings)  

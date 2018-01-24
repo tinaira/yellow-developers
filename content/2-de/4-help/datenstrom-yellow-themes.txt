@@ -21,6 +21,8 @@ Available themes:
 
 Experimental themes:
 
+* [Buoa](https://github.com/bsnosi/yellow-theme-buoa):
+  Buoa is a theme for a technical oriented blog/wiki.
 * [Envisioned](https://github.com/nogginfuel/yellow-theme-envisioned):
   Envisioned is a minimalistic theme inspired by Edward Tufte.
 * [Lateral](https://github.com/nibreh/yellow-theme-lateral):

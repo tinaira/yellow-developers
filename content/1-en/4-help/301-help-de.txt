@@ -1,6 +1,0 @@
----
-Title: Hilfe
-Status: hidden
-Redirect: /de/help/
----
-This page tests redirects to [/de/help/](/de/help/).

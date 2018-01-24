@@ -1,6 +1,0 @@
----
-Title: Aide
-Status: hidden
-Redirect: /fr/help/
----
-This page tests redirects to [/fr/help/](/fr/help/).

@@ -20,7 +20,7 @@ API für Entwickler. Wir :heart: Entwickler.
     │   ├── assets        = CSS, Schriftarten und Dateien für Themes
     │   ├── snippets      = Bausteine für Templates
     │   └── templates     = Template-Dateien
-    └─ trash              = gelöschte Dateien
+    └── trash             = gelöschte Dateien
 ```
 
 `system/config/config.ini` = [Systemeinstellungen](adjusting-system#systemeinstellungen)  

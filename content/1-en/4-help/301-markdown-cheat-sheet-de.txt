@@ -1,6 +1,0 @@
----
-Title: Markdown
-Status: hidden
-Redirect: /de/markdown-cheat-sheet
----
-This page tests redirects to [/de/markdown-cheat-sheet](/de/markdown-cheat-sheet).
