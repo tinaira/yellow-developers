@@ -66,7 +66,7 @@ sein oder du lädst Freude dazu ein. Fika ist ein so bedeutender Teil vom
 schwedischen Alltag, dass es sowohl als Verb als auch als Nomen verwendet  
 wird. Wie oft machst du Fika?
 
-[youtube aS52d3hcHfs]
+[youtube c7J6AXX3otA]
 ```
 
 Das Video erst anzeigen wenn ein Besucher auf die Blogseite klickt. Du kannst `[--more--]` benutzen, um an der gewünschten Stelle einen Seitenumbruch zu erzeugen:
@@ -85,7 +85,7 @@ sein oder du lädst Freude dazu ein. Fika ist ein so bedeutender Teil vom
 schwedischen Alltag, dass es sowohl als Verb als auch als Nomen verwendet  
 wird. Wie oft machst du Fika? [--more--]
 
-[youtube aS52d3hcHfs]
+[youtube c7J6AXX3otA]
 ```
 
 Du kannst [Markdown](markdown-cheat-sheet) benutzen um Blogseiten zu bearbeiten.

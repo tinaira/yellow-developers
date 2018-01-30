@@ -66,7 +66,7 @@ avoir fika avec des collègues au travail. Vous pouvez inviter vos amis à fika.
 Fika est une part aussi importante de la vie en Suède que c'est à la fois un 
 verbe et un nom. À quelle fréquence faites-vous fika?
 
-[youtube aS52d3hcHfs]
+[youtube c7J6AXX3otA]
 ```
 
 Faisons en sorte que la vidéo soit visible quand le visiteur clique sur la page de blog. Vous pouvez ajouter `[--more--]` à l'endroit désiré le saut de page:
@@ -85,7 +85,7 @@ avoir fika avec des collègues au travail. Vous pouvez inviter vos amis à fika.
 Fika est une part aussi importante de la vie en Suède que c'est à la fois un 
 verbe et un nom. À quelle fréquence faites-vous fika? [--more--]
 
-[youtube aS52d3hcHfs]
+[youtube c7J6AXX3otA]
 ```
 
 Vous pouvez utiliser [Markdown](markdown-cheat-sheet) pour éditer les pages du blog.
