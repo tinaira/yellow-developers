@@ -8,7 +8,7 @@ Markdown is a practical way to edit web pages.
 
 Formatting text:
 
-    Normal *italic* **bold** `code`
+    Normal **bold** *italic* `code`
 
 Making a list:
 
@@ -79,33 +79,27 @@ Making paragraphs:
 
 Making line breaks:
 
-    First line⋅⋅
-    Second line⋅⋅
+    Here's the first line⋅⋅
+    Here's the second line⋅⋅
+    Here's the third line⋅⋅
     Spaces at the end of the line are shown with dots (⋅)
 
-Formatting source code, [see highlighting source code](https://github.com/datenstrom/yellow-plugins/tree/master/highlight):
+Using code blocks:
 
     ```
-    var ready = function() 
+    Text in a code block will be shown unchanged.
+    function onLoad($yellow)
     {
-        console.log("Hello world");
-        // Add more JavaScript code here
+        $this->yellow = $yellow;
     }
-    window.addEventListener('load', ready, false);
     ```
 
-Using HTML, [see content restrictions](security-configuration#content-restrictions):
+Using HTML blocks:
 
     <div class="custom">
     <strong>Text with HTML</strong> can be used optionally.
     <a href="https://datenstrom.se">Link to website</a>.
     </div>
-
-And of course emoji, [see emoji cheat sheet](http://www.emoji-cheat-sheet.com):
-
-    :smile: 
-    :heart: 
-    :coffee:
 
 ## Shortcuts
 
@@ -124,6 +118,7 @@ And of course emoji, [see emoji cheat sheet](http://www.emoji-cheat-sheet.com):
 `[fa fa-envelope-o]` = [show icons and symbols](https://github.com/datenstrom/yellow-plugins/tree/master/fontawesome)  
 `[ea ea-smile]` = [show emoji and colorful images](https://github.com/datenstrom/yellow-plugins/tree/master/emojiawesome)  
 `[yellow]` = [show information about website](https://github.com/datenstrom/yellow-plugins/tree/master/core)  
+`[edit]` = [edit website in web browser](https://github.com/datenstrom/yellow-plugins/tree/master/edit)  
 `[toc]` = [show table of contents](https://github.com/datenstrom/yellow-plugins/tree/master/toc)  
 `[--more--]` = [add page break](https://github.com/datenstrom/yellow-plugins/tree/master/blog#how-to-configure-a-blog) 
 

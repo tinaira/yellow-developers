@@ -8,7 +8,7 @@ Markdown est un moyen pratique pour éditer des pages web.
 
 Formatage du texte:
 
-    Normal *italique* **gras** `code`
+    Normal **gras** *italique* `code`
 
 Créer une liste:
 
@@ -79,33 +79,27 @@ Créer des paragraphes:
 
 Créer des sauts de ligne:
 
-    Première ligne⋅⋅
-    Deuxième ligne⋅⋅
+    Voici la première ligne⋅⋅
+    Voici la deuxième ligne⋅⋅
+    Voici la troisième ligne⋅⋅
     Les espaces à la fin de la ligne sont affichés avec des points (⋅)
 
-Formatage du code source, [coloration du code source](https://github.com/datenstrom/yellow-plugins/tree/master/highlight):
+En utilisant des blocs de code:
 
     ```
-    var ready = function() 
+    Texte dans un bloc de code sera affiché inchangé.
+    function onLoad($yellow)
     {
-        console.log("Hello world");
-        // Add more JavaScript code here
+        $this->yellow = $yellow;
     }
-    window.addEventListener('load', ready, false);
     ```
 
-En utilisant HTML, [voir restrictions de contenu](security-configuration#restrictions-de-contenu):
+En utilisant des blocs HTML:
 
     <div class="custom">
     <strong>Texte avec HTML</strong> peut être utilisé en option.
     <a href="https://datenstrom.se/fr/">Lien vers un site</a>.
     </div>
-
-Et bien sur emoji, [voir emoji antisèche](http://www.emoji-cheat-sheet.com):
-
-    :smile: 
-    :heart: 
-    :coffee:
 
 ## Raccourcis
 
@@ -124,6 +118,7 @@ Et bien sur emoji, [voir emoji antisèche](http://www.emoji-cheat-sheet.com):
 `[fa fa-envelope-o]` = [afficher des icones et symboles](https://github.com/datenstrom/yellow-plugins/tree/master/fontawesome)  
 `[ea ea-smile]` = [afficher des emoji et images coloréess](https://github.com/datenstrom/yellow-plugins/tree/master/emojiawesome)  
 `[yellow]` = [afficher des informations sur le site](https://github.com/datenstrom/yellow-plugins/tree/master/core)  
+`[edit]` = [éditer le site depuis le navigateur](https://github.com/datenstrom/yellow-plugins/tree/master/edit)  
 `[toc]` = [afficher une table des matières](https://github.com/datenstrom/yellow-plugins/tree/master/toc)  
 `[--more--]` = [ajouter un saut de page](https://github.com/datenstrom/yellow-plugins/tree/master/blog#how-to-configure-a-blog) 
 

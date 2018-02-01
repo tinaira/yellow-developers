@@ -32,7 +32,7 @@ Du kannst [Markdown](markdown-cheat-sheet) benutzen um Webseiten zu bearbeiten. 
 
 Text formatieren:
 
-    Normal *Kursiv* **Fettschrift** `Code`
+    Normal **Fettschrift** *Kursiv* `Code`
 
 Eine Liste erstellen:
 

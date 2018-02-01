@@ -8,7 +8,7 @@ Markdown ist eine praktische Art um Webseiten zu bearbeiten.
 
 Text formatieren:
 
-    Normal *Kursiv* **Fettschrift** `Code`
+    Normal **Fettschrift** *Kursiv* `Code`
 
 Eine Liste erstellen:
 
@@ -79,33 +79,27 @@ Absätze erstellen:
 
 Zeilenumbrüche erstellen:
 
-    Erste Zeile⋅⋅
-    Zweite Zeile⋅⋅
+    Hier ist die erste Zeile⋅⋅
+    Hier ist die zweite Zeile⋅⋅
+    Hier ist die dritte Zeile⋅⋅
     Leerzeichen am Zeilenende sind dargestellt durch Punkte (⋅)
 
-Sourcecode formatieren, [siehe Sourcecode hervorheben](https://github.com/datenstrom/yellow-plugins/tree/master/highlight):
+Code-Blöcke benutzen:
 
     ```
-    var ready = function() 
+    Text in einem Code-Block wird unverändert dargestellt.
+    function onLoad($yellow)
     {
-        console.log("Hello world");
-        // Add more JavaScript code here
+        $this->yellow = $yellow;
     }
-    window.addEventListener('load', ready, false);
     ```
 
-HTML benutzen, [siehe Inhaltsbeschränkungen](security-configuration#inhaltsbeschränkungen):
+HTML-Blöcke benutzen:
 
     <div class="custom">
     <strong>Text mit HTML</strong> kann wahlweise benutzt werden.
     <a href="https://datenstrom.se/de/">Link zu Webseite</a>.
     </div>
-
-Und natürlich Emoji, [siehe Emoji-Spickzettel](http://www.emoji-cheat-sheet.com):
-
-    :smile: 
-    :heart: 
-    :coffee:
 
 ## Abkürzungen
 
@@ -124,6 +118,7 @@ Und natürlich Emoji, [siehe Emoji-Spickzettel](http://www.emoji-cheat-sheet.com
 `[fa fa-envelope-o]` = [Icons und Symbole anzeigen](https://github.com/datenstrom/yellow-plugins/tree/master/fontawesome)  
 `[ea ea-smile]` = [Emoji und bunte Bilder](https://github.com/datenstrom/yellow-plugins/tree/master/emojiawesome)  
 `[yellow]` = [Informationen über Webseite anzeigen](https://github.com/datenstrom/yellow-plugins/tree/master/core)  
+`[edit]` = [Webseite im Webbrowser bearbeiten](https://github.com/datenstrom/yellow-plugins/tree/master/edit)  
 `[toc]` = [Inhaltsverzeichnis anzeigen](https://github.com/datenstrom/yellow-plugins/tree/master/toc)  
 `[--more--]` = [Seitenumbruch hinzufügen](https://github.com/datenstrom/yellow-plugins/tree/master/blog#how-to-configure-a-blog)  
 

@@ -32,7 +32,7 @@ You can use [Markdown](markdown-cheat-sheet) to edit web pages. Open the file `c
 
 Formatting text:
 
-    Normal *italic* **bold** `code`
+    Normal **bold** *italic* `code`
 
 Making a list:
 

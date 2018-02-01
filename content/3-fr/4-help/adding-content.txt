@@ -32,7 +32,7 @@ Vous pouvez utiliser [Markdown](markdown-cheat-sheet) pour éditer des pages web
 
 Formatage du texte:
 
-    Normal *italique* **gras** `code`
+    Normal **gras** *italique* `code`
 
 Créer une liste:
 

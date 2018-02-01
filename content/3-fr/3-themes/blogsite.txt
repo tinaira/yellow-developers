@@ -13,7 +13,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 ## Exemple de texte
 
-Normal *italique* **gras** `code`
+Normal **gras** *italique* `code`
 
 * point une
 * point deux
