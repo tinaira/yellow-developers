@@ -134,7 +134,7 @@ Hier ist eine Beispiel-Snippetdatei `system/themes/snippets/footer.php`:
 <div class="siteinfo">
 <a href="<?php echo $yellow->page->base."/" ?>">&copy; 2018 <?php echo $yellow->page->getHtml("sitename") ?></a>.
 <a href="<?php echo $yellow->page->get("pageEdit") ?>">Edit</a>.
-<a href="<?php echo $yellow->text->get("yellowUrl") ?>">Erstellt mit Yellow</a>.
+<a href="<?php echo $yellow->text->get("yellowUrl") ?>">Erstellt mit Datenstrom Yellow</a>.
 </div>
 </div>
 </div>
@@ -152,7 +152,7 @@ Hier ist ein Beispiel-Snippet um zusätzliche Links in der Fußzeile anzuzeigen:
 <a href="<?php echo $yellow->page->base."/sitemap/" ?>">Sitemap</a>.
 <a href="<?php echo $yellow->page->base."/feed/page:feed.xml" ?>">Feed</a>.
 <a href="<?php echo $yellow->page->get("pageEdit") ?>">Edit</a>.
-<a href="<?php echo $yellow->text->get("yellowUrl") ?>">Erstellt mit Yellow</a>.
+<a href="<?php echo $yellow->text->get("yellowUrl") ?>">Erstellt mit Datenstrom Yellow</a>.
 </div>
 </div>
 </div>
@@ -171,7 +171,7 @@ Hier ist ein Beispiel-Snippet um die Fußzeile in Links und Rechts aufzuteilen:
 <a href="<?php echo $yellow->page->get("pageEdit") ?>">Edit</a>.
 </div>
 <div class="siteinfo-right">
-<a href="<?php echo $yellow->text->get("yellowUrl") ?>">Erstellt mit Yellow</a>.
+<a href="<?php echo $yellow->text->get("yellowUrl") ?>">Erstellt mit Datenstrom Yellow</a>.
 </div>
 <div class="siteinfo-banner"></div>
 </div>

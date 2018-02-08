@@ -5,4 +5,4 @@ Navigation: navigation
 ---
 This page tests custom theme.
 
-Yellow is for people who make websites. Create small web pages, blogs and wikis. The focus is on people and that it's useful for you.
+Datenstrom Yellow is for people who make websites. Create small web pages, blogs and wikis. The focus is on people and that it's useful for you.
