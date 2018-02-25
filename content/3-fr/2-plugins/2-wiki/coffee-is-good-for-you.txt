@@ -1,5 +1,5 @@
 ---
-Title: Café
+Title: Café est bon pour toi
 Template: wiki
 Tag: Exemple, Café
 ---

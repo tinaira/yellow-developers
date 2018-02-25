@@ -113,9 +113,9 @@ You can use [shortcuts](https://github.com/datenstrom/yellow-plugins/tree/master
 Title: Sidebar
 Status: hidden
 ---
-Recent
+New
 
-[blogrecent /blog/ 5]
+[blogchanges /blog/ 5]
 
 Tags
 
@@ -129,9 +129,9 @@ Here is the same sidebar, if the blog is located on the home page:
 Title: Sidebar
 Status: hidden
 ---
-Recent
+New
 
-[blogrecent / 5]
+[blogchanges / 5]
 
 Tags
 

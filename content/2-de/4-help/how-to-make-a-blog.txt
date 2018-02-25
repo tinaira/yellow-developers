@@ -113,9 +113,9 @@ Verwende [Abkürzungen](https://github.com/datenstrom/yellow-plugins/tree/master
 Title: Sidebar
 Status: hidden
 ---
-Neueste
+Neu
 
-[blogrecent /blog/ 5]
+[blogchanges /blog/ 5]
 
 Tags
 
@@ -129,9 +129,9 @@ Hier ist die selbe Sidebar, falls sich das Blog auf der Startseite befindet:
 Title: Sidebar
 Status: hidden
 ---
-Neueste
+Neu
 
-[blogrecent / 5]
+[blogchanges / 5]
 
 Tags
 

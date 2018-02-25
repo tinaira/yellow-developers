@@ -1,7 +1,7 @@
 ---
 Title: Wiki erstellen
 ---
-[[image screenshot-wiki.png Screenshot screenshot 75%]](/de/plugins/wiki/coffee)  
+[[image screenshot-wiki.png Screenshot screenshot 75%]](/de/plugins/wiki/coffee-is-good-for-you)  
 Lerne wie man ein eigenes Wiki erstellt. [Demo anschauen](/de/plugins/wiki/).
 
 ## Wiki installieren
@@ -35,7 +35,7 @@ Um eine neue Wikiseite hinzuzufügen, erstellst du eine neue Datei im Wikiverzei
 
 ```
 ---
-Title: Kaffee
+Title: Kaffee ist gut für dich
 Template: wiki
 Tag: Beispiel, Kaffee
 ---
@@ -55,7 +55,7 @@ Ein Video hinzufügen mit dem [Youtube-Plugin](https://github.com/datenstrom/yel
 
 ```
 ---
-Title: Kaffee
+Title: Kaffee ist gut für dich
 Template: wiki
 Tag: Beispiel, Kaffee
 ---

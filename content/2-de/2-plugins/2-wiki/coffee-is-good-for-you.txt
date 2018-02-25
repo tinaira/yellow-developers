@@ -1,5 +1,5 @@
 ---
-Title: Kaffee
+Title: Kaffee ist gut für dich
 Template: wiki
 Tag: Beispiel, Kaffee
 ---

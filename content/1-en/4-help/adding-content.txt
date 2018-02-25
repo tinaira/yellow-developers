@@ -28,7 +28,7 @@ You can use [Markdown](markdown-cheat-sheet) to edit web pages. Open the file `c
     ---
     Your website works!
     
-    You can [edit this page] or use your text editor.
+    [edit - You can edit this page] or use your text editor.
 
 Formatting text:
 

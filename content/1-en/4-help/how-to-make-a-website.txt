@@ -24,7 +24,7 @@ Title: Home
 ---
 Your website works! 
 
-You can [edit this page] or use your text editor. 
+[edit - You can edit this page] or use your text editor. 
 ```
 
 To create a new page, add a new file to the home folder or another `content` folder. To add something to the navigation, create a new folder with a numerical prefix. Only folders with a prefix are shown in the navigation. Here's another example page:
@@ -33,7 +33,7 @@ To create a new page, add a new file to the home folder or another `content` fol
 ---
 Title: Datenstrom Yellow is for people who make websites
 ---
-You can [edit this page]. The help gives you more information 
+[edit - You can edit this page]. The help gives you more information 
 about how to create small web pages, blogs and wikis.
 ```
 
@@ -45,7 +45,7 @@ Title: Datenstrom Yellow is for people who make websites
 ---
 [image picture.jpg Example rounded]
 
-You can [edit this page]. The help gives you more information 
+[edit - You can edit this page]. The help gives you more information 
 about how to create small web pages, blogs and wikis.
 ```
 
@@ -58,7 +58,7 @@ TitleNavigation: Home
 ---
 [image picture.jpg Example rounded]
 
-You can [edit this page]. The help gives you more information 
+[edit - You can edit this page]. The help gives you more information 
 about how to create small web pages, blogs and wikis.
 ```
 

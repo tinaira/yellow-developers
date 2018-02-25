@@ -1,7 +1,7 @@
 ---
 Title: How to make a wiki
 ---
-[[image screenshot-wiki.png Screenshot screenshot 75%]](/plugins/wiki/coffee)  
+[[image screenshot-wiki.png Screenshot screenshot 75%]](/plugins/wiki/coffee-is-good-for-you)  
 Learn how to make your own wiki. [See demo](/plugins/wiki/).
 
 ## Install wiki
@@ -35,7 +35,7 @@ To create a new wiki page, add a new file to the wiki folder. Set `Title` and mo
 
 ```
 ---
-Title: Coffee
+Title: Coffee is good for you
 Template: wiki
 Tag: Example, Coffee
 ---
@@ -55,7 +55,7 @@ Now let's add a video with the [Youtube plugin](https://github.com/datenstrom/ye
 
 ```
 ---
-Title: Coffee
+Title: Coffee is good for you
 Template: wiki
 Tag: Example, Coffee
 ---

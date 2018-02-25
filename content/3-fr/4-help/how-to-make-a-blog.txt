@@ -113,9 +113,9 @@ Vous pouvez utiliser des [raccourcis](https://github.com/datenstrom/yellow-plugi
 Title: Sidebar
 Status: hidden
 ---
-Récents
+Nouveau
 
-[blogrecent /blog/ 5]
+[blogchanges /blog/ 5]
 
 Tags
 
@@ -129,9 +129,9 @@ Voici les mêmes raccourcis, si le blog est situé sur la page d'accueil:
 Title: Sidebar
 Status: hidden
 ---
-Récents
+Nouveau
 
-[blogrecent / 5]
+[blogchanges / 5]
 
 Tags
 

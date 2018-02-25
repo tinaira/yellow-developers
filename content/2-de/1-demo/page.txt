@@ -5,4 +5,4 @@ Template: demo
 ---
 [image picture.jpg Beispiel rounded]
 
-Du kannst [edit - diese Seite bearbeiten]. Die Hilfe zeigt dir wie man kleine Webseiten, Blogs und Wikis erstellt. [Weitere Informationen](/de/help/).
+[edit - Du kannst diese Seite bearbeiten]. Die Hilfe zeigt dir wie man kleine Webseiten, Blogs und Wikis erstellt. [Weitere Informationen](/de/help/).

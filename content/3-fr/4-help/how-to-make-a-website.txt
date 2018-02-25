@@ -24,7 +24,7 @@ Title: Home
 ---
 Votre site web fonctionne!
 
-Vous pouvez [edit - modifier cette page] ou utiliser un éditeur de texte.
+[edit - Vous pouvez modifier cette page] ou utiliser un éditeur de texte.
 ```
 
 Pour créer une nouvelle page, ajoutez un nouveau fichier dans le dossier `1-home` ou dans tout autre dossier du dossier `content`. Pour ajouter votre page au menu de navigation, créez un dossier avec un préfixe numérique. Seuls les dossiers avec un préfixe sont présentés dans la navigation. Voici un autre exemple de page:
@@ -33,7 +33,7 @@ Pour créer une nouvelle page, ajoutez un nouveau fichier dans le dossier `1-hom
 ---
 Title: Datenstrom Yellow est fait pour les gens qui font des sites web
 ---
-Vous pouvez [edit - modifier cette page]. L'aide vous donne plus 
+[edit - Vous pouvez modifier cette page]. L'aide vous donne plus 
 d'informations sur la façon de créer de petites pages web, blogs et wikis.
 ```
 
@@ -45,7 +45,7 @@ Title: Datenstrom Yellow est fait pour les gens qui font des sites web
 ---
 [image picture.jpg Exemple rounded]
 
-Vous pouvez [edit - modifier cette page]. L'aide vous donne plus 
+[edit - Vous pouvez modifier cette page]. L'aide vous donne plus 
 d'informations sur la façon de créer de petites pages web, blogs et wikis.
 ```
 
@@ -58,7 +58,7 @@ TitleNavigation: Home
 ---
 [image picture.jpg Exemple rounded]
 
-Vous pouvez [edit - modifier cette page]. L'aide vous donne plus 
+[edit - Vous pouvez modifier cette page]. L'aide vous donne plus 
 d'informations sur la façon de créer de petites pages web, blogs et wikis.
 ```
 

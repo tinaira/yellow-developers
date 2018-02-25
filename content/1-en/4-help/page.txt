@@ -6,6 +6,4 @@ TitleNavigation: Help
 
 Datenstrom Yellow is for people who make websites. [Get support](support).
 
-Create small web pages, blogs and wikis. The focus is on people and that it's useful for you. No database, no admin panel, no distraction that gets in your way. You make your website, we take care of the rest.
-
-[Next: How to make a website →](how-to-make-a-website)
+Create small web pages, blogs and wikis. The focus is on people and that it's useful for you. No database, no admin panel, no distraction that gets in your way. You make your website, we take care of the rest. [Read tutorial](how-to-make-a-website).

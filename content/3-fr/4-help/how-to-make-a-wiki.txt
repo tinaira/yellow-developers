@@ -1,7 +1,7 @@
 ---
 Title: Comment faire un wiki
 ---
-[[image screenshot-wiki.png Screenshot screenshot 75%]](/fr/plugins/wiki/coffee)  
+[[image screenshot-wiki.png Screenshot screenshot 75%]](/fr/plugins/wiki/coffee-is-good-for-you)  
 Apprenez à faire un propre wiki. [Voir la démo](/fr/plugins/wiki/).
 
 ## Installer un wiki
@@ -35,7 +35,7 @@ Pour créer une nouvelle page de wiki, ajoutez un nouveau fichier dans le dossie
 
 ```
 ---
-Title: Café
+Title: Café est bon pour toi
 Template: wiki
 Tag: Exemple, Café
 ---
@@ -55,7 +55,7 @@ Maintenant ajoutons une vidéo avec le [plugin Youtube](https://github.com/daten
 
 ```
 ---
-Title: Café
+Title: Café est bon pour toi
 Template: wiki
 Tag: Exemple, Café
 ---

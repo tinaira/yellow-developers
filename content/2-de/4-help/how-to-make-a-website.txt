@@ -24,7 +24,7 @@ Title: Home
 ---
 Deine Webseite funktioniert!
 
-Du kannst [edit - diese Seite bearbeiten] oder einen Texteditor benutzen.
+[edit - Du kannst diese Seite bearbeiten] oder einen Texteditor benutzen.
 ```
 
 Um eine neue Seite hinzuzufügen, erstellst du eine neue Datei im Home-Verzeichnis oder einem anderen `content`-Verzeichnis. Um die Navigation zu erweitern, erstellst du ein neues Verzeichnis mit numerischen Präfix. Es werden nur Verzeichnisse mit einem Präfix in der Navigation angezeigt. Hier ist noch eine Beispiel-Seite:
@@ -33,7 +33,7 @@ Um eine neue Seite hinzuzufügen, erstellst du eine neue Datei im Home-Verzeichn
 ---
 Title: Datenstrom Yellow ist für Menschen die Webseiten machen
 ---
-Du kannst [edit - diese Seite bearbeiten]. Die Hilfe gibt dir weitere 
+[edit - Du kannst diese Seite bearbeiten]. Die Hilfe gibt dir weitere 
 Informationen wie man kleine Webseiten, Blogs und Wikis erstellt.
 ```
 
@@ -45,7 +45,7 @@ Title: Datenstrom Yellow ist für Menschen die Webseiten machen
 ---
 [image picture.jpg Beispiel rounded]
 
-Du kannst [edit - diese Seite bearbeiten]. Die Hilfe gibt dir weitere 
+[edit - Du kannst diese Seite bearbeiten]. Die Hilfe gibt dir weitere 
 Informationen wie man kleine Webseiten, Blogs und Wikis erstellt.
 ```
 
@@ -58,7 +58,7 @@ TitleNavigation: Home
 ---
 [image picture.jpg Beispiel rounded]
 
-Du kannst [edit - diese Seite bearbeiten]. Die Hilfe gibt dir weitere 
+[edit - Du kannst diese Seite bearbeiten]. Die Hilfe gibt dir weitere 
 Informationen wie man kleine Webseiten, Blogs und Wikis erstellt.
 ```
 

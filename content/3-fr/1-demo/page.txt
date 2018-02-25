@@ -5,4 +5,4 @@ Template: demo
 ---
 [image picture.jpg Exemple rounded]
 
-Vous pouvez [edit - modifier cette page]. L'aide montre comment créer de petites pages web, blogs et wikis. [Apprenez-en plus](/fr/help/).
+[edit - Vous pouvez modifier cette page]. L'aide montre comment créer de petites pages web, blogs et wikis. [Apprenez-en plus](/fr/help/).

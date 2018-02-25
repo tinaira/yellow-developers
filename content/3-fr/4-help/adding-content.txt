@@ -28,7 +28,7 @@ Vous pouvez utiliser [Markdown](markdown-cheat-sheet) pour éditer des pages web
     ---
     Votre site web fonctionne!
     
-    Vous pouvez [edit - modifier cette page] ou utiliser un éditeur de texte.
+    [edit - Vous pouvez modifier cette page] ou utiliser un éditeur de texte.
 
 Formatage du texte:
 

@@ -28,7 +28,7 @@ Du kannst [Markdown](markdown-cheat-sheet) benutzen um Webseiten zu bearbeiten. 
     ---
     Deine Webseite funktioniert!
     
-    Du kannst [edit - diese Seite bearbeiten] oder einen Texteditor benutzen.
+    [edit - Du kannst diese Seite bearbeiten] oder einen Texteditor benutzen.
 
 Text formatieren:
 
