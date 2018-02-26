@@ -99,7 +99,7 @@ Here's an example snippet to show additional links in the navigation:
 <?php endforeach ?>
 <li><a href="https://twitter.com/datenstromse">Twitter</a></li>
 <li><a href="https://github.com/datenstrom">GitHub</a></li>
-<li><a href="https://instagram.com/datenstromse">Instagram</a></li>
+<li><a href="https://datenstrom.se">Datenstrom</a></li>
 </ul>
 </div>
 <div class="navigation-banner"></div>
@@ -117,7 +117,7 @@ Here's an example snippet to show [icons and symbols](https://github.com/datenst
 <?php endforeach ?>
 <li><a href="https://twitter.com/datenstromse"><i class="fa fa-twitter fa-lg"></i></a></li>
 <li><a href="https://github.com/datenstrom"><i class="fa fa-github fa-lg"></i></a></li>
-<li><a href="https://instagram.com/datenstromse"><i class="fa fa-instagram fa-lg"></i></a></li>
+<li><a href="https://datenstrom.se"><i class="fa fa-heart fa-lg"></i></a></li>
 </ul>
 </div>
 <div class="navigation-banner"></div>
@@ -197,7 +197,7 @@ Links
 
 * [Twitter](https://twitter.com/datenstromse)
 * [GitHub](https://github.com/datenstrom)
-* [Instagram](https://instagram.com/datenstromse)
+* [Datenstrom](https://datenstrom.se)
 ```
 
 [Next: API for developers →](api)

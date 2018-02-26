@@ -103,7 +103,7 @@ Liens
 
 * [Twitter](https://twitter.com/datenstromse)
 * [GitHub](https://github.com/datenstrom)
-* [Instagram](https://instagram.com/datenstromse)
+* [Datenstrom](https://datenstrom.se)
 ```
 
 Vous pouvez utiliser des [raccourcis](https://github.com/datenstrom/yellow-plugins/tree/master/blog#how-to-configure-a-blog) afin d'afficher des informations à propos du blog.
