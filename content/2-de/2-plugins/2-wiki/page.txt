@@ -12,6 +12,6 @@ Datenstrom Yellow ist für Menschen die Webseiten machen. Erstelle kleine Websei
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna pizza. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-* [Siehe alle Seiten](/de/plugins/wiki/special:pages/)
-* [Siehe letzte Änderungen](/de/plugins/wiki/special:changes/)
-* [Siehe Hilfe](https://developers.datenstrom.se/de/help/)
+* [Siehe alle Seiten](./special:pages/)
+* [Siehe letzte Änderungen](./special:changes/)
+* [Siehe Beispiel](./tag:beispiel/)

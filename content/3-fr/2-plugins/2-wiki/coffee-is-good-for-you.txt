@@ -1,7 +1,7 @@
 ---
 Title: Café est bon pour toi
 Template: wiki
-Tag: Exemple, Café
+Tag: Exemple, Café, Vidéo
 ---
 Le café est une boisson fabriquée à partir des haricots rôtis de l'usine de café.
 

@@ -57,7 +57,7 @@ Now let's add a video with the [Youtube plugin](https://github.com/datenstrom/ye
 ---
 Title: Coffee is good for you
 Template: wiki
-Tag: Example, Coffee
+Tag: Example, Coffee, Video
 ---
 Coffee is a beverage made from the roasted beans of the coffee plant.
 
@@ -88,7 +88,7 @@ Links
 
 * [See all pages](/wiki/special:pages/)
 * [See recent changes](/wiki/special:changes/)
-* [See help](https://developers.datenstrom.se/help/)
+* [See example](/wiki/tag:example/)
 ```
 
 You can use [shortcuts](https://github.com/datenstrom/yellow-plugins/tree/master/wiki#how-to-configure-a-wiki) to show information about the wiki:
@@ -102,11 +102,11 @@ Links
 
 * [See all pages](/wiki/special:pages/)
 * [See recent changes](/wiki/special:changes/)
-* [See help](https://developers.datenstrom.se/help/)
+* [See example](/wiki/tag:example/)
 
 Tags
 
-[wikitags /wiki/ 3]
+[wikitags /wiki/ 5]
 ```
 
 Here is the same sidebar, if the wiki is located on the home page:
@@ -120,11 +120,11 @@ Links
 
 * [See all pages](/special:pages/)
 * [See recent changes](/special:changes/)
-* [See help](https://developers.datenstrom.se/help/)
+* [See example](/tag:example/)
 
 Tags
 
-[wikitags / 3]
+[wikitags / 5]
 ```
 
 ## More features

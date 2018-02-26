@@ -57,7 +57,7 @@ Ein Video hinzufügen mit dem [Youtube-Plugin](https://github.com/datenstrom/yel
 ---
 Title: Kaffee ist gut für dich
 Template: wiki
-Tag: Beispiel, Kaffee
+Tag: Beispiel, Kaffee, Video
 ---
 Kaffee ist ein Getränk aus gerösteten Bohnen der Kaffeepflanze.
 
@@ -87,8 +87,8 @@ Status: hidden
 Links
 
 * [Siehe alle Seiten](/wiki/special:pages/)
-* [Letzte Änderungen](/wiki/special:changes/)
-* [Hilfe](https://developers.datenstrom.se/de/help/)
+* [Siehe letzte Änderungen](/wiki/special:changes/)
+* [Siehe Beispiel](/wiki/tag:beispiel/)
 ```
 
 Verwende [Abkürzungen](https://github.com/datenstrom/yellow-plugins/tree/master/wiki#how-to-configure-a-wiki), um Informationen über das Wiki anzuzeigen:
@@ -99,12 +99,12 @@ Title: Sidebar
 Status: hidden
 ---
 * [Siehe alle Seiten](/wiki/special:pages/)
-* [Letzte Änderungen](/wiki/special:changes/)
-* [Hilfe](https://developers.datenstrom.se/de/help/)
+* [Siehe letzte Änderungen](/wiki/special:changes/)
+* [Siehe Beispiel](/wiki/tag:beispiel/)
 
 Tags
 
-[wikitags /wiki/ 3]
+[wikitags /wiki/ 5]
 ```
 
 Hier ist die selbe Sidebar, falls sich das Wiki auf der Startseite befindet:
@@ -115,12 +115,12 @@ Title: Sidebar
 Status: hidden
 ---
 * [Siehe alle Seiten](/special:pages/)
-* [Letzte Änderungen](/special:changes/)
-* [Hilfe](https://developers.datenstrom.se/de/help/)
+* [Siehe letzte Änderungen](/special:changes/)
+* [Siehe Beispiel](/tag:beispiel/)
 
 Tags
 
-[wikitags / 3]
+[wikitags / 5]
 ```
 
 ## Weitere Funktionen

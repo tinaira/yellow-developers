@@ -57,7 +57,7 @@ Maintenant ajoutons une vidéo avec le [plugin Youtube](https://github.com/daten
 ---
 Title: Café est bon pour toi
 Template: wiki
-Tag: Exemple, Café
+Tag: Exemple, Café, Vidéo
 ---
 Le café est une boisson fabriquée à partir des haricots rôtis de l'usine de café.
 
@@ -87,8 +87,8 @@ Status: hidden
 Liens
 
 * [Voir toutes les pages](/wiki/special:pages/)
-* [Changements récents](/wiki/special:changes/)
-* [Aide](https://developers.datenstrom.se/fr/help/)
+* [Voir changements récents](/wiki/special:changes/)
+* [Voir l'exemple](/wiki/tag:exemple/)
 ```
 
 Vous pouvez utiliser des [raccourcis](https://github.com/datenstrom/yellow-plugins/tree/master/wiki#how-to-configure-a-wiki) afin d'afficher des informations à propos du wiki:
@@ -101,12 +101,12 @@ Status: hidden
 Liens
 
 * [Voir toutes les pages](/wiki/special:pages/)
-* [Changements récents](/wiki/special:changes/)
-* [Aide](https://developers.datenstrom.se/fr/help/)
+* [Voir changements récents](/wiki/special:changes/)
+* [Voir l'exemple](/wiki/tag:exemple/)
 
 Tags
 
-[wikitags /wiki/ 3]
+[wikitags /wiki/ 5]
 ```
 
 Voici la même sidebar, si le wiki est situé sur la page d'accueil:
@@ -119,10 +119,10 @@ Status: hidden
 Liens
 
 * [Voir toutes les pages](/special:pages/)
-* [Changements récents](/special:changes/)
-* [Aide](https://developers.datenstrom.se/fr/help/)
+* [Voir changements récents](/special:changes/)
+* [Voir l'exemple](/tag:exemple/)
 
-[wikitags / 3]
+[wikitags / 5]
 ```
 
 ## Plus de fonctionnalités
