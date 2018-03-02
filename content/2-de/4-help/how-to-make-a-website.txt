@@ -8,7 +8,7 @@ Lerne wie man eine eigene Webseite erstellt. [Demo anschauen](/de/).
 
 1. [Datenstrom Yellow herunterladen und entpacken](https://github.com/datenstrom/yellow/archive/master.zip).
 2. Kopiere alle Dateien auf dein Webhosting.
-3. Öffne deine Webseite im Webbrowser.
+3. Öffne deine Webseite im Webbrowser und wähle "Website" aus.
 
 Deine Webseite ist sofort erreichbar. Die Installation kommt mit zwei Seiten, "Home" und "About". Das ist nur ein Beispiel um loszulegen, verändere alles so wie du willst. Man kann eine Webseite erstellen, indem man weitere Dateien und Verzeichnisse hinzufügt.
 

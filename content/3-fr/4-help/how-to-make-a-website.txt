@@ -8,7 +8,7 @@ Apprenez à faire un propre site web. [Voir la démo](/fr/).
 
 1. [Téléchargez et dézippez Datenstrom Yellow](https://github.com/datenstrom/yellow/archive/master.zip).
 2. Copiez tout les fichiers chez votre hébergeur.
-3. Accédez à votre site depuis un navigateur web.
+3. Accédez à votre site depuis un navigateur web et choisissez 'Website'.
 
 Votre site web est immédiatement accessible. L'installation est fournie avec deux pages, 'Home' et 'About'. Elles sont juste un exemple pour commencer, vous pouvez les modifier comme il vous convient. Vous pouvez créer votre site web en ajoutant des fichiers et des dossiers.
 

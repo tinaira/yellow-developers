@@ -11,8 +11,8 @@ This website is made with [yellow].
 
 Here's a collection of our tests:
 
-* [Test API content](api-content)
-* [Test API media](api-media)
+* [Test API content files](api-content-files)
+* [Test API media files](api-media-files)
 * [Test content restrictions](content-restrictions)
 * [Test custom template](custom-template)
 * [Test custom theme](custom-theme)

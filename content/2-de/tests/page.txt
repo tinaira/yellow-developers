@@ -11,8 +11,8 @@ Diese Webseite ist erstellt mit [yellow].
 
 Hier ist eine Sammlung mit unseren Tests:
 
-* [API Inhalt testen](api-content)
-* [API Medien testen](api-media)
+* [API Inhaltsdateien testen](api-content-files)
+* [API Mediendateien testen](api-media-files)
 * [Inhaltsbeschränkungen testen](content-restrictions)
 * [Benuzterdefiniertes Template testen](custom-template)
 * [Benuzterdefiniertes Theme testen](custom-theme)

@@ -11,8 +11,8 @@ Ce site web est fait avec [yellow].
 
 Voici une collection de nos tests:
 
-* [Tester l'API des pages](api-content)
-* [Tester l'API des fichiers](api-media)
+* [Tester l'API des pages](api-content-files)
+* [Tester l'API des fichiers](api-media-files)
 * [Tester les restrictions de contenu](content-restrictions)
 * [Tester le template personnalisé](custom-template)
 * [Tester le thème personnalisé](custom-theme)

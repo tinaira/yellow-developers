@@ -11,7 +11,7 @@ API für Entwickler. Wir :heart: Entwickler.
 [Datenstrom Yellow ist Open-Source](https://github.com/datenstrom/yellow). Die folgenden Dateien sind vorhanden:
 
 ```
-├── content               = Inhalte
+├── content               = Inhaltsdateien
 ├── media                 = Mediendateien
 └── system                = Systemdateien
     ├── config            = Konfigurationsdateien

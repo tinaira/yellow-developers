@@ -1,5 +1,0 @@
----
-Title: API Inhalt testen
-Template: content
----
-Diese Seite testet API für Inhalt.
