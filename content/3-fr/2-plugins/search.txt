@@ -6,4 +6,4 @@ Image: search-fr.png
 Recherche de texte intégral.
 [Installer le plugin](https://github.com/datenstrom/yellow-plugins/tree/master/search).
 
-Voici un exemple de recherche: [comment faire](/fr/search/query:comment%20faire/).
+[Voir l'exemple de recherche](/fr/search/query:comment%20faire/).

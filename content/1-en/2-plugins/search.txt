@@ -6,4 +6,4 @@ Image: search-en.png
 Full-text search.
 [Install plugin](https://github.com/datenstrom/yellow-plugins/tree/master/search).
 
-Here's an example search: [how to make](/search/query:how%20to%20make/).
+[See example search](/search/query:how%20to%20make/).

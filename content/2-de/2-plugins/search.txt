@@ -6,4 +6,4 @@ Image: search-de.png
 Volltext-Suche.
 [Plugin installieren](https://github.com/datenstrom/yellow-plugins/tree/master/search).
 
-Hier ist eine Beispiel-Suche: [wie erstellen](/de/search/query:wie%20erstellen/).
+[Siehe Beispiel-Suche](/de/search/query:wie%20erstellen/).
