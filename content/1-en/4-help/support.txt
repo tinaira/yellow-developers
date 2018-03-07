@@ -19,4 +19,4 @@ Connect with other users and find professional help.
 
 ## Thank you
 
-[Datenstrom Yellow is open source](https://github.com/datenstrom/yellow). Licensed under [GPLv2](https://github.com/datenstrom/yellow/blob/master/LICENSE.md) unless stated otherwise. At the heart of open source is the idea that we make better software together. Contribution and feedback are very welcome. Thank you to all contributors.
+[Datenstrom Yellow is open source](https://github.com/datenstrom/yellow). Licensed under GPLv2 unless stated otherwise. At the heart of open source is the idea that we make better software together. Contribution and feedback are very welcome.

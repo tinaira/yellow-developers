@@ -87,7 +87,7 @@ Créer des sauts de ligne:
 En utilisant des blocs de code:
 
     ```
-    Texte dans un bloc de code sera affiché inchangé.
+    Code source dans un bloc de code sera affiché inchangé.
     function onLoad($yellow)
     {
         $this->yellow = $yellow;

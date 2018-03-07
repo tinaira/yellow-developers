@@ -87,7 +87,7 @@ Zeilenumbrüche erstellen:
 Code-Blöcke benutzen:
 
     ```
-    Text in einem Code-Block wird unverändert dargestellt.
+    Quellcode in einem Code-Block wird unverändert dargestellt.
     function onLoad($yellow)
     {
         $this->yellow = $yellow;

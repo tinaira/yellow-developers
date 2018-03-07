@@ -87,7 +87,7 @@ Making line breaks:
 Using code blocks:
 
     ```
-    Text in a code block will be shown unchanged.
+    Source code in a code block will be shown unchanged.
     function onLoad($yellow)
     {
         $this->yellow = $yellow;
