@@ -77,7 +77,7 @@ Experimental plugins:
 
 * [Audio](https://github.com/schulle4u/yellow-plugin-audio):
   HTML5 audio player.
-* [Burger Menu](https://github.com/richi/yellow-plugin-burger-menu): 
+* [BurgerMenu](https://github.com/richi/yellow-plugin-burger-menu): 
   A hamburger menu button.
 * [CheetJS](https://github.com/nogginfuel/yellow-plugin-cheetjs): 
   Add easter eggs via key binds.
@@ -123,6 +123,8 @@ Experimental plugins:
   Sublime Text 3 Extensions for blogs based on Yellow.
 * [Ticker](https://github.com/schulle4u/yellow-plugin-ticker): 
   Feed parser using SimpleXML or SimplePie.
+* [TuneIn](https://github.com/schulle4u/yellow-plugin-tunein): 
+  Embed radio stations from TuneIn.
 * [Video](https://github.com/nibreh/yellow-plugin-video): 
   HTML5 video player.
 * [WebCLI](https://github.com/richi/yellow-plugin-cli):
