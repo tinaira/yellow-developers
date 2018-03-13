@@ -8,6 +8,7 @@ Entrez en contact avec d'autres utilisateurs et trouvez de l'aide professionnell
 
 * [Poser des questions et discuter des problèmes](https://github.com/datenstrom/yellow/issues)
 * [Découvrez la dernière version](https://github.com/datenstrom/yellow/releases)
+* [Découvrez les dernières fonctionnalités](https://github.com/datenstrom/yellow/issues?q=label%3Anews%20)
 * [Obtenez un soutien commercial](https://mayberg.se/support/)
 * [Contactez un humain](https://datenstrom.se/fr/contact/)
 
@@ -16,7 +17,9 @@ Entrez en contact avec d'autres utilisateurs et trouvez de l'aide professionnell
 * [Répondez aux questions](https://github.com/datenstrom/yellow/issues)
 * [Créer des plugins utiles](https://github.com/datenstrom/yellow-plugins/)
 * [Créer des thèmes magnifiques](https://github.com/datenstrom/yellow-themes/)
-* [Montre ce que tu as fait](https://twitter.com/datenstromse)
+* [Créer de nouvelles traductions](https://github.com/datenstrom/yellow-plugins/tree/master/language) et 
+[améliorer la documentation](https://github.com/datenstrom/yellow-developers/search?q=traduire+cette+page)
+* [Suivez-nous sur Twitter](https://twitter.com/datenstromse)
 
 ## Remerciements
 

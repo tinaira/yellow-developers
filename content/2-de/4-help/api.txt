@@ -954,6 +954,6 @@ Einige Tipps für Entwickler:
 
 3. [Lerne die Markdown-Grundlagen](markdown-cheat-sheet). Mach dich vertraut mit Textformatierung, Abkürzungen und Einstellungen. Markdown ist eine praktische Art um Webseiten zu bearbeiten. Du kannst Plugins verwenden um Markdown mit weiteren Funktionen zu erweitern.
 
-4. [Stelle deinen Code auf GitHub](https://github.com/datenstrom/yellow/issues?q=label%3Anews%20). Erstelle ein Repository für jedes neue Plugin/Theme. Der Name deines Repository sollte `yellow-plugin-xyz` or `yellow-theme-xyz` sein. Dein Code muss nicht perfekt sein, aber er sollte im Entwickler-Kit funktionieren.
+4. [Stelle deinen Code auf GitHub](https://guides.github.com/activities/hello-world/). Erstelle ein Repository für jedes neue Plugin/Theme. Der Name deines Repository sollte `yellow-plugin-xyz` or `yellow-theme-xyz` sein. Dein Code muss nicht perfekt sein, aber er sollte im Entwickler-Kit funktionieren.
 
 5. [Stelle viele Fragen](support). Lass uns wissen wenn etwas nicht funktioniert oder du Hilfe brauchst. Kostenlosen Support für Datenstrom Yellow findest du auf GitHub, dort kannst du Probleme diskutieren und Fragen stellen. 
