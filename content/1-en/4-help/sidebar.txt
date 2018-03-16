@@ -20,8 +20,8 @@ Configurations
 * [Language configuration](language-configuration)
 * [Security configuration](security-configuration)
 
-Customisations
+Developers
 
+* [API for developers](api)
 * [Customising themes](customising-themes)
 * [Customising templates](customising-templates)
-* [API for developers](api)

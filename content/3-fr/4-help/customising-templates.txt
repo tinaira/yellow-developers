@@ -198,4 +198,4 @@ Links
 * [Datenstrom](https://datenstrom.se)
 ```
 
-[Suivant: API pour les développeurs →](api)
+[Suivant: Obtenir de l'aide →](support)

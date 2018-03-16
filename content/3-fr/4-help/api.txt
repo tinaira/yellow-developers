@@ -628,9 +628,6 @@ Copy file
 **$yellow->toolbox->renameFile($fileNameSource, $fileNameDestination, $mkdir = false)**  
 Rename file  
 
-**$yellow->toolbox->mergeFile($fileNameSource, $fileNameDestination)**  
-Merge file
-
 **$yellow->toolbox->deleteFile($fileName, $pathTrash = "")**  
 Delete file  
 
@@ -913,10 +910,10 @@ Open the file `system/plugins/core.php`, change first line to `<?php define("DEB
 
 ```
 YellowCore::sendPage Content-Type: text/html; charset=UTF-8
-YellowCore::sendPage Page-Modified: Fri, 30 Jan 2015 09:30:12 GMT
-YellowCore::sendPage Last-Modified: Mon, 02 Feb 2015 13:19:03 GMT
+YellowCore::sendPage Page-Modified: Sat, 15 Jul 2017 12:19:01 GMT
+YellowCore::sendPage Last-Modified: Wed, 14 Mar 2018 09:38:05 GMT
 YellowCore::sendPage theme:flatsite template:blogpages parser:markdown
-YellowCore::processRequest file:content/2-plugins/1-blog/page.txt
+YellowCore::processRequest file:content/1-en/2-plugins/1-blog/page.txt
 YellowCore::request status:200 handler:core time:19 ms
 ```
 
@@ -951,10 +948,12 @@ Some tips for developers:
 
 1. [Install the developer kit](https://github.com/datenstrom/yellow-developers). The developer kit for Datenstrom Yellow includes plugins, themes and examples. You can try out how to make small web pages, blogs and wikis. It's a great place to get started.
 
-2. [Learn the web basics](https://www.w3schools.com). Make yourself familiar with HTML, CSS and JavaScript. These are the most important things you need to know to make websites. You can use themes to customise the appearance of your website.
+2. [Learn the Markdown basics](markdown-cheat-sheet). Make yourself familiar with text formatting, shortcuts and settings. Markdown is a practical way to edit web pages. You can use plugins to extend Markdown with more features.
 
-3. [Learn the Markdown basics](markdown-cheat-sheet). Make yourself familiar with text formatting, shortcuts and settings. Markdown is a practical way to edit web pages. You can use plugins to extend Markdown with more features.
+3. [Learn the web basics](https://www.w3schools.com). Make yourself familiar with HTML, CSS and JavaScript. These are the most important things you need to know to make websites. You can use themes to customise the appearance of your website.
 
 4. [Put your code on GitHub](https://guides.github.com/activities/hello-world/). Create a repository for each new plugin/theme. The name of your repository should be `yellow-plugin-xyz` or `yellow-theme-xyz`. Your code doesn't have to be perfect, but it should be working in the developer kit.
 
 5. [Ask many questions](support). Let us know if something is not working or you need help. You can find free support for Datenstrom Yellow on GitHub, there you can discuss problems and ask questions.
+
+[Suivant: Personnaliser des thèmes →](customising-themes)

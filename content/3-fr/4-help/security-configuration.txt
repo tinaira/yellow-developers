@@ -21,4 +21,4 @@ Si vous souhaitez protéger votre site web contre les nuisances, restreignez le 
 
 Pensez à vérifier que votre serveur web supporte HTTPS, sinon contactez votre fournisseur d'hébergement web. Il est préférable que votre site web redirige automatiquement HTTP vers HTTPS et que la connexion Internet soit toujours cryptée. Ceci protège la confidentialité de vos utilisateurs.
 
-[Suivant: Personnaliser des thèmes →](customising-themes)
+[Suivant: API pour les développeurs →](api)

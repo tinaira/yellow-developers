@@ -6,4 +6,4 @@ TitleNavigation: Aide
 
 Datenstrom Yellow est fait pour les gens qui font des sites web. [Obtenir de l'aide](support).
 
-Créez de petites pages web, blogs et wikis. L'accent est mis sur les gens et c'est utile pour vous. Pas de base de données, pas de panneau d'administration, pas de distractions qui entrave votre chemin. Vous faites votre site web, on prend soin du reste. [Lire le tutoriel](how-to-make-a-website).
+Créez de petites pages web, blogs et wikis. L'accent est mis sur les gens et c'est utile pour vous. Pas de base de données, pas de panneau d'administration, pas de distractions qui entrave votre chemin. Vous faites votre site web, on prend soin du reste. [Essayez le](/fr/).

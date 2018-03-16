@@ -19,4 +19,4 @@ Falls du deine Webseite vor Unfug schützen willst, beschränke den Inhalt. Öff
 
 Überprüfe ob dein Webserver HTTPS unterstützt, falls nicht kontaktiere deinen Webhoster. Am Besten ist es wenn deine Webseite automatisch von HTTP nach HTTPS weiterleitet und die Internetverbindung immer verschlüsselt wird. Das dient dem Datenschutz.
 
-[Weiter: Themes anpassen →](customising-themes)
+[Weiter: API für Entwickler →](api)

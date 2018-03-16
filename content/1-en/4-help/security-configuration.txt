@@ -19,4 +19,4 @@ If you want to protect your website from nuisance, then restrict the content. Op
 
 Check if your web server supports HTTPS, if not contact your web hosting provider. It's best if your website automatically redirects from HTTP to HTTPS and the Internet connection is always encrypted. This protects the privacy of your users.
 
-[Next: Customising themes →](customising-themes)
+[Next: API for developers →](api)
