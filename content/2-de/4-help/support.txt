@@ -6,7 +6,7 @@ Tausche dich mit anderen Benutzern aus und finde professionelle Hilfe.
 
 ## Support finden
 
-* [Stelle Fragen und diskutiere Probleme](https://github.com/datenstrom/yellow/issues)
+* [Stelle Fragen und melde Probleme](https://github.com/datenstrom/yellow/issues)
 * [Informiere dich über neueste Version](https://github.com/datenstrom/yellow/releases)
 * [Informiere dich über neueste Funktionen](https://github.com/datenstrom/yellow/issues?q=label%3Anews%20)
 * [Finde kommerziellen Support](https://mayberg.se/support/)

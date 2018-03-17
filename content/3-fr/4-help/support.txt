@@ -6,7 +6,7 @@ Entrez en contact avec d'autres utilisateurs et trouvez de l'aide professionnell
 
 ## Comment obtenir de l'aide
 
-* [Poser des questions et discuter des problèmes](https://github.com/datenstrom/yellow/issues)
+* [Posez des questions et signalez des problèmes](https://github.com/datenstrom/yellow/issues)
 * [Découvrez la dernière version](https://github.com/datenstrom/yellow/releases)
 * [Découvrez les dernières fonctionnalités](https://github.com/datenstrom/yellow/issues?q=label%3Anews%20)
 * [Obtenez un soutien commercial](https://mayberg.se/support/)
