@@ -940,8 +940,6 @@ YellowConfig::load Timezone:Europe/Stockholm
 YellowConfig::load Theme:flatsite
 ```
 
-We run [automatic tests and code analysis](/tests/).
-
 ## Tips and tricks
 
 Some tips for developers: 
@@ -952,8 +950,10 @@ Some tips for developers:
 
 3. [Learn the web basics](https://www.w3schools.com). Make yourself familiar with HTML, CSS and JavaScript. These are the most important things you need to know to make websites. You can use themes to customise the appearance of your website.
 
-4. [Put your code on GitHub](https://guides.github.com/activities/hello-world/). Create a repository for each new plugin/theme. The name of your repository should be `yellow-plugin-xyz` or `yellow-theme-xyz`. Your code doesn't have to be perfect, but it should be working in the developer kit.
+4. [Put your code on GitHub](https://guides.github.com/activities/hello-world/). Create a repository for each new plugin/theme. The name of a repository should be `yellow-plugin-xyz` or `yellow-theme-xyz`. You can use the README to describe your repository.
 
-5. [Ask many questions](support). Let us know if something is not working or you need help. You can find free support for Datenstrom Yellow on GitHub, there you can discuss problems and ask questions.
+5. [Test important features](/tests/). Make sure all plugins/themes work together. It's best if plugins/themes both work together and individually. Your code doesn't have to be perfect, but it should be working in the developer kit.
+
+6. [Ask many questions](support). Let us know if something is not working or you need help. You can find free support for Datenstrom Yellow on GitHub, there you can discuss problems and ask questions.
 
 [Suivant: Personnaliser des thèmes →](customising-themes)

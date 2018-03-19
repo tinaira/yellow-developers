@@ -5,11 +5,10 @@ Diese Webseite ist erstellt mit [yellow].
 
 ||||
 |---|---|---|
-|**datenstrom.se**|[![Site status](https://datenstrom.se/media/images/online.svg)](https://datenstrom.se)
 |**datenstrom/yellow**|[![Build status](https://travis-ci.org/datenstrom/yellow.svg?branch=master)](https://travis-ci.org/datenstrom/yellow)|[![Code quality](https://img.shields.io/codacy/grade/f565b048bdff4b0e90391d3d93384b2f/master.svg)](https://www.codacy.com/app/markseu/yellow)
 |**datenstrom/yellow-developers**|[![Build status](https://travis-ci.org/datenstrom/yellow-developers.svg?branch=master)](https://travis-ci.org/datenstrom/yellow-developers)|[![Code quality](https://img.shields.io/codacy/grade/238ea263acd94e36a8dc105a9c0c80fa/master.svg)](https://www.codacy.com/app/markseu/yellow-developers)
 
-Hier ist eine Sammlung mit unseren Tests:
+Hier ist eine Sammlung unserer Tests:
 
 * [API Inhaltsdateien testen](api-content-files)
 * [API Mediendateien testen](api-media-files)
@@ -19,8 +18,11 @@ Hier ist eine Sammlung mit unseren Tests:
 * [Dateiname Unicode testen](file-name-unicode-åäö)
 * [Dateiname Leerzeichen testen](file-name-whitespace)* [Bildparsing testen](image-parsing)
 * [Linkparsing testen](link-parsing)
+* [Umleitung zur Startseite testen](redirect-to-home)
+
+Hier ist eine Sammlung unserer Tests von Fehlern:
+
 * [Sprachfehler testen](page-language-error)
 * [Parserfehler testen](page-parser-error)
 * [Templatefehler testen](page-template-error)
 * [Themefehler testen](page-theme-error)
-* [Umleitung zur Startseite testen](redirect-to-home)
