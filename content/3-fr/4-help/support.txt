@@ -14,12 +14,12 @@ Entrez en contact avec d'autres utilisateurs et trouvez de l'aide professionnell
 
 ## Comment contribuer
 
-* [Répondez aux questions](https://github.com/datenstrom/yellow/issues)
 * [Créer des plugins utiles](https://github.com/datenstrom/yellow-plugins/)
 * [Créer des thèmes magnifiques](https://github.com/datenstrom/yellow-themes/)
-* [Créer de nouvelles traductions](https://github.com/datenstrom/yellow-plugins/tree/master/language) et 
+* [Créer de meilleures traductions](https://github.com/datenstrom/yellow-plugins/tree/master/language) et 
 [améliorer la documentation](https://github.com/datenstrom/yellow-developers/search?q=traduire+cette+page)
 * [Suivez-nous sur Twitter](https://twitter.com/datenstromse)
+* [Répondez aux questions](https://github.com/datenstrom/yellow/issues)
 
 ## Remerciements
 

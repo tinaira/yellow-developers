@@ -14,11 +14,11 @@ Tausche dich mit anderen Benutzern aus und finde professionelle Hilfe.
 
 ## Mitmachen
 
-* [Beantworte Fragen](https://github.com/datenstrom/yellow/issues)
 * [Erstelle nützliche Plugins](https://github.com/datenstrom/yellow-plugins/)
 * [Erstelle schöne Themes](https://github.com/datenstrom/yellow-themes/)
-* [Erstelle neue Übersetzungen](https://github.com/datenstrom/yellow-plugins/tree/master/language)
+* [Erstelle bessere Übersetzungen](https://github.com/datenstrom/yellow-plugins/tree/master/language)
 * [Folge uns auf Twitter](https://twitter.com/datenstromse)
+* [Beantworte Fragen](https://github.com/datenstrom/yellow/issues)
 
 ## Danke
 
