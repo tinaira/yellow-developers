@@ -27,39 +27,28 @@ Votre site web fonctionne!
 [edit - Vous pouvez modifier cette page] ou utiliser un éditeur de texte.
 ```
 
-Pour créer une nouvelle page, ajoutez un nouveau fichier dans le dossier `1-home` ou dans tout autre dossier du dossier `content`. Pour ajouter votre page au menu de navigation, créez un dossier avec un préfixe numérique. Seuls les dossiers avec un préfixe sont présentés dans la navigation. Voici un autre exemple de page:
+Pour créer une nouvelle page, ajoutez un nouveau fichier dans le dossier `1-home` ou dans tout autre dossier du dossier `content`. Voici un autre exemple:
 
 ```
 ---
-Title: Datenstrom Yellow est fait pour les gens qui font des sites web
+Title: Demo
 ---
-[edit - Vous pouvez modifier cette page]. L'aide vous donne plus 
-d'informations sur la façon de créer de petites pages web, blogs et wikis.
+[edit - Vous pouvez modifier cette page]. L'aide montre comment 
+créer de petites pages web, blogs et wikis. 
+[Apprenez-en plus](https://developers.datenstrom.se/fr/help/).
 ```
 
 Maintenant ajoutons une image:
 
 ```
 ---
-Title: Datenstrom Yellow est fait pour les gens qui font des sites web
+Title: Demo
 ---
 [image picture.jpg Exemple rounded]
 
-[edit - Vous pouvez modifier cette page]. L'aide vous donne plus 
-d'informations sur la façon de créer de petites pages web, blogs et wikis.
-```
-
-Voyons comment créer un titre différent dans le menu de navigation:
-
-```
----
-Title: Datenstrom Yellow est fait pour les gens qui font des sites web
-TitleNavigation: Home
----
-[image picture.jpg Exemple rounded]
-
-[edit - Vous pouvez modifier cette page]. L'aide vous donne plus 
-d'informations sur la façon de créer de petites pages web, blogs et wikis.
+[edit - Vous pouvez modifier cette page]. L'aide montre comment 
+créer de petites pages web, blogs et wikis. 
+[Apprenez-en plus](https://developers.datenstrom.se/fr/help/).
 ```
 
 Vous pouvez utiliser [Markdown](markdown-cheat-sheet) pour éditer des pages web.

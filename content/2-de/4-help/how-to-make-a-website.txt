@@ -27,39 +27,28 @@ Deine Webseite funktioniert!
 [edit - Du kannst diese Seite bearbeiten] oder einen Texteditor benutzen.
 ```
 
-Um eine neue Seite hinzuzufügen, erstellst du eine neue Datei im Home-Verzeichnis oder einem anderen `content`-Verzeichnis. Um die Navigation zu erweitern, erstellst du ein neues Verzeichnis mit numerischen Präfix. Es werden nur Verzeichnisse mit einem Präfix in der Navigation angezeigt. Hier ist noch eine Beispiel-Seite:
+Um eine neue Seite hinzuzufügen, erstellst du eine neue Datei im Home-Verzeichnis oder einem anderen `content`-Verzeichnis. Hier ist ein weiteres Beispiel:
 
 ```
 ---
-Title: Datenstrom Yellow ist für Menschen die Webseiten machen
+Title: Demo
 ---
-[edit - Du kannst diese Seite bearbeiten]. Die Hilfe gibt dir weitere 
-Informationen wie man kleine Webseiten, Blogs und Wikis erstellt.
+[edit - Du kannst diese Seite bearbeiten]. Die Hilfe zeigt dir wie 
+man kleine Webseiten, Blogs und Wikis erstellt. 
+[Weitere Informationen](https://developers.datenstrom.se/de/help/).
 ```
 
 Ein Bild hinzufügen:
 
 ```
 ---
-Title: Datenstrom Yellow ist für Menschen die Webseiten machen
+Title: Demo
 ---
 [image picture.jpg Beispiel rounded]
 
-[edit - Du kannst diese Seite bearbeiten]. Die Hilfe gibt dir weitere 
-Informationen wie man kleine Webseiten, Blogs und Wikis erstellt.
-```
-
-Einen anderen Titel in der Navigation anzeigen:
-
-```
----
-Title: Datenstrom Yellow ist für Menschen die Webseiten machen
-TitleNavigation: Home
----
-[image picture.jpg Beispiel rounded]
-
-[edit - Du kannst diese Seite bearbeiten]. Die Hilfe gibt dir weitere 
-Informationen wie man kleine Webseiten, Blogs und Wikis erstellt.
+[edit - Du kannst diese Seite bearbeiten]. Die Hilfe zeigt dir wie 
+man kleine Webseiten, Blogs und Wikis erstellt. 
+[Weitere Informationen](https://developers.datenstrom.se/de/help/).
 ```
 
 Du kannst [Markdown](markdown-cheat-sheet) benutzen um Webseiten zu bearbeiten.

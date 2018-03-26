@@ -27,39 +27,28 @@ Your website works!
 [edit - You can edit this page] or use your text editor. 
 ```
 
-To create a new page, add a new file to the home folder or another `content` folder. To add something to the navigation, create a new folder with a numerical prefix. Only folders with a prefix are shown in the navigation. Here's another example page:
+To create a new page, add a new file to the home folder or another `content` folder. Here's another example:
 
 ```
 ---
-Title: Datenstrom Yellow is for people who make websites
+Title: Demo
 ---
 [edit - You can edit this page]. The help gives you more information 
-about how to create small web pages, blogs and wikis.
+about how to create small web pages, blogs and wikis. 
+[Learn more](https://developers.datenstrom.se/help/).
 ```
 
 Now let's add an image:
 
 ```
 ---
-Title: Datenstrom Yellow is for people who make websites
+Title: Demo
 ---
 [image picture.jpg Example rounded]
 
 [edit - You can edit this page]. The help gives you more information 
-about how to create small web pages, blogs and wikis.
-```
-
-Let's show a different title in the navigation:
-
-```
----
-Title: Datenstrom Yellow is for people who make websites
-TitleNavigation: Home
----
-[image picture.jpg Example rounded]
-
-[edit - You can edit this page]. The help gives you more information 
-about how to create small web pages, blogs and wikis.
+about how to create small web pages, blogs and wikis. 
+[Learn more](https://developers.datenstrom.se/help/).
 ```
 
 You can use [Markdown](markdown-cheat-sheet) to edit web pages.
