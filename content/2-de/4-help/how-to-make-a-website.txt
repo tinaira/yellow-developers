@@ -27,7 +27,7 @@ Deine Webseite funktioniert!
 [edit - Du kannst diese Seite bearbeiten] oder einen Texteditor benutzen.
 ```
 
-Um eine neue Seite hinzuzufügen, erstellst du eine neue Datei im Home-Verzeichnis oder einem anderen `content`-Verzeichnis. Hier ist ein weiteres Beispiel:
+Um eine neue Seite hinzuzufügen, erstellst du eine neue Datei im Home-Verzeichnis oder einem anderen `content`-Verzeichnis. Die [Navigation](adding-content) wird automatisch aus deinen `content`-Verzeichnissen erstellt. Hier ist ein weiteres Beispiel:
 
 ```
 ---

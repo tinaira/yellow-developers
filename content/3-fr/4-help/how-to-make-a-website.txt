@@ -27,7 +27,7 @@ Votre site web fonctionne!
 [edit - Vous pouvez modifier cette page] ou utiliser un éditeur de texte.
 ```
 
-Pour créer une nouvelle page, ajoutez un nouveau fichier dans le dossier `1-home` ou dans tout autre dossier du dossier `content`. Voici un autre exemple:
+Pour créer une nouvelle page, ajoutez un nouveau fichier dans le dossier `1-home` ou dans tout autre dossier du dossier `content`. Le menu de [navigation](adding-content) est automatiquement créée à partir de vos dossiers présents dans le dossier content. Voici un autre exemple:
 
 ```
 ---

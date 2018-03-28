@@ -27,7 +27,7 @@ Your website works!
 [edit - You can edit this page] or use your text editor. 
 ```
 
-To create a new page, add a new file to the home folder or another `content` folder. Here's another example:
+To create a new page, add a new file to the home folder or another `content` folder. The [navigation](adding-content) is automatically created from your `content` folders. Here's another example:
 
 ```
 ---
