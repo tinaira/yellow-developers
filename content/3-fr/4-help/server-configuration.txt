@@ -98,7 +98,7 @@ Assurez-vous que le serveur web est accès en écriture et en lecture aux fichie
 
 ## Site web statique
 
-Datenstrom Yellow est un CMS à base de fichiers, mais aussi un générateur de site statique. Ainsi, Datenstrom Yellow propose une commande pour créer un site statique depuis le dossier d'installation. Votre site statique fonctionnera sur n'importe quel serveur web.
+Datenstrom Yellow est un CMS à base de fichiers, mais aussi un générateur de site statique. Ainsi, Datenstrom Yellow propose une commande pour créer un site statique depuis le dossier d'installation. Votre site statique fonctionnera sur la plupart des serveurs web.
 
 Vous pouvez créer un site statique depuis une interface en [ligne de commande](https://github.com/datenstrom/yellow-plugins/tree/master/command).
 
@@ -107,6 +107,8 @@ Vous pouvez créer un site statique depuis une interface en [ligne de commande](
 3. Tapez la commande suivante: `php yellow.php build /var/www/website`
 
 Ceci construira votre site statique dans le dossier `/var/www/website`. Placez ce dossier sur votre espace d'hébergement, et contruisez une nouvelle version lorsque c'est nécessaire. L'URL peut être défini dans les [paramètres du système](adjusting-system#paramètres-du-système), par exemple `StaticUrl: http://website/`.
+
+Si vous souhaitez tester votre site web, vous pouvez utiliser le serveur web intégré. Ceci est particulièrement pratique pour les développeurs, car il fonctionne sur votre propre ordinateur et vous n'avez rien à télécharger. Voici un exemple: `php -S localhost:8000 yellow.php`.
 
 Comme alternative à un site statique, vous pouvez créer un cache. Cela accélère votre site web, mais vous devez mettre à jour le cache à plusieurs reprises. Voici un exemple: `php yellow.php build`. Pour effacer le cache, tapez la commande suivante: `php yellow.php clean`.
 
@@ -121,7 +123,7 @@ Title: File not found
 The requested file was not found. Oh no...
 ~~~~
 
-Si vous utilisez Datenstrom Yellow de façon classique, vous n'avez rien à configurer. Mais si vous créez un site site statique, il y a une étape supplémentaire. Configurez votre serveur web de sorte qu'il affiche votre page d'erreur personnalisée au lieu de la page 404 par défaut.
+Si vous utilisez Datenstrom Yellow de façon classique, vous n'avez rien à configurer. Mais si vous créez un site site statique avec Datenstrom Yellow, il y a une étape supplémentaire. Configurez votre serveur web de sorte qu'il affiche votre page d'erreur personnalisée.
 
 Pour [Apache](http://httpd.apache.org) ajoutez la ligne suivante à votre fichier de configuration:
 
