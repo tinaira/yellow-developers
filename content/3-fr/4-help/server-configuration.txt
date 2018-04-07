@@ -21,7 +21,7 @@ RewriteRule ^ yellow.php [L]
 </IfModule>
 ```
 
-Si votre site web ne fonctionne pas, vérifiez les étapes suivantes. Ajoutez `RewriteBase` au fichier de configuration, ceci résoudra la plupart des problèmes de serveur web. Voici un exemple pour un sous-dossier:
+Si votre site web ne fonctionne pas, vérifiez les étapes suivantes. Ajoutez `RewriteBase` au fichier de configuration, ceci résoudra la plupart des problèmes de serveur web Apache. Voici un exemple pour un sous-dossier:
 
 ```apache
 <IfModule mod_rewrite.c>
@@ -92,13 +92,25 @@ server {
 }
 ```
 
-Si votre site web ne fonctionne pas, vérifiez `server_name` et `root`. Lorsque vous modifiez le fichier de configuration, vous devez [redémarrer](http://stackoverflow.com/questions/21292533/reload-nginx-configuration) le serveur web Nginx.
+Si votre site web ne fonctionne pas, vérifiez `server_name` et `root` dans le fichier de configuration. Lorsque vous modifiez le fichier de configuration, vous devez [redémarrer](http://stackoverflow.com/questions/21292533/reload-nginx-configuration) le serveur web Nginx.
 
 Assurez-vous que le serveur web est accès en écriture et en lecture aux fichiers. Vous pouvez ajuster manuellement les [droits de permissions](http://superuser.com/questions/51838/recursive-chmod-rw-for-files-rwx-for-directories) sur les fichiers avec la commande `chmod -R a+rw *`. Il est possible également d'assigner le groupe `www-data` et `umask 002` au serveur web et aux utilisateurs.
 
+## Site web dynamique
+
+Si vous souhaitez tester un site web dynamique, utilisez le serveur web intégré. Ceci est particulièrement pratique pour les développeurs, puisque tout fonctionne sur votre propre ordinateur. Avec cette philosophie, vous évitez complètement tout problème de serveur web.
+
+Vous pouvez démarrer le serveur web intégré à partir de la [ligne de commande](https://github.com/datenstrom/yellow-plugins/tree/master/command):
+
+1. Lancez un terminal.
+2. Rendez-vous dans le dossier d'installation, où se trouve `yellow.php`.
+3. Tapez la commande suivante: `php -S localhost: 8000 yellow.php`
+
+Le site seb est disponible en tant que `http://localhost:8000`.
+
 ## Site web statique
 
-Datenstrom Yellow est un CMS à base de fichiers, mais aussi un générateur de site statique. Ainsi, Datenstrom Yellow propose une commande pour créer un site statique depuis le dossier d'installation. Votre site statique fonctionnera sur la plupart des serveurs web.
+Si vous souhaitez créer un site web statique, utilisez le générateur de site statique. Ceci est fait en exécutant une commande de construction depuis le dossier d'installation. Il génère un site web statique, qui fonctionne sur n'importe quel serveur web décent.
 
 Vous pouvez créer un site statique depuis une interface en [ligne de commande](https://github.com/datenstrom/yellow-plugins/tree/master/command).
 
@@ -108,13 +120,13 @@ Vous pouvez créer un site statique depuis une interface en [ligne de commande](
 
 Ceci construira votre site statique dans le dossier `/var/www/website`. Placez ce dossier sur votre espace d'hébergement, et contruisez une nouvelle version lorsque c'est nécessaire. L'URL peut être défini dans les [paramètres du système](adjusting-system#paramètres-du-système), par exemple `StaticUrl: http://website/`.
 
-Si vous souhaitez tester votre site web, vous pouvez utiliser le serveur web intégré. Ceci est particulièrement pratique pour les développeurs, car il fonctionne sur votre propre ordinateur et vous n'avez rien à télécharger. Voici un exemple: `php -S localhost:8000 yellow.php`.
-
 Comme alternative à un site statique, vous pouvez créer un cache. Cela accélère votre site web, mais vous devez mettre à jour le cache à plusieurs reprises. Voici un exemple: `php yellow.php build`. Pour effacer le cache, tapez la commande suivante: `php yellow.php clean`.
+
+Lorsque votre site web statique ne fonctionne pas, vérifiez la configuration du serveur web. Configurez votre serveur web pour qu'il n'envoie aucun type MIME par défaut ou le type MIME `text/html`, lorsqu'il ne peut pas détecter le type de fichier.
 
 ## Page d'erreurs
 
-Quand un problème existe, une page d'erreur s'affiche. Quand le navigateur web accède à un fichier qui n'est pas disponible sur le serveur web, le site web affiche une page avec “File not found”. Le fichier `system/config/page-error-404.txt` permet de définir à quoi ressemblera cette page:
+Quand un problème existe, une page d'erreur s'affiche. Quand le navigateur web accède à un fichier qui n'est pas disponible sur le serveur web, le site web affiche  “File not found”. Le fichier `system/config/page-error-404.txt` permet de définir à quoi ressemblera cette page:
 
 ~~~~
 ---
@@ -123,7 +135,7 @@ Title: File not found
 The requested file was not found. Oh no...
 ~~~~
 
-Si vous utilisez Datenstrom Yellow de façon classique, vous n'avez rien à configurer. Mais si vous créez un site site statique avec Datenstrom Yellow, il y a une étape supplémentaire. Configurez votre serveur web de sorte qu'il affiche votre page d'erreur personnalisée.
+Habituellement, il n'y a plus rien à faire. Si vous créez un site web statique avec Datenstrom Yellow, il y a une étape supplémentaire. Configurez votre serveur web de sorte qu'il affiche votre page d'erreur personnalisée.
 
 Pour [Apache](http://httpd.apache.org) ajoutez la ligne suivante à votre fichier de configuration:
 
