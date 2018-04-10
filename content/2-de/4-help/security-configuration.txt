@@ -3,6 +3,10 @@ Title: Sicherheitseinstellungen
 ---
 Wie man Sicherheit und Datenschutz konfiguriert.
 
+## Datenverschlüsselung
+
+Überprüfe ob deine Webseite [Datenverschlüsselung](https://www.ssllabs.com/ssltest/) unterstützt. Falls Probleme auftreten, kontaktiere bitte deinen Webhoster. Am Besten ist es wenn deine Webseite automatisch von HTTP nach HTTPS weiterleitet und die Internetverbindung immer verschlüsselt ist.
+
 ## Loginbeschränkungen
 
 Falls du nicht willst dass Benutzerkonten im Webbrowser erstellt werden, beschränke die [Login-Seite](https://github.com/datenstrom/yellow-plugins/tree/master/edit). Öffne die Datei `system/config/config.ini` und ändere `EditLoginRestrictions: 1`. Benutzer dürfen sich dann noch einloggen, aber keine Benutzerkonten erstellen.
@@ -14,9 +18,5 @@ Falls du nicht willst dass Seiten im Webbrowser verändert werden, beschränke [
 ## Inhaltsbeschränkungen
 
 Falls du deine Webseite vor Unfug schützen willst, beschränke den Inhalt auf [Markdown](markdown-cheat-sheet). Öffne die Datei `system/config/config.ini` und ändere `ParserSafeMode: 1`. Benutzer dürfen dann nur noch Markdown zur Textformatierung benutzen, aber kein HTML und JavaScript.
-
-## Datenverschlüsselung
-
-Überprüfe ob deine Webseite [Datenverschlüsselung](https://www.ssllabs.com/ssltest/) unterstützt. Falls Probleme auftreten, kontaktiere bitte deinen Webhoster. Am Besten ist es wenn deine Webseite automatisch von HTTP nach HTTPS weiterleitet und die Internetverbindung immer verschlüsselt ist.
 
 [Weiter: API für Entwickler →](api)

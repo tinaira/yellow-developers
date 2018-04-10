@@ -110,7 +110,7 @@ Le site seb est disponible en tant que `http://localhost:8000`.
 
 ## Site web statique
 
-Si vous souhaitez créer un site web statique, utilisez le générateur de site statique. Ceci est fait en exécutant une commande de construction depuis le dossier d'installation. Il génère un site web statique, qui fonctionne sur n'importe quel serveur web décent.
+Si vous souhaitez créer un site web statique, utilisez le générateur de site statique. Ceci est fait en exécutant une commande de construction depuis le dossier d'installation. Il génère un site web statique, qui fonctionne sur presque tous les serveurs web.
 
 Vous pouvez créer un site statique depuis une interface en [ligne de commande](https://github.com/datenstrom/yellow-plugins/tree/master/command).
 

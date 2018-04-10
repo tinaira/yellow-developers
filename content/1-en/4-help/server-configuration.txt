@@ -109,7 +109,7 @@ The website is available as `http://localhost:8000`.
 
 ## Static website
 
-If you want to create a static website, use the static site generator. This is done by running a build command from within the installation folder. It generates a static website, that works on any decent web server.
+If you want to create a static website, use the static site generator. This is done by running a build command from within the installation folder. It generates a static website, that works on almost any web server.
 
 You can create a static website from the [command line](https://github.com/datenstrom/yellow-plugins/tree/master/command):
 

@@ -108,7 +108,7 @@ Daraufhin ist die Webseite vorhanden als `http://localhost:8000`.
 
 ## Statische Webseite
 
-Falls man eine statische Webseite erstellen will, benutzt man den Static-Site-Generator. Dazu führt man einen Build-Befehl im Installations-Verzeichnis aus. Daraufhin wird eine statische Webseite erstellt, die auf jedem vernünftigem Webserver funktioniert.
+Falls man eine statische Webseite erstellen will, benutzt man den Static-Site-Generator. Dazu führt man einen Build-Befehl im Installations-Verzeichnis aus. Daraufhin wird eine statische Webseite erstellt, die auf fast jedem Webserver funktioniert.
 
 Du kannst eine statische Webseite in der [Befehlszeile](https://github.com/datenstrom/yellow-plugins/tree/master/command) erstellen:
 
