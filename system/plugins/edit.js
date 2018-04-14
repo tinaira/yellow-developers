@@ -247,12 +247,13 @@ yellow.edit =
 				var rawDataButtons = "";
 				if(yellow.config.editToolbarButtons && yellow.config.editToolbarButtons!="none")
 				{
-					var tokens = yellow.config.editToolbarButtons.split(",").map(token => token.trim());
+					var tokens = yellow.config.editToolbarButtons.split(",");
 					for(var i=0; i<tokens.length; i++)
 					{
-						if(tokens[i]!="separator")
+						var token = tokens[i].trim();
+						if(token!="separator")
 						{
-							rawDataButtons += "<li><a href=\"#\" id=\"yellow-toolbar-"+yellow.toolbox.encodeHtml(tokens[i])+"\" class=\"yellow-toolbar-btn-icon yellow-toolbar-tooltip\" data-action=\"toolbar\" data-status=\""+yellow.toolbox.encodeHtml(tokens[i])+"\" aria-label=\""+this.getText("Toolbar", "", tokens[i])+"\"><i class=\"yellow-icon yellow-icon-"+yellow.toolbox.encodeHtml(tokens[i])+"\"></i></a></li>";
+							rawDataButtons += "<li><a href=\"#\" id=\"yellow-toolbar-"+yellow.toolbox.encodeHtml(token)+"\" class=\"yellow-toolbar-btn-icon yellow-toolbar-tooltip\" data-action=\"toolbar\" data-status=\""+yellow.toolbox.encodeHtml(token)+"\" aria-label=\""+this.getText("Toolbar", "", token)+"\"><i class=\"yellow-icon yellow-icon-"+yellow.toolbox.encodeHtml(token)+"\"></i></a></li>";
 						} else {
 							rawDataButtons += "<li><a href=\"#\" class=\"yellow-toolbar-btn-separator\"></a></li>";
 						}
@@ -620,11 +621,12 @@ yellow.edit =
 				var rawDataEmojis = "";
 				if(yellow.config.emojiawesomeToolbarButtons && yellow.config.emojiawesomeToolbarButtons!="none")
 				{
-					var tokens = yellow.config.emojiawesomeToolbarButtons.split(" ").map(token => token.replace(/[\:]/g,""));
+					var tokens = yellow.config.emojiawesomeToolbarButtons.split(" ");
 					for(var i=0; i<tokens.length; i++)
 					{
-						var className = tokens[i].replace("+1", "plus1").replace("-1", "minus1").replace(/_/g, "-");
-						rawDataEmojis += "<li><a href=\"#\" id=\"yellow-popup-list-"+yellow.toolbox.encodeHtml(tokens[i])+"\" data-action=\"toolbar\" data-status=\"text\" data-args=\":"+yellow.toolbox.encodeHtml(tokens[i])+":\"><i class=\"ea ea-"+yellow.toolbox.encodeHtml(className)+"\"></i></a></li>";
+						var token = tokens[i].replace(/[\:]/g,"");
+						var className = token.replace("+1", "plus1").replace("-1", "minus1").replace(/_/g, "-");
+						rawDataEmojis += "<li><a href=\"#\" id=\"yellow-popup-list-"+yellow.toolbox.encodeHtml(token)+"\" data-action=\"toolbar\" data-status=\"text\" data-args=\":"+yellow.toolbox.encodeHtml(token)+":\"><i class=\"ea ea-"+yellow.toolbox.encodeHtml(className)+"\"></i></a></li>";
 					}
 				}
 				elementDiv.innerHTML = "<ul class=\"yellow-dropdown yellow-dropdown-menu\">"+rawDataEmojis+"</ul>";
@@ -633,11 +635,11 @@ yellow.edit =
 				var rawDataIcons = "";
 				if(yellow.config.fontawesomeToolbarButtons && yellow.config.fontawesomeToolbarButtons!="none")
 				{
-					var tokens = yellow.config.fontawesomeToolbarButtons.split(" ").map(token => token.replace(/[\:]/g,""));
+					var tokens = yellow.config.fontawesomeToolbarButtons.split(" ");
 					for(var i=0; i<tokens.length; i++)
 					{
-						var className = tokens[i];
-						rawDataIcons += "<li><a href=\"#\" id=\"yellow-popup-list-"+yellow.toolbox.encodeHtml(tokens[i])+"\" data-action=\"toolbar\" data-status=\"text\" data-args=\":"+yellow.toolbox.encodeHtml(tokens[i])+":\"><i class=\"fa "+yellow.toolbox.encodeHtml(className)+"\"></i></a></li>";
+						var token = tokens[i].replace(/[\:]/g,"");
+						rawDataIcons += "<li><a href=\"#\" id=\"yellow-popup-list-"+yellow.toolbox.encodeHtml(token)+"\" data-action=\"toolbar\" data-status=\"text\" data-args=\":"+yellow.toolbox.encodeHtml(token)+":\"><i class=\"fa "+yellow.toolbox.encodeHtml(token)+"\"></i></a></li>";
 					}
 				}
 				elementDiv.innerHTML = "<ul class=\"yellow-dropdown yellow-dropdown-menu\">"+rawDataIcons+"</ul>";
@@ -1232,7 +1234,8 @@ yellow.toolbox =
 	// Return lines from text string, including newline
 	getTextLines: function(string)
 	{
-		var lines = string.split("\n").map(line => line+"\n");
+		var lines = string.split("\n");
+		for(var i=0; i<lines.length; i++) lines[i] = lines[i]+"\n";
 		if(string.length==0 || string.charAt(string.length-1)=="\n") lines.pop();
 		return lines;
 	},
