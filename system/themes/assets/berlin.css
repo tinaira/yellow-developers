@@ -1,5 +1,5 @@
 /* Berlin theme, https://github.com/datenstrom/yellow-themes/tree/master/berlin */
-/* Copyright (c) 2013-2017 Datenstrom, https://datenstrom.se */
+/* Copyright (c) 2013-2018 Datenstrom, https://datenstrom.se */
 /* This file may be used and distributed under the terms of the public license. */
 
 html, body, div, form, pre, span, tr, th, td, img { margin:0; padding:0; border:0; vertical-align:baseline; }
@@ -29,9 +29,9 @@ body {
 	line-height:1.5;
 }
 h1, h2, h3, h4, h5, h6 { font-weight:300; }
-h1 { font-size:3.2em; color:#111; }
-h2 { font-size:2.2em; color:#444; }
-h3 { font-size:1.5em; }
+h1 { font-size:2.9em; color:#111; }
+h2 { font-size:1.6em; color:#444; }
+h3 { font-size:1.5em; color:#444; }
 hr { height:1px; background:#ddd; border:0; }
 strong { font-weight:bold; }
 code { font-size:1.1em; }
@@ -159,7 +159,14 @@ a:hover { color:#07d; text-decoration:underline; }
 .yellow-bar a { color:#555; text-decoration:none; }
 .yellow-bar a:hover { color:#555; text-decoration:underline; }
 .yellow-dropdown a { color:#555; }
-.yellow-pane form h1 { font-size:2.2em; }
+.yellow-dropdown a:hover, .yellow-toolbar a:hover { background-color:#f90; border-color:#f90; }
+.yellow-toolbar .yellow-toolbar-btn-edit {
+	background-color:#fa1; border-color:#fa1; color:#fff
+}
+.yellow-toolbar .yellow-toolbar-btn-create {
+	background-color:#fa1; border-color:#fa1; color:#fff
+}
+.yellow-pane form h1 { font-size:2.5em; }
 
 html, body { height:100%; }
 .page { min-height:100%; position:relative; }

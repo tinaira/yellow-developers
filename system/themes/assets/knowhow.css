@@ -1,5 +1,5 @@
 /* Knowhow theme, https://github.com/datenstrom/yellow-themes/tree/master/knowhow */
-/* Copyright (c) 2013-2017 Datenstrom, https://datenstrom.se */
+/* Copyright (c) 2013-2018 Datenstrom, https://datenstrom.se */
 /* This file may be used and distributed under the terms of the public license. */
 
 html, body, div, form, pre, span, tr, th, td, img { margin:0; padding:0; border:0; vertical-align:baseline; }
@@ -12,6 +12,7 @@ body {
 	line-height:1.6;
 }
 h1, h2, h3, h4, h5, h6 { color:#333; font-weight:normal; }
+h1 { font-size: 2em; font-weight:600; }
 hr { height:1px; background:#ddd; border:0; }
 strong { font-weight:600; }
 code { font-size:1.1em; }
@@ -40,7 +41,7 @@ a:hover { color:#4183c4; text-decoration:underline; }
 /* Header */
 
 .header .sitename { display:block; float:left; }
-.header .sitename h1 { margin:0; font-size:2em; }
+.header .sitename h1 { margin:0; font-size:2em; font-weight:400; }
 .header .sitename h1 a { color:#333; text-decoration:none; }
 .header .sitename h2 { margin-top:0; color:#333; font-size:1.0em; font-weight:400; }
 .header .sitename-logo {
@@ -143,7 +144,14 @@ a:hover { color:#4183c4; text-decoration:underline; }
 /* Responsive and print */
 
 .page { margin:0 auto; max-width:980px; }
-.yellow-bar { margin:0 auto; max-width:980px; font-weight:500; }
+.yellow-bar { margin:0 auto; padding:0.9em 0; max-width:980px; }
+.yellow-dropdown a:hover, .yellow-toolbar a:hover { background-color:#48d; border-color:#48d; }
+.yellow-toolbar .yellow-toolbar-btn-edit {
+	background-color:#59e; border-color:#59e; color:#fff
+}
+.yellow-toolbar .yellow-toolbar-btn-create {
+	background-color:#59e; border-color:#59e; color:#fff
+}
 
 @media screen and (min-width:62em) {
 	body { width:62em; margin:1em auto; }

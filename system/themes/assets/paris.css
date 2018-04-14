@@ -1,5 +1,5 @@
 /* Paris theme, https://github.com/datenstrom/yellow-themes/tree/master/paris */
-/* Copyright (c) 2013-2017 Datenstrom, https://datenstrom.se */
+/* Copyright (c) 2013-2018 Datenstrom, https://datenstrom.se */
 /* This file may be used and distributed under the terms of the public license. */
 
 html, body, div, form, pre, span, tr, th, td, img { margin:0; padding:0; border:0; vertical-align:baseline; }
@@ -167,8 +167,16 @@ a:hover { color:#cf3621; text-decoration:underline; }
 .page { margin-top:0.5em; }
 .header, .content, .siteinfo { margin:0 auto; padding:0 1em; max-width:1000px; }
 .yellow-bar { margin:0 auto; padding:0.7em 1em; max-width:1000px; }
-.yellow-dropdown a:hover, .yellow-toolbar a:hover { background-color:#d44; }
-
+.yellow-dropdown a:hover, .yellow-toolbar a:hover { background-color:#d44; border-color:#d44; }
+.yellow-toolbar .yellow-toolbar-btn-edit {
+	background-color:#333; border-color:#333; color:#fff
+}
+.yellow-toolbar .yellow-toolbar-btn-create {
+	background-color:#333; border-color:#333; color:#fff
+}
+.yellow-toolbar .yellow-toolbar-btn-delete {
+	background-color:#c33; border-color:#c33; color:#fff
+}
 html, body { height:100%; }
 .page { min-height:100%; position:relative; }
 .content { padding-bottom:12em; }

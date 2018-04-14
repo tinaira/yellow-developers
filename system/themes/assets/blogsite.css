@@ -1,5 +1,5 @@
 /* Blogsite theme, https://github.com/datenstrom/yellow-themes/tree/master/blogsite */
-/* Copyright (c) 2013-2017 Datenstrom, https://datenstrom.se */
+/* Copyright (c) 2013-2018 Datenstrom, https://datenstrom.se */
 /* This file may be used and distributed under the terms of the public license. */
 
 html, body, div, form, pre, span, tr, th, td, img { margin:0; padding:0; border:0; vertical-align:baseline; }
@@ -27,7 +27,10 @@ a:hover { color:#07d; text-decoration:underline; }
 .content blockquote { margin-left:0; padding-left:1em; border-left:.5em solid #0a0; }
 .content blockquote blockquote { margin-left:-1.5em; border-left:.5em solid #fb0; }
 .content blockquote blockquote blockquote { border-color:#d00; }
-.content pre { padding:0 2em; overflow:auto; line-height:1.45; }
+.content code, pre { font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace; font-size:90%; }
+.content code { padding:0.15em 0.4em; margin:0; background-color:#f1f1f1; border-radius:3px; }
+.content pre>code { padding:0; margin:0; white-space:pre; background:transparent; border:0; font-size:inherit; }
+.content pre { padding:1em; overflow:auto; line-height:1.45; background-color:#f1f1f1; border-radius:3px; }
 .content .flexible { position:relative; padding-top:0; padding-bottom:56.25%; }
 .content .flexible iframe { position:absolute; top:0; left:0; width:100%; height:100%; }
 .content .stretchable ul { margin:0 -0.5em; padding:0; list-style:none; text-align:center; }

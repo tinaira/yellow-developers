@@ -5,7 +5,7 @@
 
 class YellowThemeBlogsite
 {
-	const VERSION = "0.7.2";	
+	const VERSION = "0.7.3";	
 }
 
 $yellow->themes->register("blogsite", "YellowThemeBlogsite", YellowThemeBlogsite::VERSION);

@@ -1,5 +1,5 @@
 /* Stockholm theme, https://github.com/datenstrom/yellow-themes/tree/master/stockholm */
-/* Copyright (c) 2013-2017 Datenstrom, https://datenstrom.se */
+/* Copyright (c) 2013-2018 Datenstrom, https://datenstrom.se */
 /* This file may be used and distributed under the terms of the public license. */
 
 html, body, div, form, pre, span, tr, th, td, img { margin:0; padding:0; border:0; vertical-align:baseline; }
@@ -36,7 +36,7 @@ strong { font-weight:bold; }
 code { font-size:1.1em; }
 a { color:#07d; text-decoration:none; }
 a:hover { color:#07d; text-decoration:underline; }
-.content h1 a { color:#111; }
+.content h1 a { color:#333; }
 .content h1 a:hover { text-decoration:none; }
 .content img { max-width:100%; height:auto; }
 .content form { margin:1em 0; }
