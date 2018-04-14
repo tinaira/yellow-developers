@@ -951,6 +951,7 @@ class YellowResponse
 		$page = new YellowPage($this->yellow);
 		$page->setRequestInformation($scheme, $address, $base, $location, $fileName);
 		$page->parseData($this->normaliseLines($rawData, $endOfLine), false, 200);
+		$this->yellow->text->setLanguage($page->get("language"));
 		$page->set("pageClass", "page-preview");
 		$page->set("pageClass", $page->get("pageClass")." template-".$page->get("template"));
 		$output = "<div class=\"".$page->getHtml("pageClass")."\"><div class=\"content\">";
