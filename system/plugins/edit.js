@@ -812,7 +812,7 @@ yellow.editor =
 		var end = element.selectionEnd;
 		var top = start, bottom = end;
 		while(text.charAt(top-1)!="\n" && top>0) top--;
-		if(bottom==top && bottom<text.length) bottom++
+		if(bottom==top && bottom<text.length) bottom++;
 		while(text.charAt(bottom-1)!="\n" && bottom<text.length) bottom++;
 		if(type=="insert-autodetect")
 		{
@@ -1204,7 +1204,7 @@ yellow.toolbox =
 					element.style.opacity = opacity;
 					requestAnimationFrame(renderFrame);
 				}
-			};
+			}
 			renderFrame();
 		} else {
 			element.style.display = show ? "block" : "none";
