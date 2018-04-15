@@ -1060,14 +1060,8 @@ class YellowResponse
 			{
 				$toolbarButtons = "";
 				if($this->yellow->plugins->isExisting("markdown")) $toolbarButtons = "preview, format, bold, italic, code, list, link, file";
-				if($this->yellow->plugins->isExisting("emojiawesome") && $this->yellow->config->get("emojiawesomeToolbarButtons")!="none")
-				{
-					$toolbarButtons .= ", emojiawesome";
-				}
-				if($this->yellow->plugins->isExisting("fontawesome") && $this->yellow->config->get("fontawesomeToolbarButtons")!="none")
-				{
-					$toolbarButtons .= ", fontawesome";
-				}
+				if($this->yellow->plugins->isExisting("emojiawesome")) $toolbarButtons .= ", emojiawesome";
+				if($this->yellow->plugins->isExisting("fontawesome")) $toolbarButtons .= ", fontawesome";
 				if($this->yellow->plugins->isExisting("draft")) $toolbarButtons .= ", draft";
 				if($this->yellow->plugins->isExisting("markdown")) $toolbarButtons .= ", markdown";
 			}
