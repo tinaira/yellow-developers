@@ -5,7 +5,7 @@
 
 class YellowInstagram
 {
-	const VERSION = "0.7.3";
+	const VERSION = "0.7.4";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
