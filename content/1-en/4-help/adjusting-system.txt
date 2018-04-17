@@ -18,17 +18,21 @@ The main configuration file is `system/config/config.ini`. Here's an example:
     Timezone: Europe/Stockholm
     Theme: flatsite
 
-You can define the default settings here, for example the name of the website and the email of the webmaster. Individual [settings](markdown-cheat-sheet#settings) can be defined at the top of each page. For a new installation you should set `Sitename`, `Author` and `Email`.
+You can define the system settings here, for example the name of the website and the email of the webmaster. Individual [settings](markdown-cheat-sheet#settings) can be defined at the top of each page. For a new installation you should set `Sitename`, `Author` and `Email`.
 
 ## Text settings
 
-An important configuration file is `system/config/text.ini`. Here's an example:
+Another configuration file is `system/config/text.ini`. Here's an example:
+
+    EditLoginTitle: Welcome to Stockholm
+
+Here's another example:
 
     DateFormatShort: F Y
     DateFormatMedium: Y-m-d
     DateFormatLong: Y-m-d H:i
 
-You can define the text settings here, for example texts that are displayed on the website and the [date format](http://php.net/manual/en/function.date.php). There are different texts for different languages. The language defines which [text settings](https://github.com/datenstrom/yellow-plugins/tree/master/language) will be used.
+You can define the text settings here, for example text that is displayed on your website and the [date format](http://php.net/manual/en/function.date.php). The default text is defined by the corresponding [language file](https://github.com/datenstrom/yellow/blob/master/system/plugins/language-en.txt). A different text can be defined in the configuration file.
 
 ## User accounts
 

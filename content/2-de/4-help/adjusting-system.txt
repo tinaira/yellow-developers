@@ -18,17 +18,21 @@ Die zentrale Konfigurationsdatei ist `system/config/config.ini`. Hier ist ein Be
     Timezone: Europe/Berlin
     Theme: flatsite
 
-Dort kannst du die Standardeinstellungen festlegen, zum Beispiel den Namen der Webseite und E-Mail des Webmasters. Die individuellen [Einstellungen](markdown-cheat-sheet#einstellungen) lassen sich ganz oben auf jeder Seite festlegen. Bei einer neuen Installation sollte man `Sitename`, `Author` und `Email` anpassen.
+Dort kannst du die Systemeinstellungen festlegen, zum Beispiel den Namen der Webseite und E-Mail des Webmasters. Die individuellen [Einstellungen](markdown-cheat-sheet#einstellungen) lassen sich ganz oben auf jeder Seite festlegen. Bei einer neuen Installation sollte man `Sitename`, `Author` und `Email` anpassen.
 
 ## Texteinstellungen
 
-Eine wichtige Konfigurationsdatei ist `system/config/text.ini`. Hier ist ein Beispiel:
+Eine weitere Konfigurationsdatei ist `system/config/text.ini`. Hier ist ein Beispiel:
+
+    EditLoginTitle: Willkommen in Berlin
+
+Hier ist ein weiteres Beispiel:
 
     DateFormatShort: F Y
     DateFormatMedium: d.m.Y
     DateFormatLong: d.m.Y H:i
 
-Dort kannst du die Texteinstellungen festlegen, zum Beispiel Texte die auf der Webseite angezeigt werden und das [Datumsformat](http://php.net/manual/de/function.date.php). Es gibt unterschiedliche Texte für unterschiedliche Sprachen. Die Sprache legt fest welche [Texteinstellungen](https://github.com/datenstrom/yellow-plugins/tree/master/language) benutzt werden.
+Dort kannst du die Texteinstellungen festlegen, zum Beispiel Text der auf der Webseite angezeigt wird und das [Datumsformat](http://php.net/manual/de/function.date.php). Der Standard-Text wird durch die entsprechende [Sprachdatei](https://github.com/datenstrom/yellow/blob/master/system/plugins/language-de.txt) festgelegt. Ein anderer Text lässt sich in der Konfigurationsdatei festlegen.
 
 ## Benutzerkonten
 

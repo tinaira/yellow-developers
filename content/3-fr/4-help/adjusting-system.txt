@@ -18,17 +18,21 @@ Le fichier de configuration principal est `system/config/config.ini`. Voici un e
     Timezone: Europe/Paris
     Theme: flatsite
 
-Vous pouvez y définir les paramètres par défaut, par exemple le nom du site web et l'email du webmaster. Des [paramètres](markdown-cheat-sheet#paramètres) individuels peuvent être définis au haut de chaque page. Lors d'une nouvelle installation, il est conseillé de modifier `Sitename`, `Author` et `Email`.
+Vous pouvez y définir les paramètres du système, par exemple le nom du site web et l'email du webmaster. Des [paramètres](markdown-cheat-sheet#paramètres) individuels peuvent être définis au haut de chaque page. Lors d'une nouvelle installation, il est conseillé de modifier `Sitename`, `Author` et `Email`.
 
 ## Paramètres de texte
 
-Un fichier de configuration important est `system/config/text.ini`. Voici un exemple:
+Un autre fichier de configuration est `system/config/text.ini`. Voici un exemple:
+
+    EditLoginTitle: Bienvenue à Paris
+
+Voici un autre exemple:
 
     DateFormatShort: F Y
     DateFormatMedium: d/m/Y
     DateFormatLong: d/m/Y H:i
 
-Vous pouvez définir ici les paramètres de texte, par exemple les textes affichés sur le site web et le [format de la date](http://php.net/manual/fr/function.date.php). Il existe différents textes pour différentes langues. La langue définit les [paramètres de texte](https://github.com/datenstrom/yellow-plugins/tree/master/language) qui seront utilisés.
+Vous pouvez définir ici les paramètres de texte, par exemple le texte affiché sur votre site web et le [format de la date](http://php.net/manual/fr/function.date.php). Le texte par défaut est défini par le [fichier de langue](https://github.com/datenstrom/yellow/blob/master/system/plugins/language-fr.txt) correspondant. Un texte différent peut être défini dans le fichier de configuration.
 
 ## Comptes d'utilisateurs
 
