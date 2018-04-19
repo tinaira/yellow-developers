@@ -25,9 +25,6 @@ You can define the system settings here, for example the name of the website and
 Another configuration file is `system/config/text.ini`. Here's an example:
 
     EditLoginTitle: Welcome to Stockholm
-
-Here's another example:
-
     DateFormatShort: F Y
     DateFormatMedium: Y-m-d
     DateFormatLong: Y-m-d H:i

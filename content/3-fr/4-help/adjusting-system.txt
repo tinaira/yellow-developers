@@ -25,9 +25,6 @@ Vous pouvez y définir les paramètres du système, par exemple le nom du site w
 Un autre fichier de configuration est `system/config/text.ini`. Voici un exemple:
 
     EditLoginTitle: Bienvenue à Paris
-
-Voici un autre exemple:
-
     DateFormatShort: F Y
     DateFormatMedium: d/m/Y
     DateFormatLong: d/m/Y H:i

@@ -25,9 +25,6 @@ Dort kannst du die Systemeinstellungen festlegen, zum Beispiel den Namen der Web
 Eine weitere Konfigurationsdatei ist `system/config/text.ini`. Hier ist ein Beispiel:
 
     EditLoginTitle: Willkommen in Berlin
-
-Hier ist ein weiteres Beispiel:
-
     DateFormatShort: F Y
     DateFormatMedium: d.m.Y
     DateFormatLong: d.m.Y H:i

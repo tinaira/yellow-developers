@@ -914,9 +914,10 @@ console.log("<?php echo strencode($message) ?>");
 Öffne `system/plugins/core.php`, ändere die erste Zeile zu `<?php define("DEBUG", 1);`  
 
 ```
-YellowCore::sendPage Content-Type: text/html; charset=UTF-8
+YellowCore::sendPage Cache-Control: max-age=60
+YellowCore::sendPage Content-Type: text/html; charset=utf-8
 YellowCore::sendPage Page-Modified: Sat, 15 Jul 2017 12:19:01 GMT
-YellowCore::sendPage Last-Modified: Wed, 14 Mar 2018 09:38:05 GMT
+YellowCore::sendPage Last-Modified: Thu, 19 Apr 2018 06:25:14 GMT
 YellowCore::sendPage theme:flatsite template:blogpages parser:markdown
 YellowCore::processRequest file:content/1-en/2-plugins/1-blog/page.txt
 YellowCore::request status:200 handler:core time:19 ms
@@ -924,18 +925,18 @@ YellowCore::request status:200 handler:core time:19 ms
 
 Dateisysteminformationen durch Erhöhen des Debuglevels zu `<?php define("DEBUG", 2);`
 ```
-Datenstrom Yellow 0.7.2, PHP 5.6.30, Apache/2.4.27 Darwin
+Datenstrom Yellow 0.7.3, PHP 5.6.30, Apache/2.4.28 Darwin
 YellowConfig::load file:system/config/config.ini
+YellowUsers::load file:system/config/user.ini
 YellowText::load file:system/plugins/language-de.txt
 YellowText::load file:system/plugins/language-en.txt
 YellowText::load file:system/plugins/language-fr.txt
-YellowUsers::load file:system/config/user.ini
 YellowText::load file:system/config/text.ini
 ```
 
 Maximum Informationen durch Erhöhen des Debuglevels zu `<?php define("DEBUG", 3);`
 ```
-Datenstrom Yellow 0.7.2, PHP 5.6.30, Apache/2.4.27 Darwin
+Datenstrom Yellow 0.7.3, PHP 5.6.30, Apache/2.4.28 Darwin
 YellowConfig::load file:system/config/config.ini
 YellowConfig::load Sitename:Datenstrom developers
 YellowConfig::load Author:Datenstrom
