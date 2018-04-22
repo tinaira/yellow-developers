@@ -47,9 +47,9 @@ RewriteRule ^ yellow.php [L]
 </IfModule>
 ```
 
-Wenn deine Webseite immer noch nicht funktioniert, überprüfe bitte den Apache-Webserver. Falls du einen selbst-gehosteten Webserver benutzt, musst du vermutlich das [Rewrite-Modul](http://stackoverflow.com/questions/869092/how-to-enable-mod-rewrite-for-apache-2-2) aktivieren und `AllowOverride All` in den [Webserver-Einstellungen](http://stackoverflow.com/questions/18740419/how-to-set-allowoverride-all) konfigurieren.
+Wenn deine Webseite immer noch nicht funktioniert, überprüfe bitte den Apache-Webserver. Falls du einen selbst-gehosteten Webserver benutzt, musst du vermutlich das [Rewrite-Modul](https://stackoverflow.com/questions/869092/how-to-enable-mod-rewrite-for-apache-2-2) aktivieren und `AllowOverride All` in den [Webserver-Einstellungen](https://stackoverflow.com/questions/18740419/how-to-set-allowoverride-all) konfigurieren.
 
-Stelle sicher dass der Webserver Dateien lesen und schreiben kann. Du kannst [Schreibrechte](http://superuser.com/questions/51838/recursive-chmod-rw-for-files-rwx-for-directories) für Dateien manuell angleichen, zum Beispiel mit `chmod -R a+rw *`. Als Alternative kannst du Webserver und Benutzern die Gruppe `www-data` und `umask 002` zuweisen.
+Stelle sicher dass der Webserver Dateien lesen und schreiben kann. Du kannst [Schreibrechte](https://superuser.com/questions/51838/recursive-chmod-rw-for-files-rwx-for-directories) für Dateien manuell angleichen, zum Beispiel mit `chmod -R a+rw *`. Als Alternative kannst du Webserver und Benutzern die Gruppe `www-data` und `umask 002` zuweisen.
 
 ## Nginx
 
@@ -90,9 +90,9 @@ server {
 }
 ```
 
-Wenn deine Webseite nicht funktioniert, überprüfe bitte `server_name` und `root` in der Konfigurationsdatei. Falls die Konfigurationsdatei verändert wurde, muss man den Nginx-Webserver [neustarten/neuladen](http://stackoverflow.com/questions/21292533/reload-nginx-configuration).
+Wenn deine Webseite nicht funktioniert, überprüfe bitte `server_name` und `root` in der Konfigurationsdatei. Falls die Konfigurationsdatei verändert wurde, muss man den Nginx-Webserver [neustarten/neuladen](https://stackoverflow.com/questions/21292533/reload-nginx-configuration).
 
-Stelle sicher dass der Webserver Dateien lesen und schreiben kann. Du kannst [Schreibrechte](http://superuser.com/questions/51838/recursive-chmod-rw-for-files-rwx-for-directories) für Dateien manuell angleichen, zum Beispiel mit `chmod -R a+rw *`. Als Alternative kannst du Webserver und Benutzern die Gruppe `www-data` und `umask 002` zuweisen.
+Stelle sicher dass der Webserver Dateien lesen und schreiben kann. Du kannst [Schreibrechte](https://superuser.com/questions/51838/recursive-chmod-rw-for-files-rwx-for-directories) für Dateien manuell angleichen, zum Beispiel mit `chmod -R a+rw *`. Als Alternative kannst du Webserver und Benutzern die Gruppe `www-data` und `umask 002` zuweisen.
 
 ## Dynamische Webseite
 

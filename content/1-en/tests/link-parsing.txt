@@ -10,6 +10,6 @@ Special links for this page: [Read](@pageread), [Edit](@pageedit).
 
 URL autolinking: 
 
-https://link.se, http://link.se, ftp://link.se, bla@fa.sel, pe.ter@example.com.  
-"https://link.se" 'https://link.se' https://link.se: https://link.se;  
+https://example.com, http://example.com, ftp://example.com, bla@example.com, pe.ter@example.com.  
+"https://example.com" 'https://example.com' https://example.com: https://example.com;  
 http://www.faqs.org/docs/artu/ch01s06.html

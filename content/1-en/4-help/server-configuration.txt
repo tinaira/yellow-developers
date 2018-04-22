@@ -48,9 +48,9 @@ RewriteRule ^ yellow.php [L]
 ```
 
 
-When your website still doesn't work, please check the Apache web server. If you use a selfhosted web server, you probably have to enable the [rewrite module](http://stackoverflow.com/questions/869092/how-to-enable-mod-rewrite-for-apache-2-2) and configure `AllowOverride All` in the [web server settings](http://stackoverflow.com/questions/18740419/how-to-set-allowoverride-all). 
+When your website still doesn't work, please check the Apache web server. If you use a selfhosted web server, you probably have to enable the [rewrite module](https://stackoverflow.com/questions/869092/how-to-enable-mod-rewrite-for-apache-2-2) and configure `AllowOverride All` in the [web server settings](https://stackoverflow.com/questions/18740419/how-to-set-allowoverride-all). 
 
-Make sure that the web server can read and write files. You can manually adjust [file permissions](http://superuser.com/questions/51838/recursive-chmod-rw-for-files-rwx-for-directories) so that the web server can overwrite files, for example with command `chmod -R a+rw *`. As an alternative you can assign the group `www-data` and `umask 002` to the web server and users.
+Make sure that the web server can read and write files. You can manually adjust [file permissions](https://superuser.com/questions/51838/recursive-chmod-rw-for-files-rwx-for-directories) so that the web server can overwrite files, for example with command `chmod -R a+rw *`. As an alternative you can assign the group `www-data` and `umask 002` to the web server and users.
 
 ## Nginx
 
@@ -91,9 +91,9 @@ server {
 }
 ```
 
-When your website doesn't work, please check `server_name` and `root` in the configuration file. If the configuration file has been changed, you need to [restart/reload](http://stackoverflow.com/questions/21292533/reload-nginx-configuration) the Nginx web server.
+When your website doesn't work, please check `server_name` and `root` in the configuration file. If the configuration file has been changed, you need to [restart/reload](https://stackoverflow.com/questions/21292533/reload-nginx-configuration) the Nginx web server.
 
-Make sure that the web server can read and write files. You can manually adjust [file permissions](http://superuser.com/questions/51838/recursive-chmod-rw-for-files-rwx-for-directories) so that the web server can overwrite files, for example with command `chmod -R a+rw *`. As an alternative you can assign the group `www-data` and `umask 002` to the web server and users.
+Make sure that the web server can read and write files. You can manually adjust [file permissions](https://superuser.com/questions/51838/recursive-chmod-rw-for-files-rwx-for-directories) so that the web server can overwrite files, for example with command `chmod -R a+rw *`. As an alternative you can assign the group `www-data` and `umask 002` to the web server and users.
 
 ## Dynamic website
 
