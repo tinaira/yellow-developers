@@ -1,14 +1,14 @@
 <?php
 // Traffic plugin, https://github.com/datenstrom/yellow-plugins/tree/master/traffic
-// Copyright (c) 2013-2017 Datenstrom, https://datenstrom.se
+// Copyright (c) 2013-2018 Datenstrom, https://datenstrom.se
 // This file may be used and distributed under the terms of the public license.
 
 class YellowTraffic
 {
-	const VERSION = "0.7.4";
+	const VERSION = "0.7.5";
 	var $yellow;			//access to API
-	var $days;				//detected days
-	var $views;				//detected views
+	var $days;				//number of days
+	var $views;				//number of views
 
 	// Handle plugin initialisation
 	function onLoad($yellow)
@@ -18,8 +18,7 @@ class YellowTraffic
 		$this->yellow->config->setDefault("trafficLinesMax", 8);
 		$this->yellow->config->setDefault("trafficLogDir", "/var/log/apache2/");
 		$this->yellow->config->setDefault("trafficLogFile", "(.*)access.log");
-		$this->yellow->config->setDefault("trafficLocationIgnore", "/(media|system|edit)/");
-		$this->yellow->config->setDefault("trafficSpamFilter", "bot|crawler|spider|localhost");
+		$this->yellow->config->setDefault("trafficSpamFilter", "bot|crawler|spider|checker|localhost");
 	}
 
 	// Handle command help
@@ -68,7 +67,6 @@ class YellowTraffic
 	// Analyse and show traffic
 	function processRequests($days, $location, $fileName)
 	{
-		$this->yellow->toolbox->timerStart($time);
 		if(empty($location)) $location = "/";
 		if(empty($days)) $days = $this->yellow->config->get("trafficDays");
 		if(empty($fileName))
@@ -87,8 +85,6 @@ class YellowTraffic
 			$this->showRequests($search, "Search queries");
 			$this->showRequests($errors, "Error pages");
 		}
-		$this->yellow->toolbox->timerStop($time);
-		if(defined("DEBUG") && DEBUG>=1) echo "YellowTraffic::processRequests time:$time ms\n";
 		return $statusCode;
 	}
 	
@@ -104,11 +100,11 @@ class YellowTraffic
 			$timeStop = time() - (60 * 60 * 24 * $days);
 			$staticUrl = $this->yellow->config->get("staticUrl");
 			list($scheme, $address, $base) = $this->yellow->lookup->getUrlInformation($staticUrl);
-			$locationIgnore = $this->yellow->config->get("trafficLocationIgnore");
 			$locationSearch = $this->yellow->config->get("searchLocation");
 			$faviconFile = $this->yellow->config->get("faviconFile");
 			$robotsFile = $this->yellow->config->get("robotsFile");
 			$spamFilter = $this->yellow->config->get("trafficSpamFilter");
+			$locationIgnore = "(".$this->yellow->config->get("mediaLocation")."|".$this->yellow->config->get("editLocation").")";
 			foreach($fileNames as $fileName)
 			{
 				if(defined("DEBUG") && DEBUG>=1) echo "YellowTraffic::analyseRequests file:$fileName\n";
@@ -169,15 +165,15 @@ class YellowTraffic
 	}
 	
 	// Show top requests
-	function showRequests($array, $text)
+	function showRequests($data, $text)
 	{
-		uasort($array, "strnatcasecmp");
-		$array = array_reverse(array_filter($array, function($value) { return $value>0; }));
-		$array = array_slice($array, 0, $this->yellow->config->get("trafficLinesMax"));
-		if(!empty($array))
+		uasort($data, "strnatcasecmp");
+		$data = array_reverse(array_filter($data, function($value) { return $value>0; }));
+		$data = array_slice($data, 0, $this->yellow->config->get("trafficLinesMax"));
+		if(!empty($data))
 		{
 			echo "$text\n\n";
-			foreach($array as $key=>$value) echo "- $value $key\n";
+			foreach($data as $key=>$value) echo "- $value $key\n";
 			echo "\n";
 		}
 	}
