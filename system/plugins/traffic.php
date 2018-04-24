@@ -5,7 +5,7 @@
 
 class YellowTraffic
 {
-	const VERSION = "0.7.5";
+	const VERSION = "0.7.6";
 	var $yellow;			//access to API
 	var $days;				//number of days
 	var $views;				//number of views
@@ -74,14 +74,15 @@ class YellowTraffic
 			$path = $this->yellow->config->get("trafficLogDir");
 			$regex = "/^".basename($this->yellow->config->get("trafficLogFile"))."$/";
 			$fileNames = $this->yellow->toolbox->getDirectoryEntries($path, $regex, true, false);
-			list($statusCode, $sites, $content, $search, $errors) = $this->analyseRequests($days, $location, $fileNames);
+			list($statusCode, $sites, $content, $files, $search, $errors) = $this->analyseRequests($days, $location, $fileNames);
 		} else {
-			list($statusCode, $sites, $content, $search, $errors) = $this->analyseRequests($days, $location, array($fileName));
+			list($statusCode, $sites, $content, $files, $search, $errors) = $this->analyseRequests($days, $location, array($fileName));
 		}
 		if($statusCode==200)
 		{
 			$this->showRequests($sites, "Referring sites");
 			$this->showRequests($content, "Popular content");
+			$this->showRequests($files, "Popular files");
 			$this->showRequests($search, "Search queries");
 			$this->showRequests($errors, "Error pages");
 		}
@@ -92,7 +93,7 @@ class YellowTraffic
 	function analyseRequests($days, $locationFilter, $fileNames)
 	{
 		$this->days = $this->views = 0;
-		$sites = $content = $search = $errors = $clients = array();
+		$sites = $content = $files = $search = $errors = $clients = array();
 		if(!empty($fileNames))
 		{
 			$statusCode = 200;
@@ -104,6 +105,7 @@ class YellowTraffic
 			$faviconFile = $this->yellow->config->get("faviconFile");
 			$robotsFile = $this->yellow->config->get("robotsFile");
 			$spamFilter = $this->yellow->config->get("trafficSpamFilter");
+			$locationDownload = $this->yellow->config->get("downloadLocation");
 			$locationIgnore = "(".$this->yellow->config->get("mediaLocation")."|".$this->yellow->config->get("editLocation").")";
 			foreach($fileNames as $fileName)
 			{
@@ -128,14 +130,19 @@ class YellowTraffic
 								$clients[$ip] = $clientsRequestThrottle;
 								if(!$this->checkRequestArguments($method, $location, $referer)) continue;
 								if(!preg_match("#^$base$locationFilter#", $location)) continue;
+								if(!preg_match("#(mozilla|compatible)#i", $userAgent)) continue;
+								if(preg_match("#$spamFilter#i", $referer.$userAgent)) continue;
+								if($status==206 || ($status>=301 && $status<=303)) continue;
+								if(preg_match("#^$base(.*)$locationDownload#", $location))
+								{
+									++$files[$this->getUrl($scheme, $address, $base, $location)];
+								}
 								if($locationFilter=="/")
 								{
 									if(preg_match("#^$base(.*)$locationIgnore#", $location)) continue;
 									if(preg_match("#^$base(.*)/($faviconFile)$#", $location)) continue;
 									if(preg_match("#^$base(.*)/($robotsFile)$#", $location)) continue;
 								}
-								if(preg_match("#$spamFilter#i", $referer.$userAgent)) continue;
-								if($status>=301 && $status<=303) continue;
 								++$content[$this->getUrl($scheme, $address, $base, $location)];
 								++$sites[$referer];
 								++$search[$this->getSearchUrl($scheme, $address, $base, $location, $locationSearch)];
@@ -161,7 +168,7 @@ class YellowTraffic
 			$path = $this->yellow->config->get("trafficLogDir");
 			echo "ERROR reading logfiles: Can't find files in directory '$path'!\n";
 		}
-		return array($statusCode, $sites, $content, $search, $errors);
+		return array($statusCode, $sites, $content, $files, $search, $errors);
 	}
 	
 	// Show top requests
