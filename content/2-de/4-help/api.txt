@@ -893,13 +893,13 @@ Hier ist ein Beispiel-Snippet um ein Datum anzuzeigen:
 </div>
 ```
 
-Hier ist ein Beispiel-Snippet um ein Datum anzuzeigen wie `Gestern` oder `Vor 14 Tagen`:
+Hier ist ein Beispiel-Snippet um ein Datum anzuzeigen wie `gestern` oder `vor 14 Tagen`:
 
 ``` php
 <div class="content">
 <div class="main">
 <h1><?php echo $yellow->page->getHtml("titleContent") ?></h1>
-<p><?php echo $yellow->page->getDateRelativeHtml("modified", "dateFormatMedium") ?></p>
+<p><?php echo $yellow->page->getDateRelativeHtml("modified") ?></p>
 <?php echo $yellow->page->getContent() ?>
 </div>
 </div>

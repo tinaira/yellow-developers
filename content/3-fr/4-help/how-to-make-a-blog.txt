@@ -38,7 +38,7 @@ Pour créer une nouvelle page de blog, ajoutez un nouveau fichier dans le dossie
 ```
 ---
 Title: Fika est bon pour toi
-Published: 2013-06-01
+Published: 2016-06-01
 Author: Datenstrom
 Template: blog
 Tag: Exemple, Café, Vidéo
@@ -55,7 +55,7 @@ Maintenant ajoutons une vidéo avec le [plugin Youtube](https://github.com/daten
 ```
 ---
 Title: Fika est bon pour toi
-Published: 2013-06-01
+Published: 2016-06-01
 Author: Datenstrom
 Template: blog
 Tag: Exemple, Café, Vidéo
@@ -74,7 +74,7 @@ Faisons en sorte que la vidéo soit visible quand le visiteur clique sur la page
 ```
 ---
 Title: Fika est bon pour toi
-Published: 2013-06-01
+Published: 2016-06-01
 Author: Datenstrom
 Template: blog
 Tag: Exemple, Café, Vidéo

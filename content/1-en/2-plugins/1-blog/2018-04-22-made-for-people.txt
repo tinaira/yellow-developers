@@ -1,6 +1,6 @@
 ---
 Title: Made for people
-Published: 2017-07-12
+Published: 2018-04-22
 Author: Datenstrom
 Template: blog
 Tag: Example

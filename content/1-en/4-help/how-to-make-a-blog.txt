@@ -38,7 +38,7 @@ To create a new blog page, add a new file to the blog folder. Set `Published` an
 ```
 ---
 Title: Fika is good for you
-Published: 2013-06-01
+Published: 2016-06-01
 Author: Datenstrom
 Template: blog
 Tag: Example, Coffee
@@ -55,7 +55,7 @@ Now let's add a video with the [Youtube plugin](https://github.com/datenstrom/ye
 ```
 ---
 Title: Fika is good for you
-Published: 2013-06-01
+Published: 2016-06-01
 Author: Datenstrom
 Template: blog
 Tag: Example, Coffee, Video
@@ -74,7 +74,7 @@ Let's show the video when a visitor clicks on the blog page. You can add `[--mor
 ```
 ---
 Title: Fika is good for you
-Published: 2013-06-01
+Published: 2016-06-01
 Author: Datenstrom
 Template: blog
 Tag: Example, Coffee, Video

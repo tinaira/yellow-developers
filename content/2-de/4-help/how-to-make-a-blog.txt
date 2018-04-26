@@ -38,7 +38,7 @@ Um eine neue Blogseite hinzuzufügen, erstellst du eine neue Datei im Blogverzei
 ```
 ---
 Title: Fika ist gut für dich
-Published: 2013-06-01
+Published: 2016-06-01
 Author: Datenstrom
 Template: blog
 Tag: Beispiel, Kaffee
@@ -55,7 +55,7 @@ Ein Video hinzufügen mit dem [Youtube-Plugin](https://github.com/datenstrom/yel
 ```
 ---
 Title: Fika ist gut für dich
-Published: 2013-06-01
+Published: 2016-06-01
 Author: Datenstrom
 Template: blog
 Tag: Beispiel, Kaffee, Video
@@ -74,7 +74,7 @@ Das Video erst anzeigen wenn ein Besucher auf die Blogseite klickt. Du kannst `[
 ```
 ---
 Title: Fika ist gut für dich
-Published: 2013-06-01
+Published: 2016-06-01
 Author: Datenstrom
 Template: blog
 Tag: Beispiel, Kaffee, Video

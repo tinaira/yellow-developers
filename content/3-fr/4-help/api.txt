@@ -894,13 +894,13 @@ Here's an example snippet for showing a date:
 </div>
 ```
 
-Here's an example snippet for showing a date like `Yesterday` or `14 days ago`:
+Here's an example snippet for showing a date like `yesterday` or `14 days ago`:
 
 ``` php
 <div class="content">
 <div class="main">
 <h1><?php echo $yellow->page->getHtml("titleContent") ?></h1>
-<p><?php echo $yellow->page->getDateRelativeHtml("modified", "dateFormatMedium") ?></p>
+<p><?php echo $yellow->page->getDateRelativeHtml("modified") ?></p>
 <?php echo $yellow->page->getContent() ?>
 </div>
 </div>
