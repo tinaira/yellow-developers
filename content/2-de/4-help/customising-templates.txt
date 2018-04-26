@@ -38,8 +38,8 @@ Hier ist ein Beispiel-Snippet um den Seiteninhalt und zusätzliche Metadaten anz
 <div class="content">
 <div class="main">
 <h1><?php echo $yellow->page->getHtml("titleContent") ?></h1>
-<?php echo $yellow->page->getContent() ?>
 <p><?php echo $yellow->page->getHtml("author") ?></p>
+<?php echo $yellow->page->getContent() ?>
 </div>
 </div>
 ```
@@ -54,9 +54,15 @@ Hier ist ein Beispiel-Snippet um die neusten Blogseiten anzuzeigen:
 <div class="main">
 <h1><?php echo $yellow->page->getHtml("titleContent") ?></h1>
 <?php echo $yellow->page->getContent() ?>
+<table>
 <?php foreach($pages as $page): ?>
-<h3><a href="<?php echo $page->getLocation(true) ?>"><?php echo $page->getDateHtml("published") ?> &nbsp; <?php echo $page->getHtml("title") ?></a></h3>
+<tr>
+<td><a href="<?php echo $page->getLocation(true) ?>"><?php echo $page->getHtml("title") ?></a></td>
+<td><?php echo $page->getHtml("author") ?></td>
+<td><?php echo $page->getDateRelativeHtml("published") ?></td>
+</tr>
 <?php endforeach ?>
+</table>
 </div>
 </div>
 ```

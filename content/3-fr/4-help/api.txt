@@ -62,13 +62,19 @@ Return page [meta data](markdown-cheat-sheet#settings), HTML encoded
 Return page [meta data](markdown-cheat-sheet#settings) as [language specific date](#formats)  
 
 **$yellow->page->getDateHtml($key, $format = "")**  
-Return page [meta data](markdown-cheat-sheet#settings) as [language specific date](#formats), HTML encoded  
+Return page [meta data](markdown-cheat-sheet#settings) as language specific date, HTML encoded  
+
+**$yellow->page->getDateRelative($key, $format = "", $daysLimit = 0)**  
+Return page [meta data](markdown-cheat-sheet#settings) as language specific date and relative to today
+
+**$yellow->page->getDateRelativeHtml($key, $format = "", $daysLimit = 0)**  
+Return page [meta data](markdown-cheat-sheet#settings) as language specific date and relative to today, HTML encoded
 
 **$yellow->page->getDateFormatted($key, $format)**  
 Return page [meta data](markdown-cheat-sheet#settings) with [custom date format](http://php.net/manual/en/function.date.php)  
 
 **$yellow->page->getDateFormattedHtml($key, $format)**  
-Return page [meta data](markdown-cheat-sheet#settings) with [custom date format](http://php.net/manual/en/function.date.php), HTML encoded  
+Return page [meta data](markdown-cheat-sheet#settings) with custom date format, HTML encoded  
 
 **$yellow->page->getContent($rawFormat = false, $sizeMax = 0)**  
 Return page content, HTML encoded or raw format
@@ -162,8 +168,8 @@ Here's an example snippet for showing page content with additional meta data:
 <div class="content">
 <div class="main">
 <h1><?php echo $yellow->page->getHtml("titleContent") ?></h1>
-<?php echo $yellow->page->getContent() ?>
 <p><?php echo $yellow->page->getHtml("author") ?></p>
+<?php echo $yellow->page->getContent() ?>
 </div>
 </div>
 ```
@@ -866,17 +872,39 @@ $yellow->plugins->register("example", "YellowExample", YellowExample::VERSION);
 
 ## Formats
 
-When dates are displayed on a page they are converted to a language specific date:
+When dates are displayed on a page they are converted to a language specific format:
 
 `dateFormatShort` = short date, e.g. `April 2013`  
 `dateFormatMedium` = medium date, e.g. `2013-04-07`   
 `dateFormatLong` = long date, e.g. `2013-04-07 11:30`   
 
-When times are displayed on a page they are converted to a language specific time:
-
 `timeFormatShort` = short time, e.g. `11:30`  
 `timeFormatMedium` = medium time, e.g. `11:30:01`  
 `timeFormatLong` = long time, e.g. `11:30:01 GMT+1`  
+
+Here's an example snippet for showing a date:
+
+``` php
+<div class="content">
+<div class="main">
+<h1><?php echo $yellow->page->getHtml("titleContent") ?></h1>
+<p><?php echo $yellow->page->getDateHtml("modified", "dateFormatMedium") ?></p>
+<?php echo $yellow->page->getContent() ?>
+</div>
+</div>
+```
+
+Here's an example snippet for showing a date like `Yesterday` or `14 days ago`:
+
+``` php
+<div class="content">
+<div class="main">
+<h1><?php echo $yellow->page->getHtml("titleContent") ?></h1>
+<p><?php echo $yellow->page->getDateRelativeHtml("modified", "dateFormatMedium") ?></p>
+<?php echo $yellow->page->getContent() ?>
+</div>
+</div>
+```
 
 When text is displayed on a page you can use one of these encoding functions:
 

@@ -60,13 +60,19 @@ Hole die [Metadaten](markdown-cheat-sheet#einstellungen) der Seite, HTML-kodiert
 Hole die [Metadaten](markdown-cheat-sheet#einstellungen) der Seite als [sprachspezifisches Datum](#formate)
 
 **$yellow->page->getDateHtml($key, $format = "")**  
-Hole die [Metadaten](markdown-cheat-sheet#einstellungen) der Seite als [sprachspezifisches Datum](#formate), HTML-kodiert
+Hole die [Metadaten](markdown-cheat-sheet#einstellungen) der Seite als sprachspezifisches Datum, HTML-kodiert
+
+**$yellow->page->getDateRelative($key, $format = "", $daysLimit = 0)**  
+Hole die [Metadaten](markdown-cheat-sheet#einstellungen) der Seite als sprachspezifisches Datum und relativ zu heute
+
+**$yellow->page->getDateRelativeHtml($key, $format = "", $daysLimit = 0)**  
+Hole die [Metadaten](markdown-cheat-sheet#einstellungen) der Seite als sprachspezifisches Datum und relativ zu heute, HTML-kodiert
 
 **$yellow->page->getDateFormatted($key, $format)**  
 Hole die [Metadaten](markdown-cheat-sheet#einstellungen) der Seite mit [maßgeschneidertem Datumsformat](http://php.net/manual/de/function.date.php)
 
 **$yellow->page->getDateFormattedHtml($key, $format)**  
-Hole die [Metadaten](markdown-cheat-sheet#einstellungen) der Seite mit [maßgeschneidertem Datumsformat](http://php.net/manual/de/function.date.php), HTML-kodiert
+Hole die [Metadaten](markdown-cheat-sheet#einstellungen) der Seite mit maßgeschneidertem Datumsformat, HTML-kodiert
 
 **$yellow->page->getContent($rawFormat = false, $sizeMax = 0)**  
 Hole den Seitenhalt, HTML-kodiert oder Rohformat
@@ -160,8 +166,8 @@ Hier ist ein Beispiel-Snippet um den Seiteninhalt und zusätzliche Metadaten anz
 <div class="content">
 <div class="main">
 <h1><?php echo $yellow->page->getHtml("titleContent") ?></h1>
-<?php echo $yellow->page->getContent() ?>
 <p><?php echo $yellow->page->getHtml("author") ?></p>
+<?php echo $yellow->page->getContent() ?>
 </div>
 </div>
 ```
@@ -865,17 +871,39 @@ $yellow->plugins->register("example", "YellowExample", YellowExample::VERSION);
 
 ## Formate
 
-Wird ein Datum auf einer Seite angezeigt wird es in das sprachspezifisches Datum konvertiert: 
+Wird ein Datum auf einer Seite angezeigt wird es in ein sprachspezifisches Format konvertiert: 
 
 `dateFormatShort` = kurzes Datum, z.B. `April 2013`  
 `dateFormatMedium` = mittleres Datum, z.B. `07.04.2013`   
 `dateFormatLong` = langes Datum, z.B. `07.04.2013 11:30`   
 
-Wird eine Zeit auf einer Seite angezeigt wird sie in die sprachspezifische Zeit konvertiert: 
-
 `timeFormatShort` = kurze Zeit, z.B. `11:30`  
 `timeFormatMedium` = mittlere Zeit, z.B. `11:30:01`   
 `timeFormatLong` = lange Zeit, z.B. `11:30:01 GMT+1`  
+
+Hier ist ein Beispiel-Snippet um ein Datum anzuzeigen:
+
+``` php
+<div class="content">
+<div class="main">
+<h1><?php echo $yellow->page->getHtml("titleContent") ?></h1>
+<p><?php echo $yellow->page->getDateHtml("modified", "dateFormatMedium") ?></p>
+<?php echo $yellow->page->getContent() ?>
+</div>
+</div>
+```
+
+Hier ist ein Beispiel-Snippet um ein Datum anzuzeigen wie `Gestern` oder `Vor 14 Tagen`:
+
+``` php
+<div class="content">
+<div class="main">
+<h1><?php echo $yellow->page->getHtml("titleContent") ?></h1>
+<p><?php echo $yellow->page->getDateRelativeHtml("modified", "dateFormatMedium") ?></p>
+<?php echo $yellow->page->getContent() ?>
+</div>
+</div>
+```
 
 Wird Text auf einer Seite ausgegeben kann man diese Kodierungs-Funktionen benutzen:
 
