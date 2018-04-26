@@ -43,8 +43,8 @@ a:hover { color:#cf3621; text-decoration:underline; }
 .content img { max-width:100%; height:auto; }
 .content form { margin:1em 0; }
 .content table { border-spacing:0; border-collapse:collapse; }
-.content th { text-align:left; padding:0.3em; border-bottom:1px solid #bbb; }
-.content td { text-align:left; padding:0.3em; border-top:1px solid #bbb; }
+.content th { text-align:left; padding:0.3em; }
+.content td { text-align:left; padding:0.3em; border-top:1px solid #bbb; border-bottom:1px solid #bbb; }
 .content blockquote {
 	background-image:url(paris-quote.png);
 	background-position:top left;
