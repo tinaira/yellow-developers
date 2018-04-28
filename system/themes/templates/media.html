@@ -7,13 +7,13 @@
 <h1><?php echo $yellow->page->getHtml("titleContent") ?></h1>
 <?php echo $yellow->page->getContent() ?>
 <table>
-<tr><th><?php echo $yellow->text->getHtml("textLocation") ?></th><th><?php echo $yellow->text->getHtml("textType") ?></th><th><?php echo $yellow->text->getHtml("textSize") ?></th><th><?php echo $yellow->text->getHtml("textDescription") ?></th><th><?php echo $yellow->text->getHtml("textModified") ?></th></tr>
+<tr><th><?php echo $yellow->text->getHtml("textLocation") ?></th><th><?php echo $yellow->text->getHtml("textType") ?></th><th><?php echo $yellow->text->getHtml("textGroup") ?></th><th><?php echo $yellow->text->getHtml("textSize") ?></th><th><?php echo $yellow->text->getHtml("textModified") ?></th></tr>
 <?php foreach($files as $file): ?>
 <tr>
 <td><a href="<?php echo $file->getLocation(true) ?>"><i class="fa fa-file-image-o"></i> <?php echo $file->getLocation(true) ?></a></td>
 <td><?php echo $file->getHtml("type") ?></td>
+<td><?php echo $file->getHtml("group") ?></td>
 <td style="text-align:right;"><?php echo intval((filesize($file->fileName)+512)/1024)." KB" ?></td>
-<td><?php echo htmlspecialchars($yellow->toolbox->createTextTitle(dirname($file->getLocation()))) ?></td>
 <td><?php echo $file->getDateHtml("modified") ?></td>
 </tr>
 <?php endforeach ?>

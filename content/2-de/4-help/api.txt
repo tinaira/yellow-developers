@@ -703,7 +703,7 @@ onLoad ─────▶ onStartup ─────▶ onRequest
               onCommand        onParseMeta          onEditUserRestrictions
               onCommandHelp    onParseContentRaw    onEditUserAccount
                   │            onParseContentBlock  onEditContentFile
-                  │            onParseContentText       │
+                  │            onParseContentText   onEditMediaFile
                   │            onParsePage              │
                   │            onExtra                  │
                   ▼                │                    │
@@ -790,10 +790,13 @@ Yellow-Edit-Ereignisse unterrichten wenn eine Seite bearbeitet wird:
 Behandle Benutzerbeschränkungen
 
 **function onEditUserAccount($email, $password, $action, $users)**  
-Behandle Benutzerkontoänderungen
+Behandle Änderungen am Benutzerkonto
 
-**function onEditContentFile($page, $text)**  
-Behandle das Bearbeiten der Textdatei 
+**function onEditContentFile($page, $action)**  
+Behandle Änderungen an Inhaltsdatei
+
+**function onEditMediaFile($file, $action)**  
+Behandle Änderungen an Mediendatei
 
 Hier ist ein Beispiel-Plugin um Schreibrechte von bestimmten Benutzern zu beschränken:
 

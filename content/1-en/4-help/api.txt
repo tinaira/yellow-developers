@@ -702,7 +702,7 @@ onLoad ─────▶ onStartup ─────▶ onRequest
               onCommand        onParseMeta          onEditUserRestrictions
               onCommandHelp    onParseContentRaw    onEditUserAccount
                   │            onParseContentBlock  onEditContentFile
-                  │            onParseContentText       │
+                  │            onParseContentText   onEditMediaFile
                   │            onParsePage              │
                   │            onExtra                  │
                   ▼                │                    │
@@ -792,7 +792,10 @@ Handle user restrictions
 Handle user account changes
 
 **function onEditContentFile($page, $action)**  
-Handle content file editing
+Handle content file changes
+
+**function onEditMediaFile($file, $action)**  
+Handle media file changes
 
 Here's an example plugin for restricting certain users:
 
