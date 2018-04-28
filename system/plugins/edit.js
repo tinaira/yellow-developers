@@ -781,7 +781,7 @@ yellow.edit =
 	// Upload file
 	uploadFile: function(elementText, file)
 	{
-		var extension = (file.name.lastIndexOf('.')!=-1 ? file.name.substring(file.name.lastIndexOf('.'), file.name.length) : "").toLowerCase();
+		var extension = (file.name.lastIndexOf(".")!=-1 ? file.name.substring(file.name.lastIndexOf("."), file.name.length) : "").toLowerCase();
 		var extensions = yellow.config.editUploadExtensions.split(/\s*,\s*/);
 		if(file.size<=yellow.config.serverFileSizeMax && extensions.indexOf(extension)!=-1)
 		{
@@ -1141,7 +1141,7 @@ yellow.editor =
 		if(selectionStartFound!=-1)
 		{
 			var selectionStartNew = selectionStart<selectionStartFound ? selectionStart : selectionStart+textNew.length-textOld.length;
-			var selectionEndNew = selectionEnd<selectionEndFound ? selectionEnd : selectionEnd+textNew.length-textOld.length;;
+			var selectionEndNew = selectionEnd<selectionEndFound ? selectionEnd : selectionEnd+textNew.length-textOld.length;
 			var textBefore = text.substring(0, selectionStartFound);
 			var textAfter = text.substring(selectionEndFound, text.length);
 			if(textOld!=textNew)
