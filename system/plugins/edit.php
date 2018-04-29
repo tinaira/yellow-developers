@@ -1001,6 +1001,7 @@ class YellowResponse
 		$file = new YellowPage($this->yellow);
 		$file->setRequestInformation($scheme, $address, $base, "/".$fileNameTemp, $fileNameTemp);
 		$file->parseData(null, false, 0);
+		$file->set("fileNameShort", $fileNameShort);
 		$this->editMediaFile($file, "upload");
 		$file->location = $this->getFileNewLocation($fileNameShort, $pageLocation, $file->get("fileNewLocation"));
 		$file->fileName = substru($file->location, 1);
@@ -1011,7 +1012,7 @@ class YellowResponse
 			$file->fileName = substru($file->location, 1);
 			if(++$fileCounter>999) break;
 		}
-		if(is_file($file->fileName)) $file->error(500, "File '$file->fileName' is not possible!");
+		if(is_file($file->fileName)) $file->error(500, "File '".$file->get("fileNameShort")."' is not possible!");
 		return $file;
 	}
 
