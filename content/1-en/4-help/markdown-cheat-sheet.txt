@@ -37,20 +37,20 @@ Making quotes:
 Making links:
 
     [Link to page](/help/how-to-make-a-website)  
+    [Link to file](/media/downloads/yellow.pdf)  
     [Link to website](https://datenstrom.se)  
-    http://commonmark.org
 
 Adding an image:
-
-    ![image](picture.jpg)
-    ![image](picture.jpg "Picture")
-    ![image](picture.jpg "This is an example image")
-
-Adding an image, alternative format:
 
     [image picture.jpg]
     [image picture.jpg Picture]
     [image picture.jpg "This is an example image"]
+
+Adding an image, alternative format:
+
+    ![image](picture.jpg)
+    ![image](picture.jpg "Picture")
+    ![image](picture.jpg "This is an example image")
 
 ## Extras
 

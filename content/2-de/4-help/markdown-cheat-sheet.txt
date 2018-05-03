@@ -37,20 +37,20 @@ Zitate erstellen:
 Links erstellen:
 
     [Link zu Seite](/de/help/how-to-make-a-website)  
+    [Link zu Datei](/media/downloads/yellow.pdf)  
     [Link zu Webseite](https://datenstrom.se/de/)  
-    http://commonmark.org
 
 Ein Bild hinzufügen:
-
-    ![image](picture.jpg)
-    ![image](picture.jpg "Picture")
-    ![image](picture.jpg "Dies ist ein Beispielbild")
-
-Ein Bild hinzufügen, alternatives Format:
 
     [image picture.jpg]
     [image picture.jpg Picture]
     [image picture.jpg "Dies ist ein Beispielbild"]
+
+Ein Bild hinzufügen, alternatives Format:
+
+    ![image](picture.jpg)
+    ![image](picture.jpg "Picture")
+    ![image](picture.jpg "Dies ist ein Beispielbild")
 
 ## Extras
 

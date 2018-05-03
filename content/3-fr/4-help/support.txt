@@ -1,26 +1,24 @@
 ---
 Title: Support Français
 TitleContent: Support
+Sidebar: none
 ---
 Entrez en contact avec d'autres utilisateurs et trouvez de l'aide professionnelle.
 
 ## Comment obtenir de l'aide
 
-* [Posez des questions et signalez des problèmes](https://github.com/datenstrom/yellow/issues)
-* [Découvrez la dernière version](https://github.com/datenstrom/yellow/releases)
-* [Découvrez les dernières fonctionnalités](https://github.com/datenstrom/yellow/issues?q=label%3Anews%20)
-* [Obtenez un soutien commercial](https://mayberg.se/support/)
-* [Contactez un humain](https://datenstrom.se/fr/contact/)
+* [Posez des questions et signalez les problèmes](https://github.com/datenstrom/yellow/issues): Plus nous en savons, mieux nous pouvons vous aider.
+* [Obtenez un soutien commercial](https://mayberg.se/support/): Un soutien professionnel pour vous et votre entreprise.
+* [Apprenez les bases de Markdown](markdown-cheat-sheet): Formatage du texte, abréviations et paramètres.
+* [Apprenez les bases du Web](https://www.w3schools.com): HTML, CSS et JavaScript sont tout ce dont vous avez besoin.
+* [Apprenez les bases de GitHub](https://guides.github.com/activities/hello-world/): Repositories, commits et pull-requests.
 
 ## Comment contribuer
 
-* [Créer des plugins utiles](https://github.com/datenstrom/yellow-plugins/)
-* [Créer des thèmes magnifiques](https://github.com/datenstrom/yellow-themes/)
-* [Créer de meilleures traductions](https://github.com/datenstrom/yellow-plugins/tree/master/language) et 
-[améliorer la documentation](https://github.com/datenstrom/yellow-developers/search?q=traduire+cette+page)
-* [Suivez-nous sur Twitter](https://twitter.com/datenstromse)
-* [Répondez aux questions](https://github.com/datenstrom/yellow/issues)
+* [Créer des plugins utiles](https://github.com/datenstrom/yellow-plugins/): De meilleures fonctions pour les sites web.
+* [Créer des thèmes magnifiques](https://github.com/datenstrom/yellow-themes/): Une meilleure apparence pour les sites web.
+* [Créer des traductions](https://github.com/datenstrom/yellow-plugins/tree/master/language) et de la [documentation](https://github.com/datenstrom/yellow-developers/tree/master/content/3-fr/4-help): Différents langues.
+* [Suivez-nous sur GitHub](https://github.com/datenstrom): Donnez votre avis et répondez aux questions.
+* [Suivez-nous sur Twitter](https://twitter.com/datenstromse): Montrez ce que vous avez fait.
 
-## Remerciements
-
-[Datenstrom Yellow est open source](https://github.com/datenstrom/yellow). Sous licence GPLv2 sauf indication contraire. Au cœur de l'open source se trouve l'idée que nous faisons de meilleurs logiciels ensemble. La contribution et les commentaires sont les bienvenus.
+Au cœur de l'open source se trouve l'idée que nous faisons de meilleurs logiciels ensemble. [API pour les développeurs](api).

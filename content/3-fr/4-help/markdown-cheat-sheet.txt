@@ -37,20 +37,20 @@ Créer des citations:
 Créer des liens:
 
     [Lien vers une page](/fr/help/how-to-make-a-website)  
+    [Lien vers le fichier](/media/downloads/yellow.pdf)  
     [Lien vers un site](https://datenstrom.se/fr/)  
-    http://commonmark.org
 
 Ajouter des images:
-
-    ![image](picture.jpg)
-    ![image](picture.jpg "Picture")
-    ![image](picture.jpg "Ceci est un exemple d'image")
-
-Ajouter des images, autre moyen:
 
     [image picture.jpg]
     [image picture.jpg Picture]
     [image picture.jpg "Ceci est un exemple d'image"]
+
+Ajouter des images, autre moyen:
+
+    ![image](picture.jpg)
+    ![image](picture.jpg "Picture")
+    ![image](picture.jpg "Ceci est un exemple d'image")
 
 ## Extras
 
