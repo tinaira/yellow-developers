@@ -5,7 +5,7 @@
 
 class YellowEdit
 {
-	const VERSION = "0.7.13";
+	const VERSION = "0.7.14";
 	var $yellow;			//access to API
 	var $response;			//web response
 	var $users;				//user accounts
@@ -194,14 +194,7 @@ class YellowEdit
 				case "":			$statusCode = $this->processRequestShow($scheme, $address, $base, $location, $fileName); break;
 				case "login":		$statusCode = $this->processRequestLogin($scheme, $address, $base, $location, $fileName); break;
 				case "logout":		$statusCode = $this->processRequestLogout($scheme, $address, $base, $location, $fileName); break;
-				case "signup":		$statusCode = $this->processRequestSignup($scheme, $address, $base, $location, $fileName); break;
-				case "confirm":		$statusCode = $this->processRequestConfirm($scheme, $address, $base, $location, $fileName); break;
-				case "approve":		$statusCode = $this->processRequestApprove($scheme, $address, $base, $location, $fileName); break;
-				case "reactivate":	$statusCode = $this->processRequestReactivate($scheme, $address, $base, $location, $fileName); break;
-				case "recover":		$statusCode = $this->processRequestRecover($scheme, $address, $base, $location, $fileName); break;
 				case "settings":	$statusCode = $this->processRequestSettings($scheme, $address, $base, $location, $fileName); break;
-				case "reconfirm":	$statusCode = $this->processRequestReconfirm($scheme, $address, $base, $location, $fileName); break;
-				case "change":		$statusCode = $this->processRequestChange($scheme, $address, $base, $location, $fileName); break;
 				case "version":		$statusCode = $this->processRequestVersion($scheme, $address, $base, $location, $fileName); break;
 				case "update":		$statusCode = $this->processRequestUpdate($scheme, $address, $base, $location, $fileName); break;
 				case "create":		$statusCode = $this->processRequestCreate($scheme, $address, $base, $location, $fileName); break;
@@ -751,32 +744,35 @@ class YellowEdit
 	// Check user
 	function checkUser($scheme, $address, $base, $location, $fileName)
 	{
-		if($_POST["action"]=="login")
+		if($this->isRequestSameSite("POST", $scheme, $address) || $_REQUEST["action"]=="")
 		{
-			$email = $_POST["email"];
-			$password = $_POST["password"];
-			if($this->users->checkUser($email, $password))
+			if($_REQUEST["action"]=="login")
 			{
-				$session = $this->response->createCookie($scheme, $address, $base, $email);
-				$this->response->userEmail = $email;
-				$this->response->userSession = $session;
-				$this->response->userRestrictions = $this->getUserRestrictions($email, $location, $fileName);
-				$this->response->language = $this->getUserLanguage($email);
-			} else {
-				$this->response->email = $email;
-				$this->response->action = "fail";
-			}
-		} else if(isset($_COOKIE["login"])) {
-			list($email, $session) = explode(',', $_COOKIE["login"], 2);
-			if($this->users->checkCookie($email, $session))
-			{
-				$this->response->userEmail = $email;
-				$this->response->userSession = $session;
-				$this->response->userRestrictions = $this->getUserRestrictions($email, $location, $fileName);
-				$this->response->language = $this->getUserLanguage($email);
-			} else {
-				$this->response->email = $email;
-				$this->response->action = "fail";
+				$email = $_REQUEST["email"];
+				$password = $_REQUEST["password"];
+				if($this->users->checkUser($email, $password))
+				{
+					$session = $this->response->createCookie($scheme, $address, $base, $email);
+					$this->response->userEmail = $email;
+					$this->response->userSession = $session;
+					$this->response->userRestrictions = $this->getUserRestrictions($email, $location, $fileName);
+					$this->response->language = $this->getUserLanguage($email);
+				} else {
+					$this->response->email = $email;
+					$this->response->action = "fail";
+				}
+			} else if(isset($_COOKIE["login"])) {
+				list($email, $session) = explode(',', $_COOKIE["login"], 2);
+				if($this->users->checkCookie($email, $session))
+				{
+					$this->response->userEmail = $email;
+					$this->response->userSession = $session;
+					$this->response->userRestrictions = $this->getUserRestrictions($email, $location, $fileName);
+					$this->response->language = $this->getUserLanguage($email);
+				} else {
+					$this->response->email = $email;
+					$this->response->action = "fail";
+				}
 			}
 		}
 		return $this->response->isUser();
@@ -860,6 +856,14 @@ class YellowEdit
 		$language = $this->users->getLanguage($email);
 		if(!$this->yellow->text->isLanguage($language)) $language = $this->yellow->config->get("language");
 		return $language;
+	}
+	
+	// Check if request came from same site
+	function isRequestSameSite($method, $scheme, $address)
+	{
+		if(preg_match("#^(\w+)://([^/]+)(.*)$#", $_SERVER["HTTP_REFERER"], $matches)) $origin = "$matches[1]://$matches[2]";
+		if(isset($_SERVER["HTTP_ORIGIN"])) $origin = $_SERVER["HTTP_ORIGIN"];
+		return $_SERVER["REQUEST_METHOD"]==$method && $origin=="$scheme://$address";
 	}
 }
 	
@@ -1266,14 +1270,14 @@ class YellowResponse
 	{
 		$session = $this->plugin->users->createSession($email);
 		$timeout = $this->yellow->config->get("editLoginSessionTimeout");
-		setcookie("login", "$email,$session", $timeout ? time()+$timeout : 0, "$base/", "", $scheme=="https");
+		setcookie("login", "$email,$session", $timeout ? time()+$timeout : 0, "$base/", "", $scheme=="https", true);
 		return $session;
 	}
 	
 	// Destroy browser cookie
 	function destroyCookie($scheme, $address, $base)
 	{
-		setcookie("login", "", time()-60*60, "$base/", "", $scheme=="https");
+		setcookie("login", "", 1, "$base/", "", $scheme=="https", true);
 	}
 	
 	// Send mail to user
