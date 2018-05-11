@@ -5,7 +5,7 @@
 
 class YellowDemo
 {
-	const VERSION = "0.7.3";
+	const VERSION = "0.7.4";
 	var $yellow;			//access to API
 
 	// Handle initialisation
@@ -21,7 +21,7 @@ class YellowDemo
 		{
 			$prefix = strtoloweru($this->yellow->text->getText("LanguageDescription",  $page->get("language")));
 			$page->set("editLoginEmail", "$prefix@demo.com");
-			$page->set("editLoginPassword", "demo");
+			$page->set("editLoginPassword", "password");
 		}
 	}
 }
