@@ -1534,7 +1534,7 @@ class YellowUsers
 	function createStamp()
 	{
 		$stamp = $this->yellow->toolbox->createSalt(20);
-		while(!empty($this->getAuthEmail("none", $stamp))) $stamp = $this->yellow->toolbox->createSalt(20);
+		while($this->getAuthEmail("none", $stamp)) $stamp = $this->yellow->toolbox->createSalt(20);
 		return $stamp;
 	}
 	
