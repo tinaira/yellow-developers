@@ -29,15 +29,15 @@ Un autre fichier de configuration est `system/config/text.ini`. Voici un exemple
     DateFormatMedium: d/m/Y
     DateFormatLong: d/m/Y H:i
 
-Vous pouvez définir ici les paramètres de texte, par exemple le texte affiché sur votre site web et le [format de la date](http://php.net/manual/fr/function.date.php). Le texte par défaut est défini par le [fichier de langue](https://github.com/datenstrom/yellow/blob/master/system/plugins/language-fr.txt) correspondant. Un texte différent peut être défini dans le fichier de configuration.
+Vous pouvez définir ici les paramètres de texte, par exemple le texte affiché sur votre site web et le [format de la date](http://php.net/manual/fr/function.date.php). Le texte par défaut est défini dans le [fichier de langue](https://github.com/datenstrom/yellow/blob/master/system/plugins/language-fr.txt) correspondant. Ce texte peut être personnalisé dans les paramètres de texte.
 
 ## Comptes d'utilisateurs
 
 Tous les utilisateurs sont stockés dans le fichier `system/config/user.ini`. Voici un exemple:
 
-    anna@svensson.fr: $2y$10$j26zDnt/xaWxC/eqGKb9p.d6e3pbVENDfRzauTawNCUHHl3CCOIzG,Anna,fr,active,946684800,0,none,/
-    français@demo.com: $2y$10$8TKEuytrwiLSICJNlW5.yOE9CQPXJmqXL2Af6rPsSch1/9UiXEZjm,Demo,fr,active,946684800,0,none,/
-    guest@demo.com: $2y$10$4VENNhK/hb3US8zJdimJduratVuQloACbdmbGhoFUyqHvU6mbpPm.,Guest,en,active,946684800,0,none,/tests/
+    anna@svensson.fr: $2y$10$j26zDnt/xaWxC/eqGKb9p.d6e3pbVENDfRzauTawNCUHHl3CCOIzG,Anna,fr,active,21196d7e857d541849e4,946684800,0,none,/
+    français@demo.com: $2y$10$zG5tycOnAJ5nndGfEQhrBexVxNYIvepSWYd1PdSb1EPJuLHakJ9Ri,Demo,fr,active,1c5a6e50c714112c7c25,946684800,0,none,/
+    guest@demo.com: $2y$10$zG5tycOnAJ5nndGfEQhrBexVxNYIvepSWYd1PdSb1EPJuLHakJ9Ri,Guest,en,active,b3106b8b1732ee60f5b3,946684800,0,none,/tests/
 
 Le [navigateur web](https://github.com/datenstrom/yellow-plugins/tree/master/edit) et le [ligne de commande](https://github.com/datenstrom/yellow-plugins/tree/master/command) vous permet de créer de nouveaux comptes d'utilisateurs et de changer les mots de passe. Un compte d'utilisateur se compose d'un email, d'un mot de passe crypté, de différents paramètres, tandis que le dernier paramètre concerne la page d'accueil de l'utilisateur.
 

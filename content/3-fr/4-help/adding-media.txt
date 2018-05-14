@@ -5,13 +5,7 @@ Les fichiers sont localisés dans le dossier `media`. Vous pouvez y placer des i
 
 [image screenshot-media.png Screenshot]
 
-Le dossier `downloads` contient des fichiers à télécharger. Le dossier `images` est l'endroit où stocker vos images. Pour un petit site web, mettez-y toutes vos images. Vous pouvez aussi créer des dossiers additionnels et organiser vos fichiers comme il vous convient. Le dossier `thumbnails` contient les vignettes d'image.
-
-## Downloads
-
-Vous pouvez offrir des fichiers à télécharger. Pour ajouter un nouveau téléchargement, copiez un nouveau fichier dans le dossier `downloads` et créez un [lien](markdown-cheat-sheet). Tous les types de fichiers et tailles de fichiers peuvent être téléchargés. Voici un exemple:
-
-    [Télécharger le fichier](/media/downloads/yellow.pdf)
+Le dossier `downloads` contient des fichiers à télécharger. Le dossier `images` est l'endroit où stocker vos images. Le dossier `thumbnails` contient les vignettes d'image. Vous pouvez aussi créer des dossiers additionnels et organiser vos fichiers comme il vous convient. Essentiellement, n'importe quel fichier multimédia peut être téléchargé à partir du site web.
 
 ## Images
 
@@ -33,7 +27,7 @@ Images de différentes tailles:
     [image picture.jpg Exemple - 320 200]
     [image picture.jpg Exemple - 50%]
 
-## Vidéo
+## Vidéos
 
 Vous pouvez utiliser le [plugin Youtube](https://github.com/datenstrom/yellow-plugins/tree/master/youtube) pour intégrer des vidéos: 
 

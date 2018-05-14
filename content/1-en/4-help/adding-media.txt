@@ -5,13 +5,7 @@ All media is located in the `media` folder. You can store your images and other 
 
 [image screenshot-media.png Screenshot]
 
-The `downloads` folder contains files to download. The `images` folder is the place to store your images. For a small website put all images inside this folder. You can also create additional folders and organise files as you like. The `thumbnails` folder contains image thumbnails.
-
-## Downloads
-
-You can offer files to download. To add a new download, copy a new file into the `downloads` folder and create a [link](markdown-cheat-sheet). All file types and file sizes can be downloaded, there are no restrictions. Here's an example:
-
-    [Download file](/media/downloads/yellow.pdf)
+The `downloads` folder contains files to download. The `images` folder is the place to store your images. The `thumbnails` folder contains image thumbnails. You can also create additional folders and organise files as you like. Essentially, any media file can be downloaded from the website.
 
 ## Images
 
@@ -33,7 +27,7 @@ Images in different sizes:
     [image picture.jpg Example - 320 200]
     [image picture.jpg Example - 50%]
 
-## Video
+## Videos
 
 You can use the [Youtube plugin](https://github.com/datenstrom/yellow-plugins/tree/master/youtube) to embed videos:
 

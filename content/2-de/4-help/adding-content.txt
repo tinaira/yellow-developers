@@ -21,7 +21,7 @@ Verzeichnisse können weitere Dateien und Verzeichnisse enthalten. Es gibt eine 
 
 ## Markdown
 
-Du kannst [Markdown](markdown-cheat-sheet) benutzen um Webseiten zu bearbeiten. Probier es einfach aus. Öffne die Datei `content/1-home/page.txt`. Es werden Einstellungen und Text der Seite angezeigt. Ganz oben auf der Seite kannst du `Title` und weitere [Einstellungen](markdown-cheat-sheet#einstellungen) ändern. Hier ist ein Beispiel:
+Du kannst [Markdown](markdown-cheat-sheet) benutzen um Webseiten zu bearbeiten. Probier es einfach mal aus. Öffne die Datei `content/1-home/page.txt`. Es werden Einstellungen und Text der Seite angezeigt. Ganz oben auf der Seite kannst du `Title` und weitere [Einstellungen](markdown-cheat-sheet#einstellungen) ändern. Hier ist ein Beispiel:
 
     ---
     Title: Home

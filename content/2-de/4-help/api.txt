@@ -976,19 +976,6 @@ YellowConfig::load Language:en
 YellowConfig::load Timezone:Europe/Stockholm
 YellowConfig::load Theme:flatsite
 ```
-
-## Tipps und Tricks
-
-Einige Tipps für Entwickler:
-
-1. [Lerne die Markdown-Grundlagen](markdown-cheat-sheet). Mach dich vertraut mit Textformatierung, Abkürzungen und Einstellungen. Markdown ist eine praktische Art um Webseiten zu bearbeiten. Du kannst Plugins verwenden um Markdown mit weiteren Funktionen zu erweitern.
-
-2. [Lerne die Web-Grundlagen](https://www.w3schools.com). Mach dich vertraut mit HTML, CSS und JavaScript. Das sind die wichtigsten Dinge die man wissen muss um Webseiten zu erstellen. Du kannst Themes verwenden um das Aussehen deiner Webseite anpassen.
-
-3. [Stelle deinen Code auf GitHub](https://guides.github.com/activities/hello-world/). Erstelle ein Repository für jedes neue Plugin/Theme. Der Name eines Repository sollte `yellow-plugin-xyz` or `yellow-theme-xyz` sein. Du kannst die README benutzen um dein Repository zu beschreiben.
-
-4. [Teste deinen Code](/de/tests/). Stelle sicher dass alle Plugins/Themes zusammenarbeiten. Am Besten ist es wenn Plugins/Themes sowohl zusammen als auch unabhängig funktionieren. Dein Code muss nicht perfekt sein, aber er sollte im Entwickler-Kit funktionieren.
-
-5. [Stelle viele Fragen](support). Lass uns wissen wenn etwas nicht funktioniert oder du Hilfe brauchst. Kostenlosen Support für Datenstrom Yellow findest du auf GitHub, dort kannst du Probleme diskutieren und Fragen stellen. 
+Wir führen [automatisierte Tests](/de/tests/) und Code-Analysen durch.
 
 [Weiter: Themes anpassen →](customising-themes)

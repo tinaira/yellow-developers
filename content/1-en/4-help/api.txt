@@ -974,19 +974,6 @@ YellowConfig::load Language:en
 YellowConfig::load Timezone:Europe/Stockholm
 YellowConfig::load Theme:flatsite
 ```
-
-## Tips and tricks
-
-Some tips for developers: 
-
-1. [Learn the Markdown basics](markdown-cheat-sheet). Make yourself familiar with text formatting, shortcuts and settings. Markdown is a practical way to edit web pages. You can use plugins to extend Markdown with more features.
-
-2. [Learn the web basics](https://www.w3schools.com). Make yourself familiar with HTML, CSS and JavaScript. These are the most important things you need to know to make websites. You can use themes to customise the appearance of your website.
-
-3. [Put your code on GitHub](https://guides.github.com/activities/hello-world/). Create a repository for each new plugin/theme. The name of a repository should be `yellow-plugin-xyz` or `yellow-theme-xyz`. You can use the README to describe your repository.
-
-4. [Test your code](/tests/). Make sure all plugins/themes work together. It's best if plugins/themes both work together and independently. Your code doesn't have to be perfect, but it should be working in the developer kit.
-
-5. [Ask many questions](support). Let us know if something is not working or you need help. You can find free support for Datenstrom Yellow on GitHub, there you can discuss problems and ask questions.
+We run [automated tests](/tests/) and code analysis.
 
 [Next: Customising themes →](customising-themes)

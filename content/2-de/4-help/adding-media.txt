@@ -1,17 +1,11 @@
 ---
 Title: Medien hinzufügen 
 ---
-Alle Medien befinden sich im `media`-Verzeichnis. Hier speichert man Bilder und Dateien.
+Alle Medien befinden sich im `media`-Verzeichnis. Hier speichert man Bilder und andere Dateien.
 
 [image screenshot-media.png Screenshot]
 
-Das `downloads`-Verzeichnis enthält Dateien zum Herunterladen. Das `images`-Verzeichnis ist zum Speichern deiner Bilder gedacht. Bei einer kleinen Webseite kannst du alle Bilder in diesem Verzeichnis ablegen. Du kannst auch weitere Verzeichnisse erstellen und Dateien organisieren so wie du willst. Das `thumbnails`-Verzeichnis enthält Miniaturbilder.  
-
-## Downloads
-
-Du kannst Dateien zum Herunterladen anbieten. Um einen neuen Download hinzuzufügen, kopierst du eine neue Datei ins `downloads`-Verzeichnis und erstellst einen [Link](markdown-cheat-sheet). Alle Dateitypen und Dateigrößen können heruntergeladen werden. Hier ist ein Beispiel:
-
-    [Datei herunterladen](/media/downloads/yellow.pdf)
+Das `downloads`-Verzeichnis enthält Dateien zum Herunterladen. Das `images`-Verzeichnis ist zum Speichern von Bildern gedacht. Das `thumbnails`-Verzeichnis enthält Miniaturbilder. Man kann auch weitere Verzeichnisse hinzufügen und Dateien so organisieren wie man will. Im Grunde genommen kann jede Mediendatei von der Webseite heruntergeladen werden. 
 
 ## Bilder
 
@@ -34,7 +28,7 @@ Bilder in unterschiedliche Größen:
     [image picture.jpg Beispiel - 320 200]
     [image picture.jpg Beispiel - 50%]
 
-## Video
+## Videos
 
 Du kannst das [Youtube-Plugin](https://github.com/datenstrom/yellow-plugins/tree/master/youtube) benutzen um Videos einzubinden.
 

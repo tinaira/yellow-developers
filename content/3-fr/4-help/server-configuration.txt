@@ -1,7 +1,7 @@
 ---
 Title: Configuration du serveur
 ---
-Comment configurer différents [serveurs web](https://news.netcraft.com/archives/category/web-server-survey/).
+Comment configurer différents serveurs web.
 
 >>> [Vous pouvez nous aider à traduire cette page.](https://github.com/datenstrom/yellow-developers/blob/master/content/3-fr/4-help/server-configuration.txt)
 
@@ -121,8 +121,6 @@ Vous pouvez créer un site statique depuis une interface en [ligne de commande](
 Ceci construira votre site statique dans le dossier `/var/www/website`. Placez ce dossier sur votre espace d'hébergement, et contruisez une nouvelle version lorsque c'est nécessaire. L'URL peut être défini dans les [paramètres du système](adjusting-system#paramètres-du-système), par exemple `StaticUrl: http://website/`.
 
 Comme alternative à un site statique, vous pouvez créer un cache. Cela accélère votre site web, mais vous devez mettre à jour le cache à plusieurs reprises. Voici un exemple: `php yellow.php build`. Pour effacer le cache, tapez la commande suivante: `php yellow.php clean`.
-
-Lorsque votre site web statique ne fonctionne pas, vérifiez la configuration du serveur web. Configurez votre serveur web pour qu'il n'envoie aucun type MIME par défaut ou le type MIME `text/html`, lorsqu'il ne peut pas détecter le type de fichier.
 
 ## Page d'erreurs
 

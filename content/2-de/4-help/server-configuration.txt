@@ -1,7 +1,7 @@
 ---
 Title: Servereinstellungen
 ---
-Wie man unterschiedliche [Webserver](https://news.netcraft.com/archives/category/web-server-survey/) konfiguriert.
+Wie man unterschiedliche Webserver konfiguriert.
 
 ## Apache
 
@@ -119,8 +119,6 @@ Du kannst eine statische Webseite in der [Befehlszeile](https://github.com/daten
 Das erstellt eine statische Webseite im Verzeichnis `/var/www/website`. Lade das Verzeichnis auf dein Webhosting hoch und erstelle bei Bedarf eine neue Version. Die URL kann man in den [Systemeinstellungen](adjusting-system#systemeinstellungen) festlegen, zum Beispiel `StaticUrl: http://website/`. 
 
 Als Alternative zu einer statischen Webseite kannst du einen Cache erstellen. Das beschleunigt deine Webseite, jedoch muss der Cache immer wieder aktualisiert werden. Hier ist ein Beispiel: `php yellow.php build`. Zum Löschen des Caches gibt man ein: `php yellow.php clean`.
-
-Wenn deine statische Webseite nicht funktioniert, überprüfe bitte die Webserver-Einstellungen. Konfiguriere den Webserver so, dass er keinen Standard-MIME-Typ oder den MIME-Typ `text/html` sendet, wenn er den Dateityp nicht erkennt.
 
 ## Fehlerseite
 
