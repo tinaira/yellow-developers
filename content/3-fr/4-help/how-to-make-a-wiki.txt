@@ -91,7 +91,7 @@ Liens
 * [Voir l'exemple](/wiki/tag:exemple/)
 ```
 
-Vous pouvez utiliser des [raccourcis](https://github.com/datenstrom/yellow-plugins/tree/master/wiki#how-to-configure-a-wiki) afin d'afficher des informations à propos du wiki:
+Vous pouvez utiliser des [raccourcis](https://github.com/datenstrom/yellow-plugins/tree/master/wiki#how-to-show-wiki-information) afin d'afficher des informations à propos du wiki:
 
 ```
 ---

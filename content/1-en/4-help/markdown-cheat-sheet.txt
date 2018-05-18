@@ -113,14 +113,14 @@ Using HTML blocks:
 `[instagram BISN9ngjV2-]` = [embed Instagram photo](https://github.com/datenstrom/yellow-plugins/tree/master/instagram)  
 `[googlecalendar en.swedish#holiday]` = [embed Google calendar](https://github.com/datenstrom/yellow-plugins/tree/master/googlecalendar)  
 `[googlemaps Stockholm]` = [embed Google maps](https://github.com/datenstrom/yellow-plugins/tree/master/googlemaps)  
-`[blogchanges /blog/]` = [show latest blog pages](https://github.com/datenstrom/yellow-plugins/tree/master/blog#how-to-configure-a-blog)  
-`[wikichanges /wiki/]` = [show latest wiki pages](https://github.com/datenstrom/yellow-plugins/tree/master/wiki#how-to-configure-a-wiki)  
+`[blogchanges /blog/]` = [show latest blog pages](https://github.com/datenstrom/yellow-plugins/tree/master/blog)  
+`[wikichanges /wiki/]` = [show latest wiki pages](https://github.com/datenstrom/yellow-plugins/tree/master/wiki)  
 `[fa fa-envelope-o]` = [show icons and symbols](https://github.com/datenstrom/yellow-plugins/tree/master/fontawesome)  
 `[ea ea-smile]` = [show emoji and colorful images](https://github.com/datenstrom/yellow-plugins/tree/master/emojiawesome)  
 `[yellow]` = [show information about website](https://github.com/datenstrom/yellow-plugins/tree/master/core)  
 `[edit]` = [edit website in web browser](https://github.com/datenstrom/yellow-plugins/tree/master/edit)  
 `[toc]` = [show table of contents](https://github.com/datenstrom/yellow-plugins/tree/master/toc)  
-`[--more--]` = [add page break](https://github.com/datenstrom/yellow-plugins/tree/master/blog#how-to-configure-a-blog) 
+`[--more--]` = [add page break](https://github.com/datenstrom/yellow-plugins/tree/master/blog) 
 
 ## Settings
 

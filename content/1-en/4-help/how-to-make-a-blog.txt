@@ -69,7 +69,7 @@ How often do you fika?
 [youtube c7J6AXX3otA]
 ```
 
-Let's show the video when a visitor clicks on the blog page. You can add `[--more--]` where your want the page break:
+Let's show the video when a visitor clicks on the blog page. You can use `[--more--]` to add a page break at the desired spot:
 
 ```
 ---
@@ -106,7 +106,7 @@ Links
 * [Datenstrom](https://datenstrom.se)
 ```
 
-You can use [shortcuts](https://github.com/datenstrom/yellow-plugins/tree/master/blog#how-to-configure-a-blog) to show information about the blog:
+You can use [shortcuts](https://github.com/datenstrom/yellow-plugins/tree/master/blog#how-to-show-blog-information) to show information about the blog:
 
 ```
 ---

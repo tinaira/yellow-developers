@@ -91,7 +91,7 @@ Links
 * [Siehe Beispiel](/wiki/tag:beispiel/)
 ```
 
-Verwende [Abkürzungen](https://github.com/datenstrom/yellow-plugins/tree/master/wiki#how-to-configure-a-wiki), um Informationen über das Wiki anzuzeigen:
+Verwende [Abkürzungen](https://github.com/datenstrom/yellow-plugins/tree/master/wiki#how-to-show-wiki-information), um Informationen über das Wiki anzuzeigen:
 
 ```
 ---

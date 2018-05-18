@@ -113,14 +113,14 @@ En utilisant des blocs HTML:
 `[instagram BISN9ngjV2-]` = [intégrer une photo Instagram](https://github.com/datenstrom/yellow-plugins/tree/master/instagram)  
 `[googlecalendar fr.french#holiday]` = [intégrer un calendrier Google](https://github.com/datenstrom/yellow-plugins/tree/master/googlecalendar)  
 `[googlemaps Stockholm]` = [intégrer une carte Google](https://github.com/datenstrom/yellow-plugins/tree/master/googlemaps)  
-`[blogchanges /blog/]` = [afficher des dernières pages du blog](https://github.com/datenstrom/yellow-plugins/tree/master/blog#how-to-configure-a-blog)  
-`[wikichanges /wiki/]` = [afficher des dernières pages du wiki](https://github.com/datenstrom/yellow-plugins/tree/master/wiki#how-to-configure-a-wiki)  
+`[blogchanges /blog/]` = [afficher des dernières pages du blog](https://github.com/datenstrom/yellow-plugins/tree/master/blog)  
+`[wikichanges /wiki/]` = [afficher des dernières pages du wiki](https://github.com/datenstrom/yellow-plugins/tree/master/wiki)  
 `[fa fa-envelope-o]` = [afficher des icones et symboles](https://github.com/datenstrom/yellow-plugins/tree/master/fontawesome)  
 `[ea ea-smile]` = [afficher des emoji et images coloréess](https://github.com/datenstrom/yellow-plugins/tree/master/emojiawesome)  
 `[yellow]` = [afficher des informations sur le site](https://github.com/datenstrom/yellow-plugins/tree/master/core)  
 `[edit]` = [éditer le site depuis le navigateur](https://github.com/datenstrom/yellow-plugins/tree/master/edit)  
 `[toc]` = [afficher une table des matières](https://github.com/datenstrom/yellow-plugins/tree/master/toc)  
-`[--more--]` = [ajouter un saut de page](https://github.com/datenstrom/yellow-plugins/tree/master/blog#how-to-configure-a-blog) 
+`[--more--]` = [ajouter un saut de page](https://github.com/datenstrom/yellow-plugins/tree/master/blog) 
 
 ## Paramètres
 

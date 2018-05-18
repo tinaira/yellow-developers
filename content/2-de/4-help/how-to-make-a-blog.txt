@@ -106,7 +106,7 @@ Links
 * [Datenstrom](https://datenstrom.se)
 ```
 
-Verwende [Abkürzungen](https://github.com/datenstrom/yellow-plugins/tree/master/blog#how-to-configure-a-blog), um Informationen über das Blog anzuzeigen.
+Verwende [Abkürzungen](https://github.com/datenstrom/yellow-plugins/tree/master/blog#how-to-show-blog-information), um Informationen über das Blog anzuzeigen.
 
 ```
 ---

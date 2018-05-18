@@ -106,7 +106,7 @@ Liens
 * [Datenstrom](https://datenstrom.se)
 ```
 
-Vous pouvez utiliser des [raccourcis](https://github.com/datenstrom/yellow-plugins/tree/master/blog#how-to-configure-a-blog) afin d'afficher des informations à propos du blog.
+Vous pouvez utiliser des [raccourcis](https://github.com/datenstrom/yellow-plugins/tree/master/blog#how-to-show-blog-information) afin d'afficher des informations à propos du blog.
 
 ```
 ---
