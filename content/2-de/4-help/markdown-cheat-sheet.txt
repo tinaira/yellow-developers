@@ -128,6 +128,7 @@ HTML-Blöcke benutzen:
 `TitleContent` = Seitentitel der im Inhalt angezeigt wird  
 `TitleNavigation` = Seitentitel der in der Navigation angezeigt wird  
 `TitleHeader` = Seitentitel der im Webbrowser angezeigt wird  
+`TitleSlug` = Seitentitel zum Speichern der Seite  
 `Description` = Beschreibung der Seite  
 `Keywords` = Stichwörter der Seite, durch Komma getrennt  
 `Author` = Autoren der Seite, durch Komma getrennt  

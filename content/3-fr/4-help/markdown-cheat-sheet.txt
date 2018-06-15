@@ -128,6 +128,7 @@ En utilisant des blocs HTML:
 `TitleContent` = titre de la page affichée dans le contenu  
 `TitleNavigation` = titre de la page affichée dans la navigation  
 `TitleHeader` = titre de la page affichée dans la navigateur web  
+`TitleSlug` = titre de la page utilisé pour enregistrer la page  
 `Description` = description de la page  
 `Keywords` = mots clés de la page, séparés par des virgules  
 `Author` = auteur(s) de la page, séparés par des virgules  
