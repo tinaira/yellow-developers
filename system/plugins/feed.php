@@ -1,11 +1,11 @@
 <?php
 // Feed plugin, https://github.com/datenstrom/yellow-plugins/tree/master/feed
-// Copyright (c) 2013-2017 Datenstrom, https://datenstrom.se
+// Copyright (c) 2013-2018 Datenstrom, https://datenstrom.se
 // This file may be used and distributed under the terms of the public license.
 
 class YellowFeed
 {
-	const VERSION = "0.7.1";
+	const VERSION = "0.7.2";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -23,13 +23,12 @@ class YellowFeed
 	{
 		if($this->yellow->page->get("template")=="feed")
 		{
+			$pages = $this->yellow->pages->index(false, false);
 			$feedFilter = $this->yellow->config->get("feedFilter");
+			if(!empty($feedFilter)) $pages->filter("template", $feedFilter);
 			$chronologicalOrder = ($this->yellow->config->get("feedFilter")!="blog");
-			$pagination = $this->yellow->config->get("contentPagination");
-			if($_REQUEST[$pagination]==$this->yellow->config->get("feedFileXml"))
+			if($this->isRequestXml())
 			{
-				$pages = $this->yellow->pages->index(false, false);
-				if(!empty($feedFilter)) $pages->filter("template", $feedFilter);
 				$pages->sort($chronologicalOrder ? "modified" : "published", false);
 				$pages->limit($this->yellow->config->get("feedPaginationLimit"));
 				$this->yellow->page->setLastModified($pages->getModified());
@@ -59,8 +58,6 @@ class YellowFeed
 				$output .= "</rss>\r\n";
 				$this->yellow->page->setOutput($output);
 			} else {
-				$pages = $this->yellow->pages->index(false, false);
-				if(!empty($feedFilter)) $pages->filter("template", $feedFilter);
 				$pages->sort($chronologicalOrder ? "modified" : "published");
 				$pages->pagination($this->yellow->config->get("feedPaginationLimit"));
 				if(!$pages->getPaginationNumber()) $this->yellow->page->error(404);
@@ -83,6 +80,13 @@ class YellowFeed
 			$output = "<link rel=\"alternate\" type=\"application/rss+xml\" href=\"$locationFeed\" />\n";
 		}
 		return $output;
+	}
+
+	// Check if XML requested
+	function isRequestXml()
+	{
+		$pagination = $this->yellow->config->get("contentPagination");
+		return $_REQUEST[$pagination]==$this->yellow->config->get("feedFileXml");
 	}
 }
 
