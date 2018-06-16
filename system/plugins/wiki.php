@@ -5,7 +5,7 @@
 
 class YellowWiki
 {
-	const VERSION = "0.7.4";
+	const VERSION = "0.7.5";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -207,7 +207,7 @@ class YellowWiki
 			{
 				$title = implode(' ', $pagesFilter);
 				$this->yellow->page->set("titleHeader", $title." - ".$this->yellow->page->get("sitename"));
-				$this->yellow->page->set("titleWiki", $this->yellow->text->get("wikiFilter")." ".$title);
+				$this->yellow->page->set("titleWiki", $this->yellow->page->get("title").": ".$title);
 				$this->yellow->page->set("wikipagesChronologicalOrder", $chronologicalOrder);
 			}
 			$this->yellow->page->set("content", !empty($pagesFilter) ? "content-wikipages" : "content-wiki");

@@ -5,7 +5,7 @@
 
 class YellowBlog
 {
-	const VERSION = "0.7.4";
+	const VERSION = "0.7.5";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -225,7 +225,7 @@ class YellowBlog
 			{
 				$title = implode(' ', $pagesFilter);
 				$this->yellow->page->set("titleHeader", $title." - ".$this->yellow->page->get("sitename"));
-				$this->yellow->page->set("titleBlog", $this->yellow->text->get("blogFilter")." ".$title);
+				$this->yellow->page->set("titleBlog", $this->yellow->page->get("title").": ".$title);
 			}
 			$this->yellow->page->setPages($pages);
 			$this->yellow->page->setLastModified($pages->getModified());

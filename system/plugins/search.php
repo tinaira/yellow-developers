@@ -1,11 +1,11 @@
 <?php
 // Search plugin, https://github.com/datenstrom/yellow-plugins/tree/master/search
-// Copyright (c) 2013-2017 Datenstrom, https://datenstrom.se
+// Copyright (c) 2013-2018 Datenstrom, https://datenstrom.se
 // This file may be used and distributed under the terms of the public license.
 
 class YellowSearch
 {
-	const VERSION = "0.7.2";
+	const VERSION = "0.7.3";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -77,14 +77,14 @@ class YellowSearch
 				if($_REQUEST["page"] && !$pages->getPaginationNumber()) $this->yellow->page->error(404);
 				$title = empty($query) ? $this->yellow->text->get("searchSpecialChanges") : $query;
 				$this->yellow->page->set("titleHeader", $title." - ".$this->yellow->page->get("sitename"));
-				$this->yellow->page->set("titleSearch", $this->yellow->text->get("searchQuery")." ".$title);
+				$this->yellow->page->set("titleContent", $this->yellow->page->get("title").": ".$title);
 				$this->yellow->page->setPages($pages);
 				$this->yellow->page->setLastModified($pages->getModified());
 				$this->yellow->page->setHeader("Cache-Control", "max-age=60");
 				$this->yellow->page->set("status", count($pages) ? "done" : "empty");
 			} else {
 				if($this->yellow->isCommandLine()) $this->yellow->page->error(500, "Static website not supported!");
-				$this->yellow->page->set("titleSearch", $this->yellow->page->get("title"));
+				$this->yellow->page->set("titleContent", $this->yellow->page->get("title"));
 				$this->yellow->page->set("status", "none");
 			}
 		}

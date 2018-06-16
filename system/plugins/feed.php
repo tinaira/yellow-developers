@@ -5,7 +5,7 @@
 
 class YellowFeed
 {
-	const VERSION = "0.7.2";
+	const VERSION = "0.7.3";
 	var $yellow;			//access to API
 	
 	// Handle initialisation
@@ -24,6 +24,17 @@ class YellowFeed
 		if($this->yellow->page->get("template")=="feed")
 		{
 			$pages = $this->yellow->pages->index(false, false);
+			$pagesFilter = array();
+			if($_REQUEST["tag"])
+			{
+				$pages->filter("tag", $_REQUEST["tag"]);
+				array_push($pagesFilter, $pages->getFilter());
+			}
+			if($_REQUEST["author"])
+			{
+				$pages->filter("author", $_REQUEST["author"]);
+				array_push($pagesFilter, $pages->getFilter());
+			}
 			$feedFilter = $this->yellow->config->get("feedFilter");
 			if(!empty($feedFilter)) $pages->filter("template", $feedFilter);
 			$chronologicalOrder = ($this->yellow->config->get("feedFilter")!="blog");
@@ -31,12 +42,13 @@ class YellowFeed
 			{
 				$pages->sort($chronologicalOrder ? "modified" : "published", false);
 				$pages->limit($this->yellow->config->get("feedPaginationLimit"));
+				$title = !empty($pagesFilter) ? implode(' ', $pagesFilter)." - ".$this->yellow->page->getHtml("sitename") : $this->yellow->page->getHtml("sitename");
 				$this->yellow->page->setLastModified($pages->getModified());
 				$this->yellow->page->setHeader("Content-Type", "application/rss+xml; charset=utf-8");
 				$output = "<?xml version=\"1.0\" encoding=\"utf-8\"\077>\r\n";
 				$output .= "<rss version=\"2.0\" xmlns:content=\"http://purl.org/rss/1.0/modules/content/\" xmlns:dc=\"http://purl.org/dc/elements/1.1/\">\r\n";
 				$output .= "<channel>\r\n";
-				$output .= "<title>".$this->yellow->page->getHtml("sitename")."</title>\r\n";
+				$output .= "<title>".$title."</title>\r\n";
 				$output .= "<link>".$this->yellow->page->scheme."://".$this->yellow->page->address.$this->yellow->page->base."/"."</link>\r\n";
 				$output .= "<description>".$this->yellow->page->getHtml("tagline")."</description>\r\n";
 				$output .= "<language>".$this->yellow->page->getHtml("language")."</language>\r\n";
@@ -61,6 +73,12 @@ class YellowFeed
 				$pages->sort($chronologicalOrder ? "modified" : "published");
 				$pages->pagination($this->yellow->config->get("feedPaginationLimit"));
 				if(!$pages->getPaginationNumber()) $this->yellow->page->error(404);
+				if(!empty($pagesFilter))
+				{
+					$title = implode(' ', $pagesFilter);
+					$this->yellow->page->set("titleHeader", $title." - ".$this->yellow->page->get("sitename"));
+					$this->yellow->page->set("titleContent", $this->yellow->page->get("title").": ".$title);
+				}
 				$this->yellow->page->set("feedChronologicalOrder", $chronologicalOrder);
 				$this->yellow->page->setPages($pages);
 				$this->yellow->page->setLastModified($pages->getModified());
